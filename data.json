@@ -1,17 +1,17 @@
 {
   "stats": {
-    "total_articles": 69,
+    "total_articles": 73,
     "source_count": 9,
     "date_range": {
       "start": "2026-04-10",
       "end": "2026-06-18"
     },
-    "last_update": "2026-06-18T14:51:38.748036"
+    "last_update": "2026-06-18T15:36:45.702911"
   },
   "sources": [
     {
       "name": "妆研24小时",
-      "count": 12
+      "count": 16
     },
     {
       "name": "个护前言",
@@ -81,6 +81,42 @@
         "source": "妆研24小时",
         "publish_date": "2026-06-18",
         "url": "https://mp.weixin.qq.com/s/j3nBaf7_pUw3YZJu8rpe_A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 94,
+        "title": "涉及1559个原料——建议化妆品企业关注生态环境部12号令修法变化",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/MPVWMf4uHxWJmt5myKi3RA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 95,
+        "title": "《化妆品唇炎判断标准及处理原则（征求意见稿）》等2项国标征求意见",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/Gbgpr0Tkytq_vTq_HeZ_1Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 96,
+        "title": "莹特丽重新备案一款聚合物原料",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/ORKg_IgFnUABpR3ribzoiQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 97,
+        "title": "取消备案后重新申报：亚什兰新原料公示",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/xHuhp9l3godjag7Vav_XKQ",
         "summary": "",
         "keywords": []
       },
