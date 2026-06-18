@@ -23,7 +23,7 @@ def export_data():
         cursor.execute("SELECT COUNT(*) FROM articles")
         total = cursor.fetchone()[0]
         
-        cursor.execute("SELECT COUNT(DISTINCT source) FROM articles")
+        cursor.execute("SELECT COUNT(DISTINCT wechat_name) FROM articles")
         source_count = cursor.fetchone()[0]
         
         cursor.execute("SELECT MIN(publish_date), MAX(publish_date) FROM articles")
