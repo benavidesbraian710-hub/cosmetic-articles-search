@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 73,
+    "total_articles": 74,
     "source_count": 9,
     "date_range": {
       "start": "2026-06-18",
       "end": "2026-06-18"
     },
-    "last_update": "2026-06-18T16:16:28.683970"
+    "last_update": "2026-06-18T16:21:30.735911"
   },
   "sources": [
     {
@@ -27,7 +27,7 @@
     },
     {
       "name": "妆合规",
-      "count": 8
+      "count": 9
     },
     {
       "name": "KEV美妆",
@@ -1253,6 +1253,15 @@
           "安全警示用语",
           "儿童化妆品标志"
         ]
+      },
+      {
+        "id": 98,
+        "title": "妆合规 文章",
+        "source": "妆合规",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/GGGOh5rwm9-9adbcH5SgUw",
+        "summary": "",
+        "keywords": []
       }
     ],
     "KEV美妆": [
