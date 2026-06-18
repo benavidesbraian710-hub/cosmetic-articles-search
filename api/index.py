@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, send_file
+from flask import Flask, render_template, request, jsonify, make_response
 import json
 import sqlite3
 import os
@@ -19,11 +19,6 @@ VERSION_NAME = "Basic"
 def index():
     """首页 - 当前版本"""
     return render_template('index.html', version=VERSION, version_name=VERSION_NAME)
-
-@app.route('/v1')
-def index_v1():
-    """完整版v1（历史版本）"""
-    return render_template('index_v1.html', version="1.1.0", version_name="Full")
 
 @app.route('/api/stats')
 def api_stats():
@@ -157,14 +152,10 @@ def api_export_basic():
     # 生成文件名
     filename = f"articles_{datetime.now().strftime('%Y%m%d')}.csv"
     
-    # 创建响应
-    response = app.make_response(csv_content)
+    # 创建响应，添加UTF-8 BOM
+    response = make_response('\ufeff' + csv_content)
     response.headers['Content-Type'] = 'text/csv; charset=utf-8-sig'
     response.headers['Content-Disposition'] = f'attachment; filename="{filename}"'
-    
-    # 添加UTF-8 BOM标记
-    response.data = '\ufeff'.encode('utf-8') + response.data.encode('utf-8')
-    response.headers['Content-Type'] = 'text/csv; charset=utf-8-sig'
     
     return response
 
