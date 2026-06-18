@@ -31,9 +31,9 @@ def export_data():
         
         # 获取公众号列表
         cursor.execute("""
-            SELECT source, COUNT(*) as count 
+            SELECT wechat_name as source, COUNT(*) as count 
             FROM articles 
-            GROUP BY source 
+            GROUP BY wechat_name 
             ORDER BY count DESC
         """)
         sources = []
@@ -48,9 +48,9 @@ def export_data():
         for source in sources:
             source_name = source['name']
             cursor.execute("""
-                SELECT id, title, source, publish_date, url, summary, keywords
+                SELECT id, title, wechat_name as source, publish_date, url, content as summary, keywords
                 FROM articles
-                WHERE source = ?
+                WHERE wechat_name = ?
                 ORDER BY publish_date DESC
             """, (source_name,))
             

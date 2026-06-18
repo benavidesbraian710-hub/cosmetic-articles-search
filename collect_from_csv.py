@@ -29,6 +29,7 @@ import os
 import sys
 import subprocess
 import glob
+import re
 from pathlib import Path
 from datetime import datetime
 
@@ -61,6 +62,85 @@ def ensure_db_exists():
     conn.close()
 
 
+def fetch_article_info(url: str) -> dict:
+    """curl 抓取文章 HTML，解析真实标题和发布时间"""
+    try:
+        cmd = [
+            "curl", "-s", "-L",
+            "-A", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+            "-H", "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "-H", "Accept-Language: zh-CN,zh;q=0.9,en;q=0.8",
+            "-H", "Referer: https://mp.weixin.qq.com/",
+            "--max-time", "15",
+            url
+        ]
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=20)
+        html = result.stdout
+        
+        # 检查是否被拦截
+        if "环境异常" in html or "完成验证" in html:
+            print(f"     ⚠️  被微信拦截，无法获取")
+            return {
+                "publish_date": None
+            }
+        
+        # 解析发布时间
+        publish_date = None
+        # 方案1: 从 s1s_context_info 中提取 URL编码的 JSON 中的 publish_time 时间戳
+        if not publish_date:
+            m = re.search(r'publish_time%22%3A(\d{10})', html)
+            if m:
+                try:
+                    ts = int(m.group(1))
+                    dt = datetime.fromtimestamp(ts)
+                    publish_date = dt.strftime('%Y-%m-%d')
+                except:
+                    pass
+        # 方案2: 从 s1s_context_info 中提取已解码的 JSON 时间戳
+        if not publish_date:
+            m = re.search(r'"publish_time"\s*:\s*(\d{10})', html)
+            if m:
+                try:
+                    ts = int(m.group(1))
+                    dt = datetime.fromtimestamp(ts)
+                    publish_date = dt.strftime('%Y-%m-%d')
+                except:
+                    pass
+        # 方案3: 从页面中的 publish_time 元素获取（JS渲染后的）
+        if not publish_date:
+            m = re.search(r'id="publish_time"[^>]*>(.*?)</em>', html, re.DOTALL)
+            if m:
+                date_str = clean_html(m.group(1)).strip()
+                if date_str:
+                    try:
+                        dt = datetime.strptime(date_str, '%Y-%m-%d')
+                        publish_date = dt.strftime('%Y-%m-%d')
+                    except:
+                        pass
+        
+        return {
+            "publish_date": publish_date
+        }
+        
+    except Exception as e:
+        print(f"  ⚠️ 抓取失败: {e}")
+        return {
+            "publish_date": None
+        }
+
+
+def clean_html(text: str) -> str:
+    """清理 HTML 标签和实体"""
+    text = re.sub(r'<[^>]+?>', '', text)
+    text = text.replace('&nbsp;', ' ')
+    text = text.replace('&quot;', '"')
+    text = text.replace('&amp;', '&')
+    text = text.replace('&lt;', '<')
+    text = text.replace('&gt;', '>')
+    text = re.sub(r'\s+', ' ', text)
+    return text.strip()
+
+
 def find_latest_csv():
     """查找桌面最新的 wechat_articles CSV 文件"""
     desktop = Path.home() / "Desktop"
@@ -74,8 +154,14 @@ def find_latest_csv():
     return latest
 
 
-def import_from_csv(csv_path, source_name=None):
-    """从 CSV 导入文章到数据库"""
+def import_from_csv(csv_path, source_name=None, fetch_titles=True):
+    """从 CSV 导入文章到数据库
+    
+    Args:
+        csv_path: CSV 文件路径
+        source_name: 指定公众号名称（可选）
+        fetch_titles: 是否 curl 抓取真实标题和发布时间
+    """
     if not os.path.exists(csv_path):
         print(f"❌ 文件不存在: {csv_path}")
         return 0
@@ -101,16 +187,30 @@ def import_from_csv(csv_path, source_name=None):
             # 使用传入的 source_name 或 CSV 中的公众号名称
             source = source_name or account or '未知公众号'
             
-            # 生成标题
-            title = f"{source} 文章"
-            if keyword and keyword != '-':
-                title += f" ({keyword})"
-            
             # 检查是否已存在
             cursor.execute("SELECT id FROM articles WHERE url = ?", (link,))
             if cursor.fetchone():
                 skipped += 1
                 continue
+            
+            # 抓取真实标题和发布时间
+            if fetch_titles:
+                print(f"  🔍 抓取文章信息: {link[:60]}...")
+                info = fetch_article_info(link)
+                title = info.get('title') if info.get('title') and info.get('title') != '未获取到标题' else f"{source} 文章"
+                publish_date = info.get('publish_date')
+                if publish_date:
+                    print(f"     标题: {title[:50]}...")
+                    print(f"     日期: {publish_date}")
+                else:
+                    print(f"     ⚠️  无法获取发布时间，使用默认")
+                    publish_date = datetime.now().strftime('%Y-%m-%d')
+            else:
+                # 不抓取，使用默认标题
+                title = f"{source} 文章"
+                if keyword and keyword != '-':
+                    title += f" ({keyword})"
+                publish_date = datetime.now().strftime('%Y-%m-%d')
             
             # 插入文章
             cursor.execute("""
@@ -120,7 +220,7 @@ def import_from_csv(csv_path, source_name=None):
                 title,
                 link,
                 source,
-                datetime.now().strftime("%Y-%m-%d"),
+                publish_date,
                 '',
                 json.dumps([keyword] if keyword and keyword != '-' else []),
                 datetime.now().isoformat()
@@ -217,12 +317,16 @@ def main():
             
             confirm = input("是否导入此文件? (y/n): ").strip().lower()
             if confirm == 'y':
+                # 询问是否抓取真实标题
+                fetch_choice = input("是否抓取真实文章标题和发布时间? (y/n, 默认y): ").strip().lower()
+                fetch_titles = fetch_choice != 'n'
+                
                 # 询问公众号名称（可选）
                 source_name = input("请输入公众号名称 (直接回车使用CSV中的名称): ").strip()
                 if not source_name:
                     source_name = None
                 
-                import_from_csv(latest_csv, source_name)
+                import_from_csv(latest_csv, source_name, fetch_titles)
             else:
                 print("已取消")
         else:
