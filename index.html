@@ -76,7 +76,7 @@
             <h2 id="pageTitle">请选择公众号</h2>
             <div class="actions">
                 <div class="mode-switch">
-                    <span class="current">Basic</span><span>|</span><a href="/">完整版</a>
+                    <span class="current">Basic</span><span>|</span><a href="#" onclick="alert('完整版功能')">完整版</a>
                 </div>
                 <button class="btn" onclick="refreshData()">刷新数据</button>
                 <span class="export-info" id="exportInfo"></span>
@@ -96,11 +96,53 @@
         <span class="toast-message" id="toastMessage"></span>
     </div>
     <script>
+        // 内置示例数据 - 实际使用时可以从JSON文件加载
+        const DEMO_DATA = {
+            sources: [
+                { name: "妆合规", count: 8 },
+                { name: "个护前言", count: 10 },
+                { name: "Fbeauty未来迹", count: 10 },
+                { name: "非科学美妆传播", count: 9 },
+                { name: "妆研24小时", count: 8 },
+                { name: "KEV美妆", count: 8 },
+                { name: "原料合规观察", count: 6 },
+                { name: "美妆内行人", count: 3 },
+                { name: "美业颜究院", count: 3 }
+            ],
+            articles: {
+                "妆合规": [
+                    { title: "法规公开课：GB 26396-2026 洗涤用品安全技术规范最新解读", publish_date: "2026-06-05", url: "https://mp.weixin.qq.com/s/example1" },
+                    { title: "2026年5月化妆品新原料备案最新情况分析报告", publish_date: "2026-06-03", url: "https://mp.weixin.qq.com/s/example2" },
+                    { title: "2026年7月1日起，中国台湾化妆品GMP第三阶段启动！", publish_date: "2026-05-28", url: "https://mp.weixin.qq.com/s/example3" },
+                    { title: "化妆品功效宣称评价规范最新解读", publish_date: "2026-05-20", url: "https://mp.weixin.qq.com/s/example4" },
+                    { title: "欧盟化妆品法规EC 1223/2009修订要点", publish_date: "2026-05-15", url: "https://mp.weixin.qq.com/s/example5" },
+                    { title: "化妆品标签管理办法实施细则", publish_date: "2026-05-10", url: "https://mp.weixin.qq.com/s/example6" },
+                    { title: "儿童化妆品监督管理规定", publish_date: "2026-05-05", url: "https://mp.weixin.qq.com/s/example7" },
+                    { title: "化妆品生产经营监督管理办法", publish_date: "2026-05-01", url: "https://mp.weixin.qq.com/s/example8" }
+                ],
+                "个护前言": [
+                    { title: "2026年个护市场趋势分析报告", publish_date: "2026-06-10", url: "https://mp.weixin.qq.com/s/example9" },
+                    { title: "洗发水成分安全评估", publish_date: "2026-06-08", url: "https://mp.weixin.qq.com/s/example10" },
+                    { title: "护肤品新成分解析", publish_date: "2026-06-05", url: "https://mp.weixin.qq.com/s/example11" },
+                    { title: "沐浴露配方技术进展", publish_date: "2026-06-02", url: "https://mp.weixin.qq.com/s/example12" },
+                    { title: "牙膏法规更新解读", publish_date: "2026-05-28", url: "https://mp.weixin.qq.com/s/example13" },
+                    { title: "护发素市场分析", publish_date: "2026-05-25", url: "https://mp.weixin.qq.com/s/example14" },
+                    { title: "洗手液标准更新", publish_date: "2026-05-20", url: "https://mp.weixin.qq.com/s/example15" },
+                    { title: "身体乳配方趋势", publish_date: "2026-05-15", url: "https://mp.weixin.qq.com/s/example16" },
+                    { title: "口腔护理新品", publish_date: "2026-05-10", url: "https://mp.weixin.qq.com/s/example17" },
+                    { title: "男士个护市场", publish_date: "2026-05-05", url: "https://mp.weixin.qq.com/s/example18" }
+                ]
+            }
+        };
+
         let currentSource = null, allArticles = [], sources = [];
         // 使用Map存储跨公众号的选择状态: key = "sourceName_index", value = {source, index, article}
         let selectedArticles = new Map();
 
-        async function init() { await loadStats(); await loadSources(); }
+        function init() {
+            loadStats();
+            loadSources();
+        }
 
         function showToast(message, type = 'success') {
             const toast = document.getElementById('toast'), icon = document.getElementById('toastIcon'), msg = document.getElementById('toastMessage');
@@ -108,39 +150,45 @@
             setTimeout(() => toast.classList.remove('show'), 3000);
         }
 
-        async function loadStats() {
-            try {
-                const data = await (await fetch('/api/stats')).json();
-                document.getElementById('stats').innerHTML = `<div>总文章数: ${data.total_articles}</div><div>公众号数: ${data.source_count}</div><div>日期范围: ${data.date_range.start} ~ ${data.date_range.end}</div>`;
-                document.getElementById('lastUpdate').textContent = new Date().toLocaleString('zh-CN');
-            } catch (e) { console.error('加载统计失败:', e); }
+        function loadStats() {
+            const stats = { total_articles: 65, source_count: 9, date_range: { start: "2026-04-10", end: "2026-06-10" } };
+            document.getElementById('stats').innerHTML = `<div>总文章数: ${stats.total_articles}</div><div>公众号数: ${stats.source_count}</div><div>日期范围: ${stats.date_range.start} ~ ${stats.date_range.end}</div>`;
+            document.getElementById('lastUpdate').textContent = new Date().toLocaleString('zh-CN');
         }
 
-        async function loadSources() {
-            try {
-                sources = await (await fetch('/api/sources')).json();
-                document.getElementById('sourceList').innerHTML = sources.map(s => `
-                    <div class="source-item" data-source="${s.name}" onclick="selectSource('${s.name}')">
-                        <span class="source-name">${s.name}</span><span class="source-count">${s.count}篇</span>
-                    </div>`).join('');
-            } catch (e) { console.error('加载失败:', e); document.getElementById('sourceList').innerHTML = '<div style="padding:20px;color:#999">加载失败</div>'; }
+        function loadSources() {
+            const sources = DEMO_DATA.sources;
+            document.getElementById('sourceList').innerHTML = sources.map(s => `
+                <div class="source-item" data-source="${s.name}" onclick="selectSource('${s.name}')">
+                    <span class="source-name">${s.name}</span><span class="source-count">${s.count}篇</span>
+                </div>`).join('');
         }
 
-        async function selectSource(sourceName) {
+        function selectSource(sourceName) {
             currentSource = sourceName;
             document.querySelectorAll('.source-item').forEach(item => item.classList.toggle('active', item.dataset.source === sourceName));
             document.getElementById('pageTitle').textContent = sourceName + ' 的所有文章';
             document.getElementById('articleList').innerHTML = '<div class="loading">加载中...</div>';
-            try {
-                allArticles = await (await fetch(`/api/articles?source=${encodeURIComponent(sourceName)}`)).json();
+            
+            setTimeout(() => {
+                allArticles = DEMO_DATA.articles[sourceName] || generateDemoArticles(sourceName);
                 renderArticles(allArticles);
-            } catch (e) { console.error('加载失败:', e); document.getElementById('articleList').innerHTML = '<div class="empty-state"><div>加载失败</div></div>'; }
+            }, 300);
+        }
+
+        function generateDemoArticles(source) {
+            const count = DEMO_DATA.sources.find(s => s.name === source)?.count || 5;
+            return Array.from({length: count}, (_, i) => ({
+                title: `${source} - 示例文章标题 ${i + 1}`,
+                publish_date: `2026-0${5 + Math.floor(Math.random() * 2)}-${10 + Math.floor(Math.random() * 20)}`,
+                url: `https://mp.weixin.qq.com/s/${source}_${i + 1}`,
+                source: source
+            }));
         }
 
         function renderArticles(articles) {
             if (!articles.length) { document.getElementById('articleList').innerHTML = '<div class="empty-state"><div class="icon">📭</div><div>该公众号暂无文章</div></div>'; return; }
             
-            // 计算当前页面有多少已选中的
             const currentSelectedCount = articles.filter((_, i) => isSelected(currentSource, i)).length;
             const allSelected = currentSelectedCount === articles.length && articles.length > 0;
             
@@ -157,12 +205,10 @@
             updateExportButton();
         }
 
-        // 检查某个公众号的某篇文章是否被选中
         function isSelected(source, index) {
             return selectedArticles.has(`${source}_${index}`);
         }
 
-        // 设置选中状态
         function setSelected(source, index, selected) {
             const key = `${source}_${index}`;
             if (selected) {
@@ -172,19 +218,15 @@
             }
         }
 
-        // 全选/取消全选切换
         function toggleSelectAll() {
             const selectAllCheckbox = document.getElementById('selectAll');
-            // 判断当前是否已经全部选中
             const currentSelectedCount = allArticles.filter((_, i) => isSelected(currentSource, i)).length;
             const allSelected = currentSelectedCount === allArticles.length && allArticles.length > 0;
             
             if (allSelected) {
-                // 全部取消
                 allArticles.forEach((_, i) => setSelected(currentSource, i, false));
                 selectAllCheckbox.checked = false;
             } else {
-                // 全部选中
                 allArticles.forEach((_, i) => setSelected(currentSource, i, true));
                 selectAllCheckbox.checked = true;
             }
@@ -193,20 +235,16 @@
             updateExportButton();
         }
 
-        // 切换单个文章选择
         function toggleArticle(index) {
             const currentlySelected = isSelected(currentSource, index);
             setSelected(currentSource, index, !currentlySelected);
             
-            // 更新行样式
             const row = document.getElementById(`row-${index}`); 
             if (row) row.classList.toggle('selected', !currentlySelected);
             
-            // 更新当前复选框状态
             const cb = document.getElementById(`cb-${index}`);
             if (cb) cb.checked = !currentlySelected;
             
-            // 更新全选框状态
             const currentSelectedCount = allArticles.filter((_, i) => isSelected(currentSource, i)).length;
             const selectAllCheckbox = document.getElementById('selectAll'); 
             if (selectAllCheckbox) {
@@ -215,7 +253,6 @@
             updateExportButton();
         }
 
-        // 更新导出按钮状态和显示已选择数量
         function updateExportButton() {
             const btn = document.getElementById('exportBtn'), info = document.getElementById('exportInfo');
             const totalSelected = selectedArticles.size;
@@ -223,8 +260,7 @@
             info.textContent = totalSelected ? `已选择 ${totalSelected} 篇` : '';
         }
 
-        // 导出选中的文章
-        async function exportSelected() {
+        function exportSelected() {
             if (!selectedArticles.size) { showToast('请先选择要导出的文章', 'error'); return; }
             
             const selectedData = Array.from(selectedArticles.values()).map(item => ({
@@ -234,36 +270,24 @@
                 url: item.article.url
             }));
             
-            try {
-                const response = await fetch('/api/export-basic', { 
-                    method: 'POST', 
-                    headers: { 'Content-Type': 'application/json' }, 
-                    body: JSON.stringify({ articles: selectedData }) 
-                });
-                if (response.ok) {
-                    const blob = await response.blob();
-                    const url = window.URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url; 
-                    a.download = `articles_multi_${new Date().toISOString().slice(0,10)}.csv`;
-                    document.body.appendChild(a); 
-                    a.click(); 
-                    window.URL.revokeObjectURL(url); 
-                    document.body.removeChild(a);
-                    showToast(`成功导出 ${selectedArticles.size} 篇文章`);
-                } else showToast('导出失败', 'error');
-            } catch (e) { 
-                console.error('导出失败:', e); 
-                showToast('导出失败', 'error'); 
-            }
+            let csv = '\uFEFF公众号名称,文章名称,时间,链接\n';
+            selectedData.forEach(a => {
+                csv += `"${a.source}","${a.title}","${a.publish_date}","${a.url}"\n`;
+            });
+            
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url; a.download = `articles_multi_${new Date().toISOString().slice(0,10)}.csv`;
+            document.body.appendChild(a); a.click(); document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showToast(`成功导出 ${selectedArticles.size} 篇文章`);
         }
 
-        async function refreshData() { 
-            await loadStats(); 
-            await loadSources(); 
-            if (currentSource) { 
-                await selectSource(currentSource); 
-            } 
+        function refreshData() {
+            loadStats(); loadSources();
+            if (currentSource) { selectSource(currentSource); }
         }
 
         init();

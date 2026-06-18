@@ -1,12 +1,9 @@
 {
   "name": "cosmetic-articles-search",
   "version": "1.0.0",
-  "description": "化妆品文章检索系统",
+  "description": "化妆品文章检索系统 - Basic版本",
   "scripts": {
-    "dev": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
     "deploy": "vercel --prod"
-  },
-  "dependencies": {
-    "flask": "^3.0.0"
   }
 }
