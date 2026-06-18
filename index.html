@@ -60,13 +60,14 @@
         .toast.error { border-left: 4px solid #ff4d4f; }
         .toast-icon { font-size: 20px; }
         .toast-message { font-size: 14px; color: #333; }
+        .update-info { font-size: 12px; color: #999; margin-left: 10px; }
     </style>
 </head>
 <body>
     <div class="sidebar">
         <div class="sidebar-header">
             <h1>化妆品文章检索</h1>
-            <div class="version">Basic版本 - 简洁视图</div>
+            <div class="version">Basic版本 - 实时数据</div>
             <div class="stats" id="stats"><div>加载中...</div></div>
         </div>
         <div class="source-list" id="sourceList"></div>
@@ -78,6 +79,7 @@
                 <div class="mode-switch">
                     <span class="current">Basic</span><span>|</span><a href="#" onclick="alert('完整版功能')">完整版</a>
                 </div>
+                <span class="update-info" id="updateInfo"></span>
                 <button class="btn" onclick="refreshData()">刷新数据</button>
                 <span class="export-info" id="exportInfo"></span>
                 <button class="btn btn-success" id="exportBtn" onclick="exportSelected()" disabled>导出选中</button>
@@ -96,68 +98,66 @@
         <span class="toast-message" id="toastMessage"></span>
     </div>
     <script>
-        const DEMO_DATA = {
-            sources: [
-                { name: "妆合规", count: 8 },
-                { name: "个护前言", count: 10 },
-                { name: "Fbeauty未来迹", count: 10 },
-                { name: "非科学美妆传播", count: 9 },
-                { name: "妆研24小时", count: 8 },
-                { name: "KEV美妆", count: 8 },
-                { name: "原料合规观察", count: 6 },
-                { name: "美妆内行人", count: 3 },
-                { name: "美业颜究院", count: 3 }
-            ],
-            articles: {
-                "妆合规": [
-                    { title: "法规公开课：GB 26396-2026 洗涤用品安全技术规范最新解读", publish_date: "2026-06-05", url: "https://mp.weixin.qq.com/s/example1" },
-                    { title: "2026年5月化妆品新原料备案最新情况分析报告", publish_date: "2026-06-03", url: "https://mp.weixin.qq.com/s/example2" },
-                    { title: "2026年7月1日起，中国台湾化妆品GMP第三阶段启动！", publish_date: "2026-05-28", url: "https://mp.weixin.qq.com/s/example3" },
-                    { title: "化妆品功效宣称评价规范最新解读", publish_date: "2026-05-20", url: "https://mp.weixin.qq.com/s/example4" },
-                    { title: "欧盟化妆品法规EC 1223/2009修订要点", publish_date: "2026-05-15", url: "https://mp.weixin.qq.com/s/example5" },
-                    { title: "化妆品标签管理办法实施细则", publish_date: "2026-05-10", url: "https://mp.weixin.qq.com/s/example6" },
-                    { title: "儿童化妆品监督管理规定", publish_date: "2026-05-05", url: "https://mp.weixin.qq.com/s/example7" },
-                    { title: "化妆品生产经营监督管理办法", publish_date: "2026-05-01", url: "https://mp.weixin.qq.com/s/example8" }
-                ],
-                "个护前言": [
-                    { title: "2026年个护市场趋势分析报告", publish_date: "2026-06-10", url: "https://mp.weixin.qq.com/s/example9" },
-                    { title: "洗发水成分安全评估", publish_date: "2026-06-08", url: "https://mp.weixin.qq.com/s/example10" },
-                    { title: "护肤品新成分解析", publish_date: "2026-06-05", url: "https://mp.weixin.qq.com/s/example11" },
-                    { title: "沐浴露配方技术进展", publish_date: "2026-06-02", url: "https://mp.weixin.qq.com/s/example12" },
-                    { title: "牙膏法规更新解读", publish_date: "2026-05-28", url: "https://mp.weixin.qq.com/s/example13" },
-                    { title: "护发素市场分析", publish_date: "2026-05-25", url: "https://mp.weixin.qq.com/s/example14" },
-                    { title: "洗手液标准更新", publish_date: "2026-05-20", url: "https://mp.weixin.qq.com/s/example15" },
-                    { title: "身体乳配方趋势", publish_date: "2026-05-15", url: "https://mp.weixin.qq.com/s/example16" },
-                    { title: "口腔护理新品", publish_date: "2026-05-10", url: "https://mp.weixin.qq.com/s/example17" },
-                    { title: "男士个护市场", publish_date: "2026-05-05", url: "https://mp.weixin.qq.com/s/example18" }
-                ]
-            }
-        };
-
-        let currentSource = null, allArticles = [];
-        let selectedArticles = new Map();
+        // 从JSON文件加载数据
+        var ARTICLE_DATA = null;
+        var currentSource = null, allArticles = [];
+        var selectedArticles = new Map();
 
         function init() {
-            loadStats();
-            loadSources();
+            loadData();
+        }
+
+        function loadData() {
+            // 显示加载状态
+            document.getElementById('stats').innerHTML = '<div>加载数据中...</div>';
+            
+            fetch('data.json?t=' + new Date().getTime())
+                .then(function(response) {
+                    if (!response.ok) throw new Error('加载失败');
+                    return response.json();
+                })
+                .then(function(data) {
+                    ARTICLE_DATA = data;
+                    renderStats();
+                    renderSources();
+                    
+                    // 显示更新时间
+                    if (data.stats && data.stats.last_update) {
+                        var updateTime = new Date(data.stats.last_update);
+                        document.getElementById('updateInfo').textContent = 
+                            '数据更新: ' + updateTime.toLocaleString('zh-CN');
+                    }
+                })
+                .catch(function(error) {
+                    console.error('加载数据失败:', error);
+                    document.getElementById('stats').innerHTML = '<div style="color:#ff4d4f">数据加载失败</div>';
+                    showToast('数据加载失败，请刷新重试', 'error');
+                });
         }
 
         function showToast(message, type) {
-            const toast = document.getElementById('toast'), icon = document.getElementById('toastIcon'), msg = document.getElementById('toastMessage');
+            var toast = document.getElementById('toast');
+            var icon = document.getElementById('toastIcon');
+            var msg = document.getElementById('toastMessage');
             toast.className = 'toast show ' + (type || 'success');
             icon.textContent = type === 'error' ? '❌' : '✅';
             msg.textContent = message;
             setTimeout(function() { toast.classList.remove('show'); }, 3000);
         }
 
-        function loadStats() {
-            const stats = { total_articles: 65, source_count: 9, date_range: { start: "2026-04-10", end: "2026-06-10" } };
-            document.getElementById('stats').innerHTML = '<div>总文章数: ' + stats.total_articles + '</div><div>公众号数: ' + stats.source_count + '</div><div>日期范围: ' + stats.date_range.start + ' ~ ' + stats.date_range.end + '</div>';
+        function renderStats() {
+            if (!ARTICLE_DATA || !ARTICLE_DATA.stats) return;
+            var stats = ARTICLE_DATA.stats;
+            document.getElementById('stats').innerHTML = 
+                '<div>总文章数: ' + stats.total_articles + '</div>' +
+                '<div>公众号数: ' + stats.source_count + '</div>' +
+                '<div>日期范围: ' + stats.date_range.start + ' ~ ' + stats.date_range.end + '</div>';
             document.getElementById('lastUpdate').textContent = new Date().toLocaleString('zh-CN');
         }
 
-        function loadSources() {
-            const sources = DEMO_DATA.sources;
+        function renderSources() {
+            if (!ARTICLE_DATA || !ARTICLE_DATA.sources) return;
+            var sources = ARTICLE_DATA.sources;
             document.getElementById('sourceList').innerHTML = sources.map(function(s) {
                 return '<div class="source-item" data-source="' + s.name + '" onclick="selectSource(\'' + s.name + '\')">' +
                     '<span class="source-name">' + s.name + '</span><span class="source-count">' + s.count + '篇</span>' +
@@ -174,27 +174,19 @@
             document.getElementById('articleList').innerHTML = '<div class="loading">加载中...</div>';
             
             setTimeout(function() {
-                allArticles = DEMO_DATA.articles[sourceName] || generateDemoArticles(sourceName);
+                if (ARTICLE_DATA && ARTICLE_DATA.articles) {
+                    allArticles = ARTICLE_DATA.articles[sourceName] || [];
+                } else {
+                    allArticles = [];
+                }
                 renderArticles(allArticles);
             }, 300);
         }
 
-        function generateDemoArticles(source) {
-            const count = (DEMO_DATA.sources.find(function(s) { return s.name === source; }) || {}).count || 5;
-            return Array.from({length: count}, function(_, i) {
-                return {
-                    title: source + ' - 示例文章标题 ' + (i + 1),
-                    publish_date: '2026-0' + (5 + Math.floor(Math.random() * 2)) + '-' + (10 + Math.floor(Math.random() * 20)),
-                    url: 'https://mp.weixin.qq.com/s/' + source + '_' + (i + 1),
-                    source: source
-                };
-            });
-        }
-
         function renderArticles(articles) {
-            if (!articles.length) {
-                document.getElementById('articleList').innerHTML = '<div class="empty-state"><div class="icon">📭</div><div>该公众号暂无文章</div></div>';
-                return;
+            if (!articles.length) { 
+                document.getElementById('articleList').innerHTML = '<div class="empty-state"><div class="icon">📭</div><div>该公众号暂无文章</div></div>'; 
+                return; 
             }
             
             var currentSelectedCount = 0;
@@ -276,7 +268,8 @@
         }
 
         function updateExportButton() {
-            var btn = document.getElementById('exportBtn'), info = document.getElementById('exportInfo');
+            var btn = document.getElementById('exportBtn');
+            var info = document.getElementById('exportInfo');
             var totalSelected = selectedArticles.size;
             btn.disabled = !totalSelected;
             info.textContent = totalSelected ? '已选择 ' + totalSelected + ' 篇' : '';
@@ -314,11 +307,16 @@
         }
 
         function refreshData() {
-            loadStats();
-            loadSources();
-            if (currentSource) { selectSource(currentSource); }
+            selectedArticles.clear();
+            updateExportButton();
+            loadData();
+            if (currentSource) {
+                selectSource(currentSource);
+            }
+            showToast('数据已刷新');
         }
 
+        // 初始化
         init();
     </script>
 </body>
