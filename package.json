@@ -1,0 +1,12 @@
+{
+  "name": "cosmetic-articles-search",
+  "version": "1.0.0",
+  "description": "化妆品文章检索系统",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "flask": "^3.0.0"
+  }
+}
