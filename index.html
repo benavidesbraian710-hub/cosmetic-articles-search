@@ -96,7 +96,6 @@
         <span class="toast-message" id="toastMessage"></span>
     </div>
     <script>
-        // 内置示例数据 - 实际使用时可以从JSON文件加载
         const DEMO_DATA = {
             sources: [
                 { name: "妆合规", count: 8 },
@@ -135,8 +134,7 @@
             }
         };
 
-        let currentSource = null, allArticles = [], sources = [];
-        // 使用Map存储跨公众号的选择状态: key = "sourceName_index", value = {source, index, article}
+        let currentSource = null, allArticles = [];
         let selectedArticles = new Map();
 
         function init() {
@@ -144,73 +142,87 @@
             loadSources();
         }
 
-        function showToast(message, type = 'success') {
+        function showToast(message, type) {
             const toast = document.getElementById('toast'), icon = document.getElementById('toastIcon'), msg = document.getElementById('toastMessage');
-            toast.className = 'toast show ' + type; icon.textContent = type === 'success' ? '✅' : '❌'; msg.textContent = message;
-            setTimeout(() => toast.classList.remove('show'), 3000);
+            toast.className = 'toast show ' + (type || 'success');
+            icon.textContent = type === 'error' ? '❌' : '✅';
+            msg.textContent = message;
+            setTimeout(function() { toast.classList.remove('show'); }, 3000);
         }
 
         function loadStats() {
             const stats = { total_articles: 65, source_count: 9, date_range: { start: "2026-04-10", end: "2026-06-10" } };
-            document.getElementById('stats').innerHTML = `<div>总文章数: ${stats.total_articles}</div><div>公众号数: ${stats.source_count}</div><div>日期范围: ${stats.date_range.start} ~ ${stats.date_range.end}</div>`;
+            document.getElementById('stats').innerHTML = '<div>总文章数: ' + stats.total_articles + '</div><div>公众号数: ' + stats.source_count + '</div><div>日期范围: ' + stats.date_range.start + ' ~ ' + stats.date_range.end + '</div>';
             document.getElementById('lastUpdate').textContent = new Date().toLocaleString('zh-CN');
         }
 
         function loadSources() {
             const sources = DEMO_DATA.sources;
-            document.getElementById('sourceList').innerHTML = sources.map(s => `
-                <div class="source-item" data-source="${s.name}" onclick="selectSource('${s.name}')">
-                    <span class="source-name">${s.name}</span><span class="source-count">${s.count}篇</span>
-                </div>`).join('');
+            document.getElementById('sourceList').innerHTML = sources.map(function(s) {
+                return '<div class="source-item" data-source="' + s.name + '" onclick="selectSource(\'' + s.name + '\')">' +
+                    '<span class="source-name">' + s.name + '</span><span class="source-count">' + s.count + '篇</span>' +
+                    '</div>';
+            }).join('');
         }
 
         function selectSource(sourceName) {
             currentSource = sourceName;
-            document.querySelectorAll('.source-item').forEach(item => item.classList.toggle('active', item.dataset.source === sourceName));
+            document.querySelectorAll('.source-item').forEach(function(item) {
+                item.classList.toggle('active', item.dataset.source === sourceName);
+            });
             document.getElementById('pageTitle').textContent = sourceName + ' 的所有文章';
             document.getElementById('articleList').innerHTML = '<div class="loading">加载中...</div>';
             
-            setTimeout(() => {
+            setTimeout(function() {
                 allArticles = DEMO_DATA.articles[sourceName] || generateDemoArticles(sourceName);
                 renderArticles(allArticles);
             }, 300);
         }
 
         function generateDemoArticles(source) {
-            const count = DEMO_DATA.sources.find(s => s.name === source)?.count || 5;
-            return Array.from({length: count}, (_, i) => ({
-                title: `${source} - 示例文章标题 ${i + 1}`,
-                publish_date: `2026-0${5 + Math.floor(Math.random() * 2)}-${10 + Math.floor(Math.random() * 20)}`,
-                url: `https://mp.weixin.qq.com/s/${source}_${i + 1}`,
-                source: source
-            }));
+            const count = (DEMO_DATA.sources.find(function(s) { return s.name === source; }) || {}).count || 5;
+            return Array.from({length: count}, function(_, i) {
+                return {
+                    title: source + ' - 示例文章标题 ' + (i + 1),
+                    publish_date: '2026-0' + (5 + Math.floor(Math.random() * 2)) + '-' + (10 + Math.floor(Math.random() * 20)),
+                    url: 'https://mp.weixin.qq.com/s/' + source + '_' + (i + 1),
+                    source: source
+                };
+            });
         }
 
         function renderArticles(articles) {
-            if (!articles.length) { document.getElementById('articleList').innerHTML = '<div class="empty-state"><div class="icon">📭</div><div>该公众号暂无文章</div></div>'; return; }
+            if (!articles.length) {
+                document.getElementById('articleList').innerHTML = '<div class="empty-state"><div class="icon">📭</div><div>该公众号暂无文章</div></div>';
+                return;
+            }
             
-            const currentSelectedCount = articles.filter((_, i) => isSelected(currentSource, i)).length;
-            const allSelected = currentSelectedCount === articles.length && articles.length > 0;
+            var currentSelectedCount = 0;
+            for (var i = 0; i < articles.length; i++) {
+                if (isSelected(currentSource, i)) currentSelectedCount++;
+            }
+            var allSelected = currentSelectedCount === articles.length && articles.length > 0;
             
-            document.getElementById('articleList').innerHTML = `
-                <div class="article-table"><table>
-                    <thead><tr><th style="width:40px"><input type="checkbox" class="article-checkbox" id="selectAll" ${allSelected ? 'checked' : ''} onchange="toggleSelectAll()"></th><th>文章名称</th><th style="width:120px">时间</th><th style="width:280px">链接</th></tr></thead>
-                    <tbody>${articles.map((a, i) => `<tr id="row-${i}" class="${isSelected(currentSource, i) ? 'selected' : ''}">
-                        <td><input type="checkbox" class="article-checkbox" id="cb-${i}" ${isSelected(currentSource, i) ? 'checked' : ''} onchange="toggleArticle(${i})"></td>
-                        <td><a href="${a.url}" target="_blank" class="article-title-link">${a.title}</a></td>
-                        <td class="article-date">${a.publish_date}</td>
-                        <td class="article-url"><a href="${a.url}" target="_blank" title="${a.url}">${a.url}</a></td>
-                    </tr>`).join('')}</tbody>
-                </table></div>`;
+            document.getElementById('articleList').innerHTML = '<div class="article-table"><table>' +
+                '<thead><tr><th style="width:40px"><input type="checkbox" class="article-checkbox" id="selectAll" ' + (allSelected ? 'checked' : '') + ' onchange="toggleSelectAll()"></th><th>文章名称</th><th style="width:120px">时间</th><th style="width:280px">链接</th></tr></thead>' +
+                '<tbody>' + articles.map(function(a, i) {
+                    var selected = isSelected(currentSource, i);
+                    return '<tr id="row-' + i + '" class="' + (selected ? 'selected' : '') + '">' +
+                        '<td><input type="checkbox" class="article-checkbox" id="cb-' + i + '" ' + (selected ? 'checked' : '') + ' onchange="toggleArticle(' + i + ')"></td>' +
+                        '<td><a href="' + a.url + '" target="_blank" class="article-title-link">' + a.title + '</a></td>' +
+                        '<td class="article-date">' + a.publish_date + '</td>' +
+                        '<td class="article-url"><a href="' + a.url + '" target="_blank" title="' + a.url + '">' + a.url + '</a></td>' +
+                        '</tr>';
+                }).join('') + '</tbody></table></div>';
             updateExportButton();
         }
 
         function isSelected(source, index) {
-            return selectedArticles.has(`${source}_${index}`);
+            return selectedArticles.has(source + '_' + index);
         }
 
         function setSelected(source, index, selected) {
-            const key = `${source}_${index}`;
+            var key = source + '_' + index;
             if (selected) {
                 selectedArticles.set(key, { source: source, index: index, article: allArticles[index] });
             } else {
@@ -219,15 +231,22 @@
         }
 
         function toggleSelectAll() {
-            const selectAllCheckbox = document.getElementById('selectAll');
-            const currentSelectedCount = allArticles.filter((_, i) => isSelected(currentSource, i)).length;
-            const allSelected = currentSelectedCount === allArticles.length && allArticles.length > 0;
+            var selectAllCheckbox = document.getElementById('selectAll');
+            var currentSelectedCount = 0;
+            for (var i = 0; i < allArticles.length; i++) {
+                if (isSelected(currentSource, i)) currentSelectedCount++;
+            }
+            var allSelected = currentSelectedCount === allArticles.length && allArticles.length > 0;
             
             if (allSelected) {
-                allArticles.forEach((_, i) => setSelected(currentSource, i, false));
+                for (var i = 0; i < allArticles.length; i++) {
+                    setSelected(currentSource, i, false);
+                }
                 selectAllCheckbox.checked = false;
             } else {
-                allArticles.forEach((_, i) => setSelected(currentSource, i, true));
+                for (var i = 0; i < allArticles.length; i++) {
+                    setSelected(currentSource, i, true);
+                }
                 selectAllCheckbox.checked = true;
             }
             
@@ -236,17 +255,20 @@
         }
 
         function toggleArticle(index) {
-            const currentlySelected = isSelected(currentSource, index);
+            var currentlySelected = isSelected(currentSource, index);
             setSelected(currentSource, index, !currentlySelected);
             
-            const row = document.getElementById(`row-${index}`); 
+            var row = document.getElementById('row-' + index);
             if (row) row.classList.toggle('selected', !currentlySelected);
             
-            const cb = document.getElementById(`cb-${index}`);
+            var cb = document.getElementById('cb-' + index);
             if (cb) cb.checked = !currentlySelected;
             
-            const currentSelectedCount = allArticles.filter((_, i) => isSelected(currentSource, i)).length;
-            const selectAllCheckbox = document.getElementById('selectAll'); 
+            var currentSelectedCount = 0;
+            for (var i = 0; i < allArticles.length; i++) {
+                if (isSelected(currentSource, i)) currentSelectedCount++;
+            }
+            var selectAllCheckbox = document.getElementById('selectAll');
             if (selectAllCheckbox) {
                 selectAllCheckbox.checked = currentSelectedCount === allArticles.length && allArticles.length > 0;
             }
@@ -254,39 +276,46 @@
         }
 
         function updateExportButton() {
-            const btn = document.getElementById('exportBtn'), info = document.getElementById('exportInfo');
-            const totalSelected = selectedArticles.size;
-            btn.disabled = !totalSelected; 
-            info.textContent = totalSelected ? `已选择 ${totalSelected} 篇` : '';
+            var btn = document.getElementById('exportBtn'), info = document.getElementById('exportInfo');
+            var totalSelected = selectedArticles.size;
+            btn.disabled = !totalSelected;
+            info.textContent = totalSelected ? '已选择 ' + totalSelected + ' 篇' : '';
         }
 
         function exportSelected() {
             if (!selectedArticles.size) { showToast('请先选择要导出的文章', 'error'); return; }
             
-            const selectedData = Array.from(selectedArticles.values()).map(item => ({
-                source: item.source,
-                title: item.article.title,
-                publish_date: item.article.publish_date,
-                url: item.article.url
-            }));
-            
-            let csv = '\uFEFF公众号名称,文章名称,时间,链接\n';
-            selectedData.forEach(a => {
-                csv += `"${a.source}","${a.title}","${a.publish_date}","${a.url}"\n`;
+            var selectedData = [];
+            selectedArticles.forEach(function(item) {
+                selectedData.push({
+                    source: item.source,
+                    title: item.article.title,
+                    publish_date: item.article.publish_date,
+                    url: item.article.url
+                });
             });
             
-            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url; a.download = `articles_multi_${new Date().toISOString().slice(0,10)}.csv`;
-            document.body.appendChild(a); a.click(); document.body.removeChild(a);
+            var csv = '\ufeff公众号名称,文章名称,时间,链接\n';
+            selectedData.forEach(function(a) {
+                csv += '"' + a.source + '","' + a.title + '","' + a.publish_date + '","' + a.url + '"\n';
+            });
+            
+            var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = 'articles_multi_' + new Date().toISOString().slice(0,10) + '.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
             URL.revokeObjectURL(url);
             
-            showToast(`成功导出 ${selectedArticles.size} 篇文章`);
+            showToast('成功导出 ' + selectedArticles.size + ' 篇文章');
         }
 
         function refreshData() {
-            loadStats(); loadSources();
+            loadStats();
+            loadSources();
             if (currentSource) { selectSource(currentSource); }
         }
 
