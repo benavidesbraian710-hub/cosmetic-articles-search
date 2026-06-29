@@ -6,7 +6,7 @@
       "start": "2026-06-15",
       "end": "2026-06-29"
     },
-    "last_update": "2026-06-29T14:45:05.951559"
+    "last_update": "2026-06-29T14:55:01.946492"
   },
   "sources": [
     {
@@ -1108,20 +1108,20 @@
     ],
     "美业颜究院": [
       {
-        "id": 243,
-        "title": "美业颜究院 文章",
-        "source": "美业颜究院",
-        "publish_date": "2026-06-29",
-        "url": "https://mp.weixin.qq.com/s/qYc_zV9KnU3JKzHZGP7HEA",
-        "summary": "",
-        "keywords": []
-      },
-      {
         "id": 242,
         "title": "倒计时4天！2026全球美业趋势创新大会议程请查收！顶级阵容集结，多维度拆解美业未来五年增长逻辑",
         "source": "美业颜究院",
         "publish_date": "2026-06-22",
         "url": "https://mp.weixin.qq.com/s/BN2lBOhMvuUjCsNc0fXvQA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 344,
+        "title": "谁入围了2026产品力颜究院？年度“新势力”集结！| 全球美业趋势创新大会",
+        "source": "美业颜究院",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/qYc_zV9KnU3JKzHZGP7HEA",
         "summary": "",
         "keywords": []
       }
