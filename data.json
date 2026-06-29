@@ -1,17 +1,17 @@
 {
   "stats": {
     "total_articles": 120,
-    "source_count": 12,
+    "source_count": 11,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-06-29"
     },
-    "last_update": "2026-06-29T14:43:31.955570"
+    "last_update": "2026-06-29T14:45:05.951559"
   },
   "sources": [
     {
-      "name": "个护前言",
-      "count": 23
+      "name": "个护前沿",
+      "count": 27
     },
     {
       "name": "中国化妆品",
@@ -42,10 +42,6 @@
       "count": 5
     },
     {
-      "name": "个护前沿",
-      "count": 4
-    },
-    {
       "name": "美业颜究院",
       "count": 2
     },
@@ -59,11 +55,47 @@
     }
   ],
   "articles": {
-    "个护前言": [
+    "个护前沿": [
+      {
+        "id": 234,
+        "title": "资生堂：触觉敏感度与身心疾病的关联",
+        "source": "个护前沿",
+        "publish_date": "2026-06-28",
+        "url": "https://mp.weixin.qq.com/s/eVfvp57VGOfhL6xpEgoDfw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 235,
+        "title": "争议颇多的PDRN，怎么又行了？",
+        "source": "个护前沿",
+        "publish_date": "2026-06-27",
+        "url": "https://mp.weixin.qq.com/s/OMb25eLzLzzj9Vv5NZIJ8Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 236,
+        "title": "高端美妆是怎么重写“高端”的？",
+        "source": "个护前沿",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/9n8zXxoZ9R8irtDLK24BDw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 237,
+        "title": "28家企业排队，美妆IPO迎来三年最强复苏？",
+        "source": "个护前沿",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/BbCj-znw6sZrxfxqJWUC0A",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 309,
         "title": "资生堂首个“中国专供”品牌生变",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-25",
         "url": "https://mp.weixin.qq.com/s/7d18XpeQt7TwwfSMuKtrsg",
         "summary": "",
@@ -72,7 +104,7 @@
       {
         "id": 310,
         "title": "34款新原料消失，备案之王NMN为何被“下架”4次？",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-24",
         "url": "https://mp.weixin.qq.com/s/hFUnI9mb1PpFb-b7_wRcTw",
         "summary": "",
@@ -81,7 +113,7 @@
       {
         "id": 311,
         "title": "锦波生物换帅：杨霞辞任，职业经理人上位！",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-24",
         "url": "https://mp.weixin.qq.com/s/o17L8QUDTCbVwjWCHDP3jA",
         "summary": "",
@@ -90,7 +122,7 @@
       {
         "id": 312,
         "title": "北京市化妆品审评检查中心 | 关于普通化妆品备案常见问题一问一答（第五十七期）",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-24",
         "url": "https://mp.weixin.qq.com/s/sdl1pdDdAlfiWcVw-MD0HQ",
         "summary": "",
@@ -99,7 +131,7 @@
       {
         "id": 313,
         "title": "行业动态 | 进入“22证时代”：巨子和芳禾下证，国产医美上游真正的淘汰赛开始了",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-23",
         "url": "https://mp.weixin.qq.com/s/nkNsOQCX15FxOjjk1HQ6ZA",
         "summary": "",
@@ -108,7 +140,7 @@
       {
         "id": 314,
         "title": "相宜本草：压力型色沉的调控关键",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-23",
         "url": "https://mp.weixin.qq.com/s/42mRhTh0wQi62gahKXFKXw",
         "summary": "",
@@ -117,7 +149,7 @@
       {
         "id": 315,
         "title": "水羊&amp;农科院麻类所｜EUR FOOD RES TECHNOL 2026｜金银花双重发酵法，总多酚黄酮下降，抗氧能力反而提升",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-23",
         "url": "https://mp.weixin.qq.com/s/iMxoKn68dBWTjWEWEKDvTw",
         "summary": "",
@@ -126,7 +158,7 @@
       {
         "id": 316,
         "title": "半年500亿，钱都被谁“吃”了？",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-22",
         "url": "https://mp.weixin.qq.com/s/GFRztYV3rPezo3eMKIMk4g",
         "summary": "",
@@ -135,7 +167,7 @@
       {
         "id": 317,
         "title": "当PDRN不再稀缺，欧莱雅和绽媄娅们打响持久战",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-22",
         "url": "https://mp.weixin.qq.com/s/cpxWblABMUot0XsuiCL9bw",
         "summary": "",
@@ -144,7 +176,7 @@
       {
         "id": 318,
         "title": "欧莱雅入局，美妆品牌打响AI浮现权争夺战",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-22",
         "url": "https://mp.weixin.qq.com/s/l4g7R3IchY4oX3k7QpMNxA",
         "summary": "",
@@ -153,7 +185,7 @@
       {
         "id": 319,
         "title": "雅诗兰黛｜SID 2026｜植物外泌体可以调控日夜受损下的肌肤炎症反应，体外实验中，有类比人源外泌体的功效",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-21",
         "url": "https://mp.weixin.qq.com/s/auc-E97BvxPg9kp545U8WQ",
         "summary": "",
@@ -162,7 +194,7 @@
       {
         "id": 320,
         "title": "ECM绕行上岸，PDRN冲刺拿牌，谁是巨头的&quot;最后一张王牌&quot;？",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-20",
         "url": "https://mp.weixin.qq.com/s/GXSASUjybx-kNtE0kDx02Q",
         "summary": "",
@@ -171,7 +203,7 @@
       {
         "id": 321,
         "title": "首发国标，两种化妆品不良反应被上“紧箍咒”",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-18",
         "url": "https://mp.weixin.qq.com/s/aD5mG5IcU1dz3f-v_GnbhA",
         "summary": "",
@@ -180,7 +212,7 @@
       {
         "id": 322,
         "title": "人人都要的「创新品」怎么开？答案藏在这 | 好产品提案会",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-18",
         "url": "https://mp.weixin.qq.com/s/JZ9MHe2K9rJwNRVWqINLJg",
         "summary": "",
@@ -189,7 +221,7 @@
       {
         "id": 323,
         "title": "上美再创新品牌",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-17",
         "url": "https://mp.weixin.qq.com/s/2NQMkaqlbIjbYUpFfmj-WA",
         "summary": "",
@@ -198,7 +230,7 @@
       {
         "id": 324,
         "title": "68%“专利”失效！头部美妆正抢滩四大技术高地",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-17",
         "url": "https://mp.weixin.qq.com/s/3h44XZ_2TrFL9Vefla7NVw",
         "summary": "",
@@ -207,7 +239,7 @@
       {
         "id": 325,
         "title": "联合利华发布多项AI改革成果",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-17",
         "url": "https://mp.weixin.qq.com/s/4gOG151duavz_o25bYcvBA",
         "summary": "",
@@ -216,7 +248,7 @@
       {
         "id": 326,
         "title": "深度 | “护肤式”洗护发，告别浓度竞赛",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/5kplHjx4RDo13uho6Brkhw",
         "summary": "",
@@ -225,7 +257,7 @@
       {
         "id": 327,
         "title": "美白护肤红海逃生：下代爆款藏在成分、剂型、人群、场景交集里",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/-ECEyrQ3zLm8APuN2hF6nQ",
         "summary": "",
@@ -234,7 +266,7 @@
       {
         "id": 328,
         "title": "中山三院皮肤科发现色斑新靶点：ZIC1",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/lwr7iT_KGlX1AV9_qT-hVQ",
         "summary": "",
@@ -243,7 +275,7 @@
       {
         "id": 329,
         "title": "蒂佳婷被抛售、桃瑞丹并购终止：美妆并购进入冷静期？",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-15",
         "url": "https://mp.weixin.qq.com/s/qQu1KFbbT7tYK9YOFCPrIA",
         "summary": "",
@@ -252,7 +284,7 @@
       {
         "id": 330,
         "title": "新风口？20+美妆新原料来自医美",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-15",
         "url": "https://mp.weixin.qq.com/s/Z-vp96FNj-S44403OO8o-A",
         "summary": "",
@@ -261,7 +293,7 @@
       {
         "id": 331,
         "title": "韩国“皮肤科天花板”，成赫莲娜“医美级技术合伙人”？",
-        "source": "个护前言",
+        "source": "个护前沿",
         "publish_date": "2026-06-15",
         "url": "https://mp.weixin.qq.com/s/_4AWpZec8er_A1J12WmBKg",
         "summary": "",
@@ -1070,44 +1102,6 @@
         "source": "KEV美妆",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/dAkA6f5Xpg-6IAwdrF6-PA",
-        "summary": "",
-        "keywords": []
-      }
-    ],
-    "个护前沿": [
-      {
-        "id": 234,
-        "title": "资生堂：触觉敏感度与身心疾病的关联",
-        "source": "个护前沿",
-        "publish_date": "2026-06-28",
-        "url": "https://mp.weixin.qq.com/s/eVfvp57VGOfhL6xpEgoDfw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 235,
-        "title": "争议颇多的PDRN，怎么又行了？",
-        "source": "个护前沿",
-        "publish_date": "2026-06-27",
-        "url": "https://mp.weixin.qq.com/s/OMb25eLzLzzj9Vv5NZIJ8Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 236,
-        "title": "高端美妆是怎么重写“高端”的？",
-        "source": "个护前沿",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/9n8zXxoZ9R8irtDLK24BDw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 237,
-        "title": "28家企业排队，美妆IPO迎来三年最强复苏？",
-        "source": "个护前沿",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/BbCj-znw6sZrxfxqJWUC0A",
         "summary": "",
         "keywords": []
       }
