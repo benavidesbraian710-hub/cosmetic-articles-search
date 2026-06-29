@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 109,
+    "total_articles": 120,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-06-29"
     },
-    "last_update": "2026-06-29T14:39:12.212950"
+    "last_update": "2026-06-29T14:43:31.955570"
   },
   "sources": [
     {
@@ -16,6 +16,10 @@
     {
       "name": "中国化妆品",
       "count": 21
+    },
+    {
+      "name": "Fbeauty未来迹",
+      "count": 15
     },
     {
       "name": "非科学美妆传播",
@@ -39,10 +43,6 @@
     },
     {
       "name": "个护前沿",
-      "count": 4
-    },
-    {
-      "name": "Fbeauty未来迹",
       "count": 4
     },
     {
@@ -455,6 +455,143 @@
         "source": "中国化妆品",
         "publish_date": "2026-06-15",
         "url": "https://mp.weixin.qq.com/s/3A1hTHXIQohJ6dYSjLcEjw",
+        "summary": "",
+        "keywords": []
+      }
+    ],
+    "Fbeauty未来迹": [
+      {
+        "id": 335,
+        "title": "Fbeauty未来迹 文章",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/wQbvV89hmLPrJ0uhQRpDJQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 230,
+        "title": "首个儿童皮肤延续护理指南发布，青蛙王子七年科研承接标准落地",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-28",
+        "url": "https://mp.weixin.qq.com/s/dcpRcraC2s6AagfU6Q5F7A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 231,
+        "title": "1160亿元之后，美妆护肤市场走向两种分化",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-27",
+        "url": "https://mp.weixin.qq.com/s/WFy_yi5-O9ViodJZEsF7Vw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 232,
+        "title": "关店、回归、重启，美妆品牌的生存法则变了",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/aiujF5UzL4XV-VCndV2bVA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 233,
+        "title": "“柔顺”二字，飘柔还能讲出什么新故事？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/zMrhlLZiCG2wnHLzvqW_6A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 333,
+        "title": "跑红集团科创中心落成：一家新美妆企业的“架桥”试验",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/G5j772_LcfhG-1q9BLjIYQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 334,
+        "title": "美妆618首次负增长，一场去泡沫化开始了",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/puzbXQ04s4npDYIBXs4XWQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 336,
+        "title": "28家企业排队，美妆IPO迎来三年最强复苏？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/ZHyXvwT6aQmMnQ7DeDu-pQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 337,
+        "title": "告别“GMV至上”，美妆品牌618在拼什么？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-19",
+        "url": "https://mp.weixin.qq.com/s/6hBoBTZkWeL4egVj_itzTA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 338,
+        "title": "在华首宣《国际共识》，优色林把美白带进“证据竞争”",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/wi_taZjwyl-4j0rGBsCHjQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 339,
+        "title": "被蚊子逼出来的百亿精致生意，正在加速变“卷”",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/EFUXCK_EL7axSbYTqKH_Ww",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 340,
+        "title": "专访 | 欧莱雅全球最大生产基地，如何炼成？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/FOpoHfOnsr20gHy-I-r9Cw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 341,
+        "title": "美白护肤，红海逃生",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/7Rz517uSUBX7XHUeLYjK0w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 342,
+        "title": "一座267岁植物园的“二次生长”，邱园开启中国奢护新叙事",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/HmypxS8OT3vMYei4GqdGdw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 343,
+        "title": "当PDRN不再稀缺，欧莱雅和绽媄娅们打响持久战",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/Vwx9YrJnwhmUn1TtEV_AYg",
         "summary": "",
         "keywords": []
       }
@@ -971,44 +1108,6 @@
         "source": "个护前沿",
         "publish_date": "2026-06-25",
         "url": "https://mp.weixin.qq.com/s/BbCj-znw6sZrxfxqJWUC0A",
-        "summary": "",
-        "keywords": []
-      }
-    ],
-    "Fbeauty未来迹": [
-      {
-        "id": 230,
-        "title": "首个儿童皮肤延续护理指南发布，青蛙王子七年科研承接标准落地",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-28",
-        "url": "https://mp.weixin.qq.com/s/dcpRcraC2s6AagfU6Q5F7A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 231,
-        "title": "1160亿元之后，美妆护肤市场走向两种分化",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-27",
-        "url": "https://mp.weixin.qq.com/s/WFy_yi5-O9ViodJZEsF7Vw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 232,
-        "title": "关店、回归、重启，美妆品牌的生存法则变了",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/aiujF5UzL4XV-VCndV2bVA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 233,
-        "title": "“柔顺”二字，飘柔还能讲出什么新故事？",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/zMrhlLZiCG2wnHLzvqW_6A",
         "summary": "",
         "keywords": []
       }
