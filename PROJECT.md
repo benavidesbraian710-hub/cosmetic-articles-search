@@ -1,33 +1,83 @@
 # 化妆品文章检索系统 - 项目文档
 
-**文档版本**: v1.1
+**文档版本**: v1.2
 **创建时间**: 2026-06-29 12:13
-**最后更新**: 2026-06-29 12:19
+**最后更新**: 2026-06-29 12:24
 **项目负责人**: Nick
 **技术实现**: 搜搜 (Sōusou) - AI搜索猎犬
+
+**当前版本**: Basic版本（V1）
+**目标版本**: V3（详见产品设计方案）
 
 ---
 
 ## 一、项目概述
 
-**项目名称**: 化妆品文章检索系统 - Basic版本
+**项目名称**: 化妆品文章检索系统
+**当前版本**: Basic版本（V1）
 **网站地址**: https://www.cosmetic-search.com/
 **GitHub仓库**: https://github.com/benavidesbraian710-hub/cosmetic-articles-search
 **部署方式**: GitHub Pages 静态托管
-**系统定位**: 7×24小时监控化妆品行业公众号，自动采集文章，提供检索和浏览功能
+
+**系统定位**: 
+- **Basic版本（当前）**: 7×24小时监控化妆品行业公众号，自动采集文章，提供浏览和导出功能
+- **V3版本（规划）**: 智能检索系统，支持关键词搜索、LLM摘要、智能排序
 
 **项目路径**: ~/.openclaw/workspace/cosmetic-deploy/
 **数据库路径**: ~/.openclaw/cosmetic_articles.db
 **当前数据量**: 190篇文章，15个公众号
+**数据范围**: 从发布时间开始至今的所有文章
 **最后更新时间**: 2026-06-29 12:08
+
+**版本演进计划**:
+- V1（Basic）: 当前版本，支持浏览和导出
+- V2（增强）: 添加检索功能、文章正文、LLM摘要
+- V3（智能）: 智能检索、个性化推荐、多维度分析（详见产品设计方案）
 
 ---
 
-## 二、系统架构
+## 二、版本说明
+
+### Basic版本（V1）- 当前
+
+**功能**:
+- ✅ 公众号文章自动采集
+- ✅ 文章浏览（按公众号分类）
+- ✅ 文章勾选导出CSV
+- ✅ 去重机制（URL唯一约束）
+
+**限制**:
+- ❌ 无搜索功能
+- ❌ 无文章正文
+- ❌ 无LLM摘要
+- ❌ 无关键词提取
+- ❌ 无智能排序
+
+### V3版本（规划）
+
+**文档**: ~/.openclaw/workspace/化妆品文章检索系统_产品设计方案_v1.2.md
+
+**核心功能**:
+1. 智能检索引擎（关键词召回 + LLM精排）
+2. 文章摘要生成（LLM生成150-250字）
+3. 关键词提取（8-15个关键词）
+4. 多维度排序（时间、相关性、热度）
+5. 个性化推荐
+6. 高级筛选（公众号、时间范围、关键词）
+
+**技术架构**:
+- 后端: Flask + SQLite + FTS5
+- 前端: React/Vue（待定）
+- AI: LLM API（摘要、关键词、精排）
+- 部署: 云服务器（待定）
+
+---
+
+## 三、系统架构（Basic版本）
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    化妆品文章检索系统                                │
+│                    化妆品文章检索系统 - Basic版本                    │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
 │  【前端】GitHub Pages 静态网站                                       │
@@ -99,37 +149,44 @@
 
 ## 文件清单
 
-### 核心文件
+### 核心文件（Basic版本）
 
-| 文件 | 路径 | 说明 |
-|------|------|------|
-| index.html | ~/.openclaw/workspace/cosmetic-deploy/index.html | 网站前端 |
-| data.json | ~/.openclaw/workspace/cosmetic-deploy/data.json | 网站数据源 |
-| export_data.py | ~/.openclaw/workspace/cosmetic-deploy/export_data.py | 导出数据库到JSON |
-| collect_from_csv.py | ~/.openclaw/workspace/cosmetic-deploy/collect_from_csv.py | CSV入库脚本 |
-| update.sh | ~/.openclaw/workspace/cosmetic-deploy/update.sh | 更新网站脚本 |
-| auto_collect.py | ~/.openclaw/workspace/cosmetic-deploy/auto_collect.py | 自动采集+入库+推送 |
-| auto_collect_all.py | ~/.openclaw/workspace/cosmetic-deploy/auto_collect_all.py | 全量自动采集 |
+| 文件 | 路径 | 说明 | 版本 |
+|------|------|------|------|
+| index.html | ~/.openclaw/workspace/cosmetic-deploy/index.html | 网站前端 | V1 |
+| data.json | ~/.openclaw/workspace/cosmetic-deploy/data.json | 网站数据源 | V1 |
+| export_data.py | ~/.openclaw/workspace/cosmetic-deploy/export_data.py | 导出数据库到JSON | V1 |
+| collect_from_csv.py | ~/.openclaw/workspace/cosmetic-deploy/collect_from_csv.py | CSV入库脚本 | V1 |
+| update.sh | ~/.openclaw/workspace/cosmetic-deploy/update.sh | 更新网站脚本 | V1 |
+| auto_collect.py | ~/.openclaw/workspace/cosmetic-deploy/auto_collect.py | 自动采集+入库+推送 | V1 |
+| auto_collect_all.py | ~/.openclaw/workspace/cosmetic-deploy/auto_collect_all.py | 全量自动采集 | V1 |
+| PROJECT.md | ~/.openclaw/workspace/cosmetic-deploy/PROJECT.md | 项目文档 | V1 |
 
 ### 采集器文件
 
-| 文件 | 路径 | 说明 |
-|------|------|------|
-| collect.py | ~/.openclaw/workspace/wechat-collector/skills/wechat-article-collector/scripts/collect.py | 坐标点击采集器 |
-| collect_relative.py | ~/.openclaw/workspace/wechat-collector/skills/wechat-article-collector/scripts/collect_relative.py | 相对坐标采集器(备用) |
-| test_debug.py | ~/.openclaw/workspace/wechat-collector/skills/wechat-article-collector/scripts/test_debug.py | 调试脚本 |
+| 文件 | 路径 | 说明 | 版本 |
+|------|------|------|------|
+| collect.py | ~/.openclaw/workspace/wechat-collector/skills/wechat-article-collector/scripts/collect.py | 坐标点击采集器 | V1 |
+| collect_relative.py | ~/.openclaw/workspace/wechat-collector/skills/wechat-article-collector/scripts/collect_relative.py | 相对坐标采集器(备用) | V1 |
+| test_debug.py | ~/.openclaw/workspace/wechat-collector/skills/wechat-article-collector/scripts/test_debug.py | 调试脚本 | V1 |
+
+### 产品设计方案
+
+| 文件 | 路径 | 说明 | 版本 |
+|------|------|------|------|
+| 化妆品文章检索系统_产品设计方案_v1.2.md | ~/.openclaw/workspace/化妆品文章检索系统_产品设计方案_v1.2.md | V3版本产品设计方案 | V3 |
 
 ### 历史文件
 
-| 文件 | 路径 | 说明 |
-|------|------|------|
-| fix_all_times.py | ~/.openclaw/workspace/cosmetic-deploy/fix_all_times.py | 修复发布时间脚本 |
-| collect_from_wechat_mac.py | ~/.openclaw/workspace/cosmetic-deploy/collect_from_wechat_mac.py | 旧版采集脚本 |
-| collect_and_save.py | ~/.openclaw/workspace/cosmetic-deploy/collect_and_save.py | 旧版采集+入库 |
-| wechat_article_collector.py | ~/.openclaw/workspace/wechat-auto/wechat_article_collector.py | 历史坐标版本 |
-| test_click.py | ~/.openclaw/workspace/wechat-auto/test_click.py | 历史测试脚本 |
-| test_full_workflow.py | ~/.openclaw/workspace/wechat-auto/test_full_workflow.py | 历史测试脚本 |
-| test_click_search_abs.py | ~/.openclaw/workspace/wechat-auto/test_click_search_abs.py | 历史测试脚本 |
+| 文件 | 路径 | 说明 | 状态 |
+|------|------|------|------|
+| fix_all_times.py | ~/.openclaw/workspace/cosmetic-deploy/ | 修复发布时间脚本 | 历史 |
+| collect_from_wechat_mac.py | ~/.openclaw/workspace/cosmetic-deploy/ | 旧版采集脚本 | 历史 |
+| collect_and_save.py | ~/.openclaw/workspace/cosmetic-deploy/ | 旧版采集+入库 | 历史 |
+| wechat_article_collector.py | ~/.openclaw/workspace/wechat-auto/ | 历史坐标版本 | 历史 |
+| test_click.py | ~/.openclaw/workspace/wechat-auto/ | 历史测试脚本 | 历史 |
+| test_full_workflow.py | ~/.openclaw/workspace/wechat-auto/ | 历史测试脚本 | 历史 |
+| test_click_search_abs.py | ~/.openclaw/workspace/wechat-auto/ | 历史测试脚本 | 历史 |
 
 ---
 
@@ -647,6 +704,72 @@ main
 | 2026-06-29 | 修复Beauty Insider | 添加备选坐标 | 成功采集4篇 |
 | 2026-06-29 | 最终入库 | 新增2篇 | 总文章数190篇 |
 | 2026-06-29 | 推送网站 | GitHub Pages | 数据更新完成 |
+
+---
+
+## 版本演进说明
+
+### 当前版本: Basic版本（V1）
+
+**功能特性**:
+- 公众号文章自动采集（坐标点击）
+- 文章浏览（按公众号分类）
+- 文章勾选导出CSV
+- 去重机制（URL唯一约束）
+
+**限制**:
+- 无搜索功能
+- 无文章正文
+- 无LLM摘要
+- 无关键词提取
+- 无智能排序
+
+**数据范围**:
+- 从发布时间开始至今的所有文章
+- 当前15个公众号，190篇文章
+- 后续会根据用户需求增加公众号
+
+### V2版本（规划）
+
+**目标**: 增强功能，添加检索和正文
+
+**功能**:
+- [ ] 文章正文抓取
+- [ ] 基础检索功能（关键词匹配）
+- [ ] LLM摘要生成
+- [ ] 关键词提取
+- [ ] 高级筛选（时间范围、公众号）
+
+**技术栈**:
+- 后端: Flask + SQLite + FTS5
+- 前端: 增强版HTML/JS
+- AI: LLM API
+
+### V3版本（规划）
+
+**目标**: 智能检索系统
+
+**文档**: 化妆品文章检索系统_产品设计方案_v1.2.md
+
+**核心功能**:
+1. 智能检索引擎（关键词召回 + LLM精排）
+2. 文章摘要生成（LLM生成150-250字）
+3. 关键词提取（8-15个关键词）
+4. 多维度排序（时间、相关性、热度）
+5. 个性化推荐
+6. 高级筛选（公众号、时间范围、关键词）
+
+**技术架构**:
+- 后端: Flask + SQLite + FTS5
+- 前端: React/Vue（待定）
+- AI: LLM API（摘要、关键词、精排）
+- 部署: 云服务器（待定）
+
+**数据库扩展**:
+- content: 文章正文
+- summary: LLM生成的摘要
+- keywords: 提取的关键词（JSON）
+- 全文索引: FTS5（title + content）
 
 ---
 
