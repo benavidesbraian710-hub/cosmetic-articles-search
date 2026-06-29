@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 54,
+    "total_articles": 62,
     "source_count": 11,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-06-29"
     },
-    "last_update": "2026-06-29T14:07:31.268121"
+    "last_update": "2026-06-29T14:15:46.105315"
   },
   "sources": [
     {
@@ -14,12 +14,12 @@
       "count": 14
     },
     {
-      "name": "肤见未来实验室",
-      "count": 11
+      "name": "妆合规",
+      "count": 12
     },
     {
-      "name": "妆合规",
-      "count": 4
+      "name": "肤见未来实验室",
+      "count": 11
     },
     {
       "name": "原料合规观察",
@@ -183,6 +183,116 @@
         "keywords": []
       }
     ],
+    "妆合规": [
+      {
+        "id": 226,
+        "title": "化妆品企业注意！化妆品终产品中新化学物质或纳入登记管理--生态环境部12号令修订对化妆品企业影响解析",
+        "source": "妆合规",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/HfYthpPHSjULT4jM4sM2pA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 227,
+        "title": "瑞旭集团（CIRS）受邀参加欧洲化妆品协会年会CEAC 2026",
+        "source": "妆合规",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/zbMmgtlPMhUhCr67m1aEIw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 228,
+        "title": "网络公开课(7月7日)：日本美妆市场准入双轨制——化妆品与医药部外品合规解析",
+        "source": "妆合规",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/BOQ2nnvA2FXG2kw4lUFBog",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 229,
+        "title": "新原料备案 | 新增白鬼笔（PHALLUS IMPUDICUS）子实体提取物等六款新原料通过备案",
+        "source": "妆合规",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/Xs4yxgRg08KF1rOt959FLQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 278,
+        "title": "化妆品QA汇编2-新原料注册备案&amp;普通化妆品备案",
+        "source": "妆合规",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/4zrmVvV6_ryonxecvK23-g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 279,
+        "title": "全球化妆品法规动态第39期-2026年5月",
+        "source": "妆合规",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/mUI1LxR4Vu0b6ltfx9WXPA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 280,
+        "title": "【CIRS功效评价与技术实践】第23期——头皮与面部皮肤的隐秘关联",
+        "source": "妆合规",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/wBPSISMqc19N2MAnWW2kUg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 281,
+        "title": "有关化妆品不良反应，2项强制性国标公开征求意见",
+        "source": "妆合规",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/F1wLSULbYjjPrdhA3MfvZA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 282,
+        "title": "网络专题会(6月29日)——化妆品出海欧盟：从安全评估（CPSR）到包装合规（PPWR）全链路解析",
+        "source": "妆合规",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/RgETyeZYinxuoB_LVI0qFg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 283,
+        "title": "网络公开课：2026关键倒计时—韩国化妆品企业如何应对中国台湾化妆品新规(6月19日)",
+        "source": "妆合规",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/cNknLclqOb1XZ0tHk8hF6w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 284,
+        "title": "法规公开课：GB 26396-2026 洗涤用品安全技术规范最新解读 (6月18日)",
+        "source": "妆合规",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/HgyAowK4metXSCXxN47eCA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 285,
+        "title": "2026年化妆品新原料备案数量已超100款！",
+        "source": "妆合规",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/CnbNdyIcxgi3mSZnqDBsdw",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "肤见未来实验室": [
       {
         "id": 247,
@@ -280,44 +390,6 @@
         "source": "肤见未来实验室",
         "publish_date": "2026-06-15",
         "url": "https://mp.weixin.qq.com/s/8nLjISn2uCIvxlQ3qBZTdg",
-        "summary": "",
-        "keywords": []
-      }
-    ],
-    "妆合规": [
-      {
-        "id": 226,
-        "title": "化妆品企业注意！化妆品终产品中新化学物质或纳入登记管理--生态环境部12号令修订对化妆品企业影响解析",
-        "source": "妆合规",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/HfYthpPHSjULT4jM4sM2pA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 227,
-        "title": "瑞旭集团（CIRS）受邀参加欧洲化妆品协会年会CEAC 2026",
-        "source": "妆合规",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/zbMmgtlPMhUhCr67m1aEIw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 228,
-        "title": "网络公开课(7月7日)：日本美妆市场准入双轨制——化妆品与医药部外品合规解析",
-        "source": "妆合规",
-        "publish_date": "2026-06-24",
-        "url": "https://mp.weixin.qq.com/s/BOQ2nnvA2FXG2kw4lUFBog",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 229,
-        "title": "新原料备案 | 新增白鬼笔（PHALLUS IMPUDICUS）子实体提取物等六款新原料通过备案",
-        "source": "妆合规",
-        "publish_date": "2026-06-24",
-        "url": "https://mp.weixin.qq.com/s/Xs4yxgRg08KF1rOt959FLQ",
         "summary": "",
         "keywords": []
       }
