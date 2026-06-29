@@ -13,10 +13,15 @@
         .sidebar-header .version { font-size: 12px; color: #1890ff; font-weight: 500; }
         .sidebar-header .stats { margin-top: 12px; padding: 10px; background: #f8f9fa; border-radius: 6px; font-size: 13px; color: #666; }
         .sidebar-header .stats div { margin: 4px 0; }
+        .sidebar-search { padding: 12px 16px; border-bottom: 1px solid #e8e8e8; }
+        .sidebar-search input { width: 100%; padding: 8px 12px; border: 1px solid #d9d9d9; border-radius: 6px; font-size: 14px; outline: none; transition: all 0.2s; }
+        .sidebar-search input:focus { border-color: #1890ff; box-shadow: 0 0 0 2px rgba(24,144,255,0.1); }
+        .sidebar-search input::placeholder { color: #999; }
         .source-list { flex: 1; overflow-y: auto; padding: 10px; }
         .source-item { padding: 12px 16px; margin: 4px 0; border-radius: 8px; cursor: pointer; transition: all 0.2s; display: flex; justify-content: space-between; align-items: center; }
         .source-item:hover { background: #f0f7ff; }
         .source-item.active { background: #e6f2ff; border-left: 3px solid #1890ff; }
+        .source-item.hidden { display: none; }
         .source-name { font-size: 14px; color: #333; font-weight: 500; }
         .source-count { font-size: 12px; color: #999; background: #f5f5f5; padding: 2px 8px; border-radius: 10px; }
         .main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
@@ -30,6 +35,11 @@
         .btn-success { background: #52c41a; color: #fff; border-color: #52c41a; }
         .btn-success:hover { background: #73d13d; }
         .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .filter-bar { background: #fff; padding: 12px 30px; border-bottom: 1px solid #e8e8e8; display: flex; gap: 10px; align-items: center; }
+        .filter-bar label { font-size: 14px; color: #666; }
+        .filter-bar select { padding: 6px 12px; border: 1px solid #d9d9d9; border-radius: 6px; font-size: 14px; outline: none; cursor: pointer; }
+        .filter-bar select:focus { border-color: #1890ff; }
+        .filter-bar .filter-info { font-size: 13px; color: #999; margin-left: 10px; }
         .article-list { flex: 1; overflow-y: auto; padding: 20px 30px; }
         .article-table { width: 100%; background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); overflow: hidden; }
         .article-table table { width: 100%; border-collapse: collapse; }
@@ -70,6 +80,9 @@
             <div class="version">Basic版本 - 实时数据</div>
             <div class="stats" id="stats"><div>加载中...</div></div>
         </div>
+        <div class="sidebar-search">
+            <input type="text" id="sourceSearch" placeholder="搜索公众号..." oninput="filterSources()">
+        </div>
         <div class="source-list" id="sourceList"></div>
     </div>
     <div class="main-content">
@@ -84,6 +97,17 @@
                 <span class="export-info" id="exportInfo"></span>
                 <button class="btn btn-success" id="exportBtn" onclick="exportSelected()" disabled>导出选中</button>
             </div>
+        </div>
+        <div class="filter-bar" id="filterBar" style="display:none;">
+            <label>时间筛选：</label>
+            <select id="timeFilter" onchange="filterByTime()">
+                <option value="all">全部时间</option>
+                <option value="3">最近3天</option>
+                <option value="7">最近7天</option>
+                <option value="15">最近15天</option>
+                <option value="30">最近30天</option>
+            </select>
+            <span class="filter-info" id="filterInfo"></span>
         </div>
         <div class="article-list" id="articleList">
             <div class="empty-state"><div class="icon">📚</div><div>请在左侧选择公众号查看文章</div></div>
@@ -100,7 +124,7 @@
     <script>
         // 从JSON文件加载数据
         var ARTICLE_DATA = null;
-        var currentSource = null, allArticles = [];
+        var currentSource = null, allArticles = [], filteredArticles = [];
         var selectedArticles = new Map();
 
         function init() {
@@ -165,6 +189,19 @@
             }).join('');
         }
 
+        function filterSources() {
+            var keyword = document.getElementById('sourceSearch').value.toLowerCase();
+            var items = document.querySelectorAll('.source-item');
+            items.forEach(function(item) {
+                var name = item.querySelector('.source-name').textContent.toLowerCase();
+                if (name.indexOf(keyword) >= 0) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
         function selectSource(sourceName) {
             currentSource = sourceName;
             document.querySelectorAll('.source-item').forEach(function(item) {
@@ -173,19 +210,49 @@
             document.getElementById('pageTitle').textContent = sourceName + ' 的所有文章';
             document.getElementById('articleList').innerHTML = '<div class="loading">加载中...</div>';
             
+            // 显示筛选栏
+            document.getElementById('filterBar').style.display = 'flex';
+            
             setTimeout(function() {
                 if (ARTICLE_DATA && ARTICLE_DATA.articles) {
                     allArticles = ARTICLE_DATA.articles[sourceName] || [];
                 } else {
                     allArticles = [];
                 }
-                renderArticles(allArticles);
+                // 重置时间筛选
+                document.getElementById('timeFilter').value = 'all';
+                filterByTime();
             }, 300);
+        }
+
+        function filterByTime() {
+            var days = document.getElementById('timeFilter').value;
+            var now = new Date();
+            now.setHours(0, 0, 0, 0);
+            
+            if (days === 'all') {
+                filteredArticles = allArticles.slice();
+                document.getElementById('filterInfo').textContent = '';
+            } else {
+                var cutoffDate = new Date(now);
+                cutoffDate.setDate(cutoffDate.getDate() - parseInt(days));
+                
+                filteredArticles = allArticles.filter(function(a) {
+                    var articleDate = new Date(a.publish_date);
+                    articleDate.setHours(0, 0, 0, 0);
+                    return articleDate >= cutoffDate;
+                });
+                
+                document.getElementById('filterInfo').textContent = 
+                    '（显示 ' + filteredArticles.length + ' / ' + allArticles.length + ' 篇）';
+            }
+            
+            renderArticles(filteredArticles);
         }
 
         function renderArticles(articles) {
             if (!articles.length) { 
-                document.getElementById('articleList').innerHTML = '<div class="empty-state"><div class="icon">📭</div><div>该公众号暂无文章</div></div>'; 
+                document.getElementById('articleList').innerHTML = '<div class="empty-state"><div class="icon">📭</div><div>该时间段暂无文章</div></div>'; 
                 return; 
             }
             
@@ -216,7 +283,7 @@
         function setSelected(source, index, selected) {
             var key = source + '_' + index;
             if (selected) {
-                selectedArticles.set(key, { source: source, index: index, article: allArticles[index] });
+                selectedArticles.set(key, { source: source, index: index, article: filteredArticles[index] });
             } else {
                 selectedArticles.delete(key);
             }
@@ -225,24 +292,24 @@
         function toggleSelectAll() {
             var selectAllCheckbox = document.getElementById('selectAll');
             var currentSelectedCount = 0;
-            for (var i = 0; i < allArticles.length; i++) {
+            for (var i = 0; i < filteredArticles.length; i++) {
                 if (isSelected(currentSource, i)) currentSelectedCount++;
             }
-            var allSelected = currentSelectedCount === allArticles.length && allArticles.length > 0;
+            var allSelected = currentSelectedCount === filteredArticles.length && filteredArticles.length > 0;
             
             if (allSelected) {
-                for (var i = 0; i < allArticles.length; i++) {
+                for (var i = 0; i < filteredArticles.length; i++) {
                     setSelected(currentSource, i, false);
                 }
                 selectAllCheckbox.checked = false;
             } else {
-                for (var i = 0; i < allArticles.length; i++) {
+                for (var i = 0; i < filteredArticles.length; i++) {
                     setSelected(currentSource, i, true);
                 }
                 selectAllCheckbox.checked = true;
             }
             
-            renderArticles(allArticles);
+            renderArticles(filteredArticles);
             updateExportButton();
         }
 
@@ -257,12 +324,12 @@
             if (cb) cb.checked = !currentlySelected;
             
             var currentSelectedCount = 0;
-            for (var i = 0; i < allArticles.length; i++) {
+            for (var i = 0; i < filteredArticles.length; i++) {
                 if (isSelected(currentSource, i)) currentSelectedCount++;
             }
             var selectAllCheckbox = document.getElementById('selectAll');
             if (selectAllCheckbox) {
-                selectAllCheckbox.checked = currentSelectedCount === allArticles.length && allArticles.length > 0;
+                selectAllCheckbox.checked = currentSelectedCount === filteredArticles.length && filteredArticles.length > 0;
             }
             updateExportButton();
         }
