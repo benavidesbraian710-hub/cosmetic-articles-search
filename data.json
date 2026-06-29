@@ -1,17 +1,21 @@
 {
   "stats": {
-    "total_articles": 120,
+    "total_articles": 141,
     "source_count": 11,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-06-29"
     },
-    "last_update": "2026-06-29T14:55:01.946492"
+    "last_update": "2026-06-29T15:00:37.569920"
   },
   "sources": [
     {
       "name": "个护前沿",
       "count": 27
+    },
+    {
+      "name": "化妆品观察 品观",
+      "count": 23
     },
     {
       "name": "中国化妆品",
@@ -43,10 +47,6 @@
     },
     {
       "name": "美业颜究院",
-      "count": 2
-    },
-    {
-      "name": "化妆品观察 品观",
       "count": 2
     },
     {
@@ -296,6 +296,215 @@
         "source": "个护前沿",
         "publish_date": "2026-06-15",
         "url": "https://mp.weixin.qq.com/s/_4AWpZec8er_A1J12WmBKg",
+        "summary": "",
+        "keywords": []
+      }
+    ],
+    "化妆品观察 品观": [
+      {
+        "id": 259,
+        "title": "上次没卖掉，这个韩妆品牌涨至10亿出售",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-28",
+        "url": "https://mp.weixin.qq.com/s/xdvnrpcH0snR-eoS9seZKw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 260,
+        "title": "100亿巨头冲刺港股上市！",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-27",
+        "url": "https://mp.weixin.qq.com/s/gNLMo2la2aIqC3CjRj0g9Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 345,
+        "title": "行业“泰斗级”大咖加入上美！",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-27",
+        "url": "https://mp.weixin.qq.com/s/AIU07d_RYF0kC6H_gMylXw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 346,
+        "title": "今年618，美妆个护品牌开始“挑人”了",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/gI7HCYLnDoQq4UKXi4XpZw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 347,
+        "title": "2026年，这些美妆企业被列入“黑名单”",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/Qa8ZnqX3TkHDm2MQTWdQSw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 348,
+        "title": "跑红集团科创中心落成！新美妆的竞争，正在回到“真实问题”",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/awG5JZNvjyQ-WWt_tr5_BA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 349,
+        "title": "重磅发布 | 《2026年一季度消费新潜力白皮书》来了！3大赛道帮你洞察未来消费趋势！",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/uKOy8xYFgD6SrbOskVA_aQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 350,
+        "title": "欧珀莱母公司35%股份，拟2亿转让",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/JRwm4lgA8xdN_PtkN8xVjA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 351,
+        "title": "17亿！美妆代工厂龙头被收购",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/zpKpcM04-0b6k5bE042Wsg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 352,
+        "title": "15亿级重组胶原蛋白企业换帅！",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/2_z42DKzOoV6s8OGoRGVrQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 353,
+        "title": "跌出10亿阵营后，至本母公司再造了一个新品牌",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/C6excQJ_C7HPKTRh6H5dOA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 354,
+        "title": "天猫618美妆，TOP3变了",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/4obz_jrdJgyAakVGEEJ3Cg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 355,
+        "title": "“中国香水第一股”停牌3个月，市值已缩水9亿",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-19",
+        "url": "https://mp.weixin.qq.com/s/m-KPuTTY48A9eGRYkQxgCw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 356,
+        "title": "不止细胞抗衰｜布局体龄管理，澳尔珂为何能够稳步上升",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/2ZC0WyFJmDTFl70pI3wG_Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 357,
+        "title": "破局门店增长困局，克丽缇娜发布全新战略",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/F2GVaB2zn8yMQWV6qzSBjw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 358,
+        "title": "明起施行！化妆品备案戴上“紧箍咒”",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/XC85drANE2OqkImtUWlb3w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 359,
+        "title": "估值69亿的美妆集合店，又闭店",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/kEnt9MRhZ3CleRMzTFqPsw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 360,
+        "title": "欠债超亿元，昔日明星工厂成“老赖”",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/5pE7vqS6zzXqAhS6psBiwA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 361,
+        "title": "美白护肤红海逃生：下代爆款藏在成分、剂型、人群、场景交集里",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/OzhMHuVKROQSWDH3lC4PEg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 362,
+        "title": "3CE创始人再推彩妆品牌",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/yN08YfSfkJO4m363KGngww",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 363,
+        "title": "700亿级巨头，停止新增美妆贴牌！",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/gEOaRbBhSRVIG31tQwTXPw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 364,
+        "title": "央媒密集关注“抗糖防蛀”，舒客宝贝“十二年磨一剑”的儿童口腔健康革命",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/yNm4HbMefUf9lUo6-1zBjA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 365,
+        "title": "68%“专利”失效！头部美妆正抢滩四大技术高地",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/_WSJdmhHpCBtiOBpSPBzjg",
         "summary": "",
         "keywords": []
       }
@@ -1122,26 +1331,6 @@
         "source": "美业颜究院",
         "publish_date": "2026-06-17",
         "url": "https://mp.weixin.qq.com/s/qYc_zV9KnU3JKzHZGP7HEA",
-        "summary": "",
-        "keywords": []
-      }
-    ],
-    "化妆品观察 品观": [
-      {
-        "id": 259,
-        "title": "上次没卖掉，这个韩妆品牌涨至10亿出售",
-        "source": "化妆品观察 品观",
-        "publish_date": "2026-06-28",
-        "url": "https://mp.weixin.qq.com/s/xdvnrpcH0snR-eoS9seZKw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 260,
-        "title": "100亿巨头冲刺港股上市！",
-        "source": "化妆品观察 品观",
-        "publish_date": "2026-06-27",
-        "url": "https://mp.weixin.qq.com/s/gNLMo2la2aIqC3CjRj0g9Q",
         "summary": "",
         "keywords": []
       }
