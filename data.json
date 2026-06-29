@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 108,
+    "total_articles": 109,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-06-29"
     },
-    "last_update": "2026-06-29T14:30:27.047625"
+    "last_update": "2026-06-29T14:32:14.715833"
   },
   "sources": [
     {
@@ -34,11 +34,11 @@
       "count": 10
     },
     {
-      "name": "个护前沿",
-      "count": 4
+      "name": "KEV美妆",
+      "count": 5
     },
     {
-      "name": "KEV美妆",
+      "name": "个护前沿",
       "count": 4
     },
     {
@@ -890,44 +890,6 @@
         "keywords": []
       }
     ],
-    "个护前沿": [
-      {
-        "id": 234,
-        "title": "资生堂：触觉敏感度与身心疾病的关联",
-        "source": "个护前沿",
-        "publish_date": "2026-06-28",
-        "url": "https://mp.weixin.qq.com/s/eVfvp57VGOfhL6xpEgoDfw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 235,
-        "title": "争议颇多的PDRN，怎么又行了？",
-        "source": "个护前沿",
-        "publish_date": "2026-06-27",
-        "url": "https://mp.weixin.qq.com/s/OMb25eLzLzzj9Vv5NZIJ8Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 236,
-        "title": "高端美妆是怎么重写“高端”的？",
-        "source": "个护前沿",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/9n8zXxoZ9R8irtDLK24BDw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 237,
-        "title": "28家企业排队，美妆IPO迎来三年最强复苏？",
-        "source": "个护前沿",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/BbCj-znw6sZrxfxqJWUC0A",
-        "summary": "",
-        "keywords": []
-      }
-    ],
     "KEV美妆": [
       {
         "id": 238,
@@ -962,6 +924,53 @@
         "source": "KEV美妆",
         "publish_date": "2026-06-18",
         "url": "https://mp.weixin.qq.com/s/Ueyp0Pj6F5w2z6jkpuzfGQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 332,
+        "title": "CLIO珂莱欧液体散粉；百雀羚美白盾粉霜气垫；蒂洛薇青花瓷非遗系列... | 新品速递",
+        "source": "KEV美妆",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/dAkA6f5Xpg-6IAwdrF6-PA",
+        "summary": "",
+        "keywords": []
+      }
+    ],
+    "个护前沿": [
+      {
+        "id": 234,
+        "title": "资生堂：触觉敏感度与身心疾病的关联",
+        "source": "个护前沿",
+        "publish_date": "2026-06-28",
+        "url": "https://mp.weixin.qq.com/s/eVfvp57VGOfhL6xpEgoDfw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 235,
+        "title": "争议颇多的PDRN，怎么又行了？",
+        "source": "个护前沿",
+        "publish_date": "2026-06-27",
+        "url": "https://mp.weixin.qq.com/s/OMb25eLzLzzj9Vv5NZIJ8Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 236,
+        "title": "高端美妆是怎么重写“高端”的？",
+        "source": "个护前沿",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/9n8zXxoZ9R8irtDLK24BDw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 237,
+        "title": "28家企业排队，美妆IPO迎来三年最强复苏？",
+        "source": "个护前沿",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/BbCj-znw6sZrxfxqJWUC0A",
         "summary": "",
         "keywords": []
       }
