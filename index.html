@@ -39,6 +39,8 @@
         .filter-bar label { font-size: 14px; color: #666; }
         .filter-bar select { padding: 6px 12px; border: 1px solid #d9d9d9; border-radius: 6px; font-size: 14px; outline: none; cursor: pointer; }
         .filter-bar select:focus { border-color: #1890ff; }
+        .filter-bar input[type="date"] { padding: 6px 12px; border: 1px solid #d9d9d9; border-radius: 6px; font-size: 14px; outline: none; }
+        .filter-bar input[type="date"]:focus { border-color: #1890ff; }
         .filter-bar .filter-info { font-size: 13px; color: #999; margin-left: 10px; }
         .article-list { flex: 1; overflow-y: auto; padding: 20px 30px; }
         .article-table { width: 100%; background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); overflow: hidden; }
@@ -106,7 +108,13 @@
                 <option value="7">最近7天</option>
                 <option value="15">最近15天</option>
                 <option value="30">最近30天</option>
+                <option value="custom">自定义范围...</option>
             </select>
+            <div id="customDateRange" style="display:none; margin-left:10px;">
+                <input type="date" id="startDate" onchange="filterByTime()">
+                <span style="margin:0 5px;">至</span>
+                <input type="date" id="endDate" onchange="filterByTime()">
+            </div>
             <span class="filter-info" id="filterInfo"></span>
         </div>
         <div class="article-list" id="articleList">
@@ -226,16 +234,44 @@
         }
 
         function filterByTime() {
-            var days = document.getElementById('timeFilter').value;
+            var filterType = document.getElementById('timeFilter').value;
             var now = new Date();
             now.setHours(0, 0, 0, 0);
             
-            if (days === 'all') {
+            // 显示/隐藏自定义日期范围
+            var customRange = document.getElementById('customDateRange');
+            if (filterType === 'custom') {
+                customRange.style.display = 'flex';
+            } else {
+                customRange.style.display = 'none';
+            }
+            
+            if (filterType === 'all') {
                 filteredArticles = allArticles.slice();
                 document.getElementById('filterInfo').textContent = '';
+            } else if (filterType === 'custom') {
+                var startDateStr = document.getElementById('startDate').value;
+                var endDateStr = document.getElementById('endDate').value;
+                
+                if (!startDateStr || !endDateStr) {
+                    filteredArticles = allArticles.slice();
+                    document.getElementById('filterInfo').textContent = '请选择开始和结束日期';
+                } else {
+                    var startDate = new Date(startDateStr);
+                    var endDate = new Date(endDateStr);
+                    endDate.setHours(23, 59, 59, 999);
+                    
+                    filteredArticles = allArticles.filter(function(a) {
+                        var articleDate = new Date(a.publish_date);
+                        return articleDate >= startDate && articleDate <= endDate;
+                    });
+                    
+                    document.getElementById('filterInfo').textContent = 
+                        '（' + startDateStr + ' 至 ' + endDateStr + '，显示 ' + filteredArticles.length + ' / ' + allArticles.length + ' 篇）';
+                }
             } else {
                 var cutoffDate = new Date(now);
-                cutoffDate.setDate(cutoffDate.getDate() - parseInt(days));
+                cutoffDate.setDate(cutoffDate.getDate() - parseInt(filterType));
                 
                 filteredArticles = allArticles.filter(function(a) {
                     var articleDate = new Date(a.publish_date);
