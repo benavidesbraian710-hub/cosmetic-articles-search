@@ -1,17 +1,17 @@
 {
   "stats": {
-    "total_articles": 37,
+    "total_articles": 47,
     "source_count": 11,
     "date_range": {
-      "start": "2026-06-16",
+      "start": "2026-06-15",
       "end": "2026-06-29"
     },
-    "last_update": "2026-06-29T12:29:37.700078"
+    "last_update": "2026-06-29T14:04:15.821189"
   },
   "sources": [
     {
       "name": "非科学美妆传播",
-      "count": 4
+      "count": 14
     },
     {
       "name": "肤见未来实验室",
@@ -89,6 +89,96 @@
         "source": "非科学美妆传播",
         "publish_date": "2026-06-25",
         "url": "https://mp.weixin.qq.com/s/xajsvuI78pcZdEOMPxz1YA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 261,
+        "title": "雅诗兰黛｜Scale2026｜LaMer精华可同时改善玫瑰痤疮、AD湿疹和高敏感皮肤各自的皮肤问题",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/pO3mZAot4Mhad9DbZRH6Hg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 262,
+        "title": "Cosmax｜ACS Aenm 2026｜3%神经酰胺制备能「压电护肤」的乳霜，膏体揉搓时产生微电场，改善皮肤",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/QbADzDc0zLaETTlxI0Ydxg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 263,
+        "title": "Seppic｜Gels 2026｜多种生物多糖增稠剂x不同绿色乳化工艺的交叉研究，探索迎合未来需求的绿色乳化方案",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/2Ulwn4W2RA3k880At7eCZA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 264,
+        "title": "欧莱雅｜JDSS 2026｜海外复颜线的Triple Power保湿霜用于GLP-1司美脸的改善",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-21",
+        "url": "https://mp.weixin.qq.com/s/kh24aI1kJV4Vz1vRNIu91Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 265,
+        "title": "水羊&amp;农科院麻类所｜EUR FOOD RES TECHNOL 2026｜金银花双重发酵法，总多酚黄酮下降，抗氧能力反而提升",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-20",
+        "url": "https://mp.weixin.qq.com/s/etbFMunS_E2-TkzvPvadtQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 266,
+        "title": "Nature Health 2026｜大脑中微塑料来源的分析，化妆品使用是影响因素之一",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-19",
+        "url": "https://mp.weixin.qq.com/s/XuOg0J4o-X4_-h1QGg2fEg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 267,
+        "title": "Ciel&amp;日光｜JCCSJ 2022｜干燥带来NGF上调Sema3A下调，这可能带来神经伸长，从而解释皮肤进入高敏状态；SOD酶可逆转",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/3WmguSnni5_nb0djr9Kd0w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 268,
+        "title": "拜尔斯道夫&amp;UMG｜Clin Epigenetics 2026｜全表观基因组关联研究解析出甲基化位点中加速/延缓因子，并验证二氢杨梅素的调控甲基化衰老能力",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/LDA6RfFodJbf5p-nvuUP4w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 269,
+        "title": "溪木源SID&amp;相宜Pharmaceuticals｜均为皮质醇压力相关，对比阅读：溪木源山茶花可降低唾液皮质醇，相宜关注压力性皮肤色沉（如熬夜焦虑）",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/wk4oGkhDoO3P2gHtTphgQA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 270,
+        "title": "雅诗兰黛｜SID 2026｜植物外泌体可以调控日夜受损下的肌肤炎症反应，体外实验中，有类比人源外泌体的功效",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/PMC2yca_GTPkuajAydxUMQ",
         "summary": "",
         "keywords": []
       }
