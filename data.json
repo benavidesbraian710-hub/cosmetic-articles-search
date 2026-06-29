@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 47,
+    "total_articles": 54,
     "source_count": 11,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-06-29"
     },
-    "last_update": "2026-06-29T14:04:15.821189"
+    "last_update": "2026-06-29T14:07:31.268121"
   },
   "sources": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "name": "肤见未来实验室",
-      "count": 4
+      "count": 11
     },
     {
       "name": "妆合规",
@@ -217,6 +217,69 @@
         "source": "肤见未来实验室",
         "publish_date": "2026-06-25",
         "url": "https://mp.weixin.qq.com/s/GP0HLdJ2Odt3VNj6QUQZaw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 271,
+        "title": "综述发表：敏感性皮肤概述及医学美容治疗进展",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/6o8VQRL7oOJpWyKiH6ukiQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 272,
+        "title": "动能素的分类、作用机制与临床应用研究进展",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/p6zj1hJoDkv-BxikgUHC3g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 273,
+        "title": "综述发表：皮肤衰老相关分泌表型的作用机制及相关功效原料研究进展",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/izs7M6KteQUEWXTRNWXY9A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 274,
+        "title": "金盏花保湿修护喷雾及面膜在1064nm点阵激光术后护理中的应用",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/LfGTsQqp_zuO7XrCmP2gLw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 275,
+        "title": "真皮成纤维细胞的衰老标记物和表型变化",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/hRdb_P1-GDxOpXt_aYtZYg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 276,
+        "title": "指南与共识|眼周年轻化非侵入性治疗与术后护理专家共识",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/FMtSsv-xj7lUGWpnOs2OWg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 277,
+        "title": "重组丝素-神经营养因子 3 复合水凝胶调控胶原表达与毛囊再生的创面修复效应",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/8nLjISn2uCIvxlQ3qBZTdg",
         "summary": "",
         "keywords": []
       }
