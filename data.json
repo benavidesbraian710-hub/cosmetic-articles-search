@@ -1,14 +1,18 @@
 {
   "stats": {
-    "total_articles": 68,
+    "total_articles": 85,
     "source_count": 11,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-06-29"
     },
-    "last_update": "2026-06-29T14:18:17.580107"
+    "last_update": "2026-06-29T14:24:22.035279"
   },
   "sources": [
+    {
+      "name": "中国化妆品",
+      "count": 21
+    },
     {
       "name": "非科学美妆传播",
       "count": 14
@@ -24,10 +28,6 @@
     {
       "name": "原料合规观察",
       "count": 10
-    },
-    {
-      "name": "中国化妆品",
-      "count": 4
     },
     {
       "name": "个护前沿",
@@ -55,6 +55,197 @@
     }
   ],
   "articles": {
+    "中国化妆品": [
+      {
+        "id": 253,
+        "title": "国家药监局发布新版化妆品新原料注册备案及资料管理规定；中检院发布《化妆品新原料注册备案资料技术通则》",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-28",
+        "url": "https://mp.weixin.qq.com/s/OCf5DTK5zc3PcLtyFDOQCQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 254,
+        "title": "夏日感官新序：香氛赋新、妆感焕亮与维稳护肤 | 全球观察・新产品",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/_czobi3VtltSa-Cu2yYxng",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 255,
+        "title": "国家药监局发布新版化妆品新原料注册备案及资料管理规定；国家药监局拟对丁基乙酰氨基丙酸乙酯有关标准立项",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/DBsbD3BVgVeF2yJjEX37NA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 256,
+        "title": "巨星缺席，国妆当道：为什么中国跑不出Fenty Beauty这样的明星彩妆帝国？| 2026全球品牌比较研究系列",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/iR8bD8s2RsCfVURfwzusFg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 292,
+        "title": "安徽省合肥市完成2026年75批次国家化妆品抽样检验任务；珀莱雅完成“衣康酸”新原料备案；LG生活健康中国区换帅",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/6tw6-E0_wOA6t6qtFuuZUw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 293,
+        "title": "站上卢浮宫，链接全世界 | 2026 INPD打造高端资源精准对接平台",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/u-vCKGg2Zn4FD-tCTc9ZVA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 294,
+        "title": "26批次进口化妆品未准入境，涉香奈儿、娇兰等品牌；锦波生物创始人杨霞卸任总经理职务；巴黎小众香水品牌Fascent获130万欧元天使轮融资",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/1LVjqvWzWn5NVdakuWJvBg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 295,
+        "title": "美甲机器人公司融资近5亿元：美妆行业的尽头是机器人吗？ | 全球观察",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/ARLDzAc9VwzIRYc0iYsGfQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 296,
+        "title": "辽宁省就化妆品生产质量提升三年行动方案公开征求意见；贝泰妮旗下企业备案一款化妆品新原料；3CE创始人金素熙复出并推出新品牌",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/-VQ7djUJ-SCnft7CiRHDZw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 297,
+        "title": "直播带货宣称化妆品“返老还童”“全脸回春”，虚假宣传换来真实罚单 | 总第98期合规风向标",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/5_3tT7EaupWrZ57EXogwQg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 298,
+        "title": "海南省药监局发布化妆品备案自查技术指导原则；金发拉比撤销退市风险警示；欧莱雅收购印度Innovist多数股权",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/QGnmCz-IKfMrEi7Zb7rYbA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 299,
+        "title": "国家药监局就化妆品唇炎及接触性荨麻疹2项强制性国标征求意见；5月化妆品零售额449亿元，同比增长2.5%",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-21",
+        "url": "https://mp.weixin.qq.com/s/whxKa3v_HvrN-GfQpcOHrg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 300,
+        "title": "《中国化妆品》杂志祝大家端午快乐！",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-19",
+        "url": "https://mp.weixin.qq.com/s/evrV9D6yIlEyXAOnQZac7g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 301,
+        "title": "美白护肤“红海逃生”：下代爆款藏在成分、剂型、人群、场景交集里 | 美妆指数",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/7szJzid_9-6pgo321pgHVA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 302,
+        "title": "5月化妆品零售额449亿元，同比增长2.5%；莹特丽完成共聚物新原料备案；韩国私募机构PTA Partners收购法国COSBELLE 70%股权",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/OT9QcxMvQ1zX2f281Sm3ww",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 303,
+        "title": "八大奖项&amp;卢浮宫主舞台演讲：中国美妆的每一项突破都值得被世界看见 | 2026 INPD亮点解读",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/MPQUXHqbgIfFlWXi_R9VFA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 304,
+        "title": "国家药监局就化妆品唇炎及接触性荨麻疹2项强制性国标征求意见；四款新原料取消备案；Jay-Z相关投资机构竞购Fenty Beauty",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/AEWf4EvhGDKRJimC07X3sA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 305,
+        "title": "欧莱雅为什么愿意等待？从女科学家到科技女生，一场跨越28年的接力",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/QFFHL222KDQOEkOu8kO8Wg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 306,
+        "title": "2026年ESXENCE艺术香水展圆满收官，米兰再度夯实全球艺术香水产业枢纽地位",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/u1GCrw4zcK4Vc3_rM4MSyw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 307,
+        "title": "浙江杭州推出化妆品备案“优审快办”快速通道；丸美生物港股IPO申请失效；雅诗兰黛成立北美香氛集群",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/UjwDBD6T2v9B7sxngivGTA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 308,
+        "title": "屡次违法终禁入、配方擅改被罚十万元——化妆品行业不合规的代价正在“翻倍” | 总第97期合规风向标",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/3A1hTHXIQohJ6dYSjLcEjw",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "非科学美妆传播": [
       {
         "id": 218,
@@ -482,44 +673,6 @@
         "source": "原料合规观察",
         "publish_date": "2026-06-15",
         "url": "https://mp.weixin.qq.com/s/NesWJXdK2K_ZsL4M017Jew",
-        "summary": "",
-        "keywords": []
-      }
-    ],
-    "中国化妆品": [
-      {
-        "id": 253,
-        "title": "国家药监局发布新版化妆品新原料注册备案及资料管理规定；中检院发布《化妆品新原料注册备案资料技术通则》",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-28",
-        "url": "https://mp.weixin.qq.com/s/OCf5DTK5zc3PcLtyFDOQCQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 254,
-        "title": "夏日感官新序：香氛赋新、妆感焕亮与维稳护肤 | 全球观察・新产品",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/_czobi3VtltSa-Cu2yYxng",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 255,
-        "title": "国家药监局发布新版化妆品新原料注册备案及资料管理规定；国家药监局拟对丁基乙酰氨基丙酸乙酯有关标准立项",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/DBsbD3BVgVeF2yJjEX37NA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 256,
-        "title": "巨星缺席，国妆当道：为什么中国跑不出Fenty Beauty这样的明星彩妆帝国？| 2026全球品牌比较研究系列",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/iR8bD8s2RsCfVURfwzusFg",
         "summary": "",
         "keywords": []
       }
