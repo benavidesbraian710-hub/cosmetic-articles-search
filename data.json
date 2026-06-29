@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 62,
+    "total_articles": 68,
     "source_count": 11,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-06-29"
     },
-    "last_update": "2026-06-29T14:15:46.105315"
+    "last_update": "2026-06-29T14:18:17.580107"
   },
   "sources": [
     {
@@ -23,7 +23,7 @@
     },
     {
       "name": "原料合规观察",
-      "count": 4
+      "count": 10
     },
     {
       "name": "中国化妆品",
@@ -428,6 +428,60 @@
         "source": "原料合规观察",
         "publish_date": "2026-06-23",
         "url": "https://mp.weixin.qq.com/s/FBy1OiCmZLYXxq6gqq7ugQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 286,
+        "title": "中华金耳完成化妆品新原料备案",
+        "source": "原料合规观察",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/4hg__YGzE2VcPFA2XkafkQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 287,
+        "title": "明日实施！《化妆品原料使用目的技术指南》落地",
+        "source": "原料合规观察",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/blI-3tgruVZkwZryIkQvnQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 288,
+        "title": "【培训笔记】化妆品原料标准转化路径",
+        "source": "原料合规观察",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/yAuFXiquMPQNp8tyB7nIZg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 289,
+        "title": "3家外企备案化妆品新原料",
+        "source": "原料合规观察",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/S1xDfM1YnSyyLJ_jThGm6Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 290,
+        "title": "喜讯！中贸助力朗健生物完成HMOs化妆品新原料备案！",
+        "source": "原料合规观察",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/F__1LJV-9tM1G2tdTZ36NQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 291,
+        "title": "明天见！CPHI同期食品原料合规论坛，转发领法规汇编+课件！",
+        "source": "原料合规观察",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/NesWJXdK2K_ZsL4M017Jew",
         "summary": "",
         "keywords": []
       }
