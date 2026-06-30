@@ -137,6 +137,38 @@ else if (contentLower.includes('今天')) {
 
 ---
 
+### 7. 语义理解需求解析
+
+**现象**:
+- 用户使用固定关键词匹配（"3天"、"7天"等）
+- 无法灵活理解"5天"、"五天"等变体
+- 需要更自然的语义理解
+
+**原因**:
+- 使用硬编码的关键词列表
+- 没有考虑用户的自然语言习惯
+- 正则匹配优先级不合理
+
+**修复**:
+```javascript
+// 使用语义理解而非固定关键词
+const dayPatterns = [
+  { pattern: /(\d+)\s*[天日]/, desc: 'X天' },
+  { pattern: /(\d+)\s*个?\s*星期/, desc: 'X周' },
+  { pattern: /(\d+)\s*个?\s*月/, desc: 'X月' }
+];
+
+// 语义关键词兜底
+if (content.includes('今天')) days = 1;
+else if (content.includes('昨天')) days = 2;
+else if (content.includes('本周')) days = 7;
+else if (content.includes('本月')) days = 30;
+```
+
+**状态**: ✅ 已修复
+
+---
+
 ## 修复记录
 
 ### 2026-06-30 修复
