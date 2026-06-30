@@ -11,7 +11,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-# 公众号列表
+# 公众号列表（12个）
 ACCOUNTS = [
     "妆研24小时",
     "非科学美妆传播", 
@@ -21,10 +21,7 @@ ACCOUNTS = [
     "个护前沿",
     "KEV美妆",
     "美业颜究院",
-    "美妆内行人",
     "肤见未来实验室",
-    "个护前言",
-    "Beauty Insider",
     "化妆品观察 品观",
     "中国化妆品",
     "上海日化协会"
