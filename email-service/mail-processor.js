@@ -30,7 +30,13 @@ const CONFIG = {
       user: process.env.SMTP_USER || 'cosmeticsearch@163.com',
       pass: process.env.SMTP_PASS || '',
     }
-  }
+  },
+  // 忽略的发件人（避免循环回复）
+  ignoreFrom: [
+    'cosmeticsearch@163.com',
+    '搜搜',
+    'Sōusou'
+  ]
 };
 
 // 需求关键词映射
@@ -77,11 +83,34 @@ async function checkNewEmails() {
         const message = await client.fetchOne(uid, { source: true });
         if (message.source) {
           const parsed = await simpleParser(message.source);
+          
+          // 检查是否是自己发送的邮件（避免循环回复）
+          const fromAddr = parsed.from?.text || '';
+          const isSelfSent = CONFIG.ignoreFrom.some(addr => 
+            fromAddr.toLowerCase().includes(addr.toLowerCase())
+          );
+          
+          if (isSelfSent) {
+            console.log(`   ⏭️  跳过自己发送的邮件: ${parsed.subject}`);
+            // 标记为已读但不处理
+            await client.messageFlagsAdd(uid, ['\\Seen']);
+            continue;
+          }
+          
+          // 检查是否是回复邮件（Re: Re: Re: 重复）
+          const subject = parsed.subject || '';
+          const reCount = (subject.match(/^Re:/gi) || []).length;
+          if (reCount > 1) {
+            console.log(`   ⏭️  跳过重复回复链: ${subject}`);
+            await client.messageFlagsAdd(uid, ['\\Seen']);
+            continue;
+          }
+          
           emails.push({
             uid: uid,
-            from: parsed.from?.text || '',
+            from: fromAddr,
             to: parsed.to?.text || '',
-            subject: parsed.subject || '',
+            subject: subject,
             date: parsed.date,
             text: parsed.text || '',
             html: parsed.html || ''
@@ -158,14 +187,22 @@ async function sendReply(to, subject, body, attachmentPath) {
     host: CONFIG.smtp.host,
     port: CONFIG.smtp.port,
     secure: CONFIG.smtp.secure,
-    auth: CONFIG.smtp.auth
+    auth: CONFIG.smtp.auth,
+    debug: true, // 启用调试
+    logger: true  // 启用日志
   });
   
+  // 添加邮件头，标记为自动回复（避免被当作新邮件处理）
   const mailOptions = {
-    from: CONFIG.smtp.auth.user,
+    from: `"搜搜 (Sōusou)" <${CONFIG.smtp.auth.user}>`,
     to: to,
     subject: `Re: ${subject}`,
     text: body,
+    headers: {
+      'X-Auto-Response-Suppress': 'All',
+      'Auto-Submitted': 'auto-replied',
+      'Precedence': 'bulk'
+    },
     attachments: attachmentPath ? [{
       filename: path.basename(attachmentPath),
       path: attachmentPath
@@ -175,9 +212,12 @@ async function sendReply(to, subject, body, attachmentPath) {
   try {
     const info = await transporter.sendMail(mailOptions);
     console.log('✅ 邮件发送成功:', info.messageId);
+    console.log('   收件人:', to);
+    console.log('   主题:', `Re: ${subject}`);
     return true;
   } catch (err) {
     console.error('❌ 邮件发送失败:', err.message);
+    console.error('   错误详情:', err);
     return false;
   }
 }
