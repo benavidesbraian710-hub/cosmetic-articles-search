@@ -97,11 +97,11 @@ function searchArticles(keywords, limit = 10) {
     }
     
     // 构建搜索条件
-    const conditions = keywords.map(() => '(title LIKE ? OR content LIKE ? OR keywords LIKE ?)').join(' OR ');
-    const params = keywords.flatMap(k => [`%${k}%`, `%${k}%`, `%${k}%`]);
+    const conditions = keywords.map(() => '(title LIKE ? OR content LIKE ? OR content_html LIKE ? OR keywords LIKE ?)').join(' OR ');
+    const params = keywords.flatMap(k => [`%${k}%`, `%${k}%`, `%${k}%`, `%${k}%`]);
     
     const sql = `
-      SELECT title, url, wechat_name as source, publish_date, content, keywords
+      SELECT title, url, wechat_name as source, publish_date, content, content_html, keywords
       FROM articles
       WHERE ${conditions}
       ORDER BY publish_date DESC, created_at DESC
@@ -128,7 +128,7 @@ function getRecentArticles(limit = 10) {
     }
     
     const sql = `
-      SELECT title, url, wechat_name as source, publish_date, content, keywords
+      SELECT title, url, wechat_name as source, publish_date, content, content_html, keywords
       FROM articles
       ORDER BY publish_date DESC, created_at DESC
       LIMIT ?
@@ -402,6 +402,16 @@ async function processEmail(email) {
       articles = await getRecentArticles(request.limit);
       console.log(`   ✅ 找到 ${articles.length} 篇最新文章`);
     }
+    
+    // 如果content为空，尝试从content_html提取
+    for (let article of articles) {
+      if (!article.content || article.content.length === 0) {
+        if (article.content_html) {
+          // 从HTML提取纯文本
+          article.content = article.content_html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+        }
+      }
+    }
   } catch (err) {
     console.error(`   ❌ 数据库搜索失败: ${err.message}`);
   }
@@ -423,8 +433,23 @@ async function processEmail(email) {
   if (articles.length > 0) {
     articleList = '\n\n精选文章：\n';
     articles.slice(0, 5).forEach((article, i) => {
-      articleList += `${i + 1}. ${article.title}\n   来源: ${article.source} | 时间: ${article.publish_date}\n   链接: ${article.url}\n\n`;
+      // 提取摘要
+      let summary = '';
+      if (article.content && article.content.length > 0) {
+        summary = article.content.replace(/<[^>]+>/g, '').slice(0, 80) + '...';
+      } else if (article.content_html && article.content_html.length > 0) {
+        summary = article.content_html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 80) + '...';
+      }
+      
+      articleList += `${i + 1}. ${article.title}\n`;
+      if (summary) {
+        articleList += `   摘要: ${summary}\n`;
+      }
+      articleList += `   来源: ${article.source} | 时间: ${article.publish_date}\n`;
+      articleList += `   链接: ${article.url}\n\n`;
     });
+  } else {
+    articleList = '\n\n暂无匹配文章，建议尝试其他关键词。\n';
   }
   
   const replyBody = `您好！
