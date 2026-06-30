@@ -12,6 +12,9 @@ const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
 const path = require('path');
 
+// 加载环境变量
+require('dotenv').config();
+
 // 配置
 const CONFIG = {
   imap: {
@@ -98,7 +101,7 @@ function searchArticles(keywords, limit = 10) {
     const params = keywords.flatMap(k => [`%${k}%`, `%${k}%`, `%${k}%`]);
     
     const sql = `
-      SELECT title, url, wechat_name as source, publish_date, summary, content
+      SELECT title, url, wechat_name as source, publish_date, content, keywords
       FROM articles
       WHERE ${conditions}
       ORDER BY publish_date DESC, created_at DESC
@@ -125,7 +128,7 @@ function getRecentArticles(limit = 10) {
     }
     
     const sql = `
-      SELECT title, url, wechat_name as source, publish_date, summary, content
+      SELECT title, url, wechat_name as source, publish_date, content, keywords
       FROM articles
       ORDER BY publish_date DESC, created_at DESC
       LIMIT ?
@@ -172,15 +175,28 @@ async function checkNewEmails() {
         if (message.source) {
           const parsed = await simpleParser(message.source);
           
-          // 检查是否是自己发送的邮件（避免循环回复）
-          const fromAddr = parsed.from?.text || '';
-          const fromEmail = parsed.from?.value?.[0]?.address || '';
-          
-          // 检查发件人邮箱是否是自己
-          const isSelfSent = fromEmail === CONFIG.imap.auth.user || 
-                            CONFIG.ignoreFrom.some(addr => 
-                              fromAddr.toLowerCase().includes(addr.toLowerCase())
-                            );
+  // 检查是否是自己发送的邮件（避免循环回复）
+  const fromAddr = parsed.from?.text || '';
+  const fromEmail = parsed.from?.value?.[0]?.address || '';
+  
+  // 检查是否是系统邮件（网易、微信等）
+  const isSystemEmail = fromEmail.includes('@service.netease.com') || 
+                        fromEmail.includes('@wechat.com') ||
+                        fromEmail.includes('@qq.com') ||
+                        fromAddr.includes('网易') ||
+                        fromAddr.includes('微信');
+  
+  if (isSystemEmail) {
+    console.log(`   ⏭️  跳过系统邮件: ${parsed.subject}`);
+    await client.messageFlagsAdd(uid, ['\\Seen']);
+    continue;
+  }
+  
+  // 检查发件人邮箱是否是自己
+  const isSelfSent = fromEmail === CONFIG.imap.auth.user || 
+                    CONFIG.ignoreFrom.some(addr => 
+                      fromAddr.toLowerCase().includes(addr.toLowerCase())
+                    );
           
           if (isSelfSent) {
             console.log(`   ⏭️  跳过自己发送的邮件: ${parsed.subject}`);
@@ -271,8 +287,8 @@ function generateExcel(articles, request, outputPath) {
   } else {
     for (const article of articles) {
       // 提取摘要（前100字）
-      let summary = article.summary || '';
-      if (!summary && article.content) {
+      let summary = '';
+      if (article.content) {
         summary = article.content.replace(/<[^>]+>/g, '').slice(0, 100) + '...';
       }
       if (!summary) summary = '暂无摘要';
