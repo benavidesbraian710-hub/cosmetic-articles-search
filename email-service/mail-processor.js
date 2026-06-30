@@ -236,9 +236,10 @@ async function checkNewEmails() {
 }
 
 function parseRequest(email) {
-  const content = `${email.subject} ${email.text}`.toLowerCase();
+  const content = `${email.subject} ${email.text}`;
+  const contentLower = content.toLowerCase();
   
-  // 提取公众号名称
+  // 提取公众号名称（支持多种表述）
   let sourceName = null;
   const sourcePatterns = [
     '妆研24小时', '非科学美妆传播', '原料合规观察', '妆合规', 
@@ -248,23 +249,50 @@ function parseRequest(email) {
   ];
   
   for (const source of sourcePatterns) {
-    if (content.includes(source.toLowerCase()) || content.includes(source)) {
+    if (content.includes(source)) {
       sourceName = source;
       break;
     }
   }
   
-  // 提取时间范围
+  // 提取时间范围（支持多种表述）
   let days = 3; // 默认3天
-  if (content.includes('今天') || content.includes('today')) days = 1;
-  else if (content.includes('昨天')) days = 2;
-  else if (content.includes('三天') || content.includes('3天')) days = 3;
-  else if (content.includes('一周') || content.includes('7天')) days = 7;
-  else if (content.includes('本月')) days = 30;
+  
+  // 今天
+  if (contentLower.includes('今天') || contentLower.includes('today')) {
+    days = 1;
+  }
+  // 昨天
+  else if (contentLower.includes('昨天')) {
+    days = 2;
+  }
+  // 三天/3天
+  else if (contentLower.includes('三天') || contentLower.includes('3天')) {
+    days = 3;
+  }
+  // 一周/7天
+  else if (contentLower.includes('一周') || contentLower.includes('7天') || contentLower.includes('七天')) {
+    days = 7;
+  }
+  // 两周
+  else if (contentLower.includes('两周') || contentLower.includes('14天')) {
+    days = 14;
+  }
+  // 本月
+  else if (contentLower.includes('本月')) {
+    days = 30;
+  }
+  // 最近X天
+  else {
+    const match = content.match(/(\d+)\s*天/);
+    if (match) {
+      days = parseInt(match[1]);
+    }
+  }
   
   // 提取数量
   let limit = 10;
-  const match = content.match(/(\d+)条/);
+  const match = content.match(/(\d+)\s*条/);
   if (match) limit = parseInt(match[1]);
   
   return {
@@ -434,24 +462,13 @@ async function processEmail(email) {
   let articleList = '';
   if (articles.length > 0) {
     articleList = '\n\n精选文章：\n';
-    articles.slice(0, 5).forEach((article, i) => {
-      // 提取摘要
-      let summary = '';
-      if (article.content && article.content.length > 0) {
-        summary = article.content.replace(/<[^>]+>/g, '').slice(0, 80) + '...';
-      } else if (article.content_html && article.content_html.length > 0) {
-        summary = article.content_html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 80) + '...';
-      }
-      
+    articles.forEach((article, i) => {
       articleList += `${i + 1}. ${article.title}\n`;
-      if (summary) {
-        articleList += `   摘要: ${summary}\n`;
-      }
       articleList += `   来源: ${article.source} | 时间: ${article.publish_date}\n`;
       articleList += `   链接: ${article.url}\n\n`;
     });
   } else {
-    articleList = '\n\n暂无匹配文章，建议尝试其他关键词。\n';
+    articleList = '\n\n该公众号在该时间范围内暂无文章。\n';
   }
   
   const replyBody = `您好！
