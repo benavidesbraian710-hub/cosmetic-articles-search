@@ -108,6 +108,35 @@ DELETE FROM articles WHERE wechat_name = 'Unknown';
 
 ---
 
+### 6. 时间范围解析错误
+
+**现象**:
+- 用户请求"最新5天"，系统返回"最新3天"的结果
+- 默认3天覆盖了用户指定的天数
+
+**原因**:
+- 代码先检查固定关键词（"3天"、"7天"等）
+- 最后才检查正则 `(\d+)\s*天`
+- 匹配失败时使用默认的3天
+
+**修复**:
+```javascript
+// 优先提取 "X天" 格式
+const dayMatch = content.match(/(\d+)\s*天/);
+if (dayMatch) {
+  days = parseInt(dayMatch[1]);
+}
+// 然后检查固定关键词
+else if (contentLower.includes('今天')) {
+  days = 1;
+}
+// ...
+```
+
+**状态**: ✅ 已修复
+
+---
+
 ## 修复记录
 
 ### 2026-06-30 修复
