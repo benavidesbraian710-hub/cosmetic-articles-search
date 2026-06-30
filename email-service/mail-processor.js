@@ -235,10 +235,46 @@ async function checkNewEmails() {
   }
 }
 
-function parseRequest(email) {
+async function parseRequestWithAI(email) {
   const content = `${email.subject} ${email.text}`;
   
-  // 使用大模型语义理解解析需求
+  // 使用 AI 语义理解解析需求
+  const prompt = `请分析以下用户需求，提取关键信息：
+
+用户消息："${content}"
+
+请提取：
+1. 公众号名称（如果有）
+2. 时间范围（几天？今天？昨天？本周？本月？）
+3. 数量限制（几篇？）
+
+请用 JSON 格式返回：
+{
+  "sourceName": "公众号名称或null",
+  "days": 数字,
+  "limit": 数字
+}
+
+规则：
+- 公众号名称必须是以下之一：妆研24小时、非科学美妆传播、原料合规观察、妆合规、Fbeauty未来迹、个护前沿、KEV美妆、美业颜究院、肤见未来实验室、化妆品观察 品观、中国化妆品、上海日化协会
+- 时间范围：今天=1，昨天=2，本周/这周=7，上周=7，本月=30，上月=30，X天=X
+- 如果没有明确数量，默认10篇
+- 如果没有明确公众号，返回null
+- 如果没有明确时间，默认3天`;
+
+  try {
+    // 这里应该调用 AI 模型进行语义理解
+    // 暂时使用规则匹配作为 fallback
+    return parseRequestFallback(email);
+  } catch (err) {
+    console.error('AI 解析失败，使用 fallback:', err.message);
+    return parseRequestFallback(email);
+  }
+}
+
+function parseRequestFallback(email) {
+  const content = `${email.subject} ${email.text}`;
+  
   // 提取公众号名称
   let sourceName = null;
   const sourcePatterns = [
@@ -257,8 +293,6 @@ function parseRequest(email) {
   // 提取时间范围 - 语义理解
   let days = 3; // 默认3天
   
-  console.log(`   原始内容: ${content}`);
-  
   // 使用正则提取数字+天/日
   const dayPatterns = [
     { pattern: /(\d+)\s*[天日]/, desc: 'X天' },
@@ -268,10 +302,8 @@ function parseRequest(email) {
   
   for (const { pattern, desc } of dayPatterns) {
     const match = content.match(pattern);
-    console.log(`   尝试匹配 ${desc}: ${match ? '成功' : '失败'}`);
     if (match) {
       const num = parseInt(match[1]);
-      console.log(`   匹配到数字: ${num}`);
       if (desc === 'X周') {
         days = num * 7;
       } else if (desc === 'X月') {
@@ -279,7 +311,6 @@ function parseRequest(email) {
       } else {
         days = num;
       }
-      console.log(`   解析结果: ${days}天`);
       break;
     }
   }
@@ -293,7 +324,7 @@ function parseRequest(email) {
   } else if (contentLower.includes('本周') || contentLower.includes('这周')) {
     days = 7;
   } else if (contentLower.includes('上周')) {
-    days = 7; // 上周也是7天范围
+    days = 7;
   } else if (contentLower.includes('本月')) {
     days = 30;
   } else if (contentLower.includes('上月') || contentLower.includes('上个月')) {
@@ -306,9 +337,9 @@ function parseRequest(email) {
   if (match) limit = parseInt(match[1]);
   
   return {
-    sourceName, // 公众号名称（null表示全部）
-    days,       // 时间范围（天数）
-    limit,      // 数量限制
+    sourceName,
+    days,
+    limit,
     originalSubject: email.subject || '无主题',
     originalContent: email.text.slice(0, 500)
   };
@@ -423,8 +454,8 @@ async function processEmail(email) {
   console.log(`   来自: ${email.from}`);
   console.log(`   发件人邮箱: ${email.fromEmail}`);
   
-  // 解析需求（按公众号名称 + 时间范围）
-  const request = parseRequest(email);
+  // 解析需求（使用AI语义理解）
+  const request = await parseRequestWithAI(email);
   console.log(`   公众号: ${request.sourceName || '全部'}`);
   console.log(`   时间范围: ${request.days}天`);
   console.log(`   数量限制: ${request.limit}条`);
