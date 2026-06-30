@@ -413,10 +413,10 @@ async function processEmail(email) {
   console.log(`   来自: ${email.from}`);
   console.log(`   发件人邮箱: ${email.fromEmail}`);
   
-  // 解析需求（默认化妆品）
+  // 解析需求（按公众号名称 + 时间范围）
   const request = parseRequest(email);
-  console.log(`   需求类型: ${request.type}`);
-  console.log(`   关键词: ${request.keywords.join(', ')}`);
+  console.log(`   公众号: ${request.sourceName || '全部'}`);
+  console.log(`   时间范围: ${request.days}天`);
   console.log(`   数量限制: ${request.limit}条`);
   
   // 从数据库获取文章（按公众号名称 + 时间范围）
