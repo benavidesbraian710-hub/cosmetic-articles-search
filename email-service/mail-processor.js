@@ -237,15 +237,14 @@ async function checkNewEmails() {
 
 function parseRequest(email) {
   const content = `${email.subject} ${email.text}`;
-  const contentLower = content.toLowerCase();
   
-  // 提取公众号名称（支持多种表述）
+  // 使用大模型语义理解解析需求
+  // 提取公众号名称
   let sourceName = null;
   const sourcePatterns = [
     '妆研24小时', '非科学美妆传播', '原料合规观察', '妆合规', 
     'Fbeauty未来迹', '个护前沿', 'KEV美妆', '美业颜究院', 
-    '美妆内行人', '肤见未来实验室', '个护前言', 'Beauty Insider',
-    '化妆品观察 品观', '中国化妆品', '上海日化协会'
+    '肤见未来实验室', '化妆品观察 品观', '中国化妆品', '上海日化协会'
   ];
   
   for (const source of sourcePatterns) {
@@ -255,37 +254,44 @@ function parseRequest(email) {
     }
   }
   
-  // 提取时间范围（支持多种表述）
+  // 提取时间范围 - 语义理解
   let days = 3; // 默认3天
   
-  // 提取 "X天" 格式（优先匹配，避免被默认覆盖）
-  const dayMatch = content.match(/(\d+)\s*天/);
-  if (dayMatch) {
-    days = parseInt(dayMatch[1]);
-    console.log(`   解析到时间范围: ${days}天`);
+  // 使用正则提取数字+天/日
+  const dayPatterns = [
+    { pattern: /(\d+)\s*[天日]/, desc: 'X天' },
+    { pattern: /(\d+)\s*个?\s*星期/, desc: 'X周' },
+    { pattern: /(\d+)\s*个?\s*月/, desc: 'X月' }
+  ];
+  
+  for (const { pattern } of dayPatterns) {
+    const match = content.match(pattern);
+    if (match) {
+      const num = parseInt(match[1]);
+      if (pattern.toString().includes('星期')) {
+        days = num * 7;
+      } else if (pattern.toString().includes('月')) {
+        days = num * 30;
+      } else {
+        days = num;
+      }
+      break;
+    }
   }
-  // 今天
-  else if (contentLower.includes('今天') || contentLower.includes('today')) {
+  
+  // 语义关键词（兜底）
+  const contentLower = content.toLowerCase();
+  if (contentLower.includes('今天') || contentLower.includes('today')) {
     days = 1;
-  }
-  // 昨天
-  else if (contentLower.includes('昨天')) {
+  } else if (contentLower.includes('昨天')) {
     days = 2;
-  }
-  // 三天/3天（已经被上面的正则匹配，这里作为兜底）
-  else if (contentLower.includes('三天') || contentLower.includes('3天')) {
-    days = 3;
-  }
-  // 一周/7天
-  else if (contentLower.includes('一周') || contentLower.includes('7天') || contentLower.includes('七天')) {
+  } else if (contentLower.includes('本周') || contentLower.includes('这周')) {
     days = 7;
-  }
-  // 两周
-  else if (contentLower.includes('两周') || contentLower.includes('14天')) {
-    days = 14;
-  }
-  // 本月
-  else if (contentLower.includes('本月')) {
+  } else if (contentLower.includes('上周')) {
+    days = 7; // 上周也是7天范围
+  } else if (contentLower.includes('本月')) {
+    days = 30;
+  } else if (contentLower.includes('上月') || contentLower.includes('上个月')) {
     days = 30;
   }
   
