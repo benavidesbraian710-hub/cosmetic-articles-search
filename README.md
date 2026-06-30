@@ -10,6 +10,13 @@ cosmetic-deploy/
 │   ├── sources.py         # 公众号列表API
 │   ├── articles.py        # 文章列表API
 │   └── export.py          # 导出API
+├── email-service/          # 新增：邮件自动化服务
+│   ├── README.md
+│   ├── mail-processor.js  # 邮件处理主脚本
+│   ├── package.json
+│   ├── requirements.txt
+│   ├── docs/              # 文档
+│   └── scripts/           # IMAP/SMTP 脚本
 ├── static/                 # 静态文件
 │   ├── css/
 │   ├── js/
@@ -27,6 +34,25 @@ cosmetic-deploy/
 └── README.md
 ```
 
+## 新增功能：邮件自动化服务
+
+系统现已支持通过邮件触发搜索请求：
+
+### 使用方法
+1. 发送邮件到: **cosmeticsearch@163.com**
+2. 邮件主题: 搜索需求（如"搜索口红推荐"）
+3. 系统会自动回复 Excel 格式的搜索结果
+
+### 技术架构
+```
+用户邮件 → 163邮箱 → OpenClaw Gateway → 邮件处理 → 搜索 → Excel → 回复
+```
+
+### 配置说明
+详见 `email-service/README.md`
+
+---
+
 ## 版本管理策略
 
 ### 1. URL版本控制
@@ -39,6 +65,23 @@ cosmetic-deploy/
 Vercel自动保留每次部署的历史版本，可以随时回滚。
 
 ## 部署步骤
+
+### 新增：邮件服务部署
+
+邮件服务部署在 OpenClaw Gateway 环境：
+
+```bash
+cd email-service
+npm install
+# 配置 .env 文件
+# 启动定时任务（OpenClaw Cron）
+```
+
+详见 `email-service/docs/SETUP.md`
+
+---
+
+### Vercel 部署（原有）
 
 ### 1. 安装Vercel CLI
 ```bash

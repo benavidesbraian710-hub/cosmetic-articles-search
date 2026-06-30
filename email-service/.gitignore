@@ -1,0 +1,7 @@
+node_modules/
+.env
+.env.local
+*.log
+*.csv
+*.xlsx
+.DS_Store
