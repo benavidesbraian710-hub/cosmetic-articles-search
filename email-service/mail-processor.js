@@ -258,15 +258,21 @@ function parseRequest(email) {
   // 提取时间范围（支持多种表述）
   let days = 3; // 默认3天
   
+  // 提取 "X天" 格式（优先匹配，避免被默认覆盖）
+  const dayMatch = content.match(/(\d+)\s*天/);
+  if (dayMatch) {
+    days = parseInt(dayMatch[1]);
+    console.log(`   解析到时间范围: ${days}天`);
+  }
   // 今天
-  if (contentLower.includes('今天') || contentLower.includes('today')) {
+  else if (contentLower.includes('今天') || contentLower.includes('today')) {
     days = 1;
   }
   // 昨天
   else if (contentLower.includes('昨天')) {
     days = 2;
   }
-  // 三天/3天
+  // 三天/3天（已经被上面的正则匹配，这里作为兜底）
   else if (contentLower.includes('三天') || contentLower.includes('3天')) {
     days = 3;
   }
@@ -281,13 +287,6 @@ function parseRequest(email) {
   // 本月
   else if (contentLower.includes('本月')) {
     days = 30;
-  }
-  // 最近X天
-  else {
-    const match = content.match(/(\d+)\s*天/);
-    if (match) {
-      days = parseInt(match[1]);
-    }
   }
   
   // 提取数量
