@@ -47,7 +47,7 @@ const CONFIG = {
   ]
 };
 
-# 需求关键词映射（化妆品为默认）
+// 需求关键词映射（化妆品为默认）
 const KEYWORD_PATTERNS = {
   "cosmetic": ["化妆品", "口红", "面膜", "精华", "粉底", "防晒", "护肤", "美妆", "成分", "配方", "原料", "备案", "注册", "功效"],
   "AI": ["AI", "人工智能", "大模型", "LLM", "GPT", "Claude"],
@@ -257,6 +257,8 @@ function parseRequest(email) {
   // 提取时间范围 - 语义理解
   let days = 3; // 默认3天
   
+  console.log(`   原始内容: ${content}`);
+  
   // 使用正则提取数字+天/日
   const dayPatterns = [
     { pattern: /(\d+)\s*[天日]/, desc: 'X天' },
@@ -264,17 +266,20 @@ function parseRequest(email) {
     { pattern: /(\d+)\s*个?\s*月/, desc: 'X月' }
   ];
   
-  for (const { pattern } of dayPatterns) {
+  for (const { pattern, desc } of dayPatterns) {
     const match = content.match(pattern);
+    console.log(`   尝试匹配 ${desc}: ${match ? '成功' : '失败'}`);
     if (match) {
       const num = parseInt(match[1]);
-      if (pattern.toString().includes('星期')) {
+      console.log(`   匹配到数字: ${num}`);
+      if (desc === 'X周') {
         days = num * 7;
-      } else if (pattern.toString().includes('月')) {
+      } else if (desc === 'X月') {
         days = num * 30;
       } else {
         days = num;
       }
+      console.log(`   解析结果: ${days}天`);
       break;
     }
   }
