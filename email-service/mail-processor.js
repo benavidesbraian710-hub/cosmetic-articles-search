@@ -321,7 +321,7 @@ function parseRequestFallback(email) {
     days = 1;
   } else if (contentLower.includes('昨天')) {
     days = 2;
-  } else if (contentLower.includes('本周') || contentLower.includes('这周')) {
+  } else if (contentLower.includes('一周') || contentLower.includes('本周') || contentLower.includes('这周')) {
     days = 7;
   } else if (contentLower.includes('上周')) {
     days = 7;
