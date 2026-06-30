@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
 /**
- * 邮件处理主脚本 - 连接数据库版本
- * 功能：检查新邮件、解析需求、从数据库搜索、生成真实Excel、回复邮件
+ * 邮件处理主脚本 - 化妆品文章搜索专用版
+ * 功能：检查新邮件、解析需求、从数据库搜索化妆品文章、生成真实Excel、回复邮件
+ * 
+ * 默认行为：搜索化妆品相关文章（无需主题）
  */
 
 const { ImapFlow } = require('imapflow');
@@ -45,18 +47,19 @@ const CONFIG = {
   ]
 };
 
-// 需求关键词映射
+// 需求关键词映射（化妆品为默认）
 const KEYWORD_PATTERNS = {
-  "cosmetic": ["化妆品", "口红", "面膜", "精华", "粉底", "防晒", "护肤", "美妆"],
+  "cosmetic": ["化妆品", "口红", "面膜", "精华", "粉底", "防晒", "护肤", "美妆", "成分", "配方", "原料", "备案", "注册", "功效"],
   "AI": ["AI", "人工智能", "大模型", "LLM", "GPT", "Claude"],
   "quantum": ["量子", "quantum", "量子计算"],
   "chip": ["芯片", "chip", "半导体", "GPU"],
   "robotics": ["机器人", "robot", "具身智能"],
-  "biotech": ["生物", "biotech", "基因"],
-  "news": ["新闻", "news", "资讯"],
-  "paper": ["论文", "paper", "arxiv"],
-  "product": ["产品", "product", "发布"],
+  "biotech": ["生物", "biotech", "基因", "合成生物学"],
+  "news": ["新闻", "news", "资讯", "动态"],
+  "paper": ["论文", "paper", "arxiv", "学术", "研究"],
+  "product": ["产品", "product", "发布", "新品", "上市"],
   "funding": ["融资", "funding", "投资"],
+  "regulation": ["法规", "监管", "政策", "标准", "规范", "总局", "药监局"]
 };
 
 // 数据库连接
@@ -175,32 +178,31 @@ async function checkNewEmails() {
         if (message.source) {
           const parsed = await simpleParser(message.source);
           
-  // 检查是否是自己发送的邮件（避免循环回复）
-  const fromAddr = parsed.from?.text || '';
-  const fromEmail = parsed.from?.value?.[0]?.address || '';
-  
-  // 检查是否是系统邮件（网易、微信等）
-  const isSystemEmail = fromEmail.includes('@service.netease.com') || 
-                        fromEmail.includes('@wechat.com') ||
-                        fromEmail.includes('@qq.com') ||
-                        fromAddr.includes('网易') ||
-                        fromAddr.includes('微信');
-  
-  if (isSystemEmail) {
-    console.log(`   ⏭️  跳过系统邮件: ${parsed.subject}`);
-    await client.messageFlagsAdd(uid, ['\\Seen']);
-    continue;
-  }
-  
-  // 检查发件人邮箱是否是自己
-  const isSelfSent = fromEmail === CONFIG.imap.auth.user || 
-                    CONFIG.ignoreFrom.some(addr => 
-                      fromAddr.toLowerCase().includes(addr.toLowerCase())
-                    );
+          // 检查是否是自己发送的邮件（避免循环回复）
+          const fromAddr = parsed.from?.text || '';
+          const fromEmail = parsed.from?.value?.[0]?.address || '';
+          
+          // 检查是否是系统邮件（网易、微信等）
+          const isSystemEmail = fromEmail.includes('@service.netease.com') || 
+                                fromEmail.includes('@wechat.com') ||
+                                fromEmail.includes('@qq.com') ||
+                                fromAddr.includes('网易') ||
+                                fromAddr.includes('微信');
+          
+          if (isSystemEmail) {
+            console.log(`   ⏭️  跳过系统邮件: ${parsed.subject}`);
+            await client.messageFlagsAdd(uid, ['\\Seen']);
+            continue;
+          }
+          
+          // 检查发件人邮箱是否是自己
+          const isSelfSent = fromEmail === CONFIG.imap.auth.user || 
+                            CONFIG.ignoreFrom.some(addr => 
+                              fromAddr.toLowerCase().includes(addr.toLowerCase())
+                            );
           
           if (isSelfSent) {
             console.log(`   ⏭️  跳过自己发送的邮件: ${parsed.subject}`);
-            // 标记为已读但不处理
             await client.messageFlagsAdd(uid, ['\\Seen']);
             continue;
           }
@@ -242,14 +244,18 @@ async function checkNewEmails() {
 function parseRequest(email) {
   const content = `${email.subject} ${email.text}`.toLowerCase();
   
-  let requestType = 'general';
-  const keywords = [];
+  // 默认化妆品搜索
+  let requestType = 'cosmetic';
+  const keywords = ['化妆品'];
   
+  // 检查是否有特定关键词
   for (const [category, patterns] of Object.entries(KEYWORD_PATTERNS)) {
     for (const pattern of patterns) {
       if (content.includes(pattern.toLowerCase())) {
         requestType = category;
-        keywords.push(pattern);
+        if (!keywords.includes(pattern)) {
+          keywords.push(pattern);
+        }
         break;
       }
     }
@@ -271,7 +277,7 @@ function parseRequest(email) {
     keywords: [...new Set(keywords)],
     timeRange,
     limit,
-    originalSubject: email.subject,
+    originalSubject: email.subject || '无主题',
     originalContent: email.text.slice(0, 500)
   };
 }
@@ -286,10 +292,12 @@ function generateExcel(articles, request, outputPath) {
     data.push(['暂无匹配文章', '-', '请尝试其他关键词', '-', '-', '-']);
   } else {
     for (const article of articles) {
-      // 提取摘要（前100字）
+      // 提取摘要（优先content，其次content_html）
       let summary = '';
-      if (article.content) {
+      if (article.content && article.content.length > 0) {
         summary = article.content.replace(/<[^>]+>/g, '').slice(0, 100) + '...';
+      } else if (article.content_html && article.content_html.length > 0) {
+        summary = article.content_html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 100) + '...';
       }
       if (!summary) summary = '暂无摘要';
       
@@ -299,7 +307,7 @@ function generateExcel(articles, request, outputPath) {
         summary,
         article.publish_date || '-',
         article.source || '-',
-        request.keywords.join(', ') || '通用搜索'
+        request.keywords.join(', ') || '化妆品搜索'
       ]);
     }
   }
@@ -380,14 +388,14 @@ async function markAsRead(uid) {
 }
 
 async function processEmail(email) {
-  console.log(`\n📨 处理邮件: ${email.subject}`);
+  console.log(`\n📨 处理邮件: ${email.subject || '无主题'}`);
   console.log(`   来自: ${email.from}`);
   console.log(`   发件人邮箱: ${email.fromEmail}`);
   
-  // 解析需求
+  // 解析需求（默认化妆品）
   const request = parseRequest(email);
   console.log(`   需求类型: ${request.type}`);
-  console.log(`   关键词: ${request.keywords.join(', ') || '通用搜索'}`);
+  console.log(`   关键词: ${request.keywords.join(', ')}`);
   console.log(`   数量限制: ${request.limit}条`);
   
   // 从数据库搜索文章
@@ -407,7 +415,6 @@ async function processEmail(email) {
     for (let article of articles) {
       if (!article.content || article.content.length === 0) {
         if (article.content_html) {
-          // 从HTML提取纯文本
           article.content = article.content_html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
         }
       }
@@ -454,11 +461,11 @@ async function processEmail(email) {
   
   const replyBody = `您好！
 
-收到您的需求：${email.subject}
+收到您的需求：${email.subject || '无主题'}
 
-已为您从数据库搜索并整理以下内容：
+已为您从化妆品数据库搜索并整理以下内容：
 - 需求类型：${request.type}
-- 关键词：${request.keywords.join(', ') || '通用搜索'}
+- 关键词：${request.keywords.join(', ')}
 - 匹配文章数：${articles.length} 篇
 - 时间范围：${request.timeRange}
 
@@ -466,7 +473,7 @@ ${articleList}
 详细结果请查看附件中的 Excel 文件。
 
 ---
-搜搜 (Sōusou) - 您的 AI 信息猎犬 🔍
+搜搜 (Sōusou) - 您的化妆品信息猎犬 🔍
 处理时间：${new Date().toLocaleString('zh-CN')}
 数据库文章总数：147 篇
 `;
@@ -475,7 +482,7 @@ ${articleList}
   const toAddr = email.fromEmail || email.from;
   
   // 发送回复
-  await sendReply(toAddr, email.subject, replyBody, excelPath);
+  await sendReply(toAddr, email.subject || '化妆品文章搜索', replyBody, excelPath);
   
   // 标记已读
   await markAsRead(email.uid);
@@ -485,9 +492,10 @@ ${articleList}
 
 async function main() {
   console.log('='.repeat(60));
-  console.log('📧 邮件自动处理系统 - 数据库连接版');
+  console.log('📧 化妆品文章邮件处理系统');
   console.log(`⏰ 运行时间: ${new Date().toLocaleString('zh-CN')}`);
   console.log(`🗄️  数据库: ${CONFIG.dbPath}`);
+  console.log('💡 默认搜索化妆品相关文章（无需主题）');
   console.log('='.repeat(60));
   
   try {
