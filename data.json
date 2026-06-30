@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 147,
+    "total_articles": 149,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-06-30"
     },
-    "last_update": "2026-06-30T16:15:30.060608"
+    "last_update": "2026-06-30T17:37:54.491174"
   },
   "sources": [
     {
@@ -39,15 +39,15 @@
     },
     {
       "name": "原料合规观察",
-      "count": 10
+      "count": 11
+    },
+    {
+      "name": "妆研24小时",
+      "count": 5
     },
     {
       "name": "KEV美妆",
       "count": 5
-    },
-    {
-      "name": "妆研24小时",
-      "count": 4
     },
     {
       "name": "美业颜究院",
@@ -1200,6 +1200,15 @@
     ],
     "原料合规观察": [
       {
+        "id": 373,
+        "title": "新增6个化妆品新原料备案：化学、植提...",
+        "source": "原料合规观察",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/QZVIv7MBBlYFIhyzuPB9Eg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 216,
         "title": "国家药监局发布《化妆品新原料注册备案及资料管理规定》（附相关问答）",
         "source": "原料合规观察",
@@ -1290,6 +1299,53 @@
         "keywords": []
       }
     ],
+    "妆研24小时": [
+      {
+        "id": 372,
+        "title": "祛斑美白产品注册全流程：常见失败原因与申报要点解析",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/gjOBrTHpzgpAL9Zxfjuc4g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 366,
+        "title": "新钰生技、嘉文丽完成新原料备案",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/Z0Yzz5Ai9sngr7Fkq848tQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 367,
+        "title": "巨子生物首个新原料公示",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/f0yrwg7JT27mH4tjN_2APQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 368,
+        "title": "化妆品新原料的新分类落地！防脱发、祛痘、抗皱、去屑、除臭调低风险级别",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/DYHXM2AKCtkB65-nFXpdLA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 369,
+        "title": "相约PCT2026：瑞欧科技聚焦热门化妆品新原料申报策略（展位：B75）",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/x6VnKfzMBiMlZZCeiScBag",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "KEV美妆": [
       {
         "id": 238,
@@ -1333,44 +1389,6 @@
         "source": "KEV美妆",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/dAkA6f5Xpg-6IAwdrF6-PA",
-        "summary": "",
-        "keywords": []
-      }
-    ],
-    "妆研24小时": [
-      {
-        "id": 366,
-        "title": "新钰生技、嘉文丽完成新原料备案",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-29",
-        "url": "https://mp.weixin.qq.com/s/Z0Yzz5Ai9sngr7Fkq848tQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 367,
-        "title": "巨子生物首个新原料公示",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/f0yrwg7JT27mH4tjN_2APQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 368,
-        "title": "化妆品新原料的新分类落地！防脱发、祛痘、抗皱、去屑、除臭调低风险级别",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/DYHXM2AKCtkB65-nFXpdLA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 369,
-        "title": "相约PCT2026：瑞欧科技聚焦热门化妆品新原料申报策略（展位：B75）",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/x6VnKfzMBiMlZZCeiScBag",
         "summary": "",
         "keywords": []
       }
