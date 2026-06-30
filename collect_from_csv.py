@@ -30,6 +30,7 @@ import sys
 import subprocess
 import glob
 import re
+import urllib.request
 from pathlib import Path
 from datetime import datetime
 
@@ -63,26 +64,32 @@ def ensure_db_exists():
 
 
 def fetch_article_info(url: str) -> dict:
-    """curl 抓取文章 HTML，解析真实标题和发布时间"""
+    """抓取文章 HTML，解析真实标题和发布时间"""
     try:
-        cmd = [
-            "curl", "-s", "-L",
-            "-A", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-            "-H", "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-            "-H", "Accept-Language: zh-CN,zh;q=0.9,en;q=0.8",
-            "-H", "Referer: https://mp.weixin.qq.com/",
-            "--max-time", "15",
-            url
-        ]
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=20)
-        html = result.stdout
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Linux; Android 10; SM-G960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36 MicroMessenger/8.0.0',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'zh-CN,zh;q=0.9',
+            'Referer': 'https://mp.weixin.qq.com/',
+        }
+        
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=20) as response:
+            html = response.read().decode('utf-8')
         
         # 检查是否被拦截
         if "环境异常" in html or "完成验证" in html:
             print(f"     ⚠️  被微信拦截，无法获取")
             return {
+                "title": None,
                 "publish_date": None
             }
+        
+        # 解析标题
+        title = None
+        title_match = re.search(r'<h1[^>]*class="rich_media_title[^"]*"[^>]*>(.*?)</h1>', html, re.DOTALL)
+        if title_match:
+            title = re.sub(r'<[^>]+>', '', title_match.group(1)).strip()
         
         # 解析发布时间
         publish_date = None
@@ -96,7 +103,7 @@ def fetch_article_info(url: str) -> dict:
                     publish_date = dt.strftime('%Y-%m-%d')
                 except:
                     pass
-        # 方案2: 从 s1s_context_info 中提取已解码的 JSON 时间戳
+        # 方案2: 从已解码的JSON中提取时间戳
         if not publish_date:
             m = re.search(r'"publish_time"\s*:\s*(\d{10})', html)
             if m:
@@ -106,7 +113,7 @@ def fetch_article_info(url: str) -> dict:
                     publish_date = dt.strftime('%Y-%m-%d')
                 except:
                     pass
-        # 方案3: 从页面中的 publish_time 元素获取（JS渲染后的）
+        # 方案3: 从页面元素获取
         if not publish_date:
             m = re.search(r'id="publish_time"[^>]*>(.*?)</em>', html, re.DOTALL)
             if m:
@@ -117,14 +124,23 @@ def fetch_article_info(url: str) -> dict:
                         publish_date = dt.strftime('%Y-%m-%d')
                     except:
                         pass
+        # 方案4: 从页面中提取所有日期，使用第一个合理的日期
+        if not publish_date:
+            dates = re.findall(r'(\d{4}-\d{2}-\d{2})', html)
+            if dates:
+                valid_dates = [d for d in dates if d >= '2024-01-01']
+                if valid_dates:
+                    publish_date = valid_dates[0]
         
         return {
+            "title": title,
             "publish_date": publish_date
         }
         
     except Exception as e:
         print(f"  ⚠️ 抓取失败: {e}")
         return {
+            "title": None,
             "publish_date": None
         }
 
@@ -197,7 +213,7 @@ def import_from_csv(csv_path, source_name=None, fetch_titles=True):
             if fetch_titles:
                 print(f"  🔍 抓取文章信息: {link[:60]}...")
                 info = fetch_article_info(link)
-                title = info.get('title') if info.get('title') and info.get('title') != '未获取到标题' else f"{source} 文章"
+                title = info.get('title') if info.get('title') else f"{source} 文章"
                 publish_date = info.get('publish_date')
                 if publish_date:
                     print(f"     标题: {title[:50]}...")
@@ -214,7 +230,7 @@ def import_from_csv(csv_path, source_name=None, fetch_titles=True):
             
             # 插入文章
             cursor.execute("""
-                INSERT INTO articles (title, url, source, publish_date, summary, keywords, created_at)
+                INSERT INTO articles (title, url, wechat_name, publish_date, content, keywords, created_at)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
             """, (
                 title,
@@ -274,10 +290,10 @@ def get_stats():
     cursor.execute("SELECT COUNT(*) FROM articles")
     total = cursor.fetchone()[0]
     
-    cursor.execute("SELECT COUNT(DISTINCT source) FROM articles")
+    cursor.execute("SELECT COUNT(DISTINCT wechat_name) FROM articles")
     sources = cursor.fetchone()[0]
     
-    cursor.execute("SELECT source, COUNT(*) as count FROM articles GROUP BY source ORDER BY count DESC")
+    cursor.execute("SELECT wechat_name, COUNT(*) as count FROM articles GROUP BY wechat_name ORDER BY count DESC")
     source_list = cursor.fetchall()
     
     conn.close()

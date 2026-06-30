@@ -1,9 +1,12 @@
+email-service/
 node_modules/
 .env
 .env.local
 *.log
-data.json
+*.csv
+*.xlsx
 .DS_Store
 __pycache__/
 *.pyc
 .omc/
+
