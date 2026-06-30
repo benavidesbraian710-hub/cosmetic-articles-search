@@ -2,8 +2,7 @@ node_modules/
 .env
 .env.local
 *.log
-*.csv
-*.xlsx
+data.json
 .DS_Store
 __pycache__/
 *.pyc
