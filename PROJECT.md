@@ -2,7 +2,7 @@
 
 **文档版本**: v1.2
 **创建时间**: 2026-06-29 12:13
-**最后更新**: 2026-07-01 11:58
+**最后更新**: 2026-07-01 12:24
 **项目负责人**: Nick
 **技术实现**: 搜搜 (Sōusou) - AI搜索猎犬
 
@@ -396,6 +396,69 @@ python3 collect.py '获取原料合规观察最新4篇文章'
 **原因**: 系统对长时间运行进程有限制
 
 **解决**: 分批采集，每次8个公众号，设置超时1200秒（20分钟）
+
+### 问题6: 微信窗口未自动激活（已解决 - 2026-07-01）
+
+**现象**: auto_collect_all.py 运行时微信窗口未在前台，导致采集失败（妆研24小时、非科学美妆传播等公众号采集失败）
+
+**原因**: 
+- collect.py 有 activate_wechat() 函数，但 auto_collect_all.py 直接调用 collect.py 时不会触发该函数
+- 项目文档只写了"需要微信Mac版在前台"，没有说明自动激活机制
+
+**解决**: 
+- 在 auto_collect_all.py 的 collect_account() 函数开头添加微信激活代码
+- 使用 osascript 激活 WeChat + peekaboo focus 聚焦窗口 + 等待3秒
+
+**代码变更**:
+```python
+def collect_account(account: str, count: int = 4) -> bool:
+    # 先激活微信窗口
+    print("激活微信窗口...")
+    subprocess.run([
+        'osascript', '-e',
+        'tell application "WeChat" to activate'
+    ], capture_output=True)
+    time.sleep(2)
+    
+    # 使用 peekaboo 聚焦窗口
+    for app_name in ["WeChat", "微信"]:
+        result = subprocess.run(
+            f'peekaboo focus --app "{app_name}"',
+            shell=True, capture_output=True, text=True
+        )
+        if result.returncode == 0:
+            print(f"  已聚焦到: {app_name}")
+            break
+    time.sleep(1)
+    
+    # ... 原有采集代码
+```
+
+**文档更新**: 
+- 采集流程中增加"自动激活"说明
+- 添加问题6记录
+
+**更新记录**: 2026-07-01 修复并更新文档
+
+### 问题7: CSV文件堆积桌面（已解决 - 2026-07-01）
+
+**现象**: 每次采集完一个公众号就生成一个CSV文件放在桌面，文件堆积
+
+**原因**: collect.py 设计为输出CSV文件，auto_collect_all.py 再读取CSV入库
+
+**解决**: 
+- 创建 auto_collect_all_v2.py：直接采集 → 抓取文章信息 → 入库，跳过CSV中间步骤
+- 保留 auto_collect_all.py 作为兼容版本（支持CSV模式）
+- 新流程:
+  ```
+  采集文章链接 → 直接抓取标题和日期 → 直接入库SQLite → 导出data.json → 推送GitHub
+  ```
+
+**文件变更**:
+- 新增: `auto_collect_all_v2.py` - 直接入库版本
+- 保留: `auto_collect_all.py` - CSV兼容版本（import_csv函数改为可选）
+
+**更新记录**: 2026-07-01
 
 ### 问题6: 微信窗口未自动激活（已解决 - 2026-07-01）
 

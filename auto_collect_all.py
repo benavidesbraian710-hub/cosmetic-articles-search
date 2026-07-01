@@ -85,7 +85,7 @@ def collect_account(account: str, count: int = 4) -> bool:
 
 
 def import_csv() -> int:
-    """导入最新的CSV文件"""
+    """导入最新的CSV文件（兼容旧版本）"""
     print(f"\n{'='*60}")
     print("导入CSV到数据库...")
     print('='*60)
@@ -95,7 +95,7 @@ def import_csv() -> int:
     csv_files = list(desktop.glob("wechat_articles_*.csv"))
     
     if not csv_files:
-        print("❌ 没有找到CSV文件")
+        print("⚠️  没有找到CSV文件（可能已使用直接入库模式）")
         return 0
     
     # 按修改时间排序，取最新的

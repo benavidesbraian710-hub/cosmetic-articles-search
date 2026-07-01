@@ -14,8 +14,12 @@ const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
 const path = require('path');
 
-// 加载环境变量
-require('dotenv').config();
+// 加载环境变量 - 使用脚本所在目录的 .env 文件
+const scriptDir = __dirname;
+require('dotenv').config({ path: path.join(scriptDir, '.env') });
+console.log('📁 脚本目录:', scriptDir);
+console.log('🔐 IMAP_USER:', process.env.IMAP_USER || '未设置');
+console.log('🔐 IMAP_PASS 长度:', (process.env.IMAP_PASS || '').length);
 
 // 配置
 const CONFIG = {
