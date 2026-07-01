@@ -46,6 +46,25 @@ def collect_account(account: str, count: int = 4) -> bool:
     print(f"采集: {account} ({count}篇)")
     print('='*60)
     
+    # 先激活微信窗口
+    print("激活微信窗口...")
+    subprocess.run([
+        'osascript', '-e',
+        'tell application "WeChat" to activate'
+    ], capture_output=True)
+    time.sleep(2)
+    
+    # 使用 peekaboo 聚焦窗口
+    for app_name in ["WeChat", "微信"]:
+        result = subprocess.run(
+            f'peekaboo focus --app "{app_name}"',
+            shell=True, capture_output=True, text=True
+        )
+        if result.returncode == 0:
+            print(f"  已聚焦到: {app_name}")
+            break
+    time.sleep(1)
+    
     cmd = [
         "python3", str(COLLECTOR_PATH),
         json.dumps({"tasks": [{"account": account, "count": count}]})
