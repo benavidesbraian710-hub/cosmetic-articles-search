@@ -1,65 +1,101 @@
 {
   "stats": {
-    "total_articles": 149,
+    "total_articles": 171,
     "source_count": 12,
     "date_range": {
-      "start": "2026-06-15",
-      "end": "2026-06-30"
+      "start": "2026-05-28",
+      "end": "2026-07-01"
     },
-    "last_update": "2026-06-30T18:21:12.284624"
+    "last_update": "2026-07-01T11:32:17.754610"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 27
+      "count": 31
     },
     {
       "name": "化妆品观察 品观",
-      "count": 23
+      "count": 26
     },
     {
       "name": "中国化妆品",
-      "count": 21
+      "count": 24
+    },
+    {
+      "name": "Fbeauty未来迹",
+      "count": 17
     },
     {
       "name": "非科学美妆传播",
       "count": 16
     },
     {
-      "name": "Fbeauty未来迹",
-      "count": 15
-    },
-    {
       "name": "妆合规",
-      "count": 12
+      "count": 14
     },
     {
       "name": "肤见未来实验室",
-      "count": 11
+      "count": 13
     },
     {
       "name": "原料合规观察",
       "count": 11
     },
     {
+      "name": "KEV美妆",
+      "count": 6
+    },
+    {
       "name": "妆研24小时",
       "count": 5
     },
     {
-      "name": "KEV美妆",
-      "count": 5
-    },
-    {
       "name": "美业颜究院",
-      "count": 2
+      "count": 4
     },
     {
       "name": "上海日化协会",
-      "count": 1
+      "count": 4
     }
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 384,
+        "title": "花西子原料供应商冲击IPO！",
+        "source": "个护前沿",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/FfJdD8en3u4OPQoffsT-Ag",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 385,
+        "title": "【广州市市场监督管理局】普通化妆品备案问答（一百零六期）",
+        "source": "个护前沿",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/2di1DlTpCRkEoc6dddEOSg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 386,
+        "title": "新规来了！化妆品新原料管理大调整",
+        "source": "个护前沿",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/mIvVTrQUYbf4glJ8Os8OWQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 387,
+        "title": "上美又挖来一位顶级大佬",
+        "source": "个护前沿",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/c-koq1gUBh4f976U9icxfw",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 234,
         "title": "资生堂：触觉敏感度与身心疾病的关联",
@@ -306,6 +342,33 @@
     ],
     "化妆品观察 品观": [
       {
+        "id": 393,
+        "title": "准10亿级护肤企业，冲击北交所上市！",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/rpF4d6KopB9LR5yxajAl5g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 394,
+        "title": "新30亿级“药妆”连锁诞生！",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/T4Q8jbcKSOKOzkkl138YWw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 395,
+        "title": "央视网走进樊文花：38年聚焦“一张脸”的长期主义样本",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/UcmxG7ELoD1ZSCViyPYvqQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 259,
         "title": "上次没卖掉，这个韩妆品牌涨至10亿出售",
         "source": "化妆品观察 品观",
@@ -515,6 +578,33 @@
     ],
     "中国化妆品": [
       {
+        "id": 396,
+        "title": "专访宝洁全球供应链创新副总裁赵波：美妆供应链，从效率优先到价值共生 | ESG先锋",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/X4HRGdk7MJEtPb1Zy4iD6w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 397,
+        "title": "广东省中山市市监局召开化妆品质量安全风险会商工作会议；绽妍生物北交所上市获受理；印度美妆Nykaa计划2030财年计划GMV突破50亿美元",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/VWEh0VoAmMP8DqZrlg0Rgw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 398,
+        "title": "内蒙古药监局就化妆品经营分级分类监督管理办法公开征求意见；巨子生物“人参皂苷CK”获国家药监局新原料备案",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/eSBigO9LGvZNTYNgPoQAxw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 253,
         "title": "国家药监局发布新版化妆品新原料注册备案及资料管理规定；中检院发布《化妆品新原料注册备案资料技术通则》",
         "source": "中国化妆品",
@@ -704,6 +794,161 @@
         "keywords": []
       }
     ],
+    "Fbeauty未来迹": [
+      {
+        "id": 382,
+        "title": "三个案例，解答高端美妆为何集体“奔赴”抖音电商",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/B11vKpBcCg2GwUH5PQPJJA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 335,
+        "title": "Fbeauty未来迹 文章",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/wQbvV89hmLPrJ0uhQRpDJQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 383,
+        "title": "央视网深度探访！解码美业标杆樊文花逆势增长新范式",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/w3zACxtvHubLYE7E8X8HYA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 230,
+        "title": "首个儿童皮肤延续护理指南发布，青蛙王子七年科研承接标准落地",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-28",
+        "url": "https://mp.weixin.qq.com/s/dcpRcraC2s6AagfU6Q5F7A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 231,
+        "title": "1160亿元之后，美妆护肤市场走向两种分化",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-27",
+        "url": "https://mp.weixin.qq.com/s/WFy_yi5-O9ViodJZEsF7Vw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 232,
+        "title": "关店、回归、重启，美妆品牌的生存法则变了",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/aiujF5UzL4XV-VCndV2bVA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 233,
+        "title": "“柔顺”二字，飘柔还能讲出什么新故事？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/zMrhlLZiCG2wnHLzvqW_6A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 333,
+        "title": "跑红集团科创中心落成：一家新美妆企业的“架桥”试验",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/G5j772_LcfhG-1q9BLjIYQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 334,
+        "title": "美妆618首次负增长，一场去泡沫化开始了",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/puzbXQ04s4npDYIBXs4XWQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 336,
+        "title": "28家企业排队，美妆IPO迎来三年最强复苏？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/ZHyXvwT6aQmMnQ7DeDu-pQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 337,
+        "title": "告别“GMV至上”，美妆品牌618在拼什么？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-19",
+        "url": "https://mp.weixin.qq.com/s/6hBoBTZkWeL4egVj_itzTA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 338,
+        "title": "在华首宣《国际共识》，优色林把美白带进“证据竞争”",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/wi_taZjwyl-4j0rGBsCHjQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 339,
+        "title": "被蚊子逼出来的百亿精致生意，正在加速变“卷”",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/EFUXCK_EL7axSbYTqKH_Ww",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 340,
+        "title": "专访 | 欧莱雅全球最大生产基地，如何炼成？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/FOpoHfOnsr20gHy-I-r9Cw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 341,
+        "title": "美白护肤，红海逃生",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/7Rz517uSUBX7XHUeLYjK0w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 342,
+        "title": "一座267岁植物园的“二次生长”，邱园开启中国奢护新叙事",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/HmypxS8OT3vMYei4GqdGdw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 343,
+        "title": "当PDRN不再稀缺，欧莱雅和绽媄娅们打响持久战",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/Vwx9YrJnwhmUn1TtEV_AYg",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "非科学美妆传播": [
       {
         "id": 370,
@@ -850,144 +1095,25 @@
         "keywords": []
       }
     ],
-    "Fbeauty未来迹": [
-      {
-        "id": 335,
-        "title": "Fbeauty未来迹 文章",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-29",
-        "url": "https://mp.weixin.qq.com/s/wQbvV89hmLPrJ0uhQRpDJQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 230,
-        "title": "首个儿童皮肤延续护理指南发布，青蛙王子七年科研承接标准落地",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-28",
-        "url": "https://mp.weixin.qq.com/s/dcpRcraC2s6AagfU6Q5F7A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 231,
-        "title": "1160亿元之后，美妆护肤市场走向两种分化",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-27",
-        "url": "https://mp.weixin.qq.com/s/WFy_yi5-O9ViodJZEsF7Vw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 232,
-        "title": "关店、回归、重启，美妆品牌的生存法则变了",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/aiujF5UzL4XV-VCndV2bVA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 233,
-        "title": "“柔顺”二字，飘柔还能讲出什么新故事？",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/zMrhlLZiCG2wnHLzvqW_6A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 333,
-        "title": "跑红集团科创中心落成：一家新美妆企业的“架桥”试验",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/G5j772_LcfhG-1q9BLjIYQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 334,
-        "title": "美妆618首次负增长，一场去泡沫化开始了",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-24",
-        "url": "https://mp.weixin.qq.com/s/puzbXQ04s4npDYIBXs4XWQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 336,
-        "title": "28家企业排队，美妆IPO迎来三年最强复苏？",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-22",
-        "url": "https://mp.weixin.qq.com/s/ZHyXvwT6aQmMnQ7DeDu-pQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 337,
-        "title": "告别“GMV至上”，美妆品牌618在拼什么？",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-19",
-        "url": "https://mp.weixin.qq.com/s/6hBoBTZkWeL4egVj_itzTA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 338,
-        "title": "在华首宣《国际共识》，优色林把美白带进“证据竞争”",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-18",
-        "url": "https://mp.weixin.qq.com/s/wi_taZjwyl-4j0rGBsCHjQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 339,
-        "title": "被蚊子逼出来的百亿精致生意，正在加速变“卷”",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-17",
-        "url": "https://mp.weixin.qq.com/s/EFUXCK_EL7axSbYTqKH_Ww",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 340,
-        "title": "专访 | 欧莱雅全球最大生产基地，如何炼成？",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-17",
-        "url": "https://mp.weixin.qq.com/s/FOpoHfOnsr20gHy-I-r9Cw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 341,
-        "title": "美白护肤，红海逃生",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-16",
-        "url": "https://mp.weixin.qq.com/s/7Rz517uSUBX7XHUeLYjK0w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 342,
-        "title": "一座267岁植物园的“二次生长”，邱园开启中国奢护新叙事",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-16",
-        "url": "https://mp.weixin.qq.com/s/HmypxS8OT3vMYei4GqdGdw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 343,
-        "title": "当PDRN不再稀缺，欧莱雅和绽媄娅们打响持久战",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-15",
-        "url": "https://mp.weixin.qq.com/s/Vwx9YrJnwhmUn1TtEV_AYg",
-        "summary": "",
-        "keywords": []
-      }
-    ],
     "妆合规": [
+      {
+        "id": 380,
+        "title": "网络公开课(7月7日)：日本美妆市场准入双轨制——化妆品与医药部外品合规解析",
+        "source": "妆合规",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/dzhPkABln9nmdIwQ9_po1A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 381,
+        "title": "化妆品新原料新规发布，附官方政策解读！",
+        "source": "妆合规",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/jeppBVw_5y0TW5kaaUqpkQ",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 226,
         "title": "化妆品企业注意！化妆品终产品中新化学物质或纳入登记管理--生态环境部12号令修订对化妆品企业影响解析",
@@ -1098,6 +1224,24 @@
       }
     ],
     "肤见未来实验室": [
+      {
+        "id": 391,
+        "title": "全新合成三螺旋胶原，改善松弛、促进皮肤新生血管",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/N1Y5liwpfr81OIXjPkS0cg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 392,
+        "title": "指南与共识|慢性创面外用生长因子的临床专家共识",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/HknowfJfmrcxxhBA8ILqUQ",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 247,
         "title": "手部皮肤年轻化新选择：MDF 点阵激光对比传统调 Q 激光临床观察",
@@ -1299,6 +1443,62 @@
         "keywords": []
       }
     ],
+    "KEV美妆": [
+      {
+        "id": 388,
+        "title": "橘朵「迷你」系列限定彩妆；阿玛尼腮红棒；卡姿兰黑磁PINK限定；黛庄双拼腮红棒... | 新品速递",
+        "source": "KEV美妆",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/eiziiYKqS1d3dLDkO9OEXA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 238,
+        "title": "亚文化彩妆只能自嗨？连Nike都在蹭它的设计 | 全球视角",
+        "source": "KEV美妆",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/m6pcpTjuORgpnhGZwUxscw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 239,
+        "title": "The rare双色修容「腹肌盘」；雅诗兰黛果冻唇油；OOO×LINE FRIENDS联名系列... | 新品速递",
+        "source": "KEV美妆",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/52mlJtcVQTpdvqaZ69-lMA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 240,
+        "title": "自然堂「OK眼霜膜」；谷雨冰奶罐；娇韵诗双萃眼精华；理肤泉MELA B3系列新品... | 新品速递",
+        "source": "KEV美妆",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/zTwZz5g_8Y8AWc-_-3dCdA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 241,
+        "title": "高姿蜂巢修护面膜4.0；佰草集发光油；羽西鎏金氨基酸洁面乳... | 新品速递",
+        "source": "KEV美妆",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/Ueyp0Pj6F5w2z6jkpuzfGQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 332,
+        "title": "CLIO珂莱欧液体散粉；百雀羚美白盾粉霜气垫；蒂洛薇青花瓷非遗系列... | 新品速递",
+        "source": "KEV美妆",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/dAkA6f5Xpg-6IAwdrF6-PA",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "妆研24小时": [
       {
         "id": 372,
@@ -1346,53 +1546,6 @@
         "keywords": []
       }
     ],
-    "KEV美妆": [
-      {
-        "id": 238,
-        "title": "亚文化彩妆只能自嗨？连Nike都在蹭它的设计 | 全球视角",
-        "source": "KEV美妆",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/m6pcpTjuORgpnhGZwUxscw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 239,
-        "title": "The rare双色修容「腹肌盘」；雅诗兰黛果冻唇油；OOO×LINE FRIENDS联名系列... | 新品速递",
-        "source": "KEV美妆",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/52mlJtcVQTpdvqaZ69-lMA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 240,
-        "title": "自然堂「OK眼霜膜」；谷雨冰奶罐；娇韵诗双萃眼精华；理肤泉MELA B3系列新品... | 新品速递",
-        "source": "KEV美妆",
-        "publish_date": "2026-06-23",
-        "url": "https://mp.weixin.qq.com/s/zTwZz5g_8Y8AWc-_-3dCdA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 241,
-        "title": "高姿蜂巢修护面膜4.0；佰草集发光油；羽西鎏金氨基酸洁面乳... | 新品速递",
-        "source": "KEV美妆",
-        "publish_date": "2026-06-18",
-        "url": "https://mp.weixin.qq.com/s/Ueyp0Pj6F5w2z6jkpuzfGQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 332,
-        "title": "CLIO珂莱欧液体散粉；百雀羚美白盾粉霜气垫；蒂洛薇青花瓷非遗系列... | 新品速递",
-        "source": "KEV美妆",
-        "publish_date": "2026-06-16",
-        "url": "https://mp.weixin.qq.com/s/dAkA6f5Xpg-6IAwdrF6-PA",
-        "summary": "",
-        "keywords": []
-      }
-    ],
     "美业颜究院": [
       {
         "id": 242,
@@ -1411,6 +1564,24 @@
         "url": "https://mp.weixin.qq.com/s/qYc_zV9KnU3JKzHZGP7HEA",
         "summary": "",
         "keywords": []
+      },
+      {
+        "id": 389,
+        "title": "2026全球美业趋势创新大会定档！6月26，我们上海见！",
+        "source": "美业颜究院",
+        "publish_date": "2026-06-13",
+        "url": "https://mp.weixin.qq.com/s/BLcLvfqNUK_9XBvKdkdAGg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 390,
+        "title": "6月26全球美业趋势创新大会：发布跨越16年的《趋势之书》，LeapSeek AI开品加速器，高密度趋势论坛！",
+        "source": "美业颜究院",
+        "publish_date": "2026-06-12",
+        "url": "https://mp.weixin.qq.com/s/5sI7sBvpLxkTiYlD590mbg",
+        "summary": "",
+        "keywords": []
       }
     ],
     "上海日化协会": [
@@ -1420,6 +1591,33 @@
         "source": "上海日化协会",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/mPUjfCboGkyYbJKnmr85vw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 399,
+        "title": "枫华聚汇，香化产业找到了它的坐标",
+        "source": "上海日化协会",
+        "publish_date": "2026-06-12",
+        "url": "https://mp.weixin.qq.com/s/-OybNueOfWaKjaX9UGtWQA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 400,
+        "title": "包装，正在重新定义日化产业竞争力——2026中国日化包装创新论坛即将启幕",
+        "source": "上海日化协会",
+        "publish_date": "2026-06-08",
+        "url": "https://mp.weixin.qq.com/s/VJM4r00_DzvjAJibSRIGTA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 401,
+        "title": "当“能量”成为护肤品的高频宣称：一份团标的起点",
+        "source": "上海日化协会",
+        "publish_date": "2026-05-28",
+        "url": "https://mp.weixin.qq.com/s/eUFjh1Q1cYFLVJxCZm1GYw",
         "summary": "",
         "keywords": []
       }
