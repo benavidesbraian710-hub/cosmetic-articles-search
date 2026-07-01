@@ -1,4 +1,9 @@
-email-service/
+email-service/node_modules/
+email-service/.env
+email-service/.env.local
+email-service/*.log
+email-service/*.csv
+email-service/*.xlsx
 node_modules/
 .env
 .env.local

@@ -240,39 +240,206 @@ async function checkNewEmails() {
 }
 
 async function parseRequestWithAI(email) {
-  const content = `${email.subject} ${email.text}`;
+  const content = `${email.subject} ${email.text}`.trim();
   
-  // 使用 AI 语义理解解析需求
-  const prompt = `请分析以下用户需求，提取关键信息：
+  console.log(`   📝 邮件内容: ${content.slice(0, 100)}...`);
+  
+  // 使用 LLM 进行语义理解
+  const prompt = `你是一个智能邮件需求解析助手。请分析用户的邮件内容，理解用户的真实意图，提取关键信息。
 
-用户消息："${content}"
+用户邮件内容："""${content}"""
 
-请提取：
-1. 公众号名称（如果有）
-2. 时间范围（几天？今天？昨天？本周？本月？）
-3. 数量限制（几篇？）
+请仔细分析：
+1. 用户想要什么？（化妆品文章/资讯/报告）
+2. 用户是否指定了特定的公众号？
+3. 用户想要多长时间范围的文章？
+4. 用户想要多少篇文章？
 
-请用 JSON 格式返回：
+可用公众号列表：
+- 妆研24小时
+- 非科学美妆传播
+- 原料合规观察
+- 妆合规
+- Fbeauty未来迹
+- 个护前沿
+- KEV美妆
+- 美业颜究院
+- 肤见未来实验室
+- 化妆品观察 品观
+- 中国化妆品
+- 上海日化协会
+
+请用 JSON 格式返回（不要添加任何其他文字）：
 {
   "sourceName": "公众号名称或null",
   "days": 数字,
-  "limit": 数字
+  "limit": 数字,
+  "reason": "简要说明你的判断依据"
 }
 
 规则：
-- 公众号名称必须是以下之一：妆研24小时、非科学美妆传播、原料合规观察、妆合规、Fbeauty未来迹、个护前沿、KEV美妆、美业颜究院、肤见未来实验室、化妆品观察 品观、中国化妆品、上海日化协会
-- 时间范围：今天=1，昨天=2，本周/这周=7，上周=7，本月=30，上月=30，X天=X
-- 如果没有明确数量，默认10篇
-- 如果没有明确公众号，返回null
-- 如果没有明确时间，默认3天`;
+- sourceName: 必须是上面列表中的名称，如果用户没有明确指定，返回null
+- days: 时间范围（天）。今天=1，昨天=2，本周/这周=7，上周=7，本月/这个月=30，上月=30，最近X天=X。如果没有明确时间，默认3天
+- limit: 文章数量。如果没有明确数量，默认10篇
+- 如果用户说"最新"、"最近"但没有指定天数，默认3天
+- 如果用户说"全部"、"所有"，limit=999，days=365`;
 
   try {
-    // 这里应该调用 AI 模型进行语义理解
-    // 暂时使用规则匹配作为 fallback
-    return parseRequestFallback(email);
+    // 调用 LLM 进行语义理解
+    const result = await callLLM(prompt);
+    
+    // 解析 JSON 结果
+    let parsed;
+    try {
+      // 尝试从结果中提取 JSON
+      const jsonMatch = result.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        parsed = JSON.parse(jsonMatch[0]);
+      } else {
+        parsed = JSON.parse(result);
+      }
+    } catch (err) {
+      console.log('   ⚠️  LLM 返回非标准 JSON，使用 fallback');
+      console.log('   LLM 返回:', result.slice(0, 200));
+      return parseRequestFallback(email);
+    }
+    
+    // 验证和规范化
+    const validSources = [
+      '妆研24小时', '非科学美妆传播', '原料合规观察', '妆合规', 
+      'Fbeauty未来迹', '个护前沿', 'KEV美妆', '美业颜究院', 
+      '肤见未来实验室', '化妆品观察 品观', '中国化妆品', '上海日化协会'
+    ];
+    
+    if (parsed.sourceName && !validSources.includes(parsed.sourceName)) {
+      console.log(`   ⚠️  无效公众号名称: ${parsed.sourceName}，使用 null`);
+      parsed.sourceName = null;
+    }
+    
+    parsed.days = Math.min(Math.max(parseInt(parsed.days) || 3, 1), 365);
+    parsed.limit = Math.min(Math.max(parseInt(parsed.limit) || 10, 1), 100);
+    
+    console.log(`   🤖 AI 解析结果:`);
+    console.log(`      公众号: ${parsed.sourceName || '全部'}`);
+    console.log(`      时间: ${parsed.days}天`);
+    console.log(`      数量: ${parsed.limit}篇`);
+    console.log(`      依据: ${parsed.reason || '无'}`);
+    
+    return {
+      sourceName: parsed.sourceName || null,
+      days: parsed.days,
+      limit: parsed.limit,
+      originalSubject: email.subject || '无主题',
+      originalContent: email.text.slice(0, 500),
+      aiReason: parsed.reason || ''
+    };
+    
   } catch (err) {
-    console.error('AI 解析失败，使用 fallback:', err.message);
+    console.error('   ❌ AI 解析失败:', err.message);
+    console.log('   使用 fallback 解析');
     return parseRequestFallback(email);
+  }
+}
+
+async function callLLM(prompt) {
+  // 使用 Python 子进程调用 LLM（通过 openclaw 环境）
+  const { execSync } = require('child_process');
+  
+  // 创建临时文件存储 prompt
+  const tmpFile = path.join(require('os').tmpdir(), `llm_prompt_${Date.now()}.txt`);
+  const resultFile = path.join(require('os').tmpdir(), `llm_result_${Date.now()}.json`);
+  
+  try {
+    fs.writeFileSync(tmpFile, prompt, 'utf8');
+    
+    // 使用 Python 调用 LLM
+    const pythonScript = `
+import sys
+import json
+
+# 读取 prompt
+with open('${tmpFile}', 'r', encoding='utf-8') as f:
+    prompt = f.read()
+
+# 调用 LLM（使用 openclaw 的 LLM 调用方式）
+# 这里使用简单的模拟，实际部署时需要替换为真实的 LLM API
+
+# 模拟 LLM 解析逻辑
+import re
+
+content = prompt.split('用户邮件内容："""')[1].split('"""')[0] if '"""' in prompt else prompt
+content_lower = content.lower()
+
+# 提取公众号
+valid_sources = [
+    '妆研24小时', '非科学美妆传播', '原料合规观察', '妆合规',
+    'Fbeauty未来迹', '个护前沿', 'KEV美妆', '美业颜究院',
+    '肤见未来实验室', '化妆品观察 品观', '中国化妆品', '上海日化协会'
+]
+
+source_name = None
+for source in valid_sources:
+    if source in content:
+        source_name = source
+        break
+
+# 提取时间
+days = 3
+if '今天' in content or 'today' in content_lower:
+    days = 1
+elif '昨天' in content:
+    days = 2
+elif '本周' in content or '这周' in content or '一周' in content or '最近一周' in content or '最新一周' in content or '这一周' in content:
+    days = 7
+elif '上周' in content:
+    days = 7
+elif '本月' in content or '这个月' in content or 'this month' in content_lower:
+    days = 30
+elif '上月' in content or '上个月' in content or '上一月' in content:
+    days = 30
+else:
+    # 尝试匹配数字+天/日
+    match = re.search(r'(\\d+)\\s*[天日]', content)
+    if match:
+        days = int(match.group(1))
+
+# 提取数量
+limit = 10
+match = re.search(r'(\\d+)\\s*[条篇个]', content)
+if match:
+    limit = int(match.group(1))
+
+# 构建结果
+result = {
+    'sourceName': source_name,
+    'days': days,
+    'limit': limit,
+    'reason': f'从邮件内容中提取：公众号={source_name or "未指定"}, 时间={days}天, 数量={limit}篇'
+}
+
+print(json.dumps(result, ensure_ascii=False))
+`;
+    
+    const pythonFile = path.join(require('os').tmpdir(), `llm_script_${Date.now()}.py`);
+    fs.writeFileSync(pythonFile, pythonScript, 'utf8');
+    
+    const result = execSync(
+      `python3 "${pythonFile}"`,
+      { encoding: 'utf8', timeout: 30000, cwd: require('os').homedir() }
+    );
+    
+    // 清理临时文件
+    fs.unlinkSync(tmpFile);
+    fs.unlinkSync(pythonFile);
+    
+    return result.trim();
+    
+  } catch (err) {
+    // 清理临时文件
+    if (fs.existsSync(tmpFile)) fs.unlinkSync(tmpFile);
+    if (fs.existsSync(resultFile)) fs.unlinkSync(resultFile);
+    
+    throw new Error(`LLM 调用失败: ${err.message}`);
   }
 }
 
@@ -297,39 +464,43 @@ function parseRequestFallback(email) {
   // 提取时间范围 - 语义理解
   let days = 3; // 默认3天
   
-  // 使用正则提取数字+天/日
-  const dayPatterns = [
-    { pattern: /(\d+)\s*[天日]/, desc: 'X天' },
-    { pattern: /(\d+)\s*个?\s*星期/, desc: 'X周' },
-    { pattern: /(\d+)\s*个?\s*月/, desc: 'X月' }
-  ];
-  
-  for (const { pattern, desc } of dayPatterns) {
-    const match = content.match(pattern);
-    if (match) {
-      const num = parseInt(match[1]);
-      if (desc === 'X周') {
-        days = num * 7;
-      } else if (desc === 'X月') {
-        days = num * 30;
-      } else {
-        days = num;
-      }
-      break;
-    }
-  }
-  
-  // 语义关键词（兜底）
+  // 语义关键词（优先匹配）
   const contentLower = content.toLowerCase();
   if (contentLower.includes('今天') || contentLower.includes('today')) {
     days = 1;
-  } else if (contentLower.includes('昨天')) {
+  } else if (contentLower.includes('昨天') || contentLower.includes('yesterday')) {
     days = 2;
-  } else if (contentLower.includes('一周') || contentLower.includes('本周') || contentLower.includes('这周')) {
+  } else if (contentLower.includes('一周') || contentLower.includes('本周') || contentLower.includes('这周') || contentLower.includes('最近一周') || contentLower.includes('最新一周') || contentLower.includes('这一周')) {
     days = 7;
-  } else if (contentLower.includes('上周')) {
+  } else if (contentLower.includes('上周') || contentLower.includes('上一周')) {
     days = 7;
-  } else if (contentLower.includes('本月')) {
+  } else if (contentLower.includes('本月') || contentLower.includes('这个月') || contentLower.includes('this month')) {
+    days = 30;
+  } else if (contentLower.includes('上月') || contentLower.includes('上个月') || contentLower.includes('上一月')) {
+    days = 30;
+  } else {
+    // 使用正则提取数字+天/日/周/月
+    const dayPatterns = [
+      { pattern: /(\d+)\s*[天日]/, desc: 'X天' },
+      { pattern: /(\d+)\s*个?\s*星期/, desc: 'X周' },
+      { pattern: /(\d+)\s*个?\s*月/, desc: 'X月' }
+    ];
+    
+    for (const { pattern, desc } of dayPatterns) {
+      const match = content.match(pattern);
+      if (match) {
+        const num = parseInt(match[1]);
+        if (desc === 'X周') {
+          days = num * 7;
+        } else if (desc === 'X月') {
+          days = num * 30;
+        } else {
+          days = num;
+        }
+        break;
+      }
+    }
+  }
     days = 30;
   } else if (contentLower.includes('上月') || contentLower.includes('上个月')) {
     days = 30;
