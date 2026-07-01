@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 171,
+    "total_articles": 172,
     "source_count": 12,
     "date_range": {
       "start": "2026-05-28",
       "end": "2026-07-01"
     },
-    "last_update": "2026-07-01T12:11:43.932995"
+    "last_update": "2026-07-01T12:47:26.700774"
   },
   "sources": [
     {
@@ -31,7 +31,7 @@
     },
     {
       "name": "妆合规",
-      "count": 14
+      "count": 15
     },
     {
       "name": "肤见未来实验室",
@@ -1219,6 +1219,15 @@
         "source": "妆合规",
         "publish_date": "2026-06-15",
         "url": "https://mp.weixin.qq.com/s/CnbNdyIcxgi3mSZnqDBsdw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 402,
+        "title": "CosReg接入DeepSeek V4，化妆品法规AI助手再升级！【小程序免费使用】",
+        "source": "妆合规",
+        "publish_date": "2026-06-11",
+        "url": "https://mp.weixin.qq.com/s/ql20Dr7pYFtP7E2f0guHHA",
         "summary": "",
         "keywords": []
       }
