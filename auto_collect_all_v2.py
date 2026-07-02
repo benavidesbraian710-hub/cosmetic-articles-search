@@ -46,56 +46,74 @@ EXPORT_PATH = Path.home() / ".openclaw/workspace/cosmetic-deploy/export_data.py"
 GIT_PATH = Path.home() / ".openclaw/workspace/cosmetic-deploy"
 
 
-def collect_links(account: str, count: int = 4) -> list:
-    """采集文章链接，返回链接列表"""
+def collect_links_batch(count_per_account: int = 4) -> dict:
+    """批量采集所有公众号文章链接，返回 {公众号: [链接列表]}"""
     print(f"\n{'='*60}")
-    print(f"采集: {account} ({count}篇)")
+    print(f"批量采集 {len(ACCOUNTS)} 个公众号")
     print('='*60)
     
-    # 直接调用Skill采集（不激活微信，假设已手动启动）
-    print("调用Skill采集...")
+    # 构建批量采集任务
+    tasks = []
+    for account in ACCOUNTS:
+        tasks.append({"account": account, "count": count_per_account})
     
-    # 运行采集器（切换到Skill目录执行）
+    # 运行采集器（批量采集所有公众号）
     cmd = [
         "python3", "-u", str(COLLECTOR_PATH),
-        json.dumps({"tasks": [{"account": account, "count": count}], "skip_csv": True})
+        json.dumps({"tasks": tasks, "skip_csv": True})
     ]
     
-    print(f"  执行命令: {' '.join(cmd[:2])} ...")
+    print(f"批量采集 {len(tasks)} 个公众号...")
     
     try:
-        # 切换到Skill所在目录执行（确保依赖文件路径正确）
         result = subprocess.run(
             cmd,
             capture_output=True,
             text=True,
-            timeout=300,  # 增加到5分钟超时
-            cwd=str(COLLECTOR_PATH.parent)  # 切换到collect.py所在目录
+            timeout=600,  # 10分钟超时（批量采集需要更长时间）
+            cwd=str(COLLECTOR_PATH.parent)
         )
         
-        print(f"  Skill返回码: {result.returncode}")
+        print(f"Skill返回码: {result.returncode}")
         
-        # 从输出中提取链接
-        links = []
+        # 从JSON输出中提取结果
+        # 查找JSON结果部分
+        json_start = result.stdout.find('{')
+        json_end = result.stdout.rfind('}')
+        
+        if json_start != -1 and json_end != -1:
+            json_str = result.stdout[json_start:json_end+1]
+            try:
+                all_links = json.loads(json_str)
+                print(f"✅ 批量采集完成，共 {len(all_links)} 个公众号")
+                return all_links
+            except json.JSONDecodeError:
+                print("❌ JSON解析失败")
+        
+        # 如果从JSON提取失败，从文本中提取
+        all_links = {}
+        current_account = None
         for line in result.stdout.split('\n'):
-            if line.startswith('✅ 链接: '):
-                link = line.replace('✅ 链接: ', '').strip()
-                links.append(link)
-                print(f"  获取链接: {link}")
+            if '✅ 链接:' in line:
+                link = line.replace('✅ 链接:', '').strip()
+                if current_account and link:
+                    all_links[current_account].append(link)
+            elif '采集:' in line:
+                # 提取公众号名称
+                match = re.search(r'采集:\s*(.+?)\s*\(', line)
+                if match:
+                    current_account = match.group(1).strip()
+                    all_links[current_account] = []
         
-        # 如果有错误输出，打印出来
-        if result.stderr:
-            print(f"  Skill错误: {result.stderr[:500]}")
-        
-        print(f"  获取 {len(links)} 个链接")
-        return links
+        print(f"✅ 批量采集完成，共 {len(all_links)} 个公众号")
+        return all_links
         
     except subprocess.TimeoutExpired:
-        print(f"⚠️  采集超时: {account}")
-        return []
+        print(f"⚠️  批量采集超时")
+        return {}
     except Exception as e:
-        print(f"❌ 采集失败: {account} - {e}")
-        return []
+        print(f"❌ 批量采集失败: {e}")
+        return {}
 
 
 def fetch_article_info(url: str) -> dict:
@@ -208,22 +226,30 @@ def main():
     print(f"共 {len(ACCOUNTS)} 个公众号")
     print("="*60)
     
+    # 1. 批量采集所有公众号链接
+    print("\n开始批量采集...")
+    all_links = collect_links_batch(4)
+    
+    if not all_links:
+        print("❌ 批量采集失败")
+        return
+    
+    # 2. 逐个处理每个公众号的文章
     total_added = 0
     total_skipped = 0
     failed_accounts = []
     
     for i, account in enumerate(ACCOUNTS, 1):
-        print(f"\n\n[{i}/{len(ACCOUNTS)}] 开始采集: {account}")
+        print(f"\n\n[{i}/{len(ACCOUNTS)}] 处理: {account}")
         
-        # 1. 采集链接
-        links = collect_links(account, 4)
+        links = all_links.get(account, [])
         
         if not links:
             failed_accounts.append(account)
             print(f"❌ {account}: 未获取到链接")
             continue
         
-        # 2. 抓取文章信息
+        # 抓取文章信息
         print(f"  抓取 {len(links)} 篇文章信息...")
         articles = []
         for url in links:
@@ -232,7 +258,7 @@ def main():
                 articles.append(info)
             time.sleep(0.5)
         
-        # 3. 入库
+        # 入库
         added = save_to_db(articles, account)
         total_added += added
         total_skipped += len(articles) - added
@@ -244,7 +270,7 @@ def main():
             print(f"等待 3 秒...")
             time.sleep(3)
     
-    # 4. 导出和推送
+    # 3. 导出和推送
     export_and_push()
     
     # 总结
