@@ -129,6 +129,17 @@ def get_clipboard() -> str:
 
 def activate_wechat():
     """激活微信窗口到最前台"""
+    # 先检查微信是否正在运行
+    result = subprocess.run([
+        'osascript', '-e',
+        'tell application "System Events" to return (name of processes) contains "WeChat"'
+    ], capture_output=True, text=True)
+    
+    if 'false' in result.stdout.lower():
+        print("  微信未运行，正在启动...")
+        subprocess.run(['open', '-a', 'WeChat'], capture_output=True)
+        time.sleep(3)
+    
     # 使用 osascript 激活（不会启动新实例）
     subprocess.run([
         'osascript', '-e',
