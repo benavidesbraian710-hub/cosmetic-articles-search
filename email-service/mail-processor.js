@@ -496,114 +496,39 @@ async function parseRequestWithAI(email) {
   }
 }
 
+// 调用 OpenClaw 大模型进行真正的语义理解
 async function callLLM(prompt) {
-  // 使用 Python 子进程调用 LLM（通过 openclaw 环境）
-  const { execSync } = require('child_process');
-  
-  // 创建临时文件存储 prompt
-  const tmpFile = path.join(require('os').tmpdir(), `llm_prompt_${Date.now()}.txt`);
-  const resultFile = path.join(require('os').tmpdir(), `llm_result_${Date.now()}.json`);
-  
   try {
+    const { execSync } = require('child_process');
+    
+    // 使用 openclaw infer model run 调用 Kimi K2.6
+    // 将 prompt 写入临时文件
+    const tmpFile = path.join(require('os').tmpdir(), `llm_prompt_${Date.now()}.txt`);
     fs.writeFileSync(tmpFile, prompt, 'utf8');
     
-    // 使用 Python 调用 LLM
-    const pythonScript = `
-import sys
-import json
-
-# 读取 prompt
-with open('${tmpFile}', 'r', encoding='utf-8') as f:
-    prompt = f.read()
-
-# 调用 LLM（使用 openclaw 的 LLM 调用方式）
-# 这里使用简单的模拟，实际部署时需要替换为真实的 LLM API
-
-# 模拟 LLM 解析逻辑
-import re
-
-content = prompt.split('用户邮件内容："""')[1].split('"""')[0] if '"""' in prompt else prompt
-content_lower = content.lower()
-
-# 提取公众号
-valid_sources = [
-    '妆研24小时', '非科学美妆传播', '原料合规观察', '妆合规',
-    'Fbeauty未来迹', '个护前沿', 'KEV美妆', '美业颜究院',
-    '肤见未来实验室', '化妆品观察 品观', '中国化妆品', '上海日化协会'
-]
-
-source_name = None
-for source in valid_sources:
-    if source in content:
-        source_name = source
-        break
-
-# 提取时间
-days = None  # 默认不限制时间
-if '今天' in content or 'today' in content_lower:
-    days = 1
-elif '昨天' in content:
-    days = 2
-elif '本周' in content or '这周' in content or '最近一周' in content or '这一周' in content:
-    days = 7
-elif '上周' in content:
-    days = 7
-elif '本月' in content or '这个月' in content or 'this month' in content_lower:
-    days = 30
-elif '上月' in content or '上个月' in content or '上一月' in content:
-    days = 30
-else:
-    # 尝试匹配数字+天/日
-    match = re.search(r'(\d+)\s*[天日]', content)
-    if match:
-        days = int(match.group(1))
-
-# 提取数量
-limit = 10
-match = re.search(r'(\d+)\s*[条篇个]', content)
-if match:
-    limit = int(match.group(1))
-
-# 中文数字
-chinese_num = {
-    '一': 1, '二': 2, '三': 3, '四': 4, '五': 5,
-    '六': 6, '七': 7, '八': 8, '九': 9, '十': 10
-}
-chinese_match = re.search(r'([一二三四五六七八九十]+)\s*[条篇]', content)
-if chinese_match and chinese_match.group(1) in chinese_num:
-    limit = chinese_num[chinese_match.group(1)]
-
-# 构建结果
-result = {
-    'sourceName': source_name,
-    'days': days,
-    'limit': limit,
-    'reason': f'从邮件内容中提取：公众号={source_name or "未指定"}, 时间={days or "不限制"}, 数量={limit}篇'
-}
-
-print(json.dumps(result, ensure_ascii=False))
-`;
+    // 读取文件内容作为参数传递
+    const promptContent = fs.readFileSync(tmpFile, 'utf8');
     
-    const pythonFile = path.join(require('os').tmpdir(), `llm_script_${Date.now()}.py`);
-    fs.writeFileSync(pythonFile, pythonScript, 'utf8');
+    // 使用 --prompt 参数（注意转义）
+    const escapedPrompt = promptContent.replace(/"/g, '\\"').replace(/\n/g, '\\n');
+    const cmd = `openclaw infer model run --prompt "${escapedPrompt}" --model kimi-k2.6`;
     
-    const result = execSync(
-      `python3 "${pythonFile}"`,
-      { encoding: 'utf8', timeout: 30000, cwd: require('os').homedir() }
-    );
+    console.log('   🤖 调用大模型分析用户意图...');
+    
+    const result = execSync(cmd, { 
+      encoding: 'utf8', 
+      timeout: 60000,  // 60秒超时
+      maxBuffer: 1024 * 1024,
+      cwd: require('os').homedir()
+    });
     
     // 清理临时文件
     fs.unlinkSync(tmpFile);
-    fs.unlinkSync(pythonFile);
     
     return result.trim();
-    
   } catch (err) {
-    // 清理临时文件
-    if (fs.existsSync(tmpFile)) fs.unlinkSync(tmpFile);
-    if (fs.existsSync(resultFile)) fs.unlinkSync(resultFile);
-    
-    throw new Error(`LLM 调用失败: ${err.message}`);
+    console.error('❌ 大模型调用失败:', err.message);
+    throw err;
   }
 }
 
