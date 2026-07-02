@@ -493,23 +493,40 @@ def main():
         # 激活微信
         activate_wechat()
         
-        # 搜索并进入公众号
+        # 执行采集任务
+        task = {
+            'account': account,
+            'keyword': '',
+            'count': count
+        }
+        
+        # 使用execute_task的逻辑
+        # 1. 导航到公众号
         if not navigate_to_account(account):
             print(f"❌ 搜索失败: {account}")
             all_results[account] = []
             continue
         
-        # 获取文章链接
-        links = get_article_links(count)
+        # 2. 设置筛选
+        setup_filters(account)
+        
+        # 3. 获取文章链接
+        links = []
+        for j in range(count):
+            link = get_article(j, account)
+            if link and link.startswith('http'):
+                links.append(link)
+                print(f"  ✅ 链接: {link}")
+            else:
+                print(f"  ⚠️  第 {j+1} 篇文章链接获取失败，跳过")
+        
         all_results[account] = links
         
         print(f"✅ 完成: {account} - 获取 {len(links)} 个链接")
-        for link in links:
-            print(f"  ✅ 链接: {link}")
         
-        # 关闭当前公众号窗口，准备下一个
+        # 4. 关闭窗口，准备下一个
         if i < len(tasks) - 1:
-            close_account_page()
+            close_windows()
             time.sleep(1)
     
     # 导出 CSV（除非 skip_csv=True）
