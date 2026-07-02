@@ -52,6 +52,11 @@ def collect_links(account: str, count: int = 4) -> list:
     print(f"调用Skill采集: {account} ({count}篇)")
     print('='*60)
     
+    # 先激活微信（确保微信在前台）
+    print("  激活微信...")
+    subprocess.run(['open', '-a', 'WeChat'], capture_output=True)
+    time.sleep(2)
+    
     # 调用Skill采集（Skill内部会处理微信激活）
     cmd = [
         "python3", str(COLLECTOR_PATH),
