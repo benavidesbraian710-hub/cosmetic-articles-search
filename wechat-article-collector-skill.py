@@ -168,6 +168,7 @@ def navigate_to_account(account_name: str):
     time.sleep(1)
     
     print("✅ 进入账号界面")
+    return True  # 返回成功
 
 
 def setup_filters(account_name: str = ""):
