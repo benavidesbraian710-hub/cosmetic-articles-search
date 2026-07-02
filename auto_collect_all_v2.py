@@ -66,23 +66,37 @@ def collect_links_batch(count_per_account: int = 4) -> dict:
     print(f"批量采集 {len(tasks)} 个公众号...")
     
     try:
-        result = subprocess.run(
+        # 使用Popen实时读取输出，避免缓冲
+        process = subprocess.Popen(
             cmd,
-            capture_output=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             text=True,
-            timeout=600,  # 10分钟超时（批量采集需要更长时间）
+            bufsize=1,
             cwd=str(COLLECTOR_PATH.parent)
         )
         
-        print(f"Skill返回码: {result.returncode}")
+        print("Skill启动成功，等待输出...")
         
-        # 从JSON输出中提取结果
-        # 查找JSON结果部分
-        json_start = result.stdout.find('{')
-        json_end = result.stdout.rfind('}')
+        # 实时读取stdout
+        stdout_lines = []
+        for line in process.stdout:
+            line = line.strip()
+            stdout_lines.append(line)
+            print(f"  [Skill] {line[:100]}")
+        
+        # 等待进程完成
+        process.wait(timeout=600)
+        
+        print(f"Skill返回码: {process.returncode}")
+        
+        # 从输出中提取JSON
+        stdout_text = '\n'.join(stdout_lines)
+        json_start = stdout_text.find('{')
+        json_end = stdout_text.rfind('}')
         
         if json_start != -1 and json_end != -1:
-            json_str = result.stdout[json_start:json_end+1]
+            json_str = stdout_text[json_start:json_end+1]
             try:
                 all_links = json.loads(json_str)
                 print(f"✅ 批量采集完成，共 {len(all_links)} 个公众号")
@@ -90,16 +104,15 @@ def collect_links_batch(count_per_account: int = 4) -> dict:
             except json.JSONDecodeError:
                 print("❌ JSON解析失败")
         
-        # 如果从JSON提取失败，从文本中提取
+        # 从文本中提取
         all_links = {}
         current_account = None
-        for line in result.stdout.split('\n'):
+        for line in stdout_lines:
             if '✅ 链接:' in line:
                 link = line.replace('✅ 链接:', '').strip()
                 if current_account and link:
                     all_links[current_account].append(link)
             elif '采集:' in line:
-                # 提取公众号名称
                 match = re.search(r'采集:\s*(.+?)\s*\(', line)
                 if match:
                     current_account = match.group(1).strip()
@@ -110,6 +123,7 @@ def collect_links_batch(count_per_account: int = 4) -> dict:
         
     except subprocess.TimeoutExpired:
         print(f"⚠️  批量采集超时")
+        process.kill()
         return {}
     except Exception as e:
         print(f"❌ 批量采集失败: {e}")
