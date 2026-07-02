@@ -57,27 +57,40 @@ def collect_links(account: str, count: int = 4) -> list:
     subprocess.run(['open', '-a', 'WeChat'], capture_output=True)
     time.sleep(2)
     
-    # 调用Skill采集（Skill内部会处理微信激活）
+    # 调用Skill采集（使用 Popen 实时读取输出）
     cmd = [
-        "python3", str(COLLECTOR_PATH),
+        "python3", "-u", str(COLLECTOR_PATH),  # -u 表示无缓冲输出
         json.dumps({"tasks": [{"account": account, "count": count}], "skip_csv": True})
     ]
     
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        # 使用 Popen 实时读取输出，避免缓冲导致卡住
+        process = subprocess.Popen(
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            bufsize=1  # 行缓冲
+        )
         
-        # 从输出中提取链接
         links = []
-        for line in result.stdout.split('\n'):
+        # 实时读取输出
+        for line in process.stdout:
+            line = line.strip()
             if line.startswith('✅ 链接: '):
                 link = line.replace('✅ 链接: ', '').strip()
                 links.append(link)
+                print(f"  获取链接: {link}")
+        
+        # 等待进程完成
+        process.wait(timeout=120)
         
         print(f"  Skill返回 {len(links)} 个链接")
         return links
         
     except subprocess.TimeoutExpired:
         print(f"⚠️  Skill采集超时: {account}")
+        process.kill()
         return []
     except Exception as e:
         print(f"❌ Skill调用失败: {account} - {e}")
