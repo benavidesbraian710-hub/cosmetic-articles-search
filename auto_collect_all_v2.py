@@ -55,40 +55,32 @@ def collect_links(account: str, count: int = 4) -> list:
     # 直接调用Skill采集（不激活微信，假设已手动启动）
     print("调用Skill采集...")
     
-    # 运行采集器（使用Popen实时读取，避免缓冲死锁）
+    # 运行采集器（使用subprocess.run简化）
     cmd = [
         "python3", "-u", str(COLLECTOR_PATH),  # -u 禁用缓冲
         json.dumps({"tasks": [{"account": account, "count": count}], "skip_csv": True})
     ]
     
     try:
-        # 使用Popen实时读取输出
-        process = subprocess.Popen(
-            cmd,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            bufsize=1  # 行缓冲
-        )
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
         
+        # 从输出中提取链接
         links = []
-        # 实时读取stdout
-        for line in process.stdout:
-            line = line.strip()
+        for line in result.stdout.split('\n'):
             if line.startswith('✅ 链接: '):
                 link = line.replace('✅ 链接: ', '').strip()
                 links.append(link)
                 print(f"  获取链接: {link}")
         
-        # 等待进程完成
-        process.wait(timeout=120)
+        # 如果有错误输出，打印出来
+        if result.stderr:
+            print(f"  Skill错误: {result.stderr[:200]}")
         
         print(f"  获取 {len(links)} 个链接")
         return links
         
     except subprocess.TimeoutExpired:
         print(f"⚠️  采集超时: {account}")
-        process.kill()
         return []
     except Exception as e:
         print(f"❌ 采集失败: {account} - {e}")
