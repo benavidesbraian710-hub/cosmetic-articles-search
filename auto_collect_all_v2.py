@@ -52,9 +52,12 @@ def collect_links(account: str, count: int = 4) -> list:
     print(f"采集: {account} ({count}篇)")
     print('='*60)
     
-    # 激活微信窗口（使用open -a WeChat，坐标已修复不需要反复激活）
+    # 激活微信窗口（使用osascript，不启动新实例）
     print("激活微信窗口...")
-    subprocess.run(['open', '-a', 'WeChat'], capture_output=True)
+    subprocess.run([
+        'osascript', '-e',
+        'tell application "WeChat" to activate'
+    ], capture_output=True)
     time.sleep(2)
     print("  ✅ 微信已激活")
     
