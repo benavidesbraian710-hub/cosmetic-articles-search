@@ -129,14 +129,18 @@ def get_clipboard() -> str:
 
 def activate_wechat():
     """激活微信窗口到最前台"""
-    # 使用 open -a WeChat 激活（Nick确认有效）
-    subprocess.run(['open', '-a', 'WeChat'], capture_output=True)
+    # 先尝试osascript激活
+    result = subprocess.run([
+        'osascript', '-e',
+        'tell application "WeChat" to activate'
+    ], capture_output=True, text=True)
+    
+    if result.returncode != 0 or 'error' in result.stderr.lower():
+        # osascript失败，使用open激活
+        subprocess.run(['open', '-a', 'WeChat'], capture_output=True)
+    
     time.sleep(2)
     print("  ✅ 微信已激活")
-    subprocess.run([
-        'osascript', '-e',
-        'tell application "System Events" to tell process "WeChat" to click at {100, 100}'
-    ], capture_output=True)
     
     time.sleep(0.5)
 
