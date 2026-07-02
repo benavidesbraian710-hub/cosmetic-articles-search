@@ -288,7 +288,73 @@ function getArticlesBySourceAndDate(sourceName, days, limit = 10) {
   });
 }
 
-async function checkNewEmails() {
+// 检查公众号是否存在于数据库中
+function checkSourceExists(sourceName) {
+  return new Promise((resolve, reject) => {
+    if (!db) {
+      reject(new Error('数据库未连接'));
+      return;
+    }
+    
+    const sql = `SELECT COUNT(*) as count FROM articles WHERE wechat_name = ?`;
+    db.get(sql, [sourceName], (err, row) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(row.count > 0);
+      }
+    });
+  });
+}
+
+// 获取公众号统计信息
+function getSourceStats(sourceName) {
+  return new Promise((resolve, reject) => {
+    if (!db) {
+      reject(new Error('数据库未连接'));
+      return;
+    }
+    
+    const sql = `
+      SELECT 
+        COUNT(*) as total,
+        MAX(publish_date) as latest_date,
+        MIN(publish_date) as earliest_date
+      FROM articles 
+      WHERE wechat_name = ?
+    `;
+    db.get(sql, [sourceName], (err, row) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve({
+          total: row.total || 0,
+          latestDate: row.latest_date,
+          earliestDate: row.earliest_date
+        });
+      }
+    });
+  });
+}
+
+// 获取所有已采集的公众号列表
+function getAllSources() {
+  return new Promise((resolve, reject) => {
+    if (!db) {
+      reject(new Error('数据库未连接'));
+      return;
+    }
+    
+    const sql = `SELECT DISTINCT wechat_name FROM articles ORDER BY wechat_name`;
+    db.all(sql, [], (err, rows) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(rows.map(r => r.wechat_name));
+      }
+    });
+  });
+}
   const client = new ImapFlow({
     host: CONFIG.imap.host,
     port: CONFIG.imap.port,
@@ -759,9 +825,27 @@ async function processEmail(email) {
   
   // 从数据库获取文章
   let allArticles = [];
+  let sourceNotFound = false;  // 标记公众号是否不存在
+  let sourceStats = null;      // 公众号统计信息
+  
   try {
     console.log('');
     console.log('   🔍 批量查询数据库...');
+    
+    // 检查每个请求的公众号是否存在
+    for (const request of requests) {
+      if (request.sourceName) {
+        const exists = await checkSourceExists(request.sourceName);
+        if (!exists) {
+          sourceNotFound = true;
+          console.log(`   ⚠️  公众号【${request.sourceName}】不在采集范围内`);
+        } else {
+          // 获取公众号统计信息（用于情况2）
+          sourceStats = await getSourceStats(request.sourceName);
+        }
+      }
+    }
+    
     allArticles = await getArticlesBatch(requests);
     console.log(`   ✅ 共找到 ${allArticles.length} 篇文章`);
   } catch (err) {
@@ -781,32 +865,50 @@ async function processEmail(email) {
   }
   
   // 构建回复内容
-  let articleList = '';
-  if (allArticles.length > 0) {
-    articleList = '\n\n精选文章：\n';
+  let replyBody = '';
+  
+  if (sourceNotFound) {
+    // 情况1：公众号不在数据库中
+    const allSources = await getAllSources();
+    const sourceList = allSources.map(s => `• ${s}`).join('\n');
+    
+    replyBody = `您好！\n\n您查询的【${requests[0].sourceName}】不在当前采集范围内。\n\n当前已采集的公众号包括：\n${sourceList}\n\n如需扩展采集范围，请联系开发者添加该公众号。\n\n---\n搜搜 (Sōusou) - 您的化妆品信息猎犬 🔍\n处理时间：${new Date().toLocaleString('zh-CN')}\n`;
+  } else if (allArticles.length === 0) {
+    // 情况2：时间范围内没有文章
+    let statsInfo = '';
+    if (sourceStats && sourceStats.total > 0) {
+      statsInfo = `\n\n该公众号数据库中共有 ${sourceStats.total} 篇文章，最新一篇是 ${sourceStats.latestDate}。\n如需查询其他时间范围，请回复邮件说明。`;
+    }
+    
+    replyBody = `您好！\n\n您查询的【${requests[0].sourceName || '全部公众号'}】${requests[0].days ? '最近 ' + requests[0].days + ' 天' : ''}没有文章。${statsInfo}\n\n---\n搜搜 (Sōusou) - 您的化妆品信息猎犬 🔍\n处理时间：${new Date().toLocaleString('zh-CN')}\n`;
+  } else {
+    // 正常情况：有文章
+    let articleList = '\n\n精选文章：\n';
     allArticles.forEach((article, i) => {
       articleList += `${i + 1}. ${article.title}\n`;
       articleList += `   来源: ${article.source} | 时间: ${article.publish_date}\n`;
       articleList += `   链接: ${article.url}\n\n`;
     });
-  } else {
-    articleList = '\n\n未找到符合条件的文章。\n';
+    
+    // 构建查询摘要
+    let querySummary = '';
+    requests.forEach((req, i) => {
+      const timeText = req.days ? `最近 ${req.days} 天` : '全部时间';
+      querySummary += `- 公众号：${req.sourceName || '全部'} | 时间：${timeText} | 数量：${req.limit} 篇\n`;
+    });
+    
+    replyBody = `您好！\n\n收到您的需求：${email.subject || '无主题'}\n\n已为您查询化妆品数据库：\n${querySummary}\n共找到 ${allArticles.length} 篇文章。${articleList}\n详细结果请查看附件中的 Excel 文件。\n\n---\n搜搜 (Sōusou) - 您的化妆品信息猎犬 🔍\n处理时间：${new Date().toLocaleString('zh-CN')}\n数据库文章总数：147 篇\n`;
   }
-  
-  // 构建查询摘要
-  let querySummary = '';
-  requests.forEach((req, i) => {
-    const timeText = req.days ? `最近 ${req.days} 天` : '全部时间';
-    querySummary += `- 公众号：${req.sourceName || '全部'} | 时间：${timeText} | 数量：${req.limit} 篇\n`;
-  });
-  
-  const replyBody = `您好！\n\n收到您的需求：${email.subject || '无主题'}\n\n已为您查询化妆品数据库：\n${querySummary}\n共找到 ${allArticles.length} 篇文章。\n${articleList}\n详细结果请查看附件中的 Excel 文件。\n\n---\n搜搜 (Sōusou) - 您的化妆品信息猎犬 🔍\n处理时间：${new Date().toLocaleString('zh-CN')}\n数据库文章总数：147 篇\n`;
   
   // 提取邮箱地址
   const toAddr = email.fromEmail || email.from;
   
-  // 发送回复
-  await sendReply(toAddr, email.subject || '化妆品文章搜索', replyBody, excelPath);
+  // 发送回复（只有正常情况才带 Excel 附件）
+  if (sourceNotFound || allArticles.length === 0) {
+    await sendReply(toAddr, email.subject || '化妆品文章搜索', replyBody, null);
+  } else {
+    await sendReply(toAddr, email.subject || '化妆品文章搜索', replyBody, excelPath);
+  }
   
   // 标记已读
   await markAsRead(email.uid);
