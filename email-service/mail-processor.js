@@ -1006,8 +1006,60 @@ async function processEmail(email) {
     console.error(`   ❌ Excel 生成失败:`, err.message);
   }
   
-  // 构建回复内容
-  let replyBody = '';
+  // 检查是否是请求模板的邮件
+  const isTemplateRequest = email.subject.toLowerCase().includes('模板') || 
+                             email.subject.toLowerCase().includes('示例') ||
+                             email.subject.toLowerCase().includes('怎么发') ||
+                             email.text.toLowerCase().includes('模板') ||
+                             email.text.toLowerCase().includes('示例') ||
+                             email.text.toLowerCase().includes('怎么发');
+  
+  if (isTemplateRequest) {
+    // 发送模板示例
+    const templatePath = path.join(__dirname, 'template_example.csv');
+    const templateContent = fs.readFileSync(templatePath, 'utf8');
+    
+    const replyBody = `您好！
+
+感谢您使用化妆品文章检索服务！
+
+为了更准确地理解您的需求，请使用以下 Excel/CSV 模板格式：
+
+【模板说明】
+• 第一列：公众号名称（如：妆研24小时、原料合规观察）
+• 第二列：时间范围（支持多种格式）
+
+【时间范围格式示例】
+• 文字描述：最近7天、最近一个月、最近3天
+• 具体日期：2026-06-01 到 2026-06-30
+• 简化格式：2026-06-01 ~ 2026-06-30
+
+【已采集公众号列表】
+• 妆研24小时
+• 非科学美妆传播
+• 原料合规观察
+• 妆合规
+• Fbeauty未来迹
+• 个护前沿
+• KEV美妆
+• 美业颜究院
+• 肤见未来实验室
+• 化妆品观察 品观
+• 中国化妆品
+• 上海日化协会
+
+附件为示例模板，您可以直接下载使用。
+
+---
+搜搜 (Sōusou) - 您的化妆品信息猎犬 🔍
+处理时间：${new Date().toLocaleString('zh-CN')}
+`;
+
+    await sendReply(toAddr, 'Re: ' + email.subject, replyBody, templatePath);
+    await markAsRead(email.uid);
+    console.log('   ✅ 已发送模板示例');
+    return;
+  }
   
   if (sourceNotFound) {
     // 情况1：公众号不在数据库中 → 使用大模型生成回复
