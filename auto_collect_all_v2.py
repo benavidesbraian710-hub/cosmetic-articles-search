@@ -55,14 +55,21 @@ def collect_links(account: str, count: int = 4) -> list:
     # 直接调用Skill采集（不激活微信，假设已手动启动）
     print("调用Skill采集...")
     
-    # 运行采集器（使用subprocess.run简化）
+    # 运行采集器（切换到Skill目录执行）
     cmd = [
-        "python3", "-u", str(COLLECTOR_PATH),  # -u 禁用缓冲
+        "python3", "-u", str(COLLECTOR_PATH),
         json.dumps({"tasks": [{"account": account, "count": count}], "skip_csv": True})
     ]
     
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        # 切换到Skill所在目录执行（确保依赖文件路径正确）
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            timeout=120,
+            cwd=str(COLLECTOR_PATH.parent)  # 切换到collect.py所在目录
+        )
         
         # 从输出中提取链接
         links = []
