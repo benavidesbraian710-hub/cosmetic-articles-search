@@ -47,12 +47,12 @@ GIT_PATH = Path.home() / ".openclaw/workspace/cosmetic-deploy"
 
 
 def collect_links(account: str, count: int = 4) -> list:
-    """采集文章链接，返回链接列表"""
+    """调用Skill采集文章链接，返回链接列表"""
     print(f"\n{'='*60}")
-    print(f"采集: {account} ({count}篇)")
+    print(f"调用Skill采集: {account} ({count}篇)")
     print('='*60)
     
-    # 运行采集器（collect.py 会自己激活微信）
+    # 调用Skill采集（Skill内部会处理微信激活）
     cmd = [
         "python3", str(COLLECTOR_PATH),
         json.dumps({"tasks": [{"account": account, "count": count}], "skip_csv": True})
@@ -68,25 +68,63 @@ def collect_links(account: str, count: int = 4) -> list:
                 link = line.replace('✅ 链接: ', '').strip()
                 links.append(link)
         
-        print(f"  获取 {len(links)} 个链接")
-        
-        # 清理可能生成的CSV文件（兼容旧版本collect.py）
-        desktop = Path.home() / 'Desktop'
-        for csv_file in desktop.glob('wechat_articles_*.csv'):
-            try:
-                csv_file.unlink()
-                print(f"  🗑️  清理CSV: {csv_file.name}")
-            except:
-                pass
-        
+        print(f"  Skill返回 {len(links)} 个链接")
         return links
         
     except subprocess.TimeoutExpired:
-        print(f"⚠️  采集超时: {account}")
+        print(f"⚠️  Skill采集超时: {account}")
         return []
     except Exception as e:
-        print(f"❌ 采集失败: {account} - {e}")
+        print(f"❌ Skill调用失败: {account} - {e}")
         return []
+
+def save_to_database(articles: list):
+    """保存文章到数据库"""
+    print(f"\n{'='*60}")
+    print("保存到数据库...")
+    print('='*60)
+    
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    
+    added = 0
+    skipped = 0
+    failed = 0
+    
+    for article in articles:
+        try:
+            # 检查是否已存在
+            cursor.execute('SELECT id FROM articles WHERE url = ?', (article['url'],))
+            if cursor.fetchone():
+                skipped += 1
+                continue
+            
+            # 插入新文章
+            cursor.execute('''
+                INSERT INTO articles (title, url, wechat_name, publish_date, content, created_at)
+                VALUES (?, ?, ?, ?, ?, ?)
+            ''', (
+                article['title'],
+                article['url'],
+                article['source'],
+                article['publish_date'],
+                article['content'],
+                article['created_at']
+            ))
+            added += 1
+            
+        except Exception as e:
+            failed += 1
+            print(f"  ❌ 保存失败: {article['url']} - {e}")
+    
+    conn.commit()
+    conn.close()
+    
+    print(f"  ✅ 新增: {added} 篇")
+    print(f"  ⏭️  跳过: {skipped} 篇 (已存在)")
+    if failed > 0:
+        print(f"  ❌ 失败: {failed} 篇")
+    print(f"  💾 数据库: {DB_PATH}")
 
 
 def fetch_article_info(url: str) -> dict:
