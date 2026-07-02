@@ -58,27 +58,40 @@ def collect_links(account: str, count: int = 4) -> list:
     time.sleep(2)
     print("  ✅ 微信已激活")
     
-    # 运行采集器（跳过CSV导出）
+    # 运行采集器（使用Popen实时读取，避免缓冲死锁）
     cmd = [
-        "python3", str(COLLECTOR_PATH),
+        "python3", "-u", str(COLLECTOR_PATH),  # -u 禁用缓冲
         json.dumps({"tasks": [{"account": account, "count": count}], "skip_csv": True})
     ]
     
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        # 使用Popen实时读取输出
+        process = subprocess.Popen(
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            bufsize=1  # 行缓冲
+        )
         
-        # 从输出中提取链接
         links = []
-        for line in result.stdout.split('\n'):
+        # 实时读取stdout
+        for line in process.stdout:
+            line = line.strip()
             if line.startswith('✅ 链接: '):
                 link = line.replace('✅ 链接: ', '').strip()
                 links.append(link)
+                print(f"  获取链接: {link}")
+        
+        # 等待进程完成
+        process.wait(timeout=120)
         
         print(f"  获取 {len(links)} 个链接")
         return links
         
     except subprocess.TimeoutExpired:
         print(f"⚠️  采集超时: {account}")
+        process.kill()
         return []
     except Exception as e:
         print(f"❌ 采集失败: {account} - {e}")
