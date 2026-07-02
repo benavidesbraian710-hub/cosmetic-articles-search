@@ -52,9 +52,12 @@ def collect_links(account: str, count: int = 4) -> list:
     print(f"调用Skill采集: {account} ({count}篇)")
     print('='*60)
     
-    # 先激活微信（确保微信在前台）
+    # 先激活微信（确保微信在前台，不启动新实例）
     print("  激活微信...")
-    subprocess.run(['open', '-a', 'WeChat'], capture_output=True)
+    subprocess.run([
+        'osascript', '-e',
+        'tell application "WeChat" to activate'
+    ], capture_output=True)
     time.sleep(2)
     
     # 调用Skill采集（使用 Popen 实时读取输出）
