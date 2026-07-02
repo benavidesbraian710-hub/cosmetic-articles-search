@@ -52,28 +52,16 @@ def collect_links(account: str, count: int = 4) -> list:
     print(f"采集: {account} ({count}篇)")
     print('='*60)
     
-    # 激活微信窗口
+    # 激活微信窗口（使用open -a WeChat，坐标已修复不需要反复激活）
     print("激活微信窗口...")
-    subprocess.run([
-        'osascript', '-e',
-        'tell application "WeChat" to activate'
-    ], capture_output=True)
+    subprocess.run(['open', '-a', 'WeChat'], capture_output=True)
     time.sleep(2)
+    print("  ✅ 微信已激活")
     
-    for app_name in ["WeChat", "微信"]:
-        result = subprocess.run(
-            f'peekaboo focus --app "{app_name}"',
-            shell=True, capture_output=True, text=True
-        )
-        if result.returncode == 0:
-            print(f"  已聚焦到: {app_name}")
-            break
-    time.sleep(1)
-    
-    # 运行采集器
+    # 运行采集器（跳过CSV导出）
     cmd = [
         "python3", str(COLLECTOR_PATH),
-        json.dumps({"tasks": [{"account": account, "count": count}]})
+        json.dumps({"tasks": [{"account": account, "count": count}], "skip_csv": True})
     ]
     
     try:
