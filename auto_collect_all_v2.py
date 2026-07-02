@@ -52,11 +52,8 @@ def collect_links(account: str, count: int = 4) -> list:
     print(f"采集: {account} ({count}篇)")
     print('='*60)
     
-    # 激活微信窗口（使用open强制激活，确保窗口到前台）
-    print("激活微信窗口...")
-    subprocess.run(['open', '-a', 'WeChat'], capture_output=True)
-    time.sleep(2)
-    print("  ✅ 微信已激活")
+    # 直接调用Skill采集（不激活微信，假设已手动启动）
+    print("调用Skill采集...")
     
     # 运行采集器（使用Popen实时读取，避免缓冲死锁）
     cmd = [
