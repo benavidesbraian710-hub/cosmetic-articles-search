@@ -70,10 +70,10 @@ def collect_links(account: str, count: int = 4) -> list:
             break
     time.sleep(1)
     
-    # 运行采集器
+    # 运行采集器（跳过CSV导出，直接返回链接）
     cmd = [
         "python3", str(COLLECTOR_PATH),
-        json.dumps({"tasks": [{"account": account, "count": count}]})
+        json.dumps({"tasks": [{"account": account, "count": count}], "skip_csv": True})
     ]
     
     try:
@@ -87,6 +87,16 @@ def collect_links(account: str, count: int = 4) -> list:
                 links.append(link)
         
         print(f"  获取 {len(links)} 个链接")
+        
+        # 清理可能生成的CSV文件（兼容旧版本collect.py）
+        desktop = Path.home() / 'Desktop'
+        for csv_file in desktop.glob('wechat_articles_*.csv'):
+            try:
+                csv_file.unlink()
+                print(f"  🗑️  清理CSV: {csv_file.name}")
+            except:
+                pass
+        
         return links
         
     except subprocess.TimeoutExpired:
