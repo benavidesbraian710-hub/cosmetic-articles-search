@@ -61,15 +61,19 @@ def collect_links(account: str, count: int = 4) -> list:
         json.dumps({"tasks": [{"account": account, "count": count}], "skip_csv": True})
     ]
     
+    print(f"  执行命令: {' '.join(cmd[:2])} ...")
+    
     try:
         # 切换到Skill所在目录执行（确保依赖文件路径正确）
         result = subprocess.run(
             cmd,
             capture_output=True,
             text=True,
-            timeout=120,
+            timeout=300,  # 增加到5分钟超时
             cwd=str(COLLECTOR_PATH.parent)  # 切换到collect.py所在目录
         )
+        
+        print(f"  Skill返回码: {result.returncode}")
         
         # 从输出中提取链接
         links = []
@@ -81,7 +85,7 @@ def collect_links(account: str, count: int = 4) -> list:
         
         # 如果有错误输出，打印出来
         if result.stderr:
-            print(f"  Skill错误: {result.stderr[:200]}")
+            print(f"  Skill错误: {result.stderr[:500]}")
         
         print(f"  获取 {len(links)} 个链接")
         return links
