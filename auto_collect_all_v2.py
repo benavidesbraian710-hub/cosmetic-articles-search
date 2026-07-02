@@ -47,105 +47,54 @@ GIT_PATH = Path.home() / ".openclaw/workspace/cosmetic-deploy"
 
 
 def collect_links(account: str, count: int = 4) -> list:
-    """调用Skill采集文章链接，返回链接列表"""
+    """采集文章链接，返回链接列表"""
     print(f"\n{'='*60}")
-    print(f"调用Skill采集: {account} ({count}篇)")
+    print(f"采集: {account} ({count}篇)")
     print('='*60)
     
-    # 先激活微信（确保微信在前台，不启动新实例）
-    print("  激活微信...")
+    # 激活微信窗口
+    print("激活微信窗口...")
     subprocess.run([
         'osascript', '-e',
         'tell application "WeChat" to activate'
     ], capture_output=True)
     time.sleep(2)
     
-    # 调用Skill采集（使用 Popen 实时读取输出）
+    for app_name in ["WeChat", "微信"]:
+        result = subprocess.run(
+            f'peekaboo focus --app "{app_name}"',
+            shell=True, capture_output=True, text=True
+        )
+        if result.returncode == 0:
+            print(f"  已聚焦到: {app_name}")
+            break
+    time.sleep(1)
+    
+    # 运行采集器
     cmd = [
-        "python3", "-u", str(COLLECTOR_PATH),  # -u 表示无缓冲输出
-        json.dumps({"tasks": [{"account": account, "count": count}], "skip_csv": True})
+        "python3", str(COLLECTOR_PATH),
+        json.dumps({"tasks": [{"account": account, "count": count}]})
     ]
     
     try:
-        # 使用 Popen 实时读取输出，避免缓冲导致卡住
-        process = subprocess.Popen(
-            cmd,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            bufsize=1  # 行缓冲
-        )
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
         
+        # 从输出中提取链接
         links = []
-        # 实时读取输出
-        for line in process.stdout:
-            line = line.strip()
+        for line in result.stdout.split('\n'):
             if line.startswith('✅ 链接: '):
                 link = line.replace('✅ 链接: ', '').strip()
                 links.append(link)
-                print(f"  获取链接: {link}")
         
-        # 等待进程完成
-        process.wait(timeout=120)
-        
-        print(f"  Skill返回 {len(links)} 个链接")
+        print(f"  获取 {len(links)} 个链接")
         return links
         
     except subprocess.TimeoutExpired:
-        print(f"⚠️  Skill采集超时: {account}")
-        process.kill()
+        print(f"⚠️  采集超时: {account}")
         return []
     except Exception as e:
-        print(f"❌ Skill调用失败: {account} - {e}")
+        print(f"❌ 采集失败: {account} - {e}")
         return []
-
-def save_to_database(articles: list):
-    """保存文章到数据库"""
-    print(f"\n{'='*60}")
-    print("保存到数据库...")
-    print('='*60)
-    
-    conn = sqlite3.connect(DB_PATH)
-    cursor = conn.cursor()
-    
-    added = 0
-    skipped = 0
-    failed = 0
-    
-    for article in articles:
-        try:
-            # 检查是否已存在
-            cursor.execute('SELECT id FROM articles WHERE url = ?', (article['url'],))
-            if cursor.fetchone():
-                skipped += 1
-                continue
-            
-            # 插入新文章
-            cursor.execute('''
-                INSERT INTO articles (title, url, wechat_name, publish_date, content, created_at)
-                VALUES (?, ?, ?, ?, ?, ?)
-            ''', (
-                article['title'],
-                article['url'],
-                article['source'],
-                article['publish_date'],
-                article['content'],
-                article['created_at']
-            ))
-            added += 1
-            
-        except Exception as e:
-            failed += 1
-            print(f"  ❌ 保存失败: {article['url']} - {e}")
-    
-    conn.commit()
-    conn.close()
-    
-    print(f"  ✅ 新增: {added} 篇")
-    print(f"  ⏭️  跳过: {skipped} 篇 (已存在)")
-    if failed > 0:
-        print(f"  ❌ 失败: {failed} 篇")
-    print(f"  💾 数据库: {DB_PATH}")
 
 
 def fetch_article_info(url: str) -> dict:
