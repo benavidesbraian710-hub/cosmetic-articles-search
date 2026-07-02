@@ -288,53 +288,112 @@ function getArticlesBySourceAndDate(sourceName, days, limit = 10) {
   });
 }
 
-// 检查公众号是否存在于数据库中
-function checkSourceExists(sourceName) {
-  return new Promise((resolve, reject) => {
-    if (!db) {
-      reject(new Error('数据库未连接'));
-      return;
+// 使用大模型进行边界检查（支持模糊匹配）
+async function checkSourceWithAI(sourceName, allSources) {
+  const prompt = `你是一个智能边界检查助手。请判断用户查询的公众号是否存在于已采集列表中，支持模糊匹配。
+
+用户查询的公众号："${sourceName}"
+
+已采集的公众号列表：
+${allSources.map(s => `- ${s}`).join('\n')}
+
+请分析：
+1. 用户查询的公众号是否精确匹配列表中的某个名称？
+2. 如果不精确匹配，是否是某个公众号的简称/别名？（如"妆研"是"妆研24小时"的简称，"原料合规"是"原料合规观察"的简称）
+3. 如果是简称/别名，请匹配到完整的公众号名称
+4. 如果完全不存在（连简称/别名都对不上），请明确说明
+
+模糊匹配规则：
+- 用户说"妆研" → 匹配"妆研24小时"
+- 用户说"原料合规" → 匹配"原料合规观察"  
+- 用户说"美业" → 匹配"美业颜究院"
+- 用户说"个护" → 匹配"个护前沿"
+- 用户说"未来迹" → 匹配"Fbeauty未来迹"
+- 用户说"肤见" → 匹配"肤见未来实验室"
+- 用户说"品观" → 匹配"化妆品观察 品观"
+- 用户说"上海日化" → 匹配"上海日化协会"
+- 用户说"中国化妆品" → 匹配"中国化妆品"
+
+请用 JSON 格式返回：
+{
+  "exists": true/false,
+  "matchedSource": "匹配到的完整公众号名称或null",
+  "reason": "判断依据（说明是精确匹配还是简称匹配）"
+}`;
+
+  try {
+    const result = await callLLM(prompt);
+    const jsonMatch = result.match(/\{[\s\S]*\}/);
+    if (jsonMatch) {
+      return JSON.parse(jsonMatch[0]);
     }
-    
-    const sql = `SELECT COUNT(*) as count FROM articles WHERE wechat_name = ?`;
-    db.get(sql, [sourceName], (err, row) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(row.count > 0);
-      }
-    });
-  });
+  } catch (err) {
+    console.error('❌ 大模型边界检查失败:', err.message);
+  }
+  
+  // 降级：精确匹配
+  const exactMatch = allSources.find(s => s === sourceName);
+  return {
+    exists: !!exactMatch,
+    matchedSource: exactMatch || null,
+    reason: '大模型调用失败，使用精确匹配降级'
+  };
 }
 
-// 获取公众号统计信息
-function getSourceStats(sourceName) {
-  return new Promise((resolve, reject) => {
-    if (!db) {
-      reject(new Error('数据库未连接'));
-      return;
+// 使用大模型生成边界情况回复（情况1：公众号不存在）
+async function generateNotFoundReply(request, allSources) {
+  const prompt = `你是一个友好的邮件回复助手。用户查询的公众号不在采集范围内，请生成一封礼貌的回复邮件。
+
+用户查询："${request.sourceName}"
+已采集公众号：${allSources.join('、')}
+
+要求：
+1. 语气友好、专业
+2. 明确说明该公众号不在采集范围
+3. 列出所有已采集的公众号
+4. 提供建议：如需扩展采集范围，请联系开发者
+5. 简短，不要冗余
+
+请直接输出邮件正文（不要加标题、称呼等，直接输出正文内容）：`;
+
+  try {
+    const result = await callLLM(prompt);
+    return result.trim();
+  } catch (err) {
+    console.error('❌ 大模型生成回复失败:', err.message);
+    // 降级：使用模板回复
+    return `您好！\n\n您查询的【${request.sourceName}】不在当前采集范围内。\n\n当前已采集的公众号包括：\n${allSources.map(s => `• ${s}`).join('\n')}\n\n如需扩展采集范围，请联系开发者添加该公众号。`;
+  }
+}
+
+// 使用大模型生成空结果回复（情况2：时间范围内无文章）
+async function generateEmptyReply(request, sourceStats) {
+  const prompt = `你是一个友好的邮件回复助手。用户查询的公众号在指定时间范围内没有文章，请生成一封解释性的回复邮件。
+
+用户查询："${request.sourceName}" ${request.days ? '最近 ' + request.days + ' 天' : '全部时间'}
+公众号统计：共有 ${sourceStats.total} 篇文章，最新一篇是 ${sourceStats.latestDate}
+
+要求：
+1. 语气友好、专业
+2. 解释该时间范围内没有文章
+3. 提供该公众号的整体统计信息
+4. 建议用户可以尝试其他时间范围
+5. 简短，不要冗余
+
+请直接输出邮件正文（不要加标题、称呼等，直接输出正文内容）：`;
+
+  try {
+    const result = await callLLM(prompt);
+    return result.trim();
+  } catch (err) {
+    console.error('❌ 大模型生成回复失败:', err.message);
+    // 降级：使用模板回复
+    let statsInfo = '';
+    if (sourceStats && sourceStats.total > 0) {
+      statsInfo = `\n\n该公众号数据库中共有 ${sourceStats.total} 篇文章，最新一篇是 ${sourceStats.latestDate}。\n如需查询其他时间范围，请回复邮件说明。`;
     }
-    
-    const sql = `
-      SELECT 
-        COUNT(*) as total,
-        MAX(publish_date) as latest_date,
-        MIN(publish_date) as earliest_date
-      FROM articles 
-      WHERE wechat_name = ?
-    `;
-    db.get(sql, [sourceName], (err, row) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve({
-          total: row.total || 0,
-          latestDate: row.latest_date,
-          earliestDate: row.earliest_date
-        });
-      }
-    });
-  });
+    return `您好！\n\n您查询的【${request.sourceName}】${request.days ? '最近 ' + request.days + ' 天' : ''}没有文章。${statsInfo}`;
+  }
 }
 
 // 获取所有已采集的公众号列表
@@ -355,6 +414,27 @@ function getAllSources() {
     });
   });
 }
+
+// 获取邮件内容
+// 邮件回复降级方案
+function generateFallbackReply(allArticles, requests, email) {
+  let articleList = '\n\n精选文章：\n';
+  allArticles.forEach((article, i) => {
+    articleList += `${i + 1}. ${article.title}\n`;
+    articleList += `   来源: ${article.source} | 时间: ${article.publish_date}\n`;
+    articleList += `   链接: ${article.url}\n\n`;
+  });
+  
+  let querySummary = '';
+  requests.forEach((req, i) => {
+    const timeText = req.days ? `最近 ${req.days} 天` : '全部时间';
+    querySummary += `- 公众号：${req.sourceName || '全部'} | 时间：${timeText} | 数量：${req.limit} 篇\n`;
+  });
+  
+  return `您好！\n\n收到您的需求：${email.subject || '无主题'}\n\n已为您查询化妆品数据库：\n${querySummary}\n共找到 ${allArticles.length} 篇文章。${articleList}\n详细结果请查看附件中的 Excel 文件。\n\n---\n搜搜 (Sōusou) - 您的化妆品信息猎犬 🔍\n处理时间：${new Date().toLocaleString('zh-CN')}\n`;
+}
+
+async function checkNewEmails() {
   const client = new ImapFlow({
     host: CONFIG.imap.host,
     port: CONFIG.imap.port,
@@ -686,6 +766,56 @@ function parseRequestFallback(email) {
   };
 }
 
+// 使用大模型生成 Excel 内容
+async function generateExcelWithAI(articles, requests) {
+  const prompt = `你是一个数据整理助手。请将以下文章数据整理成结构化的 CSV 格式。
+
+查询需求：
+${requests.map((req, i) => `${i+1}. 公众号：${req.sourceName || '全部'}, 时间：${req.days ? '最近'+req.days+'天' : '全部时间'}, 数量：${req.limit}`).join('\n')}
+
+文章数据（共${articles.length}篇）：
+${articles.map((a, i) => `${i+1}. 标题：${a.title}\n   来源：${a.source}\n   日期：${a.publish_date}\n   链接：${a.url}`).join('\n')}
+
+要求：
+1. 生成标准 CSV 格式（逗号分隔）
+2. 第一行为表头：序号,查询公众号,查询时间范围,标题,来源,发布日期,链接
+3. 每篇文章一行
+4. 如果文章数量较多，只输出前20篇（并在最后加一行说明"共XX篇，显示前20篇"）
+5. 直接输出 CSV 内容，不要加任何其他文字
+
+请输出 CSV 内容：`;
+
+  try {
+    const result = await callLLM(prompt);
+    return result.trim();
+  } catch (err) {
+    console.error('❌ 大模型生成 Excel 失败:', err.message);
+    // 降级：使用模板生成
+    return generateExcelFallback(articles, requests);
+  }
+}
+
+// Excel 生成降级方案
+function generateExcelFallback(articles, requests) {
+  const lines = ['序号,查询公众号,查询时间范围,标题,来源,发布日期,链接'];
+  
+  const timeRange = requests[0].days ? '最近' + requests[0].days + '天' : '全部时间';
+  const source = requests[0].sourceName || '全部';
+  
+  if (articles.length === 0) {
+    lines.push('1,' + source + ',' + timeRange + ',暂无文章,-,-,-');
+  } else {
+    articles.slice(0, 20).forEach((article, i) => {
+      lines.push(`${i+1},${source},${timeRange},"${article.title}",${article.source},${article.publish_date},${article.url}`);
+    });
+    if (articles.length > 20) {
+      lines.push(`,,,,,"共${articles.length}篇，显示前20篇",`);
+    }
+  }
+  
+  return lines.join('\n');
+}
+
 function generateExcel(articles, requests, outputPath) {
   // 生成真实内容的 CSV
   const data = [
@@ -827,27 +957,37 @@ async function processEmail(email) {
   let allArticles = [];
   let sourceNotFound = false;  // 标记公众号是否不存在
   let sourceStats = null;      // 公众号统计信息
+  let matchedSourceName = null; // 大模型匹配到的公众号名称
   
   try {
     console.log('');
     console.log('   🔍 批量查询数据库...');
     
-    // 检查每个请求的公众号是否存在
+    // 获取所有公众号列表
+    const allSources = await getAllSources();
+    
+    // 使用大模型检查每个请求的公众号（支持模糊匹配）
     for (const request of requests) {
       if (request.sourceName) {
-        const exists = await checkSourceExists(request.sourceName);
-        if (!exists) {
+        const checkResult = await checkSourceWithAI(request.sourceName, allSources);
+        if (!checkResult.exists) {
           sourceNotFound = true;
           console.log(`   ⚠️  公众号【${request.sourceName}】不在采集范围内`);
         } else {
+          // 使用大模型匹配到的名称（可能是模糊匹配）
+          matchedSourceName = checkResult.matchedSource || request.sourceName;
+          request.sourceName = matchedSourceName; // 更新为匹配到的名称
+          
           // 获取公众号统计信息（用于情况2）
-          sourceStats = await getSourceStats(request.sourceName);
+          sourceStats = await getSourceStats(matchedSourceName);
         }
       }
     }
     
-    allArticles = await getArticlesBatch(requests);
-    console.log(`   ✅ 共找到 ${allArticles.length} 篇文章`);
+    if (!sourceNotFound) {
+      allArticles = await getArticlesBatch(requests);
+      console.log(`   ✅ 共找到 ${allArticles.length} 篇文章`);
+    }
   } catch (err) {
     console.error(`   ❌ 数据库查询失败:`, err.message);
   }
@@ -857,7 +997,9 @@ async function processEmail(email) {
   const excelPath = path.join(__dirname, `search_result_${timestamp}.csv`);
   
   try {
-    generateExcel(allArticles, requests, excelPath);
+    // 使用大模型生成 Excel 内容
+    const csvContent = await generateExcelWithAI(allArticles, requests);
+    fs.writeFileSync(excelPath, '\uFEFF' + csvContent, 'utf8');
     console.log(`   ✅ Excel 生成: ${excelPath}`);
     console.log(`   📊 包含 ${allArticles.length} 篇文章`);
   } catch (err) {
@@ -868,36 +1010,41 @@ async function processEmail(email) {
   let replyBody = '';
   
   if (sourceNotFound) {
-    // 情况1：公众号不在数据库中
-    const allSources = await getAllSources();
-    const sourceList = allSources.map(s => `• ${s}`).join('\n');
-    
-    replyBody = `您好！\n\n您查询的【${requests[0].sourceName}】不在当前采集范围内。\n\n当前已采集的公众号包括：\n${sourceList}\n\n如需扩展采集范围，请联系开发者添加该公众号。\n\n---\n搜搜 (Sōusou) - 您的化妆品信息猎犬 🔍\n处理时间：${new Date().toLocaleString('zh-CN')}\n`;
+    // 情况1：公众号不在数据库中 → 使用大模型生成回复
+    replyBody = await generateNotFoundReply(requests[0], allSources);
   } else if (allArticles.length === 0) {
-    // 情况2：时间范围内没有文章
-    let statsInfo = '';
-    if (sourceStats && sourceStats.total > 0) {
-      statsInfo = `\n\n该公众号数据库中共有 ${sourceStats.total} 篇文章，最新一篇是 ${sourceStats.latestDate}。\n如需查询其他时间范围，请回复邮件说明。`;
-    }
-    
-    replyBody = `您好！\n\n您查询的【${requests[0].sourceName || '全部公众号'}】${requests[0].days ? '最近 ' + requests[0].days + ' 天' : ''}没有文章。${statsInfo}\n\n---\n搜搜 (Sōusou) - 您的化妆品信息猎犬 🔍\n处理时间：${new Date().toLocaleString('zh-CN')}\n`;
+    // 情况2：时间范围内没有文章 → 使用大模型生成回复
+    replyBody = await generateEmptyReply(requests[0], sourceStats);
   } else {
-    // 正常情况：有文章
-    let articleList = '\n\n精选文章：\n';
-    allArticles.forEach((article, i) => {
-      articleList += `${i + 1}. ${article.title}\n`;
-      articleList += `   来源: ${article.source} | 时间: ${article.publish_date}\n`;
-      articleList += `   链接: ${article.url}\n\n`;
-    });
-    
-    // 构建查询摘要
-    let querySummary = '';
-    requests.forEach((req, i) => {
-      const timeText = req.days ? `最近 ${req.days} 天` : '全部时间';
-      querySummary += `- 公众号：${req.sourceName || '全部'} | 时间：${timeText} | 数量：${req.limit} 篇\n`;
-    });
-    
-    replyBody = `您好！\n\n收到您的需求：${email.subject || '无主题'}\n\n已为您查询化妆品数据库：\n${querySummary}\n共找到 ${allArticles.length} 篇文章。${articleList}\n详细结果请查看附件中的 Excel 文件。\n\n---\n搜搜 (Sōusou) - 您的化妆品信息猎犬 🔍\n处理时间：${new Date().toLocaleString('zh-CN')}\n数据库文章总数：147 篇\n`;
+    // 正常情况：使用大模型生成回复邮件
+    const prompt = `你是一个友好的邮件回复助手。用户查询化妆品文章，已找到结果，请生成一封专业的回复邮件。
+
+用户查询："${email.subject || '无主题'}"
+
+查询条件：
+${requests.map((req, i) =>> `${i+1}. 公众号：${req.sourceName || '全部'}, 时间：${req.days ? '最近'+req.days+'天' : '全部时间'}, 数量：${req.limit}篇`).join('\n')}
+
+找到文章（共${allArticles.length}篇）：
+${allArticles.slice(0, 5).map((a, i) => `${i+1}. ${a.title}（${a.source}，${a.publish_date}）`).join('\n')}
+${allArticles.length > 5 ? '\n...（共' + allArticles.length + '篇，详见附件）' : ''}
+
+要求：
+1. 语气友好、专业
+2. 说明查询条件和结果数量
+3. 列出前几篇文章的标题（最多5篇）
+4. 提示用户查看附件中的完整结果
+5. 简短，不要冗余
+
+请直接输出邮件正文（不要加标题、称呼等，直接输出正文内容）：`;
+
+    try {
+      replyBody = await callLLM(prompt);
+      replyBody = replyBody.trim();
+    } catch (err) {
+      console.error('❌ 大模型生成邮件失败:', err.message);
+      // 降级：使用模板
+      replyBody = generateFallbackReply(allArticles, requests, email);
+    }
   }
   
   // 提取邮箱地址
