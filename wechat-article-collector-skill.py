@@ -164,6 +164,11 @@ def navigate_to_account(account_name: str):
     
     activate_wechat()
     
+    # 按ESC键关闭可能残留的窗口（2026-06-12修复）
+    print("按ESC键关闭残留窗口...")
+    press("esc")
+    time.sleep(0.5)
+    
     print("打开搜索框...")
     hotkey("cmd,f")
     time.sleep(0.5)
