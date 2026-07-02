@@ -1022,7 +1022,7 @@ async function processEmail(email) {
 用户查询："${email.subject || '无主题'}"
 
 查询条件：
-${requests.map((req, i) =>> `${i+1}. 公众号：${req.sourceName || '全部'}, 时间：${req.days ? '最近'+req.days+'天' : '全部时间'}, 数量：${req.limit}篇`).join('\n')}
+${requests.map((req, i) => `${i+1}. 公众号：${req.sourceName || '全部'}, 时间：${req.days ? '最近'+req.days+'天' : '全部时间'}, 数量：${req.limit}篇`).join('\n')}
 
 找到文章（共${allArticles.length}篇）：
 ${allArticles.slice(0, 5).map((a, i) => `${i+1}. ${a.title}（${a.source}，${a.publish_date}）`).join('\n')}
