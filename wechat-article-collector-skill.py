@@ -479,24 +479,72 @@ def main():
         keyword_str = f" 关键词:{keyword}" if keyword else ''
         print(f"  {i}. {task['account']}  {task['count']}篇{keyword_str}")
     
-    # 执行所有任务
-    all_results = []
-    for task in tasks:
-        results = execute_task(task)
-        all_results.extend(results)
+    # 执行所有任务（批量采集）
+    all_results = {}
+    for i, task in enumerate(tasks):
+        account = task['account']
+        count = task['count']
+        
+        print(f"\n{'='*50}")
+        print(f"[{i+1}/{len(tasks)}] 采集: {account} ({count}篇)")
+        print(f"{'='*50}")
+        
+        # 激活微信
+        activate_wechat()
+        
+        # 搜索并进入公众号
+        if not navigate_to_account(account):
+            print(f"❌ 搜索失败: {account}")
+            all_results[account] = []
+            continue
+        
+        # 获取文章链接
+        links = get_article_links(count)
+        all_results[account] = links
+        
+        print(f"✅ 完成: {account} - 获取 {len(links)} 个链接")
+        for link in links:
+            print(f"  ✅ 链接: {link}")
+        
+        # 关闭当前公众号窗口，准备下一个
+        if i < len(tasks) - 1:
+            close_account_page()
+            time.sleep(1)
     
     # 导出 CSV（除非 skip_csv=True）
     if not skip_csv:
         print("\n" + "=" * 50)
         print("导出 CSV...")
-        output_path = export_csv(all_results)
+        
+        # 转换为旧格式
+        all_results_list = []
+        for account, links in all_results.items():
+            for link in links:
+                all_results_list.append({
+                    'account': account,
+                    'link': link,
+                    'title': '',
+                    'publish_date': ''
+                })
+        
+        output_path = export_csv(all_results_list)
         
         print("\n" + "=" * 50)
-        print(f"✅ 完成！共获取 {len(all_results)} 篇文章")
+        print(f"✅ 完成！共获取 {len(all_results_list)} 篇文章")
         print(f"📁 CSV: {output_path}")
     else:
         # 只输出链接，不导出CSV
         print("\n" + "=" * 50)
+        print("📊 批量采集完成")
+        print("=" * 50)
+        for account, links in all_results.items():
+            print(f"\n{account}: {len(links)} 篇")
+            for link in links:
+                print(f"  ✅ 链接: {link}")
+        
+        # 输出JSON格式结果
+        print(f"\n📋 JSON结果:")
+        print(json.dumps(all_results, ensure_ascii=False, indent=2))
         print(f"✅ 完成！共获取 {len(all_results)} 篇文章")
         for item in all_results:
             print(f"✅ 链接: {item['link']}")
