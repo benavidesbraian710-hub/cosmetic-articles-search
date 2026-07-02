@@ -78,7 +78,7 @@ COORDS = {
     'copy_link_alt': (1210, 134),         # 复制链接（备选）
     'close_article': (1099, 51),          # 关闭文章页
     'close_search': (459, 50),            # 关闭搜索窗口
-    'close_account': (527, 55),           # 关闭账号窗口
+    'close_account': (527, 54),           # 关闭账号窗口
 }
 
 
@@ -204,7 +204,7 @@ def setup_filters(account_name: str = ""):
     
     print("点击'确定'...")
     click(*confirm_coord)
-    time.sleep(2)  # 等待筛选界面加载
+    time.sleep(3)  # 等待筛选界面加载（2026-06-09修复：2秒→3秒）
     
     print("点击'综合排序'...")
     click(*COORDS['sort'])
