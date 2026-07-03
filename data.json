@@ -1,33 +1,33 @@
 {
   "stats": {
-    "total_articles": 176,
+    "total_articles": 199,
     "source_count": 12,
     "date_range": {
       "start": "2026-05-28",
-      "end": "2026-07-02"
+      "end": "2026-07-03"
     },
-    "last_update": "2026-07-02T17:53:43.089891"
+    "last_update": "2026-07-03T10:25:08.115629"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 31
+      "count": 35
     },
     {
       "name": "化妆品观察 品观",
-      "count": 26
+      "count": 30
     },
     {
       "name": "中国化妆品",
-      "count": 24
-    },
-    {
-      "name": "非科学美妆传播",
-      "count": 17
+      "count": 28
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 17
+      "count": 19
+    },
+    {
+      "name": "非科学美妆传播",
+      "count": 18
     },
     {
       "name": "妆合规",
@@ -35,7 +35,7 @@
     },
     {
       "name": "肤见未来实验室",
-      "count": 13
+      "count": 15
     },
     {
       "name": "原料合规观察",
@@ -43,15 +43,15 @@
     },
     {
       "name": "KEV美妆",
-      "count": 6
+      "count": 8
     },
     {
       "name": "妆研24小时",
-      "count": 5
+      "count": 7
     },
     {
       "name": "美业颜究院",
-      "count": 4
+      "count": 6
     },
     {
       "name": "上海日化协会",
@@ -60,6 +60,42 @@
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 412,
+        "title": "首部《化妆品标准管理办法（征求意见稿）》发布",
+        "source": "个护前沿",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/goeQ22iudkQ6N0LRlcVgIA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 413,
+        "title": "《Environment &amp; Health》: 高温+紫外是对皮肤的多重暴击",
+        "source": "个护前沿",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/W6Ho-nei67JbnBMuy_gkmA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 414,
+        "title": "【2026抗衰年度盛会】护肤科技×轻医美双论坛启动，九院/瑞金/资生堂/宝洁/华熙生物/四环医药等重磅嘉宾确认出席",
+        "source": "个护前沿",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/8uqKtu1rTNed2PdgtF8HqA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 415,
+        "title": "上半年，39家美妆企业冲击IPO！",
+        "source": "个护前沿",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/a4nIROiApEwB0pNA-DgbJQ",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 384,
         "title": "花西子原料供应商冲击IPO！",
@@ -342,6 +378,42 @@
     ],
     "化妆品观察 品观": [
       {
+        "id": 422,
+        "title": "我在",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/hnLyCVufPigPDWZ-uBI98g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 423,
+        "title": "关于“AKF”品牌商标授权及使用相关法律事实的严正声明",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/q2BRmoL0m1wNROU3h92Qrw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 424,
+        "title": "20亿级美妆企业再度递表冲刺IPO！",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/T9sEe-s82NeZqE7dHTDZsQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 425,
+        "title": "产品创新之路：面部精华为例，爆款如何从需求缺口及技术创新中长出来",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/V5lIwJaHyNOWC0Svn5eKzA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 393,
         "title": "准10亿级护肤企业，冲击北交所上市！",
         "source": "化妆品观察 品观",
@@ -578,6 +650,42 @@
     ],
     "中国化妆品": [
       {
+        "id": 426,
+        "title": "从实验室到生产线：莱茵国际的植物科技“可信”之路  | 创新正当时",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/ozvoEbKBLmkqZ4XEmPRLgQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 427,
+        "title": "国家药监局就《化妆品标准管理办法（征求意见稿）》公开征求意见；植物医生IPO恢复审核；韩国新锐护发品牌LILYEVE进军中国",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/tLKnWYCasoy9ew3lcFz9Pg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 428,
+        "title": "橪联合主办第二届芳香医药临床应用研讨会",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/ot-zTI0rJSGHlEHl1kmCMg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 429,
+        "title": "7000店规模再进阶！樊文花跨越周期的增长密码",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/RXhtxL5NhRFAwNTX0MzjvQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 396,
         "title": "专访宝洁全球供应链创新副总裁赵波：美妆供应链，从效率优先到价值共生 | ESG先锋",
         "source": "中国化妆品",
@@ -794,162 +902,25 @@
         "keywords": []
       }
     ],
-    "非科学美妆传播": [
-      {
-        "id": 403,
-        "title": "LG｜MTBio 2026｜后秘贴精华中NAD+递送方案：离子耦合传递体复合物ICoN的设计方案和功能验证",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-01",
-        "url": "https://mp.weixin.qq.com/s/yXHKfyP7Qm0ld0eamU5ZYA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 370,
-        "title": "Science 2026｜泛素样修饰蛋白角度，上皮干性维持和终末分化的平衡，是通过NEDD8/SUMO2拮抗的转录后蛋白质重塑来维持",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-30",
-        "url": "https://mp.weixin.qq.com/s/Ki3vJf1xDDAWVSm9vOWoYw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 371,
-        "title": "京都大学&amp;LVMH｜SR 2026｜mRNA-encoded reporter系统的设计，实现线粒体相关的快速、高通量检测",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-29",
-        "url": "https://mp.weixin.qq.com/s/t0lrWBPlf2cFC4w0g9PUBQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 218,
-        "title": "Natue Biotech 2026｜空间转录组学在细胞外囊泡EVs上的应用实例",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-28",
-        "url": "https://mp.weixin.qq.com/s/We5XYFMxAvpp9nPOh5a9Zg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 219,
-        "title": "Ashland｜SID 2026｜围绕线粒体肽Humanin的长寿护肤成分故事",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-27",
-        "url": "https://mp.weixin.qq.com/s/-S99nzs1OaPoD2HCdUG6xQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 222,
-        "title": "欧莱雅日本｜IJCS2025｜从晒斑照片来区分晒黑色斑和PIH色斑的方法开发：利用黑素、血红蛋白拟合光学密度模型来定量色斑中的血红蛋白含量",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/P7MhwUGI5qM_dswiBVDZDA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 223,
-        "title": "Nikkol日光&amp;欧莱雅日本｜Langmuir封面文章2026｜鼠李糖脂「去膜留菌」：仅剥离痤疮丙酸杆菌生物膜、保留细菌形态结构的机制探索",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/xajsvuI78pcZdEOMPxz1YA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 261,
-        "title": "雅诗兰黛｜Scale2026｜LaMer精华可同时改善玫瑰痤疮、AD湿疹和高敏感皮肤各自的皮肤问题",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-24",
-        "url": "https://mp.weixin.qq.com/s/pO3mZAot4Mhad9DbZRH6Hg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 262,
-        "title": "Cosmax｜ACS Aenm 2026｜3%神经酰胺制备能「压电护肤」的乳霜，膏体揉搓时产生微电场，改善皮肤",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-23",
-        "url": "https://mp.weixin.qq.com/s/QbADzDc0zLaETTlxI0Ydxg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 263,
-        "title": "Seppic｜Gels 2026｜多种生物多糖增稠剂x不同绿色乳化工艺的交叉研究，探索迎合未来需求的绿色乳化方案",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-22",
-        "url": "https://mp.weixin.qq.com/s/2Ulwn4W2RA3k880At7eCZA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 264,
-        "title": "欧莱雅｜JDSS 2026｜海外复颜线的Triple Power保湿霜用于GLP-1司美脸的改善",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-21",
-        "url": "https://mp.weixin.qq.com/s/kh24aI1kJV4Vz1vRNIu91Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 265,
-        "title": "水羊&amp;农科院麻类所｜EUR FOOD RES TECHNOL 2026｜金银花双重发酵法，总多酚黄酮下降，抗氧能力反而提升",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-20",
-        "url": "https://mp.weixin.qq.com/s/etbFMunS_E2-TkzvPvadtQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 266,
-        "title": "Nature Health 2026｜大脑中微塑料来源的分析，化妆品使用是影响因素之一",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-19",
-        "url": "https://mp.weixin.qq.com/s/XuOg0J4o-X4_-h1QGg2fEg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 267,
-        "title": "Ciel&amp;日光｜JCCSJ 2022｜干燥带来NGF上调Sema3A下调，这可能带来神经伸长，从而解释皮肤进入高敏状态；SOD酶可逆转",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-18",
-        "url": "https://mp.weixin.qq.com/s/3WmguSnni5_nb0djr9Kd0w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 268,
-        "title": "拜尔斯道夫&amp;UMG｜Clin Epigenetics 2026｜全表观基因组关联研究解析出甲基化位点中加速/延缓因子，并验证二氢杨梅素的调控甲基化衰老能力",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-17",
-        "url": "https://mp.weixin.qq.com/s/LDA6RfFodJbf5p-nvuUP4w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 269,
-        "title": "溪木源SID&amp;相宜Pharmaceuticals｜均为皮质醇压力相关，对比阅读：溪木源山茶花可降低唾液皮质醇，相宜关注压力性皮肤色沉（如熬夜焦虑）",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-16",
-        "url": "https://mp.weixin.qq.com/s/wk4oGkhDoO3P2gHtTphgQA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 270,
-        "title": "雅诗兰黛｜SID 2026｜植物外泌体可以调控日夜受损下的肌肤炎症反应，体外实验中，有类比人源外泌体的功效",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-15",
-        "url": "https://mp.weixin.qq.com/s/PMC2yca_GTPkuajAydxUMQ",
-        "summary": "",
-        "keywords": []
-      }
-    ],
     "Fbeauty未来迹": [
+      {
+        "id": 410,
+        "title": "或面临巨额罚款！化妆品的各种“第一”还能再宣传吗？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/DrgzMAxfz_awAyPDVwuRFQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 411,
+        "title": "中国皮肤学泰斗级专家，加入上美股份",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/sIh8-mKvZNNIG5dMgEDdbA",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 382,
         "title": "三个案例，解答高端美妆为何集体“奔赴”抖音电商",
@@ -1104,6 +1075,170 @@
         "keywords": []
       }
     ],
+    "非科学美妆传播": [
+      {
+        "id": 409,
+        "title": "兰蔻&amp;欧莱雅｜IJCS 2026｜小黑瓶升级中CM-β葡聚糖，补足了从免疫到修护抗老的完整功效验证",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/UcGbtIyUuv9qvfwwOfmmiQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 403,
+        "title": "LG｜MTBio 2026｜后秘贴精华中NAD+递送方案：离子耦合传递体复合物ICoN的设计方案和功能验证",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/yXHKfyP7Qm0ld0eamU5ZYA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 370,
+        "title": "Science 2026｜泛素样修饰蛋白角度，上皮干性维持和终末分化的平衡，是通过NEDD8/SUMO2拮抗的转录后蛋白质重塑来维持",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/Ki3vJf1xDDAWVSm9vOWoYw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 371,
+        "title": "京都大学&amp;LVMH｜SR 2026｜mRNA-encoded reporter系统的设计，实现线粒体相关的快速、高通量检测",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/t0lrWBPlf2cFC4w0g9PUBQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 218,
+        "title": "Natue Biotech 2026｜空间转录组学在细胞外囊泡EVs上的应用实例",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-28",
+        "url": "https://mp.weixin.qq.com/s/We5XYFMxAvpp9nPOh5a9Zg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 219,
+        "title": "Ashland｜SID 2026｜围绕线粒体肽Humanin的长寿护肤成分故事",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-27",
+        "url": "https://mp.weixin.qq.com/s/-S99nzs1OaPoD2HCdUG6xQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 222,
+        "title": "欧莱雅日本｜IJCS2025｜从晒斑照片来区分晒黑色斑和PIH色斑的方法开发：利用黑素、血红蛋白拟合光学密度模型来定量色斑中的血红蛋白含量",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/P7MhwUGI5qM_dswiBVDZDA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 223,
+        "title": "Nikkol日光&amp;欧莱雅日本｜Langmuir封面文章2026｜鼠李糖脂「去膜留菌」：仅剥离痤疮丙酸杆菌生物膜、保留细菌形态结构的机制探索",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/xajsvuI78pcZdEOMPxz1YA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 261,
+        "title": "雅诗兰黛｜Scale2026｜LaMer精华可同时改善玫瑰痤疮、AD湿疹和高敏感皮肤各自的皮肤问题",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/pO3mZAot4Mhad9DbZRH6Hg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 262,
+        "title": "Cosmax｜ACS Aenm 2026｜3%神经酰胺制备能「压电护肤」的乳霜，膏体揉搓时产生微电场，改善皮肤",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/QbADzDc0zLaETTlxI0Ydxg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 263,
+        "title": "Seppic｜Gels 2026｜多种生物多糖增稠剂x不同绿色乳化工艺的交叉研究，探索迎合未来需求的绿色乳化方案",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/2Ulwn4W2RA3k880At7eCZA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 264,
+        "title": "欧莱雅｜JDSS 2026｜海外复颜线的Triple Power保湿霜用于GLP-1司美脸的改善",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-21",
+        "url": "https://mp.weixin.qq.com/s/kh24aI1kJV4Vz1vRNIu91Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 265,
+        "title": "水羊&amp;农科院麻类所｜EUR FOOD RES TECHNOL 2026｜金银花双重发酵法，总多酚黄酮下降，抗氧能力反而提升",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-20",
+        "url": "https://mp.weixin.qq.com/s/etbFMunS_E2-TkzvPvadtQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 266,
+        "title": "Nature Health 2026｜大脑中微塑料来源的分析，化妆品使用是影响因素之一",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-19",
+        "url": "https://mp.weixin.qq.com/s/XuOg0J4o-X4_-h1QGg2fEg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 267,
+        "title": "Ciel&amp;日光｜JCCSJ 2022｜干燥带来NGF上调Sema3A下调，这可能带来神经伸长，从而解释皮肤进入高敏状态；SOD酶可逆转",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/3WmguSnni5_nb0djr9Kd0w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 268,
+        "title": "拜尔斯道夫&amp;UMG｜Clin Epigenetics 2026｜全表观基因组关联研究解析出甲基化位点中加速/延缓因子，并验证二氢杨梅素的调控甲基化衰老能力",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/LDA6RfFodJbf5p-nvuUP4w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 269,
+        "title": "溪木源SID&amp;相宜Pharmaceuticals｜均为皮质醇压力相关，对比阅读：溪木源山茶花可降低唾液皮质醇，相宜关注压力性皮肤色沉（如熬夜焦虑）",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/wk4oGkhDoO3P2gHtTphgQA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 270,
+        "title": "雅诗兰黛｜SID 2026｜植物外泌体可以调控日夜受损下的肌肤炎症反应，体外实验中，有类比人源外泌体的功效",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/PMC2yca_GTPkuajAydxUMQ",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "妆合规": [
       {
         "id": 406,
@@ -1251,6 +1386,24 @@
       }
     ],
     "肤见未来实验室": [
+      {
+        "id": 420,
+        "title": "指南与共识|美塑疗法在皮肤美容中应用的专家共识",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/gy8zfbfFcD-Xu8Gt7QzgMQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 421,
+        "title": "代谢衰老时钟：区分真实年龄与身体衰老状态",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/gEt8s8SFP86Hbvv_1lQ1Fw",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 391,
         "title": "全新合成三螺旋胶原，改善松弛、促进皮肤新生血管",
@@ -1490,6 +1643,24 @@
     ],
     "KEV美妆": [
       {
+        "id": 416,
+        "title": "雪花秀与润焕活睡眠面膜；绽妍胶原精华；ddg白桃卸妆膏4.0... | 新品速递",
+        "source": "KEV美妆",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/BQTyaxFxriNJs5mCfhgl-A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 417,
+        "title": "防晒杀了防晒 | 行业洞察",
+        "source": "KEV美妆",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/1Mea5XK1V7JmNhF_anoE1Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 388,
         "title": "橘朵「迷你」系列限定彩妆；阿玛尼腮红棒；卡姿兰黑磁PINK限定；黛庄双拼腮红棒... | 新品速递",
         "source": "KEV美妆",
@@ -1546,6 +1717,24 @@
     ],
     "妆研24小时": [
       {
+        "id": 407,
+        "title": "6月化妆品法规新动态 | 环境法规拟修订或影响成品合规，新原料风险分类调整利好原料创新…",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/LH37M0gMwG9V787N04SPiQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 408,
+        "title": "深圳维琪子公司备案新原料",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/K8PXXyiitTSjgMeO_Utplg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 372,
         "title": "祛斑美白产品注册全流程：常见失败原因与申报要点解析",
         "source": "妆研24小时",
@@ -1592,6 +1781,24 @@
       }
     ],
     "美业颜究院": [
+      {
+        "id": 418,
+        "title": "2026产品力颜究院年度创新榜单正式发布！这些好产品凭什么上榜？",
+        "source": "美业颜究院",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/YowNDzJCMYw0iR2wWIzYVw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 419,
+        "title": "把趋势变成优势 | 2026全球美业趋势创新大会圆满落幕！",
+        "source": "美业颜究院",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/M84VMfkWt8Gpumese3GrDg",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 242,
         "title": "倒计时4天！2026全球美业趋势创新大会议程请查收！顶级阵容集结，多维度拆解美业未来五年增长逻辑",
