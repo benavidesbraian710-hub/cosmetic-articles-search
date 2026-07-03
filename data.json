@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 219,
+    "total_articles": 220,
     "source_count": 12,
     "date_range": {
-      "start": "2026-05-28",
+      "start": "2026-03-06",
       "end": "2026-07-03"
     },
-    "last_update": "2026-07-03T18:49:24.613105"
+    "last_update": "2026-07-03T19:17:48.924146"
   },
   "sources": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "name": "化妆品观察 品观",
-      "count": 31
+      "count": 32
     },
     {
       "name": "中国化妆品",
@@ -698,6 +698,15 @@
         "source": "化妆品观察 品观",
         "publish_date": "2026-06-15",
         "url": "https://mp.weixin.qq.com/s/_WSJdmhHpCBtiOBpSPBzjg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 457,
+        "title": "化妆品研发全流程核心工具大全（2026更新）",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-03-06",
+        "url": "https://mp.weixin.qq.com/s/BXNDjWgtQQPfi-mKUuHJLA",
         "summary": "",
         "keywords": []
       }
