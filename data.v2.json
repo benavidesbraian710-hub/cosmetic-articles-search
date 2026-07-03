@@ -6,7 +6,7 @@
       "start": "2026-05-28",
       "end": "2026-07-03"
     },
-    "last_update": "2026-07-03T10:25:08.115629"
+    "last_update": "2026-07-03T11:35:52.353794"
   },
   "sources": [
     {
@@ -931,15 +931,6 @@
         "keywords": []
       },
       {
-        "id": 335,
-        "title": "Fbeauty未来迹 文章",
-        "source": "Fbeauty未来迹",
-        "publish_date": "2026-06-29",
-        "url": "https://mp.weixin.qq.com/s/wQbvV89hmLPrJ0uhQRpDJQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
         "id": 383,
         "title": "央视网深度探访！解码美业标杆樊文花逆势增长新范式",
         "source": "Fbeauty未来迹",
@@ -999,6 +990,15 @@
         "source": "Fbeauty未来迹",
         "publish_date": "2026-06-24",
         "url": "https://mp.weixin.qq.com/s/puzbXQ04s4npDYIBXs4XWQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 335,
+        "title": "高端美妆是怎么重写\"高端\"的？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/wQbvV89hmLPrJ0uhQRpDJQ",
         "summary": "",
         "keywords": []
       },
