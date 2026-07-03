@@ -219,17 +219,31 @@ async function callLLM(prompt) {
   const { execSync } = require('child_process');
   
   try {
-    const tempFile = `/tmp/llm_prompt_${Date.now()}.txt`;
-    fs.writeFileSync(tempFile, prompt, 'utf8');
+    // 将 prompt 中的特殊字符转义
+    const safePrompt = prompt.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n').replace(/\r/g, '');
     
+    // 调用 OpenClaw CLI - 使用 --prompt 参数直接传入
     const result = execSync(
-      `openclaw infer model run --model kimi-k2.6 --prompt-file ${tempFile}`,
-      { encoding: 'utf8', timeout: 30000 }
+      `openclaw infer model run --model kimi-k2.6 --prompt "${safePrompt}"`,
+      { encoding: 'utf8', timeout: 30000, maxBuffer: 1024 * 1024 }
     );
     
-    fs.unlinkSync(tempFile);
+    // 移除输出中的英文元数据行
+    let cleanResult = result.trim();
+    const lines = cleanResult.split('\n');
+    const filteredLines = lines.filter(line => {
+      // 过滤掉英文元数据行
+      if (line.startsWith('model.run') || 
+          line.startsWith('provider:') || 
+          line.startsWith('model:') || 
+          line.startsWith('outputs:') ||
+          line.trim() === '') {
+        return false;
+      }
+      return true;
+    });
     
-    return result.trim();
+    return filteredLines.join('\n').trim();
   } catch (err) {
     console.error('❌ 大模型调用失败:', err.message);
     throw err;
@@ -343,11 +357,11 @@ ${requests.map((req, i) => `${i+1}. ${req.sourceName || '全部'}, ${req.days ? 
 文章数据（共${allArticles.length}篇）：
 ${allArticles.map((a, i) => `${i+1}. 标题：${a.title}\n   公众号：${a.source}\n   日期：${a.publish_date}\n   链接：${a.url}`).join('\n')}
 
-请生成CSV格式内容，包含以下列：
+请生成CSV格式内容，包含以下列（使用中文表头）：
 序号,公众号,标题,发布日期,文章链接
 
 注意：
-1. 第一行是表头
+1. 第一行是中文表头：序号,公众号,标题,发布日期,文章链接
 2. 使用逗号分隔
 3. 标题中包含逗号的，用双引号包裹
 4. 不要输出任何其他文字，只输出CSV内容`;
@@ -357,7 +371,7 @@ ${allArticles.map((a, i) => `${i+1}. 标题：${a.title}\n   公众号：${a.sou
     return result.trim();
   } catch (err) {
     console.error('❌ 大模型生成Excel失败:', err.message);
-    // 降级：手动生成CSV
+    // 降级：手动生成CSV（中文表头）
     let csv = '序号,公众号,标题,发布日期,文章链接\n';
     allArticles.forEach((article, i) => {
       const title = article.title.includes(',') ? `"${article.title}"` : article.title;
@@ -377,15 +391,16 @@ async function generateReplyWithAI(allArticles, requests, email) {
 ${requests.map((req, i) => `${i+1}. 公众号：${req.sourceName || '全部'}, 时间：${req.days ? '最近'+req.days+'天' : '全部时间'}, 数量：${req.limit}篇`).join('\n')}
 
 找到文章（共${allArticles.length}篇）：
-${allArticles.slice(0, 5).map((a, i) => `${i+1}. ${a.title}（${a.source}，${a.publish_date}）`).join('\n')}
+${allArticles.slice(0, 5).map((a, i) => `${i+1}. ${a.title}（${a.source}，${a.publish_date}）\n   链接：${a.url}`).join('\n')}
 ${allArticles.length > 5 ? '\n...（共' + allArticles.length + '篇，详见附件）' : ''}
 
 要求：
 1. 语气友好、专业
 2. 说明查询条件和结果数量
-3. 列出前几篇文章的标题（最多5篇）
+3. 列出前几篇文章的标题（最多5篇），每篇后面附上可点击的链接
 4. 提示用户查看附件中的完整结果
 5. 简短，不要冗余
+6. 不要输出任何英文元数据（如 model.run、provider 等）
 
 请直接输出邮件正文（不要加标题、称呼等，直接输出正文内容）：`;
 
@@ -401,10 +416,6 @@ ${allArticles.length > 5 ? '\n...（共' + allArticles.length + '篇，详见附
       articleList += `   ${article.source} | ${article.publish_date}\n`;
       articleList += `   ${article.url}\n\n`;
     });
-
-    const querySummary = requests.map((req, i) => {
-      return `${i + 1}. ${req.sourceName || '全部公众号'}${req.days ? '（最近' + req.days + '天）' : ''} - ${req.limit}篇`;
-    }).join('\n');
 
     return `您好！\n\n已为您查询化妆品数据库，共找到 ${allArticles.length} 篇文章。${articleList}\n详细结果请查看附件中的 Excel 文件。\n\n---\n搜搜 - 您的化妆品信息猎犬 🔍\n处理时间：${new Date().toLocaleString('zh-CN')}\n`;
   }
