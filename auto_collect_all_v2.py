@@ -287,7 +287,26 @@ def main():
     # 3. 导出和推送
     export_and_push()
     
-    # 总结
+    # 4. 自动部署到 Vercel
+    print(f"\n{'='*60}")
+    print("正在部署到 Vercel...")
+    print('='*60)
+    result = subprocess.run(
+        ['vercel', '--prod', '--yes'],
+        cwd=str(GIT_PATH),
+        capture_output=True,
+        text=True,
+        timeout=120
+    )
+    if result.returncode == 0:
+        print("✅ Vercel 部署成功")
+        print(result.stdout[-500:] if len(result.stdout) > 500 else result.stdout)
+    else:
+        print("⚠️ Vercel 部署失败:")
+        print(result.stderr[-500:] if len(result.stderr) > 500 else result.stderr)
+        print("请手动部署: vercel --prod")
+    
+    # 5. 总结
     print(f"\n{'='*60}")
     print("采集完成!")
     print('='*60)
