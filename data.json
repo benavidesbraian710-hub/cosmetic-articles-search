@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 220,
+    "total_articles": 221,
     "source_count": 12,
     "date_range": {
-      "start": "2026-03-06",
+      "start": "2026-05-28",
       "end": "2026-07-03"
     },
-    "last_update": "2026-07-03T19:17:48.924146"
+    "last_update": "2026-07-03T19:42:55.455829"
   },
   "sources": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "name": "化妆品观察 品观",
-      "count": 32
+      "count": 33
     },
     {
       "name": "中国化妆品",
@@ -423,6 +423,24 @@
     ],
     "化妆品观察 品观": [
       {
+        "id": 458,
+        "title": "300+品牌产品人，为「有趣」创新奔赴而来",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/JJEtpd4wkbumR6Tca4CLIA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 459,
+        "title": "国货不是输了，是不玩了",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/hMiWLJadnDg54VAhmHWNiQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 422,
         "title": "我在",
         "source": "化妆品观察 品观",
@@ -698,15 +716,6 @@
         "source": "化妆品观察 品观",
         "publish_date": "2026-06-15",
         "url": "https://mp.weixin.qq.com/s/_WSJdmhHpCBtiOBpSPBzjg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 457,
-        "title": "化妆品研发全流程核心工具大全（2026更新）",
-        "source": "化妆品观察 品观",
-        "publish_date": "2026-03-06",
-        "url": "https://mp.weixin.qq.com/s/BXNDjWgtQQPfi-mKUuHJLA",
         "summary": "",
         "keywords": []
       }
