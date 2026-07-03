@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 198,
+    "total_articles": 192,
     "source_count": 12,
     "date_range": {
-      "start": "2026-05-28",
+      "start": "2026-06-15",
       "end": "2026-07-03"
     },
-    "last_update": "2026-07-03T11:40:43.955741"
+    "last_update": "2026-07-03T12:08:10.529111"
   },
   "sources": [
     {
@@ -31,7 +31,7 @@
     },
     {
       "name": "妆合规",
-      "count": 16
+      "count": 15
     },
     {
       "name": "肤见未来实验室",
@@ -51,11 +51,11 @@
     },
     {
       "name": "美业颜究院",
-      "count": 6
+      "count": 4
     },
     {
       "name": "上海日化协会",
-      "count": 4
+      "count": 1
     }
   ],
   "articles": {
@@ -1374,15 +1374,6 @@
         "url": "https://mp.weixin.qq.com/s/CnbNdyIcxgi3mSZnqDBsdw",
         "summary": "",
         "keywords": []
-      },
-      {
-        "id": 402,
-        "title": "CosReg接入DeepSeek V4，化妆品法规AI助手再升级！【小程序免费使用】",
-        "source": "妆合规",
-        "publish_date": "2026-06-11",
-        "url": "https://mp.weixin.qq.com/s/ql20Dr7pYFtP7E2f0guHHA",
-        "summary": "",
-        "keywords": []
       }
     ],
     "肤见未来实验室": [
@@ -1807,24 +1798,6 @@
         "url": "https://mp.weixin.qq.com/s/qYc_zV9KnU3JKzHZGP7HEA",
         "summary": "",
         "keywords": []
-      },
-      {
-        "id": 389,
-        "title": "2026全球美业趋势创新大会定档！6月26，我们上海见！",
-        "source": "美业颜究院",
-        "publish_date": "2026-06-13",
-        "url": "https://mp.weixin.qq.com/s/BLcLvfqNUK_9XBvKdkdAGg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 390,
-        "title": "6月26全球美业趋势创新大会：发布跨越16年的《趋势之书》，LeapSeek AI开品加速器，高密度趋势论坛！",
-        "source": "美业颜究院",
-        "publish_date": "2026-06-12",
-        "url": "https://mp.weixin.qq.com/s/5sI7sBvpLxkTiYlD590mbg",
-        "summary": "",
-        "keywords": []
       }
     ],
     "上海日化协会": [
@@ -1834,33 +1807,6 @@
         "source": "上海日化协会",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/mPUjfCboGkyYbJKnmr85vw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 399,
-        "title": "枫华聚汇，香化产业找到了它的坐标",
-        "source": "上海日化协会",
-        "publish_date": "2026-06-12",
-        "url": "https://mp.weixin.qq.com/s/-OybNueOfWaKjaX9UGtWQA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 400,
-        "title": "包装，正在重新定义日化产业竞争力——2026中国日化包装创新论坛即将启幕",
-        "source": "上海日化协会",
-        "publish_date": "2026-06-08",
-        "url": "https://mp.weixin.qq.com/s/VJM4r00_DzvjAJibSRIGTA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 401,
-        "title": "当“能量”成为护肤品的高频宣称：一份团标的起点",
-        "source": "上海日化协会",
-        "publish_date": "2026-05-28",
-        "url": "https://mp.weixin.qq.com/s/eUFjh1Q1cYFLVJxCZm1GYw",
         "summary": "",
         "keywords": []
       }
