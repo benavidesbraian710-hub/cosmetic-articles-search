@@ -165,7 +165,7 @@ def navigate_to_account(account_name: str):
     time.sleep(2)
     
     # 只有特定公众号需要点击第一个选项
-    if account_name in ["妆研24小时", "个护前沿", "中国化妆品"]:
+    if account_name in ["妆研24小时", "个护前沿", "中国化妆品", "化妆品观察 品观"]:
         print("点击第一个选项...")
         click(500, 223)
         time.sleep(2)  # 间隔2秒
