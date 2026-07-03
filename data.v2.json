@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 199,
+    "total_articles": 198,
     "source_count": 12,
     "date_range": {
       "start": "2026-05-28",
       "end": "2026-07-03"
     },
-    "last_update": "2026-07-03T11:35:52.353794"
+    "last_update": "2026-07-03T11:40:43.955741"
   },
   "sources": [
     {
@@ -35,7 +35,7 @@
     },
     {
       "name": "肤见未来实验室",
-      "count": 15
+      "count": 14
     },
     {
       "name": "原料合规观察",
@@ -1428,15 +1428,6 @@
         "source": "肤见未来实验室",
         "publish_date": "2026-06-29",
         "url": "https://mp.weixin.qq.com/s/RBsW54Q1RCmJk0LN0vzRXQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 249,
-        "title": "肤见未来实验室 文章",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-06-29",
-        "url": "https://mp.weixin.qq.com/s/_GO_oP68exBZBTNxWfkCKQ",
         "summary": "",
         "keywords": []
       },
