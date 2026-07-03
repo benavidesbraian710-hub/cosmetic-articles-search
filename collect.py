@@ -173,7 +173,7 @@ def navigate_to_account(account_name: str):
     print("点击'公众号'标签...")
     x, y = COORDS['public_account_tab']
     click(x, y)
-    time.sleep(1)
+    time.sleep(2)  # 间隔2秒
     
     print("✅ 进入公众号界面")
     return True  # 返回成功
@@ -193,7 +193,7 @@ def setup_filters(account_name: str = ""):
     
     print("点击搜索图标...")
     click(*COORDS['search_icon'])
-    time.sleep(0.5)
+    time.sleep(2)  # 间隔2秒
     
     print("点击'指定发布时间'...")
     click(*publish_time_coord)
