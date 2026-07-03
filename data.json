@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 210,
+    "total_articles": 219,
     "source_count": 12,
     "date_range": {
-      "start": "2026-06-15",
+      "start": "2026-05-28",
       "end": "2026-07-03"
     },
-    "last_update": "2026-07-03T14:19:53.620614"
+    "last_update": "2026-07-03T18:49:24.613105"
   },
   "sources": [
     {
@@ -19,7 +19,11 @@
     },
     {
       "name": "中国化妆品",
-      "count": 29
+      "count": 31
+    },
+    {
+      "name": "妆研24小时",
+      "count": 19
     },
     {
       "name": "Fbeauty未来迹",
@@ -30,12 +34,8 @@
       "count": 18
     },
     {
-      "name": "妆研24小时",
-      "count": 18
-    },
-    {
       "name": "妆合规",
-      "count": 15
+      "count": 17
     },
     {
       "name": "肤见未来实验室",
@@ -43,7 +43,7 @@
     },
     {
       "name": "原料合规观察",
-      "count": 13
+      "count": 14
     },
     {
       "name": "KEV美妆",
@@ -55,7 +55,7 @@
     },
     {
       "name": "上海日化协会",
-      "count": 1
+      "count": 4
     }
   ],
   "articles": {
@@ -704,6 +704,24 @@
     ],
     "中国化妆品": [
       {
+        "id": 452,
+        "title": "独家专访梅维平：中国美妆要超车，别总踩别人的脚印",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/xbnkaQF7e_TV0sH41kpr5w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 453,
+        "title": "安徽省六安市完成64批次化妆品抽样任务，发现异常19个；锐捷荣创完成Pre-A轮融资；花王旗下Oribe洗发水在北美地区自愿召回部分批次产品",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/xB44vYh4yayHx8eXaoZwHw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 426,
         "title": "从实验室到生产线：莱茵国际的植物科技“可信”之路  | 创新正当时",
         "source": "中国化妆品",
@@ -961,6 +979,179 @@
         "source": "中国化妆品",
         "publish_date": "2026-06-15",
         "url": "https://mp.weixin.qq.com/s/3A1hTHXIQohJ6dYSjLcEjw",
+        "summary": "",
+        "keywords": []
+      }
+    ],
+    "妆研24小时": [
+      {
+        "id": 448,
+        "title": "马来西亚公司备案一款新原料",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/C2p-AP5J3G9nCjbPXmLhwQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 407,
+        "title": "6月化妆品法规新动态 | 环境法规拟修订或影响成品合规，新原料风险分类调整利好原料创新…",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/LH37M0gMwG9V787N04SPiQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 408,
+        "title": "深圳维琪子公司备案新原料",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/K8PXXyiitTSjgMeO_Utplg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 372,
+        "title": "祛斑美白产品注册全流程：常见失败原因与申报要点解析",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/gjOBrTHpzgpAL9Zxfjuc4g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 366,
+        "title": "新钰生技、嘉文丽完成新原料备案",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/Z0Yzz5Ai9sngr7Fkq848tQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 367,
+        "title": "巨子生物首个新原料公示",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/f0yrwg7JT27mH4tjN_2APQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 368,
+        "title": "化妆品新原料的新分类落地！防脱发、祛痘、抗皱、去屑、除臭调低风险级别",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/DYHXM2AKCtkB65-nFXpdLA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 369,
+        "title": "相约PCT2026：瑞欧科技聚焦热门化妆品新原料申报策略（展位：B75）",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/x6VnKfzMBiMlZZCeiScBag",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 437,
+        "title": "珀莱雅备案一款新原料",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/IS7L6i0J151L3gyU7Co7Qg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 438,
+        "title": "贝泰妮子公司今年第6款新原料公示",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/04h3LVXxvllwEUGj-s2hFQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 439,
+        "title": "7月1日倒计时：中国台湾化妆品全面进入PIF时代，企业如何做好合规准备？",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/kIspznjXKUvxwtAj0lG0jQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 440,
+        "title": "南京企业备案一款新原料",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/sB7n2-4tSlZXPEMjEWLDuQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 441,
+        "title": "莹特丽又一新原料公示",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/s6igbdOxC_wcGd5krIET4w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 442,
+        "title": "INVIMA 专家解读！聚焦哥伦比亚化妆品法规与关键合规要求",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/pr0CTGTBJtrqimzXfZsknQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 443,
+        "title": "涉及1559个原料——建议化妆品企业关注生态环境部12号令修法变化",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/MPVWMf4uHxWJmt5myKi3RA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 444,
+        "title": "《化妆品唇炎判断标准及处理原则（征求意见稿）》等2项国标征求意见",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/Gbgpr0Tkytq_vTq_HeZ_1Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 445,
+        "title": "莹特丽重新备案一款聚合物原料",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/ORKg_IgFnUABpR3ribzoiQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 446,
+        "title": "新增4个境外企业新原料备案取消，2026年总取消备案数达14个",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/JlHBXQa2X60LTp5jMDGeOQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 447,
+        "title": "取消备案后重新申报：亚什兰新原料公示",
+        "source": "妆研24小时",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/xHuhp9l3godjag7Vav_XKQ",
         "summary": "",
         "keywords": []
       }
@@ -1302,171 +1493,25 @@
         "keywords": []
       }
     ],
-    "妆研24小时": [
-      {
-        "id": 407,
-        "title": "6月化妆品法规新动态 | 环境法规拟修订或影响成品合规，新原料风险分类调整利好原料创新…",
-        "source": "妆研24小时",
-        "publish_date": "2026-07-02",
-        "url": "https://mp.weixin.qq.com/s/LH37M0gMwG9V787N04SPiQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 408,
-        "title": "深圳维琪子公司备案新原料",
-        "source": "妆研24小时",
-        "publish_date": "2026-07-02",
-        "url": "https://mp.weixin.qq.com/s/K8PXXyiitTSjgMeO_Utplg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 372,
-        "title": "祛斑美白产品注册全流程：常见失败原因与申报要点解析",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-30",
-        "url": "https://mp.weixin.qq.com/s/gjOBrTHpzgpAL9Zxfjuc4g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 366,
-        "title": "新钰生技、嘉文丽完成新原料备案",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-29",
-        "url": "https://mp.weixin.qq.com/s/Z0Yzz5Ai9sngr7Fkq848tQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 367,
-        "title": "巨子生物首个新原料公示",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/f0yrwg7JT27mH4tjN_2APQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 368,
-        "title": "化妆品新原料的新分类落地！防脱发、祛痘、抗皱、去屑、除臭调低风险级别",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/DYHXM2AKCtkB65-nFXpdLA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 369,
-        "title": "相约PCT2026：瑞欧科技聚焦热门化妆品新原料申报策略（展位：B75）",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/x6VnKfzMBiMlZZCeiScBag",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 437,
-        "title": "珀莱雅备案一款新原料",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-24",
-        "url": "https://mp.weixin.qq.com/s/IS7L6i0J151L3gyU7Co7Qg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 438,
-        "title": "贝泰妮子公司今年第6款新原料公示",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-23",
-        "url": "https://mp.weixin.qq.com/s/04h3LVXxvllwEUGj-s2hFQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 439,
-        "title": "7月1日倒计时：中国台湾化妆品全面进入PIF时代，企业如何做好合规准备？",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-22",
-        "url": "https://mp.weixin.qq.com/s/kIspznjXKUvxwtAj0lG0jQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 440,
-        "title": "南京企业备案一款新原料",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-22",
-        "url": "https://mp.weixin.qq.com/s/sB7n2-4tSlZXPEMjEWLDuQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 441,
-        "title": "莹特丽又一新原料公示",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-18",
-        "url": "https://mp.weixin.qq.com/s/s6igbdOxC_wcGd5krIET4w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 442,
-        "title": "INVIMA 专家解读！聚焦哥伦比亚化妆品法规与关键合规要求",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-18",
-        "url": "https://mp.weixin.qq.com/s/pr0CTGTBJtrqimzXfZsknQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 443,
-        "title": "涉及1559个原料——建议化妆品企业关注生态环境部12号令修法变化",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-17",
-        "url": "https://mp.weixin.qq.com/s/MPVWMf4uHxWJmt5myKi3RA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 444,
-        "title": "《化妆品唇炎判断标准及处理原则（征求意见稿）》等2项国标征求意见",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-16",
-        "url": "https://mp.weixin.qq.com/s/Gbgpr0Tkytq_vTq_HeZ_1Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 445,
-        "title": "莹特丽重新备案一款聚合物原料",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-15",
-        "url": "https://mp.weixin.qq.com/s/ORKg_IgFnUABpR3ribzoiQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 446,
-        "title": "新增4个境外企业新原料备案取消，2026年总取消备案数达14个",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-15",
-        "url": "https://mp.weixin.qq.com/s/JlHBXQa2X60LTp5jMDGeOQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 447,
-        "title": "取消备案后重新申报：亚什兰新原料公示",
-        "source": "妆研24小时",
-        "publish_date": "2026-06-15",
-        "url": "https://mp.weixin.qq.com/s/xHuhp9l3godjag7Vav_XKQ",
-        "summary": "",
-        "keywords": []
-      }
-    ],
     "妆合规": [
+      {
+        "id": 450,
+        "title": "网络公开课(7月7日)：日本美妆市场准入双轨制——化妆品与医药部外品合规解析",
+        "source": "妆合规",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/JrXyeEqOZCgogYxA0UGjBA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 451,
+        "title": "2026年6月化妆品新原料备案最新情况分析报告",
+        "source": "妆合规",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/Iat81oK-dKm5r2gjO_ejRg",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 406,
         "title": "企业合规倒计时！欧盟香精过敏原扩充至81种",
@@ -1733,6 +1778,15 @@
     ],
     "原料合规观察": [
       {
+        "id": 449,
+        "title": "马来西亚企业首次备案新原料",
+        "source": "原料合规观察",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/xfhMjGj9SFmNoEVZeiX5Dg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 405,
         "title": "维琪科技子公司备案一款肽类新原料",
         "source": "原料合规观察",
@@ -1969,6 +2023,33 @@
         "source": "上海日化协会",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/mPUjfCboGkyYbJKnmr85vw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 454,
+        "title": "枫华聚汇，香化产业找到了它的坐标",
+        "source": "上海日化协会",
+        "publish_date": "2026-06-12",
+        "url": "https://mp.weixin.qq.com/s/-OybNueOfWaKjaX9UGtWQA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 455,
+        "title": "包装，正在重新定义日化产业竞争力——2026中国日化包装创新论坛即将启幕",
+        "source": "上海日化协会",
+        "publish_date": "2026-06-08",
+        "url": "https://mp.weixin.qq.com/s/VJM4r00_DzvjAJibSRIGTA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 456,
+        "title": "当“能量”成为护肤品的高频宣称：一份团标的起点",
+        "source": "上海日化协会",
+        "publish_date": "2026-05-28",
+        "url": "https://mp.weixin.qq.com/s/eUFjh1Q1cYFLVJxCZm1GYw",
         "summary": "",
         "keywords": []
       }
