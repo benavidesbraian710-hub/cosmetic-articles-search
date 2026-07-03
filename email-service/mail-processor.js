@@ -406,7 +406,7 @@ ${allArticles.length > 5 ? '\n...（共' + allArticles.length + '篇，详见附
       return `${i + 1}. ${req.sourceName || '全部公众号'}${req.days ? '（最近' + req.days + '天）' : ''} - ${req.limit}篇`;
     }).join('\n');
 
-    return `您好！\n\n已为您查询化妆品数据库：\n${querySummary}\n共找到 ${allArticles.length} 篇文章。${articleList}\n详细结果请查看附件中的 Excel 文件。\n\n---\n搜搜 - 您的化妆品信息猎犬 🔍\n处理时间：${new Date().toLocaleString('zh-CN')}\n`;
+    return `您好！\n\n已为您查询化妆品数据库，共找到 ${allArticles.length} 篇文章。${articleList}\n详细结果请查看附件中的 Excel 文件。\n\n---\n搜搜 - 您的化妆品信息猎犬 🔍\n处理时间：${new Date().toLocaleString('zh-CN')}\n`;
   }
 }
 
