@@ -86,7 +86,7 @@ def collect_links_batch(count_per_account: int = 4) -> dict:
             print(f"  [Skill] {line[:100]}")
         
         # 等待进程完成
-        process.wait(timeout=600)
+        process.wait(timeout=1800)
         
         print(f"Skill返回码: {process.returncode}")
         
@@ -122,7 +122,7 @@ def collect_links_batch(count_per_account: int = 4) -> dict:
         return all_links
         
     except subprocess.TimeoutExpired:
-        print(f"⚠️  批量采集超时")
+        print(f"⚠️  批量采集超时（30分钟）")
         process.kill()
         return {}
     except Exception as e:
