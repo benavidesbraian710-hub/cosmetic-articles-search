@@ -287,24 +287,29 @@ def main():
     # 3. 导出和推送
     export_and_push()
     
-    # 4. 自动部署到 Vercel
+    # 4. 自动部署到 Vercel (使用 Deploy Hook)
     print(f"\n{'='*60}")
     print("正在部署到 Vercel...")
     print('='*60)
-    result = subprocess.run(
-        ['vercel', '--prod', '--yes'],
-        cwd=str(GIT_PATH),
-        capture_output=True,
-        text=True,
-        timeout=120
-    )
-    if result.returncode == 0:
-        print("✅ Vercel 部署成功")
-        print(result.stdout[-500:] if len(result.stdout) > 500 else result.stdout)
+    
+    # 使用 Deploy Hook 触发自动部署
+    deploy_hook_url = os.environ.get('VERCEL_DEPLOY_HOOK', '')
+    if deploy_hook_url:
+        try:
+            import urllib.request
+            req = urllib.request.Request(deploy_hook_url, method='POST')
+            with urllib.request.urlopen(req, timeout=30) as response:
+                if response.status == 201:
+                    print("✅ Vercel 部署已触发 (Deploy Hook)")
+                else:
+                    print(f"⚠️ Deploy Hook 返回状态: {response.status}")
+        except Exception as e:
+            print(f"⚠️ Deploy Hook 触发失败: {e}")
+            print("请手动在 Vercel 控制台点击 Redeploy")
     else:
-        print("⚠️ Vercel 部署失败:")
-        print(result.stderr[-500:] if len(result.stderr) > 500 else result.stderr)
-        print("请手动部署: vercel --prod")
+        print("⚠️ 未配置 VERCEL_DEPLOY_HOOK 环境变量")
+        print("请配置后自动部署生效")
+        print("配置方法: export VERCEL_DEPLOY_HOOK='https://api.vercel.com/v1/integrations/deploy/...'")
     
     # 5. 总结
     print(f"\n{'='*60}")
