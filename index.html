@@ -143,10 +143,11 @@
             // 显示加载状态
             document.getElementById('stats').innerHTML = '<div>加载数据中...</div>';
             
-            // 使用更激进的时间戳破坏缓存
+            // 使用版本号强制刷新，避免CDN缓存
+            var version = 'v2';
             var cacheBuster = Date.now() + '_' + Math.random().toString(36).substr(2, 9);
             
-            fetch('data.json?t=' + cacheBuster)
+            fetch('data.' + version + '.json?t=' + cacheBuster)
                 .then(function(response) {
                     if (!response.ok) throw new Error('加载失败');
                     return response.json();
