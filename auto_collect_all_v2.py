@@ -18,6 +18,11 @@ from datetime import datetime
 from pathlib import Path
 
 # 公众号列表（12个）
+import os
+
+# Vercel Deploy Hook URL（用于自动部署）
+VERCEL_DEPLOY_HOOK = os.environ.get('VERCEL_DEPLOY_HOOK', 'https://api.vercel.com/v1/integrations/deploy/prj_YSlalkG8s0mnj6tOhT2x40NI5MNg/TYK5SZROD3')
+
 ACCOUNTS = [
     "妆研24小时",
     "非科学美妆传播", 
@@ -293,23 +298,19 @@ def main():
     print('='*60)
     
     # 使用 Deploy Hook 触发自动部署
-    deploy_hook_url = os.environ.get('VERCEL_DEPLOY_HOOK', '')
-    if deploy_hook_url:
-        try:
-            import urllib.request
-            req = urllib.request.Request(deploy_hook_url, method='POST')
-            with urllib.request.urlopen(req, timeout=30) as response:
-                if response.status == 201:
-                    print("✅ Vercel 部署已触发 (Deploy Hook)")
-                else:
-                    print(f"⚠️ Deploy Hook 返回状态: {response.status}")
-        except Exception as e:
-            print(f"⚠️ Deploy Hook 触发失败: {e}")
-            print("请手动在 Vercel 控制台点击 Redeploy")
-    else:
-        print("⚠️ 未配置 VERCEL_DEPLOY_HOOK 环境变量")
-        print("请配置后自动部署生效")
-        print("配置方法: export VERCEL_DEPLOY_HOOK='https://api.vercel.com/v1/integrations/deploy/...'")
+    try:
+        import urllib.request
+        req = urllib.request.Request(VERCEL_DEPLOY_HOOK, method='POST')
+        req.add_header('Content-Type', 'application/json')
+        with urllib.request.urlopen(req, timeout=30) as response:
+            if response.status == 201:
+                print("✅ Vercel 部署已触发 (Deploy Hook)")
+                print(f"   任务状态: {response.read().decode()}")
+            else:
+                print(f"⚠️ Deploy Hook 返回状态: {response.status}")
+    except Exception as e:
+        print(f"⚠️ Deploy Hook 触发失败: {e}")
+        print("请手动在 Vercel 控制台点击 Redeploy")
     
     # 5. 总结
     print(f"\n{'='*60}")
