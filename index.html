@@ -143,7 +143,10 @@
             // 显示加载状态
             document.getElementById('stats').innerHTML = '<div>加载数据中...</div>';
             
-            fetch('data.json?t=' + new Date().getTime())
+            // 使用更激进的时间戳破坏缓存
+            var cacheBuster = Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            
+            fetch('data.json?t=' + cacheBuster)
                 .then(function(response) {
                     if (!response.ok) throw new Error('加载失败');
                     return response.json();
@@ -412,6 +415,11 @@
         function refreshData() {
             selectedArticles.clear();
             updateExportButton();
+            // 强制清除缓存并重新加载
+            ARTICLE_DATA = null;
+            currentSource = null;
+            allArticles = [];
+            filteredArticles = [];
             loadData();
             if (currentSource) {
                 selectSource(currentSource);
