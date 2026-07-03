@@ -39,7 +39,7 @@ ACCOUNTS = [
 ]
 
 # 采集器路径
-COLLECTOR_PATH = Path.home() / ".openclaw/workspace/wechat-collector/skills/wechat-article-collector/scripts/collect.py"
+COLLECTOR_PATH = Path.home() / ".openclaw/workspace/cosmetic-deploy/collect.py"
 
 # 数据库路径
 DB_PATH = Path.home() / ".openclaw/cosmetic_articles.db"
