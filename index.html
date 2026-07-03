@@ -160,7 +160,7 @@
                     if (data.stats && data.stats.last_update) {
                         var updateTime = new Date(data.stats.last_update);
                         document.getElementById('updateInfo').textContent = 
-                            '数据更新: ' + updateTime.toLocaleString('zh-CN');
+                            '数据更新: ' + updateTime.toLocaleString('zh-CN') + ' (共' + data.stats.total_articles + '篇)';
                     }
                 })
                 .catch(function(error) {
