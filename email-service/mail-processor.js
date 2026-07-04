@@ -15,6 +15,7 @@ const nodemailer = require('nodemailer');
 const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
 const path = require('path');
+const logger = require('./logger');
 
 // 加载环境变量
 const scriptDir = __dirname;
@@ -523,8 +524,14 @@ async function generateEmptyReply(request, sourceStats) {
 
 // 处理单封邮件
 async function processSingleEmail(client, email) {
+  const startTime = Date.now();
+  const emailId = logger.generateEmailId(email.fromEmail, email.subject, startTime);
+  
   console.log('\n📨 处理邮件:', email.subject || '(无主题)');
   console.log('   来自:', email.from);
+  
+  // 记录邮件接收
+  logger.emailReceived(email.fromEmail, email.subject || '(无主题)', emailId);
   
   // 确保数据库连接
   if (!db) {
@@ -535,6 +542,9 @@ async function processSingleEmail(client, email) {
   const request = await parseRequestWithAI(email);
   console.log(`   📋 查询: ${request.sourceName || '全部'}, ${request.days ? request.days + '天' : '全部时间'}, ${request.limit}篇`);
   
+  // 记录AI解析结果
+  logger.emailParsed(request.sourceName, request.days, request.limit, emailId);
+  
   // 检查公众号是否存在
   let sourceNotFound = false;
   let allSources = [];
@@ -543,6 +553,7 @@ async function processSingleEmail(client, email) {
     allSources = await getAllSources();
     if (!allSources.includes(request.sourceName)) {
       sourceNotFound = true;
+      logger.warn(`公众号不存在: ${request.sourceName}`, emailId);
     }
   }
   
@@ -552,15 +563,20 @@ async function processSingleEmail(client, email) {
   if (sourceNotFound) {
     // 情况1：公众号不存在
     replyBody = await generateNotFoundReply(request, allSources);
+    logger.warn(`回复: 公众号不存在`, emailId);
   } else {
     // 查询数据库
     const articles = await getArticlesBySourceAndDate(request.sourceName, request.days, request.limit);
     console.log(`   📊 找到 ${articles.length} 篇文章`);
     
+    // 记录查询结果
+    logger.queryResult(articles.length, emailId);
+    
     if (articles.length === 0) {
       // 情况2：时间范围内无文章
       const sourceStats = await getSourceStats(request.sourceName);
       replyBody = await generateEmptyReply(request, sourceStats);
+      logger.warn(`回复: 时间范围内无文章`, emailId);
     } else {
       // 正常情况：生成Excel和回复
       const requests = [request];
@@ -571,8 +587,10 @@ async function processSingleEmail(client, email) {
         excelPath = path.join(__dirname, `search_result_${new Date().toISOString().slice(0, 10).replace(/-/g, '')}T${new Date().toTimeString().slice(0, 8).replace(/:/g, '')}.csv`);
         fs.writeFileSync(excelPath, '\uFEFF' + csvContent, 'utf8');
         console.log(`   ✅ Excel 生成: ${excelPath}`);
+        logger.excelGenerated(excelPath, emailId);
       } catch (err) {
         console.error('   ❌ Excel 生成失败:', err.message);
+        logger.error(`Excel生成失败: ${err.message}`, emailId);
       }
       
       // 生成回复邮件
@@ -581,10 +599,21 @@ async function processSingleEmail(client, email) {
   }
   
   // 发送回复
-  await sendReply(email.fromEmail, 'Re: ' + (email.subject || '化妆品文章查询'), replyBody, excelPath);
+  try {
+    await sendReply(email.fromEmail, 'Re: ' + (email.subject || '化妆品文章查询'), replyBody, excelPath);
+    logger.emailSent(email.fromEmail, true, emailId);
+  } catch (err) {
+    console.error('   ❌ 发送邮件失败:', err.message);
+    logger.emailSent(email.fromEmail, false, emailId);
+    logger.error(`发送邮件失败: ${err.message}`, emailId);
+  }
   
   // 标记已读
   await markAsRead(client, email.uid);
+  
+  // 记录处理完成
+  const duration = (Date.now() - startTime) / 1000;
+  logger.emailDone(duration, emailId);
   
   console.log('   ✅ 邮件处理完成');
 }
@@ -628,6 +657,7 @@ async function startIdleMode() {
     // 进入 IDLE 模式监听新邮件
     client.on('exists', async (data) => {
       console.log('📬 检测到新邮件！');
+      logger.info('检测到新邮件');
       const newMessages = await client.search({ unseen: true });
       for (const uid of newMessages) {
         const message = await client.fetchOne(uid, { source: true });
@@ -648,8 +678,10 @@ async function startIdleMode() {
     
   } catch (err) {
     console.error('❌ IMAP 错误:', err.message);
+    logger.error(`IMAP错误: ${err.message}`);
     if (client.usable) await client.logout();
     console.log('🔄 10秒后重新连接...');
+    logger.info('10秒后重新连接...');
     setTimeout(startIdleMode, 10000);
   }
 }
@@ -662,18 +694,22 @@ async function main() {
   console.log('📧 化妆品文章邮件处理系统');
   if (isCronMode) {
     console.log('⏰ 单次检查模式 (cron)');
+    logger.info('系统启动: 单次检查模式');
   } else {
     console.log('🚀 IMAP IDLE 实时模式');
+    logger.info('系统启动: IMAP IDLE 实时模式');
   }
   console.log('='.repeat(60));
   
   try {
     await openDatabase();
+    logger.info('数据库连接成功');
     
     if (isCronMode) {
       // 单次检查模式：处理所有未读邮件后退出
       await processUnreadEmails();
       await closeDatabase();
+      logger.info('单次检查完成，退出');
       console.log('✅ 单次检查完成，退出');
       process.exit(0);
     } else {
@@ -682,6 +718,7 @@ async function main() {
     }
   } catch (err) {
     console.error('❌ 错误:', err.message);
+    logger.error(`系统错误: ${err.message}`);
     await closeDatabase();
     if (isCronMode) process.exit(1);
   }
