@@ -53,14 +53,60 @@ let db = null;
 
 function openDatabase() {
   return new Promise((resolve, reject) => {
-    db = new sqlite3.Database(CONFIG.dbPath, sqlite3.OPEN_READONLY, (err) => {
+    // 检查数据库文件是否存在
+    if (!fs.existsSync(CONFIG.dbPath)) {
+      console.error('❌ 数据库文件不存在:', CONFIG.dbPath);
+      reject(new Error('数据库文件不存在'));
+      return;
+    }
+
+    // 检查数据库目录是否可写（WAL需要）
+    const dbDir = path.dirname(CONFIG.dbPath);
+    try {
+      fs.accessSync(dbDir, fs.constants.W_OK);
+    } catch (err) {
+      console.warn('⚠️ 数据库目录不可写（WAL模式需要）:', dbDir);
+    }
+
+    // 第一步：用读写模式连接，尝试启用 WAL
+    const tempDb = new sqlite3.Database(CONFIG.dbPath, sqlite3.OPEN_READWRITE, (err) => {
       if (err) {
-        console.error('❌ 数据库连接失败:', err.message);
-        reject(err);
-      } else {
-        console.log('✅ 数据库连接成功');
-        resolve(db);
+        console.warn('⚠️ 读写模式连接失败，尝试只读模式:', err.message);
+        // 如果读写模式失败，直接用只读模式
+        db = new sqlite3.Database(CONFIG.dbPath, sqlite3.OPEN_READONLY, (roErr) => {
+          if (roErr) {
+            console.error('❌ 只读数据库连接失败:', roErr.message);
+            reject(roErr);
+          } else {
+            console.log('✅ 数据库连接成功（只读模式，跳过WAL）');
+            resolve(db);
+          }
+        });
+        return;
       }
+      
+      // 尝试启用 WAL 模式
+      tempDb.run('PRAGMA journal_mode=WAL;', (walErr) => {
+        if (walErr) {
+          console.warn('⚠️ WAL 模式启用失败:', walErr.message);
+        } else {
+          console.log('✅ WAL 模式已启用');
+        }
+        
+        // 关闭读写连接
+        tempDb.close(() => {
+          // 第二步：用只读模式重新连接（邮件系统只需要读取）
+          db = new sqlite3.Database(CONFIG.dbPath, sqlite3.OPEN_READONLY, (roErr) => {
+            if (roErr) {
+              console.error('❌ 只读数据库连接失败:', roErr.message);
+              reject(roErr);
+            } else {
+              console.log('✅ 数据库连接成功（只读模式）');
+              resolve(db);
+            }
+          });
+        });
+      });
     });
   });
 }
@@ -610,17 +656,84 @@ async function startIdleMode() {
 
 // 主函数
 async function main() {
+  const isCronMode = process.argv.includes('--cron');
+  
   console.log('='.repeat(60));
   console.log('📧 化妆品文章邮件处理系统');
-  console.log('🚀 IMAP IDLE 实时模式');
+  if (isCronMode) {
+    console.log('⏰ 单次检查模式 (cron)');
+  } else {
+    console.log('🚀 IMAP IDLE 实时模式');
+  }
   console.log('='.repeat(60));
   
   try {
     await openDatabase();
-    await startIdleMode();
+    
+    if (isCronMode) {
+      // 单次检查模式：处理所有未读邮件后退出
+      await processUnreadEmails();
+      await closeDatabase();
+      console.log('✅ 单次检查完成，退出');
+      process.exit(0);
+    } else {
+      // 实时监听模式
+      await startIdleMode();
+    }
   } catch (err) {
     console.error('❌ 错误:', err.message);
     await closeDatabase();
+    if (isCronMode) process.exit(1);
+  }
+}
+
+// 单次检查并处理所有未读邮件
+async function processUnreadEmails() {
+  const client = new ImapFlow({
+    host: CONFIG.imap.host,
+    port: CONFIG.imap.port,
+    secure: CONFIG.imap.secure,
+    auth: CONFIG.imap.auth,
+    logger: false
+  });
+
+  try {
+    await client.connect();
+    await client.mailboxOpen('INBOX');
+    
+    console.log('📡 已连接到邮箱');
+    
+    // 搜索未读邮件
+    const messages = await client.search({ unseen: true });
+    console.log(`📬 发现 ${messages.length} 封未读邮件`);
+    
+    if (messages.length === 0) {
+      console.log('📭 没有新邮件，无需处理');
+      await client.logout();
+      return;
+    }
+    
+    for (const uid of messages) {
+      const message = await client.fetchOne(uid, { source: true });
+      if (message.source) {
+        const parsed = await simpleParser(message.source);
+        await processSingleEmail(client, {
+          uid,
+          from: parsed.from?.text || '',
+          fromEmail: parsed.from?.value?.[0]?.address || '',
+          subject: parsed.subject || '',
+          text: parsed.text || ''
+        });
+      }
+    }
+    
+    await client.logout();
+    console.log('✅ 所有未读邮件处理完成');
+    
+  } catch (err) {
+    console.error('❌ IMAP 错误:', err.message);
+    if (client.usable) await client.logout();
+    throw err;
   }
 }
 
