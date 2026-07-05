@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 231,
+    "total_articles": 228,
     "source_count": 12,
     "date_range": {
-      "start": "2026-05-28",
+      "start": "2026-06-15",
       "end": "2026-07-05"
     },
-    "last_update": "2026-07-05T13:57:40.863937"
+    "last_update": "2026-07-05T14:25:08.323317"
   },
   "sources": [
     {
@@ -55,7 +55,7 @@
     },
     {
       "name": "上海日化协会",
-      "count": 4
+      "count": 1
     }
   ],
   "articles": {
@@ -2131,33 +2131,6 @@
         "source": "上海日化协会",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/mPUjfCboGkyYbJKnmr85vw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 470,
-        "title": "枫华聚汇，香化产业找到了它的坐标",
-        "source": "上海日化协会",
-        "publish_date": "2026-06-12",
-        "url": "https://mp.weixin.qq.com/s/-OybNueOfWaKjaX9UGtWQA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 471,
-        "title": "包装，正在重新定义日化产业竞争力——2026中国日化包装创新论坛即将启幕",
-        "source": "上海日化协会",
-        "publish_date": "2026-06-08",
-        "url": "https://mp.weixin.qq.com/s/VJM4r00_DzvjAJibSRIGTA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 472,
-        "title": "当“能量”成为护肤品的高频宣称：一份团标的起点",
-        "source": "上海日化协会",
-        "publish_date": "2026-05-28",
-        "url": "https://mp.weixin.qq.com/s/eUFjh1Q1cYFLVJxCZm1GYw",
         "summary": "",
         "keywords": []
       }
