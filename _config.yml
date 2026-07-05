@@ -1,0 +1,6 @@
+# 禁用 Jekyll 处理，直接部署静态文件
+include:
+  - index.html
+  - data.json
+  - data.v8.json
+  - CNAME
