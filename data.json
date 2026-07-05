@@ -1,21 +1,21 @@
 {
   "stats": {
-    "total_articles": 223,
+    "total_articles": 231,
     "source_count": 12,
     "date_range": {
-      "start": "2026-06-15",
-      "end": "2026-07-04"
+      "start": "2026-05-28",
+      "end": "2026-07-05"
     },
-    "last_update": "2026-07-04T15:30:42.429797"
+    "last_update": "2026-07-05T13:57:40.863937"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 43
+      "count": 44
     },
     {
       "name": "化妆品观察 品观",
-      "count": 33
+      "count": 35
     },
     {
       "name": "中国化妆品",
@@ -23,11 +23,11 @@
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 20
+      "count": 21
     },
     {
       "name": "非科学美妆传播",
-      "count": 19
+      "count": 20
     },
     {
       "name": "妆研24小时",
@@ -55,11 +55,20 @@
     },
     {
       "name": "上海日化协会",
-      "count": 1
+      "count": 4
     }
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 467,
+        "title": "深度行研 | 光电医美进入三类械时代：谁会成为中国版能量源平台公司？",
+        "source": "个护前沿",
+        "publish_date": "2026-07-05",
+        "url": "https://mp.weixin.qq.com/s/KRUJeEx0Z-_p4ViMG0SG0A",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 462,
         "title": "不能再叫“药妆”，为什么巨头还在重仓皮肤科学护肤？",
@@ -449,6 +458,24 @@
       }
     ],
     "化妆品观察 品观": [
+      {
+        "id": 468,
+        "title": "靠颜值出圈的彩妆，没能活过第6年",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-05",
+        "url": "https://mp.weixin.qq.com/s/oAPqsXRd28nW2IwZU0IIQA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 469,
+        "title": "顶流回归！赫莲娜第六代绿宝瓶改写高端精华格局",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-04",
+        "url": "https://mp.weixin.qq.com/s/4QllT-s2hQSRw1N8HjYz_Q",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 458,
         "title": "300+品牌产品人，为「有趣」创新奔赴而来",
@@ -1030,6 +1057,15 @@
     ],
     "Fbeauty未来迹": [
       {
+        "id": 466,
+        "title": "大卖2.5亿，“凉感”美妆从夏季噱头变成长期机会？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-04",
+        "url": "https://mp.weixin.qq.com/s/xb4mAYZ8WRfAPmky5uhAHA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 461,
         "title": "全新第六代绿宝瓶，如何成为赫莲娜下一张科研王牌？",
         "source": "Fbeauty未来迹",
@@ -1211,6 +1247,15 @@
       }
     ],
     "非科学美妆传播": [
+      {
+        "id": 465,
+        "title": "Cosmax 2026｜后生元Untopinol中定量出环二肽Cyclo(Gly-Pro)，可通过抗炎改善特应性皮炎AD",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-04",
+        "url": "https://mp.weixin.qq.com/s/do6wMOgCfeA66tjOJEck8g",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 460,
         "title": "拜尔斯道夫｜Dermatol Ther 2026｜对面部的痤丙和表葡的综述，为活菌护肤做的基础研究积累的汇总",
@@ -2086,6 +2131,33 @@
         "source": "上海日化协会",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/mPUjfCboGkyYbJKnmr85vw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 470,
+        "title": "枫华聚汇，香化产业找到了它的坐标",
+        "source": "上海日化协会",
+        "publish_date": "2026-06-12",
+        "url": "https://mp.weixin.qq.com/s/-OybNueOfWaKjaX9UGtWQA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 471,
+        "title": "包装，正在重新定义日化产业竞争力——2026中国日化包装创新论坛即将启幕",
+        "source": "上海日化协会",
+        "publish_date": "2026-06-08",
+        "url": "https://mp.weixin.qq.com/s/VJM4r00_DzvjAJibSRIGTA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 472,
+        "title": "当“能量”成为护肤品的高频宣称：一份团标的起点",
+        "source": "上海日化协会",
+        "publish_date": "2026-05-28",
+        "url": "https://mp.weixin.qq.com/s/eUFjh1Q1cYFLVJxCZm1GYw",
         "summary": "",
         "keywords": []
       }
