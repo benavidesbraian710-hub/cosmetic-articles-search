@@ -190,13 +190,21 @@ def fetch_article_info(url: str) -> dict:
 
 
 def save_to_db(articles: list, wechat_name: str) -> int:
-    """保存文章到数据库，返回新增数量"""
+    """保存文章到数据库，返回新增数量。自动过滤6月15日之前文章。"""
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     
     added = 0
+    skipped_old = 0
+    
     for article in articles:
         if not article:
+            continue
+        
+        # 过滤6月15日之前文章
+        if article['publish_date'] and article['publish_date'] < '2026-06-15':
+            skipped_old += 1
+            print(f"  ⏭️  跳过(6月15日前): {article['title'][:50]}... | {article['publish_date']}")
             continue
         
         try:
@@ -211,6 +219,10 @@ def save_to_db(articles: list, wechat_name: str) -> int:
     
     conn.commit()
     conn.close()
+    
+    if skipped_old > 0:
+        print(f"  ⚠️  过滤 {skipped_old} 篇6月15日前文章")
+    
     return added
 
 
