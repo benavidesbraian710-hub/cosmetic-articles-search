@@ -372,7 +372,7 @@ function parseExcelAttachment(attachmentBuffer) {
         }
       }
       
-      // 提取数量限制（第三列，可选）
+      // 提取数量限制（第三列，可选）—— 默认999，不限制数量
       const limit = parseInt(row[2]) || 999;
       
       requests.push({
@@ -380,7 +380,7 @@ function parseExcelAttachment(attachmentBuffer) {
         days: days,
         startDate: startDate,
         endDate: endDate,
-        limit: limit
+        limit: 999  // 不限制数量，返回全部
       });
     }
     
