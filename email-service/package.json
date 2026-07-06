@@ -13,7 +13,8 @@
     "imapflow": "^1.0.164",
     "mailparser": "^3.7.2",
     "nodemailer": "^6.9.16",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "xlsx": "^0.18.5"
   },
   "keywords": [
     "email",
