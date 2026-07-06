@@ -17,6 +17,15 @@ const fs = require('fs');
 const path = require('path');
 const logger = require('./logger');
 
+// Excel解析支持
+let xlsx;
+try {
+  xlsx = require('xlsx');
+} catch (e) {
+  console.log('⚠️  xlsx模块未安装，Excel附件解析将不可用');
+  xlsx = null;
+}
+
 // 加载环境变量
 const scriptDir = __dirname;
 require('dotenv').config({ path: path.join(scriptDir, '.env') });
@@ -125,8 +134,8 @@ function closeDatabase() {
   });
 }
 
-// 查询文章
-function getArticlesBySourceAndDate(sourceName, days, limit = 10) {
+// 查询文章（支持startDate/endDate）
+function getArticlesBySourceAndDate(sourceName, days, limit, startDate, endDate) {
   return new Promise((resolve, reject) => {
     if (!db) {
       reject(new Error('数据库未连接'));
@@ -135,7 +144,17 @@ function getArticlesBySourceAndDate(sourceName, days, limit = 10) {
     
     let sql, params;
     
-    if (sourceName && days) {
+    if (sourceName && startDate && endDate) {
+      // 指定了开始和结束日期
+      sql = `
+        SELECT title, url, wechat_name as source, publish_date
+        FROM articles
+        WHERE wechat_name = ? AND publish_date >= ? AND publish_date <= ?
+        ORDER BY publish_date DESC
+        LIMIT ?
+      `;
+      params = [sourceName, startDate, endDate, limit || 999];
+    } else if (sourceName && days) {
       const endDate = new Date();
       const startDate = new Date();
       startDate.setDate(startDate.getDate() - days);
@@ -150,7 +169,7 @@ function getArticlesBySourceAndDate(sourceName, days, limit = 10) {
         ORDER BY publish_date DESC
         LIMIT ?
       `;
-      params = [sourceName, startStr, endStr, limit];
+      params = [sourceName, startStr, endStr, limit || 999];
     } else if (sourceName && !days) {
       sql = `
         SELECT title, url, wechat_name as source, publish_date
@@ -159,7 +178,7 @@ function getArticlesBySourceAndDate(sourceName, days, limit = 10) {
         ORDER BY publish_date DESC
         LIMIT ?
       `;
-      params = [sourceName, limit];
+      params = [sourceName, limit || 999];
     } else {
       sql = `
         SELECT title, url, wechat_name as source, publish_date
@@ -167,7 +186,7 @@ function getArticlesBySourceAndDate(sourceName, days, limit = 10) {
         ORDER BY publish_date DESC
         LIMIT ?
       `;
-      params = [limit];
+      params = [limit || 999];
     }
     
     db.all(sql, params, (err, rows) => {
@@ -304,7 +323,75 @@ async function callLLM(prompt) {
   }
 }
 
-// 解析邮件请求（使用AI）- 支持多公众号
+// 解析Excel附件，提取批量查询请求
+function parseExcelAttachment(attachmentBuffer) {
+  if (!xlsx) {
+    console.log('   ⚠️  xlsx模块未安装，无法解析Excel');
+    return null;
+  }
+  
+  try {
+    const workbook = xlsx.read(attachmentBuffer, { type: 'buffer' });
+    const sheetName = workbook.SheetNames[0];
+    const sheet = workbook.Sheets[sheetName];
+    
+    // 转换为JSON数组
+    const rows = xlsx.utils.sheet_to_json(sheet, { header: 1 });
+    
+    console.log(`   📊 Excel行数: ${rows.length}`);
+    
+    const requests = [];
+    
+    // 遍历每一行（跳过表头）
+    for (let i = 1; i < rows.length; i++) {
+      const row = rows[i];
+      if (!row || row.length === 0) continue;
+      
+      // 提取公众号名称（第一列）
+      const sourceName = String(row[0] || '').trim();
+      if (!sourceName) continue;
+      
+      // 提取时间范围（第二列）
+      const timeRange = String(row[1] || '').trim();
+      let days = null;
+      let startDate = null;
+      let endDate = null;
+      
+      if (timeRange) {
+        // 解析"最近X天"
+        const daysMatch = timeRange.match(/最近(\d+)天/);
+        if (daysMatch) {
+          days = parseInt(daysMatch[1]);
+        }
+        
+        // 解析"YYYY-MM-DD到YYYY-MM-DD"
+        const dateRangeMatch = timeRange.match(/(\d{4}-\d{2}-\d{2})[到~](\d{4}-\d{2}-\d{2})/);
+        if (dateRangeMatch) {
+          startDate = dateRangeMatch[1];
+          endDate = dateRangeMatch[2];
+        }
+      }
+      
+      // 提取数量限制（第三列，可选）
+      const limit = parseInt(row[2]) || 999;
+      
+      requests.push({
+        sourceName: sourceName,
+        days: days,
+        startDate: startDate,
+        endDate: endDate,
+        limit: limit
+      });
+    }
+    
+    console.log(`   ✅ 解析到 ${requests.length} 个查询请求`);
+    return requests;
+    
+  } catch (err) {
+    console.error('   ❌ Excel解析失败:', err.message);
+    return null;
+  }
+}
 async function parseRequestWithAI(email) {
   const content = `${email.subject} ${email.text}`.trim();
   
@@ -423,7 +510,9 @@ async function getArticlesBatch(requests) {
       const articles = await getArticlesBySourceAndDate(
         request.sourceName, 
         request.days, 
-        request.limit
+        request.limit,
+        request.startDate,
+        request.endDate
       );
       
       for (const article of articles) {
@@ -574,8 +663,26 @@ async function processSingleEmail(client, email) {
     await openDatabase();
   }
   
-  // 解析需求
-  const requests = await parseRequestWithAI(email);
+  // 解析需求（优先检查Excel附件）
+  let requests = null;
+  
+  // 检查是否有Excel附件
+  if (email.attachments && email.attachments.length > 0) {
+    const excelAttachment = email.attachments.find(att => 
+      att.filename && (att.filename.endsWith('.xlsx') || att.filename.endsWith('.xls'))
+    );
+    
+    if (excelAttachment && excelAttachment.content) {
+      console.log(`   📎 发现Excel附件: ${excelAttachment.filename}`);
+      requests = parseExcelAttachment(excelAttachment.content);
+    }
+  }
+  
+  // 如果没有Excel附件或解析失败，使用AI解析文本
+  if (!requests || requests.length === 0) {
+    requests = await parseRequestWithAI(email);
+  }
+  
   console.log(`   📋 解析到 ${requests.length} 个查询请求:`);
   requests.forEach((req, i) => {
     console.log(`      ${i+1}. ${req.sourceName || '全部'}, ${req.days ? req.days + '天' : '全部时间'}, ${req.limit}篇`);
