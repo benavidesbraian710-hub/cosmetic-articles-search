@@ -801,7 +801,8 @@ async function startIdleMode() {
             fromEmail: parsed.from?.value?.[0]?.address || '',
             subject: parsed.subject || '',
             text: parsed.text || '',
-            messageId: parsed.messageId || null
+            messageId: parsed.messageId || null,
+            attachments: parsed.attachments || []
           });
         }
       }
@@ -838,7 +839,8 @@ async function startIdleMode() {
             fromEmail: parsed.from?.value?.[0]?.address || '',
             subject: parsed.subject || '',
             text: parsed.text || '',
-            messageId: parsed.messageId || null
+            messageId: parsed.messageId || null,
+            attachments: parsed.attachments || []
           });
         }
       }
@@ -932,7 +934,8 @@ async function checkAndProcessEmails() {
           fromEmail: parsed.from?.value?.[0]?.address || '',
           subject: parsed.subject || '',
           text: parsed.text || '',
-            messageId: parsed.messageId || null
+            messageId: parsed.messageId || null,
+            attachments: parsed.attachments || []
         });
       }
     }
@@ -979,7 +982,8 @@ async function startIdleMode() {
             fromEmail: parsed.from?.value?.[0]?.address || '',
             subject: parsed.subject || '',
             text: parsed.text || '',
-            messageId: parsed.messageId || null
+            messageId: parsed.messageId || null,
+            attachments: parsed.attachments || []
           });
         }
       }
@@ -1016,7 +1020,8 @@ async function startIdleMode() {
             fromEmail: parsed.from?.value?.[0]?.address || '',
             subject: parsed.subject || '',
             text: parsed.text || '',
-            messageId: parsed.messageId || null
+            messageId: parsed.messageId || null,
+            attachments: parsed.attachments || []
           });
         }
       }
