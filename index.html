@@ -146,7 +146,7 @@
             // 加载数据，使用缓存破坏参数
             var cacheBuster = Date.now() + '_' + Math.random().toString(36).substr(2, 9);
             
-            fetch('data.v9.json?t=' + Date.now())
+            fetch('data.v10.json?t=' + Date.now())
                 .then(function(response) {
                     if (!response.ok) throw new Error('加载失败');
                     return response.json();
