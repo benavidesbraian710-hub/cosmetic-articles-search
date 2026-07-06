@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 228,
+    "total_articles": 236,
     "source_count": 12,
     "date_range": {
-      "start": "2026-06-15",
-      "end": "2026-07-05"
+      "start": "2026-05-28",
+      "end": "2026-07-06"
     },
-    "last_update": "2026-07-05T14:25:08.323317"
+    "last_update": "2026-07-06T11:02:09.890119"
   },
   "sources": [
     {
@@ -15,19 +15,19 @@
     },
     {
       "name": "化妆品观察 品观",
-      "count": 35
+      "count": 36
     },
     {
       "name": "中国化妆品",
-      "count": 31
+      "count": 32
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 21
+      "count": 22
     },
     {
       "name": "非科学美妆传播",
-      "count": 20
+      "count": 21
     },
     {
       "name": "妆研24小时",
@@ -39,7 +39,7 @@
     },
     {
       "name": "肤见未来实验室",
-      "count": 14
+      "count": 15
     },
     {
       "name": "原料合规观察",
@@ -55,7 +55,7 @@
     },
     {
       "name": "上海日化协会",
-      "count": 1
+      "count": 4
     }
   ],
   "articles": {
@@ -468,6 +468,15 @@
         "keywords": []
       },
       {
+        "id": 476,
+        "title": "160万撕开遮羞布，美业大地震来了",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-05",
+        "url": "https://mp.weixin.qq.com/s/gn5TCWtpFkCNvi0walAfLQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 469,
         "title": "顶流回归！赫莲娜第六代绿宝瓶改写高端精华格局",
         "source": "化妆品观察 品观",
@@ -776,6 +785,15 @@
     ],
     "中国化妆品": [
       {
+        "id": 477,
+        "title": "国家药监局就《化妆品标准管理办法（征求意见稿）》公开征求意见；五款化妆品新原料备案成功；香奈儿法国香水工厂投产",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-05",
+        "url": "https://mp.weixin.qq.com/s/yzGcG1bgouHWPOk2KwNz7g",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 452,
         "title": "独家专访梅维平：中国美妆要超车，别总踩别人的脚印",
         "source": "中国化妆品",
@@ -1057,6 +1075,15 @@
     ],
     "Fbeauty未来迹": [
       {
+        "id": 474,
+        "title": "爱马仕做美妆，为什么跑不快？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-05",
+        "url": "https://mp.weixin.qq.com/s/UAFrg62j_naNcMaramz38Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 466,
         "title": "大卖2.5亿，“凉感”美妆从夏季噱头变成长期机会？",
         "source": "Fbeauty未来迹",
@@ -1247,6 +1274,15 @@
       }
     ],
     "非科学美妆传播": [
+      {
+        "id": 473,
+        "title": "联合利华&amp;伦敦玛丽女王大学｜BJD 2026｜头屑下的头皮菌群失调会引起AhR抑制，在皮肤模型和头皮活检下证实该通路，指导未来抗头屑产品开发",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-05",
+        "url": "https://mp.weixin.qq.com/s/vdCL5sfyJQjAYZ-epG1acg",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 465,
         "title": "Cosmax 2026｜后生元Untopinol中定量出环二肽Cyclo(Gly-Pro)，可通过抗炎改善特应性皮炎AD",
@@ -1758,6 +1794,15 @@
     ],
     "肤见未来实验室": [
       {
+        "id": 475,
+        "title": "黄褐斑的真相：皮脂腺是“帮凶”",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/Ow0GrDHbrhGp3UhJRMYXkg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 420,
         "title": "指南与共识|美塑疗法在皮肤美容中应用的专家共识",
         "source": "肤见未来实验室",
@@ -2131,6 +2176,33 @@
         "source": "上海日化协会",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/mPUjfCboGkyYbJKnmr85vw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 478,
+        "title": "枫华聚汇，香化产业找到了它的坐标",
+        "source": "上海日化协会",
+        "publish_date": "2026-06-12",
+        "url": "https://mp.weixin.qq.com/s/-OybNueOfWaKjaX9UGtWQA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 479,
+        "title": "包装，正在重新定义日化产业竞争力——2026中国日化包装创新论坛即将启幕",
+        "source": "上海日化协会",
+        "publish_date": "2026-06-08",
+        "url": "https://mp.weixin.qq.com/s/VJM4r00_DzvjAJibSRIGTA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 480,
+        "title": "当“能量”成为护肤品的高频宣称：一份团标的起点",
+        "source": "上海日化协会",
+        "publish_date": "2026-05-28",
+        "url": "https://mp.weixin.qq.com/s/eUFjh1Q1cYFLVJxCZm1GYw",
         "summary": "",
         "keywords": []
       }
