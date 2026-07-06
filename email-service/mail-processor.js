@@ -562,7 +562,7 @@ async function generateReplyWithAI(allArticles, requests, email) {
 用户查询："${email.subject || '无主题'}"
 
 查询条件：
-${requests.map((req, i) => `${i+1}. 公众号：${req.sourceName || '全部'}, 时间：${req.days ? '最近'+req.days+'天' : '全部时间'}, 数量：${req.limit}篇`).join('\n')}
+${requests.map((req, i) => `${i+1}. 公众号：${req.sourceName || '全部'}, 时间：${req.days ? '最近'+req.days+'天' : (req.startDate ? req.startDate+'到'+req.endDate : '全部时间')}`).join('\n')}
 
 找到文章（共${allArticles.length}篇）：
 ${allArticles.slice(0, 5).map((a, i) => `${i+1}. ${a.title}（${a.source}，${a.publish_date}）\n   链接：${a.url}`).join('\n')}
@@ -575,6 +575,7 @@ ${allArticles.length > 5 ? '\n...（共' + allArticles.length + '篇，详见附
 4. 提示用户查看附件中的完整结果
 5. 简短，不要冗余
 6. 不要输出任何英文元数据（如 model.run、provider 等）
+7. 不要在回复中显示"999篇"或数量限制信息，只显示实际找到的文章数量
 
 请直接输出邮件正文（不要加标题、称呼等，直接输出正文内容）：`;
 
