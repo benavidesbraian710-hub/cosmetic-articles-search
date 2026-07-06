@@ -304,7 +304,7 @@ async function callLLM(prompt) {
   }
 }
 
-// 解析邮件请求（使用AI）
+// 解析邮件请求（使用AI）- 支持多公众号
 async function parseRequestWithAI(email) {
   const content = `${email.subject} ${email.text}`.trim();
   
@@ -316,7 +316,7 @@ async function parseRequestWithAI(email) {
 
 请仔细分析：
 1. 用户想要什么？（化妆品文章/资讯/报告）
-2. 用户是否指定了特定的公众号？
+2. 用户是否指定了特定的公众号？注意：用户可能用"、"、","、"和"、"以及"等连接多个公众号名称
 3. 用户想要多长时间范围的文章？
 4. 用户想要多少篇文章？
 
@@ -336,18 +336,31 @@ async function parseRequestWithAI(email) {
 
 请用 JSON 格式返回（不要添加任何其他文字）：
 {
-  "sourceName": "公众号名称或null",
-  "days": 数字,
-  "limit": 数字,
+  "requests": [
+    {"sourceName": "公众号名称", "days": 数字, "limit": 数字},
+    ...
+  ],
   "reason": "简要说明你的判断依据"
 }
 
 规则：
-- sourceName: 必须是上面列表中的名称，如果用户没有明确指定，返回null
+- sourceName: 必须是上面列表中的名称。如果用户没有明确指定，返回null表示全部公众号
 - days: 时间范围（天）。今天=1，昨天=2，本周/这周=7，上周=7，本月/这个月=30，上月=30，最近X天=X。如果没有明确时间，返回null（不限制时间）
-- limit: 文章数量。如果没有明确数量，默认10篇
+- limit: 文章数量。如果没有明确数量，默认10篇。如果用户说"全部"或"所有"，返回999
 - 如果用户说"最新X篇"、"前X篇"，只限制数量，不限制时间（days=null）
-- 如果用户说"全部"、"所有"，limit=999，days=null（不限制时间）`;
+- 如果用户指定了多个公众号，每个公众号作为一个独立的请求对象
+- 如果用户说"全部公众号"或"所有公众号"，只返回一个请求：sourceName=null
+- 如果用户说"A和B"、"A,B"、"A、B"，返回多个请求分别对应A和B
+
+示例：
+输入："我需要最近3天 个护前沿，中国化妆品的文章"
+输出：{"requests": [{"sourceName": "个护前沿", "days": 3, "limit": 10}, {"sourceName": "中国化妆品", "days": 3, "limit": 10}], "reason": "用户指定了两个公众号"}
+
+输入："我要最近3天的文章"
+输出：{"requests": [{"sourceName": null, "days": 3, "limit": 10}], "reason": "用户没有指定公众号，查询全部"}
+
+输入："我要个护前沿的最新5篇"
+输出：{"requests": [{"sourceName": "个护前沿", "days": null, "limit": 5}], "reason": "用户指定了公众号和数量，不限时间"}`;
 
   try {
     const result = await callLLM(prompt);
@@ -360,17 +373,27 @@ async function parseRequestWithAI(email) {
       }
     } catch (e) {
       console.error('   ❌ JSON解析失败，使用默认配置');
-      parsed = { sourceName: null, days: null, limit: 10 };
+      parsed = { requests: [{ sourceName: null, days: null, limit: 10 }] };
     }
     
-    return {
+    // 返回数组格式，兼容单请求和多请求
+    if (parsed && parsed.requests && Array.isArray(parsed.requests)) {
+      return parsed.requests.map(req => ({
+        sourceName: req.sourceName || null,
+        days: req.days || null,
+        limit: req.limit || 10
+      }));
+    }
+    
+    // 兼容旧格式（单对象）
+    return [{
       sourceName: parsed.sourceName || null,
       days: parsed.days || null,
       limit: parsed.limit || 10
-    };
+    }];
   } catch (err) {
     console.error('   ❌ AI解析失败:', err.message);
-    return { sourceName: null, days: null, limit: 10 };
+    return [{ sourceName: null, days: null, limit: 10 }];
   }
 }
 
@@ -394,7 +417,7 @@ async function getArticlesBatch(requests) {
       
       allArticles.push(...articles);
     } catch (err) {
-      console.error(`❌ 查询 ${request.sourceName} 失败:`, err.message);
+      console.error("❌ 查询 " + request.sourceName + " 失败:", err.message);
     }
   }
   
@@ -403,22 +426,7 @@ async function getArticlesBatch(requests) {
 
 // 生成Excel内容
 async function generateExcelWithAI(allArticles, requests) {
-  const prompt = `你是一个数据整理助手。请将以下化妆品文章数据整理成CSV格式。
-
-查询条件：
-${requests.map((req, i) => `${i+1}. ${req.sourceName || '全部'}, ${req.days ? '最近'+req.days+'天' : '全部时间'}, ${req.limit}篇`).join('\n')}
-
-文章数据（共${allArticles.length}篇）：
-${allArticles.map((a, i) => `${i+1}. 标题：${a.title}\n   公众号：${a.source}\n   日期：${a.publish_date}\n   链接：${a.url}`).join('\n')}
-
-请生成CSV格式内容，包含以下列（使用中文表头）：
-序号,公众号,标题,发布日期,文章链接
-
-注意：
-1. 第一行是中文表头：序号,公众号,标题,发布日期,文章链接
-2. 使用逗号分隔
-3. 标题中包含逗号的，用双引号包裹
-4. 不要输出任何其他文字，只输出CSV内容`;
+  const prompt = "你是一个数据整理助手。请将以下化妆品文章数据整理成CSV格式。\n\n查询条件：\n" + requests.map((req, i) => `${i+1}. ${req.sourceName || '全部'}, ${req.days ? '最近'+req.days+'天' : '全部时间'}, ${req.limit}篇`).join('\n') + "\n\n文章数据（共" + allArticles.length + "篇）：\n" + allArticles.map((a, i) => `${i+1}. 标题：${a.title}\n   公众号：${a.source}\n   日期：${a.publish_date}\n   链接：${a.url}`).join('\n') + "\n\n请生成CSV格式内容，包含以下列（使用中文表头）：\n序号,公众号,标题,发布日期,文章链接\n\n注意：\n1. 第一行是中文表头：序号,公众号,标题,发布日期,文章链接\n2. 使用逗号分隔\n3. 标题中包含逗号的，用双引号包裹\n4. 不要输出任何其他文字，只输出CSV内容";
 
   try {
     const result = await callLLM(prompt);
@@ -550,34 +558,39 @@ async function processSingleEmail(client, email) {
   }
   
   // 解析需求
-  const request = await parseRequestWithAI(email);
-  console.log(`   📋 查询: ${request.sourceName || '全部'}, ${request.days ? request.days + '天' : '全部时间'}, ${request.limit}篇`);
+  const requests = await parseRequestWithAI(email);
+  console.log(`   📋 解析到 ${requests.length} 个查询请求:`);
+  requests.forEach((req, i) => {
+    console.log(`      ${i+1}. ${req.sourceName || '全部'}, ${req.days ? req.days + '天' : '全部时间'}, ${req.limit}篇`);
+  });
   
-  // 记录AI解析结果
-  logger.emailParsed(request.sourceName, request.days, request.limit, emailId);
+  // 记录AI解析结果（记录第一个请求）
+  logger.emailParsed(requests[0].sourceName, requests[0].days, requests[0].limit, emailId);
   
   // 检查公众号是否存在
-  let sourceNotFound = false;
-  let allSources = [];
+  const allSources = await getAllSources();
+  const validRequests = [];
+  const invalidRequests = [];
   
-  if (request.sourceName) {
-    allSources = await getAllSources();
-    if (!allSources.includes(request.sourceName)) {
-      sourceNotFound = true;
+  for (const request of requests) {
+    if (request.sourceName && !allSources.includes(request.sourceName)) {
+      invalidRequests.push(request);
       logger.warn(`公众号不存在: ${request.sourceName}`, emailId);
+    } else {
+      validRequests.push(request);
     }
   }
   
   let replyBody = '';
   let excelPath = null;
   
-  if (sourceNotFound) {
-    // 情况1：公众号不存在
-    replyBody = await generateNotFoundReply(request, allSources);
-    logger.warn(`回复: 公众号不存在`, emailId);
+  if (validRequests.length === 0) {
+    // 情况1：所有公众号都不存在
+    replyBody = await generateNotFoundReply(invalidRequests[0], allSources);
+    logger.warn(`回复: 所有公众号不存在`, emailId);
   } else {
-    // 查询数据库
-    const articles = await getArticlesBySourceAndDate(request.sourceName, request.days, request.limit);
+    // 查询数据库（批量查询）
+    const articles = await getArticlesBatch(validRequests);
     console.log(`   📊 找到 ${articles.length} 篇文章`);
     
     // 记录查询结果
@@ -585,16 +598,13 @@ async function processSingleEmail(client, email) {
     
     if (articles.length === 0) {
       // 情况2：时间范围内无文章
-      const sourceStats = await getSourceStats(request.sourceName);
-      replyBody = await generateEmptyReply(request, sourceStats);
-      logger.warn(`回复: 时间范围内无文章`, emailId);
+      const sourceStats = await getSourceStats(validRequests[0].sourceName);
+      replyBody = await generateEmptyReply(validRequests[0], sourceStats);
+      logger.info(`回复: 时间范围内无文章`, emailId);
     } else {
-      // 正常情况：生成Excel和回复
-      const requests = [request];
-      
-      // 生成Excel
+      // 情况3：有结果，生成Excel和回复
       try {
-        const csvContent = await generateExcelWithAI(articles, requests);
+        const csvContent = await generateExcelWithAI(articles, validRequests);
         excelPath = path.join(__dirname, `search_result_${new Date().toISOString().slice(0, 10).replace(/-/g, '')}T${new Date().toTimeString().slice(0, 8).replace(/:/g, '')}.csv`);
         fs.writeFileSync(excelPath, '\uFEFF' + csvContent, 'utf8');
         console.log(`   ✅ Excel 生成: ${excelPath}`);
@@ -605,8 +615,14 @@ async function processSingleEmail(client, email) {
       }
       
       // 生成回复邮件
-      replyBody = await generateReplyWithAI(articles, requests, email);
+      replyBody = await generateReplyWithAI(articles, validRequests, email);
     }
+  }
+  
+  // 如果有不存在的公众号，在回复中提示
+  if (invalidRequests.length > 0) {
+    const invalidNames = invalidRequests.map(r => r.sourceName).join('、');
+    replyBody += `\n\n⚠️ 温馨提示：您查询的【${invalidNames}】不在当前采集范围内，已为您跳过。当前已采集的公众号包括：\n${allSources.map(s => `• ${s}`).join('\n')}`;
   }
   
   // 发送回复
