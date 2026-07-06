@@ -347,12 +347,12 @@ function parseExcelAttachment(attachmentBuffer) {
       const row = rows[i];
       if (!row || row.length === 0) continue;
       
-      // 提取公众号名称（第一列）
-      const sourceName = String(row[0] || '').trim();
-      if (!sourceName) continue;
+      // 提取公众号名称（第二列，索引1）
+      const sourceName = String(row[1] || '').trim();
+      if (!sourceName || sourceName === '公众号名称') continue;
       
-      // 提取时间范围（第二列）
-      const timeRange = String(row[1] || '').trim();
+      // 提取时间范围（第三列，索引2）
+      const timeRange = String(row[2] || '').trim();
       let days = null;
       let startDate = null;
       let endDate = null;
