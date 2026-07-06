@@ -618,6 +618,49 @@ async function processSingleEmail(client, email) {
   console.log('   ✅ 邮件处理完成');
 }
 
+// 检查并处理所有未读邮件（用于 cron 模式）
+async function checkAndProcessEmails() {
+  const client = new ImapFlow({
+    host: CONFIG.imap.host,
+    port: CONFIG.imap.port,
+    secure: CONFIG.imap.secure,
+    auth: CONFIG.imap.auth,
+    logger: false
+  });
+
+  try {
+    await client.connect();
+    await client.mailboxOpen('INBOX');
+    
+    // 处理现有未读邮件
+    const messages = await client.search({ unseen: true });
+    if (messages.length > 0) {
+      console.log(`📬 发现 ${messages.length} 封未读邮件`);
+      for (const uid of messages) {
+        const message = await client.fetchOne(uid, { source: true });
+        if (message.source) {
+          const parsed = await simpleParser(message.source);
+          await processSingleEmail(client, {
+            uid,
+            from: parsed.from?.text || '',
+            fromEmail: parsed.from?.value?.[0]?.address || '',
+            subject: parsed.subject || '',
+            text: parsed.text || ''
+          });
+        }
+      }
+    } else {
+      console.log('📭 没有新邮件');
+    }
+    
+    await client.logout();
+  } catch (err) {
+    console.error('❌ IMAP 错误:', err.message);
+    logger.error(`IMAP错误: ${err.message}`);
+    if (client.usable) await client.logout();
+  }
+}
+
 // IMAP IDLE 模式
 async function startIdleMode() {
   const client = new ImapFlow({
@@ -632,6 +675,16 @@ async function startIdleMode() {
     await client.connect();
     await client.mailboxOpen('INBOX');
     
+    // 检测 cron 模式：环境变量 OPENCLAW_CRON 存在时，只执行一次检查然后退出
+    const isCronMode = process.env.OPENCLAW_CRON === '1';
+    if (isCronMode) {
+        console.log('🔔 [Cron 模式] 执行单次邮件检查...');
+        await checkAndProcessEmails();
+        console.log('✅ [Cron 模式] 检查完成，退出。');
+        process.exit(0);
+    }
+
+    // 正常模式：启动 IDLE 监听
     console.log('📡 IMAP IDLE 模式已启动');
     console.log('⏰ 实时监听中...');
     
