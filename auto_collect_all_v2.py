@@ -215,18 +215,69 @@ def save_to_db(articles: list, wechat_name: str) -> int:
 
 
 def export_and_push():
-    """导出数据并推送到GitHub"""
+    """导出数据并推送到GitHub，自动处理Vercel缓存问题"""
     print(f"\n{'='*60}")
     print("导出数据并推送...")
     print('='*60)
     
+    # 1. 运行导出脚本
     cmd = ["python3", str(EXPORT_PATH)]
     result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
     print(result.stdout)
+    if result.returncode != 0:
+        print(f"❌ 导出失败: {result.stderr}")
+        return False
     
+    # 2. 获取当前版本号并递增
+    git_path = Path.home() / ".openclaw/workspace/cosmetic-deploy"
+    index_html = git_path / "index.html"
+    
+    # 读取 index.html 找到当前版本
+    html_content = index_html.read_text(encoding='utf-8')
+    
+    # 查找当前版本号 (data.vX.json)
+    import re
+    version_match = re.search(r"data\.v(\d+)\.json", html_content)
+    if version_match:
+        current_version = int(version_match.group(1))
+        new_version = current_version + 1
+    else:
+        # 如果没有版本号，从 data.json 开始
+        new_version = 1
+    
+    old_filename = f"data.v{current_version}.json" if version_match else "data.json"
+    new_filename = f"data.v{new_version}.json"
+    
+    print(f"📦 版本更新: {old_filename} → {new_filename}")
+    
+    # 3. 重命名 data.json 为新版本
+    data_json = git_path / "data.json"
+    new_data_file = git_path / new_filename
+    
+    if data_json.exists():
+        # 如果存在旧版本，删除它
+        old_data_file = git_path / old_filename
+        if old_data_file.exists() and old_data_file != data_json:
+            old_data_file.unlink()
+            print(f"🗑️  删除旧版本: {old_filename}")
+        
+        # 复制为新版本
+        import shutil
+        shutil.copy2(data_json, new_data_file)
+        print(f"✅ 创建新版本: {new_filename}")
+    else:
+        print(f"❌ data.json 不存在")
+        return False
+    
+    # 4. 更新 index.html 加载路径
+    updated_html = html_content.replace(old_filename, new_filename)
+    index_html.write_text(updated_html, encoding='utf-8')
+    print(f"✅ 更新 index.html 加载路径: {new_filename}")
+    
+    # 5. Git 提交和推送
     git_cmds = [
-        ["git", "add", "data.json"],
-        ["git", "commit", "-m", f"数据更新: {datetime.now().strftime('%Y-%m-%d %H:%M')}"],
+        ["git", "add", "-A"],
+        ["git", "commit", "-m", f"data: update to v{new_version} ({datetime.now().strftime('%Y-%m-%d %H:%M')})"],
         ["git", "push", "origin", "main"]
     ]
     
@@ -235,8 +286,12 @@ def export_and_push():
         if result.returncode != 0:
             print(f"Git 命令失败: {cmd}")
             print(result.stderr)
+            return False
         else:
-            print(result.stdout)
+            print(result.stdout.strip())
+    
+    print(f"✅ 推送完成: {new_filename}")
+    return True
 
 
 def main():
@@ -289,8 +344,12 @@ def main():
             print(f"等待 3 秒...")
             time.sleep(3)
     
-    # 3. 导出和推送
-    export_and_push()
+    # 3. 导出和推送（自动处理版本号）
+    push_success = export_and_push()
+    
+    if not push_success:
+        print("❌ Git 推送失败，跳过 Vercel 部署")
+        return
     
     # 4. 自动部署到 Vercel (使用 Deploy Hook)
     print(f"\n{'='*60}")
