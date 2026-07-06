@@ -618,49 +618,6 @@ async function processSingleEmail(client, email) {
   console.log('   ✅ 邮件处理完成');
 }
 
-// 检查并处理所有未读邮件（用于 cron 模式）
-async function checkAndProcessEmails() {
-  const client = new ImapFlow({
-    host: CONFIG.imap.host,
-    port: CONFIG.imap.port,
-    secure: CONFIG.imap.secure,
-    auth: CONFIG.imap.auth,
-    logger: false
-  });
-
-  try {
-    await client.connect();
-    await client.mailboxOpen('INBOX');
-    
-    // 处理现有未读邮件
-    const messages = await client.search({ unseen: true });
-    if (messages.length > 0) {
-      console.log(`📬 发现 ${messages.length} 封未读邮件`);
-      for (const uid of messages) {
-        const message = await client.fetchOne(uid, { source: true });
-        if (message.source) {
-          const parsed = await simpleParser(message.source);
-          await processSingleEmail(client, {
-            uid,
-            from: parsed.from?.text || '',
-            fromEmail: parsed.from?.value?.[0]?.address || '',
-            subject: parsed.subject || '',
-            text: parsed.text || ''
-          });
-        }
-      }
-    } else {
-      console.log('📭 没有新邮件');
-    }
-    
-    await client.logout();
-  } catch (err) {
-    console.error('❌ IMAP 错误:', err.message);
-    logger.error(`IMAP错误: ${err.message}`);
-    if (client.usable) await client.logout();
-  }
-}
-
 // IMAP IDLE 模式
 async function startIdleMode() {
   const client = new ImapFlow({
@@ -734,7 +691,6 @@ async function startIdleMode() {
 async function main() {
   // 修复：优先检查环境变量，兼容 cron 任务传递的 OPENCLAW_CRON
   // 同时支持 --cron 命令行参数
-  // 额外检测：检查是否通过 cron 触发（通过 OPENCLAW_CRON 环境变量或 --cron 参数）
   const isCronMode = process.env.OPENCLAW_CRON === '1' || process.argv.includes('--cron');
   
   console.log('='.repeat(60));
@@ -754,7 +710,7 @@ async function main() {
     
     if (isCronMode) {
       // 单次检查模式：处理所有未读邮件后退出
-      await processUnreadEmails();
+      await checkAndProcessEmails();
       await closeDatabase();
       logger.info('单次检查完成，退出');
       console.log('✅ 单次检查完成，退出');
@@ -771,8 +727,8 @@ async function main() {
   }
 }
 
-// 单次检查并处理所有未读邮件
-async function processUnreadEmails() {
+// 单次检查并处理所有未读邮件（用于 cron 模式）
+async function checkAndProcessEmails() {
   const client = new ImapFlow({
     host: CONFIG.imap.host,
     port: CONFIG.imap.port,
@@ -818,6 +774,75 @@ async function processUnreadEmails() {
     console.error('❌ IMAP 错误:', err.message);
     if (client.usable) await client.logout();
     throw err;
+  }
+}
+
+// IMAP IDLE 模式
+async function startIdleMode() {
+  const client = new ImapFlow({
+    host: CONFIG.imap.host,
+    port: CONFIG.imap.port,
+    secure: CONFIG.imap.secure,
+    auth: CONFIG.imap.auth,
+    logger: false
+  });
+
+  try {
+    await client.connect();
+    await client.mailboxOpen('INBOX');
+    
+    // 正常模式：启动 IDLE 监听
+    console.log('📡 IMAP IDLE 模式已启动');
+    console.log('⏰ 实时监听中...');
+    
+    // 先处理现有未读邮件
+    const messages = await client.search({ unseen: true });
+    if (messages.length > 0) {
+      console.log(`📬 发现 ${messages.length} 封未读邮件`);
+      for (const uid of messages) {
+        const message = await client.fetchOne(uid, { source: true });
+        if (message.source) {
+          const parsed = await simpleParser(message.source);
+          await processSingleEmail(client, {
+            uid,
+            from: parsed.from?.text || '',
+            fromEmail: parsed.from?.value?.[0]?.address || '',
+            subject: parsed.subject || '',
+            text: parsed.text || ''
+          });
+        }
+      }
+    }
+    
+    // 进入 IDLE 模式监听新邮件
+    client.on('exists', async (data) => {
+      console.log('📬 检测到新邮件！');
+      logger.info('检测到新邮件');
+      const newMessages = await client.search({ unseen: true });
+      for (const uid of newMessages) {
+        const message = await client.fetchOne(uid, { source: true });
+        if (message.source) {
+          const parsed = await simpleParser(message.source);
+          await processSingleEmail(client, {
+            uid,
+            from: parsed.from?.text || '',
+            fromEmail: parsed.from?.value?.[0]?.address || '',
+            subject: parsed.subject || '',
+            text: parsed.text || ''
+          });
+        }
+      }
+    });
+    
+    await client.idle();
+    
+  } catch (err) {
+    console.error('❌ IMAP 错误:', err.message);
+    logger.error(`IMAP错误: ${err.message}`);
+    if (client.usable) await client.logout();
+    console.log('🔄 10秒后重新连接...');
+    logger.info('10秒后重新连接...');
+    setTimeout(startIdleMode, 10000);
   }
 }
 
