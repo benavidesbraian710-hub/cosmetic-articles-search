@@ -324,7 +324,8 @@ async function callLLM(prompt) {
 }
 
 // 解析Excel附件，使用大模型提取查询请求
-async function parseExcelAttachment(attachmentBuffer) {
+// 解析Excel附件，代码直接解析（不用大模型，更可靠）
+function parseExcelAttachment(attachmentBuffer) {
   if (!xlsx) {
     console.log('   ⚠️  xlsx模块未安装，无法解析Excel');
     return null;
@@ -340,84 +341,57 @@ async function parseExcelAttachment(attachmentBuffer) {
     
     console.log(`   📊 Excel行数: ${rows.length}`);
     
-    // 将Excel内容转换为文本，交给大模型解析
-    const excelText = rows.map(row => row.join('\t')).join('\n');
-    console.log('   📝 Excel内容预览:');
-    console.log(excelText.slice(0, 200) + '...');
+    const requests = [];
     
-    // 使用大模型解析Excel内容
-    const prompt = `你是一个智能Excel解析助手。请分析以下Excel表格内容，提取用户的查询需求。
-
-Excel内容：
-"""${excelText}"""
-
-可用公众号列表：
-- 妆研24小时
-- 非科学美妆传播
-- 原料合规观察
-- 妆合规
-- Fbeauty未来迹
-- 个护前沿
-- KEV美妆
-- 美业颜究院
-- 肤见未来实验室
-- 化妆品观察 品观
-- 中国化妆品
-- 上海日化协会
-
-请用 JSON 格式返回（不要添加任何其他文字）：
-{
-  "requests": [
-    {"sourceName": "公众号名称", "days": 数字, "startDate": "YYYY-MM-DD", "endDate": "YYYY-MM-DD", "limit": 999},
-    ...
-  ],
-  "reason": "简要说明你的判断依据"
-}
-
-规则：
-- sourceName: 必须是上面列表中的名称。如果用户指定的名称不在列表中，必须原样返回用户输入的名称
-- days: 时间范围（天）。最近7天=7，最近一个月=30，最近3天=3。如果用户指定了具体日期范围（如2026-06-01到2026-06-30），days必须设为null
-- startDate: 如果用户指定了具体日期范围（如2026-06-01到2026-06-30），填写开始日期（YYYY-MM-DD格式）。否则设为null
-- endDate: 如果用户指定了具体日期范围（如2026-06-01到2026-06-30），填写结束日期（YYYY-MM-DD格式）。否则设为null
-- limit: 固定返回999（不限制数量）
-- 如果用户指定了多个公众号，每个公众号作为一个独立的请求对象
-- 如果用户指定的公众号不在列表中，必须原样返回用户输入的名称，不要改成null或"全部"
-
-重要：
-- 如果Excel中的时间范围是"2026-06-01 到 2026-06-30"，必须设置 startDate="2026-06-01", endDate="2026-06-30", days=null
-- 如果Excel中的时间范围是"最近7天"，必须设置 days=7, startDate=null, endDate=null
-- 如果Excel中的时间范围是"最近一个月"，必须设置 days=30, startDate=null, endDate=null`;
-
-    try {
-      const result = await callLLM(prompt);
+    // 遍历每一行（跳过表头，从第1行开始）
+    for (let i = 1; i < rows.length; i++) {
+      const row = rows[i];
+      if (!row || row.length === 0) continue;
       
-      let parsed;
-      try {
-        const jsonMatch = result.match(/\{[\s\S]*\}/);
-        if (jsonMatch) {
-          parsed = JSON.parse(jsonMatch[0]);
+      // 提取公众号名称（第二列，索引1）
+      const sourceName = String(row[1] || '').trim();
+      if (!sourceName || sourceName === '公众号名称') continue;
+      
+      // 提取时间范围（第三列，索引2）
+      const timeRange = String(row[2] || '').trim();
+      let days = null;
+      let startDate = null;
+      let endDate = null;
+      
+      if (timeRange) {
+        // 解析"最近X天"
+        const daysMatch = timeRange.match(/最近(\d+)天/);
+        if (daysMatch) {
+          days = parseInt(daysMatch[1]);
         }
-      } catch (e) {
-        console.error('   ❌ 大模型解析Excel失败，使用默认配置');
-        return null;
+        
+        // 解析"最近一个月"
+        if (timeRange.includes('最近一个月') || timeRange.includes('最近1个月')) {
+          days = 30;
+        }
+        
+        // 解析"YYYY-MM-DD 到 YYYY-MM-DD"
+        const dateRangeMatch = timeRange.match(/(\d{4}-\d{2}-\d{2})\s*[到~]\s*(\d{4}-\d{2}-\d{2})/);
+        if (dateRangeMatch) {
+          startDate = dateRangeMatch[1];
+          endDate = dateRangeMatch[2];
+        }
       }
       
-      // 返回数组格式
-      if (parsed && parsed.requests && Array.isArray(parsed.requests)) {
-        return parsed.requests.map(req => ({
-          sourceName: req.sourceName || null,
-          days: req.days || null,
-          startDate: req.startDate || null,
-          endDate: req.endDate || null,
-          limit: 999
-        }));
-      }
+      requests.push({
+        sourceName: sourceName,
+        days: days,
+        startDate: startDate,
+        endDate: endDate,
+        limit: 999  // 不限制数量，返回全部
+      });
       
-      return null;
-    } catch (err) {
-      console.error('   ❌ 大模型调用失败:', err.message);
-      return null;
+      console.log(`   ✅ 解析: ${sourceName}, ${days ? '最近'+days+'天' : (startDate ? startDate+'到'+endDate : '全部时间')}`);
     }
+    
+    console.log(`   ✅ 共解析 ${requests.length} 个查询请求`);
+    return requests;
+    
   } catch (err) {
     console.error('   ❌ Excel解析失败:', err.message);
     return null;
@@ -706,7 +680,7 @@ async function processSingleEmail(client, email) {
     
     if (excelAttachment && excelAttachment.content) {
       console.log(`   📎 发现Excel附件: ${excelAttachment.filename}`);
-      requests = await parseExcelAttachment(excelAttachment.content);
+      requests = parseExcelAttachment(excelAttachment.content);
     }
   }
   
