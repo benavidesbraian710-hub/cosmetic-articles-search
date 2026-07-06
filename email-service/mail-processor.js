@@ -660,7 +660,7 @@ async function startIdleMode() {
             from: parsed.from?.text || '',
             fromEmail: parsed.from?.value?.[0]?.address || '',
             subject: parsed.subject || '',
-            text: parsed.text || ,
+            text: parsed.text || '',
             messageId: parsed.messageId || null
           });
         }
@@ -672,7 +672,23 @@ async function startIdleMode() {
       console.log('📬 检测到新邮件！');
       logger.info('检测到新邮件');
       const newMessages = await client.search({ unseen: true });
+      
+      if (newMessages.length === 0) {
+        console.log('   ⏭️  没有新邮件');
+        return;
+      }
+      
+      console.log(`   📬 处理 ${newMessages.length} 封新邮件`);
+      
       for (const uid of newMessages) {
+        // 先标记为已读，防止重复处理
+        try {
+          await client.messageFlagsAdd(uid, ['\\Seen']);
+          console.log(`   ✅ 已标记已读: ${uid}`);
+        } catch (e) {
+          console.log('   ⚠️  标记已读失败:', e.message);
+        }
+        
         const message = await client.fetchOne(uid, { source: true });
         if (message.source) {
           const parsed = await simpleParser(message.source);
@@ -681,7 +697,7 @@ async function startIdleMode() {
             from: parsed.from?.text || '',
             fromEmail: parsed.from?.value?.[0]?.address || '',
             subject: parsed.subject || '',
-            text: parsed.text || ,
+            text: parsed.text || '',
             messageId: parsed.messageId || null
           });
         }
@@ -775,7 +791,7 @@ async function checkAndProcessEmails() {
           from: parsed.from?.text || '',
           fromEmail: parsed.from?.value?.[0]?.address || '',
           subject: parsed.subject || '',
-          text: parsed.text || ,
+          text: parsed.text || '',
             messageId: parsed.messageId || null
         });
       }
@@ -822,7 +838,7 @@ async function startIdleMode() {
             from: parsed.from?.text || '',
             fromEmail: parsed.from?.value?.[0]?.address || '',
             subject: parsed.subject || '',
-            text: parsed.text || ,
+            text: parsed.text || '',
             messageId: parsed.messageId || null
           });
         }
@@ -834,7 +850,23 @@ async function startIdleMode() {
       console.log('📬 检测到新邮件！');
       logger.info('检测到新邮件');
       const newMessages = await client.search({ unseen: true });
+      
+      if (newMessages.length === 0) {
+        console.log('   ⏭️  没有新邮件');
+        return;
+      }
+      
+      console.log(`   📬 处理 ${newMessages.length} 封新邮件`);
+      
       for (const uid of newMessages) {
+        // 先标记为已读，防止重复处理
+        try {
+          await client.messageFlagsAdd(uid, ['\\Seen']);
+          console.log(`   ✅ 已标记已读: ${uid}`);
+        } catch (e) {
+          console.log('   ⚠️  标记已读失败:', e.message);
+        }
+        
         const message = await client.fetchOne(uid, { source: true });
         if (message.source) {
           const parsed = await simpleParser(message.source);
@@ -843,7 +875,7 @@ async function startIdleMode() {
             from: parsed.from?.text || '',
             fromEmail: parsed.from?.value?.[0]?.address || '',
             subject: parsed.subject || '',
-            text: parsed.text || ,
+            text: parsed.text || '',
             messageId: parsed.messageId || null
           });
         }
