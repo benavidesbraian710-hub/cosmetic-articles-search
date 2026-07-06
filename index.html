@@ -143,10 +143,16 @@
             // 显示加载状态
             document.getElementById('stats').innerHTML = '<div>加载数据中...</div>';
             
-            // 加载数据，使用缓存破坏参数
+            // 加载数据，使用缓存破坏参数和 no-cache 头
             var cacheBuster = Date.now() + '_' + Math.random().toString(36).substr(2, 9);
             
-            fetch('data.v10.json?t=' + Date.now())
+            fetch('data.v10.json?t=' + cacheBuster, {
+                cache: 'no-store',
+                headers: {
+                    'Cache-Control': 'no-cache, no-store, must-revalidate',
+                    'Pragma': 'no-cache'
+                }
+            })
                 .then(function(response) {
                     if (!response.ok) throw new Error('加载失败');
                     return response.json();
