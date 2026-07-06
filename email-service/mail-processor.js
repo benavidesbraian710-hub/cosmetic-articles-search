@@ -226,8 +226,8 @@ function getAllSources() {
   });
 }
 
-// 发送邮件
-async function sendReply(to, subject, body, attachmentPath = null) {
+// 发送邮件（回复原邮件线程）
+async function sendReply(to, subject, body, attachmentPath = null, originalMessageId = null) {
   const transporter = nodemailer.createTransport(CONFIG.smtp);
   
   const mailOptions = {
@@ -236,6 +236,13 @@ async function sendReply(to, subject, body, attachmentPath = null) {
     subject: subject,
     text: body,
   };
+  
+  // 如果是回复原邮件，添加 In-Reply-To 和 References
+  if (originalMessageId) {
+    mailOptions.inReplyTo = originalMessageId;
+    mailOptions.references = [originalMessageId];
+    console.log(`   📎 回复邮件线程: ${originalMessageId}`);
+  }
   
   if (attachmentPath && fs.existsSync(attachmentPath)) {
     mailOptions.attachments = [{
@@ -526,9 +533,13 @@ async function generateEmptyReply(request, sourceStats) {
 async function processSingleEmail(client, email) {
   const startTime = Date.now();
   const emailId = logger.generateEmailId(email.fromEmail, email.subject, startTime);
+  const messageId = email.messageId || null;
   
   console.log('\n📨 处理邮件:', email.subject || '(无主题)');
   console.log('   来自:', email.from);
+  if (messageId) {
+    console.log('   📎 Message-ID:', messageId);
+  }
   
   // 记录邮件接收
   logger.emailReceived(email.fromEmail, email.subject || '(无主题)', emailId);
@@ -600,7 +611,7 @@ async function processSingleEmail(client, email) {
   
   // 发送回复
   try {
-    await sendReply(email.fromEmail, 'Re: ' + (email.subject || '化妆品文章查询'), replyBody, excelPath);
+    await sendReply(email.fromEmail, 'Re: ' + (email.subject || '化妆品文章查询'), replyBody, excelPath, messageId);
     logger.emailSent(email.fromEmail, true, emailId);
   } catch (err) {
     console.error('   ❌ 发送邮件失败:', err.message);
@@ -649,7 +660,8 @@ async function startIdleMode() {
             from: parsed.from?.text || '',
             fromEmail: parsed.from?.value?.[0]?.address || '',
             subject: parsed.subject || '',
-            text: parsed.text || ''
+            text: parsed.text || ,
+            messageId: parsed.messageId || null
           });
         }
       }
@@ -669,7 +681,8 @@ async function startIdleMode() {
             from: parsed.from?.text || '',
             fromEmail: parsed.from?.value?.[0]?.address || '',
             subject: parsed.subject || '',
-            text: parsed.text || ''
+            text: parsed.text || ,
+            messageId: parsed.messageId || null
           });
         }
       }
@@ -762,7 +775,8 @@ async function checkAndProcessEmails() {
           from: parsed.from?.text || '',
           fromEmail: parsed.from?.value?.[0]?.address || '',
           subject: parsed.subject || '',
-          text: parsed.text || ''
+          text: parsed.text || ,
+            messageId: parsed.messageId || null
         });
       }
     }
@@ -808,7 +822,8 @@ async function startIdleMode() {
             from: parsed.from?.text || '',
             fromEmail: parsed.from?.value?.[0]?.address || '',
             subject: parsed.subject || '',
-            text: parsed.text || ''
+            text: parsed.text || ,
+            messageId: parsed.messageId || null
           });
         }
       }
@@ -828,7 +843,8 @@ async function startIdleMode() {
             from: parsed.from?.text || '',
             fromEmail: parsed.from?.value?.[0]?.address || '',
             subject: parsed.subject || '',
-            text: parsed.text || ''
+            text: parsed.text || ,
+            messageId: parsed.messageId || null
           });
         }
       }
