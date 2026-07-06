@@ -675,15 +675,6 @@ async function startIdleMode() {
     await client.connect();
     await client.mailboxOpen('INBOX');
     
-    // 检测 cron 模式：环境变量 OPENCLAW_CRON 存在时，只执行一次检查然后退出
-    const isCronMode = process.env.OPENCLAW_CRON === '1';
-    if (isCronMode) {
-        console.log('🔔 [Cron 模式] 执行单次邮件检查...');
-        await checkAndProcessEmails();
-        console.log('✅ [Cron 模式] 检查完成，退出。');
-        process.exit(0);
-    }
-
     // 正常模式：启动 IDLE 监听
     console.log('📡 IMAP IDLE 模式已启动');
     console.log('⏰ 实时监听中...');
@@ -741,7 +732,10 @@ async function startIdleMode() {
 
 // 主函数
 async function main() {
-  const isCronMode = process.argv.includes('--cron');
+  // 修复：优先检查环境变量，兼容 cron 任务传递的 OPENCLAW_CRON
+  // 同时支持 --cron 命令行参数
+  // 额外检测：检查是否通过 cron 触发（通过 OPENCLAW_CRON 环境变量或 --cron 参数）
+  const isCronMode = process.env.OPENCLAW_CRON === '1' || process.argv.includes('--cron');
   
   console.log('='.repeat(60));
   console.log('📧 化妆品文章邮件处理系统');
