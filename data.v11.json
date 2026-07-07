@@ -1,12 +1,12 @@
 {
   "stats": {
-    "total_articles": 233,
+    "total_articles": 240,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-07-06"
+      "end": "2026-07-07"
     },
-    "last_update": "2026-07-06T14:20:12.569820"
+    "last_update": "2026-07-07T10:08:39.314659"
   },
   "sources": [
     {
@@ -15,11 +15,11 @@
     },
     {
       "name": "化妆品观察 品观",
-      "count": 36
+      "count": 39
     },
     {
       "name": "中国化妆品",
-      "count": 32
+      "count": 34
     },
     {
       "name": "Fbeauty未来迹",
@@ -39,7 +39,7 @@
     },
     {
       "name": "肤见未来实验室",
-      "count": 15
+      "count": 16
     },
     {
       "name": "原料合规观察",
@@ -55,7 +55,7 @@
     },
     {
       "name": "上海日化协会",
-      "count": 1
+      "count": 2
     }
   ],
   "articles": {
@@ -459,6 +459,33 @@
     ],
     "化妆品观察 品观": [
       {
+        "id": 482,
+        "title": "暴涨500%，华熙/水羊齐押注，又一爆款原料来了",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/C6LDf_yZbQG1oigDjJu6qw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 483,
+        "title": "全球首款重组PDRN产品面世！",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/nPQwyDTffxCQ3hLgumRsEw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 484,
+        "title": "新锐功效护肤品牌，即将北交所上市！",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/MXIqjcRXQTkCYFVgHVs_yQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 468,
         "title": "靠颜值出圈的彩妆，没能活过第6年",
         "source": "化妆品观察 品观",
@@ -784,6 +811,24 @@
       }
     ],
     "中国化妆品": [
+      {
+        "id": 485,
+        "title": "24家企业“被点名”、多起体系缺陷被查——化妆品行业加速“优胜劣汰” | 合规风向标100期特辑",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/_HdAUaPR4yh3ZNwgX9qfeg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 486,
+        "title": "北京市东城区启动化妆品电子标签试点；马来西亚公司KLK OLEO完成化妆品新原料备案；科蒂宣布高管调整，高端研发并入供应链",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/luBwixuHnU5dhR0Rxl01Aw",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 477,
         "title": "国家药监局就《化妆品标准管理办法（征求意见稿）》公开征求意见；五款化妆品新原料备案成功；香奈儿法国香水工厂投产",
@@ -1794,6 +1839,15 @@
     ],
     "肤见未来实验室": [
       {
+        "id": 481,
+        "title": "指南与共识|生长激素缺乏相关衰老治疗的专家共识",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/ZO7nsPrSE0HbzeIL9B7HeA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 475,
         "title": "黄褐斑的真相：皮脂腺是“帮凶”",
         "source": "肤见未来实验室",
@@ -2170,6 +2224,15 @@
       }
     ],
     "上海日化协会": [
+      {
+        "id": 487,
+        "title": "学深新规，务实笃行——协会标委会聚焦团体标准规范发展、优质发展",
+        "source": "上海日化协会",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/kbILMB42XU9LftiLoIuI2Q",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 257,
         "title": "包装的竞争，早已不在包装本身——2026中国日化包装创新论坛回顾",
