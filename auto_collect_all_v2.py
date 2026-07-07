@@ -24,6 +24,13 @@ import os
 VERCEL_DEPLOY_HOOK = os.environ.get('VERCEL_DEPLOY_HOOK', 'https://api.vercel.com/v1/integrations/deploy/prj_YSlalkG8s0mnj6tOhT2x40NI5MNg/TYK5SZROD3')
 
 ACCOUNTS = [
+    "妆研24小时",
+    "非科学美妆传播", 
+    "原料合规观察",
+    "妆合规",
+    "Fbeauty未来迹",
+    "个护前沿",
+    "KEV美妆",
     "美业颜究院",
     "肤见未来实验室",
     "化妆品观察 品观",
