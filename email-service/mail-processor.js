@@ -853,7 +853,45 @@ async function startIdleMode() {
       }
     });
     
-    await client.idle();
+    // 💓 心跳机制：每2分钟发送NOOP保持连接活跃
+    const keepAliveInterval = setInterval(async () => {
+      try {
+        if (client.usable) {
+          await client.noop();
+          console.log('💓 心跳发送');
+          logger.info('心跳发送');
+        }
+      } catch (e) {
+        console.log('💔 心跳失败:', e.message);
+        logger.warn(`心跳失败: ${e.message}`);
+      }
+    }, 120000); // 2分钟
+    
+    try {
+      // 💓 心跳机制：每2分钟发送NOOP保持连接活跃
+    const keepAliveInterval = setInterval(async () => {
+      try {
+        if (client.usable) {
+          await client.noop();
+          console.log('💓 心跳发送');
+          logger.info('心跳发送');
+        }
+      } catch (e) {
+        console.log('💔 心跳失败:', e.message);
+        logger.warn(`心跳失败: ${e.message}`);
+      }
+    }, 120000); // 2分钟
+    
+    try {
+      await client.idle();
+    } finally {
+      clearInterval(keepAliveInterval);
+      console.log('🛑 心跳定时器已清除');
+    }
+    } finally {
+      clearInterval(keepAliveInterval);
+      console.log('🛑 心跳定时器已清除');
+    }
     
   } catch (err) {
     console.error('❌ IMAP 错误:', err.message);
@@ -941,8 +979,8 @@ async function checkAndProcessEmails() {
           fromEmail: parsed.from?.value?.[0]?.address || '',
           subject: parsed.subject || '',
           text: parsed.text || '',
-            messageId: parsed.messageId || null,
-            attachments: parsed.attachments || []
+          messageId: parsed.messageId || null,
+          attachments: parsed.attachments || []
         });
       }
     }
@@ -954,95 +992,6 @@ async function checkAndProcessEmails() {
     console.error('❌ IMAP 错误:', err.message);
     if (client.usable) await client.logout();
     throw err;
-  }
-}
-
-// IMAP IDLE 模式
-async function startIdleMode() {
-  const client = new ImapFlow({
-    host: CONFIG.imap.host,
-    port: CONFIG.imap.port,
-    secure: CONFIG.imap.secure,
-    auth: CONFIG.imap.auth,
-    logger: false
-  });
-
-  try {
-    await client.connect();
-    await client.mailboxOpen('INBOX');
-    
-    // 正常模式：启动 IDLE 监听
-    console.log('📡 IMAP IDLE 模式已启动');
-    console.log('⏰ 实时监听中...');
-    
-    // 先处理现有未读邮件
-    const messages = await client.search({ unseen: true });
-    if (messages.length > 0) {
-      console.log(`📬 发现 ${messages.length} 封未读邮件`);
-      for (const uid of messages) {
-        const message = await client.fetchOne(uid, { source: true });
-        if (message.source) {
-          const parsed = await simpleParser(message.source);
-          await processSingleEmail(client, {
-            uid,
-            from: parsed.from?.text || '',
-            fromEmail: parsed.from?.value?.[0]?.address || '',
-            subject: parsed.subject || '',
-            text: parsed.text || '',
-            messageId: parsed.messageId || null,
-            attachments: parsed.attachments || []
-          });
-        }
-      }
-    }
-    
-    // 进入 IDLE 模式监听新邮件
-    client.on('exists', async (data) => {
-      console.log('📬 检测到新邮件！');
-      logger.info('检测到新邮件');
-      const newMessages = await client.search({ unseen: true });
-      
-      if (newMessages.length === 0) {
-        console.log('   ⏭️  没有新邮件');
-        return;
-      }
-      
-      console.log(`   📬 处理 ${newMessages.length} 封新邮件`);
-      
-      for (const uid of newMessages) {
-        // 先标记为已读，防止重复处理
-        try {
-          await client.messageFlagsAdd(uid, ['\\Seen']);
-          console.log(`   ✅ 已标记已读: ${uid}`);
-        } catch (e) {
-          console.log('   ⚠️  标记已读失败:', e.message);
-        }
-        
-        const message = await client.fetchOne(uid, { source: true });
-        if (message.source) {
-          const parsed = await simpleParser(message.source);
-          await processSingleEmail(client, {
-            uid,
-            from: parsed.from?.text || '',
-            fromEmail: parsed.from?.value?.[0]?.address || '',
-            subject: parsed.subject || '',
-            text: parsed.text || '',
-            messageId: parsed.messageId || null,
-            attachments: parsed.attachments || []
-          });
-        }
-      }
-    });
-    
-    await client.idle();
-    
-  } catch (err) {
-    console.error('❌ IMAP 错误:', err.message);
-    logger.error(`IMAP错误: ${err.message}`);
-    if (client.usable) await client.logout();
-    console.log('🔄 10秒后重新连接...');
-    logger.info('10秒后重新连接...');
-    setTimeout(startIdleMode, 10000);
   }
 }
 
