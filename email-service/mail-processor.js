@@ -868,26 +868,7 @@ async function startIdleMode() {
     }, 120000); // 2分钟
     
     try {
-      // 💓 心跳机制：每2分钟发送NOOP保持连接活跃
-    const keepAliveInterval = setInterval(async () => {
-      try {
-        if (client.usable) {
-          await client.noop();
-          console.log('💓 心跳发送');
-          logger.info('心跳发送');
-        }
-      } catch (e) {
-        console.log('💔 心跳失败:', e.message);
-        logger.warn(`心跳失败: ${e.message}`);
-      }
-    }, 120000); // 2分钟
-    
-    try {
       await client.idle();
-    } finally {
-      clearInterval(keepAliveInterval);
-      console.log('🛑 心跳定时器已清除');
-    }
     } finally {
       clearInterval(keepAliveInterval);
       console.log('🛑 心跳定时器已清除');
