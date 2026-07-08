@@ -1,41 +1,41 @@
 {
   "stats": {
-    "total_articles": 240,
+    "total_articles": 262,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-07-07"
     },
-    "last_update": "2026-07-07T10:08:39.314659"
+    "last_update": "2026-07-08T10:00:57.864558"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 44
+      "count": 48
     },
     {
       "name": "化妆品观察 品观",
-      "count": 39
+      "count": 41
     },
     {
       "name": "中国化妆品",
-      "count": 34
+      "count": 36
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 22
+      "count": 24
     },
     {
       "name": "非科学美妆传播",
-      "count": 21
+      "count": 23
     },
     {
       "name": "妆研24小时",
-      "count": 19
+      "count": 23
     },
     {
       "name": "妆合规",
-      "count": 17
+      "count": 19
     },
     {
       "name": "肤见未来实验室",
@@ -43,15 +43,15 @@
     },
     {
       "name": "原料合规观察",
-      "count": 14
+      "count": 16
     },
     {
       "name": "KEV美妆",
-      "count": 8
+      "count": 9
     },
     {
       "name": "美业颜究院",
-      "count": 4
+      "count": 5
     },
     {
       "name": "上海日化协会",
@@ -60,6 +60,42 @@
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 500,
+        "title": "暴涨500%，华熙/水羊齐押注，又一爆款原料来了",
+        "source": "个护前沿",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/DU9ANjOpqEkpX9vbqDJxNA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 501,
+        "title": "医美合规收紧！药械组合不再允许“模糊归类”，昊海、艾尔建填充类产品在列",
+        "source": "个护前沿",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/_CWmDecUPJ6xLNzpBC_TrA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 502,
+        "title": "寻找抗衰圈的下一个技术标杆！2026AAT× MediCosme年度科技榜征集启动！",
+        "source": "个护前沿",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/ZAwX3We-RpT1j3__CNLVdw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 503,
+        "title": "砍掉四成营收，联合利华在买什么“未来”？",
+        "source": "个护前沿",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/weB9_ygAH0l3vIhK0YFkOA",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 467,
         "title": "深度行研 | 光电医美进入三类械时代：谁会成为中国版能量源平台公司？",
@@ -459,6 +495,24 @@
     ],
     "化妆品观察 品观": [
       {
+        "id": 506,
+        "title": "53亿买入的美妆连锁，如今被屈臣氏母公司出售",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/VTjTEDv3o3GTicOlUiPCcg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 507,
+        "title": "生产商一年销售额从0到1000万，这个香氛细分赛道火了",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/z_04fPnZZ9hdpEp2NKda4g",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 482,
         "title": "暴涨500%，华熙/水羊齐押注，又一爆款原料来了",
         "source": "化妆品观察 品观",
@@ -812,6 +866,24 @@
     ],
     "中国化妆品": [
       {
+        "id": 508,
+        "title": "14个需求组合，解码面部精华的“爆款密码” | 美妆指数",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/QkPydA4TM5WnyjP5PPBDaQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 509,
+        "title": "浙江省衢州市局构建化妆品安全科普共治新生态；韩国化妆品上半年出口额达70亿美元，再创新高；SLG Brands出售两品牌给Thriving Brands",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/Zc97SzIjC36xU91RKTCbVg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 485,
         "title": "24家企业“被点名”、多起体系缺陷被查——化妆品行业加速“优胜劣汰” | 合规风向标100期特辑",
         "source": "中国化妆品",
@@ -1120,6 +1192,24 @@
     ],
     "Fbeauty未来迹": [
       {
+        "id": 498,
+        "title": "深度 | 美妆打响AI科研竞备赛，谁在掉队？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/EyiWixY_Ro99nIFPmiJ6MQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 499,
+        "title": "重磅 | 一个原料省2年、350万！美妆新原料备案大松绑",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/3NTI9rlgT_7eB24FLqfcEQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 474,
         "title": "爱马仕做美妆，为什么跑不快？",
         "source": "Fbeauty未来迹",
@@ -1320,6 +1410,24 @@
     ],
     "非科学美妆传播": [
       {
+        "id": 492,
+        "title": "雅诗兰黛｜JCAD 2025｜Sirtuin靶向的护肤套组逆转衰老的功效验证",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/ily6gpN4T6BdwBn9q1SiFA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 493,
+        "title": "Kose｜情报2026｜棕色脂肪细胞不仅可以燃烧产热，还可以增强皮肤屏障功能",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/64Y-A4YAYAfbr2OH3O0ODQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 473,
         "title": "联合利华&amp;伦敦玛丽女王大学｜BJD 2026｜头屑下的头皮菌群失调会引起AhR抑制，在皮肤模型和头皮活检下证实该通路，指导未来抗头屑产品开发",
         "source": "非科学美妆传播",
@@ -1511,11 +1619,47 @@
     ],
     "妆研24小时": [
       {
+        "id": 488,
+        "title": "普通化妆品备案易错题集",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/dIxfZtDyDy8MGuK5BxvDvg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 489,
+        "title": "17个化妆品成分分析网站",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/GRr9yFQmSCg97xH0FL6NaQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 448,
         "title": "马来西亚公司备案一款新原料",
         "source": "妆研24小时",
         "publish_date": "2026-07-03",
         "url": "https://mp.weixin.qq.com/s/C2p-AP5J3G9nCjbPXmLhwQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 490,
+        "title": "深度解析｜化妆品配方研发的核心思路",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/xYIODoiLHKaQRtJwdxEHNQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 491,
+        "title": "被Nature认证的“生命之糖”！海藻糖才是护肤界的全能修护黑马",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/_cEtU90ryKi4b2AlFjJe5w",
         "summary": "",
         "keywords": []
       },
@@ -1683,6 +1827,24 @@
       }
     ],
     "妆合规": [
+      {
+        "id": 496,
+        "title": "一文教会你快速使用SARA-ICE 推导皮肤致敏潜力——基于最新OECD Guideline No. 497的技术整理",
+        "source": "妆合规",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/nz3hfOPQETekWv-TJRtg_w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 497,
+        "title": "中国化妆品监督抽检数据汇总报告-2026年6月",
+        "source": "妆合规",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/0LsRMIP-8XmJhw3Czb1hjA",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 450,
         "title": "网络公开课(7月7日)：日本美妆市场准入双轨制——化妆品与医药部外品合规解析",
@@ -1985,6 +2147,24 @@
     ],
     "原料合规观察": [
       {
+        "id": 494,
+        "title": "海南一企业备案植提新原料",
+        "source": "原料合规观察",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/WzTTjvyMuvpJzI5y2muRJA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 495,
+        "title": "喜讯！中贸助力生特睿生物完成化学合成新原料备案",
+        "source": "原料合规观察",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/V2XO_pBJzIKlo77dQ_l6Mg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 449,
         "title": "马来西亚企业首次备案新原料",
         "source": "原料合规观察",
@@ -2113,6 +2293,15 @@
     ],
     "KEV美妆": [
       {
+        "id": 504,
+        "title": "PRADA「0度紫」夏日限定；Off&amp;Relax「夏漫青枝」限定；AVEDA艾梵达「肽蓬松」 洗护系列... | 新品速递",
+        "source": "KEV美妆",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/kK_l6HPKrtDXtMl9_CFzqw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 416,
         "title": "雪花秀与润焕活睡眠面膜；绽妍胶原精华；ddg白桃卸妆膏4.0... | 新品速递",
         "source": "KEV美妆",
@@ -2186,6 +2375,15 @@
       }
     ],
     "美业颜究院": [
+      {
+        "id": 505,
+        "title": "致敬趋势的先行者，2026全球美业趋势创新大会——“趋势之星”颁奖盛典！",
+        "source": "美业颜究院",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/v98znr4DIRT2BJ4ROhQJ0w",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 418,
         "title": "2026产品力颜究院年度创新榜单正式发布！这些好产品凭什么上榜？",
