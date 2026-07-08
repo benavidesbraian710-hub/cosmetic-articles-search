@@ -1,3 +1,5 @@
+*.db
+*.db-journal
 email-service/node_modules/
 email-service/.env
 email-service/.env.local
