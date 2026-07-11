@@ -2,7 +2,7 @@
 
 **文档版本**: v1.2
 **创建时间**: 2026-06-29 12:13
-**最后更新**: 2026-07-01 12:24
+**最后更新**: 2026-07-11
 **项目负责人**: Nick
 **技术实现**: 搜搜 (Sōusou) - AI搜索猎犬
 
@@ -17,17 +17,18 @@
 **当前版本**: Basic版本（V1）
 **网站地址**: https://www.cosmetic-search.com/
 **GitHub仓库**: https://github.com/benavidesbraian710-hub/cosmetic-articles-search
-**部署方式**: GitHub Pages 静态托管
+**部署方式**: Vercel 静态托管（通过 GitHub 自动部署 + Deploy Hook）
 
 **系统定位**: 
 - **Basic版本（当前）**: 7×24小时监控化妆品行业公众号，自动采集文章，提供浏览和导出功能
+- **邮件查询服务**: 通过 cosmeticsearch@163.com 接收查询邮件，自动回复 Excel 结果
 - **V3版本（规划）**: 智能检索系统，支持关键词搜索、LLM摘要、智能排序
 
 **项目路径**: ~/.openclaw/workspace/cosmetic-deploy/
-**数据库路径**: ~/.openclaw/cosmetic_articles.db
-**当前数据量**: 190篇文章，15个公众号
-**数据范围**: 从发布时间开始至今的所有文章
-**最后更新时间**: 2026-06-29 12:08
+**数据库路径**: ~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db
+**当前数据量**: 293篇文章，12个公众号
+**数据范围**: 2026-06-15 及之后的文章（事前过滤规则）
+**最后更新时间**: 2026-07-10
 
 **版本演进计划**:
 - V1（Basic）: 当前版本，支持浏览和导出
@@ -80,30 +81,40 @@
 │                    化妆品文章检索系统 - Basic版本                    │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
-│  【前端】GitHub Pages 静态网站                                       │
+│  【前端】Vercel 静态网站                                             │
 │  ├── 仓库: benavidesbraian710-hub/cosmetic-articles-search          │
-│  ├── 文件: index.html + data.json (纯静态)                          │
+│  ├── 文件: index.html + data.vN.json (纯静态，版本号递增)            │
 │  ├── 功能: 左侧公众号列表 → 右侧文章表格 → 勾选导出CSV               │
 │  └── 域名: cosmetic-search.com (已配置)                             │
 │                                                                     │
 │  【数据库】SQLite                                                    │
-│  ├── 路径: ~/.openclaw/cosmetic_articles.db                          │
+│  ├── 路径: ~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db│
 │  ├── 表结构: articles (id, wechat_name, title, url, publish_date)  │
-│  └── 当前数据: 190篇文章，15个公众号                                  │
+│  └── 当前数据: 293篇文章，12个公众号                                  │
 │                                                                     │
 │  【采集层】坐标点击自动化 (wechat-article-collector skill)           │
 │  ├── 工具: peekaboo (Mac屏幕坐标点击)                                │
 │  ├── 路径: ~/.openclaw/workspace/wechat-collector/...              │
 │  └── 输出: ~/Desktop/wechat_articles_YYYYMMDD_HHMMSS.csv            │
 │                                                                     │
-│  【入库脚本】collect_from_csv.py                                     │
+│  【入库脚本】today_pipeline.py / collect_from_csv.py                 │
 │  ├── 路径: ~/.openclaw/workspace/cosmetic-deploy/                   │
-│  ├── 功能: 读取CSV → 抓取文章信息 → 入库                            │
+│  ├── 功能: 读取CSV → 抓取文章信息 → 入库（日期过滤+去重）              │
 │  └── 去重: URL唯一约束，重复自动跳过                                 │
 │                                                                     │
 │  【导出脚本】export_data.py                                          │
 │  ├── 路径: ~/.openclaw/workspace/cosmetic-deploy/                   │
-│  └── 功能: 数据库 → data.json (GitHub Pages数据源)                   │
+│  └── 功能: 数据库 → data.vN.json (Vercel 数据源)                     │
+│                                                                     │
+│  【邮件服务】email-service/                                          │
+│  ├── 路径: ~/.openclaw/workspace/cosmetic-deploy/email-service/     │
+│  ├── 功能: IMAP IDLE 实时监听 → SQLite 查询 → Excel 回复             │
+│  └── 邮箱: cosmeticsearch@163.com                                   │
+│                                                                     │
+│  【部署】GitHub + Vercel + Deploy Hook                              │
+│  ├── 推送: git push origin main                                     │
+│  ├── 触发: Vercel Deploy Hook (硬编码在 today_pipeline.py)            │
+│  └── 版本: data.v15.json (当前)                                     │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
 ```
@@ -117,30 +128,40 @@
 │                    化妆品文章检索系统                                │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
-│  【前端】GitHub Pages 静态网站                                       │
+│  【前端】Vercel 静态网站                                             │
 │  ├── 仓库: benavidesbraian710-hub/cosmetic-articles-search          │
-│  ├── 文件: index.html + data.json (纯静态)                          │
+│  ├── 文件: index.html + data.vN.json (纯静态，版本号递增)            │
 │  ├── 功能: 左侧公众号列表 → 右侧文章表格 → 勾选导出CSV               │
 │  └── 域名: cosmetic-search.com (已配置)                             │
 │                                                                     │
 │  【数据库】SQLite                                                    │
-│  ├── 路径: ~/.openclaw/cosmetic_articles.db                          │
+│  ├── 路径: ~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db│
 │  ├── 表结构: articles (id, wechat_name, title, url, publish_date)  │
-│  └── 当前数据: 190篇文章，15个公众号                                  │
+│  └── 当前数据: 293篇文章，12个公众号                                  │
 │                                                                     │
 │  【采集层】坐标点击自动化 (wechat-article-collector skill)           │
 │  ├── 工具: peekaboo (Mac屏幕坐标点击)                                │
 │  ├── 路径: ~/.openclaw/workspace/wechat-collector/...              │
 │  └── 输出: ~/Desktop/wechat_articles_YYYYMMDD_HHMMSS.csv            │
 │                                                                     │
-│  【入库脚本】collect_from_csv.py                                     │
+│  【入库脚本】today_pipeline.py / collect_from_csv.py                 │
 │  ├── 路径: ~/.openclaw/workspace/cosmetic-deploy/                   │
-│  ├── 功能: 读取CSV → 抓取文章信息 → 入库                            │
+│  ├── 功能: 读取CSV → 抓取文章信息 → 入库（日期过滤+去重）              │
 │  └── 去重: URL唯一约束，重复自动跳过                                 │
 │                                                                     │
 │  【导出脚本】export_data.py                                          │
 │  ├── 路径: ~/.openclaw/workspace/cosmetic-deploy/                   │
-│  └── 功能: 数据库 → data.json (GitHub Pages数据源)                   │
+│  └── 功能: 数据库 → data.vN.json (Vercel 数据源)                     │
+│                                                                     │
+│  【邮件服务】email-service/                                          │
+│  ├── 路径: ~/.openclaw/workspace/cosmetic-deploy/email-service/     │
+│  ├── 功能: IMAP IDLE 实时监听 → SQLite 查询 → Excel 回复             │
+│  └── 邮箱: cosmeticsearch@163.com                                   │
+│                                                                     │
+│  【部署】GitHub + Vercel + Deploy Hook                              │
+│  ├── 推送: git push origin main                                     │
+│  ├── 触发: Vercel Deploy Hook (硬编码在 today_pipeline.py)            │
+│  └── 版本: data.v15.json (当前)                                     │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
 ```
@@ -154,13 +175,22 @@
 | 文件 | 路径 | 说明 | 版本 |
 |------|------|------|------|
 | index.html | ~/.openclaw/workspace/cosmetic-deploy/index.html | 网站前端 | V1 |
-| data.json | ~/.openclaw/workspace/cosmetic-deploy/data.json | 网站数据源 | V1 |
+| data.json / data.vN.json | ~/.openclaw/workspace/cosmetic-deploy/ | 网站数据源（版本递增） | V15 |
 | export_data.py | ~/.openclaw/workspace/cosmetic-deploy/export_data.py | 导出数据库到JSON | V1 |
+| today_pipeline.py | ~/.openclaw/workspace/cosmetic-deploy/today_pipeline.py | 采集→入库→导出→推送→部署全链路 | V1 |
 | collect_from_csv.py | ~/.openclaw/workspace/cosmetic-deploy/collect_from_csv.py | CSV入库脚本 | V1 |
-| update.sh | ~/.openclaw/workspace/cosmetic-deploy/update.sh | 更新网站脚本 | V1 |
 | auto_collect.py | ~/.openclaw/workspace/cosmetic-deploy/auto_collect.py | 自动采集+入库+推送 | V1 |
 | auto_collect_all.py | ~/.openclaw/workspace/cosmetic-deploy/auto_collect_all.py | 全量自动采集 | V1 |
-| PROJECT.md | ~/.openclaw/workspace/cosmetic-deploy/PROJECT.md | 项目文档 | V1 |
+| auto_collect_all_v2.py | ~/.openclaw/workspace/cosmetic-deploy/auto_collect_all_v2.py | 全量采集（带Deploy Hook） | V2 |
+| PROJECT.md | ~/.openclaw/workspace/cosmetic-deploy/PROJECT.md | 项目文档 | V1.3 |
+
+### 邮件服务文件
+
+| 文件 | 路径 | 说明 | 版本 |
+|------|------|------|------|
+| mail-processor.js | ~/.openclaw/workspace/cosmetic-deploy/email-service/mail-processor.js | 邮件处理主脚本（Node.js） | V2 |
+| logger.js | ~/.openclaw/workspace/cosmetic-deploy/email-service/logger.js | 结构化日志 | V1 |
+| package.json | ~/.openclaw/workspace/cosmetic-deploy/email-service/package.json | Node.js依赖 | V1 |
 
 ### 采集器文件
 
@@ -223,36 +253,35 @@ CREATE VIRTUAL TABLE articles_fts USING fts5(
 
 ## 公众号列表
 
-### 当前15个公众号
+### 当前12个公众号
 
 | 公众号 | 文章数 | 坐标类型 | 备注 |
 |--------|--------|---------|------|
-| 非科学美妆传播 | 20 | 备选坐标 | 指定发布时间(891,194), 确定(898,330) |
-| 妆研24小时 | 19 | 标准坐标 | |
-| 妆合规 | 18 | 标准坐标 | |
-| Fbeauty未来迹 | 18 | 备选坐标 | 指定发布时间(891,194), 确定(898,330) |
+| 个护前沿 | 54 | 标准坐标 | |
+| 化妆品观察 品观 | 44 | 备选坐标 | 指定发布时间(891,194), 确定(898,330) |
+| 中国化妆品 | 40 | 标准坐标 | |
+| 妆研24小时 | 27 | 标准坐标 | |
+| Fbeauty未来迹 | 26 | 备选坐标 | 指定发布时间(891,194), 确定(898,330) |
+| 非科学美妆传播 | 25 | 备选坐标 | 指定发布时间(891,194), 确定(898,330) |
+| 妆合规 | 23 | 标准坐标 | |
+| 肤见未来实验室 | 18 | 备选坐标 | 指定发布时间(891,194), 确定(898,330) |
 | 原料合规观察 | 17 | 标准坐标 | |
-| 个护前沿 | 16 | 标准坐标 | |
-| KEV美妆 | 16 | 标准坐标 | |
-| 美业颜究院 | 14 | 标准坐标 | |
-| 肤见未来实验室 | 10 | 备选坐标 | 指定发布时间(891,194), 确定(898,330) |
-| 美妆内行人 | 9 | 备选坐标 | 指定发布时间(891,194), 确定(898,330) |
-| 中国化妆品 | 8 | 标准坐标 | |
-| 化妆品观察 品观 | 7 | 备选坐标 | 指定发布时间(891,194), 确定(898,330) |
-| 个护前言 | 6 | 标准坐标 | |
-| 上海日化协会 | 6 | 标准坐标 | |
-| Beauty Insider | 6 | 备选坐标 | 指定发布时间(891,194), 确定(898,330) |
+| KEV美妆 | 10 | 标准坐标 | |
+| 美业颜究院 | 6 | 标准坐标 | |
+| 上海日化协会 | 3 | 标准坐标 | |
 
 ### 已删除的公众号
 
 | 公众号 | 删除时间 | 原因 |
 |--------|---------|------|
-| 春雷社 | 2026-06-29 | Nick要求删除 |
-| 言安堂 | 2026-06-29 | Nick要求删除 |
-| i美妆头条 | 2026-06-29 | Nick要求删除 |
-| 用户说了 | 2026-06-29 | Nick要求删除 |
-| 聚美丽 | 2026-06-29 | Nick要求删除 |
-| 青眼 | 2026-06-29 | Nick要求删除 |
+| 春雷社 | 2026-07-03 | Nick要求删除 |
+| 言安堂 | 2026-07-03 | Nick要求删除 |
+| i美妆头条 | 2026-07-03 | Nick要求删除 |
+| 用户说了 | 2026-07-03 | Nick要求删除 |
+| 聚美丽 | 2026-07-03 | Nick要求删除 |
+| 青眼 | 2026-07-03 | Nick要求删除 |
+| 美妆内行人 | 2026-07-03 | Nick要求删除 |
+| Beauty Insider | 2026-07-03 | Nick要求删除 |
 
 ---
 
@@ -298,7 +327,7 @@ CREATE VIRTUAL TABLE articles_fts USING fts5(
 
 ## 采集流程
 
-### 完整更新流程
+### 完整更新流程（当前）
 
 ```
 Step 1: 采集（坐标点击自动化）
@@ -308,27 +337,28 @@ Step 1: 采集（坐标点击自动化）
 ├── 注意: 需要微信Mac版在前台，不能操作鼠标键盘
 └── 自动激活: auto_collect_all.py 会自动激活微信窗口（osascript + peekaboo focus）
 
-Step 2: 入库（collect_from_csv.py）
+Step 2: 入库（today_pipeline.py / collect_from_csv.py）
 ├── 读取 CSV 中的文章链接
 ├── urllib 抓取文章 HTML（使用微信移动端UA）
 ├── 从 HTML 中提取真实标题和发布时间
+├── 日期过滤: 只保留 2026-06-15 及之后的文章（事前过滤）
 ├── 检查URL是否已存在（去重）
-└── 写入数据库: ~/.openclaw/cosmetic_articles.db
+└── 写入数据库: ~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db
 
 Step 3: 导出（export_data.py）
 ├── 读取数据库所有文章
-├── 生成 data.json（包含 stats + sources + articles_by_source）
-└── 输出: ~/.openclaw/workspace/cosmetic-deploy/data.json
+├── 生成 data.vN.json（版本号递增，如 data.v15.json）
+└── 更新 index.html 加载路径
 
 Step 4: 推送（Git）
-├── git add data.json
-├── git commit -m "更新说明"
+├── git add data.vN.json index.html
+├── git commit -m "data: update to vN"
 ├── git push origin main
-└── GitHub Pages 自动部署
+└── 触发 Vercel Deploy Hook
 
 Step 5: 网站显示
 └── 用户访问 https://www.cosmetic-search.com/
-    → 加载 data.json → 显示公众号列表和文章表格
+    → 加载 data.vN.json → 显示公众号列表和文章表格
 ```
 
 ### 一键采集命令
@@ -448,54 +478,71 @@ def collect_account(account: str, count: int = 4) -> bool:
 
 **解决**: 
 - 创建 auto_collect_all_v2.py：直接采集 → 抓取文章信息 → 入库，跳过CSV中间步骤
+- 创建 today_pipeline.py：全链路自动化（采集→入库→导出→推送→部署）
 - 保留 auto_collect_all.py 作为兼容版本（支持CSV模式）
 - 新流程:
   ```
-  采集文章链接 → 直接抓取标题和日期 → 直接入库SQLite → 导出data.json → 推送GitHub
+  采集文章链接 → 直接抓取标题和日期 → 入库SQLite → 导出data.vN.json → 推送GitHub → 触发Deploy Hook
   ```
 
 **文件变更**:
+- 新增: `today_pipeline.py` - 全链路自动化（当前主力）
 - 新增: `auto_collect_all_v2.py` - 直接入库版本
-- 保留: `auto_collect_all.py` - CSV兼容版本（import_csv函数改为可选）
+- 保留: `auto_collect_all.py` - CSV兼容版本
 
 **更新记录**: 2026-07-01
 
-### 问题6: 微信窗口未自动激活（已解决 - 2026-07-01）
+### 问题8: Vercel 部署缓存（已解决 - 2026-07-05）
 
-**现象**: auto_collect_all.py 运行时微信窗口未在前台，导致采集失败（妆研24小时、非科学美妆传播等公众号采集失败）
+**现象**: 推送 GitHub 后 Vercel 部署成功，但网站显示旧数据
 
-**原因**: 
-- collect.py 有 activate_wechat() 函数，但 auto_collect_all.py 直接调用 collect.py 时不会触发该函数
-- 项目文档只写了"需要微信Mac版在前台"，没有说明自动激活机制
+**原因**: Vercel 构建时缓存了旧 data.json，未拉取最新版本
 
 **解决**: 
-- 在 auto_collect_all.py 的 collect_account() 函数开头添加微信激活代码
-- 使用 osascript 激活 WeChat + peekaboo focus 聚焦窗口 + 等待3秒
+- 修改 data.json 文件名（data.v8.json → data.v9.json → ...）
+- 更新 index.html 加载路径，强制 Vercel 重新构建
+- 硬编码 Deploy Hook 在 today_pipeline.py 中，推送后自动触发
 
-**代码变更**:
-```python
-def collect_account(account: str, count: int = 4) -> bool:
-    # 先激活微信窗口
-    print("激活微信窗口...")
-    subprocess.run([
-        'osascript', '-e',
-        'tell application "WeChat" to activate'
-    ], capture_output=True)
-    time.sleep(2)
-    
-    # 使用 peekaboo 聚焦窗口
-    for app_name in ["WeChat", "微信"]:
-        result = subprocess.run(
-            f'peekaboo focus --app "{app_name}"',
-            shell=True, capture_output=True, text=True
-        )
-        if result.returncode == 0:
-            print(f"  已聚焦到: {app_name}")
-            break
-    time.sleep(1)
-    
-    # ... 原有采集代码
-```
+**更新记录**: 2026-07-05
+
+### 问题9: 采集超时被终止（已解决 - 2026-07-06）
+
+**现象**: 采集 12 个公众号时进程被 SIGTERM 终止
+
+**原因**: 系统对长时间运行进程有限制，采集 48 篇文章耗时过长
+
+**解决**: 
+- 设置超时 1800 秒（30分钟）
+- 采集过程中每 30 秒汇报进度
+- Nick 红线：采集超时必须保持 1800 秒，不得擅自改回 600 秒
+
+**更新记录**: 2026-07-06
+
+### 问题10: 采集名单不同步（已解决 - 2026-07-10）
+
+**现象**: collect.py 采集了不在列表中的公众号（青眼、美妆内行人、Beauty Insider）
+
+**原因**: collect.py 中的 ALT_COORDS_ACCOUNTS 列表未与删除操作同步更新，仍包含已删除公众号
+
+**解决**: 
+- 清理 ALT_COORDS_ACCOUNTS 中的历史遗留公众号
+- 严格按网站上 12 个公众号执行采集
+- 采集前必须确认目标名单
+
+**更新记录**: 2026-07-10
+
+### 问题11: 数据库路径配置错误（已解决 - 2026-07-10）
+
+**现象**: export_data.py 配置了旧数据库路径，导致网站未更新（280篇而非293篇）
+
+**原因**: export_data.py 中硬编码了旧路径 `~/.openclaw/cosmetic_articles.db`，实际数据库已迁移到 `~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db`
+
+**解决**: 
+- 修复 export_data.py 数据库路径
+- 重新导出 data.v15.json（293篇）
+- 触发 Vercel 部署
+
+**更新记录**: 2026-07-10
 
 **文档更新**: 
 - 采集流程中增加"自动激活"说明
@@ -510,10 +557,11 @@ def collect_account(account: str, count: int = 4) -> bool:
 | 层级 | 技术 | 说明 |
 |------|------|------|
 | 前端 | 纯静态 HTML + JavaScript (ES5兼容) | 无框架，纯原生 |
-| 数据 | SQLite → JSON (data.json) | 静态数据源 |
-| 部署 | GitHub Pages | 静态托管 |
+| 数据 | SQLite → JSON (data.vN.json) | 静态数据源，版本号递增 |
+| 部署 | Vercel（GitHub 自动部署 + Deploy Hook） | 静态托管 |
 | 采集 | wechat-article-collector (Mac版, peekaboo) | 坐标点击自动化 |
-| 入库 | Python3 + urllib + sqlite3 | 抓取+存储 |
+| 入库 | Python3 + urllib + sqlite3 | 抓取+存储（日期事前过滤） |
+| 邮件 | Node.js + IMAP IDLE + SQLite | 实时邮件查询 |
 | 版本控制 | Git | GitHub仓库 |
 
 ---

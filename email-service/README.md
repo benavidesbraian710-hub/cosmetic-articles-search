@@ -1,207 +1,244 @@
-# 163 邮箱自动化系统
+# 化妆品文章邮件查询系统
 
-> 基于 OpenClaw Gateway 的邮件自动化处理系统，支持智能轮询、需求解析、信息搜索和 Excel 生成。
+> 基于 Node.js + IMAP IDLE + SQLite 的实时邮件自动化系统，支持自然语言查询和 Excel 批量查询。
 
 ## 📋 项目概述
 
-这是一个部署在 OpenClaw Gateway 环境的邮件自动化系统，能够：
-- 自动检查 163 邮箱新邮件
-- 解析用户搜索需求
-- 执行网络搜索
+部署在 OpenClaw Gateway 环境的邮件自动化系统，能够：
+- **IMAP IDLE 实时监听** 163 邮箱新邮件（秒级响应）
+- 解析用户搜索需求（自然语言 / Excel 附件）
+- 从 **SQLite 数据库** 本地查询化妆品文章
 - 生成 Excel 结果文件
-- 自动回复邮件
+- **原线程回复** 邮件（带 `inReplyTo` + `references`）
 
 ## 🏗️ 系统架构
 
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│   用户发送邮件   │────▶│  163 邮箱服务器  │────▶│  OpenClaw      │
-│   (任何邮箱)    │     │  (IMAP/SMTP)   │     │  Gateway 环境   │
+│   用户发送邮件   │────▶│  163 邮箱服务器  │────▶│  IMAP IDLE      │
+│  (任何邮箱)      │     │  (IMAP/SMTP)   │     │  实时监听        │
 └─────────────────┘     └─────────────────┘     └─────────────────┘
                                                           │
                                                           ▼
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│  用户收到回复    │◀────│  163 邮箱服务器  │◀────│  邮件处理脚本    │
-│  (含 Excel 附件)│     │    (SMTP)      │     │  (Python/Node)  │
+│  用户收到回复    │◀────│  163 邮箱服务器  │◀────│  mail-processor │
+│  (含 Excel 附件)│     │    (SMTP)      │     │    (Node.js)    │
 └─────────────────┘     └─────────────────┘     └─────────────────┘
                                                           │
                                                           ▼
                                                   ┌─────────────────┐
-                                                  │   搜索 + Excel  │
-                                                  │   生成模块      │
+                                                  │  SQLite 查询    │
+                                                  │  + Excel 生成   │
                                                   └─────────────────┘
 ```
 
 ## 🔧 技术栈
 
-- **IMAP 客户端**: `imapflow` (Node.js)
-- **SMTP 客户端**: `nodemailer` (Node.js)
-- **邮件处理**: Python 3
-- **搜索功能**: web_search, web_fetch (OpenClaw 工具)
-- **Excel 生成**: csv/xlsx (Python)
-- **定时任务**: OpenClaw Cron (每 15 分钟)
+| 组件 | 技术 | 说明 |
+|------|------|------|
+| IMAP 客户端 | `imapflow` | IMAP IDLE 实时监听 |
+| SMTP 客户端 | `nodemailer` | 发送回复邮件 |
+| 邮件解析 | `mailparser` | 解析邮件正文和附件 |
+| 数据库 | `sqlite3` | 本地 SQLite 查询 |
+| Excel 生成 | `xlsx` | 解析和生成 Excel |
+| 日志 | 自定义 `logger.js` | 结构化文件日志 |
+| 进程管理 | `pm2` | 常驻运行 |
 
 ## 📁 项目结构
 
 ```
 email-service/
-├── README.md                      # 项目说明
-├── docs/
-│   ├── SETUP.md                  # 部署指南
-│   ├── ARCHITECTURE.md           # 架构文档
-│   └── API.md                    # API 文档
-├── scripts/
-│   ├── config.js                 # 配置管理
-│   ├── imap.js                   # IMAP 操作脚本
-│   ├── smtp.js                   # SMTP 发送脚本
-│   ├── test-imap.js              # IMAP 测试
-│   ├── test-smtp.js              # SMTP 测试
-│   ├── idle_imapflow.js          # IMAP IDLE 实验（不推荐）
-│   └── idle_imap.js              # IMAP IDLE 实验（不推荐）
-├── mail_processor.py             # 主处理脚本（Python）
-├── requirements.txt              # Python 依赖
-├── package.json                  # Node.js 依赖
-└── .env.example                  # 环境变量模板
+├── README.md                      # 项目说明（本文档）
+├── mail-processor.js              # 主处理脚本（Node.js，~980行）
+├── mail-processor-once.js         # 单次运行版本（测试用）
+├── logger.js                      # 结构化日志模块
+├── package.json                   # Node.js 依赖
+├── package-lock.json
+├── requirements.txt               # Python 依赖（历史遗留，未使用）
+├── .env                           # 环境变量（IMAP/SMTP 密码）
+├── .gitignore
+├── logs/                          # 日志文件目录
+│   ├── app.log                    # 应用日志
+│   └── error.log                  # 错误日志
+├── docs/                          # 文档目录
+│   ├── SETUP.md                   # 部署指南（历史）
+│   ├── ARCHITECTURE.md            # 架构文档（历史）
+│   └── API.md                     # API 文档（历史）
+├── scripts/                       # 历史脚本（未使用）
+│   ├── config.js
+│   ├── imap.js
+│   ├── smtp.js
+│   ├── test-imap.js
+│   ├── test-smtp.js
+│   ├── idle_imapflow.js
+│   └── idle_imap.js
+├── REPLY_DUPLICATE_FIX.md         # 重复发送修复记录
+├── REPLY_THREAD_PLAN.md           # 原线程回复方案
+├── UPDATE_STATUS.md               # 更新状态记录
+└── search_result_*.csv            # 历史搜索结果文件
 ```
 
-## 🚀 快速开始
+## 🚀 部署与运行
 
 ### 1. 环境准备
 
 ```bash
-# 安装 Node.js 依赖
+cd email-service
 npm install
-
-# 安装 Python 依赖
-pip3 install -r requirements.txt
 ```
 
-### 2. 配置邮箱
+依赖包：
+- `imapflow` - IMAP 协议
+- `nodemailer` - SMTP 发送
+- `mailparser` - 邮件解析
+- `sqlite3` - SQLite 数据库
+- `xlsx` - Excel 读写
+- `dotenv` - 环境变量
+
+### 2. 配置环境变量
 
 ```bash
-# 复制环境变量模板
-cp .env.example .env
-
-# 编辑 .env 文件
-IMAP_HOST=imap.163.com
-IMAP_PORT=993
+# .env 文件
 IMAP_USER=cosmeticsearch@163.com
-IMAP_PASS=your_password
-SMTP_HOST=smtp.163.com
-SMTP_PORT=465
+IMAP_PASS=your_163_password
 SMTP_USER=cosmeticsearch@163.com
-SMTP_PASS=your_password
+SMTP_PASS=your_163_password
 ```
 
-### 3. 测试连接
+> ⚠️ 163 邮箱需开启 IMAP/SMTP 服务，并使用**授权码**而非登录密码。
+
+### 3. 启动（pm2 常驻）
 
 ```bash
-# 测试 IMAP
-node scripts/test-imap.js
-
-# 测试 SMTP
-node scripts/test-smtp.js
+pm2 start mail-processor.js --name mail-processor
+pm2 save
 ```
 
-### 4. 启动定时任务
+### 4. 查看状态
 
-系统已配置 OpenClaw Cron 任务，每 15 分钟自动执行：
-- 任务名: `check-inbox-every-15min`
-- 执行: `python3 ~/mail_processor.py`
+```bash
+pm2 status
+pm2 logs mail-processor
+```
 
 ## 📧 使用方式
 
-### 发送邮件触发搜索
+### 方式一：自然语言查询
 
-1. 发送邮件到: `cosmeticsearch@163.com`
-2. 邮件主题: 搜索需求（如"搜索口红推荐"）
-3. 邮件正文: 详细需求（可选）
+1. 发送邮件到：`cosmeticsearch@163.com`
+2. 邮件主题：搜索需求（如"搜索防晒相关文章"）
+3. 系统解析需求 → 查询数据库 → 回复 Excel 附件
+
+### 方式二：Excel 批量查询
+
+1. 发送邮件到：`cosmeticsearch@163.com`
+2. 邮件主题：任意
+3. 附件：Excel 文件，包含两列：
+   - 第 2 列（B列）：公众号名称
+   - 第 3 列（C列）：时间范围（如"2025-06-01 至 2025-06-30"）
+4. 系统解析 Excel → 批量查询 → 回复汇总 Excel
 
 ### 系统处理流程
 
 ```
 收到邮件
     ↓
-解析需求类型（AI/芯片/化妆品/新闻等）
+IMAP IDLE 实时触发
     ↓
-提取关键词和时间范围
+解析邮件（自然语言 / Excel 附件）
     ↓
-执行网络搜索
+提取关键词、公众号、时间范围
+    ↓
+SQLite 数据库本地查询
     ↓
 生成 Excel 文件
     ↓
-回复邮件（含附件）
+原线程回复邮件（inReplyTo + references）
     ↓
-标记邮件为已读
+标记邮件为已读（防止重复处理）
 ```
 
-## ⚙️ 配置选项
+## ⚙️ 关键配置
 
-### 轮询间隔
+### 数据库路径
 
-默认: **15 分钟**（推荐）
-
-可选:
-- 2 分钟（更快，但资源消耗更高）
-- 5 分钟（平衡）
-- 15 分钟（默认，资源友好）
-
-### 搜索关键词映射
-
-```python
-KEYWORD_PATTERNS = {
-    "AI": ["AI", "人工智能", "大模型", "LLM"],
-    "quantum": ["量子", "quantum", "量子计算"],
-    "chip": ["芯片", "chip", "半导体", "GPU"],
-    "robotics": ["机器人", "robot", "具身智能"],
-    "biotech": ["生物", "biotech", "基因"],
-    "news": ["新闻", "news", "资讯"],
-    "paper": ["论文", "paper", "arxiv"],
-    "product": ["产品", "product", "发布"],
-    "funding": ["融资", "funding", "投资"],
-}
+```javascript
+// mail-processor.js 第 53 行
+CONFIG.dbPath = path.join(require('os').homedir(), '.openclaw/cosmetic_articles.db');
 ```
 
-## 🔍 实时推送方案对比
+> ⚠️ **注意**：2026-07-10 数据库已迁移到新路径 `~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db`，但邮件系统配置仍为旧路径。当前运行正常是因为旧路径有软链接或数据同步。
 
-| 方案 | 延迟 | 可靠性 | 资源消耗 | 适用性 |
-|------|------|--------|----------|--------|
-| IMAP IDLE | 实时 | ⚠️ 不稳定 | 高 | ❌ Gateway 不支持 |
-| 2分钟轮询 | 2-4分钟 | ✅ 高 | 中 | ⚠️ 163 可能限制 |
-| **5分钟轮询** | 5-10分钟 | ✅ 高 | 低 | ✅ 推荐 |
-| **15分钟轮询** | 15-30分钟 | ✅ 高 | 很低 | ✅ **当前使用** |
+### IMAP IDLE + NOOP 心跳
+
+```javascript
+// 每 2 分钟发送 NOOP 保持连接
+setInterval(() => {
+  client.idle();
+  client.noop();
+}, 2 * 60 * 1000);
+```
+
+解决 163 邮箱 3 分 21 秒静默断开问题。
+
+### 原线程回复
+
+```javascript
+mailOptions.inReplyTo = originalMessageId;
+mailOptions.references = [originalMessageId];
+```
+
+确保回复邮件出现在原邮件线程中。
+
+## 🔍 查询逻辑
+
+### 自然语言查询
+
+- 提取关键词（如"防晒"、"口红"）
+- 模糊匹配文章标题
+- 按时间倒序排列
+- 返回全部匹配结果（无数量限制）
+
+### Excel 批量查询
+
+- 解析每行的公众号名称和时间范围
+- 支持相对时间（"近一周"、"近一月"）
+- 支持绝对时间（"2025-06-01 至 2025-06-30"）
+- 汇总所有查询结果到一个 Excel
+
+## 📝 修复记录
+
+### 2026-07-06
+- **原线程回复**：添加 `inReplyTo` + `references` 头
+- **重复发送修复**：先标记已读再处理，防止网络延迟导致重复
+
+### 2026-07-07
+- **IMAP NOOP 心跳**：每 2 分钟发送 NOOP，解决 163 邮箱 3 分 21 秒静默断开
+- 根治 pm2 108 次异常重启问题
+
+### 2026-07-03 ~ 07-06
+- Excel 附件解析从"大模型解析"改为"代码直接解析"（更稳定）
+- 修复列索引错误（第 2 列公众号名、第 3 列时间范围）
+- 去除回复中的数量限制信息
 
 ## 📝 开发记录
 
-### 2026-06-30
+### 初始版本（2026-06-30）
+- 基于 Python `mail_processor.py` + OpenClaw Cron 轮询
+- 15 分钟轮询间隔
+- 通用网络搜索（web_search/web_fetch）
 
-**已完成:**
-- ✅ 163 邮箱 IMAP/SMTP 连接配置
-- ✅ 邮件读取和发送功能测试
-- ✅ Python 邮件处理脚本
-- ✅ 需求解析逻辑（关键词识别）
-- ✅ Excel 生成模块
-- ✅ OpenClaw Cron 定时任务（15分钟）
-- ✅ 项目文档和 README
+### 当前版本（2026-07-08 后）
+- 纯 Node.js 实现 `mail-processor.js`
+- IMAP IDLE 实时监听（秒级响应）
+- SQLite 本地查询（无需网络搜索）
+- pm2 常驻运行（非 Cron）
 
-**技术决策:**
-- 选择轮询而非 IMAP IDLE（Gateway 环境限制）
-- 15 分钟轮询间隔（平衡实时性和资源消耗）
-- Python 处理邮件内容，Node.js 处理 IMAP/SMTP 协议
+## 🤝 维护
 
-**待完成:**
-- ⏳ 化妆品搜索关键词配置
-- ⏳ 实际搜索和 Excel 生成逻辑
-- ⏳ 错误处理和重试机制优化
-- ⏳ 邮件模板美化
-
-## 🤝 贡献
-
-项目由 Nick 和搜搜 (Sōusou) 共同开发。
-
-## 📄 许可证
-
-MIT
+- **负责人**: Nick
+- **技术支持**: 搜搜 (Sōusou)
+- **邮箱**: cosmeticsearch@163.com
 
 ---
 
