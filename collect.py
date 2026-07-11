@@ -34,7 +34,8 @@ COORD_LATEST = (1021, 239)         # "最新发布"
 # 需要备选坐标的公众号列表（这些公众号的UI布局不同）
 # 备选坐标：publish_time (891, 194), confirm (898, 330)
 # 文章坐标向下偏移16px
-ALT_COORDS_ACCOUNTS = ['非科学美妆传播', 'Fbeauty未来迹', '肤见未来实验室', '美妆内行人', 'Beauty Insider', '化妆品观察 品观']
+# 注意：必须与网站上显示的12个公众号严格同步
+ALT_COORDS_ACCOUNTS = ['非科学美妆传播', 'Fbeauty未来迹', '肤见未来实验室', '化妆品观察 品观']
 
 # 搜索框（关键词搜索用）
 COORD_KEYWORD_SEARCH = (672, 117)  # 搜索框
