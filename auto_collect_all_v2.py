@@ -42,7 +42,7 @@ ACCOUNTS = [
 COLLECTOR_PATH = Path.home() / ".openclaw/workspace/cosmetic-deploy/collect.py"
 
 # 数据库路径
-DB_PATH = Path.home() / ".openclaw/cosmetic_articles.db"
+DB_PATH = Path.home() / ".openclaw/workspace/cosmetic-deploy/cosmetic_articles.db"
 
 # 导出脚本路径
 EXPORT_PATH = Path.home() / ".openclaw/workspace/cosmetic-deploy/export_data.py"
