@@ -9,7 +9,7 @@ import json
 import os
 from datetime import datetime
 
-DB_PATH = os.path.expanduser('~/.openclaw/cosmetic_articles.db')
+DB_PATH = os.path.expanduser('~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db')
 OUTPUT_PATH = os.path.expanduser('~/.openclaw/workspace/cosmetic-deploy/data.json')
 
 def export_data():
