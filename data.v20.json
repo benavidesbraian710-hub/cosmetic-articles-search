@@ -1,49 +1,49 @@
 {
   "stats": {
-    "total_articles": 310,
+    "total_articles": 325,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-07-13"
+      "end": "2026-07-14"
     },
-    "last_update": "2026-07-14T01:22:13.058066"
+    "last_update": "2026-07-14T10:21:47.720493"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 57
+      "count": 60
     },
     {
       "name": "化妆品观察 品观",
-      "count": 48
+      "count": 50
     },
     {
       "name": "中国化妆品",
-      "count": 43
+      "count": 45
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 29
+      "count": 30
     },
     {
       "name": "妆研24小时",
-      "count": 27
+      "count": 28
     },
     {
       "name": "非科学美妆传播",
-      "count": 26
+      "count": 27
     },
     {
       "name": "妆合规",
-      "count": 23
+      "count": 24
     },
     {
       "name": "肤见未来实验室",
-      "count": 19
+      "count": 21
     },
     {
       "name": "原料合规观察",
-      "count": 18
+      "count": 19
     },
     {
       "name": "KEV美妆",
@@ -55,11 +55,38 @@
     },
     {
       "name": "上海日化协会",
-      "count": 4
+      "count": 5
     }
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 849,
+        "title": "百雀羚研发负责人，履新！",
+        "source": "个护前沿",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/LzZlL0jo-AR5YoRhwRC1mg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 850,
+        "title": "洗护界爱马仕，是怎么被汉高看上的？",
+        "source": "个护前沿",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/se-LORO2Ya7rW0zow3DfGA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 851,
+        "title": "国家药监局综合司关于扩大化妆品个性化服务第二阶段试点范围的通知",
+        "source": "个护前沿",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/zYWkaALaMrlhgIayD_LXDw",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 832,
         "title": "深度 | 美妆打响AI科研竞备赛，谁在掉队？",
@@ -576,6 +603,24 @@
     ],
     "化妆品观察 品观": [
       {
+        "id": 854,
+        "title": "不靠超头、不拿融资，一个跨界选手如何做到婴童细分类目TOP1",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/30lBq0gWTSHED-JVwbPN9g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 855,
+        "title": "C-Beauty出海：如何打开日本线上增量市场？",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/sEpBlHoupgcq24qV8V5Ivw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 836,
         "title": "「水」这个品类，今天被雅诗兰黛重新定义了",
         "source": "化妆品观察 品观",
@@ -1010,6 +1055,24 @@
     ],
     "中国化妆品": [
       {
+        "id": 856,
+        "title": "标签造假、未备案上市、超范围生产——合规的“基本功”为何总失分 | 合规风向标总第101期",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/9n1ARxMBQttaCxHVmEIJ9A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 857,
+        "title": "浙江省就深化化妆品监管改革促进产业高质量发展若干举措征求意见；海南省修订化妆品行政处罚裁量基准并征求意见；漫丹完成私有化退市",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/BDGJt9GU3QazlcrMThpzTg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 840,
         "title": "国家药监局扩大化妆品个性化服务试点范围：花王中国研发高管更替，草浦达也出任研发中心社长；汉高14亿美元收购Olaplex",
         "source": "中国化妆品",
@@ -1399,6 +1462,15 @@
     ],
     "Fbeauty未来迹": [
       {
+        "id": 848,
+        "title": "深度 | 17位女高管上任，美妆行业重新分配“增长权”",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/o8k8Xm2h78qWN-_HwcgkZQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 829,
         "title": "从36小时持妆到光学妆效，底妆究竟在“卷”什么？",
         "source": "Fbeauty未来迹",
@@ -1662,6 +1734,15 @@
     ],
     "妆研24小时": [
       {
+        "id": 844,
+        "title": "MISTINE蜜丝婷关联公司备案首个新原料",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/INfTrTKR6neB40gkgDJk1g",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 666,
         "title": "6月全球化妆品法规回顾 | 韩国发布化妆品安全评估指南，泰国修订禁限用原料清单…",
         "source": "妆研24小时",
@@ -1907,6 +1988,15 @@
     ],
     "非科学美妆传播": [
       {
+        "id": 845,
+        "title": "Kao花王 2026｜角质层改善不仅会影响表层的角质层RNA表达，也会影响更深层的皮肤内部RNA表达",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/A9jW_39QQQ5VNAqQTRMLHQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 827,
         "title": "欧莱雅&amp;伦敦玛丽女王大学｜JID 2026｜三维面部衰老仿真模型，包含真表皮、皮下、韧带三层",
         "source": "非科学美妆传播",
@@ -2143,6 +2233,15 @@
     ],
     "妆合规": [
       {
+        "id": 847,
+        "title": "化妆品个性化服务试点已覆盖23省（区，市）！附政策梳理",
+        "source": "妆合规",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/fCvF5h2Bg3SnoXaVSDn05A",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 822,
         "title": "一文读懂《化妆品新原料注册备案资料技术通则》核心要点",
         "source": "妆合规",
@@ -2352,11 +2451,29 @@
     ],
     "肤见未来实验室": [
       {
+        "id": 852,
+        "title": "代谢图谱解锁人体衰老规律",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/xdGZi7mTS-m5NM0731KYdQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 835,
         "title": "指南与共识|微粒化脱细胞真皮基质（mADM）面部年轻化的专家共识（2021 版）",
         "source": "肤见未来实验室",
         "publish_date": "2026-07-13",
         "url": "https://mp.weixin.qq.com/s/Ypg3PpseKJ8wxfzEniQI4g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 853,
+        "title": "两种药物联手，高效延长小鼠健康寿命",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/XgZ5SnyTgoD-Rv1mK7XkAw",
         "summary": "",
         "keywords": []
       },
@@ -2524,6 +2641,15 @@
       }
     ],
     "原料合规观察": [
+      {
+        "id": 846,
+        "title": "栢特薇备案首个化妆品新原料",
+        "source": "原料合规观察",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/J97aSTbPdU2HQqvn5bpsiw",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 828,
         "title": "半年破百！2021-2026上半年化妆品新原料备案盘点",
@@ -2836,6 +2962,15 @@
       }
     ],
     "上海日化协会": [
+      {
+        "id": 858,
+        "title": "行业协会公众号的进化：从通知栏到工具箱——上海日用化学品行业协会公众号全新升级",
+        "source": "上海日化协会",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/AKBQ2FGq-iAAABgikbcd4Q",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 843,
         "title": "倒计时5天｜来PCT 2026，听论坛、逛新品、集章领奖、行业社交一次解锁！",
