@@ -1,33 +1,33 @@
 {
   "stats": {
-    "total_articles": 325,
+    "total_articles": 339,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-07-14"
+      "end": "2026-07-15"
     },
-    "last_update": "2026-07-14T10:21:47.720493"
+    "last_update": "2026-07-15T10:08:22.945737"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 60
+      "count": 63
     },
     {
       "name": "化妆品观察 品观",
-      "count": 50
+      "count": 52
     },
     {
       "name": "中国化妆品",
-      "count": 45
+      "count": 47
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 30
+      "count": 32
     },
     {
       "name": "妆研24小时",
-      "count": 28
+      "count": 29
     },
     {
       "name": "非科学美妆传播",
@@ -39,19 +39,19 @@
     },
     {
       "name": "肤见未来实验室",
-      "count": 21
+      "count": 22
     },
     {
       "name": "原料合规观察",
-      "count": 19
+      "count": 20
     },
     {
       "name": "KEV美妆",
-      "count": 10
+      "count": 11
     },
     {
       "name": "美业颜究院",
-      "count": 6
+      "count": 7
     },
     {
       "name": "上海日化协会",
@@ -60,6 +60,33 @@
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 863,
+        "title": "国际香料香精巨头押注无酒精香水赛道",
+        "source": "个护前沿",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/yXoOw1W2VhdxRHtUYKBd0Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 864,
+        "title": "扎堆上市、热钱涌入，今年这个赛道爆了！",
+        "source": "个护前沿",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/ypUDrit5JLP-A2_r0qkFDA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 865,
+        "title": "群雄抢占抗衰赛道！2026 国际VS国货品牌全线延伸抗衰产品深度盘点",
+        "source": "个护前沿",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/Sbwg-OcJzAE68gRy8q0UWg",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 849,
         "title": "百雀羚研发负责人，履新！",
@@ -603,6 +630,24 @@
     ],
     "化妆品观察 品观": [
       {
+        "id": 869,
+        "title": "三资堂×丝芙兰：新国货如何从“被看见”走向“被相信”",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/8vH0AHyGgBX8tov1j8EmlQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 870,
+        "title": "2708亿！上半年美妆电商成绩单出炉",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/Pznf3u49BRXzi50oaA71cA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 854,
         "title": "不靠超头、不拿融资，一个跨界选手如何做到婴童细分类目TOP1",
         "source": "化妆品观察 品观",
@@ -1055,6 +1100,24 @@
     ],
     "中国化妆品": [
       {
+        "id": 871,
+        "title": "国家市场监管总局修订产品质量监督抽查管理办法并公开征求意见；上海家化子公司完成一款新原料备案；雅诗兰黛将保留Too Faced等品牌",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/dwcPjknW9B1Bo6W3s36k9g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 872,
+        "title": "世界杯进入决赛时刻，美妆界的“世界杯”INPD等你来！| 解码2026 INPD四大关键词",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/S0GOOJGIQpRUiovNkvx5mQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 856,
         "title": "标签造假、未备案上市、超范围生产——合规的“基本功”为何总失分 | 合规风向标总第101期",
         "source": "中国化妆品",
@@ -1462,6 +1525,24 @@
     ],
     "Fbeauty未来迹": [
       {
+        "id": 861,
+        "title": "从抖音到丝芙兰，三资堂们为什么都在往线下走？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/PSB3gnpuvyYCh6qXy_XJbw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 862,
+        "title": "交易规模涨149%、新客破179%：线下美业在抖音迎来加速期",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/T-bXrHR93WvAmslZoCzTyQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 848,
         "title": "深度 | 17位女高管上任，美妆行业重新分配“增长权”",
         "source": "Fbeauty未来迹",
@@ -1733,6 +1814,15 @@
       }
     ],
     "妆研24小时": [
+      {
+        "id": 859,
+        "title": "上海家化子公司备案一款新原料",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/UBcDmpflSG2T_LZTWSBhKw",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 844,
         "title": "MISTINE蜜丝婷关联公司备案首个新原料",
@@ -2451,6 +2541,15 @@
     ],
     "肤见未来实验室": [
       {
+        "id": 868,
+        "title": "指南与共识|中国雄激素性秃发诊疗指南（2023）",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/n-yFhoeTCut4GXLlnpJEnQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 852,
         "title": "代谢图谱解锁人体衰老规律",
         "source": "肤见未来实验室",
@@ -2642,6 +2741,15 @@
     ],
     "原料合规观察": [
       {
+        "id": 860,
+        "title": "上海家化子公司备案一款新原料",
+        "source": "原料合规观察",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/Jn9ujTNKozxIRNrAmijXdw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 846,
         "title": "栢特薇备案首个化妆品新原料",
         "source": "原料合规观察",
@@ -2815,6 +2923,15 @@
     ],
     "KEV美妆": [
       {
+        "id": 866,
+        "title": "妮维雅男士蓝BUFF液态精华；野兽派「The Mirror花镜系列」；优时颜B5至简洁面009... | 新品速递",
+        "source": "KEV美妆",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/DcwVnXxEqyYlg0cAakBI0g",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 824,
         "title": "雅诗兰黛小棕复活水；德美乐嘉胶原银行「复利」霜；骆驼银三角防晒霜；科颜氏胶原蛋白精华液... | 新品速递",
         "source": "KEV美妆",
@@ -2906,6 +3023,15 @@
       }
     ],
     "美业颜究院": [
+      {
+        "id": 867,
+        "title": "琶洲AI算力底座加持，海珠数智美妆再提速",
+        "source": "美业颜究院",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/vZtVo_9dOhAOTAuUUOlMhQ",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 825,
         "title": "台前有趋势，幕后有基石｜2026全球美业趋势创新大会「创新基石」奖项揭晓！",
