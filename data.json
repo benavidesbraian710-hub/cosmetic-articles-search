@@ -1,49 +1,49 @@
 {
   "stats": {
-    "total_articles": 339,
+    "total_articles": 354,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-07-15"
+      "end": "2026-07-16"
     },
-    "last_update": "2026-07-15T10:08:22.945737"
+    "last_update": "2026-07-16T10:28:51.180936"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 63
+      "count": 66
     },
     {
       "name": "化妆品观察 品观",
-      "count": 52
+      "count": 55
     },
     {
       "name": "中国化妆品",
-      "count": 47
+      "count": 49
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 32
+      "count": 33
     },
     {
       "name": "妆研24小时",
-      "count": 29
+      "count": 31
     },
     {
       "name": "非科学美妆传播",
-      "count": 27
+      "count": 28
     },
     {
       "name": "妆合规",
-      "count": 24
+      "count": 25
     },
     {
       "name": "肤见未来实验室",
-      "count": 22
+      "count": 23
     },
     {
       "name": "原料合规观察",
-      "count": 20
+      "count": 21
     },
     {
       "name": "KEV美妆",
@@ -60,6 +60,33 @@
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 879,
+        "title": "计划反转，雅诗兰黛叫停“品牌大甩卖”",
+        "source": "个护前沿",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/0orXlgzQ1wgD1IrMr_ajTQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 880,
+        "title": "从轻资产到重资产：国货美妆为何扎堆建设总部与自有工厂？",
+        "source": "个护前沿",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/yBx4xrOJPYCBlwC30oT_Hw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 881,
+        "title": "Kao花王 2026｜角质层改善不仅会影响表层的角质层RNA表达，也会影响更深层的皮肤内部RNA表达",
+        "source": "个护前沿",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/4ZKXaTsBEIk0uhT2LZKJ7A",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 863,
         "title": "国际香料香精巨头押注无酒精香水赛道",
@@ -630,6 +657,33 @@
     ],
     "化妆品观察 品观": [
       {
+        "id": 883,
+        "title": "周翊然×花间颂：从抖音黑马到线下引爆",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/JHOXS_Dm5elxxdPAr6lusg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 884,
+        "title": "80亿级日化巨头，上半年又亏了",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/F_ha6nupUV8w-e712Ecqhg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 885,
+        "title": "今起，美妆行业“只是罚点钱”的时代结束了",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/X6SXjKiJ7OOnztbocOkv0g",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 869,
         "title": "三资堂×丝芙兰：新国货如何从“被看见”走向“被相信”",
         "source": "化妆品观察 品观",
@@ -1100,6 +1154,24 @@
     ],
     "中国化妆品": [
       {
+        "id": 886,
+        "title": "报名开启｜Ben Lee教授领衔，《中国化妆品》杂志×美创静界“静界谈 BEAUTY TALKS”首期，邀您共探中国美妆全球化",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/HgXsRiH8XZZ5wmV0NHssnA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 887,
+        "title": "国家药监局就《化妆品安全技术规范》修订实施事宜公开征求意见；湖北省入选化妆品个性化服务第二阶段试点；天鹜科技完成数亿元A++轮融资",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/U56IL1wdOYmNoZMkb-4rIQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 871,
         "title": "国家市场监管总局修订产品质量监督抽查管理办法并公开征求意见；上海家化子公司完成一款新原料备案；雅诗兰黛将保留Too Faced等品牌",
         "source": "中国化妆品",
@@ -1525,6 +1597,15 @@
     ],
     "Fbeauty未来迹": [
       {
+        "id": 878,
+        "title": "丝芙兰、話梅加码，美妆零售自有品牌能复刻“山姆”奇迹？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/UCHEeDxfdUpWP8QYPe94mA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 861,
         "title": "从抖音到丝芙兰，三资堂们为什么都在往线下走？",
         "source": "Fbeauty未来迹",
@@ -1815,6 +1896,24 @@
     ],
     "妆研24小时": [
       {
+        "id": 873,
+        "title": "HMO再获新原料公示",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/A-8KiNWOv6D4GVrncRzh5g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 874,
+        "title": "国家药监局公示《化妆品安全技术规范（2015版）》修订内容实施办法",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/3QqndoSz8F4ctQFiZOa9zw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 859,
         "title": "上海家化子公司备案一款新原料",
         "source": "妆研24小时",
@@ -2078,6 +2177,15 @@
     ],
     "非科学美妆传播": [
       {
+        "id": 875,
+        "title": "Kao花王 2026｜染发后二硫键断裂带来的头发损伤与头发中的黑色素相关",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/kJTAmXWCjTuEc-6QQ6LGGw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 845,
         "title": "Kao花王 2026｜角质层改善不仅会影响表层的角质层RNA表达，也会影响更深层的皮肤内部RNA表达",
         "source": "非科学美妆传播",
@@ -2323,6 +2431,15 @@
     ],
     "妆合规": [
       {
+        "id": 877,
+        "title": "最新！欧盟化妆品法规更新：涉及附录II、III、V",
+        "source": "妆合规",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/xPFF7nMTyhOJ7T7TKIk3qQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 847,
         "title": "化妆品个性化服务试点已覆盖23省（区，市）！附政策梳理",
         "source": "妆合规",
@@ -2541,6 +2658,15 @@
     ],
     "肤见未来实验室": [
       {
+        "id": 882,
+        "title": "器官蛋白衰老特征可提前预测痴呆与老年死亡风险",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/x8-w5zW7P-F374SvsXBByg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 868,
         "title": "指南与共识|中国雄激素性秃发诊疗指南（2023）",
         "source": "肤见未来实验室",
@@ -2740,6 +2866,15 @@
       }
     ],
     "原料合规观察": [
+      {
+        "id": 876,
+        "title": "中科欣扬备案一款HMO相关原料",
+        "source": "原料合规观察",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/kxR73vlDWqaZTVgTFrzgkA",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 860,
         "title": "上海家化子公司备案一款新原料",
