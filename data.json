@@ -1,4 +1,5 @@
 {
+  "version": "v23",
   "stats": {
     "total_articles": 370,
     "source_count": 12,
@@ -6,7 +7,7 @@
       "start": "2026-06-15",
       "end": "2026-07-17"
     },
-    "last_update": "2026-07-17T11:10:20.946954"
+    "last_update": "2026-07-17T11:52:38.387809"
   },
   "sources": [
     {
