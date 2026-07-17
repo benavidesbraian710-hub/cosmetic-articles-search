@@ -1,18 +1,18 @@
 {
   "version": "v23",
   "stats": {
-    "total_articles": 370,
-    "source_count": 12,
+    "total_articles": 418,
+    "source_count": 13,
     "date_range": {
-      "start": "2026-06-15",
+      "start": "",
       "end": "2026-07-17"
     },
-    "last_update": "2026-07-17T11:52:38.387809"
+    "last_update": "2026-07-18T01:53:17.217793"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 69
+      "count": 73
     },
     {
       "name": "化妆品观察 品观",
@@ -20,43 +20,47 @@
     },
     {
       "name": "中国化妆品",
-      "count": 51
+      "count": 55
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 35
+      "count": 39
     },
     {
       "name": "妆研24小时",
-      "count": 32
+      "count": 36
     },
     {
       "name": "非科学美妆传播",
-      "count": 29
+      "count": 33
     },
     {
       "name": "妆合规",
-      "count": 26
+      "count": 30
     },
     {
       "name": "肤见未来实验室",
-      "count": 24
+      "count": 28
     },
     {
       "name": "原料合规观察",
-      "count": 22
+      "count": 26
     },
     {
       "name": "KEV美妆",
-      "count": 12
+      "count": 16
     },
     {
       "name": "美业颜究院",
-      "count": 8
+      "count": 12
     },
     {
       "name": "上海日化协会",
-      "count": 5
+      "count": 9
+    },
+    {
+      "name": "化妆品观察",
+      "count": 4
     }
   ],
   "articles": {
@@ -679,6 +683,42 @@
         "source": "个护前沿",
         "publish_date": "2026-06-15",
         "url": "https://mp.weixin.qq.com/s/_4AWpZec8er_A1J12WmBKg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 924,
+        "title": "InnoCosme倒计时1周|完整议程全揭露,2000+参会者已集结!共话前沿技术,共建合作生态",
+        "source": "个护前沿",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8NX2Gm2SXjUZYuegk8FH16FqXa8Fplpd9gQui2qFgp0nXoKYZ0rM7HfRQVtQoEZMklc6Bv6Z27JgYV3ZkzSBnTMwOhsfN5rniw8Ap7bgCN9-dVcr8dyCVSUQjBwgUa_8kD-68ODq2HPE78FRRpVx8s_oFEBbN8mLUOweTwECzvS_ykeBcOTquY0ErogcS3w5nNj2z7QajgPTm0CtGSSkZQQ..&type=2&query=site:mp.weixin.qq.com %E4%B8%AA%E6%8A%A4%E5%89%8D%E6%B2%BF&token=696123017DD23E1A202649F2176E808820189D236A5A68B9",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 925,
+        "title": "守风雪前线  护一城安宁",
+        "source": "个护前沿",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8NX2Gm2SXjUZYuegk8FH16FqXa8Fplpd9rNfUIKld68HcaHNb4G-xXPtB157rn-zYzvpJHI5EkQceOTYGSR5Krq7kmRInDa8zm2xl_WTAjhclYLwVzb6Um7OGtO4CcFwk2luBoIfQwUZXYpzOp89K0g6p29SDYl3fJ8fvilKA0YmdagYhGBbPCXKeYdP_KzkwQrFDBtXe5LQ5eBgmN3LoYQ..&type=2&query=site:mp.weixin.qq.com %E4%B8%AA%E6%8A%A4%E5%89%8D%E6%B2%BF&token=696123017DD23E1A202649F2176E808820189D236A5A68B9",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 926,
+        "title": "保通畅,护安全,首都公安在前线!",
+        "source": "个护前沿",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8NX2Gm2SXjUZYuegk8FH16FqXa8Fplpd9HFY4iZc0V7T6nnAGfqVtB_-9j6vRGVVLh_1sVkY2nXieLgngOSI8qyo-9OTVG4Up2C1uTg-WsJN785ml1Rb7yIr54K6WGUQ6Xf_3LLiV2GHILmhJS9VZula351JKh6RTRm2v6sB1vUUIZDEwulKxc_IEfYtyDOMKmXXn5TiOYyf6zvkPgoArRQ..&type=2&query=site:mp.weixin.qq.com %E4%B8%AA%E6%8A%A4%E5%89%8D%E6%B2%BF&token=696123017DD23E1A202649F2176E808820189D236A5A68B9",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 927,
+        "title": "15项专利、4个工作室!始终走在护理前沿的创新领军人——记2022年度“首护天使·创新之星”获得者王秀华",
+        "source": "个护前沿",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8NX2Gm2SXjUZYuegk8FH16FqXa8Fplpd9JpoFIKGLeRjmEjm8Z4lq_aB_IrVS8bnicQXsyvEqbhZ39korOlKN3VW8_LsOgc4cJxanDwNE4F-vw40kqRPIsQ4wn_LUbVCTZ8Nfv10jD6qC8mVezIUeIG7VrsXK_z_lFTdA5uQJ0WUNgm_0zy8TDbFaM0TOZJZV_vkz1UUDhRDuL0unUdKkuw..&type=2&query=site:mp.weixin.qq.com %E4%B8%AA%E6%8A%A4%E5%89%8D%E6%B2%BF&token=696123017DD23E1A202649F2176E808820189D236A5A68B9",
         "summary": "",
         "keywords": []
       }
@@ -1657,6 +1697,42 @@
         "url": "https://mp.weixin.qq.com/s/3A1hTHXIQohJ6dYSjLcEjw",
         "summary": "",
         "keywords": []
+      },
+      {
+        "id": 944,
+        "title": "中国化妆品的资本时代 看资本如何撬动化妆品市场格局",
+        "source": "中国化妆品",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6ft3wfAVofsP5Peu-UiA4DN0_kspbhApI_26Ex_LkJKyVgrFeYQugDreNO80_WcAp84c_pdbDkNxilnAbIhKI0yDoM68DFV8XCb4FimpCZyLS0RoFED2x0Gf3bO1HNyyWa0I4WlNGly54D7FvVPGFWQU8RO-8ROmGF_8Ca0sTAGGdAwG_HG3R_R19RwSJlCU8tlxg7p5N1_BVfnU0pT0e6or53kdEJ39C1IEkG1YApFVODVwamIVCQFsCGjWKaPVVOVn8VGKlXQjXgWrSLfW3UBLEeDd6JYmqiZqwg0yoRFw.&type=2&query=site:mp.weixin.qq.com %E4%B8%AD%E5%9B%BD%E5%8C%96%E5%A6%86%E5%93%81&token=6961C71C6EF9150E333265E63E37108C34F7754B6A5A68D3",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 945,
+        "title": "预测  哪些是2016年中国化妆品行业关键词?",
+        "source": "中国化妆品",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6ft3wfAVofsP5Peu-UiA4DN0_kspbhApI_26Ex_LkJKyVgrFeYQugDmNt45BCy1PM7BT1LrgC-ReE6nKf8_T3hGLWqG6pVEJTaaGCCv0xOukcYBA-GYGUz-IXZe0FFXu7Dlroq-7JQzJkWBjQy84fIUpMzpmZg49QVrL81KHxc9a4FOkXtRm2Bucdx6jh_QmRib0XcD5uLXMzN36-_pE2S0a9YwEIhkckKNIBBuINxcyY0fcwDy4uwC6ONwlHNyLBWhttcTbZx3U.&type=2&query=site:mp.weixin.qq.com %E4%B8%AD%E5%9B%BD%E5%8C%96%E5%A6%86%E5%93%81&token=6961C71C6EF9150E333265E63E37108C34F7754B6A5A68D3",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 946,
+        "title": "创新引领未来——「2016中国化妆品经济论坛」开幕盛况",
+        "source": "中国化妆品",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6ft3wfAVofsP5Peu-UiA4DN0_kspbhApI_26Ex_LkJKyVgrFeYQugDmbUpqHLCPdC23Yf8mrT0iOJ5Bz5rp-emR4b94GJmxRDTxPhkBr_s9wSh_gkvhVjzWiJJ_mvvLyuWkHC2_yT7fapRe7KfIbbaevmxNiE7cjCkGzR-4NozhkHLPSUcnzt4cOZuCm8QsjSof9IFrVzBfeAg1lX1XlPXc97IC-_q7aPLXyZVHL6B3RXdXpasty-6UlLwDM1yOWyKyv34gCErgM.&type=2&query=site:mp.weixin.qq.com %E4%B8%AD%E5%9B%BD%E5%8C%96%E5%A6%86%E5%93%81&token=6961C71C6EF9150E333265E63E37108C34F7754B6A5A68D3",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 947,
+        "title": "揭秘中国化妆品经济论坛华东峰会——分享嘉宾你最期待谁?",
+        "source": "中国化妆品",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6ft3wfAVofsP5Peu-UiA4DN0_kspbhApI_26Ex_LkJKyVgrFeYQugDmbUpqHLCPdC23Yf8mrT0iOJ5Bz5rp-emR4b94GJmxRDTxPhkBr_s9zd6lL7sqDPVLKpj4-pEyrUbRlX8txLgQVfTnxH4dQwGJITZjjl9Hmcz-G7uqYCH5P6ZugfDMLP4WL_9Kally2TpgjoWvAT2a64axfeY5FOs_g1lT4LKiVzwy69sc_yDrQ7PvJ9bpKkiggygmUrKy7ZTjHxHluqc9jk43iv_qmqE0OpQuLPMm7SiZqwg0yoRFw.&type=2&query=site:mp.weixin.qq.com %E4%B8%AD%E5%9B%BD%E5%8C%96%E5%A6%86%E5%93%81&token=6961C71C6EF9150E333265E63E37108C34F7754B6A5A68D3",
+        "summary": "",
+        "keywords": []
       }
     ],
     "Fbeauty未来迹": [
@@ -1974,6 +2050,42 @@
         "url": "https://mp.weixin.qq.com/s/Vwx9YrJnwhmUn1TtEV_AYg",
         "summary": "",
         "keywords": []
+      },
+      {
+        "id": 920,
+        "title": "未来迹&魔镜直播|2023年美妆市场,“健康”是最大关键词?",
+        "source": "Fbeauty未来迹",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8YusfKmMzcO1Yuegk8FH16FqXa8Fplpd92mlKXrKC9nqsPzD-Y7jXHUm-VB8E52zkx1FFl2Y4BrMnsEKRRGoEusm4B-1gdYHA4x4mdRXzb9ejyutn6Y-vfMyJQtZJVP5_n9CoLvA4HNGJyIAadqKjF85kyKAfoxI2E3r7ibYfG2Q10VuXB4sH-4e-LkWd6rKwkLz40AezwSV5LU3lqtPw9g..&type=2&query=site:mp.weixin.qq.com Fbeauty%E6%9C%AA%E6%9D%A5%E8%BF%B9&token=6961035E0A9B766C575100855F77E92757BDAD416A5A68B3",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 921,
+        "title": "发刊词|山呼海啸中,我想和你一起寻迹未来",
+        "source": "Fbeauty未来迹",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8YusfKmMzcO1Yuegk8FH16FqXa8Fplpd92mlKXrKC9nqsPzD-Y7jXHUm-VB8E52zkx1FFl2Y4BrMnsEKRRGoEuk-FbU8sVYZir4ydw0yn7BkcWBWACQo8MY8HVOcJqQuVDNrVK6rQt4np1EfaikB5d8Wal557ssx-No0mAistwnL7YNlDWXPZhE2qUGzCXO3T8jAC3yiiDiW54z_tGSZTqA..&type=2&query=site:mp.weixin.qq.com Fbeauty%E6%9C%AA%E6%9D%A5%E8%BF%B9&token=6961035E0A9B766C575100855F77E92757BDAD416A5A68B3",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 922,
+        "title": "十家国货化妆品财报出炉,未来市场竞争或只接受“全能战士”",
+        "source": "Fbeauty未来迹",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8YusfKmMzcO1Yuegk8FH16FqXa8Fplpd92mlKXrKC9nqsPzD-Y7jXHUm-VB8E52zkx1FFl2Y4BrMnsEKRRGoEul4jSlMKw9XFIqEhQiGCth_IjiifFnKdkr8okF-6Opkh5N4nY17eV3S-4ZCXujngu53ZQjtoxOxOjk3kqx0uJP0DMpTgnsVjtbqCURKtFeaTVO1fg0pkBtMO8fIRwtipOg..&type=2&query=site:mp.weixin.qq.com Fbeauty%E6%9C%AA%E6%9D%A5%E8%BF%B9&token=6961035E0A9B766C575100855F77E92757BDAD416A5A68B3",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 923,
+        "title": "看好实体渠道未来,这家20亿级美妆企业决定全力冲刺线下",
+        "source": "Fbeauty未来迹",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8YusfKmMzcO1Yuegk8FH16FqXa8Fplpd92mlKXrKC9nqsPzD-Y7jXHUm-VB8E52zkx1FFl2Y4BrMnsEKRRGoEukvE0DB_5Pl3k9FNWxWM3DwkgoezVHyj7YsXmFPyBqdk7beQLuL4xMdJc4qM6wr5TW4-H45UaZrKpE1dhkGWUDpZru6K_4HobiL3GbeatMx-0lBcG9PVEa3wdVqCwyPdzA..&type=2&query=site:mp.weixin.qq.com Fbeauty%E6%9C%AA%E6%9D%A5%E8%BF%B9&token=6961035E0A9B766C575100855F77E92757BDAD416A5A68B3",
+        "summary": "",
+        "keywords": []
       }
     ],
     "妆研24小时": [
@@ -2264,6 +2376,42 @@
         "url": "https://mp.weixin.qq.com/s/xHuhp9l3godjag7Vav_XKQ",
         "summary": "",
         "keywords": []
+      },
+      {
+        "id": 904,
+        "title": "6月全球化妆品法规回顾 | 韩国发布化妆品安全评估指南,泰国修订禁限用原料清单…",
+        "source": "妆研24小时",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8vCxD0k8Qv2RYuegk8FH16FqXa8Fplpd9kAICJm8d29fhOFpTi9Rvip6qScw2cW48Vk0iAbReyCr_ItvtFNOrcEP_s2rtjYwLxy9iv8btagbbImStMNm7bp0mtEDTKKKGIJKKlqrpZjS7GiwDR9EEGRw-tO_PWxRMj-YJriGPnLkIp1bFg4lb6SSvBt7tBnPL_vbzSPCcqJ9j3x9Nw6p-Fg..&type=2&query=site:mp.weixin.qq.com %E5%A6%86%E7%A0%9424%E5%B0%8F%E6%97%B6&token=69608D0014856972484F1E9B4EA9F890490185C76A5A689E",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 905,
+        "title": "强制性国标《化妆品安全通用要求(征求意见稿)》修订解读",
+        "source": "妆研24小时",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8vCxD0k8Qv2RYuegk8FH16FqXa8Fplpd9kAICJm8d29fhOFpTi9Rvip6qScw2cW48Vk0iAbReyCr_ItvtFNOrcLy2kGuTBf4NWPtq2nJXmJgWilLeHZSGypNEKXTsJSKxTMOmfblJjVgtD_UL9vw2CSHSqzBmKJc7oFmzNrslcQ6rNdgHHvkdlEnZVuaihz4zkhvtr5Y8pgp5Nu7CnoSqqg..&type=2&query=site:mp.weixin.qq.com %E5%A6%86%E7%A0%9424%E5%B0%8F%E6%97%B6&token=69608D0014856972484F1E9B4EA9F890490185C76A5A689E",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 906,
+        "title": "超过24小时带妆的女星们,素颜是什么样子?",
+        "source": "妆研24小时",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8vCxD0k8Qv2RYuegk8FH16FqXa8Fplpd9NudUWqG7pg_nsllKi-icSEKlRyWeoDOSB4u1oJvCOL3X2O92Ur29OAUrAjY0AmdCrDFasoyYK0CoO7EauoGkw_ntE9VIluEbwoItEujaRmJFOzpVxhOt62byg9GAA4VdnOQJht5mbpMEGyrc61P7o9VbMylZRabWa7cJU5aV3RHS-e4Yz84xMA..&type=2&query=site:mp.weixin.qq.com %E5%A6%86%E7%A0%9424%E5%B0%8F%E6%97%B6&token=69608D0014856972484F1E9B4EA9F890490185C76A5A689E",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 907,
+        "title": "实用帖:24小时不晕妆的美妆秘籍!",
+        "source": "妆研24小时",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6ft3wfAVofsP5Peu-UiA4DN0_kspbhApILW8IyY_iD2CVgrFeYQugDlRR10wpuwAjmLe4H9PwKp2wh8MPA3Mbaopm1SegoQSekVRopacx4zPv-TIEWwyqpc3e7HpjVkCAVwBzqA3r-R79_ZzbOeJWjFtQD1U93nUVQiWac8kxi63jTaZTf0nPnW5wNxhRCX4QIHOCWPHWX6rQFFxL0QQKMrHbQDB24Mg0kRMOVoPW1GGpDG62qgrR2y-xzcxV5tH0E3C7rZ4KXfvB0KmpxdVTrsUOxa94HdYNiZqwg0yoRFw.&type=2&query=site:mp.weixin.qq.com %E5%A6%86%E7%A0%9424%E5%B0%8F%E6%97%B6&token=69608D0014856972484F1E9B4EA9F890490185C76A5A689E",
+        "summary": "",
+        "keywords": []
       }
     ],
     "非科学美妆传播": [
@@ -2527,6 +2675,42 @@
         "url": "https://mp.weixin.qq.com/s/PMC2yca_GTPkuajAydxUMQ",
         "summary": "",
         "keywords": []
+      },
+      {
+        "id": 908,
+        "title": "爱茉莉上海|JCD 2026|基于敏感肌的,敏肌vs非敏肌,脸颊部位皮肤的蛋白组学对比研究",
+        "source": "非科学美妆传播",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8FqvuCcLyDy9Yuegk8FH16FqXa8Fplpd9rbvis72tTvsPY7BF6uTHfxUX48bKN5gesVxbXKhLpKPw3xAwZdo3cRNI061oPAHnFFOljMbzLZi_KAAp2NkDHxzChyiTVBRLNfq-CTpz-UpLWyBUYlT2gA6otuOi8fCRXNocbmsO5mDW-Yj7fYqFU3BRU45WP2AHbo0Y6lKqcPn2CsG6-xMgzQ..&type=2&query=site:mp.weixin.qq.com %E9%9D%9E%E7%A7%91%E5%AD%A6%E7%BE%8E%E5%A6%86%E4%BC%A0%E6%92%AD&token=6960AB64E0719C86BCBAEB6EBB8DE7DDBD17A2036A5A68A4",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 909,
+        "title": "资生堂|COLOR RES APPL 2026|关于皮肤暗沉感知的年龄差异和跨文化差异,基于对303位中国女性皮肤暗沉感知的调研",
+        "source": "非科学美妆传播",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8FqvuCcLyDy9Yuegk8FH16FqXa8Fplpd9rbvis72tTvsPY7BF6uTHfxUX48bKN5gesVxbXKhLpKPw3xAwZdo3cV2oNNCDw9tSRVwZp-KmsY8X3WXiZmGge2yYFBDENqr-Hmxk7mCrvNgprxsRBC87newQruDF-QwYf9zyvVTLCT-rscTJByRIWekQWAP9EKjERMdTmUA7ux-jotuuiAmOIg..&type=2&query=site:mp.weixin.qq.com %E9%9D%9E%E7%A7%91%E5%AD%A6%E7%BE%8E%E5%A6%86%E4%BC%A0%E6%92%AD&token=6960AB64E0719C86BCBAEB6EBB8DE7DDBD17A2036A5A68A4",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 910,
+        "title": "科学美妆会发光!首个科学传播IP“发光计划”启航!",
+        "source": "非科学美妆传播",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8FqvuCcLyDy9Yuegk8FH16FqXa8Fplpd9nzZmlp6oN2TaWqYRSHghxZ6Vmj3xgcJ2jd8Q6Lc9d8kQaRMzasmD0pNHgdJq0_KXiXH1jHBz6FS_jhys5Khoa_wdUs0vKuDtwgV2r9AX_6wvYmZxlxbR02CGB9UXoZD_Gq6s4ETdQoYCfLmb-kCJ5qj41HNDMl2aOjVjlOj7_eJCy6umSSPEsg..&type=2&query=site:mp.weixin.qq.com %E9%9D%9E%E7%A7%91%E5%AD%A6%E7%BE%8E%E5%A6%86%E4%BC%A0%E6%92%AD&token=6960AB64E0719C86BCBAEB6EBB8DE7DDBD17A2036A5A68A4",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 911,
+        "title": "LVMH|IJCS 2026|补充亚洲中国女性族群的唇色数据,横向对比四种族群唇色差异,开发出含53种唇色调的全球参考图表",
+        "source": "非科学美妆传播",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8FqvuCcLyDy9Yuegk8FH16FqXa8Fplpd9rbvis72tTvsPY7BF6uTHfxUX48bKN5gesVxbXKhLpKPw3xAwZdo3cc2cQWOclprrScXI1dY6SG5xbcpz7Fm3MNyJx3pimeBiAHnqN_kGjYuRXkeLpu9MG_RGrUDq_1xDnjbIAsB8i5Y-ueyEWg2YiOSqVmPIwHmVRLut6MX7C655LU3lqtPw9g..&type=2&query=site:mp.weixin.qq.com %E9%9D%9E%E7%A7%91%E5%AD%A6%E7%BE%8E%E5%A6%86%E4%BC%A0%E6%92%AD&token=6960AB64E0719C86BCBAEB6EBB8DE7DDBD17A2036A5A68A4",
+        "summary": "",
+        "keywords": []
       }
     ],
     "妆合规": [
@@ -2763,6 +2947,42 @@
         "url": "https://mp.weixin.qq.com/s/CnbNdyIcxgi3mSZnqDBsdw",
         "summary": "",
         "keywords": []
+      },
+      {
+        "id": 916,
+        "title": "妆合规功能再升级",
+        "source": "妆合规",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8YwqjV5vzmMdYuegk8FH16FqXa8Fplpd9Mfx3JsIdQUyghxrBG4gtXpVzxBQyPa_8PqSXlwPNk9qZrFUSP3729QjVzesuKzwlTSrmj5jgrhsF4v0DIDs7VX9rPh7hOVgZHLgxSkaSdhE5httUl7-ywwPvQyhrjLD4pO9Js5O7LhJPTQpv139VK0LS2mYNL6KRYsPMp419-6XzAjcIGepUqA..&type=2&query=site:mp.weixin.qq.com %E5%A6%86%E5%90%88%E8%A7%84&token=6960E4B061F01C063D3B6BEE3AED8A153D956EF06A5A68AE",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 917,
+        "title": "妆合规上线“国际食用历史数据”,完整安评数据支撑再次升级",
+        "source": "妆合规",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8YwqjV5vzmMdYuegk8FH16FqXa8Fplpd9Mfx3JsIdQUyghxrBG4gtXpVzxBQyPa_8PqSXlwPNk9qZrFUSP3729Wiy2RIJVVjpTOU9TGTJmGGh4XP-92Sc_5Pq3YI96nbijhwErl7zB252kmLSjhNe3CPadeq-jEuasX6mnSgg1tNDwD8tu_Iv-f00423wS0nZgstapsGl_INflztgI7RZ1g..&type=2&query=site:mp.weixin.qq.com %E5%A6%86%E5%90%88%E8%A7%84&token=6960E4B061F01C063D3B6BEE3AED8A153D956EF06A5A68AE",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 918,
+        "title": "《安全用妆 合规经营》专题培训会",
+        "source": "妆合规",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8YwqjV5vzmMdYuegk8FH16FqXa8Fplpd929uEryzTOQYt21vZLIHTnMdn_Agrf-1HLhdxFvJwjHsNC_NXJrCWUnjF95sAO4peCDBrrzovJS7YdjkEJm4bEUqSjKv_b5rcKafuSiIwg_cJCXL0JNOLDXY-LVhRY5rVfzab15lIXk2Dc7CaOi8fKL2vl7pKnOScAO4qrkEHJKg89kyxDwoXvg..&type=2&query=site:mp.weixin.qq.com %E5%A6%86%E5%90%88%E8%A7%84&token=6960E4B061F01C063D3B6BEE3AED8A153D956EF06A5A68AE",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 919,
+        "title": "药事郑解,医健合规|20260327药械妆健合规小笔记",
+        "source": "妆合规",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8YwqjV5vzmMdYuegk8FH16FqXa8Fplpd9k7pCUO3K3Qkt_5PDGKjAVsQxRrnkVvIY-ZIzQ-cCVkWzynhxuAzQ03RbuncgnSsTP2H1iT_7gLE2f3IEp0mmJUrSGIH8ZvLBfq1KDI-33XPFI2GPBI9QD-OFvZ9gV4SUO4nz6Q2ZldxiPHkRLC2J5HMiyx9YA67rB1Dl-t_OlJ-AFV_3u-a3OQ..&type=2&query=site:mp.weixin.qq.com %E5%A6%86%E5%90%88%E8%A7%84&token=6960E4B061F01C063D3B6BEE3AED8A153D956EF06A5A68AE",
+        "summary": "",
+        "keywords": []
       }
     ],
     "肤见未来实验室": [
@@ -2981,6 +3201,42 @@
         "url": "https://mp.weixin.qq.com/s/8nLjISn2uCIvxlQ3qBZTdg",
         "summary": "",
         "keywords": []
+      },
+      {
+        "id": 936,
+        "title": "雅诗兰黛 x 上海九院 x 肤见未来实验室联合发表:大数据拆解中国男生的皮肤难题",
+        "source": "肤见未来实验室",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8mEGXPD6C_-dYuegk8FH16FqXa8Fplpd9XFtLMlm2mrzkUWOV7QwyjhJZn8enBSwsVznG_jwKc5MCf30dmjjF-DOyRodUO80B2iVbV_iPDWd2YMKnnocFcSPwqAwu6_nvKCzjq1TMylzkLgd-G87IEWA8dlNXLMEk-t_bknDzGNO4mlVk-Z-LC_GpRxvvXo_Gxp4ptnCs2Mh6VKrzu_4XKA..&type=2&query=site:mp.weixin.qq.com %E8%82%A4%E8%A7%81%E6%9C%AA%E6%9D%A5%E5%AE%9E%E9%AA%8C%E5%AE%A4&token=696184C404977860595F0F8B503BD9FA5A3150C56A5A68C8",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 937,
+        "title": "“未来之星”福建希望工程科技实验室在前岐中心小学正式揭牌!",
+        "source": "肤见未来实验室",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8mEGXPD6C_-dYuegk8FH16FqXa8Fplpd9kBDsER7uI2SdeQMAil7Wb-hpCW3dvjK8BjNrj_Ok3E4nxabR15qRtzTrJg63ywT1BIpmM_TJJl3WNz1kcKEN2drydrsWbLHTTUcfuB1VAlWiCpMXzYDJC5IQUR62l4V_lZ86M2fNG_hJN6cns8xrMiNpTRFhLDk3ztoY0s5DE5LYl_Q5RRZQjg..&type=2&query=site:mp.weixin.qq.com %E8%82%A4%E8%A7%81%E6%9C%AA%E6%9D%A5%E5%AE%9E%E9%AA%8C%E5%AE%A4&token=696184C404977860595F0F8B503BD9FA5A3150C56A5A68C8",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 938,
+        "title": "科技助力未来——“未来之星”福建希望工程科技实验室在福安市湾坞半屿小学揭牌",
+        "source": "肤见未来实验室",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8mEGXPD6C_-dYuegk8FH16FqXa8Fplpd96ao81v6PAd1iOiKy3HZFcXNAxqj6C7HxTVtGbewZnJPUklaMwHKnBfDLKrjvz_AL02ZGuc3LYkcc26sA8_Vc4OesK6M2vyExz8HtKM6RsJvwf8yEwQiKzYhPUNycsTLgDmPC4J8p9_daq3hIqSC-dQVKBt9QfjTfPxYlMYJfWGvYl_Q5RRZQjg..&type=2&query=site:mp.weixin.qq.com %E8%82%A4%E8%A7%81%E6%9C%AA%E6%9D%A5%E5%AE%9E%E9%AA%8C%E5%AE%A4&token=696184C404977860595F0F8B503BD9FA5A3150C56A5A68C8",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 939,
+        "title": "“未来之星”福建希望工程科技实验室在湾坞半屿小学正式揭牌",
+        "source": "肤见未来实验室",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8mEGXPD6C_-dYuegk8FH16FqXa8Fplpd94L6z2wDZYncq4hXIFu-q5xlsB3qb-P6tptRQkTU1j1GFyVBrjIGXqv9gv6ZJ7B7bopKTeWTG26phAfJhjfidHypSix-9rwtrIJJrFWu4CwsnA4XLphcFopdsB-C5F24yRmp-afYQRkaHMj8U5YDBJhZwEQS_CuT7mNm8o9AFT006Ebq8fk9diw..&type=2&query=site:mp.weixin.qq.com %E8%82%A4%E8%A7%81%E6%9C%AA%E6%9D%A5%E5%AE%9E%E9%AA%8C%E5%AE%A4&token=696184C404977860595F0F8B503BD9FA5A3150C56A5A68C8",
+        "summary": "",
+        "keywords": []
       }
     ],
     "原料合规观察": [
@@ -3181,6 +3437,42 @@
         "url": "https://mp.weixin.qq.com/s/NesWJXdK2K_ZsL4M017Jew",
         "summary": "",
         "keywords": []
+      },
+      {
+        "id": 912,
+        "title": "N1 Life与中贸合规中心合作升级,加速创新多肽原料中国上市合规布局",
+        "source": "原料合规观察",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8vaQBUgyVs0JYuegk8FH16FqXa8Fplpd9D2k3M3SvCA765ZXhwmlWrO7dmgx1awIFECdK2nDPksP1cryYHlbEi_FN_3hwo_wnsCGw65us5DJMQYKNv9P6MLlwu3dtZrTPv94wnggPDUCqRMaPNupihYenL42Uimev9YrFQo0EPDWvTl4bXkA7LQlolq1zIPgr2fi2-hXOIT6rCDCayYmfpA..&type=2&query=site:mp.weixin.qq.com %E5%8E%9F%E6%96%99%E5%90%88%E8%A7%84%E8%A7%82%E5%AF%9F&token=6960C9424BDB362D171140C51097D24617AA3DA16A5A68A9",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 913,
+        "title": "原料巨头亚什兰首款新原料通过备案公示!",
+        "source": "原料合规观察",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8vaQBUgyVs0JYuegk8FH16FqXa8Fplpd9D2k3M3SvCA765ZXhwmlWrO7dmgx1awIFECdK2nDPksP1cryYHlbEi54s-t1ITix_5CnjRODha9NHOa7a1ZQTqNBA4D9lZJdZi7KNQg5FXsFY5ucGFAEOGstdwTYk0L5N00_Zyq1lgDcSR9r6oE7iTo481QzatDp4R-AMHEfJUlHS-e4Yz84xMA..&type=2&query=site:mp.weixin.qq.com %E5%8E%9F%E6%96%99%E5%90%88%E8%A7%84%E8%A7%82%E5%AF%9F&token=6960C9424BDB362D171140C51097D24617AA3DA16A5A68A9",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 914,
+        "title": "趋势观察|合成生物学:化妆品新原料的「合规+产业」双轮突围",
+        "source": "原料合规观察",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8vaQBUgyVs0JYuegk8FH16FqXa8Fplpd9GF5jzDbm99oUUK17X0mw_02i08HKE7imVa4Y6TWbH1R2elNLEzhECcL1eSzMKSIl4wuflVDvcLwv-UnYVXoiitsuZRLeFvR68nOZ8ooFKSOgkM1JBj_H-FEdeNkw9Z99GLqs4UTvhzd7PsM2_mCUtT8KMCeSzdf5uuACvfcsNqxr1dbZWbKUeQ..&type=2&query=site:mp.weixin.qq.com %E5%8E%9F%E6%96%99%E5%90%88%E8%A7%84%E8%A7%82%E5%AF%9F&token=6960C9424BDB362D171140C51097D24617AA3DA16A5A68A9",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 915,
+        "title": "国际专利申请材料与步骤2026,企业知识产权合规洞察及靠谱服务商分析",
+        "source": "原料合规观察",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8vaQBUgyVs0JYuegk8FH16FqXa8Fplpd9D-Sk_QG2WyVGcFxAOHnWu8CbbxQa1146ys3HhZBOUhZmxA7Gud4pmlKgcmibx_QzLA95qVXXHz1rQyghv_BfXJT6eAb7M4JIs9p9Dfvkp6luvFPMzcxRvthy_jUF2g3g-fTR44dPnMZ1hjOil0dZ_19tgkQPAIkpnxjXa3HZrqtFkDr8IT4KYw..&type=2&query=site:mp.weixin.qq.com %E5%8E%9F%E6%96%99%E5%90%88%E8%A7%84%E8%A7%82%E5%AF%9F&token=6960C9424BDB362D171140C51097D24617AA3DA16A5A68A9",
+        "summary": "",
+        "keywords": []
       }
     ],
     "KEV美妆": [
@@ -3291,6 +3583,42 @@
         "url": "https://mp.weixin.qq.com/s/dAkA6f5Xpg-6IAwdrF6-PA",
         "summary": "",
         "keywords": []
+      },
+      {
+        "id": 928,
+        "title": "19家美妆企业年中成绩揭晓,哪些实现营收净利双增长?",
+        "source": "KEV美妆",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8apNukGLTOLZYuegk8FH16FqXa8Fplpd9Yl7_4uhTYH22TZ7ECMvFWmew88qVACG8itcFpq2jWCEfwUhQTFjYBC2N2FI2z6oOlQPl6oGBwFX6pCwACkI7pjbfmykO7miiwGKHA8WHHFWA2c0FIIImwnW7CWOfmFfdVYFddUpGg-l7ZnSbw0Uq0XKjVO7hGakZzPC_BV3UQLJj3x9Nw6p-Fg..&type=2&query=site:mp.weixin.qq.com KEV%E7%BE%8E%E5%A6%86&token=696146187CED011A202677F228E25FE8212382C36A5A68BE",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 929,
+        "title": "国潮美妆诗此,深圳岗位欢迎投递 ,还有机会成为合伙人~",
+        "source": "KEV美妆",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8apNukGLTOLZYuegk8FH16FqXa8Fplpd9Yl7_4uhTYH22TZ7ECMvFWmew88qVACG8itcFpq2jWCEfwUhQTFjYBHQD7Zrpup5AG9-oDVeRIWx5ez4OI4B9Iok8KLzHyZqgFyP8jaYWuufQmRBoduYCPO47wDyFskbVlSZpJhxtIhVfUiP0SHueoXlxTEXSacK1FpRpMqrXzL2E8RsmObDbtQ..&type=2&query=site:mp.weixin.qq.com KEV%E7%BE%8E%E5%A6%86&token=696146187CED011A202677F228E25FE8212382C36A5A68BE",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 930,
+        "title": "KEV新年宠粉福利,全新3款《牛牛系列》微信红包封面来袭了,赶快来抢吧~",
+        "source": "KEV美妆",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8apNukGLTOLZYuegk8FH16FqXa8Fplpd9Yl7_4uhTYH22TZ7ECMvFWmew88qVACG8itcFpq2jWCEfwUhQTFjYBFPGDpX33ASbe1aEJhalXnTgrz8kz1L2Ey4SbVjuWOQF-0q4tnmDL2XYaV94BYO2zyc47wzCIL8dUdC6HC9OStKlo8ST5kw3xHgYLZdfX66RcngDYb6RDBbyPfCoem7FzA..&type=2&query=site:mp.weixin.qq.com KEV%E7%BE%8E%E5%A6%86&token=696146187CED011A202677F228E25FE8212382C36A5A68BE",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 931,
+        "title": "美妆圈一周热点:抖音推出达人选品价格标签;NBA球星詹姆斯即将推出男士美容产品;观夏获欧莱雅集团投资...| 美妆风向标",
+        "source": "KEV美妆",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8apNukGLTOLZYuegk8FH16FqXa8Fplpd9Yl7_4uhTYH22TZ7ECMvFWmew88qVACG8itcFpq2jWCEfwUhQTFjYBIoW9VvRhcA2JY_KAXK6F5HL4UWX0u9KBLXwVrvK-BrFhXEj2LDDQonpYU2X22xQ_ABuIbtmjuffvDAUn_38LkOGbmYBszfNc2Cucik2F9SbZf47PyzvzPMGX_iHL9MadA..&type=2&query=site:mp.weixin.qq.com KEV%E7%BE%8E%E5%A6%86&token=696146187CED011A202677F228E25FE8212382C36A5A68BE",
+        "summary": "",
+        "keywords": []
       }
     ],
     "美业颜究院": [
@@ -3365,6 +3693,42 @@
         "url": "https://mp.weixin.qq.com/s/qYc_zV9KnU3JKzHZGP7HEA",
         "summary": "",
         "keywords": []
+      },
+      {
+        "id": 932,
+        "title": "参展回顾|解码美业数据大脑的核心优势,从化妆品备案到功效原料解析的纯干货派送,美业颜究院还有多少惊喜是你不知道的?",
+        "source": "美业颜究院",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8YRnzFEY6OUVYuegk8FH16FqXa8Fplpd903M1uUR0VLPoCI8D1PkUy21DdX6TznVGWKgAUe3RfuztOn808jDmAYvNR1OFASHWk_ACTNLlJ82351uzaUnD7zhtFD_mVgaMdG1XwSOBW9Cm1gCNAIVvVqgDdrmpBMrR7nhBdhXWaKEP8hlguI0uXseTihGHgLPRFn-YJy0eLE_wdVqCwyPdzA..&type=2&query=site:mp.weixin.qq.com %E7%BE%8E%E4%B8%9A%E9%A2%9C%E7%A9%B6%E9%99%A2&token=696164E100937C645E58088F544C211D5E685ED06A5A68C3",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 933,
+        "title": "活动资讯 | 美业颜究院X品域,共话功效型护肤产品开发及消费洞察",
+        "source": "美业颜究院",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8YRnzFEY6OUVYuegk8FH16FqXa8Fplpd903M1uUR0VLPoCI8D1PkUy21DdX6TznVGWKgAUe3RfuztOn808jDmAVb1dk72i05wnkj9pUuVcLxNeLZUyuTzl3qRwqfMi7oJEEONnYTsn44mcDQ1glR-C8qOHTRbcw4q812a_QVrPx3kQak58MwHZUGMX_bV_Iis5Mlfg8QbpE8O8fIRwtipOg..&type=2&query=site:mp.weixin.qq.com %E7%BE%8E%E4%B8%9A%E9%A2%9C%E7%A9%B6%E9%99%A2&token=696164E100937C645E58088F544C211D5E685ED06A5A68C3",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 934,
+        "title": "OMG!芬豪x美业颜究院在“香氛之夜”举办了什么?",
+        "source": "美业颜究院",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8YRnzFEY6OUVYuegk8FH16FqXa8Fplpd9sLfp3nzxhILLOSzib4j3GlT2FAZrAVSUg-2qUSWwZYjJYk_42FQ_CW4j9blbAczgAi7zTd02xAI34jE7bzSAnRl4Y0Eih--a_j-sYTwAyPl4zLwTkgXVkXZNOZhCc-lBSHCeriLPE-OgGmdO_RWcNODq9or17udIxsShykvY6H36zvkPgoArRQ..&type=2&query=site:mp.weixin.qq.com %E7%BE%8E%E4%B8%9A%E9%A2%9C%E7%A9%B6%E9%99%A2&token=696164E100937C645E58088F544C211D5E685ED06A5A68C3",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 935,
+        "title": "美业颜究院品牌全新升级,官网正式上线",
+        "source": "美业颜究院",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8YRnzFEY6OUVYuegk8FH16FqXa8Fplpd9nc9VIdmbwkK62fNQuNCzgiukqMH51nDSZlogTP_KJOYGZakeP6ccqjcTzZdjfATN0Vy6OJtRa0Zhbd6vmLuElIrh2Uf-mCgWzdgRuevhO0nVrPzROjuDX2O4kzYcWHeb8bBdYRQ9avbOj48amMEfenAQQxz0N4myFsLZMlzhwNT0OK9DLfgmPA..&type=2&query=site:mp.weixin.qq.com %E7%BE%8E%E4%B8%9A%E9%A2%9C%E7%A9%B6%E9%99%A2&token=696164E100937C645E58088F544C211D5E685ED06A5A68C3",
+        "summary": "",
+        "keywords": []
       }
     ],
     "上海日化协会": [
@@ -3410,6 +3774,80 @@
         "source": "上海日化协会",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/mPUjfCboGkyYbJKnmr85vw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 948,
+        "title": "【关注】上海日化协会联手爱心企业,助力最美逆行者共战疫情",
+        "source": "上海日化协会",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8jwE8XghcUBNYuegk8FH16FqXa8Fplpd9TyL2U6COp8B-KKPBkrC2wEqWGswmzEzZcQch_YWkssRTKjzwjIz61JVa12LPWnrbpwzPpPjCOi0NcCwED18jgLOC9qpebWNY1HAXT4DFBtTphHxp0MzPAzN-y-qHouOpTEu7wxW13Rki1qMu-5Nti2Z355ymQZKxu1odaznrzIoHpHkoPMgL3A..&type=2&query=site:mp.weixin.qq.com %E4%B8%8A%E6%B5%B7%E6%97%A5%E5%8C%96%E5%8D%8F%E4%BC%9A&token=6961E680F9698299A4A5F571AEF0698BA4ADC87E6A5A68D8",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 949,
+        "title": "远东正大检验集团出席上海日化协会年会并展示创新研发成果",
+        "source": "上海日化协会",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8jwE8XghcUBNYuegk8FH16FqXa8Fplpd90mloPUl_QqZZXPsBGqpkjJNHv_XIbdvabAo9JTgVejgwpLN05oM1bIsQhJOL-38GeKJ5vgiDf-DWYE1QjbOl3BfIT4Wy-6lK6g9_xE1QIi1ncb5ETMxRvFY3HtTq4b6nyl2puq7DNxYyJ7OvQHtQFKk_ViBmfVBXPtsEVzqT0KLs46dn8Efgxg..&type=2&query=site:mp.weixin.qq.com %E4%B8%8A%E6%B5%B7%E6%97%A5%E5%8C%96%E5%8D%8F%E4%BC%9A&token=6961E680F9698299A4A5F571AEF0698BA4ADC87E6A5A68D8",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 950,
+        "title": "倒计时10天|智创未来,向海而行!上海日化协会“AI与美妆出海”专题论坛亮相 InnoCosme 2026",
+        "source": "上海日化协会",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8jwE8XghcUBNYuegk8FH16FqXa8Fplpd9nguW1y0tOyM56UYehxoK7j_m_M5hT5A3ROufEVVzgeNjZcOCgNFYcZ1TjZzXp9XvegJXhDpHQq5kbYU6t3eGg-kmHiX9iCAC5nMYK2WkU25YfGcuZypiLn_9363qDx3YKgLRlFlq9nRR7yhn7j460tofSk04-v7EqvFBvLZYta7Yl_Q5RRZQjg..&type=2&query=site:mp.weixin.qq.com %E4%B8%8A%E6%B5%B7%E6%97%A5%E5%8C%96%E5%8D%8F%E4%BC%9A&token=6961E680F9698299A4A5F571AEF0698BA4ADC87E6A5A68D8",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 951,
+        "title": "PCHi 2026圆满落幕,上海日化协会都做了什么?",
+        "source": "上海日化协会",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8jwE8XghcUBNYuegk8FH16FqXa8Fplpd9nguW1y0tOyM56UYehxoK7j_m_M5hT5A3ROufEVVzgeNjZcOCgNFYce4uuaw4R8rT9dMuo2-KJki9sBoCeuRdCxZ1uxfNICoD8oxbVQcwq7nxS0UULqxxIAJStHd6cQT3ebhrr-javZOrmp66qf4Hmt-YrnQpUMR0JdtSbJQApQsSYTqT4eyLmA..&type=2&query=site:mp.weixin.qq.com %E4%B8%8A%E6%B5%B7%E6%97%A5%E5%8C%96%E5%8D%8F%E4%BC%9A&token=6961E680F9698299A4A5F571AEF0698BA4ADC87E6A5A68D8",
+        "summary": "",
+        "keywords": []
+      }
+    ],
+    "化妆品观察": [
+      {
+        "id": 940,
+        "title": "见证化妆品发展的黄金十年,别了,《化妆品观察》",
+        "source": "化妆品观察",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8CVXCU1vYSehYuegk8FH16FqXa8Fplpd9PW15Ar8qyDUccfTrCEEHpdIvjcVsJvFCMNrV3Zg9JrUzPY7u7iwlBuuB3KJlxDU-qEl1RfrITJu9HPMF_rrhLTShYw6FDpelcASy-8LFF9FVuTtfW_IV1_zcAPt-mw-HK4v0S1P_xVAvcJDZA7fAAFrSFjvKNuf4Xr8D3Es8vVpflztgI7RZ1g..&type=2&query=site:mp.weixin.qq.com %E5%8C%96%E5%A6%86%E5%93%81%E8%A7%82%E5%AF%9F&token=6961A6819C0FE3FBC1C79410C87191E2C27A63F06A5A68CE",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 941,
+        "title": "「化妆品观察」品牌重塑及媒体价值回归 | 念相案例",
+        "source": "化妆品观察",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8CVXCU1vYSehYuegk8FH16FqXa8Fplpd9L_4XxX0rTAmrehvNbgAypLegX44MCzcVyY3aX6foRZmV88O7NCiRkLZWPVvFQEltPr5cD2IxZ88XX6UT6VCC57qGEcWH0oXVDzLDQN-MSwuaYDEVx8xyRHfEBP2PH3Pitd6AWFKxi2FMzcq7A1yUTwUHOTJiv2JORtXFIOpYFiBhlgeRt7bSzA..&type=2&query=site:mp.weixin.qq.com %E5%8C%96%E5%A6%86%E5%93%81%E8%A7%82%E5%AF%9F&token=6961A6819C0FE3FBC1C79410C87191E2C27A63F06A5A68CE",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 942,
+        "title": "观察 | 化妆品表面活性剂市场现状",
+        "source": "化妆品观察",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8CVXCU1vYSehYuegk8FH16FqXa8Fplpd9IXyYIQSASNc8CGjQ9uNfJDPKZNcTdNuFw9ZHz-dSccdDb-9pkIqeBkuFX-BCEVhCu3hEXQ-ceEwZJ_T315Iej-PkDSXftcEW-WKnrX6fywlFt3UqWzYA0Aqj5SIWbZrMpZcUf4196CbbTt7rlIRJEkYtO6wU0x2dzQlWT-pgai_vzHZXxeLdyg..&type=2&query=site:mp.weixin.qq.com %E5%8C%96%E5%A6%86%E5%93%81%E8%A7%82%E5%AF%9F&token=6961A6819C0FE3FBC1C79410C87191E2C27A63F06A5A68CE",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 943,
+        "title": "观察 | 化妆品呼唤强大“中国芯”",
+        "source": "化妆品观察",
+        "publish_date": "",
+        "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8CVXCU1vYSehYuegk8FH16FqXa8Fplpd9IXyYIQSASNc8CGjQ9uNfJDPKZNcTdNuFw9ZHz-dSccdDb-9pkIqeBnPxtF83xZfiwRQHsvZtMm6p_Q_YJ-jXKs90TwzA4pK5ROMmyt5ZiaSvaBVN3fmgio5gslYmLN0ldMl9UGGQolsX5Js7vN9d96Tx0iwKbaCtub7HK78TZ9jS-e4Yz84xMA..&type=2&query=site:mp.weixin.qq.com %E5%8C%96%E5%A6%86%E5%93%81%E8%A7%82%E5%AF%9F&token=6961A6819C0FE3FBC1C79410C87191E2C27A63F06A5A68CE",
         "summary": "",
         "keywords": []
       }
