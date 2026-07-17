@@ -1,57 +1,57 @@
 {
   "stats": {
-    "total_articles": 354,
+    "total_articles": 370,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-07-16"
+      "end": "2026-07-17"
     },
-    "last_update": "2026-07-16T10:28:51.180936"
+    "last_update": "2026-07-17T11:08:51.334156"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 66
+      "count": 69
     },
     {
       "name": "化妆品观察 品观",
-      "count": 55
+      "count": 57
     },
     {
       "name": "中国化妆品",
-      "count": 49
+      "count": 51
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 33
+      "count": 35
     },
     {
       "name": "妆研24小时",
-      "count": 31
+      "count": 32
     },
     {
       "name": "非科学美妆传播",
-      "count": 28
+      "count": 29
     },
     {
       "name": "妆合规",
-      "count": 25
+      "count": 26
     },
     {
       "name": "肤见未来实验室",
-      "count": 23
+      "count": 24
     },
     {
       "name": "原料合规观察",
-      "count": 21
+      "count": 22
     },
     {
       "name": "KEV美妆",
-      "count": 11
+      "count": 12
     },
     {
       "name": "美业颜究院",
-      "count": 7
+      "count": 8
     },
     {
       "name": "上海日化协会",
@@ -60,6 +60,33 @@
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 894,
+        "title": "20起并购/超500亿资金，2026上半年美妆产业并购潮来袭",
+        "source": "个护前沿",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/r3tB0lniIhxlu01yV_jmRg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 895,
+        "title": "重磅！浙江化妆品备案最快1天办结，20条新政同步征求意见",
+        "source": "个护前沿",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/Ik3NH-Gnxa_YGD47UK6G0g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 896,
+        "title": "ECM/PDRN/功能蛋白/活性肽...2026抗衰科技新热点尽在AAT年会",
+        "source": "个护前沿",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/le2UpTCVVDLWIQ6Z41RtYg",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 879,
         "title": "计划反转，雅诗兰黛叫停“品牌大甩卖”",
@@ -657,6 +684,24 @@
     ],
     "化妆品观察 品观": [
       {
+        "id": 900,
+        "title": "一年，1.5个亿：槐序，一场中国在地文化香水的突围",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/F9h0r8ZUIflVz1qLin1quQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 901,
+        "title": "世界以C-Beauty呼唤我，我们如何作答",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/NFgFlSPS8q43j8b9ESfQag",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 883,
         "title": "周翊然×花间颂：从抖音黑马到线下引爆",
         "source": "化妆品观察 品观",
@@ -1154,6 +1199,24 @@
     ],
     "中国化妆品": [
       {
+        "id": 902,
+        "title": "巴尔干目光邂逅东方美妆 | 北马其顿媒体团走进环亚集团，共话国货出海与美业新机遇",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/y3Ff4c4ivn-T8rmRyuQFQQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 903,
+        "title": "6月化妆品零售额同比增长12.6%；丽人丽妆上半年预计盈利2208万至2650万元；PVH Corp.任命娇兰前高管Alexis Rollier为新任首席财务官",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/EQL_XCjoq46LOd_8XT4GZw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 886,
         "title": "报名开启｜Ben Lee教授领衔，《中国化妆品》杂志×美创静界“静界谈 BEAUTY TALKS”首期，邀您共探中国美妆全球化",
         "source": "中国化妆品",
@@ -1597,6 +1660,24 @@
     ],
     "Fbeauty未来迹": [
       {
+        "id": 892,
+        "title": "95年百雀羚，为东方女性创立“整全抗衰”理念",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/1ltql1aY2DX6Sl55kEcL-Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 893,
+        "title": "以面部精华为例，如何从需求缺口里找爆款？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/4yH3mPEqrN2xyJVJA4bJWg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 878,
         "title": "丝芙兰、話梅加码，美妆零售自有品牌能复刻“山姆”奇迹？",
         "source": "Fbeauty未来迹",
@@ -1896,6 +1977,15 @@
     ],
     "妆研24小时": [
       {
+        "id": 888,
+        "title": "紧跟前沿技术，赋能安全评估：瑞欧科技参加第二届化妆品安全评估及新途径方法（NAMs）应用研讨会并分享前沿成果",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/39_puyQxeF7KAfKpJMqF6Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 873,
         "title": "HMO再获新原料公示",
         "source": "妆研24小时",
@@ -2177,6 +2267,15 @@
     ],
     "非科学美妆传播": [
       {
+        "id": 889,
+        "title": "这是昨天提到的花王 黑素参与烫染头发损伤 的视频",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/ai9FampQhF3ggYIIvr_hng",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 875,
         "title": "Kao花王 2026｜染发后二硫键断裂带来的头发损伤与头发中的黑色素相关",
         "source": "非科学美妆传播",
@@ -2431,6 +2530,15 @@
     ],
     "妆合规": [
       {
+        "id": 891,
+        "title": "国家药监局征求化妆品安全技术规范（2015年版）修订实施意见",
+        "source": "妆合规",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/Acy0tWfaE_5oqoqcQ58arQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 877,
         "title": "最新！欧盟化妆品法规更新：涉及附录II、III、V",
         "source": "妆合规",
@@ -2658,6 +2766,15 @@
     ],
     "肤见未来实验室": [
       {
+        "id": 899,
+        "title": "雅诗兰黛 x 上海九院 x 肤见未来实验室联合发表：大数据拆解中国男生的皮肤难题",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/MEb9QDt0x-SGvlp67wKpwQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 882,
         "title": "器官蛋白衰老特征可提前预测痴呆与老年死亡风险",
         "source": "肤见未来实验室",
@@ -2867,6 +2984,15 @@
     ],
     "原料合规观察": [
       {
+        "id": 890,
+        "title": "【线上研讨会】化妆品新原料注册备案新规解析",
+        "source": "原料合规观察",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/-oVP78ijAh8Ifug_dwpuTQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 876,
         "title": "中科欣扬备案一款HMO相关原料",
         "source": "原料合规观察",
@@ -3058,6 +3184,15 @@
     ],
     "KEV美妆": [
       {
+        "id": 897,
+        "title": "原色波塔「反骨系列」；观夏「裸」全新洗护系列；重点POINZ轻盈变色润唇膏... | 新品速递",
+        "source": "KEV美妆",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/Ln2dB4NbrgbLvBdVFJVGWA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 866,
         "title": "妮维雅男士蓝BUFF液态精华；野兽派「The Mirror花镜系列」；优时颜B5至简洁面009... | 新品速递",
         "source": "KEV美妆",
@@ -3158,6 +3293,15 @@
       }
     ],
     "美业颜究院": [
+      {
+        "id": 898,
+        "title": "为什么这两年大家都在做PDRN？LeapSeek告诉你真正的机会在哪里！",
+        "source": "美业颜究院",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/_hMy9Rqmgxf-ul3bwCzW-g",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 867,
         "title": "琶洲AI算力底座加持，海珠数智美妆再提速",
