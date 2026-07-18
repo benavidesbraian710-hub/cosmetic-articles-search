@@ -1,38 +1,38 @@
 {
-  "version": "v23",
+  "version": "v24",
   "stats": {
-    "total_articles": 418,
+    "total_articles": 429,
     "source_count": 13,
     "date_range": {
       "start": "",
-      "end": "2026-07-17"
+      "end": "2026-07-18"
     },
-    "last_update": "2026-07-18T01:53:17.217793"
+    "last_update": "2026-07-18T12:32:45.203594"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 73
+      "count": 75
     },
     {
       "name": "化妆品观察 品观",
-      "count": 57
+      "count": 58
     },
     {
       "name": "中国化妆品",
-      "count": 55
+      "count": 57
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 39
+      "count": 40
     },
     {
       "name": "妆研24小时",
-      "count": 36
+      "count": 37
     },
     {
       "name": "非科学美妆传播",
-      "count": 33
+      "count": 34
     },
     {
       "name": "妆合规",
@@ -40,15 +40,15 @@
     },
     {
       "name": "肤见未来实验室",
-      "count": 28
+      "count": 29
     },
     {
       "name": "原料合规观察",
-      "count": 26
+      "count": 27
     },
     {
       "name": "KEV美妆",
-      "count": 16
+      "count": 17
     },
     {
       "name": "美业颜究院",
@@ -65,6 +65,15 @@
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 956,
+        "title": "口服胶原蛋白真的有用吗？最新综述全面解析护肤与修复的循证真相",
+        "source": "个护前沿",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/EZg3xPjCZ1dWhE7EGq6pVQ",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 894,
         "title": "20起并购/超500亿资金，2026上半年美妆产业并购潮来袭",
@@ -721,9 +730,27 @@
         "url": "https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzySa6zMKTO8NX2Gm2SXjUZYuegk8FH16FqXa8Fplpd9JpoFIKGLeRjmEjm8Z4lq_aB_IrVS8bnicQXsyvEqbhZ39korOlKN3VW8_LsOgc4cJxanDwNE4F-vw40kqRPIsQ4wn_LUbVCTZ8Nfv10jD6qC8mVezIUeIG7VrsXK_z_lFTdA5uQJ0WUNgm_0zy8TDbFaM0TOZJZV_vkz1UUDhRDuL0unUdKkuw..&type=2&query=site:mp.weixin.qq.com %E4%B8%AA%E6%8A%A4%E5%89%8D%E6%B2%BF&token=696123017DD23E1A202649F2176E808820189D236A5A68B9",
         "summary": "",
         "keywords": []
+      },
+      {
+        "id": 957,
+        "title": "",
+        "source": "个护前沿",
+        "publish_date": "",
+        "url": "https://mp.weixin.qq.com/s/xm28zawg5odrJeMCaaepIg",
+        "summary": "",
+        "keywords": []
       }
     ],
     "化妆品观察 品观": [
+      {
+        "id": 960,
+        "title": "半年狂卖3.2亿，暴增1135%，美妆赛道又迎“黑马”",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/C0-7iFTjpeZWlE7-EEeKDA",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 900,
         "title": "一年，1.5个亿：槐序，一场中国在地文化香水的突围",
@@ -1240,6 +1267,24 @@
     ],
     "中国化妆品": [
       {
+        "id": 961,
+        "title": "商务部“老中发展合作研修班”走进花西子，探访中国美妆“新质生产力”",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/8KXrmyP-N2_wldMG-q7HEA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 962,
+        "title": "江苏省印发化妆品生产质量管理三年提升行动方案；橘宜集团孵化新品牌CADENZA；开云集团任命LVMH前美妆香水部门CEO执掌Bottega Veneta",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/ZwfOJ66o040i5GFmPvvn2g",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 902,
         "title": "巴尔干目光邂逅东方美妆 | 北马其顿媒体团走进环亚集团，共话国货出海与美业新机遇",
         "source": "中国化妆品",
@@ -1737,6 +1782,15 @@
     ],
     "Fbeauty未来迹": [
       {
+        "id": 955,
+        "title": "华熙生物开出“生命科学版Apple Store”",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/KtDRUbMuv4jW_vEI3VWyJQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 892,
         "title": "95年百雀羚，为东方女性创立“整全抗衰”理念",
         "source": "Fbeauty未来迹",
@@ -2090,6 +2144,15 @@
     ],
     "妆研24小时": [
       {
+        "id": 952,
+        "title": "珀莱雅、深圳维琪、云南三七研究院备案新原料",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/zgCSL7feHUDI5R3DWlQnFg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 888,
         "title": "紧跟前沿技术，赋能安全评估：瑞欧科技参加第二届化妆品安全评估及新途径方法（NAMs）应用研讨会并分享前沿成果",
         "source": "妆研24小时",
@@ -2415,6 +2478,15 @@
       }
     ],
     "非科学美妆传播": [
+      {
+        "id": 953,
+        "title": "雅诗兰黛中国｜SR 2026｜中国男性皮肤特征的AI大数据分析，核心关注黑眼圈、出油、敏感，关联年龄、地域和生活方式",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/XPGVIpMbrMzutWfmcePbmA",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 889,
         "title": "这是昨天提到的花王 黑素参与烫染头发损伤 的视频",
@@ -2987,6 +3059,15 @@
     ],
     "肤见未来实验室": [
       {
+        "id": 959,
+        "title": "雅诗兰黛 x 上海九院 x 杭州C2H4 x 肤见未来实验室联合发表：大数据拆解中国男生的皮肤难题",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/n9wGmtQ280OS3Z7A47H89A",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 899,
         "title": "雅诗兰黛 x 上海九院 x 肤见未来实验室联合发表：大数据拆解中国男生的皮肤难题",
         "source": "肤见未来实验室",
@@ -3241,6 +3322,15 @@
     ],
     "原料合规观察": [
       {
+        "id": 954,
+        "title": "云南省三七研究院等3家企业备案新原料",
+        "source": "原料合规观察",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/WK_egr7Ibbif1jScEb1WwA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 890,
         "title": "【线上研讨会】化妆品新原料注册备案新规解析",
         "source": "原料合规观察",
@@ -3476,6 +3566,15 @@
       }
     ],
     "KEV美妆": [
+      {
+        "id": 958,
+        "title": "生意与品牌，如何&quot;互不消耗&quot;？| 金瞳奖美护赛道获奖名单公布",
+        "source": "KEV美妆",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/_NzxXsK5ZDcMzxKXy7p47Q",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 897,
         "title": "原色波塔「反骨系列」；观夏「裸」全新洗护系列；重点POINZ轻盈变色润唇膏... | 新品速递",
