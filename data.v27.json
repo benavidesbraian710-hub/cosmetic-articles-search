@@ -1,22 +1,22 @@
 {
-  "version": "v24",
+  "version": "v26",
   "stats": {
-    "total_articles": 380,
+    "total_articles": 385,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-07-18"
+      "end": "2026-07-19"
     },
-    "last_update": "2026-07-18T12:39:41.310386"
+    "last_update": "2026-07-19T13:13:26.664811"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 70
+      "count": 72
     },
     {
       "name": "化妆品观察 品观",
-      "count": 58
+      "count": 60
     },
     {
       "name": "中国化妆品",
@@ -24,7 +24,7 @@
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 36
+      "count": 37
     },
     {
       "name": "妆研24小时",
@@ -62,11 +62,29 @@
   "articles": {
     "个护前沿": [
       {
+        "id": 964,
+        "title": "乳清蛋白纳米胶囊：377高效包裹和缓释｜江南大学IJBM论文",
+        "source": "个护前沿",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/hLJ-YrnO4PzjhLrX-si7fw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 956,
         "title": "口服胶原蛋白真的有用吗？最新综述全面解析护肤与修复的循证真相",
         "source": "个护前沿",
         "publish_date": "2026-07-18",
         "url": "https://mp.weixin.qq.com/s/EZg3xPjCZ1dWhE7EGq6pVQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 965,
+        "title": "欧莱雅上海｜ED 2026｜【光污染黑】紫外线+污染通过激活AhR促黑的机理研究，白藜芦醇等可抑制AhR应对",
+        "source": "个护前沿",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/xm28zawg5odrJeMCaaepIg",
         "summary": "",
         "keywords": []
       },
@@ -693,6 +711,24 @@
       }
     ],
     "化妆品观察 品观": [
+      {
+        "id": 966,
+        "title": "今年冲15亿、复购率60%的洗护品牌，让人很意外",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/VVGAwCxx13ZlwQILKIByoA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 967,
+        "title": "知名工厂破产，股权、商标最低21元“甩卖”",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/05L-DGwXpZlD-LI6l0r3IA",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 960,
         "title": "半年狂卖3.2亿，暴增1135%，美妆赛道又迎“黑马”",
@@ -1696,6 +1732,15 @@
       }
     ],
     "Fbeauty未来迹": [
+      {
+        "id": 963,
+        "title": "深度｜C-beauty出海，新命题是“线下”",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/ZHEkHoHZQ4SRmyFnD5oAvg",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 955,
         "title": "华熙生物开出“生命科学版Apple Store”",

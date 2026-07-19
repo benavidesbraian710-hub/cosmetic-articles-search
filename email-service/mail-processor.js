@@ -874,6 +874,19 @@ async function startIdleMode() {
       console.log('🛑 心跳定时器已清除');
     }
     
+    // IDLE 返回后（连接断开或超时），自动重新连接
+    console.log('🔄 IDLE 连接已断开，10秒后重新连接...');
+    logger.info('IDLE 连接已断开，10秒后重新连接');
+    if (client.usable) {
+      try {
+        await client.logout();
+      } catch (e) {
+        // 忽略 logout 错误
+      }
+    }
+    setTimeout(startIdleMode, 10000);
+    return; // 防止继续执行到函数末尾
+    
   } catch (err) {
     console.error('❌ IMAP 错误:', err.message);
     logger.error(`IMAP错误: ${err.message}`);
