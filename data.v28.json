@@ -1,13 +1,13 @@
 {
-  "version": "v26",
+  "version": "v27",
   "stats": {
-    "total_articles": 385,
+    "total_articles": 390,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-07-19"
+      "end": "2026-07-20"
     },
-    "last_update": "2026-07-19T13:13:26.664811"
+    "last_update": "2026-07-20T10:27:15.502191"
   },
   "sources": [
     {
@@ -16,15 +16,15 @@
     },
     {
       "name": "化妆品观察 品观",
-      "count": 60
+      "count": 61
     },
     {
       "name": "中国化妆品",
-      "count": 53
+      "count": 54
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 37
+      "count": 38
     },
     {
       "name": "妆研24小时",
@@ -32,15 +32,15 @@
     },
     {
       "name": "非科学美妆传播",
-      "count": 30
+      "count": 31
+    },
+    {
+      "name": "肤见未来实验室",
+      "count": 26
     },
     {
       "name": "妆合规",
       "count": 26
-    },
-    {
-      "name": "肤见未来实验室",
-      "count": 25
     },
     {
       "name": "原料合规观察",
@@ -721,6 +721,15 @@
         "keywords": []
       },
       {
+        "id": 971,
+        "title": "日本爆款，败走中国",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/r4E2xtLcnnipfs0JIAJaWQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 967,
         "title": "知名工厂破产，股权、商标最低21元“甩卖”",
         "source": "化妆品观察 品观",
@@ -1254,6 +1263,15 @@
     ],
     "中国化妆品": [
       {
+        "id": 972,
+        "title": "国家市场监管总局修订产品质量监督抽查管理办法并公开征求意见：6月化妆品零售额同比增长12.6%；雅诗兰黛将保留Too Faced等品牌",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/ACOGbLpOrE2rQERaZVgIiQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 961,
         "title": "商务部“老中发展合作研修班”走进花西子，探访中国美妆“新质生产力”",
         "source": "中国化妆品",
@@ -1732,6 +1750,15 @@
       }
     ],
     "Fbeauty未来迹": [
+      {
+        "id": 969,
+        "title": "东南亚美妆“抢滩”中国，再难跑出下一个Mistine？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/2IfbVuNtGByHw2t039xwBw",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 963,
         "title": "深度｜C-beauty出海，新命题是“线下”",
@@ -2367,6 +2394,15 @@
     ],
     "非科学美妆传播": [
       {
+        "id": 968,
+        "title": "欧莱雅上海&amp;瑞金｜CCID 2026｜上海女性长期疲态千人样本调研：睡眠差→头皮敏感、肤色暗沉黑眼圈，压力大→头皮瘙痒、脱发",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/tgYqolCU3mlF1L0kBotHQA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 953,
         "title": "雅诗兰黛中国｜SR 2026｜中国男性皮肤特征的AI大数据分析，核心关注黑眼圈、出油、敏感，关联年龄、地域和生活方式",
         "source": "非科学美妆传播",
@@ -2637,6 +2673,242 @@
         "keywords": []
       }
     ],
+    "肤见未来实验室": [
+      {
+        "id": 970,
+        "title": "指南与共识|中国敏感性皮肤临床诊疗指南（2024 版）",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/uPAgAi3tRRpS7bfbvw6hzQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 959,
+        "title": "雅诗兰黛 x 上海九院 x 杭州C2H4 x 肤见未来实验室联合发表：大数据拆解中国男生的皮肤难题",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/n9wGmtQ280OS3Z7A47H89A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 899,
+        "title": "雅诗兰黛 x 上海九院 x 肤见未来实验室联合发表：大数据拆解中国男生的皮肤难题",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/MEb9QDt0x-SGvlp67wKpwQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 882,
+        "title": "器官蛋白衰老特征可提前预测痴呆与老年死亡风险",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/x8-w5zW7P-F374SvsXBByg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 868,
+        "title": "指南与共识|中国雄激素性秃发诊疗指南（2023）",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/n-yFhoeTCut4GXLlnpJEnQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 852,
+        "title": "代谢图谱解锁人体衰老规律",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/xdGZi7mTS-m5NM0731KYdQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 835,
+        "title": "指南与共识|微粒化脱细胞真皮基质（mADM）面部年轻化的专家共识（2021 版）",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/Ypg3PpseKJ8wxfzEniQI4g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 853,
+        "title": "两种药物联手，高效延长小鼠健康寿命",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/XgZ5SnyTgoD-Rv1mK7XkAw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 763,
+        "title": "指南与共识|强脉冲光治疗睑板腺功能障碍及其相关干眼专家共识(2022)",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-09",
+        "url": "https://mp.weixin.qq.com/s/wJpkMag43k9kSDt77FYjFQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 764,
+        "title": "蛋白、基因、代谢都能测真实年龄？多款衰老标尺对比，早衰预示患病风险",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-08",
+        "url": "https://mp.weixin.qq.com/s/AyYwZhRhBmcUVaYYeQBx3g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 765,
+        "title": "指南与共识|生长激素缺乏相关衰老治疗的专家共识",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/ZO7nsPrSE0HbzeIL9B7HeA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 766,
+        "title": "黄褐斑的真相：皮脂腺是“帮凶”",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/Ow0GrDHbrhGp3UhJRMYXkg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 767,
+        "title": "指南与共识|美塑疗法在皮肤美容中应用的专家共识",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/gy8zfbfFcD-Xu8Gt7QzgMQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 768,
+        "title": "代谢衰老时钟：区分真实年龄与身体衰老状态",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/gEt8s8SFP86Hbvv_1lQ1Fw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 769,
+        "title": "全新合成三螺旋胶原，改善松弛、促进皮肤新生血管",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/N1Y5liwpfr81OIXjPkS0cg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 770,
+        "title": "指南与共识|慢性创面外用生长因子的临床专家共识",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/HknowfJfmrcxxhBA8ILqUQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 771,
+        "title": "手部皮肤年轻化新选择：MDF 点阵激光对比传统调 Q 激光临床观察",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/RBsW54Q1RCmJk0LN0vzRXQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 772,
+        "title": "指南与共识|微聚焦超声在面颈部抗衰美容中的应用专家共识（2025版）",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/NlqctdfbMfiI-Huf_uYBEw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 773,
+        "title": "医药人跨界颜值产业全攻略｜机构+研发+供应链圆桌Q&amp;A干货完整版",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/GP0HLdJ2Odt3VNj6QUQZaw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 774,
+        "title": "综述发表：敏感性皮肤概述及医学美容治疗进展",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/6o8VQRL7oOJpWyKiH6ukiQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 775,
+        "title": "动能素的分类、作用机制与临床应用研究进展",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/p6zj1hJoDkv-BxikgUHC3g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 776,
+        "title": "综述发表：皮肤衰老相关分泌表型的作用机制及相关功效原料研究进展",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/izs7M6KteQUEWXTRNWXY9A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 777,
+        "title": "金盏花保湿修护喷雾及面膜在1064nm点阵激光术后护理中的应用",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/LfGTsQqp_zuO7XrCmP2gLw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 778,
+        "title": "真皮成纤维细胞的衰老标记物和表型变化",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/hRdb_P1-GDxOpXt_aYtZYg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 779,
+        "title": "指南与共识|眼周年轻化非侵入性治疗与术后护理专家共识",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/FMtSsv-xj7lUGWpnOs2OWg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 780,
+        "title": "重组丝素-神经营养因子 3 复合水凝胶调控胶原表达与毛囊再生的创面修复效应",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/8nLjISn2uCIvxlQ3qBZTdg",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "妆合规": [
       {
         "id": 891,
@@ -2869,233 +3141,6 @@
         "source": "妆合规",
         "publish_date": "2026-06-15",
         "url": "https://mp.weixin.qq.com/s/CnbNdyIcxgi3mSZnqDBsdw",
-        "summary": "",
-        "keywords": []
-      }
-    ],
-    "肤见未来实验室": [
-      {
-        "id": 959,
-        "title": "雅诗兰黛 x 上海九院 x 杭州C2H4 x 肤见未来实验室联合发表：大数据拆解中国男生的皮肤难题",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-07-18",
-        "url": "https://mp.weixin.qq.com/s/n9wGmtQ280OS3Z7A47H89A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 899,
-        "title": "雅诗兰黛 x 上海九院 x 肤见未来实验室联合发表：大数据拆解中国男生的皮肤难题",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/MEb9QDt0x-SGvlp67wKpwQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 882,
-        "title": "器官蛋白衰老特征可提前预测痴呆与老年死亡风险",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/x8-w5zW7P-F374SvsXBByg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 868,
-        "title": "指南与共识|中国雄激素性秃发诊疗指南（2023）",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-07-15",
-        "url": "https://mp.weixin.qq.com/s/n-yFhoeTCut4GXLlnpJEnQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 852,
-        "title": "代谢图谱解锁人体衰老规律",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-07-14",
-        "url": "https://mp.weixin.qq.com/s/xdGZi7mTS-m5NM0731KYdQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 835,
-        "title": "指南与共识|微粒化脱细胞真皮基质（mADM）面部年轻化的专家共识（2021 版）",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/Ypg3PpseKJ8wxfzEniQI4g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 853,
-        "title": "两种药物联手，高效延长小鼠健康寿命",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/XgZ5SnyTgoD-Rv1mK7XkAw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 763,
-        "title": "指南与共识|强脉冲光治疗睑板腺功能障碍及其相关干眼专家共识(2022)",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-07-09",
-        "url": "https://mp.weixin.qq.com/s/wJpkMag43k9kSDt77FYjFQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 764,
-        "title": "蛋白、基因、代谢都能测真实年龄？多款衰老标尺对比，早衰预示患病风险",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-07-08",
-        "url": "https://mp.weixin.qq.com/s/AyYwZhRhBmcUVaYYeQBx3g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 765,
-        "title": "指南与共识|生长激素缺乏相关衰老治疗的专家共识",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-07-07",
-        "url": "https://mp.weixin.qq.com/s/ZO7nsPrSE0HbzeIL9B7HeA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 766,
-        "title": "黄褐斑的真相：皮脂腺是“帮凶”",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-07-06",
-        "url": "https://mp.weixin.qq.com/s/Ow0GrDHbrhGp3UhJRMYXkg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 767,
-        "title": "指南与共识|美塑疗法在皮肤美容中应用的专家共识",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-07-03",
-        "url": "https://mp.weixin.qq.com/s/gy8zfbfFcD-Xu8Gt7QzgMQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 768,
-        "title": "代谢衰老时钟：区分真实年龄与身体衰老状态",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-07-02",
-        "url": "https://mp.weixin.qq.com/s/gEt8s8SFP86Hbvv_1lQ1Fw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 769,
-        "title": "全新合成三螺旋胶原，改善松弛、促进皮肤新生血管",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-07-01",
-        "url": "https://mp.weixin.qq.com/s/N1Y5liwpfr81OIXjPkS0cg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 770,
-        "title": "指南与共识|慢性创面外用生长因子的临床专家共识",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-06-30",
-        "url": "https://mp.weixin.qq.com/s/HknowfJfmrcxxhBA8ILqUQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 771,
-        "title": "手部皮肤年轻化新选择：MDF 点阵激光对比传统调 Q 激光临床观察",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-06-29",
-        "url": "https://mp.weixin.qq.com/s/RBsW54Q1RCmJk0LN0vzRXQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 772,
-        "title": "指南与共识|微聚焦超声在面颈部抗衰美容中的应用专家共识（2025版）",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/NlqctdfbMfiI-Huf_uYBEw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 773,
-        "title": "医药人跨界颜值产业全攻略｜机构+研发+供应链圆桌Q&amp;A干货完整版",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/GP0HLdJ2Odt3VNj6QUQZaw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 774,
-        "title": "综述发表：敏感性皮肤概述及医学美容治疗进展",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-06-24",
-        "url": "https://mp.weixin.qq.com/s/6o8VQRL7oOJpWyKiH6ukiQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 775,
-        "title": "动能素的分类、作用机制与临床应用研究进展",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-06-23",
-        "url": "https://mp.weixin.qq.com/s/p6zj1hJoDkv-BxikgUHC3g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 776,
-        "title": "综述发表：皮肤衰老相关分泌表型的作用机制及相关功效原料研究进展",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-06-22",
-        "url": "https://mp.weixin.qq.com/s/izs7M6KteQUEWXTRNWXY9A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 777,
-        "title": "金盏花保湿修护喷雾及面膜在1064nm点阵激光术后护理中的应用",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-06-18",
-        "url": "https://mp.weixin.qq.com/s/LfGTsQqp_zuO7XrCmP2gLw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 778,
-        "title": "真皮成纤维细胞的衰老标记物和表型变化",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-06-17",
-        "url": "https://mp.weixin.qq.com/s/hRdb_P1-GDxOpXt_aYtZYg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 779,
-        "title": "指南与共识|眼周年轻化非侵入性治疗与术后护理专家共识",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-06-16",
-        "url": "https://mp.weixin.qq.com/s/FMtSsv-xj7lUGWpnOs2OWg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 780,
-        "title": "重组丝素-神经营养因子 3 复合水凝胶调控胶原表达与毛囊再生的创面修复效应",
-        "source": "肤见未来实验室",
-        "publish_date": "2026-06-15",
-        "url": "https://mp.weixin.qq.com/s/8nLjISn2uCIvxlQ3qBZTdg",
         "summary": "",
         "keywords": []
       }
