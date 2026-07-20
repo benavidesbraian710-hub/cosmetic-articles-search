@@ -77,7 +77,7 @@ def export_data():
         
         # 构建数据
         data = {
-            'version': 'v26',
+            'version': 'v27',
             'stats': {
                 'total_articles': total,
                 'source_count': source_count,
