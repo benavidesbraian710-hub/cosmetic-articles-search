@@ -1,34 +1,34 @@
 {
-  "version": "v27",
+  "version": "v28",
   "stats": {
-    "total_articles": 390,
+    "total_articles": 405,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-07-20"
+      "end": "2026-07-21"
     },
-    "last_update": "2026-07-20T10:27:15.502191"
+    "last_update": "2026-07-21T10:09:01.420593"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 72
+      "count": 75
     },
     {
       "name": "化妆品观察 品观",
-      "count": 61
+      "count": 63
     },
     {
       "name": "中国化妆品",
-      "count": 54
+      "count": 56
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 38
+      "count": 39
     },
     {
       "name": "妆研24小时",
-      "count": 33
+      "count": 35
     },
     {
       "name": "非科学美妆传播",
@@ -36,15 +36,15 @@
     },
     {
       "name": "肤见未来实验室",
-      "count": 26
+      "count": 27
     },
     {
       "name": "妆合规",
-      "count": 26
+      "count": 27
     },
     {
       "name": "原料合规观察",
-      "count": 23
+      "count": 25
     },
     {
       "name": "KEV美妆",
@@ -52,7 +52,7 @@
     },
     {
       "name": "美业颜究院",
-      "count": 8
+      "count": 9
     },
     {
       "name": "上海日化协会",
@@ -61,6 +61,33 @@
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 979,
+        "title": "珀莱雅前CMO创立的新品牌诞生",
+        "source": "个护前沿",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/63WD4SeRZRkR6MxiWEATHw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 980,
+        "title": "ECM护肤，起飞了？",
+        "source": "个护前沿",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/guy0A2HwPY1uFrJPDqN5mw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 981,
+        "title": "刚刚！资生堂发布抗衰王炸成分",
+        "source": "个护前沿",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/1ogGH2f5UgUSaC7n_Au3Kg",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 964,
         "title": "乳清蛋白纳米胶囊：377高效包裹和缓释｜江南大学IJBM论文",
@@ -712,6 +739,24 @@
     ],
     "化妆品观察 品观": [
       {
+        "id": 984,
+        "title": "⼀个百亿级的品类，为何正在失去它的价值？",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/qg7XEgCX2ci3eB1eyztOog",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 985,
+        "title": "40亿级美容集团，即将诞生",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/5_FuL12Dqb5GZm-7DVbN4Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 966,
         "title": "今年冲15亿、复购率60%的洗护品牌，让人很意外",
         "source": "化妆品观察 品观",
@@ -1263,6 +1308,24 @@
     ],
     "中国化妆品": [
       {
+        "id": 986,
+        "title": "超范围使用着色剂、超过渡期禁售、违规使用升降机——一周七案透视化妆品合规“新死角” | 合规风向标总第102期",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/4mSCFbznCLYOzPB27f_5qw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 987,
+        "title": "新疆启动化妆品个性化服务第二阶段试点；欧盟更新《化妆品常用成分名称表》，新规即将全面实施；日系化妆品sitrana中国公司解散",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/KrOyyTSjm3Tv3UD5oI0Bsg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 972,
         "title": "国家市场监管总局修订产品质量监督抽查管理办法并公开征求意见：6月化妆品零售额同比增长12.6%；雅诗兰黛将保留Too Faced等品牌",
         "source": "中国化妆品",
@@ -1751,6 +1814,15 @@
     ],
     "Fbeauty未来迹": [
       {
+        "id": 978,
+        "title": "丝芙兰中国：在“玩妆”中回归零售本质",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/ItXozE5kzOU6XjK7Mx3tVQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 969,
         "title": "东南亚美妆“抢滩”中国，再难跑出下一个Mistine？",
         "source": "Fbeauty未来迹",
@@ -2094,6 +2166,24 @@
       }
     ],
     "妆研24小时": [
+      {
+        "id": 973,
+        "title": "瑞维斐完成备案新原料",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/Rra4fNZKGxZZU9CNIJPGGQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 974,
+        "title": "8月12日欧盟PPWR全面实施，化妆品包装要满足哪些合规要求？",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/MkHgzGe06k5e7q8IPVgOKw",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 952,
         "title": "珀莱雅、深圳维琪、云南三七研究院备案新原料",
@@ -2675,6 +2765,15 @@
     ],
     "肤见未来实验室": [
       {
+        "id": 983,
+        "title": "油皮底妆容易暗？科学模拟皮脂分泌，看清粉底持色真实表现",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/fg54WgF1vcUVCUL7sP-vcA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 970,
         "title": "指南与共识|中国敏感性皮肤临床诊疗指南（2024 版）",
         "source": "肤见未来实验室",
@@ -2911,6 +3010,15 @@
     ],
     "妆合规": [
       {
+        "id": 977,
+        "title": "全球化妆品法规动态第40期-2026年6月",
+        "source": "妆合规",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/ICSDs7vb0ofq8EdDjI0ltA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 891,
         "title": "国家药监局征求化妆品安全技术规范（2015年版）修订实施意见",
         "source": "妆合规",
@@ -3146,6 +3254,24 @@
       }
     ],
     "原料合规观察": [
+      {
+        "id": 975,
+        "title": "明日开讲！化妆品新原料注册备案新规解析",
+        "source": "原料合规观察",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/KokBGa8SNvPSJmRodnZiTw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 976,
+        "title": "蓝美股份备案一款植提新原料",
+        "source": "原料合规观察",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/Z33MozlQ1Ma9_oasBRyvhA",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 954,
         "title": "云南省三七研究院等3家企业备案新原料",
@@ -3474,6 +3600,15 @@
       }
     ],
     "美业颜究院": [
+      {
+        "id": 982,
+        "title": "从2026 WAIC看中国美业AI | 美业颜究院受邀出席2026世界人工智能大会",
+        "source": "美业颜究院",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/5zNPPqrGX6hMObhc4nK0WQ",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 898,
         "title": "为什么这两年大家都在做PDRN？LeapSeek告诉你真正的机会在哪里！",
