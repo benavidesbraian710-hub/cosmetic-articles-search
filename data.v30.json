@@ -1,18 +1,18 @@
 {
   "version": "v28",
   "stats": {
-    "total_articles": 405,
+    "total_articles": 415,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-07-21"
+      "end": "2026-07-22"
     },
-    "last_update": "2026-07-21T10:09:01.420593"
+    "last_update": "2026-07-22T10:31:44.209968"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 75
+      "count": 78
     },
     {
       "name": "化妆品观察 品观",
@@ -24,19 +24,19 @@
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 39
+      "count": 40
     },
     {
       "name": "妆研24小时",
-      "count": 35
+      "count": 36
     },
     {
       "name": "非科学美妆传播",
-      "count": 31
+      "count": 32
     },
     {
       "name": "肤见未来实验室",
-      "count": 27
+      "count": 28
     },
     {
       "name": "妆合规",
@@ -44,15 +44,15 @@
     },
     {
       "name": "原料合规观察",
-      "count": 25
+      "count": 26
     },
     {
       "name": "KEV美妆",
-      "count": 13
+      "count": 14
     },
     {
       "name": "美业颜究院",
-      "count": 9
+      "count": 10
     },
     {
       "name": "上海日化协会",
@@ -61,6 +61,33 @@
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 992,
+        "title": "珀莱雅、巨子生物同时出手，这家原料商什么来头？",
+        "source": "个护前沿",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/707rv5mBg2I_UJkb4YiinA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 993,
+        "title": "上海交大重磅Cell：口服补充这种氨基酸，或能延缓皮肤衰老",
+        "source": "个护前沿",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/1MhA0LiTjD0kJskZG4w7ZQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 994,
+        "title": "下一个增长引擎？轻医美光电抗衰新蓝海与2026设备企业图谱",
+        "source": "个护前沿",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/j9IFxt97Qz8x0zosXdGL3Q",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 979,
         "title": "珀莱雅前CMO创立的新品牌诞生",
@@ -1814,6 +1841,15 @@
     ],
     "Fbeauty未来迹": [
       {
+        "id": 991,
+        "title": "连续六年跻身全球前15：百雀羚的品牌价值进化论",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/Zirx0fOEFe-JU1jFSKCDRg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 978,
         "title": "丝芙兰中国：在“玩妆”中回归零售本质",
         "source": "Fbeauty未来迹",
@@ -2239,6 +2275,15 @@
         "keywords": []
       },
       {
+        "id": 988,
+        "title": "美妆电商第一股，六名高管遭警示",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/1l1xVkXPWGm-Ep_2MAUGgQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 666,
         "title": "6月全球化妆品法规回顾 | 韩国发布化妆品安全评估指南，泰国修订禁限用原料清单…",
         "source": "妆研24小时",
@@ -2483,6 +2528,15 @@
       }
     ],
     "非科学美妆传播": [
+      {
+        "id": 989,
+        "title": "花王Kao 2026｜喷雾人工仿生皮最新升级：超细纤维可溶解在护肤配方中直接使用",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/B4SGF_rg_qOq2u90dbfEww",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 968,
         "title": "欧莱雅上海&amp;瑞金｜CCID 2026｜上海女性长期疲态千人样本调研：睡眠差→头皮敏感、肤色暗沉黑眼圈，压力大→头皮瘙痒、脱发",
@@ -2764,6 +2818,15 @@
       }
     ],
     "肤见未来实验室": [
+      {
+        "id": 997,
+        "title": "指南与共识|中国中重度特应性皮炎诊疗临床路径专家共识（2023版）",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/xl4oOavRnv6X2azxlViD2A",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 983,
         "title": "油皮底妆容易暗？科学模拟皮脂分泌，看清粉底持色真实表现",
@@ -3255,6 +3318,15 @@
     ],
     "原料合规观察": [
       {
+        "id": 990,
+        "title": "新规预警！《新化学物质环境管理登记办法》迎来重构式修订，化妆品及原料企业合规须知",
+        "source": "原料合规观察",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/Br-Jv4Lj_yndyEHXx7wOQQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 975,
         "title": "明日开讲！化妆品新原料注册备案新规解析",
         "source": "原料合规观察",
@@ -3482,6 +3554,15 @@
     ],
     "KEV美妆": [
       {
+        "id": 995,
+        "title": "自然堂酸酶抛光膜；Dior肌活蕴能系列进阶精华；倩碧防晒黄油... | 新品速递",
+        "source": "KEV美妆",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/q7vjSqTSnts304pRWKe1Bw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 958,
         "title": "生意与品牌，如何&quot;互不消耗&quot;？| 金瞳奖美护赛道获奖名单公布",
         "source": "KEV美妆",
@@ -3600,6 +3681,15 @@
       }
     ],
     "美业颜究院": [
+      {
+        "id": 996,
+        "title": "UFACE优斐斯：全国销量第一的传明酸中国护肤品牌 | 市场地位确认",
+        "source": "美业颜究院",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/faLKZXV2h3dLnBOpcoIbdQ",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 982,
         "title": "从2026 WAIC看中国美业AI | 美业颜究院受邀出席2026世界人工智能大会",
