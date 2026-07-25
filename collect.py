@@ -145,7 +145,11 @@ def navigate_to_account(account_name: str):
     """导航到公众号账号界面"""
     print(f"\n=== 搜索公众号: {account_name} ===")
     
-    activate_wechat()
+    # 强制激活微信窗口（使用AppleScript，2026-07-25 Nick要求）
+    print("激活微信窗口...")
+    subprocess.run(['osascript', '-e', 'tell application "WeChat" to activate'], 
+                   capture_output=True)
+    time.sleep(1)
     
     # 按ESC键关闭可能残留的窗口（2026-06-12修复）
     print("按ESC键关闭残留窗口...")
