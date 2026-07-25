@@ -79,7 +79,7 @@ COORDS = {
     'copy_link_alt': (1210, 134),         # 复制链接（备选）
     'close_article': (1099, 51),          # 关闭文章页
     'close_search': (459, 50),            # 关闭搜索窗口
-    'close_account': (527, 54),           # 关闭账号窗口
+    'close_account': (527, 62),           # 关闭账号窗口（2026-07-25 Nick调整）
 }
 
 
