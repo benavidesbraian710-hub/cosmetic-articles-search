@@ -177,6 +177,7 @@ def navigate_to_account(account_name: str):
     time.sleep(2)  # 间隔2秒
     
     print("✅ 进入公众号界面")
+    time.sleep(2)  # 进入公众号界面后延长2秒再开始点击（2026-07-25 Nick要求）
     return True  # 返回成功
 
 
