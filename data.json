@@ -1,26 +1,26 @@
 {
   "version": "v31",
   "stats": {
-    "total_articles": 447,
+    "total_articles": 461,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-07-24"
     },
-    "last_update": "2026-07-25T11:10:41.390045"
+    "last_update": "2026-07-25T11:51:55.494928"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 82
+      "count": 85
     },
     {
       "name": "化妆品观察 品观",
-      "count": 67
+      "count": 72
     },
     {
       "name": "中国化妆品",
-      "count": 60
+      "count": 64
     },
     {
       "name": "Fbeauty未来迹",
@@ -28,7 +28,7 @@
     },
     {
       "name": "妆研24小时",
-      "count": 40
+      "count": 42
     },
     {
       "name": "非科学美妆传播",
@@ -94,6 +94,33 @@
         "source": "个护前沿",
         "publish_date": "2026-07-23",
         "url": "https://mp.weixin.qq.com/s/eW3r3P8JpDy4Q0npwsedAQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1030,
+        "title": "七年转型收官！美妆制造龙头身份重塑",
+        "source": "个护前沿",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/eB7BG3YLz8hFivb7bWxhVA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1031,
+        "title": "近40款获批！2026医美“械三证”的风正吹向哪？",
+        "source": "个护前沿",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/byOvbncudHbTEEmFyLt5Pw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1032,
+        "title": "中检院关于公开征求《化妆品中铜绿假单胞菌的检验方法（征求意见稿）》等2项化妆品标准意见的通知",
+        "source": "个护前沿",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/eS8a7E3Q4VvHHjLh292Q0A",
         "summary": "",
         "keywords": []
       },
@@ -838,6 +865,51 @@
         "keywords": []
       },
       {
+        "id": 1033,
+        "title": "曾月销1亿+、被无数老板追捧的“生意”，全面崩塌",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/WEiTccSsPa98uw0BATIW2A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1034,
+        "title": "独家专访瑷科缦：3年破亿后，下一步怎么走？",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/rEW560ow1YAAcGDbSbNykw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1035,
+        "title": "2025年GMV破18亿， FAN BEAUTY如何打破明星品牌的“短命”魔咒？",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/KbtKfRBm2TJZpdM6TJVp-A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1036,
+        "title": "「一个人的发布会」，林清轩说了什么？",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/xNOczAt8tlBi75HcoAnn8w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1037,
+        "title": "从复刻到定义：C-Beauty的“地基”之战",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/DrCRa-8sW7u6uyfIsa_VBg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 984,
         "title": "⼀个百亿级的品类，为何正在失去它的价值？",
         "source": "化妆品观察 品观",
@@ -1439,6 +1511,42 @@
         "source": "中国化妆品",
         "publish_date": "2026-07-23",
         "url": "https://mp.weixin.qq.com/s/2jD1tUppGYWHX32YbLCUIA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1038,
+        "title": "中检院公开征求《化妆品中铜绿假单胞菌的检验方法》等2项化妆品标准意见；花知晓完成董事会调整；青松股份拟更名为“诺斯贝尔”",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/oBlWZw5Kh9LuTOEWyDB3Xg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1039,
+        "title": "“中国美妆出海赋能讲堂”明日开讲，C-Beauty迈向全球的必修课来了 | 静界谈Beauty Talk",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/XxciGwWAAsLsukg8vQiPZQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1040,
+        "title": "Inolex推出防晒性能增强剂；Silab推出栗子来源卷发活性物Liftilience；Primient推出Zemea丙二醇护色系列原料｜全球观察·新原料",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/7yNZ4SO6hXHI7lLslHVqSQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1041,
+        "title": "广东省药监局抽检696批次化妆品，4批次不合格；HARMAY話梅优化线下布局，加速推进战略升级；Musinsa Standard完成在华首批化妆品备案",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/unOnNTX4mOCSz_Xd5rjTvQ",
         "summary": "",
         "keywords": []
       },
@@ -2379,6 +2487,24 @@
         "source": "妆研24小时",
         "publish_date": "2026-07-22",
         "url": "https://mp.weixin.qq.com/s/SX_8BzXUErC4dysvlnk9iA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1042,
+        "title": "中检院征求《化妆品中铜绿假单胞菌的检验方法（征求意见稿）》等2项标准意见",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/igy0HVLakw3re6ZhL8t98A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1043,
+        "title": "喜报！瑞欧科技助力蓝美股份备案新原料",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/9LUSh1juit6uE35EhknX3g",
         "summary": "",
         "keywords": []
       },
