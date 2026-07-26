@@ -64,7 +64,7 @@ def collect_links_batch(count_per_account: int = 4) -> dict:
     
     # 运行采集器（批量采集所有公众号）
     cmd = [
-        "python3", "-u", str(COLLECTOR_PATH),
+        "/usr/bin/python3", "-u", str(COLLECTOR_PATH),
         json.dumps({"tasks": tasks, "skip_csv": True})
     ]
     
