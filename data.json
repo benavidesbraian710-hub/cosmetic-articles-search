@@ -1,13 +1,13 @@
 {
   "version": "v31",
   "stats": {
-    "total_articles": 482,
+    "total_articles": 502,
     "source_count": 15,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-07-27"
     },
-    "last_update": "2026-07-27T16:06:03.662984"
+    "last_update": "2026-07-27T16:15:33.695347"
   },
   "sources": [
     {
@@ -47,6 +47,10 @@
       "count": 29
     },
     {
+      "name": "亿邦动力",
+      "count": 23
+    },
+    {
       "name": "KEV美妆",
       "count": 17
     },
@@ -65,10 +69,6 @@
     {
       "name": "财经早餐",
       "count": 4
-    },
-    {
-      "name": "亿邦动力",
-      "count": 3
     }
   ],
   "articles": {
@@ -4041,6 +4041,215 @@
         "keywords": []
       }
     ],
+    "亿邦动力": [
+      {
+        "id": 1065,
+        "title": "旧关税退场，美国301新关税接棒：对华税率12.5%，总税负上限延续此前谈判成果",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/tNHWMOuOPT4gCUnxaUf7GQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1066,
+        "title": "亚马逊中国副总裁邱胜：AI 正在改写跨境电商增长的底层逻辑",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/KCvjwgxYsIlmISASuUbH5g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1067,
+        "title": "阿里国际站总裁张阔：全球电商AI工作台Accio Work，让商家用一个 Agent 掌控全盘生意",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/Wddy7al2SpW4tgiuJdRaTA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1068,
+        "title": "安克的“香蕉人”模式好走吗？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/Py2KoJ_eLJckBI_BImOt1Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1058,
+        "title": "市监总局对携程罚款51.79亿元！蚂蚁国际完成约12亿美元融资；亚马逊裁撤通用人工智能部门岗位；中国千亿元潮玩赛道要来了｜电商财经盘点",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/MtiaHbrR9pUidwQ4RqW2PA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1059,
+        "title": "卡奥斯首发工业世界模型牵手能科，震坤行大模型备案亮相国企采购大会，深度数科发布票据与供应链金融垂直大模型丨产业互联网周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/2TUd6YWkDpSTe3Lm4zLdhQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1060,
+        "title": "商务部力挺速卖通；Temu波兰用户半年流失360万；eBay收购英国时尚电商平台Depop获批丨跨境电商周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/aGcpoer4-yH_XBvIhefuLA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1069,
+        "title": "上半年入驻京东新商家数同比增长超30%；耐克终止与中国数千家线上经销商合作；鸣鸣很忙宣布签约门店突破3万家丨零售电商周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/9VsEoWHM6O0tSACh6nsScw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1070,
+        "title": "中国工业设计之父柳冠中：全球化进程“换道超越”，从“造”走向“制”",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/O2Ukuui3el0ODWojLy0tkg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1071,
+        "title": "鸣鸣很忙门店突破3万家；真维斯关掉90%门店，线上卖了100亿；高德上线位置分享功能；美团16城上线骑手“不闯红灯”激励｜电商大事",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/aswRK80J1GzwnjrCTCAleg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1072,
+        "title": "腾讯混元成立基础模型部，月之暗面将洽谈IPO前最后一轮融资丨产业科技周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/dQMZwvV29fwhtRAxcEJaUQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1073,
+        "title": "洛克兄弟集团创始人张新刚：AI定制实现“先卖后产”，重塑骑行品牌增长模式",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/k6cILPlnSamwZv2gZgg8IA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1074,
+        "title": "【对话】品牌全球化与AI交汇，如何催生下一个百亿级企业？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/GEWBSNHvRzeB2oVRuBCAzQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1075,
+        "title": "分众传媒创始人江南春： 出海的终极战场，唯有抢占心智复利",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/GL5FkPLghWPaDeSryZ4pnw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1076,
+        "title": "抢跑！全球化新品牌进入AI时刻，何以定胜负？丨2026全球化新品牌AI竞争力大会实录",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/K556_HGXf4jnRRe_B0gXsQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1077,
+        "title": "亿邦智库发布《2026全球化新品牌AI竞争力报告》",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/J4YAa70DwHhbyf28XwOTog",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1078,
+        "title": "分级扣佣，推流改向…抖音达人生态新变革",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/jOv1DseNj7QNCLD3nj11yg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1079,
+        "title": "从出海营销奠基者到AI营销领航官沈晨岗：以“真智能体”提升增长确定性",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/LudQCEQAc2s_pyucNx3C1Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1080,
+        "title": "跨界打印首日破亿，进驻数千家品牌门店，xTool不想只做“激光雕刻第一”",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/yeC7SCPkfbV4SdN11xfnCw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1081,
+        "title": "PureblueAI清蓝创始人鲁扬：AI取代的不仅是搜索，还有交易权 | 马蹄社研学笔记",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/rrUsoxxDvlsEHgRVZRjRjw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1082,
+        "title": "淘宝将调整“商品扶优质量分”：增加超级单品曝光",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/MUbBnVnRLc85D8GSqn4MKg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1083,
+        "title": "全球户外运动“通电”进行时，中国出海品牌秀肌肉",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/piJIJTu62nSGh3qVtgf4sg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1084,
+        "title": "《2026数智化采购发展报告》重磅发布",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/gF7c4tpZcQzACX4AbSgcQA",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "KEV美妆": [
       {
         "id": 1017,
@@ -4407,35 +4616,6 @@
         "source": "财经早餐",
         "publish_date": "2026-07-25",
         "url": "https://mp.weixin.qq.com/s/-CgVi5DFqR3rLSCR2s2Wqg",
-        "summary": "",
-        "keywords": []
-      }
-    ],
-    "亿邦动力": [
-      {
-        "id": 1058,
-        "title": "市监总局对携程罚款51.79亿元！蚂蚁国际完成约12亿美元融资；亚马逊裁撤通用人工智能部门岗位；中国千亿元潮玩赛道要来了｜电商财经盘点",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/MtiaHbrR9pUidwQ4RqW2PA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1059,
-        "title": "卡奥斯首发工业世界模型牵手能科，震坤行大模型备案亮相国企采购大会，深度数科发布票据与供应链金融垂直大模型丨产业互联网周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/2TUd6YWkDpSTe3Lm4zLdhQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1060,
-        "title": "商务部力挺速卖通；Temu波兰用户半年流失360万；eBay收购英国时尚电商平台Depop获批丨跨境电商周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/aGcpoer4-yH_XBvIhefuLA",
         "summary": "",
         "keywords": []
       }
