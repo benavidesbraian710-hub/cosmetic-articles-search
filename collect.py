@@ -178,6 +178,11 @@ def navigate_to_account(account_name: str):
         print("点击第一个选项...")
         click(500, 223)
         time.sleep(3)  # 间隔3秒（2026-07-27 Nick要求）
+    else:
+        # 其他公众号按 Enter 进入（2026-07-27 Nick确认）
+        print("按 Enter 进入公众号...")
+        press("return")
+        time.sleep(3)
     
     print("点击'公众号'标签...")
     x, y = COORDS['public_account_tab']
