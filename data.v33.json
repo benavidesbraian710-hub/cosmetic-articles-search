@@ -1,30 +1,30 @@
 {
   "version": "v31",
   "stats": {
-    "total_articles": 461,
+    "total_articles": 470,
     "source_count": 12,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-07-24"
+      "end": "2026-07-27"
     },
-    "last_update": "2026-07-26T19:03:15.031891"
+    "last_update": "2026-07-27T11:31:59.983365"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 85
+      "count": 87
     },
     {
       "name": "化妆品观察 品观",
-      "count": 72
+      "count": 75
     },
     {
       "name": "中国化妆品",
-      "count": 64
+      "count": 65
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 44
+      "count": 46
     },
     {
       "name": "妆研24小时",
@@ -36,7 +36,7 @@
     },
     {
       "name": "肤见未来实验室",
-      "count": 30
+      "count": 31
     },
     {
       "name": "妆合规",
@@ -61,6 +61,24 @@
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 1046,
+        "title": "手性原料在皮肤健康中的关键作用与展望｜江南大学王靖团队Commentary评述论文",
+        "source": "个护前沿",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/VdUVQybeO0WwjRX8AtaH7g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1047,
+        "title": "116款新原料备案，7月新规前最后一波冲刺",
+        "source": "个护前沿",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/sBIuJCFGXZ9oGLovlP746g",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1013,
         "title": "今年，美容仪首个投资诞生！",
@@ -829,6 +847,33 @@
     ],
     "化妆品观察 品观": [
       {
+        "id": 1049,
+        "title": "超20亿！“美妆多肽原料第一股”诞生，珀莱雅、巨子生物入股",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/Mh3XZ5cOAskrI8Q_a29pGA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1050,
+        "title": "一场收购，毁了一家42年老国货",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/bksgcEmwToiGfA1pfrPxAw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1051,
+        "title": "对话三浦展：当中国消费步入“折叠”时代，什么是确定性的机会？",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/jjPBHybCImiP_aGlfHBvVw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1022,
         "title": "从品牌叙事到产品表达，谁最能代表C-Beauty？",
         "source": "化妆品观察 品观",
@@ -1479,6 +1524,15 @@
     ],
     "中国化妆品": [
       {
+        "id": 1052,
+        "title": "中检院公开征求《化妆品中铜绿假单胞菌的检验方法》等2项化妆品标准意见：欧盟更新《化妆品常用成分名称表》，新规即将全面实",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/0QvuAtKLsp0q1USP9rppYA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1026,
         "title": "“美对你而言意味着什么”：与驻华大使夫人们的艺术对话",
         "source": "中国化妆品",
@@ -2056,6 +2110,24 @@
       }
     ],
     "Fbeauty未来迹": [
+      {
+        "id": 1044,
+        "title": "一批“小众”美妆，正在占领商场",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/GI982NaA7fiXyA3dEoz6Lw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1045,
+        "title": "欧莱雅、联合利华亮相世界AI大会，释放哪些未来信号？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/FKfybhFHWbkR78qifIq0NA",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1009,
         "title": "独家专访欧莱雅：长寿科学，正在重写美妆的“根目录”",
@@ -3133,6 +3205,15 @@
       }
     ],
     "肤见未来实验室": [
+      {
+        "id": 1048,
+        "title": "眶周衰老的新解法：多核苷酸注射",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/ljcVilWvhSQupLYhavxLMQ",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1020,
         "title": "指南与共识|激光脱毛临床应用专家共识（2023版）",
