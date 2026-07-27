@@ -1,13 +1,13 @@
 {
   "version": "v31",
   "stats": {
-    "total_articles": 502,
+    "total_articles": 511,
     "source_count": 15,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-07-27"
     },
-    "last_update": "2026-07-27T16:15:33.695347"
+    "last_update": "2026-07-27T16:17:56.396818"
   },
   "sources": [
     {
@@ -55,16 +55,16 @@
       "count": 17
     },
     {
+      "name": "铱星云商",
+      "count": 13
+    },
+    {
       "name": "美业颜究院",
       "count": 10
     },
     {
       "name": "上海日化协会",
       "count": 5
-    },
-    {
-      "name": "铱星云商",
-      "count": 4
     },
     {
       "name": "财经早餐",
@@ -4405,6 +4405,125 @@
         "keywords": []
       }
     ],
+    "铱星云商": [
+      {
+        "id": 1061,
+        "title": "广州太古汇三期迎新进展、郑州二七万象城二期冲刺开业；砂之船上海22万方微度假奥莱设计方案公示；百联奥莱首进中原……",
+        "source": "铱星云商",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/heuYjBKHe6KnXCKIP5IY8A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1062,
+        "title": "北上广深公布上半年社零；耐克拟终止滔搏和宝胜国际线上经销权；小象超市华南首店8月底开业；沃尔玛社区店入苏……",
+        "source": "铱星云商",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/6JdwxfqIvjQ5p5p1uZDF6Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1063,
+        "title": "当文商旅不再追求爆红，真正的竞争才刚刚开始",
+        "source": "铱星云商",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/dbC-dwR4Bd0lzG-T4A6jmg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1064,
+        "title": "7家亏损、5家利润过亿……17家百货公司预告2026上半年业绩",
+        "source": "铱星云商",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/HG9G0B5v_V55dXr4qJEk9A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1085,
+        "title": "TBC拓朴思《2026年上半年商业市场总结及趋势展望》重磅发布，解析商业进化全新路径",
+        "source": "铱星云商",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/YHzdsodjaxZBFSF5ZPvzag",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1086,
+        "title": "奢场前线｜深圳湾万象城上新9家餐饮首店围挡；武汉恒隆广场8000㎡温室生态空间将开；武汉SKP双展共启",
+        "source": "铱星云商",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/aZ8MOZnReSpEf5jQjwepaQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1087,
+        "title": "半年调改超100家品牌，这个商场凭什么是“新质品牌捕手”？",
+        "source": "铱星云商",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/L-XHhSQ88JV9DX9densFBA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1088,
+        "title": "南京仙林德基艺术奥莱即将开业；广州番禺易发街二期改造南区暑期亮相；华润、龙湖公布上半年运营收入……",
+        "source": "铱星云商",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/CPfOboNGzIemNaFlxDxUgw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1089,
+        "title": "“十五五”消费规划落地；永辉上半年扭亏；华润万象生活打造自营美妆品牌；历峰集团、Burberry披露最新季报：奢侈品消费回暖……",
+        "source": "铱星云商",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/CpcxdK0jMkaeWmMuQ-tMfw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1090,
+        "title": "20个品牌陷关店潮！实则是品牌拓展新“阳谋”？",
+        "source": "铱星云商",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/ayku-95RPvpIbIxaG_texA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1091,
+        "title": "深湾聚势·无界进化——2026上半年大湾区商业市场洞察发布暨趋势发展论坛圆满落幕",
+        "source": "铱星云商",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/F1aGu9H48NGOS53nC4-o9g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1092,
+        "title": "千万考生催生“后高考经济”，商场抢滩押注",
+        "source": "铱星云商",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/kqxQuhb47w3kToslGMSYiw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1093,
+        "title": "这几个“让人来了又要来”的商业，能抄作业吗？",
+        "source": "铱星云商",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/sJ-h1y_30SPMRw70T5-IAg",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "美业颜究院": [
       {
         "id": 996,
@@ -4540,44 +4659,6 @@
         "source": "上海日化协会",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/mPUjfCboGkyYbJKnmr85vw",
-        "summary": "",
-        "keywords": []
-      }
-    ],
-    "铱星云商": [
-      {
-        "id": 1061,
-        "title": "广州太古汇三期迎新进展、郑州二七万象城二期冲刺开业；砂之船上海22万方微度假奥莱设计方案公示；百联奥莱首进中原……",
-        "source": "铱星云商",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/heuYjBKHe6KnXCKIP5IY8A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1062,
-        "title": "北上广深公布上半年社零；耐克拟终止滔搏和宝胜国际线上经销权；小象超市华南首店8月底开业；沃尔玛社区店入苏……",
-        "source": "铱星云商",
-        "publish_date": "2026-07-25",
-        "url": "https://mp.weixin.qq.com/s/6JdwxfqIvjQ5p5p1uZDF6Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1063,
-        "title": "当文商旅不再追求爆红，真正的竞争才刚刚开始",
-        "source": "铱星云商",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/dbC-dwR4Bd0lzG-T4A6jmg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1064,
-        "title": "7家亏损、5家利润过亿……17家百货公司预告2026上半年业绩",
-        "source": "铱星云商",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/HG9G0B5v_V55dXr4qJEk9A",
         "summary": "",
         "keywords": []
       }
