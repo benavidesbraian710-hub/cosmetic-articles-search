@@ -1,13 +1,13 @@
 {
   "version": "v31",
   "stats": {
-    "total_articles": 511,
+    "total_articles": 528,
     "source_count": 15,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-07-27"
     },
-    "last_update": "2026-07-27T16:17:56.396818"
+    "last_update": "2026-07-27T16:22:01.688209"
   },
   "sources": [
     {
@@ -51,6 +51,10 @@
       "count": 23
     },
     {
+      "name": "财经早餐",
+      "count": 21
+    },
+    {
       "name": "KEV美妆",
       "count": 17
     },
@@ -65,10 +69,6 @@
     {
       "name": "上海日化协会",
       "count": 5
-    },
-    {
-      "name": "财经早餐",
-      "count": 4
     }
   ],
   "articles": {
@@ -4250,6 +4250,197 @@
         "keywords": []
       }
     ],
+    "财经早餐": [
+      {
+        "id": 1054,
+        "title": "长鑫真正值钱的，不只是芯片",
+        "source": "财经早餐",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/6mgPet9I_eNr-crI_psMbA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1055,
+        "title": "【财经早餐】2026.07.27星期一",
+        "source": "财经早餐",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/BRta_fxNhpZOt6VLwb8QDA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1056,
+        "title": "【财经早餐】2026.07.26星期日",
+        "source": "财经早餐",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/5xnkmhqxkDi7k0v4CO569A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1057,
+        "title": "【财经早餐】2026.07.25星期六",
+        "source": "财经早餐",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/-CgVi5DFqR3rLSCR2s2Wqg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1094,
+        "title": "算力租赁，凭什么率先爆发？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/2uHlaiSik6deAT58WjVaPQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1095,
+        "title": "淘汰赛下，这家汽车“小巨人”拿到了怎样的入场券？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/1ZJTL-UPWa8RoU4d5dvxdA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1096,
+        "title": "别老盯着科技！这个板块，集体爆发",
+        "source": "财经早餐",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/wyejcVSHvvsAkNvuhtU8Jw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1097,
+        "title": "【财经早餐】2026.07.23星期四",
+        "source": "财经早餐",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/B2l3El1fmNnGAsZ2tr3Mkg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1098,
+        "title": "越聪明，越烧钱：下一代AI靠什么？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/e9XFJa190WAJpMJHEU2VWQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1099,
+        "title": "【财经早餐】2026.07.22星期三",
+        "source": "财经早餐",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/kmoUCsQXF4VEqZ-BWdYwtQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1100,
+        "title": "黄金跌，油价涨，市场到底在交易什么？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/bRMZzGsG6D3IwSDedtO3FQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1101,
+        "title": "【财经早餐】2026.07.21星期二",
+        "source": "财经早餐",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/V3FAfjaZIkj6TMqiqTzdfw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1102,
+        "title": "销量增，渠道崩？多地智己汽车经销商爆雷",
+        "source": "财经早餐",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/Cp61r_TD0ckVlf3wkXUVcg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1103,
+        "title": "当AI开始组网",
+        "source": "财经早餐",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/zut0MqphGWahfSXA0r8XQQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1104,
+        "title": "【财经早餐】2026.07.20星期一",
+        "source": "财经早餐",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/B4eUddGy2GkokKZ_nB6qYQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1105,
+        "title": "【财经早餐】2026.07.19星期日",
+        "source": "财经早餐",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/S0Ah92NgsDFeEoQYoWZKiA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1106,
+        "title": "世界人工智能大会召开，人工智能下半场来了！",
+        "source": "财经早餐",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/kBErwlhNn6QY9jIGqB5G8g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1107,
+        "title": "【财经早餐】2026.07.18星期六",
+        "source": "财经早餐",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/5iioaK6kKc6derMmxg7hew",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1108,
+        "title": "实验猴，创新药的“存储芯片”时刻？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/IVbpvD1KPZ4Y2TtEIi8Xlg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1109,
+        "title": "巴菲特发出警告，市场已成“赌场”！",
+        "source": "财经早餐",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/S1qQa_sfHlcYBV2Bthk5Fg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1110,
+        "title": "【财经早餐】2026.07.17星期五",
+        "source": "财经早餐",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/Mp09rtj2Y9lAVnycQL-fGg",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "KEV美妆": [
       {
         "id": 1017,
@@ -4659,44 +4850,6 @@
         "source": "上海日化协会",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/mPUjfCboGkyYbJKnmr85vw",
-        "summary": "",
-        "keywords": []
-      }
-    ],
-    "财经早餐": [
-      {
-        "id": 1054,
-        "title": "长鑫真正值钱的，不只是芯片",
-        "source": "财经早餐",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/6mgPet9I_eNr-crI_psMbA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1055,
-        "title": "【财经早餐】2026.07.27星期一",
-        "source": "财经早餐",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/BRta_fxNhpZOt6VLwb8QDA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1056,
-        "title": "【财经早餐】2026.07.26星期日",
-        "source": "财经早餐",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/5xnkmhqxkDi7k0v4CO569A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1057,
-        "title": "【财经早餐】2026.07.25星期六",
-        "source": "财经早餐",
-        "publish_date": "2026-07-25",
-        "url": "https://mp.weixin.qq.com/s/-CgVi5DFqR3rLSCR2s2Wqg",
         "summary": "",
         "keywords": []
       }
