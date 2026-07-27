@@ -109,18 +109,14 @@ def hotkey(keys: str) -> bool:
 
 
 def press(key: str) -> bool:
-    """发送按键到微信"""
-    # 方案: 使用pyautogui直接模拟按键
-    try:
-        import pyautogui
-        pyautogui.press(key)
+    """发送按键到微信 - 只用 peekaboo（2026-07-27 Nick要求）"""
+    cmd = f'peekaboo press {key}'
+    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    if result.returncode == 0:
         return True
-    except Exception as e:
-        print(f"  ⚠️ pyautogui失败: {e}")
-        # fallback到peekaboo
-        cmd = f'peekaboo press {key}'
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-        return result.returncode == 0
+    else:
+        print(f"  ⚠️ peekaboo按键失败: {result.stderr}")
+        return False
 
 
 def set_clipboard(text: str):
