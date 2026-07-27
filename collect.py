@@ -164,8 +164,8 @@ def navigate_to_account(account_name: str):
     press("esc")
     time.sleep(0.5)
     
-    print("打开搜索框...")
-    hotkey("cmd,f")
+    print("点击搜索框...")
+    click(489, 161)  # 直接点击搜索框坐标，替代 hotkey cmd+f（2026-07-27 Nick提供）
     time.sleep(2)  # 间隔2秒
     
     print(f"粘贴'{account_name}'...")
