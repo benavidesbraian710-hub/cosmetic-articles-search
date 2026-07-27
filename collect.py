@@ -86,18 +86,14 @@ COORDS = {
 # ==================== 工具函数 ====================
 
 def click(x: int, y: int) -> bool:
-    """屏幕绝对坐标点击"""
-    # 方案: 使用pyautogui直接模拟点击（peekaboo权限被撤销后的替代方案）
-    try:
-        import pyautogui
-        pyautogui.click(x, y)
+    """屏幕绝对坐标点击 - 只用 peekaboo（2026-07-27 Nick要求）"""
+    cmd = f'peekaboo click --coords {x},{y} --global-coords'
+    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    if result.returncode == 0:
         return True
-    except Exception as e:
-        print(f"  ⚠️ pyautogui点击失败: {e}")
-        # fallback到peekaboo
-        cmd = f'peekaboo click --coords {x},{y} --global-coords'
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-        return result.returncode == 0
+    else:
+        print(f"  ⚠️ peekaboo点击失败: {result.stderr}")
+        return False
 
 
 def hotkey(keys: str) -> bool:
