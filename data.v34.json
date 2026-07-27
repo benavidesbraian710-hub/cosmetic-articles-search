@@ -1,13 +1,13 @@
 {
   "version": "v31",
   "stats": {
-    "total_articles": 470,
-    "source_count": 12,
+    "total_articles": 482,
+    "source_count": 15,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-07-27"
     },
-    "last_update": "2026-07-27T11:31:59.983365"
+    "last_update": "2026-07-27T16:06:03.662984"
   },
   "sources": [
     {
@@ -32,7 +32,7 @@
     },
     {
       "name": "非科学美妆传播",
-      "count": 33
+      "count": 34
     },
     {
       "name": "肤见未来实验室",
@@ -57,6 +57,18 @@
     {
       "name": "上海日化协会",
       "count": 5
+    },
+    {
+      "name": "铱星云商",
+      "count": 4
+    },
+    {
+      "name": "财经早餐",
+      "count": 4
+    },
+    {
+      "name": "亿邦动力",
+      "count": 3
     }
   ],
   "articles": {
@@ -2907,6 +2919,15 @@
     ],
     "非科学美妆传播": [
       {
+        "id": 1053,
+        "title": "SJTU生医工&amp;雅诗兰黛中国｜FRBM 2026｜从「表观遗传」到「铁死亡」，再到「炎症性皮肤病」",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/7vnXfn94A3CghQUUYMuVFA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1002,
         "title": "北科大&amp;花安堂｜COLLOID SURFACE B 2025｜稀有人参皂苷替代胆固醇，制备纳米脂质体，包裹麦角硫因和辅酶Q10；可增加麦角硫因转运效率",
         "source": "非科学美妆传播",
@@ -4310,6 +4331,111 @@
         "source": "上海日化协会",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/mPUjfCboGkyYbJKnmr85vw",
+        "summary": "",
+        "keywords": []
+      }
+    ],
+    "铱星云商": [
+      {
+        "id": 1061,
+        "title": "广州太古汇三期迎新进展、郑州二七万象城二期冲刺开业；砂之船上海22万方微度假奥莱设计方案公示；百联奥莱首进中原……",
+        "source": "铱星云商",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/heuYjBKHe6KnXCKIP5IY8A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1062,
+        "title": "北上广深公布上半年社零；耐克拟终止滔搏和宝胜国际线上经销权；小象超市华南首店8月底开业；沃尔玛社区店入苏……",
+        "source": "铱星云商",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/6JdwxfqIvjQ5p5p1uZDF6Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1063,
+        "title": "当文商旅不再追求爆红，真正的竞争才刚刚开始",
+        "source": "铱星云商",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/dbC-dwR4Bd0lzG-T4A6jmg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1064,
+        "title": "7家亏损、5家利润过亿……17家百货公司预告2026上半年业绩",
+        "source": "铱星云商",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/HG9G0B5v_V55dXr4qJEk9A",
+        "summary": "",
+        "keywords": []
+      }
+    ],
+    "财经早餐": [
+      {
+        "id": 1054,
+        "title": "长鑫真正值钱的，不只是芯片",
+        "source": "财经早餐",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/6mgPet9I_eNr-crI_psMbA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1055,
+        "title": "【财经早餐】2026.07.27星期一",
+        "source": "财经早餐",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/BRta_fxNhpZOt6VLwb8QDA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1056,
+        "title": "【财经早餐】2026.07.26星期日",
+        "source": "财经早餐",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/5xnkmhqxkDi7k0v4CO569A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1057,
+        "title": "【财经早餐】2026.07.25星期六",
+        "source": "财经早餐",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/-CgVi5DFqR3rLSCR2s2Wqg",
+        "summary": "",
+        "keywords": []
+      }
+    ],
+    "亿邦动力": [
+      {
+        "id": 1058,
+        "title": "市监总局对携程罚款51.79亿元！蚂蚁国际完成约12亿美元融资；亚马逊裁撤通用人工智能部门岗位；中国千亿元潮玩赛道要来了｜电商财经盘点",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/MtiaHbrR9pUidwQ4RqW2PA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1059,
+        "title": "卡奥斯首发工业世界模型牵手能科，震坤行大模型备案亮相国企采购大会，深度数科发布票据与供应链金融垂直大模型丨产业互联网周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/2TUd6YWkDpSTe3Lm4zLdhQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1060,
+        "title": "商务部力挺速卖通；Temu波兰用户半年流失360万；eBay收购英国时尚电商平台Depop获批丨跨境电商周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/aGcpoer4-yH_XBvIhefuLA",
         "summary": "",
         "keywords": []
       }
