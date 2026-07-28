@@ -1,42 +1,42 @@
 {
   "version": "v31",
   "stats": {
-    "total_articles": 592,
+    "total_articles": 609,
     "source_count": 15,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-07-27"
+      "end": "2026-07-28"
     },
-    "last_update": "2026-07-27T17:06:23.757540"
+    "last_update": "2026-07-28T10:08:50.370042"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 87
+      "count": 90
     },
     {
       "name": "化妆品观察 品观",
-      "count": 75
+      "count": 78
+    },
+    {
+      "name": "中国化妆品",
+      "count": 67
     },
     {
       "name": "亿邦动力",
       "count": 66
     },
     {
-      "name": "中国化妆品",
-      "count": 65
-    },
-    {
       "name": "Fbeauty未来迹",
-      "count": 46
+      "count": 50
     },
     {
       "name": "妆研24小时",
-      "count": 42
+      "count": 43
     },
     {
       "name": "财经早餐",
-      "count": 38
+      "count": 39
     },
     {
       "name": "非科学美妆传播",
@@ -44,15 +44,15 @@
     },
     {
       "name": "肤见未来实验室",
-      "count": 31
+      "count": 32
     },
     {
       "name": "妆合规",
-      "count": 30
+      "count": 31
     },
     {
       "name": "原料合规观察",
-      "count": 29
+      "count": 30
     },
     {
       "name": "铱星云商",
@@ -73,6 +73,33 @@
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 1182,
+        "title": "美妆巨头，正在重塑AI",
+        "source": "个护前沿",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/J-yrOBIaHbPybcv8ZZhnlw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1183,
+        "title": "如何改善维C乙基醚在配方中的褐变问题？",
+        "source": "个护前沿",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/ML7ql9HTHXOjvbWrzdj32A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1184,
+        "title": "辽宁省药品监督管理局关于印发《服务化妆品新原料创新发展若干举措》的通知",
+        "source": "个护前沿",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/W4hulXlo2WvFnc7XOjO-4A",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1046,
         "title": "手性原料在皮肤健康中的关键作用与展望｜江南大学王靖团队Commentary评述论文",
@@ -859,11 +886,38 @@
     ],
     "化妆品观察 品观": [
       {
+        "id": 1186,
+        "title": "50亿级国货，要推香水了",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/QCGx0YSb5NCaDolt_yX4UQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1049,
         "title": "超20亿！“美妆多肽原料第一股”诞生，珀莱雅、巨子生物入股",
         "source": "化妆品观察 品观",
         "publish_date": "2026-07-27",
         "url": "https://mp.weixin.qq.com/s/Mh3XZ5cOAskrI8Q_a29pGA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1187,
+        "title": "百雀羚联手华山医院皮肤科：国货护肤的“专业主义”拐点到了",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/E7Sphqv6GE2goDyXBB49Mw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1188,
+        "title": "中国美妆出海日本，下一个战略支点是什么？",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/ZVGpWSGZddBOXbEx0d2GrQ",
         "summary": "",
         "keywords": []
       },
@@ -1534,6 +1588,611 @@
         "keywords": []
       }
     ],
+    "中国化妆品": [
+      {
+        "id": 1189,
+        "title": "香港海关检出一款韩国胶原面霜含禁用成分苏丹红；维琪科技北交所上市首日涨幅翻倍；欧莱雅关联基金首投国货洗护品牌可氏利夫",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/jiANUtqCQDtAmDy5BvQncg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1190,
+        "title": "使用禁用原料、伪造材料、设备违规、无证生产被重罚！化妆品合规迎来“新课题” | 合规风向标总第103期",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/iHGGItop5gTIMYzdzq8KHg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1052,
+        "title": "中检院公开征求《化妆品中铜绿假单胞菌的检验方法》等2项化妆品标准意见：欧盟更新《化妆品常用成分名称表》，新规即将全面实",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/0QvuAtKLsp0q1USP9rppYA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1026,
+        "title": "“美对你而言意味着什么”：与驻华大使夫人们的艺术对话",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/Hr59a6rdQVnZrzlMDK7BqA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1027,
+        "title": "海关总署：11批次进口化妆品未准入境；黑龙江省出台化妆品经营环节分级分类监督管理办法；Puig集团增持Charlotte Tilbury股权至85%",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/KMzjumOL25XbuZPnmhe6ow",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1028,
+        "title": "静界谈首期“中国美妆出海赋能讲堂”成功举办：国际学者、C-Beauty、K-Beauty共探全球品牌增长路径",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/tEpTBlwpbgN-e3nO7MrYAA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1029,
+        "title": "海南印发药品医疗器械化妆品生产经营企业主体责任清单；欧莱雅前高管创立的“皮肤长寿”美妆品牌LNGVTY获种子轮融资",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/2jD1tUppGYWHX32YbLCUIA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1038,
+        "title": "中检院公开征求《化妆品中铜绿假单胞菌的检验方法》等2项化妆品标准意见；花知晓完成董事会调整；青松股份拟更名为“诺斯贝尔”",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/oBlWZw5Kh9LuTOEWyDB3Xg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1039,
+        "title": "“中国美妆出海赋能讲堂”明日开讲，C-Beauty迈向全球的必修课来了 | 静界谈Beauty Talk",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/XxciGwWAAsLsukg8vQiPZQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1040,
+        "title": "Inolex推出防晒性能增强剂；Silab推出栗子来源卷发活性物Liftilience；Primient推出Zemea丙二醇护色系列原料｜全球观察·新原料",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/7yNZ4SO6hXHI7lLslHVqSQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1041,
+        "title": "广东省药监局抽检696批次化妆品，4批次不合格；HARMAY話梅优化线下布局，加速推进战略升级；Musinsa Standard完成在华首批化妆品备案",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/unOnNTX4mOCSz_Xd5rjTvQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 986,
+        "title": "超范围使用着色剂、超过渡期禁售、违规使用升降机——一周七案透视化妆品合规“新死角” | 合规风向标总第102期",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/4mSCFbznCLYOzPB27f_5qw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 987,
+        "title": "新疆启动化妆品个性化服务第二阶段试点；欧盟更新《化妆品常用成分名称表》，新规即将全面实施；日系化妆品sitrana中国公司解散",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/KrOyyTSjm3Tv3UD5oI0Bsg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 972,
+        "title": "国家市场监管总局修订产品质量监督抽查管理办法并公开征求意见：6月化妆品零售额同比增长12.6%；雅诗兰黛将保留Too Faced等品牌",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/ACOGbLpOrE2rQERaZVgIiQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 961,
+        "title": "商务部“老中发展合作研修班”走进花西子，探访中国美妆“新质生产力”",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/8KXrmyP-N2_wldMG-q7HEA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 962,
+        "title": "江苏省印发化妆品生产质量管理三年提升行动方案；橘宜集团孵化新品牌CADENZA；开云集团任命LVMH前美妆香水部门CEO执掌Bottega Veneta",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/ZwfOJ66o040i5GFmPvvn2g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 902,
+        "title": "巴尔干目光邂逅东方美妆 | 北马其顿媒体团走进环亚集团，共话国货出海与美业新机遇",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/y3Ff4c4ivn-T8rmRyuQFQQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 903,
+        "title": "6月化妆品零售额同比增长12.6%；丽人丽妆上半年预计盈利2208万至2650万元；PVH Corp.任命娇兰前高管Alexis Rollier为新任首席财务官",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/EQL_XCjoq46LOd_8XT4GZw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 886,
+        "title": "报名开启｜Ben Lee教授领衔，《中国化妆品》杂志×美创静界“静界谈 BEAUTY TALKS”首期，邀您共探中国美妆全球化",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/HgXsRiH8XZZ5wmV0NHssnA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 887,
+        "title": "国家药监局就《化妆品安全技术规范》修订实施事宜公开征求意见；湖北省入选化妆品个性化服务第二阶段试点；天鹜科技完成数亿元A++轮融资",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/U56IL1wdOYmNoZMkb-4rIQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 871,
+        "title": "国家市场监管总局修订产品质量监督抽查管理办法并公开征求意见；上海家化子公司完成一款新原料备案；雅诗兰黛将保留Too Faced等品牌",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/dwcPjknW9B1Bo6W3s36k9g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 872,
+        "title": "世界杯进入决赛时刻，美妆界的“世界杯”INPD等你来！| 解码2026 INPD四大关键词",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/S0GOOJGIQpRUiovNkvx5mQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 856,
+        "title": "标签造假、未备案上市、超范围生产——合规的“基本功”为何总失分 | 合规风向标总第101期",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/9n1ARxMBQttaCxHVmEIJ9A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 857,
+        "title": "浙江省就深化化妆品监管改革促进产业高质量发展若干举措征求意见；海南省修订化妆品行政处罚裁量基准并征求意见；漫丹完成私有化退市",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/BDGJt9GU3QazlcrMThpzTg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 840,
+        "title": "国家药监局扩大化妆品个性化服务试点范围：花王中国研发高管更替，草浦达也出任研发中心社长；汉高14亿美元收购Olaplex",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-12",
+        "url": "https://mp.weixin.qq.com/s/W_D5tiS0-SSFaqhfAeIdQg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 841,
+        "title": "从“爆品制造”到“完整自我”：Olive Young凭什么代表K-Beauty？ | 全球观察·K-Beauty Trends",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/pt6QjJLYy3Q7F-dfRE0hCQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 842,
+        "title": "国家药监局扩大化妆品个性化服务试点范围；知原药业正式向港交所递交上市申请，欧莱雅关联基金参投；汉高14亿美元收购Olaplex",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/mPYRn_uUBiYXTmIAKi8SMw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 817,
+        "title": "河北省药监局印发促进化妆品产业高质量发展若干措施；长江和记拟出售旗下高端美妆连锁Marionnaud；LVMH旗下帕尔玛之水换帅",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-09",
+        "url": "https://mp.weixin.qq.com/s/vsBi1lkuk7i3PBtuIkGoMA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 818,
+        "title": "欧莱雅与OpenAI达成战略合作；Aptar发布防堵塞气雾阀技术；Siltech推出新一代有机硅技术｜全球观察·新技术",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-09",
+        "url": "https://mp.weixin.qq.com/s/QBIltmbu5g0NBkj6FU8gjw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 628,
+        "title": "国家药监局批准《丁基乙酰氨基丙酸乙酯》化妆品标准立项；百瑞吉“冲刺”北交所；开云与欧莱雅签署50年Gucci美妆独家授权",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-08",
+        "url": "https://mp.weixin.qq.com/s/RL2Z9gdG9ABhFbLj837aDA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 629,
+        "title": "大促降温、存量博弈，中国美妆的“新议题场”将在INPD发生 | 2026 INPD品牌价值赋能体系",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-08",
+        "url": "https://mp.weixin.qq.com/s/GQhmNYbMBd34bkbROOfSVQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 630,
+        "title": "14个需求组合，解码面部精华的“爆款密码” | 美妆指数",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/QkPydA4TM5WnyjP5PPBDaQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 631,
+        "title": "浙江省衢州市局构建化妆品安全科普共治新生态；韩国化妆品上半年出口额达70亿美元，再创新高；SLG Brands出售两品牌给Thriving Brands",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/Zc97SzIjC36xU91RKTCbVg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 632,
+        "title": "24家企业“被点名”、多起体系缺陷被查——化妆品行业加速“优胜劣汰” | 合规风向标100期特辑",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/_HdAUaPR4yh3ZNwgX9qfeg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 633,
+        "title": "北京市东城区启动化妆品电子标签试点；马来西亚公司KLK OLEO完成化妆品新原料备案；科蒂宣布高管调整，高端研发并入供应链",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/luBwixuHnU5dhR0Rxl01Aw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 634,
+        "title": "国家药监局就《化妆品标准管理办法（征求意见稿）》公开征求意见；五款化妆品新原料备案成功；香奈儿法国香水工厂投产",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-05",
+        "url": "https://mp.weixin.qq.com/s/yzGcG1bgouHWPOk2KwNz7g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 635,
+        "title": "独家专访梅维平：中国美妆要超车，别总踩别人的脚印",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/xbnkaQF7e_TV0sH41kpr5w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 636,
+        "title": "安徽省六安市完成64批次化妆品抽样任务，发现异常19个；锐捷荣创完成Pre-A轮融资；花王旗下Oribe洗发水在北美地区自愿召回部分批次产品",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/xB44vYh4yayHx8eXaoZwHw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 637,
+        "title": "从实验室到生产线：莱茵国际的植物科技“可信”之路  | 创新正当时",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/ozvoEbKBLmkqZ4XEmPRLgQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 638,
+        "title": "国家药监局就《化妆品标准管理办法（征求意见稿）》公开征求意见；植物医生IPO恢复审核；韩国新锐护发品牌LILYEVE进军中国",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/tLKnWYCasoy9ew3lcFz9Pg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 639,
+        "title": "橪联合主办第二届芳香医药临床应用研讨会",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/ot-zTI0rJSGHlEHl1kmCMg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 640,
+        "title": "7000店规模再进阶！樊文花跨越周期的增长密码",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/RXhtxL5NhRFAwNTX0MzjvQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 641,
+        "title": "热烈庆祝中国共产党成立105周年！",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/HG7MRdoNQi8u3X1oGQlDvw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 642,
+        "title": "专访宝洁全球供应链创新副总裁赵波：美妆供应链，从效率优先到价值共生 | ESG先锋",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/X4HRGdk7MJEtPb1Zy4iD6w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 643,
+        "title": "广东省中山市市监局召开化妆品质量安全风险会商工作会议；绽妍生物北交所上市获受理；印度美妆Nykaa计划2030财年计划GMV突破50亿美元",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/VWEh0VoAmMP8DqZrlg0Rgw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 644,
+        "title": "内蒙古药监局就化妆品经营分级分类监督管理办法公开征求意见；巨子生物“人参皂苷CK”获国家药监局新原料备案",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/eSBigO9LGvZNTYNgPoQAxw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 645,
+        "title": "国家药监局发布新版化妆品新原料注册备案及资料管理规定；中检院发布《化妆品新原料注册备案资料技术通则》",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-28",
+        "url": "https://mp.weixin.qq.com/s/OCf5DTK5zc3PcLtyFDOQCQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 646,
+        "title": "夏日感官新序：香氛赋新、妆感焕亮与维稳护肤 | 全球观察・新产品",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/_czobi3VtltSa-Cu2yYxng",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 647,
+        "title": "国家药监局发布新版化妆品新原料注册备案及资料管理规定；国家药监局拟对丁基乙酰氨基丙酸乙酯有关标准立项",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/DBsbD3BVgVeF2yJjEX37NA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 648,
+        "title": "巨星缺席，国妆当道：为什么中国跑不出Fenty Beauty这样的明星彩妆帝国？| 2026全球品牌比较研究系列",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/iR8bD8s2RsCfVURfwzusFg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 649,
+        "title": "安徽省合肥市完成2026年75批次国家化妆品抽样检验任务；珀莱雅完成“衣康酸”新原料备案；LG生活健康中国区换帅",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/6tw6-E0_wOA6t6qtFuuZUw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 650,
+        "title": "站上卢浮宫，链接全世界 | 2026 INPD打造高端资源精准对接平台",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/u-vCKGg2Zn4FD-tCTc9ZVA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 651,
+        "title": "26批次进口化妆品未准入境，涉香奈儿、娇兰等品牌；锦波生物创始人杨霞卸任总经理职务；巴黎小众香水品牌Fascent获130万欧元天使轮融资",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/1LVjqvWzWn5NVdakuWJvBg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 652,
+        "title": "美甲机器人公司融资近5亿元：美妆行业的尽头是机器人吗？ | 全球观察",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/ARLDzAc9VwzIRYc0iYsGfQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 653,
+        "title": "辽宁省就化妆品生产质量提升三年行动方案公开征求意见；贝泰妮旗下企业备案一款化妆品新原料；3CE创始人金素熙复出并推出新品牌",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/-VQ7djUJ-SCnft7CiRHDZw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 654,
+        "title": "直播带货宣称化妆品“返老还童”“全脸回春”，虚假宣传换来真实罚单 | 总第98期合规风向标",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/5_3tT7EaupWrZ57EXogwQg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 655,
+        "title": "海南省药监局发布化妆品备案自查技术指导原则；金发拉比撤销退市风险警示；欧莱雅收购印度Innovist多数股权",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/QGnmCz-IKfMrEi7Zb7rYbA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 656,
+        "title": "国家药监局就化妆品唇炎及接触性荨麻疹2项强制性国标征求意见；5月化妆品零售额449亿元，同比增长2.5%",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-21",
+        "url": "https://mp.weixin.qq.com/s/whxKa3v_HvrN-GfQpcOHrg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 657,
+        "title": "《中国化妆品》杂志祝大家端午快乐！",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-19",
+        "url": "https://mp.weixin.qq.com/s/evrV9D6yIlEyXAOnQZac7g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 658,
+        "title": "美白护肤“红海逃生”：下代爆款藏在成分、剂型、人群、场景交集里 | 美妆指数",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/7szJzid_9-6pgo321pgHVA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 659,
+        "title": "5月化妆品零售额449亿元，同比增长2.5%；莹特丽完成共聚物新原料备案；韩国私募机构PTA Partners收购法国COSBELLE 70%股权",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/OT9QcxMvQ1zX2f281Sm3ww",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 660,
+        "title": "八大奖项&amp;卢浮宫主舞台演讲：中国美妆的每一项突破都值得被世界看见 | 2026 INPD亮点解读",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/MPQUXHqbgIfFlWXi_R9VFA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 661,
+        "title": "国家药监局就化妆品唇炎及接触性荨麻疹2项强制性国标征求意见；四款新原料取消备案；Jay-Z相关投资机构竞购Fenty Beauty",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/AEWf4EvhGDKRJimC07X3sA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 662,
+        "title": "欧莱雅为什么愿意等待？从女科学家到科技女生，一场跨越28年的接力",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/QFFHL222KDQOEkOu8kO8Wg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 663,
+        "title": "2026年ESXENCE艺术香水展圆满收官，米兰再度夯实全球艺术香水产业枢纽地位",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/u1GCrw4zcK4Vc3_rM4MSyw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 664,
+        "title": "浙江杭州推出化妆品备案“优审快办”快速通道；丸美生物港股IPO申请失效；雅诗兰黛成立北美香氛集群",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/UjwDBD6T2v9B7sxngivGTA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 665,
+        "title": "屡次违法终禁入、配方擅改被罚十万元——化妆品行业不合规的代价正在“翻倍” | 总第97期合规风向标",
+        "source": "中国化妆品",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/3A1hTHXIQohJ6dYSjLcEjw",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "亿邦动力": [
       {
         "id": 1065,
@@ -2130,594 +2789,43 @@
         "keywords": []
       }
     ],
-    "中国化妆品": [
-      {
-        "id": 1052,
-        "title": "中检院公开征求《化妆品中铜绿假单胞菌的检验方法》等2项化妆品标准意见：欧盟更新《化妆品常用成分名称表》，新规即将全面实",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/0QvuAtKLsp0q1USP9rppYA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1026,
-        "title": "“美对你而言意味着什么”：与驻华大使夫人们的艺术对话",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/Hr59a6rdQVnZrzlMDK7BqA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1027,
-        "title": "海关总署：11批次进口化妆品未准入境；黑龙江省出台化妆品经营环节分级分类监督管理办法；Puig集团增持Charlotte Tilbury股权至85%",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/KMzjumOL25XbuZPnmhe6ow",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1028,
-        "title": "静界谈首期“中国美妆出海赋能讲堂”成功举办：国际学者、C-Beauty、K-Beauty共探全球品牌增长路径",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/tEpTBlwpbgN-e3nO7MrYAA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1029,
-        "title": "海南印发药品医疗器械化妆品生产经营企业主体责任清单；欧莱雅前高管创立的“皮肤长寿”美妆品牌LNGVTY获种子轮融资",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/2jD1tUppGYWHX32YbLCUIA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1038,
-        "title": "中检院公开征求《化妆品中铜绿假单胞菌的检验方法》等2项化妆品标准意见；花知晓完成董事会调整；青松股份拟更名为“诺斯贝尔”",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-22",
-        "url": "https://mp.weixin.qq.com/s/oBlWZw5Kh9LuTOEWyDB3Xg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1039,
-        "title": "“中国美妆出海赋能讲堂”明日开讲，C-Beauty迈向全球的必修课来了 | 静界谈Beauty Talk",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-22",
-        "url": "https://mp.weixin.qq.com/s/XxciGwWAAsLsukg8vQiPZQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1040,
-        "title": "Inolex推出防晒性能增强剂；Silab推出栗子来源卷发活性物Liftilience；Primient推出Zemea丙二醇护色系列原料｜全球观察·新原料",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/7yNZ4SO6hXHI7lLslHVqSQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1041,
-        "title": "广东省药监局抽检696批次化妆品，4批次不合格；HARMAY話梅优化线下布局，加速推进战略升级；Musinsa Standard完成在华首批化妆品备案",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/unOnNTX4mOCSz_Xd5rjTvQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 986,
-        "title": "超范围使用着色剂、超过渡期禁售、违规使用升降机——一周七案透视化妆品合规“新死角” | 合规风向标总第102期",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-20",
-        "url": "https://mp.weixin.qq.com/s/4mSCFbznCLYOzPB27f_5qw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 987,
-        "title": "新疆启动化妆品个性化服务第二阶段试点；欧盟更新《化妆品常用成分名称表》，新规即将全面实施；日系化妆品sitrana中国公司解散",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-20",
-        "url": "https://mp.weixin.qq.com/s/KrOyyTSjm3Tv3UD5oI0Bsg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 972,
-        "title": "国家市场监管总局修订产品质量监督抽查管理办法并公开征求意见：6月化妆品零售额同比增长12.6%；雅诗兰黛将保留Too Faced等品牌",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-19",
-        "url": "https://mp.weixin.qq.com/s/ACOGbLpOrE2rQERaZVgIiQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 961,
-        "title": "商务部“老中发展合作研修班”走进花西子，探访中国美妆“新质生产力”",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/8KXrmyP-N2_wldMG-q7HEA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 962,
-        "title": "江苏省印发化妆品生产质量管理三年提升行动方案；橘宜集团孵化新品牌CADENZA；开云集团任命LVMH前美妆香水部门CEO执掌Bottega Veneta",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/ZwfOJ66o040i5GFmPvvn2g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 902,
-        "title": "巴尔干目光邂逅东方美妆 | 北马其顿媒体团走进环亚集团，共话国货出海与美业新机遇",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/y3Ff4c4ivn-T8rmRyuQFQQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 903,
-        "title": "6月化妆品零售额同比增长12.6%；丽人丽妆上半年预计盈利2208万至2650万元；PVH Corp.任命娇兰前高管Alexis Rollier为新任首席财务官",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/EQL_XCjoq46LOd_8XT4GZw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 886,
-        "title": "报名开启｜Ben Lee教授领衔，《中国化妆品》杂志×美创静界“静界谈 BEAUTY TALKS”首期，邀您共探中国美妆全球化",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-15",
-        "url": "https://mp.weixin.qq.com/s/HgXsRiH8XZZ5wmV0NHssnA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 887,
-        "title": "国家药监局就《化妆品安全技术规范》修订实施事宜公开征求意见；湖北省入选化妆品个性化服务第二阶段试点；天鹜科技完成数亿元A++轮融资",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-15",
-        "url": "https://mp.weixin.qq.com/s/U56IL1wdOYmNoZMkb-4rIQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 871,
-        "title": "国家市场监管总局修订产品质量监督抽查管理办法并公开征求意见；上海家化子公司完成一款新原料备案；雅诗兰黛将保留Too Faced等品牌",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-14",
-        "url": "https://mp.weixin.qq.com/s/dwcPjknW9B1Bo6W3s36k9g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 872,
-        "title": "世界杯进入决赛时刻，美妆界的“世界杯”INPD等你来！| 解码2026 INPD四大关键词",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-14",
-        "url": "https://mp.weixin.qq.com/s/S0GOOJGIQpRUiovNkvx5mQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 856,
-        "title": "标签造假、未备案上市、超范围生产——合规的“基本功”为何总失分 | 合规风向标总第101期",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/9n1ARxMBQttaCxHVmEIJ9A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 857,
-        "title": "浙江省就深化化妆品监管改革促进产业高质量发展若干举措征求意见；海南省修订化妆品行政处罚裁量基准并征求意见；漫丹完成私有化退市",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/BDGJt9GU3QazlcrMThpzTg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 840,
-        "title": "国家药监局扩大化妆品个性化服务试点范围：花王中国研发高管更替，草浦达也出任研发中心社长；汉高14亿美元收购Olaplex",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-12",
-        "url": "https://mp.weixin.qq.com/s/W_D5tiS0-SSFaqhfAeIdQg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 841,
-        "title": "从“爆品制造”到“完整自我”：Olive Young凭什么代表K-Beauty？ | 全球观察·K-Beauty Trends",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/pt6QjJLYy3Q7F-dfRE0hCQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 842,
-        "title": "国家药监局扩大化妆品个性化服务试点范围；知原药业正式向港交所递交上市申请，欧莱雅关联基金参投；汉高14亿美元收购Olaplex",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/mPYRn_uUBiYXTmIAKi8SMw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 817,
-        "title": "河北省药监局印发促进化妆品产业高质量发展若干措施；长江和记拟出售旗下高端美妆连锁Marionnaud；LVMH旗下帕尔玛之水换帅",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-09",
-        "url": "https://mp.weixin.qq.com/s/vsBi1lkuk7i3PBtuIkGoMA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 818,
-        "title": "欧莱雅与OpenAI达成战略合作；Aptar发布防堵塞气雾阀技术；Siltech推出新一代有机硅技术｜全球观察·新技术",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-09",
-        "url": "https://mp.weixin.qq.com/s/QBIltmbu5g0NBkj6FU8gjw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 628,
-        "title": "国家药监局批准《丁基乙酰氨基丙酸乙酯》化妆品标准立项；百瑞吉“冲刺”北交所；开云与欧莱雅签署50年Gucci美妆独家授权",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-08",
-        "url": "https://mp.weixin.qq.com/s/RL2Z9gdG9ABhFbLj837aDA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 629,
-        "title": "大促降温、存量博弈，中国美妆的“新议题场”将在INPD发生 | 2026 INPD品牌价值赋能体系",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-08",
-        "url": "https://mp.weixin.qq.com/s/GQhmNYbMBd34bkbROOfSVQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 630,
-        "title": "14个需求组合，解码面部精华的“爆款密码” | 美妆指数",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-07",
-        "url": "https://mp.weixin.qq.com/s/QkPydA4TM5WnyjP5PPBDaQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 631,
-        "title": "浙江省衢州市局构建化妆品安全科普共治新生态；韩国化妆品上半年出口额达70亿美元，再创新高；SLG Brands出售两品牌给Thriving Brands",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-07",
-        "url": "https://mp.weixin.qq.com/s/Zc97SzIjC36xU91RKTCbVg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 632,
-        "title": "24家企业“被点名”、多起体系缺陷被查——化妆品行业加速“优胜劣汰” | 合规风向标100期特辑",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-06",
-        "url": "https://mp.weixin.qq.com/s/_HdAUaPR4yh3ZNwgX9qfeg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 633,
-        "title": "北京市东城区启动化妆品电子标签试点；马来西亚公司KLK OLEO完成化妆品新原料备案；科蒂宣布高管调整，高端研发并入供应链",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-06",
-        "url": "https://mp.weixin.qq.com/s/luBwixuHnU5dhR0Rxl01Aw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 634,
-        "title": "国家药监局就《化妆品标准管理办法（征求意见稿）》公开征求意见；五款化妆品新原料备案成功；香奈儿法国香水工厂投产",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-05",
-        "url": "https://mp.weixin.qq.com/s/yzGcG1bgouHWPOk2KwNz7g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 635,
-        "title": "独家专访梅维平：中国美妆要超车，别总踩别人的脚印",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-03",
-        "url": "https://mp.weixin.qq.com/s/xbnkaQF7e_TV0sH41kpr5w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 636,
-        "title": "安徽省六安市完成64批次化妆品抽样任务，发现异常19个；锐捷荣创完成Pre-A轮融资；花王旗下Oribe洗发水在北美地区自愿召回部分批次产品",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-03",
-        "url": "https://mp.weixin.qq.com/s/xB44vYh4yayHx8eXaoZwHw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 637,
-        "title": "从实验室到生产线：莱茵国际的植物科技“可信”之路  | 创新正当时",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-02",
-        "url": "https://mp.weixin.qq.com/s/ozvoEbKBLmkqZ4XEmPRLgQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 638,
-        "title": "国家药监局就《化妆品标准管理办法（征求意见稿）》公开征求意见；植物医生IPO恢复审核；韩国新锐护发品牌LILYEVE进军中国",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-02",
-        "url": "https://mp.weixin.qq.com/s/tLKnWYCasoy9ew3lcFz9Pg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 639,
-        "title": "橪联合主办第二届芳香医药临床应用研讨会",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-01",
-        "url": "https://mp.weixin.qq.com/s/ot-zTI0rJSGHlEHl1kmCMg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 640,
-        "title": "7000店规模再进阶！樊文花跨越周期的增长密码",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-01",
-        "url": "https://mp.weixin.qq.com/s/RXhtxL5NhRFAwNTX0MzjvQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 641,
-        "title": "热烈庆祝中国共产党成立105周年！",
-        "source": "中国化妆品",
-        "publish_date": "2026-07-01",
-        "url": "https://mp.weixin.qq.com/s/HG7MRdoNQi8u3X1oGQlDvw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 642,
-        "title": "专访宝洁全球供应链创新副总裁赵波：美妆供应链，从效率优先到价值共生 | ESG先锋",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-30",
-        "url": "https://mp.weixin.qq.com/s/X4HRGdk7MJEtPb1Zy4iD6w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 643,
-        "title": "广东省中山市市监局召开化妆品质量安全风险会商工作会议；绽妍生物北交所上市获受理；印度美妆Nykaa计划2030财年计划GMV突破50亿美元",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-30",
-        "url": "https://mp.weixin.qq.com/s/VWEh0VoAmMP8DqZrlg0Rgw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 644,
-        "title": "内蒙古药监局就化妆品经营分级分类监督管理办法公开征求意见；巨子生物“人参皂苷CK”获国家药监局新原料备案",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-29",
-        "url": "https://mp.weixin.qq.com/s/eSBigO9LGvZNTYNgPoQAxw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 645,
-        "title": "国家药监局发布新版化妆品新原料注册备案及资料管理规定；中检院发布《化妆品新原料注册备案资料技术通则》",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-28",
-        "url": "https://mp.weixin.qq.com/s/OCf5DTK5zc3PcLtyFDOQCQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 646,
-        "title": "夏日感官新序：香氛赋新、妆感焕亮与维稳护肤 | 全球观察・新产品",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/_czobi3VtltSa-Cu2yYxng",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 647,
-        "title": "国家药监局发布新版化妆品新原料注册备案及资料管理规定；国家药监局拟对丁基乙酰氨基丙酸乙酯有关标准立项",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/DBsbD3BVgVeF2yJjEX37NA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 648,
-        "title": "巨星缺席，国妆当道：为什么中国跑不出Fenty Beauty这样的明星彩妆帝国？| 2026全球品牌比较研究系列",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/iR8bD8s2RsCfVURfwzusFg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 649,
-        "title": "安徽省合肥市完成2026年75批次国家化妆品抽样检验任务；珀莱雅完成“衣康酸”新原料备案；LG生活健康中国区换帅",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/6tw6-E0_wOA6t6qtFuuZUw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 650,
-        "title": "站上卢浮宫，链接全世界 | 2026 INPD打造高端资源精准对接平台",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-24",
-        "url": "https://mp.weixin.qq.com/s/u-vCKGg2Zn4FD-tCTc9ZVA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 651,
-        "title": "26批次进口化妆品未准入境，涉香奈儿、娇兰等品牌；锦波生物创始人杨霞卸任总经理职务；巴黎小众香水品牌Fascent获130万欧元天使轮融资",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-24",
-        "url": "https://mp.weixin.qq.com/s/1LVjqvWzWn5NVdakuWJvBg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 652,
-        "title": "美甲机器人公司融资近5亿元：美妆行业的尽头是机器人吗？ | 全球观察",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-23",
-        "url": "https://mp.weixin.qq.com/s/ARLDzAc9VwzIRYc0iYsGfQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 653,
-        "title": "辽宁省就化妆品生产质量提升三年行动方案公开征求意见；贝泰妮旗下企业备案一款化妆品新原料；3CE创始人金素熙复出并推出新品牌",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-23",
-        "url": "https://mp.weixin.qq.com/s/-VQ7djUJ-SCnft7CiRHDZw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 654,
-        "title": "直播带货宣称化妆品“返老还童”“全脸回春”，虚假宣传换来真实罚单 | 总第98期合规风向标",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-22",
-        "url": "https://mp.weixin.qq.com/s/5_3tT7EaupWrZ57EXogwQg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 655,
-        "title": "海南省药监局发布化妆品备案自查技术指导原则；金发拉比撤销退市风险警示；欧莱雅收购印度Innovist多数股权",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-22",
-        "url": "https://mp.weixin.qq.com/s/QGnmCz-IKfMrEi7Zb7rYbA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 656,
-        "title": "国家药监局就化妆品唇炎及接触性荨麻疹2项强制性国标征求意见；5月化妆品零售额449亿元，同比增长2.5%",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-21",
-        "url": "https://mp.weixin.qq.com/s/whxKa3v_HvrN-GfQpcOHrg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 657,
-        "title": "《中国化妆品》杂志祝大家端午快乐！",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-19",
-        "url": "https://mp.weixin.qq.com/s/evrV9D6yIlEyXAOnQZac7g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 658,
-        "title": "美白护肤“红海逃生”：下代爆款藏在成分、剂型、人群、场景交集里 | 美妆指数",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-18",
-        "url": "https://mp.weixin.qq.com/s/7szJzid_9-6pgo321pgHVA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 659,
-        "title": "5月化妆品零售额449亿元，同比增长2.5%；莹特丽完成共聚物新原料备案；韩国私募机构PTA Partners收购法国COSBELLE 70%股权",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-18",
-        "url": "https://mp.weixin.qq.com/s/OT9QcxMvQ1zX2f281Sm3ww",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 660,
-        "title": "八大奖项&amp;卢浮宫主舞台演讲：中国美妆的每一项突破都值得被世界看见 | 2026 INPD亮点解读",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-17",
-        "url": "https://mp.weixin.qq.com/s/MPQUXHqbgIfFlWXi_R9VFA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 661,
-        "title": "国家药监局就化妆品唇炎及接触性荨麻疹2项强制性国标征求意见；四款新原料取消备案；Jay-Z相关投资机构竞购Fenty Beauty",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-17",
-        "url": "https://mp.weixin.qq.com/s/AEWf4EvhGDKRJimC07X3sA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 662,
-        "title": "欧莱雅为什么愿意等待？从女科学家到科技女生，一场跨越28年的接力",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-16",
-        "url": "https://mp.weixin.qq.com/s/QFFHL222KDQOEkOu8kO8Wg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 663,
-        "title": "2026年ESXENCE艺术香水展圆满收官，米兰再度夯实全球艺术香水产业枢纽地位",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-16",
-        "url": "https://mp.weixin.qq.com/s/u1GCrw4zcK4Vc3_rM4MSyw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 664,
-        "title": "浙江杭州推出化妆品备案“优审快办”快速通道；丸美生物港股IPO申请失效；雅诗兰黛成立北美香氛集群",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-15",
-        "url": "https://mp.weixin.qq.com/s/UjwDBD6T2v9B7sxngivGTA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 665,
-        "title": "屡次违法终禁入、配方擅改被罚十万元——化妆品行业不合规的代价正在“翻倍” | 总第97期合规风向标",
-        "source": "中国化妆品",
-        "publish_date": "2026-06-15",
-        "url": "https://mp.weixin.qq.com/s/3A1hTHXIQohJ6dYSjLcEjw",
-        "summary": "",
-        "keywords": []
-      }
-    ],
     "Fbeauty未来迹": [
+      {
+        "id": 1178,
+        "title": "LVMH美妆零增长，“奢侈故事”不太好使了",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/OncrkLgA6W0vh1crbatLNw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1179,
+        "title": "香水增速42%的背后，谁在悄悄改写游戏规则？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/CWy0GrgFaGtA3JRYm1Owdw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1180,
+        "title": "深度 | 上半年化妆品卖了6114亿元，背后有几个重要转折点",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/l5BsYFR_-raLvNYJPq0U0A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1181,
+        "title": "618美护首次负增长，谁还在涨？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/_SlfxVTdxKfHaAdapF7XDA",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1044,
         "title": "一批“小众”美妆，正在占领商场",
@@ -3135,6 +3243,15 @@
     ],
     "妆研24小时": [
       {
+        "id": 1175,
+        "title": "缓冲期已不到1年，洗涤用品合规工作应及早启动",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/d2N7sZSGcQK2oh1kRW9s2w",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 998,
         "title": "NPRA官方亲临！聚焦马来西亚化妆品法规与关键合规要求",
         "source": "妆研24小时",
@@ -3538,6 +3655,15 @@
         "source": "财经早餐",
         "publish_date": "2026-07-26",
         "url": "https://mp.weixin.qq.com/s/5xnkmhqxkDi7k0v4CO569A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1191,
+        "title": "【iFinD财经早餐】7月26日",
+        "source": "财经早餐",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/Nxa5BBcWFh36JESNGgZsbw",
         "summary": "",
         "keywords": []
       },
@@ -4167,6 +4293,15 @@
     ],
     "肤见未来实验室": [
       {
+        "id": 1185,
+        "title": "指南与共识|慢性光化性皮炎诊疗专家共识（2023版）",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/WqnlL6opLVWs6P7NESyTEA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1048,
         "title": "眶周衰老的新解法：多核苷酸注射",
         "source": "肤见未来实验室",
@@ -4448,6 +4583,15 @@
     ],
     "妆合规": [
       {
+        "id": 1177,
+        "title": "盘点！2026年已生效实施化妆品法规",
+        "source": "妆合规",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/QZ34XbzE58bybxLcDLWXxw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1006,
         "title": "网络公开课(7月31日)：日本化妆品企业如何应对中国台湾化妆品新规",
         "source": "妆合规",
@@ -4719,6 +4863,15 @@
       }
     ],
     "原料合规观察": [
+      {
+        "id": 1176,
+        "title": "WPE&amp;WHPE2026同期《植物原料多领域创新应用合规与发展论坛》议题确定！",
+        "source": "原料合规观察",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/YqpXKZoLja_z9xsiYce_ug",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1003,
         "title": "IFSCC 2025 收录论文回顾｜神经与感官科学及情绪Neuro/Sensory Sciences/Emotions前沿",
