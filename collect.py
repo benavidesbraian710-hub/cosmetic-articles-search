@@ -169,16 +169,10 @@ def navigate_to_account(account_name: str):
     press("return")
     time.sleep(3)  # 搜索后等待3秒（2026-07-27 Nick要求）
     
-    # 只有特定公众号需要点击第一个选项
-    if account_name in ["妆研24小时", "个护前沿", "中国化妆品", "化妆品观察 品观"]:
-        print("点击第一个选项...")
-        click(500, 223)
-        time.sleep(3)  # 间隔3秒（2026-07-27 Nick要求）
-    else:
-        # 其他公众号按 Enter 进入（2026-07-27 Nick确认）
-        print("按 Enter 进入公众号...")
-        press("return")
-        time.sleep(3)
+    # 所有公众号统一点击第一个选项进入（2026-07-28 Nick要求：不按Enter，全部点击坐标）
+    print("点击第一个选项进入公众号...")
+    click(500, 223)
+    time.sleep(3)  # 间隔3秒（2026-07-27 Nick要求）
     
     print("点击'公众号'标签...")
     x, y = COORDS['public_account_tab']
