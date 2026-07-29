@@ -1,50 +1,50 @@
 {
   "version": "v31",
   "stats": {
-    "total_articles": 609,
+    "total_articles": 634,
     "source_count": 15,
     "date_range": {
-      "start": "2026-06-15",
-      "end": "2026-07-28"
+      "start": "",
+      "end": "2026-07-29"
     },
-    "last_update": "2026-07-28T10:08:50.370042"
+    "last_update": "2026-07-29T09:54:34.973478"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 90
+      "count": 93
     },
     {
       "name": "化妆品观察 品观",
-      "count": 78
-    },
-    {
-      "name": "中国化妆品",
-      "count": 67
+      "count": 80
     },
     {
       "name": "亿邦动力",
-      "count": 66
+      "count": 70
+    },
+    {
+      "name": "中国化妆品",
+      "count": 69
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 50
+      "count": 52
+    },
+    {
+      "name": "财经早餐",
+      "count": 44
     },
     {
       "name": "妆研24小时",
       "count": 43
     },
     {
-      "name": "财经早餐",
-      "count": 39
-    },
-    {
       "name": "非科学美妆传播",
-      "count": 34
+      "count": 35
     },
     {
       "name": "肤见未来实验室",
-      "count": 32
+      "count": 33
     },
     {
       "name": "妆合规",
@@ -52,15 +52,15 @@
     },
     {
       "name": "原料合规观察",
-      "count": 30
+      "count": 31
     },
     {
       "name": "铱星云商",
-      "count": 17
+      "count": 20
     },
     {
       "name": "KEV美妆",
-      "count": 17
+      "count": 18
     },
     {
       "name": "美业颜究院",
@@ -73,6 +73,33 @@
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 1199,
+        "title": "全球首次！松下集团证实「弱酸性软水」护肤潜力",
+        "source": "个护前沿",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/fVndsRJ6DtQ69EDiYWK_Tw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1200,
+        "title": "上市股价暴涨7倍！美妆原料界的“隐形冠军”来了",
+        "source": "个护前沿",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/8p_oCr4DUF4HV62xSDJ05g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1201,
+        "title": "“皮肤长寿”火了，但它绝不只是抗衰换了一个名字",
+        "source": "个护前沿",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/jL5SWOu-VrzUwQdm0QwY6A",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1182,
         "title": "美妆巨头，正在重塑AI",
@@ -895,6 +922,24 @@
         "keywords": []
       },
       {
+        "id": 1204,
+        "title": "优时颜杜乐：别急着讲中国故事，先让产品被相信",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/ec5GYe2v1Wuoga7QDCJPAA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1205,
+        "title": "名门闺秀30年：让世界看见中式抗衰的力量",
+        "source": "化妆品观察 品观",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/66PJn1x-jEZqdbyaHI759w",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1049,
         "title": "超20亿！“美妆多肽原料第一股”诞生，珀莱雅、巨子生物入股",
         "source": "化妆品观察 品观",
@@ -1588,7 +1633,657 @@
         "keywords": []
       }
     ],
+    "亿邦动力": [
+      {
+        "id": 1211,
+        "title": "对话未来智能viaim创始人兼CEO马啸：Agent 的“三级火箭”，难在用户“点火”那一步",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/1KkfMS4zC5snEy5TZuoOGg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1212,
+        "title": "告别盲卷式经营：京东商家成长PLUS方法论，解开商家分层增长难题",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/Af1pYNLwc3AMopPO_d26Pw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1213,
+        "title": "第三方报告：2025年TikTok为英国经济贡献至少100亿英镑",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/YT8lssc0A6DeaGXnOFXevg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1214,
+        "title": "阿里推出千问办公，三款产品合并能打过WorkBuddy吗？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/4F3plYgAr4opgM-bOh-eCw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1065,
+        "title": "旧关税退场，美国301新关税接棒：对华税率12.5%，总税负上限延续此前谈判成果",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/tNHWMOuOPT4gCUnxaUf7GQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1066,
+        "title": "亚马逊中国副总裁邱胜：AI 正在改写跨境电商增长的底层逻辑",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/KCvjwgxYsIlmISASuUbH5g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1067,
+        "title": "阿里国际站总裁张阔：全球电商AI工作台Accio Work，让商家用一个 Agent 掌控全盘生意",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/Wddy7al2SpW4tgiuJdRaTA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1068,
+        "title": "安克的“香蕉人”模式好走吗？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/Py2KoJ_eLJckBI_BImOt1Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1058,
+        "title": "市监总局对携程罚款51.79亿元！蚂蚁国际完成约12亿美元融资；亚马逊裁撤通用人工智能部门岗位；中国千亿元潮玩赛道要来了｜电商财经盘点",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/MtiaHbrR9pUidwQ4RqW2PA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1059,
+        "title": "卡奥斯首发工业世界模型牵手能科，震坤行大模型备案亮相国企采购大会，深度数科发布票据与供应链金融垂直大模型丨产业互联网周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/2TUd6YWkDpSTe3Lm4zLdhQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1060,
+        "title": "商务部力挺速卖通；Temu波兰用户半年流失360万；eBay收购英国时尚电商平台Depop获批丨跨境电商周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/aGcpoer4-yH_XBvIhefuLA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1069,
+        "title": "上半年入驻京东新商家数同比增长超30%；耐克终止与中国数千家线上经销商合作；鸣鸣很忙宣布签约门店突破3万家丨零售电商周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/9VsEoWHM6O0tSACh6nsScw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1070,
+        "title": "中国工业设计之父柳冠中：全球化进程“换道超越”，从“造”走向“制”",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/O2Ukuui3el0ODWojLy0tkg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1071,
+        "title": "鸣鸣很忙门店突破3万家；真维斯关掉90%门店，线上卖了100亿；高德上线位置分享功能；美团16城上线骑手“不闯红灯”激励｜电商大事",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/aswRK80J1GzwnjrCTCAleg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1072,
+        "title": "腾讯混元成立基础模型部，月之暗面将洽谈IPO前最后一轮融资丨产业科技周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/dQMZwvV29fwhtRAxcEJaUQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1073,
+        "title": "洛克兄弟集团创始人张新刚：AI定制实现“先卖后产”，重塑骑行品牌增长模式",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/k6cILPlnSamwZv2gZgg8IA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1074,
+        "title": "【对话】品牌全球化与AI交汇，如何催生下一个百亿级企业？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/GEWBSNHvRzeB2oVRuBCAzQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1075,
+        "title": "分众传媒创始人江南春： 出海的终极战场，唯有抢占心智复利",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/GL5FkPLghWPaDeSryZ4pnw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1076,
+        "title": "抢跑！全球化新品牌进入AI时刻，何以定胜负？丨2026全球化新品牌AI竞争力大会实录",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/K556_HGXf4jnRRe_B0gXsQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1077,
+        "title": "亿邦智库发布《2026全球化新品牌AI竞争力报告》",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/J4YAa70DwHhbyf28XwOTog",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1078,
+        "title": "分级扣佣，推流改向…抖音达人生态新变革",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/jOv1DseNj7QNCLD3nj11yg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1079,
+        "title": "从出海营销奠基者到AI营销领航官沈晨岗：以“真智能体”提升增长确定性",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/LudQCEQAc2s_pyucNx3C1Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1080,
+        "title": "跨界打印首日破亿，进驻数千家品牌门店，xTool不想只做“激光雕刻第一”",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/yeC7SCPkfbV4SdN11xfnCw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1081,
+        "title": "PureblueAI清蓝创始人鲁扬：AI取代的不仅是搜索，还有交易权 | 马蹄社研学笔记",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/rrUsoxxDvlsEHgRVZRjRjw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1082,
+        "title": "淘宝将调整“商品扶优质量分”：增加超级单品曝光",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/MUbBnVnRLc85D8GSqn4MKg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1083,
+        "title": "全球户外运动“通电”进行时，中国出海品牌秀肌肉",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/piJIJTu62nSGh3qVtgf4sg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1084,
+        "title": "《2026数智化采购发展报告》重磅发布",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/gF7c4tpZcQzACX4AbSgcQA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1111,
+        "title": "耐克终止与中国数千家线上经销商合作，统一渠道严格控价",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/2m7wtHLFHDcawlhfyBLmSA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1112,
+        "title": "大晓机器人发布“开悟世界模型3.1”：让机器人像人一样“想清楚再动手”",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/DA_lZnobEO2Bqym_tqokzQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1113,
+        "title": "拿下世界杯，小红书究竟在走怎样一步棋？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/cX3DXfyLEgzW1Pjf6p_o6Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1114,
+        "title": "试点“等灯停表”，美团16城上线骑手“不闯红灯”激励",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/2AoSUflNs4FoLtCD4mD6Qg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1115,
+        "title": "一文回顾WAIC：机器人打工、智能体喷涌、AI硬件还在卷",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/fZdAcXvvHvjseAj6fwnH1A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1116,
+        "title": "对话泛鼎国际创始人刘波：百亿跨境物流供应链龙头的数据野心",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/hlehaw6TIlE3VWV5puFwaw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1117,
+        "title": "一群不懂供应链的人，抢走了世界杯的生意",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/Gb_qT780e3LmnO02Xq0jNQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1118,
+        "title": "亚马逊2025生态报告：活跃卖家降至190万，第三方GMV占比逼近七成",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/9YImbByF4r7Ctlu4bVtITA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1119,
+        "title": "告别价格战迈向生态战，快手电商用AI和阶梯激励打通新商冷启生态",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/Br39r62luJkPlMp9SsFv2Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1120,
+        "title": "DeepSeek估值超3500亿元；安踏品牌CEO徐阳将离职；募资近30亿元！阿里领投爱诗科技C+轮融资；面壁智能估值超200亿元｜电商财经盘点",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/1QsoZmqaOTIiBILpQAd3mA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1121,
+        "title": "LV起诉国家知识产权局；罗技广告称消费者像狗被罚20万丨零售电商周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/I7Wltm4zFjhaW4GN72QB4g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1122,
+        "title": "TikTok多国社交购物渗透率超Facebook与Instagram；亚马逊全球开店推出“标杆新卖家孵化计划”；中国6月出口同比增27%丨跨境电商周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/37FoOdoQYIWhEfuGDxdTkg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1123,
+        "title": "多项政策密集定调智能体新阶段；阿里清仓汇通达告别八年乡村电商？WAIC央企三箭齐发聚焦AI原生丨产业互联网周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/odxmZa_xgRHfZCb2Up9fyA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1124,
+        "title": "LV起诉国家知识产权局；字节否认入局自动驾驶；世界杯决赛一块草皮卖3050元；ZARA年内全国已关停10家门店｜电商大事",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/X86fi4PVP4ADH2mRlFEL6Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1125,
+        "title": "2026世界人工智能大会在上海召开；爱诗科技完成29.8亿元C轮融资丨产业科技周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/jakOddmVN1JPFo9yHOAAsA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1126,
+        "title": "桌面创客工具破圈：3D打印机爆火，到底谁在买？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/KBWf5g1xwrMR3eM8RYYkjQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1127,
+        "title": "世界杯本地生活报告：这届球迷扎堆在洗浴中心和酒吧看球",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/K4iWFRIrNNJyFYah-30hdg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1128,
+        "title": "亚马逊AI购物助手正在“绕过”广告？超60%的推荐脱离搜索排名",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/AFS3_onDm4NccLbVHH0-tA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1129,
+        "title": "开店不靠人工扫街了？高德上线商业智能体“问店”",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/0QoOuzZZyRIe0X6HaF4k8g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1130,
+        "title": "地图不只是导航了，高德抢做世界模型？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/hES9gbG1Py6Tl0_dXxBzdw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1131,
+        "title": "亚马逊旺季配送费10月15日生效，卖家物流成本将迎来上涨",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/7BJRYG7z-jMTouPBUG4UdA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1132,
+        "title": "18岁可0元试运营开店，快手向Z世代商家招手",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/MXPY7oCpAfZ60Pg644L3ZA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1133,
+        "title": "不讲“低价” 只卖“新鲜” ，线下零食行业又现新物种？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/S4EUTQmUnN2H0GZXl8qCgA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1134,
+        "title": "对话CAYE 咖爷科技吴鹏：复盘商用全自动咖啡机的“守正”三年",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/OhgwxUjat6KNcuFrh-iWgQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1135,
+        "title": "AI+世界杯，义乌商家玩出了花",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/Km4uYoQiNzGi8Aaggrzd5w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1158,
+        "title": "安踏CEO徐阳将辞任，原因或为品牌业绩不达预期",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/Bf7XlyxRvx7mD26w2okp3g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1136,
+        "title": "Web借尸还魂，互联网行将就木",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/Q7rn8XABQGPuiH_Q7TKTrQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1159,
+        "title": "京东健康“硬刚”蚂蚁阿福：第三期减重大赛打卡即送千元奖金",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/3vEiqf3s0xvYh9VR1dWFOg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1160,
+        "title": "谁说“男人消费不如狗？”有男装品牌三个月卖5亿",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/3NNRkIJGILjQI6NxG08SYQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1161,
+        "title": "Temu流量腰斩？SHEIN几乎退出？欧洲关税新政已致平台投流大幅缩减",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/u6VOkw6jsNNvcuxRtUTjZg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1162,
+        "title": "纸尿裤深陷罗生门的背后，代工厂正在被超薄利润“卷死”",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/sumZG4NLGLRWIGN-xgqAMg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1163,
+        "title": "世界杯让即时零售爆火，下单主力竟不是男性",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/7b1ET0UFyC1uPNBgX26yyw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1164,
+        "title": "完成数亿元融资！具身智能“卖铲人”他山科技市占率何以超80%？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/KuZZXLb7_44oz2-FCKkHMw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1165,
+        "title": "重磅！微信小店推出最高等级店铺，非热招品牌的机会来了",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/5huPwGrunqReS171Bbw-oQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1166,
+        "title": "老乡鸡第五次冲击资本市场失败；优必选回应99万机器人“伴侣”续航问题；3D打印企业“快造科技”获10亿元融资｜电商财经盘点",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-12",
+        "url": "https://mp.weixin.qq.com/s/PCOFfacN64ZH1whRyMr1Ew",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1167,
+        "title": "蚂蚁集团战略投资薄荷健康；“养老国补”落地京东； 世界杯催生“日酒夜咖”新节律丨零售电商周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-12",
+        "url": "https://mp.weixin.qq.com/s/--bTIKAvNg2JwinhhH1Iag",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1168,
+        "title": "新政落地定调“智能体”新阶段；震坤行、阳采集团、鑫方盛本周密集斩获大客户订单；百望股份连签五家东南亚伙伴加速出海丨产业互联网周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-12",
+        "url": "https://mp.weixin.qq.com/s/25HuDHIKQFKSfhoLSCyLWw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1169,
+        "title": "腾讯大幅减持快手，套现超百亿；SHEIN获上市备案通知书；“美国关税退款”即将到账；丰茂烤串全国直营门店全部关停｜电商大事",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-11",
+        "url": "https://mp.weixin.qq.com/s/whnfa7E1Ont-SZjP0EDxzg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1170,
+        "title": "腾讯混元Hy3发布；GPT-5.6发布；MiniMax完成160亿港元股权类融资丨产业科技周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-11",
+        "url": "https://mp.weixin.qq.com/s/DWf8_3seqk4_lvEh9cyqEg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1171,
+        "title": "猫粮致千只猫瘫痪？伯纳天纯回应，弗列加特尚未发官方声明",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/HNseLsFwhEwD6v6AstFEHw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1172,
+        "title": "对话陆健：解析探路生态的反共识——产品线越宽，内核越聚焦？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/FXBrNyLm3OZGivN2G3zChQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1173,
+        "title": "体重管理这事，AI真能管得了吗？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/wbI36zqHax8ajvo5I1AAIQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1174,
+        "title": "一年实现营收超10倍增长，跃居亚马逊类目榜首，昂听ELEHEAR做对了什么？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/pgyoSufk0AlRVdkXsmdp6g",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "中国化妆品": [
+      {
+        "id": 1206,
+        "title": "全球化没有标准答案，但有共同方向——这些洞见让你读懂中国美妆下一程 | 静界谈Beauty Talks观点",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/IRe71V5eMAuiz7tKRMScYQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1207,
+        "title": "山东省聊城市开展儿童化妆品专项检查，立案3件停业整顿4家；德之馨拟收购法国高端天然香企Floral Concept",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/vCcHHTooYBYcz_7_innRmw",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1189,
         "title": "香港海关检出一款韩国胶原面霜含禁用成分苏丹红；维琪科技北交所上市首日涨幅翻倍；欧莱雅关联基金首投国货洗护品牌可氏利夫",
@@ -2193,602 +2888,6 @@
         "keywords": []
       }
     ],
-    "亿邦动力": [
-      {
-        "id": 1065,
-        "title": "旧关税退场，美国301新关税接棒：对华税率12.5%，总税负上限延续此前谈判成果",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/tNHWMOuOPT4gCUnxaUf7GQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1066,
-        "title": "亚马逊中国副总裁邱胜：AI 正在改写跨境电商增长的底层逻辑",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/KCvjwgxYsIlmISASuUbH5g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1067,
-        "title": "阿里国际站总裁张阔：全球电商AI工作台Accio Work，让商家用一个 Agent 掌控全盘生意",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/Wddy7al2SpW4tgiuJdRaTA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1068,
-        "title": "安克的“香蕉人”模式好走吗？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/Py2KoJ_eLJckBI_BImOt1Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1058,
-        "title": "市监总局对携程罚款51.79亿元！蚂蚁国际完成约12亿美元融资；亚马逊裁撤通用人工智能部门岗位；中国千亿元潮玩赛道要来了｜电商财经盘点",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/MtiaHbrR9pUidwQ4RqW2PA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1059,
-        "title": "卡奥斯首发工业世界模型牵手能科，震坤行大模型备案亮相国企采购大会，深度数科发布票据与供应链金融垂直大模型丨产业互联网周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/2TUd6YWkDpSTe3Lm4zLdhQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1060,
-        "title": "商务部力挺速卖通；Temu波兰用户半年流失360万；eBay收购英国时尚电商平台Depop获批丨跨境电商周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/aGcpoer4-yH_XBvIhefuLA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1069,
-        "title": "上半年入驻京东新商家数同比增长超30%；耐克终止与中国数千家线上经销商合作；鸣鸣很忙宣布签约门店突破3万家丨零售电商周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/9VsEoWHM6O0tSACh6nsScw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1070,
-        "title": "中国工业设计之父柳冠中：全球化进程“换道超越”，从“造”走向“制”",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-25",
-        "url": "https://mp.weixin.qq.com/s/O2Ukuui3el0ODWojLy0tkg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1071,
-        "title": "鸣鸣很忙门店突破3万家；真维斯关掉90%门店，线上卖了100亿；高德上线位置分享功能；美团16城上线骑手“不闯红灯”激励｜电商大事",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-25",
-        "url": "https://mp.weixin.qq.com/s/aswRK80J1GzwnjrCTCAleg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1072,
-        "title": "腾讯混元成立基础模型部，月之暗面将洽谈IPO前最后一轮融资丨产业科技周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-25",
-        "url": "https://mp.weixin.qq.com/s/dQMZwvV29fwhtRAxcEJaUQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1073,
-        "title": "洛克兄弟集团创始人张新刚：AI定制实现“先卖后产”，重塑骑行品牌增长模式",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-25",
-        "url": "https://mp.weixin.qq.com/s/k6cILPlnSamwZv2gZgg8IA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1074,
-        "title": "【对话】品牌全球化与AI交汇，如何催生下一个百亿级企业？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/GEWBSNHvRzeB2oVRuBCAzQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1075,
-        "title": "分众传媒创始人江南春： 出海的终极战场，唯有抢占心智复利",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/GL5FkPLghWPaDeSryZ4pnw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1076,
-        "title": "抢跑！全球化新品牌进入AI时刻，何以定胜负？丨2026全球化新品牌AI竞争力大会实录",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/K556_HGXf4jnRRe_B0gXsQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1077,
-        "title": "亿邦智库发布《2026全球化新品牌AI竞争力报告》",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/J4YAa70DwHhbyf28XwOTog",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1078,
-        "title": "分级扣佣，推流改向…抖音达人生态新变革",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/jOv1DseNj7QNCLD3nj11yg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1079,
-        "title": "从出海营销奠基者到AI营销领航官沈晨岗：以“真智能体”提升增长确定性",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/LudQCEQAc2s_pyucNx3C1Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1080,
-        "title": "跨界打印首日破亿，进驻数千家品牌门店，xTool不想只做“激光雕刻第一”",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/yeC7SCPkfbV4SdN11xfnCw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1081,
-        "title": "PureblueAI清蓝创始人鲁扬：AI取代的不仅是搜索，还有交易权 | 马蹄社研学笔记",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/rrUsoxxDvlsEHgRVZRjRjw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1082,
-        "title": "淘宝将调整“商品扶优质量分”：增加超级单品曝光",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-22",
-        "url": "https://mp.weixin.qq.com/s/MUbBnVnRLc85D8GSqn4MKg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1083,
-        "title": "全球户外运动“通电”进行时，中国出海品牌秀肌肉",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-22",
-        "url": "https://mp.weixin.qq.com/s/piJIJTu62nSGh3qVtgf4sg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1084,
-        "title": "《2026数智化采购发展报告》重磅发布",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-22",
-        "url": "https://mp.weixin.qq.com/s/gF7c4tpZcQzACX4AbSgcQA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1111,
-        "title": "耐克终止与中国数千家线上经销商合作，统一渠道严格控价",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-22",
-        "url": "https://mp.weixin.qq.com/s/2m7wtHLFHDcawlhfyBLmSA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1112,
-        "title": "大晓机器人发布“开悟世界模型3.1”：让机器人像人一样“想清楚再动手”",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/DA_lZnobEO2Bqym_tqokzQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1113,
-        "title": "拿下世界杯，小红书究竟在走怎样一步棋？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/cX3DXfyLEgzW1Pjf6p_o6Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1114,
-        "title": "试点“等灯停表”，美团16城上线骑手“不闯红灯”激励",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/2AoSUflNs4FoLtCD4mD6Qg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1115,
-        "title": "一文回顾WAIC：机器人打工、智能体喷涌、AI硬件还在卷",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/fZdAcXvvHvjseAj6fwnH1A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1116,
-        "title": "对话泛鼎国际创始人刘波：百亿跨境物流供应链龙头的数据野心",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-20",
-        "url": "https://mp.weixin.qq.com/s/hlehaw6TIlE3VWV5puFwaw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1117,
-        "title": "一群不懂供应链的人，抢走了世界杯的生意",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-20",
-        "url": "https://mp.weixin.qq.com/s/Gb_qT780e3LmnO02Xq0jNQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1118,
-        "title": "亚马逊2025生态报告：活跃卖家降至190万，第三方GMV占比逼近七成",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-20",
-        "url": "https://mp.weixin.qq.com/s/9YImbByF4r7Ctlu4bVtITA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1119,
-        "title": "告别价格战迈向生态战，快手电商用AI和阶梯激励打通新商冷启生态",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-20",
-        "url": "https://mp.weixin.qq.com/s/Br39r62luJkPlMp9SsFv2Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1120,
-        "title": "DeepSeek估值超3500亿元；安踏品牌CEO徐阳将离职；募资近30亿元！阿里领投爱诗科技C+轮融资；面壁智能估值超200亿元｜电商财经盘点",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-19",
-        "url": "https://mp.weixin.qq.com/s/1QsoZmqaOTIiBILpQAd3mA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1121,
-        "title": "LV起诉国家知识产权局；罗技广告称消费者像狗被罚20万丨零售电商周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-19",
-        "url": "https://mp.weixin.qq.com/s/I7Wltm4zFjhaW4GN72QB4g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1122,
-        "title": "TikTok多国社交购物渗透率超Facebook与Instagram；亚马逊全球开店推出“标杆新卖家孵化计划”；中国6月出口同比增27%丨跨境电商周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-19",
-        "url": "https://mp.weixin.qq.com/s/37FoOdoQYIWhEfuGDxdTkg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1123,
-        "title": "多项政策密集定调智能体新阶段；阿里清仓汇通达告别八年乡村电商？WAIC央企三箭齐发聚焦AI原生丨产业互联网周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-19",
-        "url": "https://mp.weixin.qq.com/s/odxmZa_xgRHfZCb2Up9fyA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1124,
-        "title": "LV起诉国家知识产权局；字节否认入局自动驾驶；世界杯决赛一块草皮卖3050元；ZARA年内全国已关停10家门店｜电商大事",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-18",
-        "url": "https://mp.weixin.qq.com/s/X86fi4PVP4ADH2mRlFEL6Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1125,
-        "title": "2026世界人工智能大会在上海召开；爱诗科技完成29.8亿元C轮融资丨产业科技周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-18",
-        "url": "https://mp.weixin.qq.com/s/jakOddmVN1JPFo9yHOAAsA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1126,
-        "title": "桌面创客工具破圈：3D打印机爆火，到底谁在买？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/KBWf5g1xwrMR3eM8RYYkjQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1127,
-        "title": "世界杯本地生活报告：这届球迷扎堆在洗浴中心和酒吧看球",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/K4iWFRIrNNJyFYah-30hdg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1128,
-        "title": "亚马逊AI购物助手正在“绕过”广告？超60%的推荐脱离搜索排名",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/AFS3_onDm4NccLbVHH0-tA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1129,
-        "title": "开店不靠人工扫街了？高德上线商业智能体“问店”",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/0QoOuzZZyRIe0X6HaF4k8g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1130,
-        "title": "地图不只是导航了，高德抢做世界模型？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/hES9gbG1Py6Tl0_dXxBzdw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1131,
-        "title": "亚马逊旺季配送费10月15日生效，卖家物流成本将迎来上涨",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/7BJRYG7z-jMTouPBUG4UdA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1132,
-        "title": "18岁可0元试运营开店，快手向Z世代商家招手",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/MXPY7oCpAfZ60Pg644L3ZA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1133,
-        "title": "不讲“低价” 只卖“新鲜” ，线下零食行业又现新物种？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/S4EUTQmUnN2H0GZXl8qCgA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1134,
-        "title": "对话CAYE 咖爷科技吴鹏：复盘商用全自动咖啡机的“守正”三年",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-15",
-        "url": "https://mp.weixin.qq.com/s/OhgwxUjat6KNcuFrh-iWgQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1135,
-        "title": "AI+世界杯，义乌商家玩出了花",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-15",
-        "url": "https://mp.weixin.qq.com/s/Km4uYoQiNzGi8Aaggrzd5w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1158,
-        "title": "安踏CEO徐阳将辞任，原因或为品牌业绩不达预期",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-15",
-        "url": "https://mp.weixin.qq.com/s/Bf7XlyxRvx7mD26w2okp3g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1136,
-        "title": "Web借尸还魂，互联网行将就木",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-14",
-        "url": "https://mp.weixin.qq.com/s/Q7rn8XABQGPuiH_Q7TKTrQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1159,
-        "title": "京东健康“硬刚”蚂蚁阿福：第三期减重大赛打卡即送千元奖金",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-14",
-        "url": "https://mp.weixin.qq.com/s/3vEiqf3s0xvYh9VR1dWFOg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1160,
-        "title": "谁说“男人消费不如狗？”有男装品牌三个月卖5亿",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-14",
-        "url": "https://mp.weixin.qq.com/s/3NNRkIJGILjQI6NxG08SYQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1161,
-        "title": "Temu流量腰斩？SHEIN几乎退出？欧洲关税新政已致平台投流大幅缩减",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-14",
-        "url": "https://mp.weixin.qq.com/s/u6VOkw6jsNNvcuxRtUTjZg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1162,
-        "title": "纸尿裤深陷罗生门的背后，代工厂正在被超薄利润“卷死”",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/sumZG4NLGLRWIGN-xgqAMg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1163,
-        "title": "世界杯让即时零售爆火，下单主力竟不是男性",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/7b1ET0UFyC1uPNBgX26yyw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1164,
-        "title": "完成数亿元融资！具身智能“卖铲人”他山科技市占率何以超80%？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/KuZZXLb7_44oz2-FCKkHMw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1165,
-        "title": "重磅！微信小店推出最高等级店铺，非热招品牌的机会来了",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/5huPwGrunqReS171Bbw-oQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1166,
-        "title": "老乡鸡第五次冲击资本市场失败；优必选回应99万机器人“伴侣”续航问题；3D打印企业“快造科技”获10亿元融资｜电商财经盘点",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-12",
-        "url": "https://mp.weixin.qq.com/s/PCOFfacN64ZH1whRyMr1Ew",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1167,
-        "title": "蚂蚁集团战略投资薄荷健康；“养老国补”落地京东； 世界杯催生“日酒夜咖”新节律丨零售电商周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-12",
-        "url": "https://mp.weixin.qq.com/s/--bTIKAvNg2JwinhhH1Iag",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1168,
-        "title": "新政落地定调“智能体”新阶段；震坤行、阳采集团、鑫方盛本周密集斩获大客户订单；百望股份连签五家东南亚伙伴加速出海丨产业互联网周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-12",
-        "url": "https://mp.weixin.qq.com/s/25HuDHIKQFKSfhoLSCyLWw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1169,
-        "title": "腾讯大幅减持快手，套现超百亿；SHEIN获上市备案通知书；“美国关税退款”即将到账；丰茂烤串全国直营门店全部关停｜电商大事",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-11",
-        "url": "https://mp.weixin.qq.com/s/whnfa7E1Ont-SZjP0EDxzg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1170,
-        "title": "腾讯混元Hy3发布；GPT-5.6发布；MiniMax完成160亿港元股权类融资丨产业科技周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-11",
-        "url": "https://mp.weixin.qq.com/s/DWf8_3seqk4_lvEh9cyqEg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1171,
-        "title": "猫粮致千只猫瘫痪？伯纳天纯回应，弗列加特尚未发官方声明",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/HNseLsFwhEwD6v6AstFEHw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1172,
-        "title": "对话陆健：解析探路生态的反共识——产品线越宽，内核越聚焦？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/FXBrNyLm3OZGivN2G3zChQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1173,
-        "title": "体重管理这事，AI真能管得了吗？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/wbI36zqHax8ajvo5I1AAIQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1174,
-        "title": "一年实现营收超10倍增长，跃居亚马逊类目榜首，昂听ELEHEAR做对了什么？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/pgyoSufk0AlRVdkXsmdp6g",
-        "summary": "",
-        "keywords": []
-      }
-    ],
     "Fbeauty未来迹": [
       {
         "id": 1178,
@@ -2796,6 +2895,24 @@
         "source": "Fbeauty未来迹",
         "publish_date": "2026-07-28",
         "url": "https://mp.weixin.qq.com/s/OncrkLgA6W0vh1crbatLNw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1197,
+        "title": "联合利华迎来十年来最好销量季",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/hMTchnyJB5zVVwdTeTPSbw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1198,
+        "title": "独家｜中华速修新品首发，72年国民品牌亮出“硬核”焕新底牌",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/64nAmo0-Ao0ZtJRaKcRXOw",
         "summary": "",
         "keywords": []
       },
@@ -3241,6 +3358,404 @@
         "keywords": []
       }
     ],
+    "财经早餐": [
+      {
+        "id": 1208,
+        "title": "业绩涨，股价跌，算力的尽头是算账？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/ulel2p45W7AX_s1wFwbv8w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1209,
+        "title": "长鑫科技：一场关于&quot;耐心&quot;的万亿实验",
+        "source": "财经早餐",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/2zbSemg5M-bfUU0By7Nxpw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1210,
+        "title": "【财经早餐】2026.07.29星期三",
+        "source": "财经早餐",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/R8j1jPmKI5SuIv0vPV5TUA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1054,
+        "title": "长鑫真正值钱的，不只是芯片",
+        "source": "财经早餐",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/6mgPet9I_eNr-crI_psMbA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1055,
+        "title": "【财经早餐】2026.07.27星期一",
+        "source": "财经早餐",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/BRta_fxNhpZOt6VLwb8QDA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1056,
+        "title": "【财经早餐】2026.07.26星期日",
+        "source": "财经早餐",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/5xnkmhqxkDi7k0v4CO569A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1191,
+        "title": "【iFinD财经早餐】7月26日",
+        "source": "财经早餐",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/Nxa5BBcWFh36JESNGgZsbw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1057,
+        "title": "【财经早餐】2026.07.25星期六",
+        "source": "财经早餐",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/-CgVi5DFqR3rLSCR2s2Wqg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1094,
+        "title": "算力租赁，凭什么率先爆发？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/2uHlaiSik6deAT58WjVaPQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1095,
+        "title": "淘汰赛下，这家汽车“小巨人”拿到了怎样的入场券？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/1ZJTL-UPWa8RoU4d5dvxdA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1096,
+        "title": "别老盯着科技！这个板块，集体爆发",
+        "source": "财经早餐",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/wyejcVSHvvsAkNvuhtU8Jw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1097,
+        "title": "【财经早餐】2026.07.23星期四",
+        "source": "财经早餐",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/B2l3El1fmNnGAsZ2tr3Mkg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1098,
+        "title": "越聪明，越烧钱：下一代AI靠什么？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/e9XFJa190WAJpMJHEU2VWQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1099,
+        "title": "【财经早餐】2026.07.22星期三",
+        "source": "财经早餐",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/kmoUCsQXF4VEqZ-BWdYwtQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1100,
+        "title": "黄金跌，油价涨，市场到底在交易什么？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/bRMZzGsG6D3IwSDedtO3FQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1101,
+        "title": "【财经早餐】2026.07.21星期二",
+        "source": "财经早餐",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/V3FAfjaZIkj6TMqiqTzdfw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1102,
+        "title": "销量增，渠道崩？多地智己汽车经销商爆雷",
+        "source": "财经早餐",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/Cp61r_TD0ckVlf3wkXUVcg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1103,
+        "title": "当AI开始组网",
+        "source": "财经早餐",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/zut0MqphGWahfSXA0r8XQQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1104,
+        "title": "【财经早餐】2026.07.20星期一",
+        "source": "财经早餐",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/B4eUddGy2GkokKZ_nB6qYQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1105,
+        "title": "【财经早餐】2026.07.19星期日",
+        "source": "财经早餐",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/S0Ah92NgsDFeEoQYoWZKiA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1106,
+        "title": "世界人工智能大会召开，人工智能下半场来了！",
+        "source": "财经早餐",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/kBErwlhNn6QY9jIGqB5G8g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1107,
+        "title": "【财经早餐】2026.07.18星期六",
+        "source": "财经早餐",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/5iioaK6kKc6derMmxg7hew",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1108,
+        "title": "实验猴，创新药的“存储芯片”时刻？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/IVbpvD1KPZ4Y2TtEIi8Xlg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1109,
+        "title": "巴菲特发出警告，市场已成“赌场”！",
+        "source": "财经早餐",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/S1qQa_sfHlcYBV2Bthk5Fg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1110,
+        "title": "【财经早餐】2026.07.17星期五",
+        "source": "财经早餐",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/Mp09rtj2Y9lAVnycQL-fGg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1137,
+        "title": "创新药的下半场，不在实验室",
+        "source": "财经早餐",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/D_2djOZ9HH8_ImQheT3Ytg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1138,
+        "title": "美国六年来首现环比“负CPI”，意味着什么？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/ID7LGBwwSVWrKMUmLSIQFQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1139,
+        "title": "【财经早餐】2026.07.16星期四",
+        "source": "财经早餐",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/ygeBRNA6xctmZWtWPAZHdw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1140,
+        "title": "“煤老板”，又回来了？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/Vf6A9aBp5wM8lcVRm2WSDw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1141,
+        "title": "【财经早餐】2026.07.15星期三",
+        "source": "财经早餐",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/onF9tZ3mwxNEsjPeNbfdVA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1142,
+        "title": "2026，科技正在重估小金属？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/I5bCfZIR2qrYt3Ti4Gf4xw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1143,
+        "title": "【财经早餐】2026.07.14星期二",
+        "source": "财经早餐",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/nZ2hPVi2HKrPOzWbocV_ZQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1144,
+        "title": "AI的聪明，终究要用于赚钱",
+        "source": "财经早餐",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/wEqG_hZkjNsFZiZPv4MQKw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1145,
+        "title": "【财经早餐】2026.07.13星期一",
+        "source": "财经早餐",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/VSZN9U1tMoRTxxuQKGa8hg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1146,
+        "title": "【财经早餐】2026.07.12星期日",
+        "source": "财经早餐",
+        "publish_date": "2026-07-12",
+        "url": "https://mp.weixin.qq.com/s/l-B7txw4EvIEjKpzHmKJzw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1147,
+        "title": "AI数据中心到底需要多少铜？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-11",
+        "url": "https://mp.weixin.qq.com/s/hWOb3gDZtRn9sa9Capv5Qw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1148,
+        "title": "半年募资超2000亿：A股龙头为何扎堆赴港敲锣？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-11",
+        "url": "https://mp.weixin.qq.com/s/LAXEVORq2jKIKIb1gjLY6A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1149,
+        "title": "【财经早餐】2026.07.11星期六",
+        "source": "财经早餐",
+        "publish_date": "2026-07-11",
+        "url": "https://mp.weixin.qq.com/s/GjQuDzS08nM6Q3mCcLKg-Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1150,
+        "title": "这一轮恒科，不只是反弹！",
+        "source": "财经早餐",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/qBZWBolHIqnpN5I92FKkrw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1151,
+        "title": "全球AI新贵，同步砸钱核心豪宅",
+        "source": "财经早餐",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/XZmRg-aysVFb1F4fTIKD5w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1152,
+        "title": "净利润暴增超200%，浪潮信息告别“薄利多销”",
+        "source": "财经早餐",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/QU2FoG3iiADFZtZ6tKre6Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1153,
+        "title": "局势不明，国际油价再迎变局",
+        "source": "财经早餐",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/_FYNqqDkTV5LztybvFpe9w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1192,
+        "title": "",
+        "source": "财经早餐",
+        "publish_date": "",
+        "url": "https://mp.weixin.qq.com/s/eVqDAmuUUnNt_3CRgdxCTA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1193,
+        "title": "",
+        "source": "财经早餐",
+        "publish_date": "",
+        "url": "https://mp.weixin.qq.com/s/yWpIYYzBkfjaRjJ8Z0-ZsQ",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "妆研24小时": [
       {
         "id": 1175,
@@ -3630,360 +4145,16 @@
         "keywords": []
       }
     ],
-    "财经早餐": [
-      {
-        "id": 1054,
-        "title": "长鑫真正值钱的，不只是芯片",
-        "source": "财经早餐",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/6mgPet9I_eNr-crI_psMbA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1055,
-        "title": "【财经早餐】2026.07.27星期一",
-        "source": "财经早餐",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/BRta_fxNhpZOt6VLwb8QDA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1056,
-        "title": "【财经早餐】2026.07.26星期日",
-        "source": "财经早餐",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/5xnkmhqxkDi7k0v4CO569A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1191,
-        "title": "【iFinD财经早餐】7月26日",
-        "source": "财经早餐",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/Nxa5BBcWFh36JESNGgZsbw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1057,
-        "title": "【财经早餐】2026.07.25星期六",
-        "source": "财经早餐",
-        "publish_date": "2026-07-25",
-        "url": "https://mp.weixin.qq.com/s/-CgVi5DFqR3rLSCR2s2Wqg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1094,
-        "title": "算力租赁，凭什么率先爆发？",
-        "source": "财经早餐",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/2uHlaiSik6deAT58WjVaPQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1095,
-        "title": "淘汰赛下，这家汽车“小巨人”拿到了怎样的入场券？",
-        "source": "财经早餐",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/1ZJTL-UPWa8RoU4d5dvxdA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1096,
-        "title": "别老盯着科技！这个板块，集体爆发",
-        "source": "财经早餐",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/wyejcVSHvvsAkNvuhtU8Jw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1097,
-        "title": "【财经早餐】2026.07.23星期四",
-        "source": "财经早餐",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/B2l3El1fmNnGAsZ2tr3Mkg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1098,
-        "title": "越聪明，越烧钱：下一代AI靠什么？",
-        "source": "财经早餐",
-        "publish_date": "2026-07-22",
-        "url": "https://mp.weixin.qq.com/s/e9XFJa190WAJpMJHEU2VWQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1099,
-        "title": "【财经早餐】2026.07.22星期三",
-        "source": "财经早餐",
-        "publish_date": "2026-07-22",
-        "url": "https://mp.weixin.qq.com/s/kmoUCsQXF4VEqZ-BWdYwtQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1100,
-        "title": "黄金跌，油价涨，市场到底在交易什么？",
-        "source": "财经早餐",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/bRMZzGsG6D3IwSDedtO3FQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1101,
-        "title": "【财经早餐】2026.07.21星期二",
-        "source": "财经早餐",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/V3FAfjaZIkj6TMqiqTzdfw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1102,
-        "title": "销量增，渠道崩？多地智己汽车经销商爆雷",
-        "source": "财经早餐",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/Cp61r_TD0ckVlf3wkXUVcg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1103,
-        "title": "当AI开始组网",
-        "source": "财经早餐",
-        "publish_date": "2026-07-20",
-        "url": "https://mp.weixin.qq.com/s/zut0MqphGWahfSXA0r8XQQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1104,
-        "title": "【财经早餐】2026.07.20星期一",
-        "source": "财经早餐",
-        "publish_date": "2026-07-20",
-        "url": "https://mp.weixin.qq.com/s/B4eUddGy2GkokKZ_nB6qYQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1105,
-        "title": "【财经早餐】2026.07.19星期日",
-        "source": "财经早餐",
-        "publish_date": "2026-07-19",
-        "url": "https://mp.weixin.qq.com/s/S0Ah92NgsDFeEoQYoWZKiA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1106,
-        "title": "世界人工智能大会召开，人工智能下半场来了！",
-        "source": "财经早餐",
-        "publish_date": "2026-07-18",
-        "url": "https://mp.weixin.qq.com/s/kBErwlhNn6QY9jIGqB5G8g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1107,
-        "title": "【财经早餐】2026.07.18星期六",
-        "source": "财经早餐",
-        "publish_date": "2026-07-18",
-        "url": "https://mp.weixin.qq.com/s/5iioaK6kKc6derMmxg7hew",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1108,
-        "title": "实验猴，创新药的“存储芯片”时刻？",
-        "source": "财经早餐",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/IVbpvD1KPZ4Y2TtEIi8Xlg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1109,
-        "title": "巴菲特发出警告，市场已成“赌场”！",
-        "source": "财经早餐",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/S1qQa_sfHlcYBV2Bthk5Fg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1110,
-        "title": "【财经早餐】2026.07.17星期五",
-        "source": "财经早餐",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/Mp09rtj2Y9lAVnycQL-fGg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1137,
-        "title": "创新药的下半场，不在实验室",
-        "source": "财经早餐",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/D_2djOZ9HH8_ImQheT3Ytg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1138,
-        "title": "美国六年来首现环比“负CPI”，意味着什么？",
-        "source": "财经早餐",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/ID7LGBwwSVWrKMUmLSIQFQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1139,
-        "title": "【财经早餐】2026.07.16星期四",
-        "source": "财经早餐",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/ygeBRNA6xctmZWtWPAZHdw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1140,
-        "title": "“煤老板”，又回来了？",
-        "source": "财经早餐",
-        "publish_date": "2026-07-15",
-        "url": "https://mp.weixin.qq.com/s/Vf6A9aBp5wM8lcVRm2WSDw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1141,
-        "title": "【财经早餐】2026.07.15星期三",
-        "source": "财经早餐",
-        "publish_date": "2026-07-15",
-        "url": "https://mp.weixin.qq.com/s/onF9tZ3mwxNEsjPeNbfdVA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1142,
-        "title": "2026，科技正在重估小金属？",
-        "source": "财经早餐",
-        "publish_date": "2026-07-14",
-        "url": "https://mp.weixin.qq.com/s/I5bCfZIR2qrYt3Ti4Gf4xw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1143,
-        "title": "【财经早餐】2026.07.14星期二",
-        "source": "财经早餐",
-        "publish_date": "2026-07-14",
-        "url": "https://mp.weixin.qq.com/s/nZ2hPVi2HKrPOzWbocV_ZQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1144,
-        "title": "AI的聪明，终究要用于赚钱",
-        "source": "财经早餐",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/wEqG_hZkjNsFZiZPv4MQKw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1145,
-        "title": "【财经早餐】2026.07.13星期一",
-        "source": "财经早餐",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/VSZN9U1tMoRTxxuQKGa8hg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1146,
-        "title": "【财经早餐】2026.07.12星期日",
-        "source": "财经早餐",
-        "publish_date": "2026-07-12",
-        "url": "https://mp.weixin.qq.com/s/l-B7txw4EvIEjKpzHmKJzw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1147,
-        "title": "AI数据中心到底需要多少铜？",
-        "source": "财经早餐",
-        "publish_date": "2026-07-11",
-        "url": "https://mp.weixin.qq.com/s/hWOb3gDZtRn9sa9Capv5Qw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1148,
-        "title": "半年募资超2000亿：A股龙头为何扎堆赴港敲锣？",
-        "source": "财经早餐",
-        "publish_date": "2026-07-11",
-        "url": "https://mp.weixin.qq.com/s/LAXEVORq2jKIKIb1gjLY6A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1149,
-        "title": "【财经早餐】2026.07.11星期六",
-        "source": "财经早餐",
-        "publish_date": "2026-07-11",
-        "url": "https://mp.weixin.qq.com/s/GjQuDzS08nM6Q3mCcLKg-Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1150,
-        "title": "这一轮恒科，不只是反弹！",
-        "source": "财经早餐",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/qBZWBolHIqnpN5I92FKkrw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1151,
-        "title": "全球AI新贵，同步砸钱核心豪宅",
-        "source": "财经早餐",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/XZmRg-aysVFb1F4fTIKD5w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1152,
-        "title": "净利润暴增超200%，浪潮信息告别“薄利多销”",
-        "source": "财经早餐",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/QU2FoG3iiADFZtZ6tKre6Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1153,
-        "title": "局势不明，国际油价再迎变局",
-        "source": "财经早餐",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/_FYNqqDkTV5LztybvFpe9w",
-        "summary": "",
-        "keywords": []
-      }
-    ],
     "非科学美妆传播": [
+      {
+        "id": 1195,
+        "title": "理肤泉｜ED 2026｜文献调研：马拉色菌在痤疮人群上，不同文献结论不同",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/o9AMp9A8O_nnLiaP9Vvgag",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1053,
         "title": "SJTU生医工&amp;雅诗兰黛中国｜FRBM 2026｜从「表观遗传」到「铁死亡」，再到「炎症性皮肤病」",
@@ -4292,6 +4463,15 @@
       }
     ],
     "肤见未来实验室": [
+      {
+        "id": 1203,
+        "title": "学术前沿：高德美Alastin的TriHex多肽技术可修复日光性弹力变性，再生真皮",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/oZ_YeYIpajuF3f2JhARa4g",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1185,
         "title": "指南与共识|慢性光化性皮炎诊疗专家共识（2023版）",
@@ -4864,6 +5044,15 @@
     ],
     "原料合规观察": [
       {
+        "id": 1196,
+        "title": "2025年版《中国药典》网络版正式上线",
+        "source": "原料合规观察",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/tX4gFg7yk07NOseuNUMITg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1176,
         "title": "WPE&amp;WHPE2026同期《植物原料多领域创新应用合规与发展论坛》议题确定！",
         "source": "原料合规观察",
@@ -5136,6 +5325,24 @@
     ],
     "铱星云商": [
       {
+        "id": 1215,
+        "title": "商场6月开关店“红黑榜”：星巴克重启增长，周大福闭店55家",
+        "source": "铱星云商",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/aP58T8xkBUKcer7JIeWNNQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1216,
+        "title": "星盛商业如何将“循环城市计划”带入国际生态视野",
+        "source": "铱星云商",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/1MaxLqgpaofQ7jEw2R5HpA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1061,
         "title": "广州太古汇三期迎新进展、郑州二七万象城二期冲刺开业；砂之船上海22万方微度假奥莱设计方案公示；百联奥莱首进中原……",
         "source": "铱星云商",
@@ -5287,9 +5494,27 @@
         "url": "https://mp.weixin.qq.com/s/tTSH0FoyAIqLm_zF3N3S8g",
         "summary": "",
         "keywords": []
+      },
+      {
+        "id": 1194,
+        "title": "",
+        "source": "铱星云商",
+        "publish_date": "",
+        "url": "https://mp.weixin.qq.com/s/7Xlhh5g8SiA9kf21B9SCow",
+        "summary": "",
+        "keywords": []
       }
     ],
     "KEV美妆": [
+      {
+        "id": 1202,
+        "title": "HBN「发光水pro」；倍至水光精华；林清轩墨旗男士控油洁面... | 新品速递",
+        "source": "KEV美妆",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/fS6nvSaZ956kGaVL3T-GTg",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1017,
         "title": "多功能彩妆圆珠笔；可溶解眼膜；脉轮身体油；双生火焰丰唇膏… | 全球视角",
