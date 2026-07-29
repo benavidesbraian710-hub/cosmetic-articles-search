@@ -1,13 +1,13 @@
 {
   "version": "v31",
   "stats": {
-    "total_articles": 634,
-    "source_count": 15,
+    "total_articles": 652,
+    "source_count": 18,
     "date_range": {
       "start": "",
       "end": "2026-07-29"
     },
-    "last_update": "2026-07-29T09:54:34.973478"
+    "last_update": "2026-07-29T12:03:32.450455"
   },
   "sources": [
     {
@@ -67,7 +67,19 @@
       "count": 10
     },
     {
+      "name": "WWD 国际时尚特讯",
+      "count": 8
+    },
+    {
+      "name": "化妆品财经在线",
+      "count": 5
+    },
+    {
       "name": "上海日化协会",
+      "count": 5
+    },
+    {
+      "name": "Vogue Business",
       "count": 5
     }
   ],
@@ -5761,6 +5773,127 @@
         "keywords": []
       }
     ],
+    "WWD 国际时尚特讯": [
+      {
+        "id": 1217,
+        "title": "未命名文章",
+        "source": "WWD 国际时尚特讯",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/1eX6f4qDox7x1_q2Yf5Aqg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1218,
+        "title": "未命名文章",
+        "source": "WWD 国际时尚特讯",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/PlyCzo0ID2vtjZjZySqbXQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1219,
+        "title": "未命名文章",
+        "source": "WWD 国际时尚特讯",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/WRDbFrstwx79inH1lTEDGQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1220,
+        "title": "未命名文章",
+        "source": "WWD 国际时尚特讯",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/tSVoSgvhRWGaaSwb9JarfQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1221,
+        "title": "未命名文章",
+        "source": "WWD 国际时尚特讯",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/1HcgvNLGJzW-p2Zav7iJFg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1222,
+        "title": "未命名文章",
+        "source": "WWD 国际时尚特讯",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/rvX7W0T-kGo_oNl1kxmjaQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1223,
+        "title": "未命名文章",
+        "source": "WWD 国际时尚特讯",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/vIjxkDnXt7UprsWXTUJMIQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1224,
+        "title": "未命名文章",
+        "source": "WWD 国际时尚特讯",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/6CjGzd6zntaUXgvef3Cdlw",
+        "summary": "",
+        "keywords": []
+      }
+    ],
+    "化妆品财经在线": [
+      {
+        "id": 1225,
+        "title": "未命名文章",
+        "source": "化妆品财经在线",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/e8jzszuG8DQCY6HMfuerdg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1226,
+        "title": "未命名文章",
+        "source": "化妆品财经在线",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/-QuVuzAJiKcwHUwNTn-efA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1227,
+        "title": "未命名文章",
+        "source": "化妆品财经在线",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/_QWESOe32Ex2_ep9H4ZuWg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1228,
+        "title": "未命名文章",
+        "source": "化妆品财经在线",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/Ilo4NCPBMLgSdxtp_ZsMqQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1229,
+        "title": "未命名文章",
+        "source": "化妆品财经在线",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/d9A5uzjdLrDatNpikniCiw",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "上海日化协会": [
       {
         "id": 858,
@@ -5804,6 +5937,53 @@
         "source": "上海日化协会",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/mPUjfCboGkyYbJKnmr85vw",
+        "summary": "",
+        "keywords": []
+      }
+    ],
+    "Vogue Business": [
+      {
+        "id": 1230,
+        "title": "未命名文章",
+        "source": "Vogue Business",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/uNBC-Pob6tNFl7mdY1Rl_w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1231,
+        "title": "未命名文章",
+        "source": "Vogue Business",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/5_dx5vu56Ui63nlsDmVrXQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1232,
+        "title": "未命名文章",
+        "source": "Vogue Business",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/CuazOg0eF52Rc903iC29Mg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1233,
+        "title": "未命名文章",
+        "source": "Vogue Business",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/zlzqKmkdvlxJ0KuHSXlECg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1234,
+        "title": "未命名文章",
+        "source": "Vogue Business",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/oKNt93bge3PanOyUVx1mlQ",
         "summary": "",
         "keywords": []
       }
