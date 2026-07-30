@@ -1,13 +1,13 @@
 {
   "version": "v31",
   "stats": {
-    "total_articles": 669,
+    "total_articles": 676,
     "source_count": 18,
     "date_range": {
       "start": "",
       "end": "2026-07-30"
     },
-    "last_update": "2026-07-30T11:01:47.269929"
+    "last_update": "2026-07-30T11:07:40.078468"
   },
   "sources": [
     {
@@ -19,12 +19,12 @@
       "count": 84
     },
     {
-      "name": "中国化妆品",
-      "count": 71
+      "name": "亿邦动力",
+      "count": 74
     },
     {
-      "name": "亿邦动力",
-      "count": 70
+      "name": "中国化妆品",
+      "count": 71
     },
     {
       "name": "Fbeauty未来迹",
@@ -32,7 +32,7 @@
     },
     {
       "name": "财经早餐",
-      "count": 44
+      "count": 46
     },
     {
       "name": "妆研24小时",
@@ -56,7 +56,7 @@
     },
     {
       "name": "铱星云商",
-      "count": 20
+      "count": 21
     },
     {
       "name": "KEV美妆",
@@ -1708,6 +1708,674 @@
         "keywords": []
       }
     ],
+    "亿邦动力": [
+      {
+        "id": 1254,
+        "title": "支付宝升级AI开发者激励，最高5660元Token补贴覆盖个人开发者",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/MprSkWZnNHGWw93cQL7YYg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1255,
+        "title": "TikTok Shop在美小范围测试Plus会员服务，对标亚马逊Prime",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/PpYyiFgiwtYrxcXzk8DfNw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1256,
+        "title": "宠粮品牌高端化只能靠“买”？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/1h1kLlj1JvhVJWBEbGMg3w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1257,
+        "title": "美团AI“小团”升级：从帮用户“找信息”到替用户“办成事”",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/bu2ZGhTxx-YIzTew_asoOQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1211,
+        "title": "对话未来智能viaim创始人兼CEO马啸：Agent 的“三级火箭”，难在用户“点火”那一步",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/1KkfMS4zC5snEy5TZuoOGg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1212,
+        "title": "告别盲卷式经营：京东商家成长PLUS方法论，解开商家分层增长难题",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/Af1pYNLwc3AMopPO_d26Pw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1213,
+        "title": "第三方报告：2025年TikTok为英国经济贡献至少100亿英镑",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/YT8lssc0A6DeaGXnOFXevg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1214,
+        "title": "阿里推出千问办公，三款产品合并能打过WorkBuddy吗？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/4F3plYgAr4opgM-bOh-eCw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1065,
+        "title": "旧关税退场，美国301新关税接棒：对华税率12.5%，总税负上限延续此前谈判成果",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/tNHWMOuOPT4gCUnxaUf7GQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1066,
+        "title": "亚马逊中国副总裁邱胜：AI 正在改写跨境电商增长的底层逻辑",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/KCvjwgxYsIlmISASuUbH5g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1067,
+        "title": "阿里国际站总裁张阔：全球电商AI工作台Accio Work，让商家用一个 Agent 掌控全盘生意",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/Wddy7al2SpW4tgiuJdRaTA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1068,
+        "title": "安克的“香蕉人”模式好走吗？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/Py2KoJ_eLJckBI_BImOt1Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1058,
+        "title": "市监总局对携程罚款51.79亿元！蚂蚁国际完成约12亿美元融资；亚马逊裁撤通用人工智能部门岗位；中国千亿元潮玩赛道要来了｜电商财经盘点",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/MtiaHbrR9pUidwQ4RqW2PA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1059,
+        "title": "卡奥斯首发工业世界模型牵手能科，震坤行大模型备案亮相国企采购大会，深度数科发布票据与供应链金融垂直大模型丨产业互联网周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/2TUd6YWkDpSTe3Lm4zLdhQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1060,
+        "title": "商务部力挺速卖通；Temu波兰用户半年流失360万；eBay收购英国时尚电商平台Depop获批丨跨境电商周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/aGcpoer4-yH_XBvIhefuLA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1069,
+        "title": "上半年入驻京东新商家数同比增长超30%；耐克终止与中国数千家线上经销商合作；鸣鸣很忙宣布签约门店突破3万家丨零售电商周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/9VsEoWHM6O0tSACh6nsScw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1070,
+        "title": "中国工业设计之父柳冠中：全球化进程“换道超越”，从“造”走向“制”",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/O2Ukuui3el0ODWojLy0tkg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1071,
+        "title": "鸣鸣很忙门店突破3万家；真维斯关掉90%门店，线上卖了100亿；高德上线位置分享功能；美团16城上线骑手“不闯红灯”激励｜电商大事",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/aswRK80J1GzwnjrCTCAleg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1072,
+        "title": "腾讯混元成立基础模型部，月之暗面将洽谈IPO前最后一轮融资丨产业科技周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/dQMZwvV29fwhtRAxcEJaUQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1073,
+        "title": "洛克兄弟集团创始人张新刚：AI定制实现“先卖后产”，重塑骑行品牌增长模式",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/k6cILPlnSamwZv2gZgg8IA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1074,
+        "title": "【对话】品牌全球化与AI交汇，如何催生下一个百亿级企业？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/GEWBSNHvRzeB2oVRuBCAzQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1075,
+        "title": "分众传媒创始人江南春： 出海的终极战场，唯有抢占心智复利",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/GL5FkPLghWPaDeSryZ4pnw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1076,
+        "title": "抢跑！全球化新品牌进入AI时刻，何以定胜负？丨2026全球化新品牌AI竞争力大会实录",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/K556_HGXf4jnRRe_B0gXsQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1077,
+        "title": "亿邦智库发布《2026全球化新品牌AI竞争力报告》",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/J4YAa70DwHhbyf28XwOTog",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1078,
+        "title": "分级扣佣，推流改向…抖音达人生态新变革",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/jOv1DseNj7QNCLD3nj11yg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1079,
+        "title": "从出海营销奠基者到AI营销领航官沈晨岗：以“真智能体”提升增长确定性",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/LudQCEQAc2s_pyucNx3C1Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1080,
+        "title": "跨界打印首日破亿，进驻数千家品牌门店，xTool不想只做“激光雕刻第一”",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/yeC7SCPkfbV4SdN11xfnCw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1081,
+        "title": "PureblueAI清蓝创始人鲁扬：AI取代的不仅是搜索，还有交易权 | 马蹄社研学笔记",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/rrUsoxxDvlsEHgRVZRjRjw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1082,
+        "title": "淘宝将调整“商品扶优质量分”：增加超级单品曝光",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/MUbBnVnRLc85D8GSqn4MKg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1083,
+        "title": "全球户外运动“通电”进行时，中国出海品牌秀肌肉",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/piJIJTu62nSGh3qVtgf4sg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1084,
+        "title": "《2026数智化采购发展报告》重磅发布",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/gF7c4tpZcQzACX4AbSgcQA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1111,
+        "title": "耐克终止与中国数千家线上经销商合作，统一渠道严格控价",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/2m7wtHLFHDcawlhfyBLmSA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1112,
+        "title": "大晓机器人发布“开悟世界模型3.1”：让机器人像人一样“想清楚再动手”",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/DA_lZnobEO2Bqym_tqokzQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1113,
+        "title": "拿下世界杯，小红书究竟在走怎样一步棋？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/cX3DXfyLEgzW1Pjf6p_o6Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1114,
+        "title": "试点“等灯停表”，美团16城上线骑手“不闯红灯”激励",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/2AoSUflNs4FoLtCD4mD6Qg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1115,
+        "title": "一文回顾WAIC：机器人打工、智能体喷涌、AI硬件还在卷",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/fZdAcXvvHvjseAj6fwnH1A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1116,
+        "title": "对话泛鼎国际创始人刘波：百亿跨境物流供应链龙头的数据野心",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/hlehaw6TIlE3VWV5puFwaw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1117,
+        "title": "一群不懂供应链的人，抢走了世界杯的生意",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/Gb_qT780e3LmnO02Xq0jNQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1118,
+        "title": "亚马逊2025生态报告：活跃卖家降至190万，第三方GMV占比逼近七成",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/9YImbByF4r7Ctlu4bVtITA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1119,
+        "title": "告别价格战迈向生态战，快手电商用AI和阶梯激励打通新商冷启生态",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/Br39r62luJkPlMp9SsFv2Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1120,
+        "title": "DeepSeek估值超3500亿元；安踏品牌CEO徐阳将离职；募资近30亿元！阿里领投爱诗科技C+轮融资；面壁智能估值超200亿元｜电商财经盘点",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/1QsoZmqaOTIiBILpQAd3mA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1121,
+        "title": "LV起诉国家知识产权局；罗技广告称消费者像狗被罚20万丨零售电商周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/I7Wltm4zFjhaW4GN72QB4g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1122,
+        "title": "TikTok多国社交购物渗透率超Facebook与Instagram；亚马逊全球开店推出“标杆新卖家孵化计划”；中国6月出口同比增27%丨跨境电商周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/37FoOdoQYIWhEfuGDxdTkg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1123,
+        "title": "多项政策密集定调智能体新阶段；阿里清仓汇通达告别八年乡村电商？WAIC央企三箭齐发聚焦AI原生丨产业互联网周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/odxmZa_xgRHfZCb2Up9fyA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1124,
+        "title": "LV起诉国家知识产权局；字节否认入局自动驾驶；世界杯决赛一块草皮卖3050元；ZARA年内全国已关停10家门店｜电商大事",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/X86fi4PVP4ADH2mRlFEL6Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1125,
+        "title": "2026世界人工智能大会在上海召开；爱诗科技完成29.8亿元C轮融资丨产业科技周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/jakOddmVN1JPFo9yHOAAsA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1126,
+        "title": "桌面创客工具破圈：3D打印机爆火，到底谁在买？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/KBWf5g1xwrMR3eM8RYYkjQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1127,
+        "title": "世界杯本地生活报告：这届球迷扎堆在洗浴中心和酒吧看球",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/K4iWFRIrNNJyFYah-30hdg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1128,
+        "title": "亚马逊AI购物助手正在“绕过”广告？超60%的推荐脱离搜索排名",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/AFS3_onDm4NccLbVHH0-tA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1129,
+        "title": "开店不靠人工扫街了？高德上线商业智能体“问店”",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/0QoOuzZZyRIe0X6HaF4k8g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1130,
+        "title": "地图不只是导航了，高德抢做世界模型？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/hES9gbG1Py6Tl0_dXxBzdw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1131,
+        "title": "亚马逊旺季配送费10月15日生效，卖家物流成本将迎来上涨",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/7BJRYG7z-jMTouPBUG4UdA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1132,
+        "title": "18岁可0元试运营开店，快手向Z世代商家招手",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/MXPY7oCpAfZ60Pg644L3ZA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1133,
+        "title": "不讲“低价” 只卖“新鲜” ，线下零食行业又现新物种？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/S4EUTQmUnN2H0GZXl8qCgA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1134,
+        "title": "对话CAYE 咖爷科技吴鹏：复盘商用全自动咖啡机的“守正”三年",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/OhgwxUjat6KNcuFrh-iWgQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1135,
+        "title": "AI+世界杯，义乌商家玩出了花",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/Km4uYoQiNzGi8Aaggrzd5w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1158,
+        "title": "安踏CEO徐阳将辞任，原因或为品牌业绩不达预期",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/Bf7XlyxRvx7mD26w2okp3g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1136,
+        "title": "Web借尸还魂，互联网行将就木",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/Q7rn8XABQGPuiH_Q7TKTrQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1159,
+        "title": "京东健康“硬刚”蚂蚁阿福：第三期减重大赛打卡即送千元奖金",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/3vEiqf3s0xvYh9VR1dWFOg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1160,
+        "title": "谁说“男人消费不如狗？”有男装品牌三个月卖5亿",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/3NNRkIJGILjQI6NxG08SYQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1161,
+        "title": "Temu流量腰斩？SHEIN几乎退出？欧洲关税新政已致平台投流大幅缩减",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/u6VOkw6jsNNvcuxRtUTjZg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1162,
+        "title": "纸尿裤深陷罗生门的背后，代工厂正在被超薄利润“卷死”",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/sumZG4NLGLRWIGN-xgqAMg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1163,
+        "title": "世界杯让即时零售爆火，下单主力竟不是男性",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/7b1ET0UFyC1uPNBgX26yyw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1164,
+        "title": "完成数亿元融资！具身智能“卖铲人”他山科技市占率何以超80%？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/KuZZXLb7_44oz2-FCKkHMw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1165,
+        "title": "重磅！微信小店推出最高等级店铺，非热招品牌的机会来了",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/5huPwGrunqReS171Bbw-oQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1166,
+        "title": "老乡鸡第五次冲击资本市场失败；优必选回应99万机器人“伴侣”续航问题；3D打印企业“快造科技”获10亿元融资｜电商财经盘点",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-12",
+        "url": "https://mp.weixin.qq.com/s/PCOFfacN64ZH1whRyMr1Ew",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1167,
+        "title": "蚂蚁集团战略投资薄荷健康；“养老国补”落地京东； 世界杯催生“日酒夜咖”新节律丨零售电商周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-12",
+        "url": "https://mp.weixin.qq.com/s/--bTIKAvNg2JwinhhH1Iag",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1168,
+        "title": "新政落地定调“智能体”新阶段；震坤行、阳采集团、鑫方盛本周密集斩获大客户订单；百望股份连签五家东南亚伙伴加速出海丨产业互联网周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-12",
+        "url": "https://mp.weixin.qq.com/s/25HuDHIKQFKSfhoLSCyLWw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1169,
+        "title": "腾讯大幅减持快手，套现超百亿；SHEIN获上市备案通知书；“美国关税退款”即将到账；丰茂烤串全国直营门店全部关停｜电商大事",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-11",
+        "url": "https://mp.weixin.qq.com/s/whnfa7E1Ont-SZjP0EDxzg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1170,
+        "title": "腾讯混元Hy3发布；GPT-5.6发布；MiniMax完成160亿港元股权类融资丨产业科技周报",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-11",
+        "url": "https://mp.weixin.qq.com/s/DWf8_3seqk4_lvEh9cyqEg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1171,
+        "title": "猫粮致千只猫瘫痪？伯纳天纯回应，弗列加特尚未发官方声明",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/HNseLsFwhEwD6v6AstFEHw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1172,
+        "title": "对话陆健：解析探路生态的反共识——产品线越宽，内核越聚焦？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/FXBrNyLm3OZGivN2G3zChQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1173,
+        "title": "体重管理这事，AI真能管得了吗？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/wbI36zqHax8ajvo5I1AAIQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1174,
+        "title": "一年实现营收超10倍增长，跃居亚马逊类目榜首，昂听ELEHEAR做对了什么？",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/pgyoSufk0AlRVdkXsmdp6g",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "中国化妆品": [
       {
         "id": 1250,
@@ -2349,638 +3017,6 @@
         "keywords": []
       }
     ],
-    "亿邦动力": [
-      {
-        "id": 1211,
-        "title": "对话未来智能viaim创始人兼CEO马啸：Agent 的“三级火箭”，难在用户“点火”那一步",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-28",
-        "url": "https://mp.weixin.qq.com/s/1KkfMS4zC5snEy5TZuoOGg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1212,
-        "title": "告别盲卷式经营：京东商家成长PLUS方法论，解开商家分层增长难题",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-28",
-        "url": "https://mp.weixin.qq.com/s/Af1pYNLwc3AMopPO_d26Pw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1213,
-        "title": "第三方报告：2025年TikTok为英国经济贡献至少100亿英镑",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-28",
-        "url": "https://mp.weixin.qq.com/s/YT8lssc0A6DeaGXnOFXevg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1214,
-        "title": "阿里推出千问办公，三款产品合并能打过WorkBuddy吗？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-28",
-        "url": "https://mp.weixin.qq.com/s/4F3plYgAr4opgM-bOh-eCw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1065,
-        "title": "旧关税退场，美国301新关税接棒：对华税率12.5%，总税负上限延续此前谈判成果",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/tNHWMOuOPT4gCUnxaUf7GQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1066,
-        "title": "亚马逊中国副总裁邱胜：AI 正在改写跨境电商增长的底层逻辑",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/KCvjwgxYsIlmISASuUbH5g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1067,
-        "title": "阿里国际站总裁张阔：全球电商AI工作台Accio Work，让商家用一个 Agent 掌控全盘生意",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/Wddy7al2SpW4tgiuJdRaTA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1068,
-        "title": "安克的“香蕉人”模式好走吗？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/Py2KoJ_eLJckBI_BImOt1Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1058,
-        "title": "市监总局对携程罚款51.79亿元！蚂蚁国际完成约12亿美元融资；亚马逊裁撤通用人工智能部门岗位；中国千亿元潮玩赛道要来了｜电商财经盘点",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/MtiaHbrR9pUidwQ4RqW2PA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1059,
-        "title": "卡奥斯首发工业世界模型牵手能科，震坤行大模型备案亮相国企采购大会，深度数科发布票据与供应链金融垂直大模型丨产业互联网周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/2TUd6YWkDpSTe3Lm4zLdhQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1060,
-        "title": "商务部力挺速卖通；Temu波兰用户半年流失360万；eBay收购英国时尚电商平台Depop获批丨跨境电商周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/aGcpoer4-yH_XBvIhefuLA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1069,
-        "title": "上半年入驻京东新商家数同比增长超30%；耐克终止与中国数千家线上经销商合作；鸣鸣很忙宣布签约门店突破3万家丨零售电商周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/9VsEoWHM6O0tSACh6nsScw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1070,
-        "title": "中国工业设计之父柳冠中：全球化进程“换道超越”，从“造”走向“制”",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-25",
-        "url": "https://mp.weixin.qq.com/s/O2Ukuui3el0ODWojLy0tkg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1071,
-        "title": "鸣鸣很忙门店突破3万家；真维斯关掉90%门店，线上卖了100亿；高德上线位置分享功能；美团16城上线骑手“不闯红灯”激励｜电商大事",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-25",
-        "url": "https://mp.weixin.qq.com/s/aswRK80J1GzwnjrCTCAleg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1072,
-        "title": "腾讯混元成立基础模型部，月之暗面将洽谈IPO前最后一轮融资丨产业科技周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-25",
-        "url": "https://mp.weixin.qq.com/s/dQMZwvV29fwhtRAxcEJaUQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1073,
-        "title": "洛克兄弟集团创始人张新刚：AI定制实现“先卖后产”，重塑骑行品牌增长模式",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-25",
-        "url": "https://mp.weixin.qq.com/s/k6cILPlnSamwZv2gZgg8IA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1074,
-        "title": "【对话】品牌全球化与AI交汇，如何催生下一个百亿级企业？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/GEWBSNHvRzeB2oVRuBCAzQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1075,
-        "title": "分众传媒创始人江南春： 出海的终极战场，唯有抢占心智复利",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/GL5FkPLghWPaDeSryZ4pnw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1076,
-        "title": "抢跑！全球化新品牌进入AI时刻，何以定胜负？丨2026全球化新品牌AI竞争力大会实录",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/K556_HGXf4jnRRe_B0gXsQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1077,
-        "title": "亿邦智库发布《2026全球化新品牌AI竞争力报告》",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/J4YAa70DwHhbyf28XwOTog",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1078,
-        "title": "分级扣佣，推流改向…抖音达人生态新变革",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/jOv1DseNj7QNCLD3nj11yg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1079,
-        "title": "从出海营销奠基者到AI营销领航官沈晨岗：以“真智能体”提升增长确定性",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/LudQCEQAc2s_pyucNx3C1Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1080,
-        "title": "跨界打印首日破亿，进驻数千家品牌门店，xTool不想只做“激光雕刻第一”",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/yeC7SCPkfbV4SdN11xfnCw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1081,
-        "title": "PureblueAI清蓝创始人鲁扬：AI取代的不仅是搜索，还有交易权 | 马蹄社研学笔记",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/rrUsoxxDvlsEHgRVZRjRjw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1082,
-        "title": "淘宝将调整“商品扶优质量分”：增加超级单品曝光",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-22",
-        "url": "https://mp.weixin.qq.com/s/MUbBnVnRLc85D8GSqn4MKg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1083,
-        "title": "全球户外运动“通电”进行时，中国出海品牌秀肌肉",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-22",
-        "url": "https://mp.weixin.qq.com/s/piJIJTu62nSGh3qVtgf4sg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1084,
-        "title": "《2026数智化采购发展报告》重磅发布",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-22",
-        "url": "https://mp.weixin.qq.com/s/gF7c4tpZcQzACX4AbSgcQA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1111,
-        "title": "耐克终止与中国数千家线上经销商合作，统一渠道严格控价",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-22",
-        "url": "https://mp.weixin.qq.com/s/2m7wtHLFHDcawlhfyBLmSA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1112,
-        "title": "大晓机器人发布“开悟世界模型3.1”：让机器人像人一样“想清楚再动手”",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/DA_lZnobEO2Bqym_tqokzQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1113,
-        "title": "拿下世界杯，小红书究竟在走怎样一步棋？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/cX3DXfyLEgzW1Pjf6p_o6Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1114,
-        "title": "试点“等灯停表”，美团16城上线骑手“不闯红灯”激励",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/2AoSUflNs4FoLtCD4mD6Qg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1115,
-        "title": "一文回顾WAIC：机器人打工、智能体喷涌、AI硬件还在卷",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/fZdAcXvvHvjseAj6fwnH1A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1116,
-        "title": "对话泛鼎国际创始人刘波：百亿跨境物流供应链龙头的数据野心",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-20",
-        "url": "https://mp.weixin.qq.com/s/hlehaw6TIlE3VWV5puFwaw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1117,
-        "title": "一群不懂供应链的人，抢走了世界杯的生意",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-20",
-        "url": "https://mp.weixin.qq.com/s/Gb_qT780e3LmnO02Xq0jNQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1118,
-        "title": "亚马逊2025生态报告：活跃卖家降至190万，第三方GMV占比逼近七成",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-20",
-        "url": "https://mp.weixin.qq.com/s/9YImbByF4r7Ctlu4bVtITA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1119,
-        "title": "告别价格战迈向生态战，快手电商用AI和阶梯激励打通新商冷启生态",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-20",
-        "url": "https://mp.weixin.qq.com/s/Br39r62luJkPlMp9SsFv2Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1120,
-        "title": "DeepSeek估值超3500亿元；安踏品牌CEO徐阳将离职；募资近30亿元！阿里领投爱诗科技C+轮融资；面壁智能估值超200亿元｜电商财经盘点",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-19",
-        "url": "https://mp.weixin.qq.com/s/1QsoZmqaOTIiBILpQAd3mA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1121,
-        "title": "LV起诉国家知识产权局；罗技广告称消费者像狗被罚20万丨零售电商周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-19",
-        "url": "https://mp.weixin.qq.com/s/I7Wltm4zFjhaW4GN72QB4g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1122,
-        "title": "TikTok多国社交购物渗透率超Facebook与Instagram；亚马逊全球开店推出“标杆新卖家孵化计划”；中国6月出口同比增27%丨跨境电商周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-19",
-        "url": "https://mp.weixin.qq.com/s/37FoOdoQYIWhEfuGDxdTkg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1123,
-        "title": "多项政策密集定调智能体新阶段；阿里清仓汇通达告别八年乡村电商？WAIC央企三箭齐发聚焦AI原生丨产业互联网周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-19",
-        "url": "https://mp.weixin.qq.com/s/odxmZa_xgRHfZCb2Up9fyA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1124,
-        "title": "LV起诉国家知识产权局；字节否认入局自动驾驶；世界杯决赛一块草皮卖3050元；ZARA年内全国已关停10家门店｜电商大事",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-18",
-        "url": "https://mp.weixin.qq.com/s/X86fi4PVP4ADH2mRlFEL6Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1125,
-        "title": "2026世界人工智能大会在上海召开；爱诗科技完成29.8亿元C轮融资丨产业科技周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-18",
-        "url": "https://mp.weixin.qq.com/s/jakOddmVN1JPFo9yHOAAsA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1126,
-        "title": "桌面创客工具破圈：3D打印机爆火，到底谁在买？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/KBWf5g1xwrMR3eM8RYYkjQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1127,
-        "title": "世界杯本地生活报告：这届球迷扎堆在洗浴中心和酒吧看球",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/K4iWFRIrNNJyFYah-30hdg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1128,
-        "title": "亚马逊AI购物助手正在“绕过”广告？超60%的推荐脱离搜索排名",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/AFS3_onDm4NccLbVHH0-tA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1129,
-        "title": "开店不靠人工扫街了？高德上线商业智能体“问店”",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/0QoOuzZZyRIe0X6HaF4k8g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1130,
-        "title": "地图不只是导航了，高德抢做世界模型？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/hES9gbG1Py6Tl0_dXxBzdw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1131,
-        "title": "亚马逊旺季配送费10月15日生效，卖家物流成本将迎来上涨",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/7BJRYG7z-jMTouPBUG4UdA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1132,
-        "title": "18岁可0元试运营开店，快手向Z世代商家招手",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/MXPY7oCpAfZ60Pg644L3ZA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1133,
-        "title": "不讲“低价” 只卖“新鲜” ，线下零食行业又现新物种？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/S4EUTQmUnN2H0GZXl8qCgA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1134,
-        "title": "对话CAYE 咖爷科技吴鹏：复盘商用全自动咖啡机的“守正”三年",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-15",
-        "url": "https://mp.weixin.qq.com/s/OhgwxUjat6KNcuFrh-iWgQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1135,
-        "title": "AI+世界杯，义乌商家玩出了花",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-15",
-        "url": "https://mp.weixin.qq.com/s/Km4uYoQiNzGi8Aaggrzd5w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1158,
-        "title": "安踏CEO徐阳将辞任，原因或为品牌业绩不达预期",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-15",
-        "url": "https://mp.weixin.qq.com/s/Bf7XlyxRvx7mD26w2okp3g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1136,
-        "title": "Web借尸还魂，互联网行将就木",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-14",
-        "url": "https://mp.weixin.qq.com/s/Q7rn8XABQGPuiH_Q7TKTrQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1159,
-        "title": "京东健康“硬刚”蚂蚁阿福：第三期减重大赛打卡即送千元奖金",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-14",
-        "url": "https://mp.weixin.qq.com/s/3vEiqf3s0xvYh9VR1dWFOg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1160,
-        "title": "谁说“男人消费不如狗？”有男装品牌三个月卖5亿",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-14",
-        "url": "https://mp.weixin.qq.com/s/3NNRkIJGILjQI6NxG08SYQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1161,
-        "title": "Temu流量腰斩？SHEIN几乎退出？欧洲关税新政已致平台投流大幅缩减",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-14",
-        "url": "https://mp.weixin.qq.com/s/u6VOkw6jsNNvcuxRtUTjZg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1162,
-        "title": "纸尿裤深陷罗生门的背后，代工厂正在被超薄利润“卷死”",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/sumZG4NLGLRWIGN-xgqAMg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1163,
-        "title": "世界杯让即时零售爆火，下单主力竟不是男性",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/7b1ET0UFyC1uPNBgX26yyw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1164,
-        "title": "完成数亿元融资！具身智能“卖铲人”他山科技市占率何以超80%？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/KuZZXLb7_44oz2-FCKkHMw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1165,
-        "title": "重磅！微信小店推出最高等级店铺，非热招品牌的机会来了",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/5huPwGrunqReS171Bbw-oQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1166,
-        "title": "老乡鸡第五次冲击资本市场失败；优必选回应99万机器人“伴侣”续航问题；3D打印企业“快造科技”获10亿元融资｜电商财经盘点",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-12",
-        "url": "https://mp.weixin.qq.com/s/PCOFfacN64ZH1whRyMr1Ew",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1167,
-        "title": "蚂蚁集团战略投资薄荷健康；“养老国补”落地京东； 世界杯催生“日酒夜咖”新节律丨零售电商周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-12",
-        "url": "https://mp.weixin.qq.com/s/--bTIKAvNg2JwinhhH1Iag",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1168,
-        "title": "新政落地定调“智能体”新阶段；震坤行、阳采集团、鑫方盛本周密集斩获大客户订单；百望股份连签五家东南亚伙伴加速出海丨产业互联网周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-12",
-        "url": "https://mp.weixin.qq.com/s/25HuDHIKQFKSfhoLSCyLWw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1169,
-        "title": "腾讯大幅减持快手，套现超百亿；SHEIN获上市备案通知书；“美国关税退款”即将到账；丰茂烤串全国直营门店全部关停｜电商大事",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-11",
-        "url": "https://mp.weixin.qq.com/s/whnfa7E1Ont-SZjP0EDxzg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1170,
-        "title": "腾讯混元Hy3发布；GPT-5.6发布；MiniMax完成160亿港元股权类融资丨产业科技周报",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-11",
-        "url": "https://mp.weixin.qq.com/s/DWf8_3seqk4_lvEh9cyqEg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1171,
-        "title": "猫粮致千只猫瘫痪？伯纳天纯回应，弗列加特尚未发官方声明",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/HNseLsFwhEwD6v6AstFEHw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1172,
-        "title": "对话陆健：解析探路生态的反共识——产品线越宽，内核越聚焦？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/FXBrNyLm3OZGivN2G3zChQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1173,
-        "title": "体重管理这事，AI真能管得了吗？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/wbI36zqHax8ajvo5I1AAIQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1174,
-        "title": "一年实现营收超10倍增长，跃居亚马逊类目榜首，昂听ELEHEAR做对了什么？",
-        "source": "亿邦动力",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/pgyoSufk0AlRVdkXsmdp6g",
-        "summary": "",
-        "keywords": []
-      }
-    ],
     "Fbeauty未来迹": [
       {
         "id": 1240,
@@ -3470,6 +3506,24 @@
       }
     ],
     "财经早餐": [
+      {
+        "id": 1252,
+        "title": "拟80亿回购，中际旭创究竟想守什么？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/5RRu6UcZaSfMhTK6SQl7sQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1253,
+        "title": "【财经早餐】2026.07.30星期四",
+        "source": "财经早餐",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/L5Lp04-Z5dkY8r8RufDK3w",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1208,
         "title": "业绩涨，股价跌，算力的尽头是算账？",
@@ -5489,6 +5543,15 @@
       }
     ],
     "铱星云商": [
+      {
+        "id": 1258,
+        "title": "五感共生，情绪造场：重塑商业空间感官竞争力——中购联2026品牌沙龙即将启幕！",
+        "source": "铱星云商",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/TyqJAOw4pyJDZTZL1j3iUw",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1215,
         "title": "商场6月开关店“红黑榜”：星巴克重启增长，周大福闭店55家",
