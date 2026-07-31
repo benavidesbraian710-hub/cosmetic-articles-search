@@ -4,10 +4,10 @@
     "total_articles": 707,
     "source_count": 18,
     "date_range": {
-      "start": "",
+      "start": "2026-06-15",
       "end": "2026-07-31"
     },
-    "last_update": "2026-07-31T14:40:20.869096"
+    "last_update": "2026-07-31T14:44:04.789126"
   },
   "sources": [
     {
@@ -3678,6 +3678,24 @@
         "keywords": []
       },
       {
+        "id": 1192,
+        "title": "",
+        "source": "财经早餐",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/eVqDAmuUUnNt_3CRgdxCTA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1193,
+        "title": "",
+        "source": "财经早餐",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/yWpIYYzBkfjaRjJ8Z0-ZsQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1054,
         "title": "长鑫真正值钱的，不只是芯片",
         "source": "财经早餐",
@@ -4025,24 +4043,6 @@
         "source": "财经早餐",
         "publish_date": "2026-07-10",
         "url": "https://mp.weixin.qq.com/s/_FYNqqDkTV5LztybvFpe9w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1192,
-        "title": "",
-        "source": "财经早餐",
-        "publish_date": "",
-        "url": "https://mp.weixin.qq.com/s/eVqDAmuUUnNt_3CRgdxCTA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1193,
-        "title": "",
-        "source": "财经早餐",
-        "publish_date": "",
-        "url": "https://mp.weixin.qq.com/s/yWpIYYzBkfjaRjJ8Z0-ZsQ",
         "summary": "",
         "keywords": []
       }
@@ -5742,6 +5742,15 @@
         "keywords": []
       },
       {
+        "id": 1194,
+        "title": "",
+        "source": "铱星云商",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/7Xlhh5g8SiA9kf21B9SCow",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1061,
         "title": "广州太古汇三期迎新进展、郑州二七万象城二期冲刺开业；砂之船上海22万方微度假奥莱设计方案公示；百联奥莱首进中原……",
         "source": "铱星云商",
@@ -5891,15 +5900,6 @@
         "source": "铱星云商",
         "publish_date": "2026-07-10",
         "url": "https://mp.weixin.qq.com/s/tTSH0FoyAIqLm_zF3N3S8g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1194,
-        "title": "",
-        "source": "铱星云商",
-        "publish_date": "",
-        "url": "https://mp.weixin.qq.com/s/7Xlhh5g8SiA9kf21B9SCow",
         "summary": "",
         "keywords": []
       }
@@ -6088,6 +6088,42 @@
     ],
     "WWD 国际时尚特讯": [
       {
+        "id": 1259,
+        "title": "美妆观察｜香水的新叙事：当博主品牌、百年品牌和奢侈巨头都在重做同一件事",
+        "source": "WWD 国际时尚特讯",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/_DFZtq5hN7ZCyFmAWi-31Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1260,
+        "title": "商业洞察｜金价摇摆，中国黄金巨头不再“看天吃饭”",
+        "source": "WWD 国际时尚特讯",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/mJMnydFOfAWdmCnVZuQEVA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1261,
+        "title": "SJ 全球供应链｜酶法回收击穿工业化门槛，中国纺织押哪条线？",
+        "source": "WWD 国际时尚特讯",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/9cdnCgOunK2apL5uyYnfcg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1262,
+        "title": "全球动态｜开云集团第二季度业绩回暖；爱马仕第二季度营收增长 6.7%；EssilorLuxottica 上半年营业利润增长 15%",
+        "source": "WWD 国际时尚特讯",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/tlUZ-5VZ6GvcaNKCe6Gwrw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1217,
         "title": "国际鞋履｜方头运动鞋美学风潮闪耀今夏",
         "source": "WWD 国际时尚特讯",
@@ -6156,42 +6192,6 @@
         "source": "WWD 国际时尚特讯",
         "publish_date": "2026-07-29",
         "url": "https://mp.weixin.qq.com/s/6CjGzd6zntaUXgvef3Cdlw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1259,
-        "title": "美妆观察｜香水的新叙事：当博主品牌、百年品牌和奢侈巨头都在重做同一件事",
-        "source": "WWD 国际时尚特讯",
-        "publish_date": "",
-        "url": "https://mp.weixin.qq.com/s/_DFZtq5hN7ZCyFmAWi-31Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1260,
-        "title": "商业洞察｜金价摇摆，中国黄金巨头不再“看天吃饭”",
-        "source": "WWD 国际时尚特讯",
-        "publish_date": "",
-        "url": "https://mp.weixin.qq.com/s/mJMnydFOfAWdmCnVZuQEVA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1261,
-        "title": "SJ 全球供应链｜酶法回收击穿工业化门槛，中国纺织押哪条线？",
-        "source": "WWD 国际时尚特讯",
-        "publish_date": "",
-        "url": "https://mp.weixin.qq.com/s/9cdnCgOunK2apL5uyYnfcg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1262,
-        "title": "全球动态｜开云集团第二季度业绩回暖；爱马仕第二季度营收增长 6.7%；EssilorLuxottica 上半年营业利润增长 15%",
-        "source": "WWD 国际时尚特讯",
-        "publish_date": "",
-        "url": "https://mp.weixin.qq.com/s/tlUZ-5VZ6GvcaNKCe6Gwrw",
         "summary": "",
         "keywords": []
       }
@@ -6290,6 +6290,24 @@
     ],
     "Vogue Business": [
       {
+        "id": 1265,
+        "title": "当数学家戴上卡地亚：没有成就，何谈风格",
+        "source": "Vogue Business",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/PXwk8W8kLTdAdQX07t0nbA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1266,
+        "title": "Top News: Kolon 上半年销售有望突破 31.5 亿元；Bally 被瑞士破产管理办公室接管",
+        "source": "Vogue Business",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/BVKT83jiNSoqlde_N9LIuw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1230,
         "title": "LVMH 半年赚 87 亿欧元",
         "source": "Vogue Business",
@@ -6335,28 +6353,10 @@
         "keywords": []
       },
       {
-        "id": 1265,
-        "title": "当数学家戴上卡地亚：没有成就，何谈风格",
-        "source": "Vogue Business",
-        "publish_date": "",
-        "url": "https://mp.weixin.qq.com/s/PXwk8W8kLTdAdQX07t0nbA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1266,
-        "title": "Top News: Kolon 上半年销售有望突破 31.5 亿元；Bally 被瑞士破产管理办公室接管",
-        "source": "Vogue Business",
-        "publish_date": "",
-        "url": "https://mp.weixin.qq.com/s/BVKT83jiNSoqlde_N9LIuw",
-        "summary": "",
-        "keywords": []
-      },
-      {
         "id": 1267,
         "title": "新帅上任近一年，Gucci 母公司重返增长轨道",
         "source": "Vogue Business",
-        "publish_date": "",
+        "publish_date": "2026-07-29",
         "url": "https://mp.weixin.qq.com/s/6kn3A_3gSTzKDy6SYoE47w",
         "summary": "",
         "keywords": []
@@ -6412,7 +6412,7 @@
         "id": 1263,
         "title": "时隔二十年重启香水线，Gap能讲出新故事吗？",
         "source": "化妆品财经在线",
-        "publish_date": "",
+        "publish_date": "2026-07-29",
         "url": "https://mp.weixin.qq.com/s/Q6r7P6t6vkCHvb6aSxei3w",
         "summary": "",
         "keywords": []
@@ -6421,7 +6421,7 @@
         "id": 1264,
         "title": "销量创十年最佳，联合利华上调全年指引",
         "source": "化妆品财经在线",
-        "publish_date": "",
+        "publish_date": "2026-07-29",
         "url": "https://mp.weixin.qq.com/s/uXKYYg-ijx-iut-5Itmh9Q",
         "summary": "",
         "keywords": []
