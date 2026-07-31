@@ -1,18 +1,18 @@
 {
   "version": "v31",
   "stats": {
-    "total_articles": 685,
+    "total_articles": 707,
     "source_count": 18,
     "date_range": {
       "start": "",
-      "end": "2026-07-30"
+      "end": "2026-07-31"
     },
-    "last_update": "2026-07-30T15:56:43.430751"
+    "last_update": "2026-07-31T14:40:20.869096"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 96
+      "count": 99
     },
     {
       "name": "化妆品观察 品观",
@@ -20,47 +20,47 @@
     },
     {
       "name": "亿邦动力",
-      "count": 74
+      "count": 78
     },
     {
       "name": "中国化妆品",
-      "count": 71
+      "count": 73
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 54
+      "count": 57
     },
     {
       "name": "财经早餐",
-      "count": 46
+      "count": 48
     },
     {
       "name": "妆研24小时",
-      "count": 44
+      "count": 45
     },
     {
       "name": "非科学美妆传播",
-      "count": 36
+      "count": 37
     },
     {
       "name": "肤见未来实验室",
-      "count": 34
+      "count": 35
+    },
+    {
+      "name": "妆合规",
+      "count": 33
     },
     {
       "name": "原料合规观察",
       "count": 33
     },
     {
-      "name": "妆合规",
-      "count": 32
-    },
-    {
       "name": "铱星云商",
-      "count": 21
+      "count": 22
     },
     {
       "name": "KEV美妆",
-      "count": 18
+      "count": 20
     },
     {
       "name": "WWD 国际时尚特讯",
@@ -80,11 +80,38 @@
     },
     {
       "name": "上海日化协会",
-      "count": 5
+      "count": 6
     }
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 1277,
+        "title": "燕窝酸与视黄醇：皮肤抗衰的协同新策略",
+        "source": "个护前沿",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/qLkgzaaFj8RRafgZKVaCFw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1278,
+        "title": "玻尿酸、胶原都不新了，创新空间究竟还剩多少？",
+        "source": "个护前沿",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/eX4NDnJOzJ6_SHbQVsex_g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1279,
+        "title": "重大利好！化妆品注册备案全面“松绑”",
+        "source": "个护前沿",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/A5pH24qt_Ll7Hp0SXvvxBQ",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1242,
         "title": "刚刚！联合利华中国重回增长",
@@ -1710,6 +1737,42 @@
     ],
     "亿邦动力": [
       {
+        "id": 1285,
+        "title": "拼多多盯上AI玩具，新设类目并开启招商",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/7jgH0rya2ooMaZ6BuXJs6g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1286,
+        "title": "跨境电商服务商直面AI能力分水岭，率先跨越者将智胜新周期",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/3jIm6osO4EL6h5kHUKXkvw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1287,
+        "title": "阳采集团：AI赋能五大端口，实现从传统贸易商向数智供应链服务商转型",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/gNt3PLXjAoQl-x0na908jg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1288,
+        "title": "景区门票不好卖了？美团启动景点游玩业务服务商招募",
+        "source": "亿邦动力",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/I7dnysWsTFm0gRx9JiTUkw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1254,
         "title": "支付宝升级AI开发者激励，最高5660元Token补贴覆盖个人开发者",
         "source": "亿邦动力",
@@ -2378,6 +2441,24 @@
     ],
     "中国化妆品": [
       {
+        "id": 1280,
+        "title": "开幕在即！2026PCHi领袖峰会完整议程揭晓，会议亮点与参展企业名录一文全览",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/95wUvgMxl1fO1ZLOSsKYFg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1281,
+        "title": "山东省药监局五分局开展香水花露水类化妆品重点检查；欧莱雅上半年销售额达1845亿元，创历年最佳；瑞维斐完成第三款肽类原料备案",
+        "source": "中国化妆品",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/zhFL2EZLHTPM8uzFJ7h5ow",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1250,
         "title": "重磅发布：INPD 2026设立“年度领创大奖”！国际化妆品创新匹亚峰会最高荣誉虚位以待",
         "source": "中国化妆品",
@@ -3019,6 +3100,33 @@
     ],
     "Fbeauty未来迹": [
       {
+        "id": 1271,
+        "title": "深度｜当618不再托底，美妆行业换了三台发动机",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/Ej0FayT2Aa_ezRETAvxCWg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1272,
+        "title": "深度 | 欧莱雅中国重新加速：高端吃红利、AI抢未来",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/F-zaqIeDBie_6LuSh4D2-w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1273,
+        "title": "交出史上最强成绩单，宝洁重新定义“宝洁中国”",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/EfTbkSCql9DdrX65s4iaFw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1240,
         "title": "填补国内空白！珂谧牵头制定重组胶原渗透标准",
         "source": "Fbeauty未来迹",
@@ -3507,6 +3615,24 @@
     ],
     "财经早餐": [
       {
+        "id": 1283,
+        "title": "银行股大爆发，“老登股”牛市来了？",
+        "source": "财经早餐",
+        "publish_date": "2026-07-31",
+        "url": "https://mp.weixin.qq.com/s/rbMFD4rB0qkcDTjQWp51aQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1284,
+        "title": "【财经早餐】2026.07.31星期五",
+        "source": "财经早餐",
+        "publish_date": "2026-07-31",
+        "url": "https://mp.weixin.qq.com/s/CAOmmi0D7jtAq9IY37C-EQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1252,
         "title": "拟80亿回购，中际旭创究竟想守什么？",
         "source": "财经早餐",
@@ -3923,6 +4049,15 @@
     ],
     "妆研24小时": [
       {
+        "id": 1268,
+        "title": "喜讯！中贸助力湃肽生物新添一款环肽新原料备案",
+        "source": "妆研24小时",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/321ogW_WX34lA7nNrPsgRw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1235,
         "title": "重磅！国家药监局发布优化化妆品注册备案管理公告，企业迎八大利好",
         "source": "妆研24小时",
@@ -4321,6 +4456,15 @@
     ],
     "非科学美妆传播": [
       {
+        "id": 1269,
+        "title": "欧莱雅｜GeroScience 2026｜关于细胞衰老两类解决方案Senolytics清除剂和Senomorphics抑制剂的综述",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/hWE8vRP8hKOHdbdNSgUwkw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1236,
         "title": "联合利华｜ED 2026｜睡茄外泌体应对脱发：可促进毛乳头细胞分泌VEGF，共培养模型促血管生成，在体外毛囊实现促毛干生长",
         "source": "非科学美妆传播",
@@ -4647,6 +4791,15 @@
     ],
     "肤见未来实验室": [
       {
+        "id": 1282,
+        "title": "学术前沿：皮肤伤口愈合的关键机制及人与小鼠修复差异研究",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-07-31",
+        "url": "https://mp.weixin.qq.com/s/uEUBULbH7uvNZK9DVIC4tg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1245,
         "title": "指南与共识|干细胞在整形修复美容领域研究和临床试验的专家共识",
         "source": "肤见未来实验室",
@@ -4953,6 +5106,305 @@
         "keywords": []
       }
     ],
+    "妆合规": [
+      {
+        "id": 1270,
+        "title": "网络公开课（8月11日）：中国化妆品新原料最新法规动向及通则解读",
+        "source": "妆合规",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/wlQHo0fuKvVh5AX3bJddAw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1239,
+        "title": "2028年7月1日生效！美国伊利诺伊州将禁用PFAS在内的24种化妆品原料",
+        "source": "妆合规",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/x210hK8jg_wk_UhSas4lyg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1177,
+        "title": "盘点！2026年已生效实施化妆品法规",
+        "source": "妆合规",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/QZ34XbzE58bybxLcDLWXxw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1006,
+        "title": "网络公开课(7月31日)：日本化妆品企业如何应对中国台湾化妆品新规",
+        "source": "妆合规",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/RFLPAGQ7IjF8WXOfSdVy2g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1007,
+        "title": "化妆品QA汇编3-普通化妆品备案（儿童化妆品）",
+        "source": "妆合规",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/rye7JAjKqlr7WBH1zkBidw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1008,
+        "title": "有关检验方法，2项化妆品标准公开征求意见！",
+        "source": "妆合规",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/PXI5anLlCb5aqGi_u0omcA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 977,
+        "title": "全球化妆品法规动态第40期-2026年6月",
+        "source": "妆合规",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/ICSDs7vb0ofq8EdDjI0ltA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 891,
+        "title": "国家药监局征求化妆品安全技术规范（2015年版）修订实施意见",
+        "source": "妆合规",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/Acy0tWfaE_5oqoqcQ58arQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 877,
+        "title": "最新！欧盟化妆品法规更新：涉及附录II、III、V",
+        "source": "妆合规",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/xPFF7nMTyhOJ7T7TKIk3qQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 847,
+        "title": "化妆品个性化服务试点已覆盖23省（区，市）！附政策梳理",
+        "source": "妆合规",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/fCvF5h2Bg3SnoXaVSDn05A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 822,
+        "title": "一文读懂《化妆品新原料注册备案资料技术通则》核心要点",
+        "source": "妆合规",
+        "publish_date": "2026-07-09",
+        "url": "https://mp.weixin.qq.com/s/vPrAk_NQjTN8rbzihx8I4w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 823,
+        "title": "瑞旭集团（CIRS）受邀出席In-cosmetics Korea 2026并发表主题演讲",
+        "source": "妆合规",
+        "publish_date": "2026-07-09",
+        "url": "https://mp.weixin.qq.com/s/s1IXq9NDJvMaE6ZKWtGBPw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 742,
+        "title": "网络公开课(7月31日)：日本化妆品企业如何应对中国台湾化妆品新规",
+        "source": "妆合规",
+        "publish_date": "2026-07-08",
+        "url": "https://mp.weixin.qq.com/s/4udFuvgBoF3W_IysiX6l6g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 743,
+        "title": "Global CosIng 2.0正式上线！多语言·自定义追踪·更低成本·重塑化妆品原料合规",
+        "source": "妆合规",
+        "publish_date": "2026-07-08",
+        "url": "https://mp.weixin.qq.com/s/PWR6q7YiFYxaKkWcuIo2Iw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 744,
+        "title": "一文教会你快速使用SARA-ICE 推导皮肤致敏潜力——基于最新OECD Guideline No. 497的技术整理",
+        "source": "妆合规",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/nz3hfOPQETekWv-TJRtg_w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 745,
+        "title": "中国化妆品监督抽检数据汇总报告-2026年6月",
+        "source": "妆合规",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/0LsRMIP-8XmJhw3Czb1hjA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 746,
+        "title": "网络公开课(7月7日)：日本美妆市场准入双轨制——化妆品与医药部外品合规解析",
+        "source": "妆合规",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/JrXyeEqOZCgogYxA0UGjBA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 747,
+        "title": "2026年6月化妆品新原料备案最新情况分析报告",
+        "source": "妆合规",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/Iat81oK-dKm5r2gjO_ejRg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 748,
+        "title": "企业合规倒计时！欧盟香精过敏原扩充至81种",
+        "source": "妆合规",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/G2PdK2ywfAbaQ2BE9ye9pg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 749,
+        "title": "网络公开课(7月7日)：日本美妆市场准入双轨制——化妆品与医药部外品合规解析",
+        "source": "妆合规",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/dzhPkABln9nmdIwQ9_po1A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 750,
+        "title": "化妆品新原料新规发布，附官方政策解读！",
+        "source": "妆合规",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/jeppBVw_5y0TW5kaaUqpkQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 751,
+        "title": "化妆品企业注意！化妆品终产品中新化学物质或纳入登记管理--生态环境部12号令修订对化妆品企业影响解析",
+        "source": "妆合规",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/HfYthpPHSjULT4jM4sM2pA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 752,
+        "title": "瑞旭集团（CIRS）受邀参加欧洲化妆品协会年会CEAC 2026",
+        "source": "妆合规",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/zbMmgtlPMhUhCr67m1aEIw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 753,
+        "title": "网络公开课(7月7日)：日本美妆市场准入双轨制——化妆品与医药部外品合规解析",
+        "source": "妆合规",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/BOQ2nnvA2FXG2kw4lUFBog",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 754,
+        "title": "新原料备案 | 新增白鬼笔（PHALLUS IMPUDICUS）子实体提取物等六款新原料通过备案",
+        "source": "妆合规",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/Xs4yxgRg08KF1rOt959FLQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 755,
+        "title": "化妆品QA汇编2-新原料注册备案&amp;普通化妆品备案",
+        "source": "妆合规",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/4zrmVvV6_ryonxecvK23-g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 756,
+        "title": "全球化妆品法规动态第39期-2026年5月",
+        "source": "妆合规",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/mUI1LxR4Vu0b6ltfx9WXPA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 757,
+        "title": "【CIRS功效评价与技术实践】第23期——头皮与面部皮肤的隐秘关联",
+        "source": "妆合规",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/wBPSISMqc19N2MAnWW2kUg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 758,
+        "title": "有关化妆品不良反应，2项强制性国标公开征求意见",
+        "source": "妆合规",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/F1wLSULbYjjPrdhA3MfvZA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 759,
+        "title": "网络专题会(6月29日)——化妆品出海欧盟：从安全评估（CPSR）到包装合规（PPWR）全链路解析",
+        "source": "妆合规",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/RgETyeZYinxuoB_LVI0qFg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 760,
+        "title": "网络公开课：2026关键倒计时—韩国化妆品企业如何应对中国台湾化妆品新规(6月19日)",
+        "source": "妆合规",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/cNknLclqOb1XZ0tHk8hF6w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 761,
+        "title": "法规公开课：GB 26396-2026 洗涤用品安全技术规范最新解读 (6月18日)",
+        "source": "妆合规",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/HgyAowK4metXSCXxN47eCA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 762,
+        "title": "2026年化妆品新原料备案数量已超100款！",
+        "source": "妆合规",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/CnbNdyIcxgi3mSZnqDBsdw",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "原料合规观察": [
       {
         "id": 1237,
@@ -5252,297 +5704,16 @@
         "keywords": []
       }
     ],
-    "妆合规": [
-      {
-        "id": 1239,
-        "title": "2028年7月1日生效！美国伊利诺伊州将禁用PFAS在内的24种化妆品原料",
-        "source": "妆合规",
-        "publish_date": "2026-07-29",
-        "url": "https://mp.weixin.qq.com/s/x210hK8jg_wk_UhSas4lyg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1177,
-        "title": "盘点！2026年已生效实施化妆品法规",
-        "source": "妆合规",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/QZ34XbzE58bybxLcDLWXxw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1006,
-        "title": "网络公开课(7月31日)：日本化妆品企业如何应对中国台湾化妆品新规",
-        "source": "妆合规",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/RFLPAGQ7IjF8WXOfSdVy2g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1007,
-        "title": "化妆品QA汇编3-普通化妆品备案（儿童化妆品）",
-        "source": "妆合规",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/rye7JAjKqlr7WBH1zkBidw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1008,
-        "title": "有关检验方法，2项化妆品标准公开征求意见！",
-        "source": "妆合规",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/PXI5anLlCb5aqGi_u0omcA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 977,
-        "title": "全球化妆品法规动态第40期-2026年6月",
-        "source": "妆合规",
-        "publish_date": "2026-07-20",
-        "url": "https://mp.weixin.qq.com/s/ICSDs7vb0ofq8EdDjI0ltA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 891,
-        "title": "国家药监局征求化妆品安全技术规范（2015年版）修订实施意见",
-        "source": "妆合规",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/Acy0tWfaE_5oqoqcQ58arQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 877,
-        "title": "最新！欧盟化妆品法规更新：涉及附录II、III、V",
-        "source": "妆合规",
-        "publish_date": "2026-07-15",
-        "url": "https://mp.weixin.qq.com/s/xPFF7nMTyhOJ7T7TKIk3qQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 847,
-        "title": "化妆品个性化服务试点已覆盖23省（区，市）！附政策梳理",
-        "source": "妆合规",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/fCvF5h2Bg3SnoXaVSDn05A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 822,
-        "title": "一文读懂《化妆品新原料注册备案资料技术通则》核心要点",
-        "source": "妆合规",
-        "publish_date": "2026-07-09",
-        "url": "https://mp.weixin.qq.com/s/vPrAk_NQjTN8rbzihx8I4w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 823,
-        "title": "瑞旭集团（CIRS）受邀出席In-cosmetics Korea 2026并发表主题演讲",
-        "source": "妆合规",
-        "publish_date": "2026-07-09",
-        "url": "https://mp.weixin.qq.com/s/s1IXq9NDJvMaE6ZKWtGBPw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 742,
-        "title": "网络公开课(7月31日)：日本化妆品企业如何应对中国台湾化妆品新规",
-        "source": "妆合规",
-        "publish_date": "2026-07-08",
-        "url": "https://mp.weixin.qq.com/s/4udFuvgBoF3W_IysiX6l6g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 743,
-        "title": "Global CosIng 2.0正式上线！多语言·自定义追踪·更低成本·重塑化妆品原料合规",
-        "source": "妆合规",
-        "publish_date": "2026-07-08",
-        "url": "https://mp.weixin.qq.com/s/PWR6q7YiFYxaKkWcuIo2Iw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 744,
-        "title": "一文教会你快速使用SARA-ICE 推导皮肤致敏潜力——基于最新OECD Guideline No. 497的技术整理",
-        "source": "妆合规",
-        "publish_date": "2026-07-07",
-        "url": "https://mp.weixin.qq.com/s/nz3hfOPQETekWv-TJRtg_w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 745,
-        "title": "中国化妆品监督抽检数据汇总报告-2026年6月",
-        "source": "妆合规",
-        "publish_date": "2026-07-06",
-        "url": "https://mp.weixin.qq.com/s/0LsRMIP-8XmJhw3Czb1hjA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 746,
-        "title": "网络公开课(7月7日)：日本美妆市场准入双轨制——化妆品与医药部外品合规解析",
-        "source": "妆合规",
-        "publish_date": "2026-07-03",
-        "url": "https://mp.weixin.qq.com/s/JrXyeEqOZCgogYxA0UGjBA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 747,
-        "title": "2026年6月化妆品新原料备案最新情况分析报告",
-        "source": "妆合规",
-        "publish_date": "2026-07-03",
-        "url": "https://mp.weixin.qq.com/s/Iat81oK-dKm5r2gjO_ejRg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 748,
-        "title": "企业合规倒计时！欧盟香精过敏原扩充至81种",
-        "source": "妆合规",
-        "publish_date": "2026-07-01",
-        "url": "https://mp.weixin.qq.com/s/G2PdK2ywfAbaQ2BE9ye9pg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 749,
-        "title": "网络公开课(7月7日)：日本美妆市场准入双轨制——化妆品与医药部外品合规解析",
-        "source": "妆合规",
-        "publish_date": "2026-06-29",
-        "url": "https://mp.weixin.qq.com/s/dzhPkABln9nmdIwQ9_po1A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 750,
-        "title": "化妆品新原料新规发布，附官方政策解读！",
-        "source": "妆合规",
-        "publish_date": "2026-06-29",
-        "url": "https://mp.weixin.qq.com/s/jeppBVw_5y0TW5kaaUqpkQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 751,
-        "title": "化妆品企业注意！化妆品终产品中新化学物质或纳入登记管理--生态环境部12号令修订对化妆品企业影响解析",
-        "source": "妆合规",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/HfYthpPHSjULT4jM4sM2pA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 752,
-        "title": "瑞旭集团（CIRS）受邀参加欧洲化妆品协会年会CEAC 2026",
-        "source": "妆合规",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/zbMmgtlPMhUhCr67m1aEIw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 753,
-        "title": "网络公开课(7月7日)：日本美妆市场准入双轨制——化妆品与医药部外品合规解析",
-        "source": "妆合规",
-        "publish_date": "2026-06-24",
-        "url": "https://mp.weixin.qq.com/s/BOQ2nnvA2FXG2kw4lUFBog",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 754,
-        "title": "新原料备案 | 新增白鬼笔（PHALLUS IMPUDICUS）子实体提取物等六款新原料通过备案",
-        "source": "妆合规",
-        "publish_date": "2026-06-24",
-        "url": "https://mp.weixin.qq.com/s/Xs4yxgRg08KF1rOt959FLQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 755,
-        "title": "化妆品QA汇编2-新原料注册备案&amp;普通化妆品备案",
-        "source": "妆合规",
-        "publish_date": "2026-06-23",
-        "url": "https://mp.weixin.qq.com/s/4zrmVvV6_ryonxecvK23-g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 756,
-        "title": "全球化妆品法规动态第39期-2026年5月",
-        "source": "妆合规",
-        "publish_date": "2026-06-18",
-        "url": "https://mp.weixin.qq.com/s/mUI1LxR4Vu0b6ltfx9WXPA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 757,
-        "title": "【CIRS功效评价与技术实践】第23期——头皮与面部皮肤的隐秘关联",
-        "source": "妆合规",
-        "publish_date": "2026-06-16",
-        "url": "https://mp.weixin.qq.com/s/wBPSISMqc19N2MAnWW2kUg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 758,
-        "title": "有关化妆品不良反应，2项强制性国标公开征求意见",
-        "source": "妆合规",
-        "publish_date": "2026-06-16",
-        "url": "https://mp.weixin.qq.com/s/F1wLSULbYjjPrdhA3MfvZA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 759,
-        "title": "网络专题会(6月29日)——化妆品出海欧盟：从安全评估（CPSR）到包装合规（PPWR）全链路解析",
-        "source": "妆合规",
-        "publish_date": "2026-06-15",
-        "url": "https://mp.weixin.qq.com/s/RgETyeZYinxuoB_LVI0qFg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 760,
-        "title": "网络公开课：2026关键倒计时—韩国化妆品企业如何应对中国台湾化妆品新规(6月19日)",
-        "source": "妆合规",
-        "publish_date": "2026-06-15",
-        "url": "https://mp.weixin.qq.com/s/cNknLclqOb1XZ0tHk8hF6w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 761,
-        "title": "法规公开课：GB 26396-2026 洗涤用品安全技术规范最新解读 (6月18日)",
-        "source": "妆合规",
-        "publish_date": "2026-06-15",
-        "url": "https://mp.weixin.qq.com/s/HgyAowK4metXSCXxN47eCA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 762,
-        "title": "2026年化妆品新原料备案数量已超100款！",
-        "source": "妆合规",
-        "publish_date": "2026-06-15",
-        "url": "https://mp.weixin.qq.com/s/CnbNdyIcxgi3mSZnqDBsdw",
-        "summary": "",
-        "keywords": []
-      }
-    ],
     "铱星云商": [
+      {
+        "id": 1289,
+        "title": "6月商场客流报告：整体普降一成多，大中样本Mall日均减少超1万！",
+        "source": "铱星云商",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/AW3snpqOCbYHEPWYHVVMpg",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1258,
         "title": "五感共生，情绪造场：重塑商业空间感官竞争力——中购联2026品牌沙龙即将启幕！",
@@ -5734,6 +5905,24 @@
       }
     ],
     "KEV美妆": [
+      {
+        "id": 1274,
+        "title": "Fan Beauty Diary圣光绮梦红毯气垫家族；IPSA悦己香氛凝露；娇韵诗遮瑕膏... | 新品速递",
+        "source": "KEV美妆",
+        "publish_date": "2026-07-31",
+        "url": "https://mp.weixin.qq.com/s/QFC1bsHmQ5UiXJ5fVEM7hw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1275,
+        "title": "世界以C-Beauty呼唤我，我们如何作答",
+        "source": "KEV美妆",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/JqXEFlWzY9_5f2yewEWWRg",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1202,
         "title": "HBN「发光水pro」；倍至水光精华；林清轩墨旗男士控油洁面... | 新品速递",
@@ -6239,6 +6428,15 @@
       }
     ],
     "上海日化协会": [
+      {
+        "id": 1276,
+        "title": "从“测得出”到“说得清来源”，PDRN标准再进一步",
+        "source": "上海日化协会",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/Kzz_0UEaWzXQS1pIIGSVng",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 858,
         "title": "行业协会公众号的进化：从通知栏到工具箱——上海日用化学品行业协会公众号全新升级",
