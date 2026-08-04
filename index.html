@@ -292,6 +292,13 @@
                     '（显示 ' + filteredArticles.length + ' / ' + allArticles.length + ' 篇）';
             }
             
+            // 按日期倒序排列（最新在前）
+            filteredArticles.sort(function(a, b) {
+                var dateA = new Date(a.publish_date || '1970-01-01');
+                var dateB = new Date(b.publish_date || '1970-01-01');
+                return dateB - dateA;
+            });
+            
             renderArticles(filteredArticles);
         }
 
