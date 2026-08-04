@@ -1,22 +1,22 @@
 {
   "version": "v31",
   "stats": {
-    "total_articles": 766,
+    "total_articles": 787,
     "source_count": 18,
     "date_range": {
-      "start": "2026-06-15",
-      "end": "2026-08-03 09:00"
+      "start": "",
+      "end": "2026-08-04"
     },
-    "last_update": "2026-08-03T12:07:56.691680"
+    "last_update": "2026-08-04T10:58:52.280972"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 102
+      "count": 105
     },
     {
       "name": "亿邦动力",
-      "count": 88
+      "count": 92
     },
     {
       "name": "化妆品观察 品观",
@@ -24,19 +24,19 @@
     },
     {
       "name": "中国化妆品",
-      "count": 76
+      "count": 78
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 61
+      "count": 62
     },
     {
       "name": "财经早餐",
-      "count": 55
+      "count": 58
     },
     {
       "name": "妆研24小时",
-      "count": 49
+      "count": 51
     },
     {
       "name": "非科学美妆传播",
@@ -44,19 +44,19 @@
     },
     {
       "name": "肤见未来实验室",
-      "count": 36
+      "count": 38
     },
     {
       "name": "妆合规",
-      "count": 35
+      "count": 37
     },
     {
       "name": "原料合规观察",
-      "count": 34
+      "count": 35
     },
     {
       "name": "铱星云商",
-      "count": 25
+      "count": 26
     },
     {
       "name": "WWD 国际时尚特讯",
@@ -85,6 +85,24 @@
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 1355,
+        "title": "联合利华技术大牛，成了欧莱雅亚太总监",
+        "source": "个护前沿",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/uKT7x-RsmwA-eslHSQDtgA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1357,
+        "title": "珀莱雅原料商完成亿元级融资",
+        "source": "个护前沿",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/60MTZQjuNqo163GozgL4vw",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1312,
         "title": "出口771亿元，跃居全球第二，K-Beauty为何开始买海外工厂？",
@@ -1002,9 +1020,54 @@
         "url": "https://mp.weixin.qq.com/s/_4AWpZec8er_A1J12WmBKg",
         "summary": "",
         "keywords": []
+      },
+      {
+        "id": 1356,
+        "title": "",
+        "source": "个护前沿",
+        "publish_date": "",
+        "url": "https://mp.weixin.qq.com/s/LfpmsJi-sqPsYpT_BCArkw",
+        "summary": "",
+        "keywords": []
       }
     ],
     "亿邦动力": [
+      {
+        "id": 1365,
+        "title": "淘宝闪购“加时”、美团“停表”：外卖平台重新计算骑手配送时间",
+        "source": "亿邦动力",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/M6b58lu49RNdbuwRWq6mLQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1366,
+        "title": "快手入局AI互动内容，大厂抢滩“下一代内容”入口",
+        "source": "亿邦动力",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/eDIEIySpAtAAc3z4sRPmGA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1367,
+        "title": "宇树的光环有多重？",
+        "source": "亿邦动力",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/iomg8T14AMo8szjFg8PSIg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1368,
+        "title": "京东工业：五维合规管理，AI驱动筑牢电子商城运营风控防线",
+        "source": "亿邦动力",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/-tsSLMh9kcCL27DvrOGt-Q",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1329,
         "title": "抖音宣布升级未成年人模式适龄推荐算法；雷军回应小米为何要做增程车丨零售电商周报",
@@ -2558,6 +2621,24 @@
     ],
     "中国化妆品": [
       {
+        "id": 1358,
+        "title": "美妆闪电仓售假、母婴店标签违规、定妆喷雾仿冒知名品牌包装——一周七案揭示化妆品行业“新雷区” | 合规风向标总第104期",
+        "source": "中国化妆品",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/yawKSr7Gq2BmrQgNKZdSrQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1359,
+        "title": "云南省拟出台化妆品生产企业风险分级管理办法；Puig上半年销售额达23.5亿欧元，亚太区大涨20.9%；巴斯夫上半年营收2568亿元",
+        "source": "中国化妆品",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/bZ2At-tHXR4W57d9m88tPg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1315,
         "title": "国家药监局发布优化化妆品注册备案管理公告：自然堂布局香氛赛道，50亿级国货美妆品牌开启香水新探索；国外多家化妆品公司发布上半年财报",
         "source": "中国化妆品",
@@ -3244,6 +3325,15 @@
     ],
     "Fbeauty未来迹": [
       {
+        "id": 1354,
+        "title": "深度 | 1000元头皮精华背后的两场攻坚战",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/jgwdAZ_17ym5yH8f3BlE7Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1308,
         "title": "2.7万个品牌退场后，这批美妆新面孔为什么还敢入局？",
         "source": "Fbeauty未来迹",
@@ -3795,6 +3885,33 @@
     ],
     "财经早餐": [
       {
+        "id": 1362,
+        "title": "量化私募，为何跌落神坛？",
+        "source": "财经早餐",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/Y5pGkXThfsuxsei5lcytHw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1363,
+        "title": "AI再牛，还是要看天气脸色",
+        "source": "财经早餐",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/hs1qccLabFKJROCu3bcg_g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1364,
+        "title": "【财经早餐】2026.08.04星期二",
+        "source": "财经早餐",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/sUvHMWIlOW-mED5PCI92-A",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1319,
         "title": "当AI批量进厂：常州智造“进化论”",
         "source": "财经早餐",
@@ -4291,6 +4408,24 @@
       }
     ],
     "妆研24小时": [
+      {
+        "id": 1349,
+        "title": "上美子公司备案2款新原料",
+        "source": "妆研24小时",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/sUdm_9aNdNfGo1m7JIm1TQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1350,
+        "title": "相约新加坡：聚焦全球化妆品法规与可持续发展实践",
+        "source": "妆研24小时",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/VVkXWtsRwykVHDEPiy8oTQ",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1300,
         "title": "中检院最新问答：配方近似产品资料共用、生产场地变更要点解读",
@@ -5079,6 +5214,24 @@
     ],
     "肤见未来实验室": [
       {
+        "id": 1360,
+        "title": "间充质漂移：找到各类衰老背后共同的核心通路",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/6xwpu6Sxh1REhGeoOTK3Eg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1361,
+        "title": "指南与共识 |  成纤维细胞生长因子皮肤科临床应用专家共识（2025版）",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/DtTQGDTfH6kEQkKFNd1_EA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1318,
         "title": "从皮肤代谢变化，看懂密罗木对肌肤状态的改善效果",
         "source": "肤见未来实验室",
@@ -5405,6 +5558,24 @@
     ],
     "妆合规": [
       {
+        "id": 1352,
+        "title": "冲向日本美妆市场前，先过这道「合规关」！",
+        "source": "妆合规",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/W7EAwcE7iFJ-AIQZT4JUYw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1353,
+        "title": "盘点！2026年即将生效实施化妆品法规",
+        "source": "妆合规",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/KSCz0hneRZSQur9_Uvjd3Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1306,
         "title": "重磅！国家药监局发布化妆品注册备案八大有关事项，附官方政策解读",
         "source": "妆合规",
@@ -5722,6 +5893,15 @@
     ],
     "原料合规观察": [
       {
+        "id": 1351,
+        "title": "上美股份备案2款肽类新原料",
+        "source": "原料合规观察",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/S-yfOuv6VzdKYBogy1qLfQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1305,
         "title": "化妆品新原料新规解读：“已有安全背景信息”之定量构效关系模型",
         "source": "原料合规观察",
@@ -6029,6 +6209,15 @@
       }
     ],
     "铱星云商": [
+      {
+        "id": 1369,
+        "title": "新Mall月览｜7月开业23个项目超95万㎡，新开商业越来越“开放”？",
+        "source": "铱星云商",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/BVd3yOgJF0gM_T8Mnqtt2w",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1326,
         "title": "嘉里联合华之门溢价80%拿下新杨思旗舰商业地块；恒隆、太古公布2026上半年商场业绩……",
