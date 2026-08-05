@@ -165,8 +165,6 @@ def navigate_to_account(account_name: str):
     hotkey("cmd,v")
     time.sleep(0.5)
     
-    print("回车搜索...")
-    press("return")
     time.sleep(3)  # 搜索后等待3秒（2026-07-27 Nick要求）
     
     # 所有公众号统一点击第一个选项进入（2026-07-28 Nick要求：不按Enter，全部点击坐标）
