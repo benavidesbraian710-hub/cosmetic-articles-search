@@ -1,22 +1,22 @@
 {
   "version": "v31",
   "stats": {
-    "total_articles": 801,
+    "total_articles": 825,
     "source_count": 18,
     "date_range": {
-      "start": "2026-06-15",
-      "end": "2026-08-04"
+      "start": "",
+      "end": "2026-08-05"
     },
-    "last_update": "2026-08-04T16:42:29.139334"
+    "last_update": "2026-08-05T15:45:50.069859"
   },
   "sources": [
     {
       "name": "个护前沿",
-      "count": 105
+      "count": 108
     },
     {
       "name": "亿邦动力",
-      "count": 92
+      "count": 96
     },
     {
       "name": "化妆品观察 品观",
@@ -24,27 +24,27 @@
     },
     {
       "name": "中国化妆品",
-      "count": 78
+      "count": 80
     },
     {
       "name": "Fbeauty未来迹",
-      "count": 62
+      "count": 64
     },
     {
       "name": "财经早餐",
-      "count": 58
+      "count": 62
     },
     {
       "name": "妆研24小时",
-      "count": 51
-    },
-    {
-      "name": "非科学美妆传播",
-      "count": 38
+      "count": 53
     },
     {
       "name": "肤见未来实验室",
-      "count": 38
+      "count": 40
+    },
+    {
+      "name": "非科学美妆传播",
+      "count": 39
     },
     {
       "name": "妆合规",
@@ -55,16 +55,16 @@
       "count": 35
     },
     {
+      "name": "铱星云商",
+      "count": 27
+    },
+    {
       "name": "WWD 国际时尚特讯",
       "count": 27
     },
     {
-      "name": "铱星云商",
-      "count": 26
-    },
-    {
       "name": "KEV美妆",
-      "count": 20
+      "count": 21
     },
     {
       "name": "化妆品财经在线",
@@ -80,11 +80,38 @@
     },
     {
       "name": "上海日化协会",
-      "count": 6
+      "count": 8
     }
   ],
   "articles": {
     "个护前沿": [
+      {
+        "id": 1392,
+        "title": "国产医美巨头下场，“涂抹式CaHA”来了！",
+        "source": "个护前沿",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/fk4QHkR0SNFV6GvskcCVrQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1393,
+        "title": "不止一张“医用面膜”：医美术后修复正在进入材料与机制创新时代",
+        "source": "个护前沿",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/nMSB2GdKGHN-HdlIW1CDbQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1394,
+        "title": "国家药监局关于发布《化妆品中双氯芬酸钠的测定》等2项化妆品补充检验方法的公告",
+        "source": "个护前沿",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/QrB9m7Jrek6x2Z0BhipNDA",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1355,
         "title": "联合利华技术大牛，成了欧莱雅亚太总监",
@@ -1032,6 +1059,42 @@
       }
     ],
     "亿邦动力": [
+      {
+        "id": 1403,
+        "title": "美国eFiling新政实施：从清关时抽查到清关前申报 跨境产品合规监管全面收紧",
+        "source": "亿邦动力",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/85sI1OBfDjxlil4a6k9gEA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1404,
+        "title": "“人粮”爆火，打工人“时间贫困”的解药?",
+        "source": "亿邦动力",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/adnUTHBKfZ9Tc_6y0DE0Ig",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1405,
+        "title": "MORROR ART莫纳创始人张俭：爆品创造销售，作品创造品牌",
+        "source": "亿邦动力",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/gI-QN0xXb2m5e6TS3a8cCw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1406,
+        "title": "嘉立创深交所主板挂牌上市：股价涨146%，市值超千亿",
+        "source": "亿邦动力",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/kjTsKa3A86lkx37v-bm6UA",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1365,
         "title": "淘宝闪购“加时”、美团“停表”：外卖平台重新计算骑手配送时间",
@@ -2684,6 +2747,24 @@
     ],
     "中国化妆品": [
       {
+        "id": 1395,
+        "title": "国家药监局发布两项化妆品补充检验方法；再生医学护肤品牌“绽媄娅”正式更名为“绽美娅”；PAI Partners拟收购护肤品牌Elemis",
+        "source": "中国化妆品",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/xAX5z-WzsKz8QwiMdvcnPA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1396,
+        "title": "“下一个中国，还是中国”：从丝芙兰中国实践，洞察美妆零售新范式",
+        "source": "中国化妆品",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/z8UCbm704gpLMXfyyyG0lA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1358,
         "title": "美妆闪电仓售假、母婴店标签违规、定妆喷雾仿冒知名品牌包装——一周七案揭示化妆品行业“新雷区” | 合规风向标总第104期",
         "source": "中国化妆品",
@@ -3388,6 +3469,24 @@
     ],
     "Fbeauty未来迹": [
       {
+        "id": 1387,
+        "title": "防晒力93.9%好评，户外防晒还能往哪卷？",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/WHDRXAhLput7sVYRL7IRGQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1388,
+        "title": "深度 | 情绪不是玄学：美妆科研的下一个硬仗",
+        "source": "Fbeauty未来迹",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/Zm6uU4tpLpbG2oPBqNdiuQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1354,
         "title": "深度 | 1000元头皮精华背后的两场攻坚战",
         "source": "Fbeauty未来迹",
@@ -3948,6 +4047,42 @@
     ],
     "财经早餐": [
       {
+        "id": 1399,
+        "title": "39个分析师，0卖出：市场正在重新认识吉利",
+        "source": "财经早餐",
+        "publish_date": "2026-08-05",
+        "url": "https://mp.weixin.qq.com/s/GdiBnmgZ2efF5TtcNnZJig",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1400,
+        "title": "药明康德罕见涨停，创新药“补库存”？",
+        "source": "财经早餐",
+        "publish_date": "2026-08-05",
+        "url": "https://mp.weixin.qq.com/s/w9aGFOob9y7Kki7HvUDbLA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1401,
+        "title": "7月进口超20万吨，美国爆发史上最猛“抢铜潮”！",
+        "source": "财经早餐",
+        "publish_date": "2026-08-05",
+        "url": "https://mp.weixin.qq.com/s/_pKOkDy7JbRJCFSoYKjU7w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1402,
+        "title": "【财经早餐】2026.08.05星期三",
+        "source": "财经早餐",
+        "publish_date": "2026-08-05",
+        "url": "https://mp.weixin.qq.com/s/CHThgQ9MHmLuMXC9BOrCjg",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1362,
         "title": "量化私募，为何跌落神坛？",
         "source": "财经早餐",
@@ -4472,6 +4607,24 @@
     ],
     "妆研24小时": [
       {
+        "id": 1384,
+        "title": "7月化妆品法规新动态 | 国家药监局优化化妆品注册备案管理，《电子商务法》拟系统性修正…",
+        "source": "妆研24小时",
+        "publish_date": "2026-08-05",
+        "url": "https://mp.weixin.qq.com/s/WHhdC4oKQjBpgr4y-nDtPA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1385,
+        "title": "澳大利亚AICIS收紧视黄醛管控，引入途径迎来重大变更",
+        "source": "妆研24小时",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/_pcParDzkdT5j5lT-y_NHw",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1349,
         "title": "上美子公司备案2款新原料",
         "source": "妆研24小时",
@@ -4931,351 +5084,25 @@
         "keywords": []
       }
     ],
-    "非科学美妆传播": [
-      {
-        "id": 1304,
-        "title": "HBN｜JCD 2026｜补骨脂酚阿魏酸酯的背书文献出来了：一种新型功能性视黄醇类似物",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-08-02",
-        "url": "https://mp.weixin.qq.com/s/WhE1dVGLMf9YeOtuurKdBg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1269,
-        "title": "欧莱雅｜GeroScience 2026｜关于细胞衰老两类解决方案Senolytics清除剂和Senomorphics抑制剂的综述",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-30",
-        "url": "https://mp.weixin.qq.com/s/hWE8vRP8hKOHdbdNSgUwkw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1236,
-        "title": "联合利华｜ED 2026｜睡茄外泌体应对脱发：可促进毛乳头细胞分泌VEGF，共培养模型促血管生成，在体外毛囊实现促毛干生长",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-29",
-        "url": "https://mp.weixin.qq.com/s/3BDo6bzmUX_XxGQRYHYnaw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1195,
-        "title": "理肤泉｜ED 2026｜文献调研：马拉色菌在痤疮人群上，不同文献结论不同",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-28",
-        "url": "https://mp.weixin.qq.com/s/o9AMp9A8O_nnLiaP9Vvgag",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1053,
-        "title": "SJTU生医工&amp;雅诗兰黛中国｜FRBM 2026｜从「表观遗传」到「铁死亡」，再到「炎症性皮肤病」",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/7vnXfn94A3CghQUUYMuVFA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1002,
-        "title": "北科大&amp;花安堂｜COLLOID SURFACE B 2025｜稀有人参皂苷替代胆固醇，制备纳米脂质体，包裹麦角硫因和辅酶Q10；可增加麦角硫因转运效率",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/BrIMRRuSUUXA20vjSerM_w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 989,
-        "title": "花王Kao 2026｜喷雾人工仿生皮最新升级：超细纤维可溶解在护肤配方中直接使用",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/B4SGF_rg_qOq2u90dbfEww",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 968,
-        "title": "欧莱雅上海&amp;瑞金｜CCID 2026｜上海女性长期疲态千人样本调研：睡眠差→头皮敏感、肤色暗沉黑眼圈，压力大→头皮瘙痒、脱发",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-19",
-        "url": "https://mp.weixin.qq.com/s/tgYqolCU3mlF1L0kBotHQA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 953,
-        "title": "雅诗兰黛中国｜SR 2026｜中国男性皮肤特征的AI大数据分析，核心关注黑眼圈、出油、敏感，关联年龄、地域和生活方式",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/XPGVIpMbrMzutWfmcePbmA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 889,
-        "title": "这是昨天提到的花王 黑素参与烫染头发损伤 的视频",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/ai9FampQhF3ggYIIvr_hng",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 875,
-        "title": "Kao花王 2026｜染发后二硫键断裂带来的头发损伤与头发中的黑色素相关",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-15",
-        "url": "https://mp.weixin.qq.com/s/kJTAmXWCjTuEc-6QQ6LGGw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 845,
-        "title": "Kao花王 2026｜角质层改善不仅会影响表层的角质层RNA表达，也会影响更深层的皮肤内部RNA表达",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/A9jW_39QQQ5VNAqQTRMLHQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 827,
-        "title": "欧莱雅&amp;伦敦玛丽女王大学｜JID 2026｜三维面部衰老仿真模型，包含真表皮、皮下、韧带三层",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/WYNIe28GI-wgSYXx6NnYDA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 820,
-        "title": "资生堂｜情报2026｜环形胶原Ring Col是对抗皮肤松弛、提供轮廓维持张力的核心",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-09",
-        "url": "https://mp.weixin.qq.com/s/5sBjxJI07qT9cxsZZ0m8Gg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 718,
-        "title": "欧莱雅上海｜ED 2026｜【光污染黑】紫外线+污染通过激活AhR促黑的机理研究，白藜芦醇等可抑制AhR应对",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-08",
-        "url": "https://mp.weixin.qq.com/s/eRtfz378Aol_IOTtzCQ2gw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 719,
-        "title": "雅诗兰黛｜JCAD 2025｜Sirtuin靶向的护肤套组逆转衰老的功效验证",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-07",
-        "url": "https://mp.weixin.qq.com/s/ily6gpN4T6BdwBn9q1SiFA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 720,
-        "title": "Kose｜情报2026｜棕色脂肪细胞不仅可以燃烧产热，还可以增强皮肤屏障功能",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-06",
-        "url": "https://mp.weixin.qq.com/s/64Y-A4YAYAfbr2OH3O0ODQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 721,
-        "title": "联合利华&amp;伦敦玛丽女王大学｜BJD 2026｜头屑下的头皮菌群失调会引起AhR抑制，在皮肤模型和头皮活检下证实该通路，指导未来抗头屑产品开发",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-05",
-        "url": "https://mp.weixin.qq.com/s/vdCL5sfyJQjAYZ-epG1acg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 722,
-        "title": "Cosmax 2026｜后生元Untopinol中定量出环二肽Cyclo(Gly-Pro)，可通过抗炎改善特应性皮炎AD",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-04",
-        "url": "https://mp.weixin.qq.com/s/do6wMOgCfeA66tjOJEck8g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 723,
-        "title": "拜尔斯道夫｜Dermatol Ther 2026｜对面部的痤丙和表葡的综述，为活菌护肤做的基础研究积累的汇总",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-03",
-        "url": "https://mp.weixin.qq.com/s/XEQOjOVVXghUONg5WqIEOg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 724,
-        "title": "兰蔻&amp;欧莱雅｜IJCS 2026｜小黑瓶升级中CM-β葡聚糖，补足了从免疫到修护抗老的完整功效验证",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-02",
-        "url": "https://mp.weixin.qq.com/s/UcGbtIyUuv9qvfwwOfmmiQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 725,
-        "title": "LG｜MTBio 2026｜后秘贴精华中NAD+递送方案：离子耦合传递体复合物ICoN的设计方案和功能验证",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-07-01",
-        "url": "https://mp.weixin.qq.com/s/yXHKfyP7Qm0ld0eamU5ZYA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 726,
-        "title": "Science 2026｜泛素样修饰蛋白角度，上皮干性维持和终末分化的平衡，是通过NEDD8/SUMO2拮抗的转录后蛋白质重塑来维持",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-30",
-        "url": "https://mp.weixin.qq.com/s/Ki3vJf1xDDAWVSm9vOWoYw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 727,
-        "title": "京都大学&amp;LVMH｜SR 2026｜mRNA-encoded reporter系统的设计，实现线粒体相关的快速、高通量检测",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-29",
-        "url": "https://mp.weixin.qq.com/s/t0lrWBPlf2cFC4w0g9PUBQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 728,
-        "title": "Natue Biotech 2026｜空间转录组学在细胞外囊泡EVs上的应用实例",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-28",
-        "url": "https://mp.weixin.qq.com/s/We5XYFMxAvpp9nPOh5a9Zg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 729,
-        "title": "Ashland｜SID 2026｜围绕线粒体肽Humanin的长寿护肤成分故事",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-27",
-        "url": "https://mp.weixin.qq.com/s/-S99nzs1OaPoD2HCdUG6xQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 730,
-        "title": "欧莱雅日本｜IJCS2025｜从晒斑照片来区分晒黑色斑和PIH色斑的方法开发：利用黑素、血红蛋白拟合光学密度模型来定量色斑中的血红蛋白含量",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-26",
-        "url": "https://mp.weixin.qq.com/s/P7MhwUGI5qM_dswiBVDZDA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 731,
-        "title": "Nikkol日光&amp;欧莱雅日本｜Langmuir封面文章2026｜鼠李糖脂「去膜留菌」：仅剥离痤疮丙酸杆菌生物膜、保留细菌形态结构的机制探索",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-25",
-        "url": "https://mp.weixin.qq.com/s/xajsvuI78pcZdEOMPxz1YA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 732,
-        "title": "雅诗兰黛｜Scale2026｜LaMer精华可同时改善玫瑰痤疮、AD湿疹和高敏感皮肤各自的皮肤问题",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-24",
-        "url": "https://mp.weixin.qq.com/s/pO3mZAot4Mhad9DbZRH6Hg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 733,
-        "title": "Cosmax｜ACS Aenm 2026｜3%神经酰胺制备能「压电护肤」的乳霜，膏体揉搓时产生微电场，改善皮肤",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-23",
-        "url": "https://mp.weixin.qq.com/s/QbADzDc0zLaETTlxI0Ydxg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 734,
-        "title": "Seppic｜Gels 2026｜多种生物多糖增稠剂x不同绿色乳化工艺的交叉研究，探索迎合未来需求的绿色乳化方案",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-22",
-        "url": "https://mp.weixin.qq.com/s/2Ulwn4W2RA3k880At7eCZA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 735,
-        "title": "欧莱雅｜JDSS 2026｜海外复颜线的Triple Power保湿霜用于GLP-1司美脸的改善",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-21",
-        "url": "https://mp.weixin.qq.com/s/kh24aI1kJV4Vz1vRNIu91Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 736,
-        "title": "水羊&amp;农科院麻类所｜EUR FOOD RES TECHNOL 2026｜金银花双重发酵法，总多酚黄酮下降，抗氧能力反而提升",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-20",
-        "url": "https://mp.weixin.qq.com/s/etbFMunS_E2-TkzvPvadtQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 737,
-        "title": "Nature Health 2026｜大脑中微塑料来源的分析，化妆品使用是影响因素之一",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-19",
-        "url": "https://mp.weixin.qq.com/s/XuOg0J4o-X4_-h1QGg2fEg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 738,
-        "title": "Ciel&amp;日光｜JCCSJ 2022｜干燥带来NGF上调Sema3A下调，这可能带来神经伸长，从而解释皮肤进入高敏状态；SOD酶可逆转",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-18",
-        "url": "https://mp.weixin.qq.com/s/3WmguSnni5_nb0djr9Kd0w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 739,
-        "title": "拜尔斯道夫&amp;UMG｜Clin Epigenetics 2026｜全表观基因组关联研究解析出甲基化位点中加速/延缓因子，并验证二氢杨梅素的调控甲基化衰老能力",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-17",
-        "url": "https://mp.weixin.qq.com/s/LDA6RfFodJbf5p-nvuUP4w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 740,
-        "title": "溪木源SID&amp;相宜Pharmaceuticals｜均为皮质醇压力相关，对比阅读：溪木源山茶花可降低唾液皮质醇，相宜关注压力性皮肤色沉（如熬夜焦虑）",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-16",
-        "url": "https://mp.weixin.qq.com/s/wk4oGkhDoO3P2gHtTphgQA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 741,
-        "title": "雅诗兰黛｜SID 2026｜植物外泌体可以调控日夜受损下的肌肤炎症反应，体外实验中，有类比人源外泌体的功效",
-        "source": "非科学美妆传播",
-        "publish_date": "2026-06-15",
-        "url": "https://mp.weixin.qq.com/s/PMC2yca_GTPkuajAydxUMQ",
-        "summary": "",
-        "keywords": []
-      }
-    ],
     "肤见未来实验室": [
+      {
+        "id": 1397,
+        "title": "全线增长！欧莱雅皮肤科学美容显著跑赢集团整体",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-08-05",
+        "url": "https://mp.weixin.qq.com/s/jnpmTFKdPFZ7oU2kFoz6gw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1398,
+        "title": "年营收暴涨 24.6%！高德美增长密码：皮肤科学证据体系驱动三大板块协同发展",
+        "source": "肤见未来实验室",
+        "publish_date": "2026-08-05",
+        "url": "https://mp.weixin.qq.com/s/N7LyeHu0gubwxhpaclEbMA",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1360,
         "title": "间充质漂移：找到各类衰老背后共同的核心通路",
@@ -5615,6 +5442,359 @@
         "source": "肤见未来实验室",
         "publish_date": "2026-06-15",
         "url": "https://mp.weixin.qq.com/s/8nLjISn2uCIvxlQ3qBZTdg",
+        "summary": "",
+        "keywords": []
+      }
+    ],
+    "非科学美妆传播": [
+      {
+        "id": 1386,
+        "title": "理肤泉｜DT 2026｜12%VC在所有皮肤光型（白至深黑皮I-VI型）上的抗光老化（保护胶原&gt;弹性&gt;紧致度&gt;表皮厚度）验证",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/vlG1ykihyLxKzlfoxslBKw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1304,
+        "title": "HBN｜JCD 2026｜补骨脂酚阿魏酸酯的背书文献出来了：一种新型功能性视黄醇类似物",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-08-02",
+        "url": "https://mp.weixin.qq.com/s/WhE1dVGLMf9YeOtuurKdBg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1269,
+        "title": "欧莱雅｜GeroScience 2026｜关于细胞衰老两类解决方案Senolytics清除剂和Senomorphics抑制剂的综述",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/hWE8vRP8hKOHdbdNSgUwkw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1236,
+        "title": "联合利华｜ED 2026｜睡茄外泌体应对脱发：可促进毛乳头细胞分泌VEGF，共培养模型促血管生成，在体外毛囊实现促毛干生长",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/3BDo6bzmUX_XxGQRYHYnaw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1195,
+        "title": "理肤泉｜ED 2026｜文献调研：马拉色菌在痤疮人群上，不同文献结论不同",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/o9AMp9A8O_nnLiaP9Vvgag",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1053,
+        "title": "SJTU生医工&amp;雅诗兰黛中国｜FRBM 2026｜从「表观遗传」到「铁死亡」，再到「炎症性皮肤病」",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/7vnXfn94A3CghQUUYMuVFA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1002,
+        "title": "北科大&amp;花安堂｜COLLOID SURFACE B 2025｜稀有人参皂苷替代胆固醇，制备纳米脂质体，包裹麦角硫因和辅酶Q10；可增加麦角硫因转运效率",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/BrIMRRuSUUXA20vjSerM_w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 989,
+        "title": "花王Kao 2026｜喷雾人工仿生皮最新升级：超细纤维可溶解在护肤配方中直接使用",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/B4SGF_rg_qOq2u90dbfEww",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 968,
+        "title": "欧莱雅上海&amp;瑞金｜CCID 2026｜上海女性长期疲态千人样本调研：睡眠差→头皮敏感、肤色暗沉黑眼圈，压力大→头皮瘙痒、脱发",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/tgYqolCU3mlF1L0kBotHQA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 953,
+        "title": "雅诗兰黛中国｜SR 2026｜中国男性皮肤特征的AI大数据分析，核心关注黑眼圈、出油、敏感，关联年龄、地域和生活方式",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/XPGVIpMbrMzutWfmcePbmA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 889,
+        "title": "这是昨天提到的花王 黑素参与烫染头发损伤 的视频",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/ai9FampQhF3ggYIIvr_hng",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 875,
+        "title": "Kao花王 2026｜染发后二硫键断裂带来的头发损伤与头发中的黑色素相关",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/kJTAmXWCjTuEc-6QQ6LGGw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 845,
+        "title": "Kao花王 2026｜角质层改善不仅会影响表层的角质层RNA表达，也会影响更深层的皮肤内部RNA表达",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/A9jW_39QQQ5VNAqQTRMLHQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 827,
+        "title": "欧莱雅&amp;伦敦玛丽女王大学｜JID 2026｜三维面部衰老仿真模型，包含真表皮、皮下、韧带三层",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/WYNIe28GI-wgSYXx6NnYDA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 820,
+        "title": "资生堂｜情报2026｜环形胶原Ring Col是对抗皮肤松弛、提供轮廓维持张力的核心",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-09",
+        "url": "https://mp.weixin.qq.com/s/5sBjxJI07qT9cxsZZ0m8Gg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 718,
+        "title": "欧莱雅上海｜ED 2026｜【光污染黑】紫外线+污染通过激活AhR促黑的机理研究，白藜芦醇等可抑制AhR应对",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-08",
+        "url": "https://mp.weixin.qq.com/s/eRtfz378Aol_IOTtzCQ2gw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 719,
+        "title": "雅诗兰黛｜JCAD 2025｜Sirtuin靶向的护肤套组逆转衰老的功效验证",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-07",
+        "url": "https://mp.weixin.qq.com/s/ily6gpN4T6BdwBn9q1SiFA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 720,
+        "title": "Kose｜情报2026｜棕色脂肪细胞不仅可以燃烧产热，还可以增强皮肤屏障功能",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-06",
+        "url": "https://mp.weixin.qq.com/s/64Y-A4YAYAfbr2OH3O0ODQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 721,
+        "title": "联合利华&amp;伦敦玛丽女王大学｜BJD 2026｜头屑下的头皮菌群失调会引起AhR抑制，在皮肤模型和头皮活检下证实该通路，指导未来抗头屑产品开发",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-05",
+        "url": "https://mp.weixin.qq.com/s/vdCL5sfyJQjAYZ-epG1acg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 722,
+        "title": "Cosmax 2026｜后生元Untopinol中定量出环二肽Cyclo(Gly-Pro)，可通过抗炎改善特应性皮炎AD",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-04",
+        "url": "https://mp.weixin.qq.com/s/do6wMOgCfeA66tjOJEck8g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 723,
+        "title": "拜尔斯道夫｜Dermatol Ther 2026｜对面部的痤丙和表葡的综述，为活菌护肤做的基础研究积累的汇总",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-03",
+        "url": "https://mp.weixin.qq.com/s/XEQOjOVVXghUONg5WqIEOg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 724,
+        "title": "兰蔻&amp;欧莱雅｜IJCS 2026｜小黑瓶升级中CM-β葡聚糖，补足了从免疫到修护抗老的完整功效验证",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-02",
+        "url": "https://mp.weixin.qq.com/s/UcGbtIyUuv9qvfwwOfmmiQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 725,
+        "title": "LG｜MTBio 2026｜后秘贴精华中NAD+递送方案：离子耦合传递体复合物ICoN的设计方案和功能验证",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-07-01",
+        "url": "https://mp.weixin.qq.com/s/yXHKfyP7Qm0ld0eamU5ZYA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 726,
+        "title": "Science 2026｜泛素样修饰蛋白角度，上皮干性维持和终末分化的平衡，是通过NEDD8/SUMO2拮抗的转录后蛋白质重塑来维持",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-30",
+        "url": "https://mp.weixin.qq.com/s/Ki3vJf1xDDAWVSm9vOWoYw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 727,
+        "title": "京都大学&amp;LVMH｜SR 2026｜mRNA-encoded reporter系统的设计，实现线粒体相关的快速、高通量检测",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-29",
+        "url": "https://mp.weixin.qq.com/s/t0lrWBPlf2cFC4w0g9PUBQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 728,
+        "title": "Natue Biotech 2026｜空间转录组学在细胞外囊泡EVs上的应用实例",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-28",
+        "url": "https://mp.weixin.qq.com/s/We5XYFMxAvpp9nPOh5a9Zg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 729,
+        "title": "Ashland｜SID 2026｜围绕线粒体肽Humanin的长寿护肤成分故事",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-27",
+        "url": "https://mp.weixin.qq.com/s/-S99nzs1OaPoD2HCdUG6xQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 730,
+        "title": "欧莱雅日本｜IJCS2025｜从晒斑照片来区分晒黑色斑和PIH色斑的方法开发：利用黑素、血红蛋白拟合光学密度模型来定量色斑中的血红蛋白含量",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-26",
+        "url": "https://mp.weixin.qq.com/s/P7MhwUGI5qM_dswiBVDZDA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 731,
+        "title": "Nikkol日光&amp;欧莱雅日本｜Langmuir封面文章2026｜鼠李糖脂「去膜留菌」：仅剥离痤疮丙酸杆菌生物膜、保留细菌形态结构的机制探索",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-25",
+        "url": "https://mp.weixin.qq.com/s/xajsvuI78pcZdEOMPxz1YA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 732,
+        "title": "雅诗兰黛｜Scale2026｜LaMer精华可同时改善玫瑰痤疮、AD湿疹和高敏感皮肤各自的皮肤问题",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-24",
+        "url": "https://mp.weixin.qq.com/s/pO3mZAot4Mhad9DbZRH6Hg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 733,
+        "title": "Cosmax｜ACS Aenm 2026｜3%神经酰胺制备能「压电护肤」的乳霜，膏体揉搓时产生微电场，改善皮肤",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-23",
+        "url": "https://mp.weixin.qq.com/s/QbADzDc0zLaETTlxI0Ydxg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 734,
+        "title": "Seppic｜Gels 2026｜多种生物多糖增稠剂x不同绿色乳化工艺的交叉研究，探索迎合未来需求的绿色乳化方案",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-22",
+        "url": "https://mp.weixin.qq.com/s/2Ulwn4W2RA3k880At7eCZA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 735,
+        "title": "欧莱雅｜JDSS 2026｜海外复颜线的Triple Power保湿霜用于GLP-1司美脸的改善",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-21",
+        "url": "https://mp.weixin.qq.com/s/kh24aI1kJV4Vz1vRNIu91Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 736,
+        "title": "水羊&amp;农科院麻类所｜EUR FOOD RES TECHNOL 2026｜金银花双重发酵法，总多酚黄酮下降，抗氧能力反而提升",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-20",
+        "url": "https://mp.weixin.qq.com/s/etbFMunS_E2-TkzvPvadtQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 737,
+        "title": "Nature Health 2026｜大脑中微塑料来源的分析，化妆品使用是影响因素之一",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-19",
+        "url": "https://mp.weixin.qq.com/s/XuOg0J4o-X4_-h1QGg2fEg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 738,
+        "title": "Ciel&amp;日光｜JCCSJ 2022｜干燥带来NGF上调Sema3A下调，这可能带来神经伸长，从而解释皮肤进入高敏状态；SOD酶可逆转",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-18",
+        "url": "https://mp.weixin.qq.com/s/3WmguSnni5_nb0djr9Kd0w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 739,
+        "title": "拜尔斯道夫&amp;UMG｜Clin Epigenetics 2026｜全表观基因组关联研究解析出甲基化位点中加速/延缓因子，并验证二氢杨梅素的调控甲基化衰老能力",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-17",
+        "url": "https://mp.weixin.qq.com/s/LDA6RfFodJbf5p-nvuUP4w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 740,
+        "title": "溪木源SID&amp;相宜Pharmaceuticals｜均为皮质醇压力相关，对比阅读：溪木源山茶花可降低唾液皮质醇，相宜关注压力性皮肤色沉（如熬夜焦虑）",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-16",
+        "url": "https://mp.weixin.qq.com/s/wk4oGkhDoO3P2gHtTphgQA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 741,
+        "title": "雅诗兰黛｜SID 2026｜植物外泌体可以调控日夜受损下的肌肤炎症反应，体外实验中，有类比人源外泌体的功效",
+        "source": "非科学美妆传播",
+        "publish_date": "2026-06-15",
+        "url": "https://mp.weixin.qq.com/s/PMC2yca_GTPkuajAydxUMQ",
         "summary": "",
         "keywords": []
       }
@@ -6271,6 +6451,251 @@
         "keywords": []
       }
     ],
+    "铱星云商": [
+      {
+        "id": 1407,
+        "title": "五十载时尚激荡，百家品牌争流——1977—2026中国101家代表性本土女装品牌创立时序与产业进化全景图鉴",
+        "source": "铱星云商",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/yu0iY14x-PaNxRIvMGVL8g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1369,
+        "title": "新Mall月览｜7月开业23个项目超95万㎡，新开商业越来越“开放”？",
+        "source": "铱星云商",
+        "publish_date": "2026-08-03",
+        "url": "https://mp.weixin.qq.com/s/BVd3yOgJF0gM_T8Mnqtt2w",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1326,
+        "title": "嘉里联合华之门溢价80%拿下新杨思旗舰商业地块；恒隆、太古公布2026上半年商场业绩……",
+        "source": "铱星云商",
+        "publish_date": "2026-08-02",
+        "url": "https://mp.weixin.qq.com/s/puh3zO5fD-oCjIgxSk1QzA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1327,
+        "title": "安踏推出全新概念空间「安踏市集」；CPE源峰全资收购猛犸象；LVMH等四大奢侈品集团公布2026年上半年业绩……",
+        "source": "铱星云商",
+        "publish_date": "2026-08-01",
+        "url": "https://mp.weixin.qq.com/s/ZsOQUZHoFsXeBNTMqgiIPQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1328,
+        "title": "复购率暴涨10%，6月商场全靠“死忠粉”撑场？",
+        "source": "铱星云商",
+        "publish_date": "2026-07-31",
+        "url": "https://mp.weixin.qq.com/s/x3FtX_qz3OcjqBs2mGM_FQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1289,
+        "title": "6月商场客流报告：整体普降一成多，大中样本Mall日均减少超1万！",
+        "source": "铱星云商",
+        "publish_date": "2026-07-30",
+        "url": "https://mp.weixin.qq.com/s/AW3snpqOCbYHEPWYHVVMpg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1258,
+        "title": "五感共生，情绪造场：重塑商业空间感官竞争力——中购联2026品牌沙龙即将启幕！",
+        "source": "铱星云商",
+        "publish_date": "2026-07-29",
+        "url": "https://mp.weixin.qq.com/s/TyqJAOw4pyJDZTZL1j3iUw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1215,
+        "title": "商场6月开关店“红黑榜”：星巴克重启增长，周大福闭店55家",
+        "source": "铱星云商",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/aP58T8xkBUKcer7JIeWNNQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1216,
+        "title": "星盛商业如何将“循环城市计划”带入国际生态视野",
+        "source": "铱星云商",
+        "publish_date": "2026-07-28",
+        "url": "https://mp.weixin.qq.com/s/1MaxLqgpaofQ7jEw2R5HpA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1194,
+        "title": "华南首店纷纷抢滩，深圳咖啡江湖又要变天了？！",
+        "source": "铱星云商",
+        "publish_date": "2026-07-27",
+        "url": "https://mp.weixin.qq.com/s/7Xlhh5g8SiA9kf21B9SCow",
+        "summary": "导读、深圳咖啡市场正在从“品牌竞争”走向“品类竞争”。来源 | 铱星云商新媒体中心主编 | 曹婕撰文&amp;编辑 |新媒体中心深圳咖啡市场的口味，每隔两三年就要被重新定义一次。那些曾经需要排长队才能喝到的一杯，过不了多久就会被另一杯取代。咖啡杯在消费者手中流转，品牌进进出出，没有谁能在牌桌上停留太久。早期是一批本土独立咖啡馆完成了市场启蒙，手冲、单品、风味轮这些概念从圈内术语变成大众谈资；随后精品连锁品牌大规模入场，把咖啡馆从街角搬进购物中心，咖啡消费从此有了固定的空间坐标；再后来，小店快取模型跑通，九块九的价格战完成最广泛的市场教育，城市咖啡密度被推至前所未有的高度。每一次转换，都伴随着旧招牌的暗淡和新门头的亮起。在这个消费热情极易转移的市场里，品牌的生命周期被大幅压缩，而消费者的忠诚度似乎只够维持到下一款新品上市。2026年夏天，新一轮更替正在发生。来自不同城市的五个品牌，几乎同时将华南首店押注深圳，它们各自代表的品类逻辑，正在重新描摹这座城市的咖啡轮廓。01.堀口咖啡华南首店堀口咖啡华南首店落地深圳卓悦中心，目前已出围挡，开业时间待官方公布。这家被业内称为“精品咖啡天花板”的品牌，由日本精品咖啡协会（SCAJ）理事堀口俊英于1990年在东京世田谷创立。堀口俊英身兼美国SCAA杯测裁判等职，曾撰写《精品咖啡介绍》《咖啡的品评技术》《咖啡完全指南》等多本专业著作。与一些追求规模与速度的品牌不同，堀口咖啡的扩张节奏极其缓慢，品牌创立36年，在营门店仅8家，其中5家位于东京。产品端，堀口咖啡从世界各地优质庄园直采生豆，采用深度烘焙工艺，烘焙后甚至还会进行人工二次拣选。品牌独创的1至9号拼配体系，打破了精品咖啡等于单品豆的固有认知。品质管控上，店长和所有咖啡师均在东京总店接受培训，咖啡豆、磨豆机、手冲壶乃至滤纸均从日本调配。一杯手冲咖啡定价通常在80至100元，部分产品甚至超过100元。因此该品牌也曾被网友称为“曾经魔都最贵咖啡”。国内拓展方面，品牌于2017年12月在上海外滩一栋1930年代的历史建筑中开出海外首家分店，用日式美学对话上海的历史底蕴；2024年9月在上海恒隆广场开设第二家门店。进入中国市场近九年，堀口咖啡仅开出3家门店（含深圳围挡）。深圳卓悦中心店是品牌首次向华南地区扩展，也是其在国内的第三家门店。从落位逻辑看，卓悦中心地处福田CBD核心区域，周边写字楼、住宅楼密布，聚集了大量金融、科技等行业人群。项目本身是深圳首店经济表现活跃地带；连续多年举办的“唤醒咖啡节”已发展为华南最大户外咖啡节，2026年该活动汇聚了三大洲10国43城的超160家精品咖啡品牌，为项目沉淀了深厚的咖啡文化基因。堀口咖啡的进驻，填补了福田CBD高端日系精品咖啡的供给空白。02.O.P.S. 华南首店O.P.S. 华南首店已确认进驻深圳湾万象城，官宣2026年8月上旬开业。在咖啡消费圈层中，O.P.S.是一个无需过多介绍的名字。这个被誉为“魔都排名第一的咖啡”、“网红排队王”的品牌，于2017年在上海太原路创立。首店仅10平方米，不设座位，不售卖常规咖啡。因超高人气和店内无座位的设定，被消费者戏称为上海“罚站咖啡”的鼻祖——工作日到店也要排上好一会，有消费者称排队时间约45分钟。品牌以“特调实验室”为定位，每季研发新菜单，结合时令食材打造限定特调，将咖啡与水果、香料、茶、酒等进行风味融合。菜单通常仅5款左右特调，每一杯都像一次精致的风味实验。2023年，团队推出全新咖啡品牌“三又二分之一3½”，采用“冰镇浓缩+水+氮气”的工艺萃取咖啡，主打纯粹的咖啡风味，在风格和产品定位上与O.P.S.形成互补。国内拓展方面，O.P.S.此前长期仅在上海开设唯一一家门店。2025年，品牌发起“On The Move”年度城市巡游计划，以快闪形式先后到达东莞、深圳、广州、顺德、厦门、成都等多个城市。2026年3月，深圳“美好的咖啡·华南首站”活动中，O.P.S.带来四款春季限定新品，其中两款为上海本店尚未上线的新品。深圳店是品牌首次以上海以外城市为据点的正式门店，品牌同时透露广州店计划于2027年开业。O.P.S.的华南首店落位深圳湾万象城，替换了原%Arabica的位置。深圳湾万象城是深圳高端商业的代表项目之一，O.P.S.的进驻进一步强化了该项目在精品咖啡品类的供给密度。从快闪到常驻，O.P.S.的深圳首店意味着华南消费者终于可以常态化体验这个创意特调标杆品牌的产品。03.Algebraist Coffee代数学家华南首店据悉，代数学家咖啡同步筹备深圳两家新店——罗湖国贸春天店（品牌官方定位“华南首店”）和福田PA MALL店（项目方标注“深圳首店”），计划于2026年8月开业。两店分属罗湖和福田两个行政区，最终“华南首店”头衔归属以率先开业门店为准。代数学家咖啡前身为2015年在苏州诚品书店创立的Matrix Coffee矩阵咖啡，2020年完成品牌升级。品牌定位“高质、中价”的潮流精品咖啡路线，产品均价约25元。产品线上，除传统意式咖啡和手冲咖啡外，品牌还研发风味咖啡产品线，招牌布列夫系列是其核心产品。门店设计遵循“一店一设计”理念，围绕科技、极简、现代等元素进行空间呈现。国内拓展方面，代数学家是此轮五个品牌中唯一具备超百家门店规模的连锁品牌。品牌已完成五轮融资，累计金额超2亿元，投资方包括腾讯等机构。2025年初完成由苏高新金控独家投资的数千万元新一轮融资。2021年腾讯入股后，品牌门店数从30家增长到60家。2024年第三季度起已实现单月财务利润及现金流为正。目前总门店数超200家，单月新增门店稳定在8至10家，门店以加盟模式为主。此前品牌门店长期集中于江浙沪区域，此次深圳双店筹备标志着其首次向华南市场拓展。行业视角来看，代数学家所处的赛道竞争极为激烈。截至2026年3月底，19家咖啡品牌门店总数已达87711家；瑞幸、库迪价格战持续压缩利润空间，产品售价大多集中在9.9至12.9元；蓝瓶咖啡和Peet's皮爷咖啡被本地经营者收购，Seesaw咖啡门店从160余家缩减至33家。在这一背景下，代数学家不仅没有盲目参与规模竞赛，反而走出了一条差异化的稳健路径。品牌计划2027年达到600家门店，华南首店的运营表现将直接影响其在华南区域后续的拓店节奏。04.Captain George 乔治队长华南首店乔治队长华南首家门店确认落地深圳万象天地，开业时间待品牌官方公布。在竞赛级精品咖啡领域，很多人对乔治队长并不陌生。品牌由2025年WBrC世界咖啡冲煮大赛全球冠军彭近洋创立。2025年5月，彭近洋在印尼雅加达举办的WBrC世界咖啡冲煮大赛上夺冠，成为中国大陆第二位获此殊荣的咖啡师。在此之前，他曾四次获得WBrC中国区冠军，并作为教练帮助“乔治队长”的咖啡师蝉联了5年WBrC赛事的中国冠军。品牌起源可追溯至2013年，彭近洋与同学创立工作室销售烘焙咖啡豆。品牌名称“乔治队长”取自创始团队对品质的追求。产品层面，乔治队长以冠军配方手冲和京都艺伎等产品线为核心，同时推出“一豆三喝”（同一豆子做法式压壶、手冲、冷萃）的体验形式。品牌每年花费大量时间在全球范围内寻找特色咖啡豆，并设有标准化烘焙工厂。国内拓展方面，品牌此前门店集中于西南地区，淘宝渠道有售咖啡豆产品。在硬核咖啡发烧友中，乔治队长拥有极强的品牌号召力——有消费者在社交平台分享称，其门店“人特别多，去的时候要等位”，“每次路过都是人人人人人”。深圳万象天地店是品牌首次在西南以外区域开设正式门店。深圳专业手冲咖啡赛道的供给长期相对薄弱，此前缺少有竞赛冠军背书的品牌常驻。乔治队长的进驻直接补强了这一品类。万象天地“Mall+街区”的复合空间结构，以及“首店策略”一直是其招商运营的核心思路，乔治队长的竞赛级专业属性与万象天地在咖啡品类的差异化定位形成匹配。05.三立方dirty专门店华南首店三立方Dirty专门店华南首店确认落地深圳万象天地，开业时间待品牌官方公布。三立方成立于2021年，是一家主打低价精品咖啡的连锁品牌。2025年6月，品牌与德国百年咖啡设备品牌迈赫迪（Mahlkönig）合作，在上海安福路开设全球首家Dirty专门店。这家面积仅约10平方米的小店，开业不足一月便在社交媒体上迅速走红，创下暴雨中排队、日均500至800杯的销售纪录。甚至有消费者拖着行李箱赶来，排队一小时只为喝上一杯。品牌核心产品为-86℃超低温冰杯Dirty——从-86℃冰箱中取出冰杯，倒入特调冰牛奶，因杯子温度极低，牛奶会在杯壁迅速形成奶霜；再将浓缩咖啡液缓缓倒入牛奶上层。冷热分层的口感与视觉冲击力极强，购买Dirty附赠的定制玻璃杯更成为社交平台上的天然传播素材。产品使用天然原料（香草荚、肉桂、朗姆酒等）调制风味，而非风味糖浆。产品结构上，品牌采用精简SKU策略（仅6款产品），坚持“极简咖啡产品线”，在创意咖啡盛行、咖啡奶茶化的市场环境中只做经典咖啡。品牌以小店型和即买即走模式运营，毛利率达65%至70%。品牌用数学中的(m)³作为logo，传达“小众聚集，发挥大众力量”的理念。国内拓展方面，此前门店高度集中于上海，当前在上海拥有12家门店，已向杭州、常州等城市拓展。品牌此前已在广州开设门店，此次深圳万象天地店是其Dirty专门店业态在华南地区的首家正式门店，也是继上海安福路全球首店之后的第二家Dirty专门店。从品类角度看，深圳市场目前尚无在Dirty细分赛道形成品牌认知的垂直专门店，三立方的进入将在该品类建立起先发优势。商业观察2025年7月至2026年3月间，皮爷咖啡华南首店在深圳万象天地结束四年运营，正式闭店；%Arabica在深圳多家门店同期撤场。两个曾被视为精品咖啡标杆的品牌相继离场。另一面则是O.P.S.、乔治队长等品牌陆续进场。一进一出之间，深圳咖啡市场正在经历的并非简单的品牌更替，而是一轮结构性的价值重估。过去进入深圳的精品咖啡品牌，要么是舶来品，如%Arabica来自日本，皮爷来自美国，蓝瓶来自美国；要么是上海品牌南下。这一轮五个品牌中，堀口咖啡虽为日系但国内运营以上海为据点，O.P.S.来自上海，代数学家来自苏州，乔治队长来自贵阳，三立方来自上海。品牌输出地从“国际输入”转向“国内跨区域流动”，苏州、贵阳这样非一线城市的品牌开始具备向外输出能力。从扩张逻辑来看，上一轮品牌扩张的逻辑是做“咖啡”这个大类，进商场、开大店、做空间。品牌之间比拼的是谁的门店更漂亮、谁的品牌故事更动人。这一轮品牌入局，几乎没有一家是在做“大而全”的咖啡生意。日系高端拼配、创意季节特调、竞赛级手冲、Dirty专门店，每一个都在某个垂直领域建立了不可替代的认知。当咖啡成为一个供给极度饱和的品类，“大而全”的路径越来越难走通，垂直细分成为新的突围方向。由此不难看出，深圳咖啡市场正在从“品牌竞争”走向“品类竞争”。过去品牌之间争夺的是同一批消费者的选择，现在不同赛道的品牌甚至不需要争夺同一批人，市场从一盘棋变成了多张牌桌。总之，首店经济从来不是一劳永逸的生意。华南首店的标签只能带来第一波客流，能否在深圳的务实消费文化与品牌调性之间找到可持续的连接点，才是真正的考验。品牌更替的速度在加快，但市场总容量在持续扩大。对于商业项目而言，真正的考验不是能不能招到首店，而是在首店标签失效之后，谁能最快完成下一轮品牌的筛选与更替。●广州太古汇三期迎新进展、郑州二七万象城二期冲刺开业；砂之船上海22万方微度假奥莱设计方案公示；百联奥莱首进中原……●北上广深公布上半年社零；耐克拟终止滔搏和宝胜国际线上经销权；小象超市华南首店8月底开业；沃尔玛社区店入苏……●当文商旅不再追求爆红，真正的竞争才刚刚开始●7家亏损、5家利润过亿……17家百货公司预告2026上半年业绩合作|爆料|洽谈请联系企业微信 19128328761本文由铱星云商新媒体中心原创，文章版权归铱星云商所有，图片来源于项目方或网络，不作商用。",
+        "keywords": []
+      },
+      {
+        "id": 1061,
+        "title": "广州太古汇三期迎新进展、郑州二七万象城二期冲刺开业；砂之船上海22万方微度假奥莱设计方案公示；百联奥莱首进中原……",
+        "source": "铱星云商",
+        "publish_date": "2026-07-26",
+        "url": "https://mp.weixin.qq.com/s/heuYjBKHe6KnXCKIP5IY8A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1062,
+        "title": "北上广深公布上半年社零；耐克拟终止滔搏和宝胜国际线上经销权；小象超市华南首店8月底开业；沃尔玛社区店入苏……",
+        "source": "铱星云商",
+        "publish_date": "2026-07-25",
+        "url": "https://mp.weixin.qq.com/s/6JdwxfqIvjQ5p5p1uZDF6Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1063,
+        "title": "当文商旅不再追求爆红，真正的竞争才刚刚开始",
+        "source": "铱星云商",
+        "publish_date": "2026-07-24",
+        "url": "https://mp.weixin.qq.com/s/dbC-dwR4Bd0lzG-T4A6jmg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1064,
+        "title": "7家亏损、5家利润过亿……17家百货公司预告2026上半年业绩",
+        "source": "铱星云商",
+        "publish_date": "2026-07-23",
+        "url": "https://mp.weixin.qq.com/s/HG9G0B5v_V55dXr4qJEk9A",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1085,
+        "title": "TBC拓朴思《2026年上半年商业市场总结及趋势展望》重磅发布，解析商业进化全新路径",
+        "source": "铱星云商",
+        "publish_date": "2026-07-22",
+        "url": "https://mp.weixin.qq.com/s/YHzdsodjaxZBFSF5ZPvzag",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1086,
+        "title": "奢场前线｜深圳湾万象城上新9家餐饮首店围挡；武汉恒隆广场8000㎡温室生态空间将开；武汉SKP双展共启",
+        "source": "铱星云商",
+        "publish_date": "2026-07-21",
+        "url": "https://mp.weixin.qq.com/s/aZ8MOZnReSpEf5jQjwepaQ",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1087,
+        "title": "半年调改超100家品牌，这个商场凭什么是“新质品牌捕手”？",
+        "source": "铱星云商",
+        "publish_date": "2026-07-20",
+        "url": "https://mp.weixin.qq.com/s/L-XHhSQ88JV9DX9densFBA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1088,
+        "title": "南京仙林德基艺术奥莱即将开业；广州番禺易发街二期改造南区暑期亮相；华润、龙湖公布上半年运营收入……",
+        "source": "铱星云商",
+        "publish_date": "2026-07-19",
+        "url": "https://mp.weixin.qq.com/s/CPfOboNGzIemNaFlxDxUgw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1089,
+        "title": "“十五五”消费规划落地；永辉上半年扭亏；华润万象生活打造自营美妆品牌；历峰集团、Burberry披露最新季报：奢侈品消费回暖……",
+        "source": "铱星云商",
+        "publish_date": "2026-07-18",
+        "url": "https://mp.weixin.qq.com/s/CpcxdK0jMkaeWmMuQ-tMfw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1090,
+        "title": "20个品牌陷关店潮！实则是品牌拓展新“阳谋”？",
+        "source": "铱星云商",
+        "publish_date": "2026-07-17",
+        "url": "https://mp.weixin.qq.com/s/ayku-95RPvpIbIxaG_texA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1091,
+        "title": "深湾聚势·无界进化——2026上半年大湾区商业市场洞察发布暨趋势发展论坛圆满落幕",
+        "source": "铱星云商",
+        "publish_date": "2026-07-16",
+        "url": "https://mp.weixin.qq.com/s/F1aGu9H48NGOS53nC4-o9g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1092,
+        "title": "千万考生催生“后高考经济”，商场抢滩押注",
+        "source": "铱星云商",
+        "publish_date": "2026-07-15",
+        "url": "https://mp.weixin.qq.com/s/kqxQuhb47w3kToslGMSYiw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1093,
+        "title": "这几个“让人来了又要来”的商业，能抄作业吗？",
+        "source": "铱星云商",
+        "publish_date": "2026-07-14",
+        "url": "https://mp.weixin.qq.com/s/sJ-h1y_30SPMRw70T5-IAg",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1154,
+        "title": "上半年开业150个Mall、超832万方，增量与存量接近&quot;五五开&quot;",
+        "source": "铱星云商",
+        "publish_date": "2026-07-13",
+        "url": "https://mp.weixin.qq.com/s/z0PFtTwtT42c0AUJNAlu_g",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1155,
+        "title": "深中通道首站商业地标湾中上城亮相；华润成都万象城、吾悦广场等机构间REITs密集推进；领展换帅……",
+        "source": "铱星云商",
+        "publish_date": "2026-07-12",
+        "url": "https://mp.weixin.qq.com/s/AVV8MTdMKAps5CS3Eu-N8Q",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1156,
+        "title": "英伦女装CUBIC中国首店落子上海；喜茶首家工艺店、混果汁首家零售概念店亮相；九部门联合发文：聚焦线下零售升级",
+        "source": "铱星云商",
+        "publish_date": "2026-07-11",
+        "url": "https://mp.weixin.qq.com/s/sU9XLvmsWmOwyw8yaFtXoA",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1157,
+        "title": "深中通道首站迎商业新地标，湾中上城以“IP乐园+微度假”重构湾区商业格局",
+        "source": "铱星云商",
+        "publish_date": "2026-07-10",
+        "url": "https://mp.weixin.qq.com/s/tTSH0FoyAIqLm_zF3N3S8g",
+        "summary": "",
+        "keywords": []
+      }
+    ],
     "WWD 国际时尚特讯": [
       {
         "id": 1377,
@@ -6516,243 +6941,16 @@
         "keywords": []
       }
     ],
-    "铱星云商": [
-      {
-        "id": 1369,
-        "title": "新Mall月览｜7月开业23个项目超95万㎡，新开商业越来越“开放”？",
-        "source": "铱星云商",
-        "publish_date": "2026-08-03",
-        "url": "https://mp.weixin.qq.com/s/BVd3yOgJF0gM_T8Mnqtt2w",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1326,
-        "title": "嘉里联合华之门溢价80%拿下新杨思旗舰商业地块；恒隆、太古公布2026上半年商场业绩……",
-        "source": "铱星云商",
-        "publish_date": "2026-08-02",
-        "url": "https://mp.weixin.qq.com/s/puh3zO5fD-oCjIgxSk1QzA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1327,
-        "title": "安踏推出全新概念空间「安踏市集」；CPE源峰全资收购猛犸象；LVMH等四大奢侈品集团公布2026年上半年业绩……",
-        "source": "铱星云商",
-        "publish_date": "2026-08-01",
-        "url": "https://mp.weixin.qq.com/s/ZsOQUZHoFsXeBNTMqgiIPQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1328,
-        "title": "复购率暴涨10%，6月商场全靠“死忠粉”撑场？",
-        "source": "铱星云商",
-        "publish_date": "2026-07-31",
-        "url": "https://mp.weixin.qq.com/s/x3FtX_qz3OcjqBs2mGM_FQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1289,
-        "title": "6月商场客流报告：整体普降一成多，大中样本Mall日均减少超1万！",
-        "source": "铱星云商",
-        "publish_date": "2026-07-30",
-        "url": "https://mp.weixin.qq.com/s/AW3snpqOCbYHEPWYHVVMpg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1258,
-        "title": "五感共生，情绪造场：重塑商业空间感官竞争力——中购联2026品牌沙龙即将启幕！",
-        "source": "铱星云商",
-        "publish_date": "2026-07-29",
-        "url": "https://mp.weixin.qq.com/s/TyqJAOw4pyJDZTZL1j3iUw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1215,
-        "title": "商场6月开关店“红黑榜”：星巴克重启增长，周大福闭店55家",
-        "source": "铱星云商",
-        "publish_date": "2026-07-28",
-        "url": "https://mp.weixin.qq.com/s/aP58T8xkBUKcer7JIeWNNQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1216,
-        "title": "星盛商业如何将“循环城市计划”带入国际生态视野",
-        "source": "铱星云商",
-        "publish_date": "2026-07-28",
-        "url": "https://mp.weixin.qq.com/s/1MaxLqgpaofQ7jEw2R5HpA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1194,
-        "title": "华南首店纷纷抢滩，深圳咖啡江湖又要变天了？！",
-        "source": "铱星云商",
-        "publish_date": "2026-07-27",
-        "url": "https://mp.weixin.qq.com/s/7Xlhh5g8SiA9kf21B9SCow",
-        "summary": "导读、深圳咖啡市场正在从“品牌竞争”走向“品类竞争”。来源 | 铱星云商新媒体中心主编 | 曹婕撰文&amp;编辑 |新媒体中心深圳咖啡市场的口味，每隔两三年就要被重新定义一次。那些曾经需要排长队才能喝到的一杯，过不了多久就会被另一杯取代。咖啡杯在消费者手中流转，品牌进进出出，没有谁能在牌桌上停留太久。早期是一批本土独立咖啡馆完成了市场启蒙，手冲、单品、风味轮这些概念从圈内术语变成大众谈资；随后精品连锁品牌大规模入场，把咖啡馆从街角搬进购物中心，咖啡消费从此有了固定的空间坐标；再后来，小店快取模型跑通，九块九的价格战完成最广泛的市场教育，城市咖啡密度被推至前所未有的高度。每一次转换，都伴随着旧招牌的暗淡和新门头的亮起。在这个消费热情极易转移的市场里，品牌的生命周期被大幅压缩，而消费者的忠诚度似乎只够维持到下一款新品上市。2026年夏天，新一轮更替正在发生。来自不同城市的五个品牌，几乎同时将华南首店押注深圳，它们各自代表的品类逻辑，正在重新描摹这座城市的咖啡轮廓。01.堀口咖啡华南首店堀口咖啡华南首店落地深圳卓悦中心，目前已出围挡，开业时间待官方公布。这家被业内称为“精品咖啡天花板”的品牌，由日本精品咖啡协会（SCAJ）理事堀口俊英于1990年在东京世田谷创立。堀口俊英身兼美国SCAA杯测裁判等职，曾撰写《精品咖啡介绍》《咖啡的品评技术》《咖啡完全指南》等多本专业著作。与一些追求规模与速度的品牌不同，堀口咖啡的扩张节奏极其缓慢，品牌创立36年，在营门店仅8家，其中5家位于东京。产品端，堀口咖啡从世界各地优质庄园直采生豆，采用深度烘焙工艺，烘焙后甚至还会进行人工二次拣选。品牌独创的1至9号拼配体系，打破了精品咖啡等于单品豆的固有认知。品质管控上，店长和所有咖啡师均在东京总店接受培训，咖啡豆、磨豆机、手冲壶乃至滤纸均从日本调配。一杯手冲咖啡定价通常在80至100元，部分产品甚至超过100元。因此该品牌也曾被网友称为“曾经魔都最贵咖啡”。国内拓展方面，品牌于2017年12月在上海外滩一栋1930年代的历史建筑中开出海外首家分店，用日式美学对话上海的历史底蕴；2024年9月在上海恒隆广场开设第二家门店。进入中国市场近九年，堀口咖啡仅开出3家门店（含深圳围挡）。深圳卓悦中心店是品牌首次向华南地区扩展，也是其在国内的第三家门店。从落位逻辑看，卓悦中心地处福田CBD核心区域，周边写字楼、住宅楼密布，聚集了大量金融、科技等行业人群。项目本身是深圳首店经济表现活跃地带；连续多年举办的“唤醒咖啡节”已发展为华南最大户外咖啡节，2026年该活动汇聚了三大洲10国43城的超160家精品咖啡品牌，为项目沉淀了深厚的咖啡文化基因。堀口咖啡的进驻，填补了福田CBD高端日系精品咖啡的供给空白。02.O.P.S. 华南首店O.P.S. 华南首店已确认进驻深圳湾万象城，官宣2026年8月上旬开业。在咖啡消费圈层中，O.P.S.是一个无需过多介绍的名字。这个被誉为“魔都排名第一的咖啡”、“网红排队王”的品牌，于2017年在上海太原路创立。首店仅10平方米，不设座位，不售卖常规咖啡。因超高人气和店内无座位的设定，被消费者戏称为上海“罚站咖啡”的鼻祖——工作日到店也要排上好一会，有消费者称排队时间约45分钟。品牌以“特调实验室”为定位，每季研发新菜单，结合时令食材打造限定特调，将咖啡与水果、香料、茶、酒等进行风味融合。菜单通常仅5款左右特调，每一杯都像一次精致的风味实验。2023年，团队推出全新咖啡品牌“三又二分之一3½”，采用“冰镇浓缩+水+氮气”的工艺萃取咖啡，主打纯粹的咖啡风味，在风格和产品定位上与O.P.S.形成互补。国内拓展方面，O.P.S.此前长期仅在上海开设唯一一家门店。2025年，品牌发起“On The Move”年度城市巡游计划，以快闪形式先后到达东莞、深圳、广州、顺德、厦门、成都等多个城市。2026年3月，深圳“美好的咖啡·华南首站”活动中，O.P.S.带来四款春季限定新品，其中两款为上海本店尚未上线的新品。深圳店是品牌首次以上海以外城市为据点的正式门店，品牌同时透露广州店计划于2027年开业。O.P.S.的华南首店落位深圳湾万象城，替换了原%Arabica的位置。深圳湾万象城是深圳高端商业的代表项目之一，O.P.S.的进驻进一步强化了该项目在精品咖啡品类的供给密度。从快闪到常驻，O.P.S.的深圳首店意味着华南消费者终于可以常态化体验这个创意特调标杆品牌的产品。03.Algebraist Coffee代数学家华南首店据悉，代数学家咖啡同步筹备深圳两家新店——罗湖国贸春天店（品牌官方定位“华南首店”）和福田PA MALL店（项目方标注“深圳首店”），计划于2026年8月开业。两店分属罗湖和福田两个行政区，最终“华南首店”头衔归属以率先开业门店为准。代数学家咖啡前身为2015年在苏州诚品书店创立的Matrix Coffee矩阵咖啡，2020年完成品牌升级。品牌定位“高质、中价”的潮流精品咖啡路线，产品均价约25元。产品线上，除传统意式咖啡和手冲咖啡外，品牌还研发风味咖啡产品线，招牌布列夫系列是其核心产品。门店设计遵循“一店一设计”理念，围绕科技、极简、现代等元素进行空间呈现。国内拓展方面，代数学家是此轮五个品牌中唯一具备超百家门店规模的连锁品牌。品牌已完成五轮融资，累计金额超2亿元，投资方包括腾讯等机构。2025年初完成由苏高新金控独家投资的数千万元新一轮融资。2021年腾讯入股后，品牌门店数从30家增长到60家。2024年第三季度起已实现单月财务利润及现金流为正。目前总门店数超200家，单月新增门店稳定在8至10家，门店以加盟模式为主。此前品牌门店长期集中于江浙沪区域，此次深圳双店筹备标志着其首次向华南市场拓展。行业视角来看，代数学家所处的赛道竞争极为激烈。截至2026年3月底，19家咖啡品牌门店总数已达87711家；瑞幸、库迪价格战持续压缩利润空间，产品售价大多集中在9.9至12.9元；蓝瓶咖啡和Peet's皮爷咖啡被本地经营者收购，Seesaw咖啡门店从160余家缩减至33家。在这一背景下，代数学家不仅没有盲目参与规模竞赛，反而走出了一条差异化的稳健路径。品牌计划2027年达到600家门店，华南首店的运营表现将直接影响其在华南区域后续的拓店节奏。04.Captain George 乔治队长华南首店乔治队长华南首家门店确认落地深圳万象天地，开业时间待品牌官方公布。在竞赛级精品咖啡领域，很多人对乔治队长并不陌生。品牌由2025年WBrC世界咖啡冲煮大赛全球冠军彭近洋创立。2025年5月，彭近洋在印尼雅加达举办的WBrC世界咖啡冲煮大赛上夺冠，成为中国大陆第二位获此殊荣的咖啡师。在此之前，他曾四次获得WBrC中国区冠军，并作为教练帮助“乔治队长”的咖啡师蝉联了5年WBrC赛事的中国冠军。品牌起源可追溯至2013年，彭近洋与同学创立工作室销售烘焙咖啡豆。品牌名称“乔治队长”取自创始团队对品质的追求。产品层面，乔治队长以冠军配方手冲和京都艺伎等产品线为核心，同时推出“一豆三喝”（同一豆子做法式压壶、手冲、冷萃）的体验形式。品牌每年花费大量时间在全球范围内寻找特色咖啡豆，并设有标准化烘焙工厂。国内拓展方面，品牌此前门店集中于西南地区，淘宝渠道有售咖啡豆产品。在硬核咖啡发烧友中，乔治队长拥有极强的品牌号召力——有消费者在社交平台分享称，其门店“人特别多，去的时候要等位”，“每次路过都是人人人人人”。深圳万象天地店是品牌首次在西南以外区域开设正式门店。深圳专业手冲咖啡赛道的供给长期相对薄弱，此前缺少有竞赛冠军背书的品牌常驻。乔治队长的进驻直接补强了这一品类。万象天地“Mall+街区”的复合空间结构，以及“首店策略”一直是其招商运营的核心思路，乔治队长的竞赛级专业属性与万象天地在咖啡品类的差异化定位形成匹配。05.三立方dirty专门店华南首店三立方Dirty专门店华南首店确认落地深圳万象天地，开业时间待品牌官方公布。三立方成立于2021年，是一家主打低价精品咖啡的连锁品牌。2025年6月，品牌与德国百年咖啡设备品牌迈赫迪（Mahlkönig）合作，在上海安福路开设全球首家Dirty专门店。这家面积仅约10平方米的小店，开业不足一月便在社交媒体上迅速走红，创下暴雨中排队、日均500至800杯的销售纪录。甚至有消费者拖着行李箱赶来，排队一小时只为喝上一杯。品牌核心产品为-86℃超低温冰杯Dirty——从-86℃冰箱中取出冰杯，倒入特调冰牛奶，因杯子温度极低，牛奶会在杯壁迅速形成奶霜；再将浓缩咖啡液缓缓倒入牛奶上层。冷热分层的口感与视觉冲击力极强，购买Dirty附赠的定制玻璃杯更成为社交平台上的天然传播素材。产品使用天然原料（香草荚、肉桂、朗姆酒等）调制风味，而非风味糖浆。产品结构上，品牌采用精简SKU策略（仅6款产品），坚持“极简咖啡产品线”，在创意咖啡盛行、咖啡奶茶化的市场环境中只做经典咖啡。品牌以小店型和即买即走模式运营，毛利率达65%至70%。品牌用数学中的(m)³作为logo，传达“小众聚集，发挥大众力量”的理念。国内拓展方面，此前门店高度集中于上海，当前在上海拥有12家门店，已向杭州、常州等城市拓展。品牌此前已在广州开设门店，此次深圳万象天地店是其Dirty专门店业态在华南地区的首家正式门店，也是继上海安福路全球首店之后的第二家Dirty专门店。从品类角度看，深圳市场目前尚无在Dirty细分赛道形成品牌认知的垂直专门店，三立方的进入将在该品类建立起先发优势。商业观察2025年7月至2026年3月间，皮爷咖啡华南首店在深圳万象天地结束四年运营，正式闭店；%Arabica在深圳多家门店同期撤场。两个曾被视为精品咖啡标杆的品牌相继离场。另一面则是O.P.S.、乔治队长等品牌陆续进场。一进一出之间，深圳咖啡市场正在经历的并非简单的品牌更替，而是一轮结构性的价值重估。过去进入深圳的精品咖啡品牌，要么是舶来品，如%Arabica来自日本，皮爷来自美国，蓝瓶来自美国；要么是上海品牌南下。这一轮五个品牌中，堀口咖啡虽为日系但国内运营以上海为据点，O.P.S.来自上海，代数学家来自苏州，乔治队长来自贵阳，三立方来自上海。品牌输出地从“国际输入”转向“国内跨区域流动”，苏州、贵阳这样非一线城市的品牌开始具备向外输出能力。从扩张逻辑来看，上一轮品牌扩张的逻辑是做“咖啡”这个大类，进商场、开大店、做空间。品牌之间比拼的是谁的门店更漂亮、谁的品牌故事更动人。这一轮品牌入局，几乎没有一家是在做“大而全”的咖啡生意。日系高端拼配、创意季节特调、竞赛级手冲、Dirty专门店，每一个都在某个垂直领域建立了不可替代的认知。当咖啡成为一个供给极度饱和的品类，“大而全”的路径越来越难走通，垂直细分成为新的突围方向。由此不难看出，深圳咖啡市场正在从“品牌竞争”走向“品类竞争”。过去品牌之间争夺的是同一批消费者的选择，现在不同赛道的品牌甚至不需要争夺同一批人，市场从一盘棋变成了多张牌桌。总之，首店经济从来不是一劳永逸的生意。华南首店的标签只能带来第一波客流，能否在深圳的务实消费文化与品牌调性之间找到可持续的连接点，才是真正的考验。品牌更替的速度在加快，但市场总容量在持续扩大。对于商业项目而言，真正的考验不是能不能招到首店，而是在首店标签失效之后，谁能最快完成下一轮品牌的筛选与更替。●广州太古汇三期迎新进展、郑州二七万象城二期冲刺开业；砂之船上海22万方微度假奥莱设计方案公示；百联奥莱首进中原……●北上广深公布上半年社零；耐克拟终止滔搏和宝胜国际线上经销权；小象超市华南首店8月底开业；沃尔玛社区店入苏……●当文商旅不再追求爆红，真正的竞争才刚刚开始●7家亏损、5家利润过亿……17家百货公司预告2026上半年业绩合作|爆料|洽谈请联系企业微信 19128328761本文由铱星云商新媒体中心原创，文章版权归铱星云商所有，图片来源于项目方或网络，不作商用。",
-        "keywords": []
-      },
-      {
-        "id": 1061,
-        "title": "广州太古汇三期迎新进展、郑州二七万象城二期冲刺开业；砂之船上海22万方微度假奥莱设计方案公示；百联奥莱首进中原……",
-        "source": "铱星云商",
-        "publish_date": "2026-07-26",
-        "url": "https://mp.weixin.qq.com/s/heuYjBKHe6KnXCKIP5IY8A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1062,
-        "title": "北上广深公布上半年社零；耐克拟终止滔搏和宝胜国际线上经销权；小象超市华南首店8月底开业；沃尔玛社区店入苏……",
-        "source": "铱星云商",
-        "publish_date": "2026-07-25",
-        "url": "https://mp.weixin.qq.com/s/6JdwxfqIvjQ5p5p1uZDF6Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1063,
-        "title": "当文商旅不再追求爆红，真正的竞争才刚刚开始",
-        "source": "铱星云商",
-        "publish_date": "2026-07-24",
-        "url": "https://mp.weixin.qq.com/s/dbC-dwR4Bd0lzG-T4A6jmg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1064,
-        "title": "7家亏损、5家利润过亿……17家百货公司预告2026上半年业绩",
-        "source": "铱星云商",
-        "publish_date": "2026-07-23",
-        "url": "https://mp.weixin.qq.com/s/HG9G0B5v_V55dXr4qJEk9A",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1085,
-        "title": "TBC拓朴思《2026年上半年商业市场总结及趋势展望》重磅发布，解析商业进化全新路径",
-        "source": "铱星云商",
-        "publish_date": "2026-07-22",
-        "url": "https://mp.weixin.qq.com/s/YHzdsodjaxZBFSF5ZPvzag",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1086,
-        "title": "奢场前线｜深圳湾万象城上新9家餐饮首店围挡；武汉恒隆广场8000㎡温室生态空间将开；武汉SKP双展共启",
-        "source": "铱星云商",
-        "publish_date": "2026-07-21",
-        "url": "https://mp.weixin.qq.com/s/aZ8MOZnReSpEf5jQjwepaQ",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1087,
-        "title": "半年调改超100家品牌，这个商场凭什么是“新质品牌捕手”？",
-        "source": "铱星云商",
-        "publish_date": "2026-07-20",
-        "url": "https://mp.weixin.qq.com/s/L-XHhSQ88JV9DX9densFBA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1088,
-        "title": "南京仙林德基艺术奥莱即将开业；广州番禺易发街二期改造南区暑期亮相；华润、龙湖公布上半年运营收入……",
-        "source": "铱星云商",
-        "publish_date": "2026-07-19",
-        "url": "https://mp.weixin.qq.com/s/CPfOboNGzIemNaFlxDxUgw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1089,
-        "title": "“十五五”消费规划落地；永辉上半年扭亏；华润万象生活打造自营美妆品牌；历峰集团、Burberry披露最新季报：奢侈品消费回暖……",
-        "source": "铱星云商",
-        "publish_date": "2026-07-18",
-        "url": "https://mp.weixin.qq.com/s/CpcxdK0jMkaeWmMuQ-tMfw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1090,
-        "title": "20个品牌陷关店潮！实则是品牌拓展新“阳谋”？",
-        "source": "铱星云商",
-        "publish_date": "2026-07-17",
-        "url": "https://mp.weixin.qq.com/s/ayku-95RPvpIbIxaG_texA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1091,
-        "title": "深湾聚势·无界进化——2026上半年大湾区商业市场洞察发布暨趋势发展论坛圆满落幕",
-        "source": "铱星云商",
-        "publish_date": "2026-07-16",
-        "url": "https://mp.weixin.qq.com/s/F1aGu9H48NGOS53nC4-o9g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1092,
-        "title": "千万考生催生“后高考经济”，商场抢滩押注",
-        "source": "铱星云商",
-        "publish_date": "2026-07-15",
-        "url": "https://mp.weixin.qq.com/s/kqxQuhb47w3kToslGMSYiw",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1093,
-        "title": "这几个“让人来了又要来”的商业，能抄作业吗？",
-        "source": "铱星云商",
-        "publish_date": "2026-07-14",
-        "url": "https://mp.weixin.qq.com/s/sJ-h1y_30SPMRw70T5-IAg",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1154,
-        "title": "上半年开业150个Mall、超832万方，增量与存量接近&quot;五五开&quot;",
-        "source": "铱星云商",
-        "publish_date": "2026-07-13",
-        "url": "https://mp.weixin.qq.com/s/z0PFtTwtT42c0AUJNAlu_g",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1155,
-        "title": "深中通道首站商业地标湾中上城亮相；华润成都万象城、吾悦广场等机构间REITs密集推进；领展换帅……",
-        "source": "铱星云商",
-        "publish_date": "2026-07-12",
-        "url": "https://mp.weixin.qq.com/s/AVV8MTdMKAps5CS3Eu-N8Q",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1156,
-        "title": "英伦女装CUBIC中国首店落子上海；喜茶首家工艺店、混果汁首家零售概念店亮相；九部门联合发文：聚焦线下零售升级",
-        "source": "铱星云商",
-        "publish_date": "2026-07-11",
-        "url": "https://mp.weixin.qq.com/s/sU9XLvmsWmOwyw8yaFtXoA",
-        "summary": "",
-        "keywords": []
-      },
-      {
-        "id": 1157,
-        "title": "深中通道首站迎商业新地标，湾中上城以“IP乐园+微度假”重构湾区商业格局",
-        "source": "铱星云商",
-        "publish_date": "2026-07-10",
-        "url": "https://mp.weixin.qq.com/s/tTSH0FoyAIqLm_zF3N3S8g",
-        "summary": "",
-        "keywords": []
-      }
-    ],
     "KEV美妆": [
+      {
+        "id": 1389,
+        "title": "丸美小红笔CP；fresh古源乳霜；修丽可色修精华升级版；美宝莲修护卸妆油... | 新品速递",
+        "source": "KEV美妆",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/xRVhsH0pgq6JhZc9fo1eTw",
+        "summary": "",
+        "keywords": []
+      },
       {
         "id": 1274,
         "title": "Fan Beauty Diary圣光绮梦红毯气垫家族；IPSA悦己香氛凝露；娇韵诗遮瑕膏... | 新品速递",
@@ -7275,6 +7473,15 @@
     ],
     "上海日化协会": [
       {
+        "id": 1391,
+        "title": "开幕在即！2026PCHi领袖峰会完整议程揭晓，会议亮点与参展企业名录一文全览",
+        "source": "上海日化协会",
+        "publish_date": "2026-08-04",
+        "url": "https://mp.weixin.qq.com/s/rNcjdtwX-1HRpKulpSuQBA",
+        "summary": "",
+        "keywords": []
+      },
+      {
         "id": 1276,
         "title": "从“测得出”到“说得清来源”，PDRN标准再进一步",
         "source": "上海日化协会",
@@ -7325,6 +7532,15 @@
         "source": "上海日化协会",
         "publish_date": "2026-06-16",
         "url": "https://mp.weixin.qq.com/s/mPUjfCboGkyYbJKnmr85vw",
+        "summary": "",
+        "keywords": []
+      },
+      {
+        "id": 1390,
+        "title": "",
+        "source": "上海日化协会",
+        "publish_date": "",
+        "url": "https://mp.weixin.qq.com/s/slLCuRqRkAy6jYCkAaoahw",
         "summary": "",
         "keywords": []
       }
