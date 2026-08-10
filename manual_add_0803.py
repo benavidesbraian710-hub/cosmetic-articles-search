@@ -42,6 +42,10 @@ def fetch_article(url):
             if m:
                 publish_date = m.group(1)
         
+        # 统一截断为纯日期 YYYY-MM-DD
+        if publish_date and len(publish_date) > 10:
+            publish_date = publish_date[:10]
+        
         # 提取内容
         content = ''
         content_match = re.search(r'<div class="rich_media_content[^"]*"[^>]*>(.*?)</div>\s*<script', html, re.DOTALL)
