@@ -1,6 +1,6 @@
 -- ============================================================
 -- 化妆品行业洞察平台 · 用户需求表（Supabase SQL Editor 一次性执行）
--- 管理密码：SsasmguM3SJjhVHa  （可随时改，见文件末尾注释）
+-- 管理密码：Clarins202020  （2026-08-17 由 SsasmguM3SJjhVHa 修改）
 -- ============================================================
 
 -- 1. 建表
@@ -34,12 +34,12 @@ security definer
 set search_path = public
 as $$
 begin
-    if admin_pwd is distinct from 'SsasmguM3SJjhVHa' then
+    if admin_pwd is distinct from 'Clarins202020' then
         raise exception 'unauthorized';
     end if;
     return query select * from requests order by created_at desc;
 end;
 $$;
 
--- 改密码方法：把上面函数里 'SsasmguM3SJjhVHa' 换成新密码，
+-- 改密码方法：把上面函数里 'Clarins202020' 换成新密码，
 -- 在 SQL Editor 重跑一次第 3 段（create or replace）即可。
