@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>化妆品行业洞察平台</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #F5F5DC; --surface: #FFFFFF; --ink: #211D19; --muted: #8A8178;
@@ -26,11 +26,21 @@
         .hero::before { content: ''; position: absolute; width: 480px; height: 480px; border-radius: 50%; background: radial-gradient(circle, rgba(201,162,39,0.16) 0%, transparent 70%); top: -180px; right: -120px; }
         .hero::after { content: ''; position: absolute; width: 380px; height: 380px; border-radius: 50%; background: radial-gradient(circle, rgba(166,25,46,0.25) 0%, transparent 70%); bottom: -160px; left: -100px; }
         .hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
-        .hero .kicker { font-size: 13px; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 22px; }
-        .hero h1 { font-family: var(--serif); font-size: 44px; font-weight: 900; line-height: 1.3; margin-bottom: 20px; }
-        .hero p { font-size: 16px; color: rgba(245,239,230,0.75); line-height: 1.9; max-width: 560px; margin: 0 auto 44px; }
-        .hero-stats { display: flex; justify-content: center; gap: 64px; }
-        .hero-stats .num { font-family: var(--serif); font-size: 40px; font-weight: 700; color: #fff; }
+        .hero .kicker { font-family: 'Bricolage Grotesque', var(--sans); font-size: 13px; letter-spacing: 5px; color: var(--gold); text-transform: uppercase; margin-bottom: 22px; display: flex; align-items: center; justify-content: center; gap: 16px; }
+        .hero .kicker::before, .hero .kicker::after { content: ''; width: 44px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+        .hero .kicker::after { background: linear-gradient(90deg, var(--gold), transparent); }
+        .hero h1 { font-family: var(--serif); font-size: 46px; font-weight: 900; line-height: 1.32; margin-bottom: 20px; letter-spacing: 1px; }
+        .hero p { font-size: 16px; color: rgba(245,239,230,0.75); line-height: 1.9; max-width: 560px; margin: 0 auto 36px; }
+        .cta-row { display: flex; justify-content: center; gap: 16px; margin-bottom: 52px; animation: fadeUp .8s .45s cubic-bezier(.2,.7,.3,1) both; }
+        .cta { display: inline-block; padding: 14px 34px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; transition: all .35s var(--spring); letter-spacing: 1px; }
+        .cta-primary { background: linear-gradient(135deg, #D4AF37, #B8922A); color: #2B1F10; box-shadow: 0 4px 20px rgba(212,175,55,0.35); }
+        .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(212,175,55,0.45); }
+        .cta-ghost { border: 1px solid rgba(245,239,230,0.35); color: #F5EFE6; }
+        .cta-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+        .hero-stats { display: flex; justify-content: center; gap: 0; animation: fadeUp .8s .6s cubic-bezier(.2,.7,.3,1) both; }
+        .hero-stats > div { padding: 0 40px; }
+        .hero-stats > div + div { border-left: 1px solid rgba(245,239,230,0.15); }
+        .hero-stats .num { font-family: 'Bricolage Grotesque', var(--serif); font-size: 42px; font-weight: 700; color: #fff; }
         .hero-stats .num span { color: var(--gold); }
         .hero-stats .label { font-size: 13px; color: rgba(245,239,230,0.6); margin-top: 6px; letter-spacing: 2px; }
 
@@ -60,12 +70,18 @@
         .latest-item .d { font-size: 12px; color: var(--muted); white-space: nowrap; }
 
         .footer { text-align: center; padding: 28px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); margin-top: auto; }
+        .footer .dot { color: var(--gold); margin: 0 10px; }
         /* anime.js 式交错入场 */
         @keyframes fadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
         .hero .kicker { animation: fadeUp .8s .05s cubic-bezier(.2,.7,.3,1) both; }
         .hero h1 { animation: fadeUp .8s .2s cubic-bezier(.2,.7,.3,1) both; }
         .hero p { animation: fadeUp .8s .35s cubic-bezier(.2,.7,.3,1) both; }
-        .hero-stats { animation: fadeUp .8s .5s cubic-bezier(.2,.7,.3,1) both; }
+        /* 滚动显现 */
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--spring), transform .8s var(--spring); }
+        .reveal.revealed { opacity: 1; transform: none; }
+        /* 卡片 3D 倾斜（React Bits TiltedCard） */
+        .cards { perspective: 1200px; }
+        .card { transform-style: preserve-3d; will-change: transform; }
         .section-title, .section-sub { animation: fadeUp .7s .1s both; }
         .cards .card:nth-child(1) { animation: fadeUp .7s .2s cubic-bezier(.2,.7,.3,1) both; }
         .cards .card:nth-child(2) { animation: fadeUp .7s .35s cubic-bezier(.2,.7,.3,1) both; }
@@ -79,7 +95,8 @@
         @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
         @media (max-width: 720px) {
             .hero { padding: 64px 24px; } .hero h1 { font-size: 30px; }
-            .hero-stats { gap: 32px; } .hero-stats .num { font-size: 30px; }
+            .hero-stats > div { padding: 0 18px; } .hero-stats .num { font-size: 28px; }
+            .cta-row { flex-direction: column; align-items: center; }
             .section { padding: 48px 20px; } .topbar { padding: 0 20px; }
             .cards { grid-template-columns: 1fr; grid-template-rows: auto; }
             .card.feature { grid-row: auto; }
@@ -100,6 +117,10 @@
             <div class="kicker">COSMETIC INDUSTRY INTELLIGENCE</div>
             <h1>追踪化妆品行业<br><span class="gold-flow">每一篇重要文章</span></h1>
             <p>聚合行业核心公众号，每日自动更新。检索您需要的内容，告诉我们您想收录的来源，或预约一份定制化行业报告。</p>
+            <div class="cta-row">
+                <a class="cta cta-primary" href="articles.html">进入文章检索</a>
+                <a class="cta cta-ghost" href="service.html">了解定制服务</a>
+            </div>
             <div class="hero-stats">
                 <div><div class="num"><span id="statArticles">—</span></div><div class="label">收录文章</div></div>
                 <div><div class="num"><span id="statSources">—</span></div><div class="label">行业公众号</div></div>
@@ -108,8 +129,10 @@
         </div>
     </div>
     <div class="section">
+        <div class="reveal">
         <div class="section-title">三大核心功能</div>
         <div class="section-sub">从内容检索到定制报告，一站满足行业情报需求</div>
+        </div>
         <div class="cards">
             <div class="card feature" style="cursor:pointer" onclick="location.href='articles.html'">
                 <div class="icon icon-red">🔍</div>
@@ -132,16 +155,26 @@
             </a>
         </div>
     </div>
-    <div class="footer">化妆品行业洞察平台 · 数据每日更新</div>
+    <div class="footer">化妆品行业洞察平台<span class="dot">✦</span>数据每日更新<span class="dot">✦</span>Clarins IT</div>
     <script>
-        // 聚光灯跟随（Aceternity Spotlight）
+        // 聚光灯 + 3D 倾斜（Aceternity Spotlight + React Bits TiltedCard）
         document.querySelectorAll('.card').forEach(function(card) {
             card.addEventListener('mousemove', function(e) {
                 var r = card.getBoundingClientRect();
-                card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-                card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+                var x = e.clientX - r.left, y = e.clientY - r.top;
+                card.style.setProperty('--mx', x + 'px');
+                card.style.setProperty('--my', y + 'px');
+                var rx = ((y / r.height) - 0.5) * -5;
+                var ry = ((x / r.width) - 0.5) * 5;
+                card.style.transform = 'translateY(-6px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
             });
+            card.addEventListener('mouseleave', function() { card.style.transform = ''; });
         });
+        // 滚动显现
+        var io = new IntersectionObserver(function(entries) {
+            entries.forEach(function(en) { if (en.isIntersecting) { en.target.classList.add('revealed'); io.unobserve(en.target); } });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
         fetch('data.v72.json').then(r => r.json()).then(d => {
             const total = d.stats.total_articles, sources = d.stats.source_count;
             const days = Math.max(1, Math.round((new Date(d.stats.date_range.end) - new Date(d.stats.date_range.start)) / 86400000));
