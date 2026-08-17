@@ -96,7 +96,7 @@ def main():
     cursor = conn.cursor()
     
     # 读取待补录列表
-    with open('/tmp/new_links.txt', 'r') as f:
+    with open('/tmp/batch_input.txt', 'r') as f:
         lines = [l.strip() for l in f if l.strip()]
     
     added = 0
