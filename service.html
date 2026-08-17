@@ -95,27 +95,27 @@
             </form>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
     <script>
         document.getElementById('svcForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = document.getElementById('submitBtn');
             const msg = document.getElementById('msg');
             btn.disabled = true; btn.textContent = '提交中...';
+            const svcMap = { facts: 'service_facts', summary: 'service_summary', custom_report: 'service_custom' };
             const payload = {
-                category: 'service_request',
-                svc_type: document.getElementById('svcType').value,
-                topic: document.getElementById('topic').value.trim(),
-                detail: document.getElementById('detail').value.trim(),
-                contact_name: document.getElementById('contactName').value.trim(),
-                contact_email: document.getElementById('contactEmail').value.trim(),
+                type: svcMap[document.getElementById('svcType').value] || 'service_custom',
+                source_name: document.getElementById('topic').value.trim(),
+                source_url: null,
+                description: document.getElementById('detail').value.trim(),
+                name: document.getElementById('contactName').value.trim(),
+                email: document.getElementById('contactEmail').value.trim(),
             };
             try {
-                const resp = await fetch('/api/submit', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+                const { error } = await sb.from('requests').insert(payload);
+                if (error) throw error;
                 msg.className = 'msg ok';
                 msg.textContent = '✅ 预约成功！我们将在 1-2 个工作日内与您联系确认细节。';
                 document.getElementById('svcForm').reset();

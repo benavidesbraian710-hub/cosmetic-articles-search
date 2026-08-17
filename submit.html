@@ -48,11 +48,11 @@
                         <option value="other">其他需求</option>
                     </select>
                 </div>
-                <div class="field">
+                <div class="field" id="sourceNameField">
                     <label>来源名称 <span class="req">*</span></label>
                     <input type="text" id="sourceName" placeholder="例如：某某公众号 / 某某网站" required>
                 </div>
-                <div class="field">
+                <div class="field" id="sourceUrlField">
                     <label>来源链接</label>
                     <input type="url" id="sourceUrl" placeholder="https://...（如有）">
                 </div>
@@ -74,28 +74,34 @@
             </form>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
     <script>
+        // 选「其他需求」时隐藏来源名称/链接字段
+        document.getElementById('reqType').addEventListener('change', function() {
+            const isOther = this.value === 'other';
+            document.getElementById('sourceNameField').style.display = isOther ? 'none' : '';
+            document.getElementById('sourceUrlField').style.display = isOther ? 'none' : '';
+            document.getElementById('sourceName').required = !isOther;
+        });
+
         document.getElementById('reqForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = document.getElementById('submitBtn');
             const msg = document.getElementById('msg');
             btn.disabled = true; btn.textContent = '提交中...';
             const payload = {
-                category: 'source_request',
-                req_type: document.getElementById('reqType').value,
-                source_name: document.getElementById('sourceName').value.trim(),
-                source_url: document.getElementById('sourceUrl').value.trim(),
-                detail: document.getElementById('detail').value.trim(),
-                contact_name: document.getElementById('contactName').value.trim(),
-                contact_email: document.getElementById('contactEmail').value.trim(),
+                type: document.getElementById('reqType').value,
+                source_name: document.getElementById('sourceName').value.trim() || null,
+                source_url: document.getElementById('sourceUrl').value.trim() || null,
+                description: document.getElementById('detail').value.trim() || null,
+                name: document.getElementById('contactName').value.trim(),
+                email: document.getElementById('contactEmail').value.trim(),
             };
             try {
-                const resp = await fetch('/api/submit', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+                const { error } = await sb.from('requests').insert(payload);
+                if (error) throw error;
                 msg.className = 'msg ok';
                 msg.textContent = '✅ 提交成功！我们会尽快评估并通过邮箱与您联系。';
                 document.getElementById('reqForm').reset();

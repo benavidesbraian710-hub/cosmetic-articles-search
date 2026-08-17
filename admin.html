@@ -53,8 +53,9 @@
             <tbody id="reqBody"><tr><td colspan="6" class="empty">加载中...</td></tr></tbody>
         </table>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
     <script>
-        const API = '/api/admin/requests';
         function doLogin() {
             const pwd = document.getElementById('pwd').value;
             if (!pwd) return;
@@ -69,28 +70,35 @@
             const pwd = sessionStorage.getItem('admin_pwd');
             if (!pwd) return;
             try {
-                const resp = await fetch(API, { headers: { 'X-Admin-Password': pwd } });
-                if (resp.status === 401) throw new Error('auth');
-                if (!resp.ok) throw new Error('http');
-                const data = await resp.json();
+                const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+                const { data, error } = await sb.rpc('get_requests', { admin_pwd: pwd });
+                if (error) throw error;
                 document.getElementById('loginWrap').style.display = 'none';
                 document.getElementById('adminWrap').style.display = 'block';
-                render(data.requests || []);
+                render(data || []);
             } catch (e) {
                 sessionStorage.removeItem('admin_pwd');
                 if (isLogin) document.getElementById('loginErr').style.display = 'block';
             }
         }
         function esc(s) { const d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
+        const TYPE_MAP = {
+            add_wechat:      ['收录公众号', 'tag-source'],
+            add_website:     ['收录网站',   'tag-source'],
+            other:           ['其他需求',   'tag-source'],
+            service_facts:   ['事实输出',   'tag-service'],
+            service_summary: ['综合概述',   'tag-service'],
+            service_custom:  ['定制报告',   'tag-service'],
+        };
         function render(list) {
             const body = document.getElementById('reqBody');
             if (!list.length) { body.innerHTML = '<tr><td colspan="6" class="empty">暂无提交记录</td></tr>'; return; }
             body.innerHTML = list.map(r => {
-                const isSvc = r.category === 'service_request';
-                const tag = isSvc ? '<span class="tag tag-service">定制服务</span>' : '<span class="tag tag-source">收录需求</span>';
-                const subject = isSvc ? (r.topic || '') : (r.source_name || '');
+                const [label, cls] = TYPE_MAP[r.type] || [r.type || '-', 'tag-source'];
+                const tag = `<span class="tag ${cls}">${esc(label)}</span>`;
+                const subject = r.source_name || '';
                 const time = (r.created_at || '').replace('T', ' ').slice(0, 16);
-                return `<tr><td>${esc(time)}</td><td>${tag}</td><td>${esc(subject)}</td><td class="detail-cell">${esc(r.detail || '')}</td><td>${esc(r.contact_name || '')}</td><td>${esc(r.contact_email || '')}</td></tr>`;
+                return `<tr><td>${esc(time)}</td><td>${tag}</td><td>${esc(subject)}</td><td class="detail-cell">${esc(r.description || '')}</td><td>${esc(r.name || '')}</td><td>${esc(r.email || '')}</td></tr>`;
             }).join('');
         }
         if (sessionStorage.getItem('admin_pwd')) loadRequests(false);
