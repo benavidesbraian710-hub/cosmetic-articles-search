@@ -48,7 +48,7 @@ def export_data():
         for source in sources:
             source_name = source['name']
             cursor.execute("""
-                SELECT id, title, wechat_name as source, publish_date, url, content as summary, keywords
+                SELECT id, title, wechat_name as source, publish_date, url, content as summary, keywords, images_json
                 FROM articles
                 WHERE wechat_name = ?
                 ORDER BY publish_date DESC
@@ -61,6 +61,14 @@ def export_data():
                 except:
                     keywords = []
                 
+                cover = ''
+                try:
+                    imgs = json.loads(row['images_json']) if row['images_json'] else []
+                    if imgs:
+                        cover = imgs[0]
+                except:
+                    pass
+                
                 articles.append({
                     'id': row['id'],
                     'title': row['title'],
@@ -68,7 +76,8 @@ def export_data():
                     'publish_date': row['publish_date'],
                     'url': row['url'],
                     'summary': row['summary'] or '',
-                    'keywords': keywords
+                    'keywords': keywords,
+                    'cover': cover
                 })
             
             articles_by_source[source_name] = articles
