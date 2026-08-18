@@ -11,6 +11,7 @@
             --bg: #FFFFFF; --surface: #FFFFFF; --panel: #F8F8F8;
             --ink: #2D2D2D; --muted: #8A8A8A;
             --accent: #C41E3A; --accent-hover: #A51830;
+            --gold: #D4AF37;
             --border: #EFEFEF;
             --serif: 'Noto Serif SC', Georgia, 'Songti SC', 'SimSun', serif;
             --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
@@ -26,24 +27,31 @@
         .topbar nav a { font-size: 14px; color: var(--muted); text-decoration: none; margin-left: 28px; transition: color .2s; }
         .topbar nav a:hover { color: var(--accent); }
 
-        /* ── Hero：纯白极简 ── */
-        .hero { position: relative; overflow: hidden; background: #FFFFFF; padding: 88px 48px 88px; text-align: center; border-bottom: 1px solid var(--border); }
-        .hero-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
-        .hero .kicker { font-family: 'Bricolage Grotesque', var(--sans); font-size: 12px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; margin-bottom: 26px; }
-        .hero h1 { font-family: var(--serif); font-size: 48px; font-weight: 900; line-height: 1.35; margin-bottom: 22px; letter-spacing: 1px; color: var(--ink); }
-        .hero h1 .accent { color: var(--accent); }
-        .hero p { font-size: 16px; color: #777; line-height: 1.9; max-width: 540px; margin: 0 auto 40px; }
-        .cta-row { display: flex; justify-content: center; gap: 16px; margin-bottom: 56px; }
-        .cta { display: inline-block; padding: 13px 32px; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; transition: all .3s var(--spring); letter-spacing: 1px; }
-        .cta-primary { background: var(--accent); color: #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-        .cta-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 4px 14px rgba(196,30,58,0.2); }
-        .cta-ghost { border: 1px solid #D8D8D8; color: var(--ink); background: #fff; }
-        .cta-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+        /* ── Hero：红金风格 ── */
+        .hero { position: relative; overflow: hidden; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.06'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E"), radial-gradient(ellipse 60% 55% at 75% 20%, rgba(200,16,46,0.45) 0%, transparent 60%), radial-gradient(ellipse 55% 60% at 15% 85%, rgba(212,175,55,0.22) 0%, transparent 65%), linear-gradient(135deg, #241D1A 0%, #3D1A22 55%, #5A1F2B 100%); color: #F5EFE6; padding: 96px 48px 88px; text-align: center; }
+        .hero::before { content: ''; position: absolute; width: 480px; height: 480px; border-radius: 50%; background: radial-gradient(circle, rgba(201,162,39,0.16) 0%, transparent 70%); top: -180px; right: -120px; }
+        .hero::after { content: ''; position: absolute; width: 380px; height: 380px; border-radius: 50%; background: radial-gradient(circle, rgba(166,25,46,0.25) 0%, transparent 70%); bottom: -160px; left: -100px; }
+        .hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+        .hero .kicker { font-family: 'Bricolage Grotesque', var(--sans); font-size: 13px; letter-spacing: 5px; color: var(--gold); text-transform: uppercase; margin-bottom: 22px; display: flex; align-items: center; justify-content: center; gap: 16px; }
+        .hero .kicker::before, .hero .kicker::after { content: ''; width: 44px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+        .hero .kicker::after { background: linear-gradient(90deg, var(--gold), transparent); }
+        .hero h1 { font-family: var(--serif); font-size: 46px; font-weight: 900; line-height: 1.32; margin-bottom: 20px; letter-spacing: 1px; }
+        .hero p { font-size: 16px; color: rgba(245,239,230,0.75); line-height: 1.9; max-width: 560px; margin: 0 auto 36px; }
+        .cta-row { display: flex; justify-content: center; gap: 16px; margin-bottom: 52px; }
+        .cta { display: inline-block; padding: 14px 34px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; transition: all .35s var(--spring); letter-spacing: 1px; }
+        .cta-primary { background: linear-gradient(135deg, #D4AF37, #B8922A); color: #2B1F10; box-shadow: 0 4px 20px rgba(212,175,55,0.35); }
+        .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(212,175,55,0.45); }
+        .cta-ghost { border: 1px solid rgba(245,239,230,0.35); color: #F5EFE6; }
+        .cta-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
         .hero-stats { display: flex; justify-content: center; }
-        .hero-stats > div { padding: 0 44px; }
-        .hero-stats > div + div { border-left: 1px solid var(--border); }
-        .hero-stats .num { font-family: 'Bricolage Grotesque', var(--serif); font-size: 40px; font-weight: 700; color: var(--ink); }
-        .hero-stats .label { font-size: 13px; color: var(--muted); margin-top: 6px; letter-spacing: 2px; }
+        .hero-stats > div { padding: 0 40px; }
+        .hero-stats > div + div { border-left: 1px solid rgba(245,239,230,0.15); }
+        .hero-stats .num { font-family: 'Bricolage Grotesque', var(--serif); font-size: 42px; font-weight: 700; color: #fff; }
+        .hero-stats .num span { color: var(--gold); }
+        .hero-stats .label { font-size: 13px; color: rgba(245,239,230,0.6); margin-top: 6px; letter-spacing: 2px; }
+        /* 金色流光标题 */
+        .gold-flow { background: linear-gradient(90deg, #D4AF37 0%, #F7ECC8 40%, #D4AF37 60%, #B8922A 100%); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: goldFlow 5s linear infinite; filter: drop-shadow(0px 2px 4px rgba(212,175,55,0.25)); }
+        @keyframes goldFlow { to { background-position: 200% center; } }
 
         /* ── 功能区：三等宽等高 ── */
         .section { max-width: 1120px; margin: 0 auto; padding: 80px 48px 24px; width: 100%; }
@@ -107,16 +115,16 @@
     <div class="hero">
         <div class="hero-inner">
             <div class="kicker">Cosmetic Industry Intelligence</div>
-            <h1>追踪化妆品行业<br><span class="accent">每一篇重要文章</span></h1>
+            <h1>追踪化妆品行业<br><span class="gold-flow">每一篇重要文章</span></h1>
             <p>聚合行业核心公众号，每日自动更新。检索您需要的内容，告诉我们您想收录的来源，或预约一份定制化行业报告。</p>
             <div class="cta-row">
                 <a class="cta cta-primary" href="articles.html">进入文章检索</a>
                 <a class="cta cta-ghost" href="service.html">了解定制服务</a>
             </div>
             <div class="hero-stats">
-                <div><div class="num" id="statArticles">—</div><div class="label">收录文章</div></div>
-                <div><div class="num" id="statSources">—</div><div class="label">行业公众号</div></div>
-                <div><div class="num" id="statDays">—</div><div class="label">覆盖天数</div></div>
+                <div><div class="num"><span id="statArticles">—</span></div><div class="label">收录文章</div></div>
+                <div><div class="num"><span id="statSources">—</span></div><div class="label">行业公众号</div></div>
+                <div><div class="num"><span id="statDays">—</span></div><div class="label">覆盖天数</div></div>
             </div>
         </div>
     </div>
