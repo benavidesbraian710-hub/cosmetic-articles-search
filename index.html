@@ -53,32 +53,45 @@
         .gold-flow { background: linear-gradient(90deg, #C41E3A 0%, #F3A9B8 40%, #C41E3A 60%, #A51830 100%); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: goldFlow 5s linear infinite; filter: drop-shadow(0px 2px 4px rgba(196,30,58,0.15)); }
         @keyframes goldFlow { to { background-position: 200% center; } }
 
+        /* ── 分区背景：浅灰点阵带 ── */
+        .band { width: 100%; }
+        .band-grid { background: #F8F8F8; background-image: radial-gradient(rgba(196,30,58,0.05) 1px, transparent 1.5px); background-size: 22px 22px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
         /* ── 功能区：三等宽等高 ── */
-        .section { max-width: 1120px; margin: 0 auto; padding: 80px 48px 24px; width: 100%; }
+        .section { max-width: 1120px; margin: 0 auto; padding: 80px 48px 72px; width: 100%; }
         .section-title { font-family: var(--serif); font-size: 26px; font-weight: 700; text-align: center; margin-bottom: 10px; }
         .section-sub { text-align: center; color: var(--muted); font-size: 14px; margin-bottom: 48px; }
         .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
         .card { background: var(--surface); border-radius: 14px; border: 1px solid var(--border); padding: 36px 30px; text-decoration: none; color: var(--ink); transition: all .35s var(--spring); position: relative; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 1px rgba(0,0,0,0.04), 0 4px 6px rgba(34,42,53,0.03), 0 16px 40px rgba(47,48,55,0.04); }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 1px 1px rgba(0,0,0,0.04), 0 8px 12px rgba(34,42,53,0.06), 0 24px 56px rgba(47,48,55,0.09); border-color: #E5E5E5; }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #C41E3A, #F3A9B8); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--spring); }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 12px 24px rgba(34,42,53,0.07), 0 32px 64px rgba(47,48,55,0.10); border-color: #E8E8E8; }
+        .card:hover::before { transform: scaleX(1); }
         .card .icon { width: 52px; height: 52px; border-radius: 12px; background: #FBE9EB; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
-        .card .icon svg { width: 24px; height: 24px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .card .icon svg { width: 24px; height: 24px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .35s var(--spring); }
+        .card:hover .icon svg { transform: scale(1.12) rotate(-6deg); }
         .card h3 { font-family: var(--serif); font-size: 19px; font-weight: 700; margin-bottom: 12px; }
         .card p { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 24px; flex: 1; }
         .card .go { font-size: 14px; color: var(--accent); font-weight: 600; letter-spacing: 1px; }
         .card:hover .go { color: var(--accent-hover); }
 
-        /* ── 最新收录：独立区块 ── */
-        .latest-section { max-width: 1120px; margin: 0 auto; padding: 24px 48px 80px; width: 100%; }
+        /* ── 最新收录：横向滚动卡片流 ── */
+        .latest-section { max-width: 1120px; margin: 0 auto; padding: 64px 48px 80px; width: 100%; }
         .latest-panel { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 28px 32px; }
-        .latest-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+        .latest-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; }
         .latest-head .t { font-family: var(--serif); font-size: 17px; font-weight: 700; }
         .latest-head a { font-size: 13px; color: var(--accent); text-decoration: none; }
-        .latest-item { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 10px 0; font-size: 14px; border-bottom: 1px solid #EDEDED; }
-        .latest-item:last-child { border-bottom: none; }
-        .latest-item .src { font-size: 11.5px; color: var(--accent); background: #FBE9EB; padding: 2px 9px; border-radius: 8px; white-space: nowrap; }
-        .latest-item a { color: var(--ink); text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; transition: color .2s; }
-        .latest-item a:hover { color: var(--accent); }
-        .latest-item .d { font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+        .latest-flow { display: flex; gap: 16px; overflow-x: auto; padding: 4px 2px 10px; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
+        .latest-flow::-webkit-scrollbar { height: 6px; }
+        .latest-flow::-webkit-scrollbar-thumb { background: #E5E5E5; border-radius: 3px; }
+        .latest-flow::-webkit-scrollbar-track { background: transparent; }
+        .latest-card { scroll-snap-align: start; flex: 0 0 264px; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; transition: all .3s var(--spring); }
+        .latest-card:hover { transform: translateY(-4px); box-shadow: 0 1px 1px rgba(0,0,0,0.04), 0 8px 12px rgba(34,42,53,0.06), 0 24px 48px rgba(47,48,55,0.09); border-color: #E5E5E5; }
+        .latest-card .badges { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+        .latest-card .src { font-size: 11.5px; color: var(--accent); background: #FBE9EB; padding: 3px 10px; border-radius: 999px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 150px; }
+        .latest-card .d { font-size: 11.5px; color: var(--muted); background: #F5F5F5; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
+        .latest-card a { color: var(--ink); text-decoration: none; font-size: 14px; line-height: 1.65; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; transition: color .2s; }
+        .latest-card a:hover { color: var(--accent); }
+        .latest-loading { color: var(--muted); font-size: 14px; padding: 12px 0; }
 
         .footer { text-align: center; padding: 26px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); margin-top: auto; }
 
@@ -97,6 +110,7 @@
             .hero-stats > div { padding: 0 18px; } .hero-stats .num { font-size: 28px; }
             .cta-row { flex-direction: column; align-items: center; }
             .section, .latest-section { padding-left: 20px; padding-right: 20px; }
+            .latest-card { flex: 0 0 78%; }
             .topbar { padding: 0 20px; }
         }
     </style>
@@ -126,6 +140,7 @@
             </div>
         </div>
     </div>
+    <div class="band band-grid">
     <div class="section">
         <div class="reveal">
             <div class="section-title">三大核心功能</div>
@@ -152,13 +167,14 @@
             </a>
         </div>
     </div>
+    </div>
     <div class="latest-section reveal">
         <div class="latest-panel">
             <div class="latest-head">
                 <div class="t">最新收录</div>
                 <a href="articles.html">查看全部 →</a>
             </div>
-            <div id="latestList"><div class="latest-item"><a>加载中…</a></div></div>
+            <div id="latestList"><div class="latest-loading">加载中…</div></div>
         </div>
     </div>
     <div class="footer">化妆品行业洞察平台 · 数据每日更新</div>
@@ -176,10 +192,11 @@
             var all = [];
             Object.keys(d.articles).forEach(function(k) { d.articles[k].forEach(function(a) { all.push(a); }); });
             all.sort(function(a, b) { return new Date(b.publish_date) - new Date(a.publish_date); });
-            document.getElementById('latestList').innerHTML = all.slice(0, 5).map(function(a) {
+            document.getElementById('latestList').innerHTML = '<div class="latest-flow">' + all.slice(0, 6).map(function(a) {
                 var t = String(a.title).replace(/&/g,'&amp;').replace(/</g,'&lt;');
-                return '<div class="latest-item"><span class="src">' + String(a.source).replace(/&/g,'&amp;').replace(/</g,'&lt;') + '</span><a href="' + a.url + '" target="_blank">' + t + '</a><span class="d">' + a.publish_date.slice(5) + '</span></div>';
-            }).join('');
+                var s = String(a.source).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+                return '<div class="latest-card"><div class="badges"><span class="src">' + s + '</span><span class="d">' + a.publish_date.slice(5) + '</span></div><a href="' + a.url + '" target="_blank">' + t + '</a></div>';
+            }).join('') + '</div>';
         }).catch(function() {
             document.getElementById('statArticles').textContent = '1,100+';
             document.getElementById('statSources').textContent = '18';
