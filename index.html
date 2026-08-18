@@ -238,7 +238,8 @@
             document.getElementById('latestList').innerHTML = '';
         });
         function countUp(id, target, thousands) {
-            var el = document.getElementById(id); var t0 = performance.now(); var dur = 1100;
+            var el = document.getElementById(id); var t0 = performance.now(); var dur = 1700;
+            el.textContent = thousands ? '0' : '0';
             (function tick(t) {
                 var p = Math.min(1, (t - t0) / dur); var eased = 1 - Math.pow(1 - p, 3);
                 var v = Math.round(target * eased);

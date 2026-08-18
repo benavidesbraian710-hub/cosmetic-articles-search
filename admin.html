@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
     <title>后台管理</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -29,6 +30,19 @@
         .tag-service { background: #fff7e6; color: #d48806; }
         .empty { text-align: center; color: #999; padding: 60px 0; font-size: 14px; }
         .detail-cell { max-width: 320px; word-break: break-all; }
+
+        /* ── 视觉增强：红白品牌风 ── */
+        body { background: #F8F8F8; }
+        .login-wrap { border-radius: 14px; border: 1px solid #EFEFEF; box-shadow: 0 1px 1px rgba(0,0,0,0.04), 0 4px 6px rgba(34,42,53,0.03), 0 16px 40px rgba(47,48,55,0.05); position: relative; overflow: hidden; }
+        .login-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #C41E3A, #F3A9B8); }
+        .login-wrap h1, .admin-head h1 { font-family: 'Noto Serif SC', 'Songti SC', serif; letter-spacing: 1px; }
+        .login-wrap input { border-radius: 8px; transition: border-color .3s, box-shadow .3s; }
+        .login-wrap button { border-radius: 8px; transition: all .3s cubic-bezier(.2,.7,.3,1); letter-spacing: 2px; }
+        .login-wrap button:hover { background: #A51830; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(196,30,58,0.25); }
+        table { border-radius: 12px; border: 1px solid #EFEFEF; box-shadow: 0 1px 1px rgba(0,0,0,0.04), 0 4px 6px rgba(34,42,53,0.03), 0 16px 40px rgba(47,48,55,0.05); }
+        th { background: #F8F8F8; }
+        .btn { border-radius: 8px; transition: all .3s cubic-bezier(.2,.7,.3,1); }
+        .btn:hover { border-color: #C41E3A; color: #C41E3A; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(196,30,58,0.12); }
     </style>
 </head>
 <body>
