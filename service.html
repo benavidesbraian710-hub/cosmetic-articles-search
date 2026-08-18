@@ -44,7 +44,7 @@
     </div>
     <div class="container">
         <div class="intro">
-            <h1>📊 定制化行业报告服务</h1>
+            <h1><svg viewBox="0 0 24 24" style="width:26px;height:26px;vertical-align:-4px;margin-right:10px" fill="none" stroke="#C41E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>定制化行业报告服务</h1>
             <p>基于 1100+ 篇行业文章与持续更新的数据源，我们提供三个层级的报告服务。提交需求后，我们将在 1-2 个工作日内与您确认细节。</p>
         </div>
         <div class="tiers">
@@ -117,11 +117,11 @@
                 const { error } = await sb.from('requests').insert(payload);
                 if (error) throw error;
                 msg.className = 'msg ok';
-                msg.textContent = '✅ 预约成功！我们将在 1-2 个工作日内与您联系确认细节。';
+                msg.innerHTML = '<svg viewBox="0 0 24 24" style="width:15px;height:15px;vertical-align:-2px;margin-right:6px" fill="none" stroke="#389e0d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>预约成功！我们将在 1-2 个工作日内与您联系确认细节。';
                 document.getElementById('svcForm').reset();
             } catch (err) {
                 msg.className = 'msg err';
-                msg.textContent = '❌ 提交失败：服务暂未上线，请稍后重试。';
+                msg.innerHTML = '<svg viewBox="0 0 24 24" style="width:15px;height:15px;vertical-align:-2px;margin-right:6px" fill="none" stroke="#cf1322" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>提交失败：服务暂未上线，请稍后重试。';
             }
             btn.disabled = false; btn.textContent = '提交预约';
         });
