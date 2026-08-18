@@ -40,9 +40,9 @@
         .cta-row { display: flex; justify-content: center; gap: 16px; margin-bottom: 52px; animation: fadeUp .8s .45s cubic-bezier(.2,.7,.3,1) both; }
         .cta { display: inline-block; padding: 14px 34px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; transition: all .35s var(--spring); letter-spacing: 1px; }
         .cta-primary { background: linear-gradient(135deg, #C41E3A, #A51830); color: #FFFFFF; box-shadow: 0 4px 20px rgba(196,30,58,0.28); }
-        .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(196,30,58,0.38); }
+        .cta-primary:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 28px rgba(196,30,58,0.38); }
         .cta-ghost { border: 1px solid #DDDDDD; color: #2D2D2D; }
-        .cta-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+        .cta-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px) scale(1.03); }
         .hero-stats { display: flex; justify-content: center; gap: 0; animation: fadeUp .8s .6s cubic-bezier(.2,.7,.3,1) both; }
         .hero-stats > div { padding: 0 40px; }
         .hero-stats > div + div { border-left: 1px solid #EEEEEE; }
@@ -68,7 +68,16 @@
         .card:hover::before { transform: scaleX(1); }
         .card .icon { width: 52px; height: 52px; border-radius: 12px; background: #FBE9EB; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
         .card .icon svg { width: 24px; height: 24px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .35s var(--spring); }
-        .card:hover .icon svg { transform: scale(1.12) rotate(-6deg); }
+        .card:hover .icon svg { transform: scale(1.05) rotate(-4deg); }
+
+        /* ── 鼠标交互：3D倾斜+跟随光斑（仅触悬停设备） ── */
+        .hero-glow { position: absolute; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(196,30,58,0.08) 0%, transparent 65%); pointer-events: none; left: 0; top: 0; transform: translate(-50%, -50%); transition: transform .3s cubic-bezier(.2,.7,.3,1); z-index: 0; display: none; }
+        @media (hover: hover) {
+            .hero-glow { display: block; }
+            .card { transform-style: preserve-3d; will-change: transform; }
+            .card::after { content: ''; position: absolute; inset: 0; border-radius: 14px; background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), rgba(196,30,58,0.06), transparent 65%); opacity: 0; transition: opacity .3s; pointer-events: none; }
+            .card:hover::after { opacity: 1; }
+        }
         .card h3 { font-family: var(--serif); font-size: 19px; font-weight: 700; margin-bottom: 12px; }
         .card p { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 24px; flex: 1; }
         .card .go { font-size: 14px; color: var(--accent); font-weight: 600; letter-spacing: 1px; }
@@ -118,6 +127,7 @@
         </nav>
     </div>
     <div class="hero">
+        <div class="hero-glow" id="heroGlow"></div>
         <div class="hero-inner">
             <div class="kicker">COSMETIC INDUSTRY INTELLIGENCE</div>
             <h1>追踪化妆品行业<br><span class="gold-flow">每一篇重要文章</span></h1>
@@ -177,6 +187,29 @@
             entries.forEach(function(en) { if (en.isIntersecting) { en.target.classList.add('revealed'); io.unobserve(en.target); } });
         }, { threshold: 0.12 });
         document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+
+        // 鼠标交互：仅触悬停设备且非减弱动效
+        if (window.matchMedia('(hover: hover)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            // 功能卡片 3D 倾斜 + 光斑位置
+            document.querySelectorAll('.card').forEach(function(card) {
+                card.addEventListener('mousemove', function(e) {
+                    var r = card.getBoundingClientRect();
+                    var x = e.clientX - r.left, y = e.clientY - r.top;
+                    card.style.setProperty('--mx', x + 'px');
+                    card.style.setProperty('--my', y + 'px');
+                    var rx = ((y / r.height) - 0.5) * -8;
+                    var ry = ((x / r.width) - 0.5) * 8;
+                    card.style.transform = 'translateY(-4px) rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg)';
+                });
+                card.addEventListener('mouseleave', function() { card.style.transform = ''; });
+            });
+            // Hero 跟随光斑
+            var hero = document.querySelector('.hero'), glow = document.getElementById('heroGlow');
+            hero.addEventListener('mousemove', function(e) {
+                var r = hero.getBoundingClientRect();
+                glow.style.transform = 'translate(' + (e.clientX - r.left - 260) + 'px,' + (e.clientY - r.top - 260) + 'px)';
+            });
+        }
 
         fetch('data.v73.json').then(function(r) { return r.json(); }).then(function(d) {
             var total = d.stats.total_articles, sources = d.stats.source_count;
