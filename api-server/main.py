@@ -337,9 +337,13 @@ def llm_rerank(query: str, articles: List[dict], intent: Dict) -> List[dict]:
         # 提取JSON
         json_match = re.search(r'\{[\s\S]*"selected"[\s\S]*\}', text)
         if json_match:
+            print(f"LLM返回JSON: {json_match.group(0)[:500]}")
             try:
                 llm_result = json.loads(json_match.group(0))
                 selected_list = llm_result.get('selected', [])
+                print(f"LLM selected数量: {len(selected_list)}")
+                if selected_list:
+                    print(f"第一个selected: {selected_list[0]}")
                 
                 selected_ids = {r['id'] for r in selected_list}
                 id_to_data = {r['id']: r for r in selected_list}
