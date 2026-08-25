@@ -108,8 +108,10 @@ def call_kimi_api(prompt: str, model: str = 'kimi-k3', timeout: int = 60) -> Opt
         # 尝试多种格式
         if 'content' in result:
             content = result['content']
+            print(f"content类型: {type(content)}, 内容: {str(content)[:500]}")
             if isinstance(content, list) and len(content) > 0:
-                return content[0].get('text', '')
+                print(f"content[0]类型: {type(content[0])}, keys: {content[0].keys() if isinstance(content[0], dict) else 'N/A'}")
+                return content[0].get('text', '') or content[0].get('content', '') or str(content[0])
             elif isinstance(content, str):
                 return content
         elif 'choices' in result:
