@@ -109,15 +109,18 @@ def call_kimi_api(prompt: str, model: str = 'kimi-k3', timeout: int = 60) -> Opt
         if 'content' in result:
             content = result['content']
             if isinstance(content, list) and len(content) > 0:
-                # Kimi K3 返回 thinking 类型
+                # Kimi K3 返回 [thinking, text] 或 [thinking]
+                # 优先取 text 类型（最终输出），其次取 thinking（思考过程）
+                for item in content:
+                    if item.get('type') == 'text':
+                        return item.get('text', '')
+                # 如果没有 text，取 thinking（但 thinking 通常不是最终JSON）
                 for item in content:
                     if item.get('type') == 'thinking':
                         return item.get('thinking', '')
-                    elif item.get('type') == 'text':
-                        return item.get('text', '')
-                # 如果没有 thinking/text，取第一个的任意文本字段
+                # 兜底：取第一个的任意文本字段
                 first = content[0]
-                return first.get('thinking', '') or first.get('text', '') or str(first)
+                return first.get('text', '') or first.get('thinking', '') or str(first)
             elif isinstance(content, str):
                 return content
         elif 'choices' in result:
