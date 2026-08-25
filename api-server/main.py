@@ -10,9 +10,9 @@ import requests
 from datetime import datetime, timedelta
 import os
 
-# Kimi API 配置
+# Kimi API 配置（OpenClaw 同款端点）
 KIMI_API_KEY = os.environ.get('KIMI_API_KEY', '')
-KIMI_API_URL = 'https://api.moonshot.cn/v1/chat/completions'
+KIMI_API_URL = 'https://api.kimi.com/coding/v1/messages'  # Anthropic 格式
 
 app = FastAPI(title="化妆品文章智能检索API", version="3.0.0")
 
@@ -83,20 +83,20 @@ def parse_time_filter(query: str) -> Optional[str]:
 # ============ 步骤1：LLM意图解析（锚点+修饰词） ============
 
 def call_kimi_api(prompt: str, model: str = 'kimi-k3', timeout: int = 60) -> Optional[str]:
-    """直接调用 Kimi API（HTTP）"""
+    """直接调用 Kimi API（Anthropic 格式，与 OpenClaw 一致）"""
     if not KIMI_API_KEY:
         print("KIMI_API_KEY 未配置")
         return None
     
     headers = {
-        'Authorization': f'Bearer {KIMI_API_KEY}',
+        'x-api-key': KIMI_API_KEY,
+        'anthropic-version': '2023-06-01',
         'Content-Type': 'application/json'
     }
     
     payload = {
         'model': model,
         'messages': [{'role': 'user', 'content': prompt}],
-        'temperature': 0.3,
         'max_tokens': 4096
     }
     
@@ -104,7 +104,8 @@ def call_kimi_api(prompt: str, model: str = 'kimi-k3', timeout: int = 60) -> Opt
         response = requests.post(KIMI_API_URL, headers=headers, json=payload, timeout=timeout)
         response.raise_for_status()
         result = response.json()
-        return result['choices'][0]['message']['content']
+        # Anthropic 格式返回 content[0].text
+        return result['content'][0]['text']
     except Exception as e:
         print(f"Kimi API 调用失败: {e}")
         return None
