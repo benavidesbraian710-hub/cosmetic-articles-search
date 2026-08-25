@@ -7,10 +7,25 @@
 import sqlite3
 import json
 import os
+import re
 from datetime import datetime
 
 DB_PATH = os.path.expanduser('~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db')
 OUTPUT_PATH = os.path.expanduser('~/.openclaw/workspace/cosmetic-deploy/data.json')
+OUTPUT_DIR = os.path.dirname(OUTPUT_PATH)
+
+def get_next_version():
+    """扫描目录下已有的 data.vXX.json，取最大编号+1作为新版本号"""
+    max_version = 0
+    pattern = re.compile(r'^data\.v(\d+)\.json$')
+    for fname in os.listdir(OUTPUT_DIR):
+        m = pattern.match(fname)
+        if m:
+            num = int(m.group(1))
+            if num > max_version:
+                max_version = num
+    return f'v{max_version + 1}'
+
 
 def export_data():
     """导出数据库数据为JSON"""
@@ -84,9 +99,10 @@ def export_data():
         
         conn.close()
         
-        # 构建数据
+        # 构建数据（版本号自动递增）
+        version = get_next_version()
         data = {
-            'version': 'v31',
+            'version': version,
             'stats': {
                 'total_articles': total,
                 'source_count': source_count,
@@ -100,15 +116,21 @@ def export_data():
             'articles': articles_by_source
         }
         
-        # 保存为JSON
+        # 保存为JSON（主文件）
         with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
-        
+
+        # 保存为版本号文件 data.vXX.json
+        versioned_path = os.path.join(OUTPUT_DIR, f'data.{version}.json')
+        with open(versioned_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+
         print(f"✅ 数据导出成功: {OUTPUT_PATH}")
+        print(f"   版本号: {version} ({versioned_path})")
         print(f"   文章总数: {total}")
         print(f"   公众号数: {source_count}")
         print(f"   更新时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        
+
         return True
         
     except Exception as e:
