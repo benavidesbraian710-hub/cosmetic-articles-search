@@ -104,8 +104,21 @@ def call_kimi_api(prompt: str, model: str = 'kimi-k3', timeout: int = 60) -> Opt
         response = requests.post(KIMI_API_URL, headers=headers, json=payload, timeout=timeout)
         response.raise_for_status()
         result = response.json()
-        # Anthropic 格式返回 content[0].text
-        return result['content'][0]['text']
+        print(f"Kimi API 返回结构: {list(result.keys())}")
+        # 尝试多种格式
+        if 'content' in result:
+            content = result['content']
+            if isinstance(content, list) and len(content) > 0:
+                return content[0].get('text', '')
+            elif isinstance(content, str):
+                return content
+        elif 'choices' in result:
+            return result['choices'][0]['message']['content']
+        elif 'text' in result:
+            return result['text']
+        else:
+            print(f"未知返回格式: {result}")
+            return str(result)
     except Exception as e:
         print(f"Kimi API 调用失败: {e}")
         return None
