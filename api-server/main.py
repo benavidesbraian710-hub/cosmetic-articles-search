@@ -6,8 +6,13 @@ import sqlite3
 import re
 import json
 import subprocess
+import requests
 from datetime import datetime, timedelta
 import os
+
+# Kimi API 配置
+KIMI_API_KEY = os.environ.get('KIMI_API_KEY', '')
+KIMI_API_URL = 'https://api.moonshot.cn/v1/chat/completions'
 
 app = FastAPI(title="化妆品文章智能检索API", version="3.0.0")
 
@@ -77,6 +82,34 @@ def parse_time_filter(query: str) -> Optional[str]:
 
 # ============ 步骤1：LLM意图解析（锚点+修饰词） ============
 
+def call_kimi_api(prompt: str, model: str = 'kimi-k3', timeout: int = 60) -> Optional[str]:
+    """直接调用 Kimi API（HTTP）"""
+    if not KIMI_API_KEY:
+        print("KIMI_API_KEY 未配置")
+        return None
+    
+    headers = {
+        'Authorization': f'Bearer {KIMI_API_KEY}',
+        'Content-Type': 'application/json'
+    }
+    
+    payload = {
+        'model': model,
+        'messages': [{'role': 'user', 'content': prompt}],
+        'temperature': 0.3,
+        'max_tokens': 4096
+    }
+    
+    try:
+        response = requests.post(KIMI_API_URL, headers=headers, json=payload, timeout=timeout)
+        response.raise_for_status()
+        result = response.json()
+        return result['choices'][0]['message']['content']
+    except Exception as e:
+        print(f"Kimi API 调用失败: {e}")
+        return None
+
+
 def llm_parse_intent(query: str) -> Dict:
     """用LLM解析用户查询的核心意图锚点和修饰概念"""
     
@@ -107,31 +140,9 @@ def llm_parse_intent(query: str) -> Dict:
 }}"""
 
     try:
-        cmd = [
-            "/Users/yuming.chen/.nvm/versions/node/v22.22.2/bin/node",
-            "/Users/yuming.chen/.nvm/versions/node/v22.22.2/bin/openclaw",
-            "agent", "--local", "--agent", "main",
-            "--model", "kimi/kimi-k3",
-            "--message", prompt,
-            "--json", "--timeout", "60"
-        ]
-        
-        result = subprocess.run(
-            cmd, capture_output=True, text=True, timeout=90,
-            env={**os.environ, "PATH": "/Users/yuming.chen/.nvm/versions/node/v22.22.2/bin:/usr/local/bin:/usr/bin:/bin"}
-        )
-        
-        if result.returncode != 0:
-            print(f"LLM意图解析失败: {result.stderr[:200]}")
+        text = call_kimi_api(prompt, model='kimi-k3', timeout=60)
+        if not text:
             return fallback_intent(query)
-        
-        response = json.loads(result.stdout)
-        text = ""
-        if 'payloads' in response:
-            for p in response['payloads']:
-                if p.get('text'):
-                    text = p['text']
-                    break
         
         # 提取JSON
         json_match = re.search(r'\{[^{}]*"anchor"[^{}]*\}', text, re.DOTALL)
@@ -316,34 +327,12 @@ def llm_rerank(query: str, articles: List[dict], intent: Dict) -> List[dict]:
 - 宁可少返回，也不要返回不相关的"""
 
     try:
-        cmd = [
-            "/Users/yuming.chen/.nvm/versions/node/v22.22.2/bin/node",
-            "/Users/yuming.chen/.nvm/versions/node/v22.22.2/bin/openclaw",
-            "agent", "--local", "--agent", "main",
-            "--model", "kimi/kimi-k3",
-            "--message", prompt,
-            "--json", "--timeout", "120"
-        ]
-        
-        result = subprocess.run(
-            cmd, capture_output=True, text=True, timeout=150,
-            env={**os.environ, "PATH": "/Users/yuming.chen/.nvm/versions/node/v22.22.2/bin:/usr/local/bin:/usr/bin:/bin"}
-        )
-        
-        if result.returncode != 0:
-            print(f"LLM精排失败: {result.stderr[:200]}")
+        text = call_kimi_api(prompt, model='kimi-k3', timeout=120)
+        if not text:
             for a in articles:
                 a['llm_score'] = 50
                 a['llm_reason'] = f'本文与"{anchor}"相关'
             return articles[:10]
-        
-        response = json.loads(result.stdout)
-        text = ""
-        if 'payloads' in response:
-            for p in response['payloads']:
-                if p.get('text'):
-                    text = p['text']
-                    break
         
         # 提取JSON
         json_match = re.search(r'\{[\s\S]*"selected"[\s\S]*\}', text)
