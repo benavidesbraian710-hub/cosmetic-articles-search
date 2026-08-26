@@ -478,8 +478,8 @@ def llm_rerank(query: str, articles: List[dict], intent: Dict) -> List[dict]:
     # 按relevance降序排序
     filtered_articles.sort(key=lambda x: x.get('llm_score', 0), reverse=True)
     
-    # 返回前20篇
-    return filtered_articles[:20]
+    # 返回所有relevance >= 60的文章（不限制数量）
+    return filtered_articles
 
 # ============ 匹配理由生成 ============
 
