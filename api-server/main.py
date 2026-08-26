@@ -308,20 +308,69 @@ def anchor_search(intent: Dict, limit: int = 50, date_from: str = None) -> List[
 
 # ============ 步骤3：LLM精排（意图锚定） ============
 
-def llm_rerank(query: str, articles: List[dict], intent: Dict) -> List[dict]:
-    """LLM基于意图锚点精排——判断文章是否主要讨论anchor概念"""
+def calculate_concurrency(total_articles: int) -> int:
+    """根据召回数量计算最优并发数"""
+    if total_articles <= 10:
+        return 1   # 1批 × 10篇
+    elif total_articles <= 20:
+        return 2   # 2批 × 10篇
+    elif total_articles <= 40:
+        return 4   # 4批 × 10篇
+    elif total_articles <= 80:
+        return 8   # 8批 × 10篇
+    else:
+        return 16  # 16批 × 10篇（最大并发）
+
+def build_article_text(article: dict, index: int) -> str:
+    """构建单篇文章的完整输入文本（全结构，不看全文）"""
+    import json
     
-    if not articles:
-        return articles
+    # 解析结构化内容
+    structured = {}
+    if article.get('structured_content'):
+        try:
+            structured = json.loads(article['structured_content'])
+        except:
+            pass
     
+    # 提取各字段
+    title = article.get('title', '')
+    main_topic = structured.get('main_topic', '')
+    macro_narrative = structured.get('macro_narrative', '')[:300]  # 300字符
+    micro_nodes = structured.get('micro_nodes', [])[:3]  # 前3个节点
+    micro_nodes_text = '、'.join(micro_nodes)[:200]  # 200字符
+    key_entities = structured.get('key_entities', [])[:5]  # 前5个实体
+    key_entities_text = '、'.join(key_entities)[:100]  # 100字符
+    keywords = (article.get('keywords') or '')[:100]  # 100字符
+    summary = (article.get('summary') or '')[:300]  # 300字符
+    
+    # 构建完整文本
+    text = f"\n【文章{index}】ID:{article['id']}"
+    text += f"\n标题: {title}"
+    if main_topic:
+        text += f"\n主要主题: {main_topic}"
+    if macro_narrative:
+        text += f"\n宏观叙述: {macro_narrative}"
+    if micro_nodes_text:
+        text += f"\n微观节点: {micro_nodes_text}"
+    if key_entities_text:
+        text += f"\n核心实体: {key_entities_text}"
+    if keywords:
+        text += f"\n关键词: {keywords}"
+    if summary:
+        text += f"\n摘要: {summary}"
+    
+    return text
+
+def llm_rerank_batch(query: str, articles: List[dict], intent: Dict, batch_num: int) -> List[dict]:
+    """单批次LLM精排"""
     anchor = intent.get('anchor', query)
     exclude_if = intent.get('exclude_if', [])
     
-    # 构建文章列表（只取前20篇）
+    # 构建文章列表
     articles_text = ""
-    for i, article in enumerate(articles[:20], 1):
-        summary = (article.get('summary') or '')[:300]
-        articles_text += f"\n【文章{i}】ID:{article['id']}\n标题: {article['title']}\n摘要: {summary}\n"
+    for i, article in enumerate(articles, 1):
+        articles_text += build_article_text(article, i)
     
     exclude_text = '\n'.join(f'- {e}' for e in exclude_if) if exclude_if else '- 无'
     
@@ -354,52 +403,83 @@ def llm_rerank(query: str, articles: List[dict], intent: Dict) -> List[dict]:
     try:
         text = call_kimi_api(prompt, model='kimi-k3', timeout=120)
         if not text:
-            for a in articles:
-                a['llm_score'] = 50
-                a['llm_reason'] = f'本文与"{anchor}"相关'
-            return articles[:10]
+            return []
         
         # 提取JSON
         json_match = re.search(r'\{[\s\S]*"selected"[\s\S]*\}', text)
         if json_match:
-            print(f"LLM返回JSON: {json_match.group(0)[:500]}")
             try:
                 llm_result = json.loads(json_match.group(0))
                 selected_list = llm_result.get('selected', [])
-                print(f"LLM selected数量: {len(selected_list)}")
-                if selected_list:
-                    print(f"第一个selected: {selected_list[0]}")
-                
-                selected_ids = {r['id'] for r in selected_list}
-                id_to_data = {r['id']: r for r in selected_list}
-                
-                filtered_articles = []
-                for a in articles:
-                    if a['id'] in selected_ids:
-                        r = id_to_data[a['id']]
-                        a['llm_reason'] = r.get('reason', f'本文主要讨论"{anchor}"')
-                        a['llm_score'] = r.get('relevance', 70)
-                        filtered_articles.append(a)
-                
-                # 按relevance排序
-                filtered_articles.sort(key=lambda x: x.get('llm_score', 0), reverse=True)
-                
-                return filtered_articles[:10]
-                
+                print(f"批次{batch_num} LLM精选: {len(selected_list)}篇")
+                return selected_list
             except json.JSONDecodeError as e:
-                print(f"LLM结果JSON解析失败: {e}")
+                print(f"批次{batch_num} JSON解析失败: {e}")
         
-        for a in articles:
-            a['llm_score'] = 50
-            a['llm_reason'] = f'本文与"{anchor}"相关'
-        return articles[:10]
+        return []
         
     except Exception as e:
-        print(f"LLM精排异常: {e}")
-        for a in articles:
-            a['llm_score'] = 50
-            a['llm_reason'] = f'本文与"{anchor}"相关'
-        return articles[:10]
+        print(f"批次{batch_num} LLM精排异常: {e}")
+        return []
+
+def llm_rerank(query: str, articles: List[dict], intent: Dict) -> List[dict]:
+    """LLM基于意图锚点精排——动态并发，全结构输入"""
+    import concurrent.futures
+    import threading
+    
+    if not articles:
+        return articles
+    
+    total = len(articles)
+    concurrency = calculate_concurrency(total)
+    batch_size = 10
+    
+    print(f"LLM精排: 共{total}篇, 并发{concurrency}, 每批{batch_size}篇")
+    
+    # 分批
+    batches = [articles[i:i+batch_size] for i in range(0, total, batch_size)]
+    
+    # 存储所有批次结果
+    all_selected = []
+    lock = threading.Lock()
+    
+    def process_batch(batch_articles, batch_num):
+        results = llm_rerank_batch(query, batch_articles, intent, batch_num)
+        with lock:
+            all_selected.extend(results)
+    
+    # 并发执行
+    with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as executor:
+        futures = []
+        for i, batch in enumerate(batches, 1):
+            futures.append(executor.submit(process_batch, batch, i))
+        
+        # 等待所有批次完成
+        concurrent.futures.wait(futures)
+    
+    # 合并结果
+    if not all_selected:
+        # 全部失败，返回空
+        return []
+    
+    # 构建ID到文章的映射
+    id_to_article = {a['id']: a for a in articles}
+    
+    # 按relevance排序并附加信息
+    filtered_articles = []
+    for item in all_selected:
+        article_id = item.get('id')
+        if article_id in id_to_article:
+            article = id_to_article[article_id]
+            article['llm_score'] = item.get('relevance', 70)
+            article['llm_reason'] = item.get('reason', f'本文主要讨论"{intent.get("anchor", query)}"')
+            filtered_articles.append(article)
+    
+    # 按relevance降序排序
+    filtered_articles.sort(key=lambda x: x.get('llm_score', 0), reverse=True)
+    
+    # 返回前20篇
+    return filtered_articles[:20]
 
 # ============ 匹配理由生成 ============
 
@@ -440,7 +520,7 @@ async def search_articles(request: SearchRequest):
     date_from = parse_time_filter(request.query)
     
     # 步骤2：锚点检索（AND逻辑+时间过滤）
-    articles = anchor_search(intent, limit=50, date_from=date_from)
+    articles = anchor_search(intent, limit=100, date_from=date_from)  # 无上限召回，最多100篇
     print(f"锚点检索召回: {len(articles)} 篇" + (f"（>= {date_from}）" if date_from else ""))
     
     # 步骤3：LLM精排（意图锚定）
