@@ -420,11 +420,17 @@ def llm_rerank_batch(query: str, articles: List[dict], intent: Dict, batch_num: 
                 llm_result = json.loads(json_match.group(0))
                 selected_list = llm_result.get('selected', [])
                 print(f"批次{batch_num} LLM精选: {len(selected_list)}篇")
-                # 调试：打印每篇文章的reason状态
+                # 调试：打印完整的LLM返回结果
+                print(f"批次{batch_num} LLM原始返回: {json.dumps(llm_result, ensure_ascii=False)[:500]}")
+                # 调试：检查每篇文章的字段
                 for item in selected_list:
+                    article_id = item.get('id')
+                    relevance = item.get('relevance')
                     reason = item.get('reason', '')
+                    print(f"批次{batch_num} 文章ID:{article_id} relevance:{relevance} reason长度:{len(reason)} reason预览:'{reason[:50]}'")
                     if not reason or len(reason.strip()) < 10:
-                        print(f"批次{batch_num} 警告: 文章ID {item.get('id')} 理由为空或过短: '{reason}'")
+                        print(f"批次{batch_num} 严重警告: 文章ID {article_id} 理由为空或过短!")
+                        print(f"批次{batch_num} 完整item: {json.dumps(item, ensure_ascii=False)}")
                 return selected_list
             except json.JSONDecodeError as e:
                 print(f"批次{batch_num} JSON解析失败: {e}")
