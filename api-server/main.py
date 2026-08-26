@@ -395,8 +395,7 @@ def llm_rerank_batch(query: str, articles: List[dict], intent: Dict, batch_num: 
     {{
       "id": 文章ID, 
       "relevance": 85, 
-      "reason": "选择这篇文章的具体原因，必须指出哪个部分（标题/主题/叙述/节点/实体/关键词/摘要）提到了相关内容",
-      "matched_part": "具体匹配的部分（如：主要主题、微观节点第2点、核心实体等）"
+      "reason": "选择这篇文章的具体原因，用自然语言描述文章中哪些内容与{anchor}相关，不要提及技术字段名（如标题/主题/叙述/节点/实体/关键词/摘要等），直接说文章内容本身"
     }},
     ...
   ]
@@ -405,7 +404,8 @@ def llm_rerank_batch(query: str, articles: List[dict], intent: Dict, batch_num: 
 注意：
 - relevance范围0-100，表示文章与"{anchor}"的相关程度
 - 只保留relevance >= 60的文章
-- reason必须具体说明哪个部分提到了相关内容，不能笼统说"相关"
+- reason用自然语言描述文章内容与{anchor}的关系，例如"文章介绍了雅诗兰黛集团最新应用的tFNA成分，该成分通过修复DNA损伤和促进自噬实现抗衰老效果"
+- 不要提及"标题"、"主题"、"摘要"、"关键词"等技术字段名
 - 宁可少返回，也不要返回不相关的"""
 
     try:
@@ -480,13 +480,8 @@ def llm_rerank(query: str, articles: List[dict], intent: Dict) -> List[dict]:
         if article_id in id_to_article:
             article = id_to_article[article_id]
             article['llm_score'] = item.get('relevance', 70)
-            # 使用LLM返回的具体理由，包含matched_part信息
-            reason = item.get('reason', f'本文主要讨论"{intent.get("anchor", query)}"')
-            matched_part = item.get('matched_part', '')
-            if matched_part:
-                article['llm_reason'] = f"{reason}（匹配部分：{matched_part}）"
-            else:
-                article['llm_reason'] = reason
+            # 使用LLM返回的具体理由（自然语言描述，不体现技术字段）
+            article['llm_reason'] = item.get('reason', f'本文主要讨论"{intent.get("anchor", query)}"')
             filtered_articles.append(article)
     
     # 按relevance降序排序
