@@ -483,11 +483,17 @@ def llm_rerank(query: str, articles: List[dict], intent: Dict) -> List[dict]:
     filtered_articles = []
     for item in all_selected:
         article_id = item.get('id')
+        reason = item.get('reason', '').strip()
+        
+        # 严格验证：reason 不能为空或过短
+        if not reason or len(reason) < 10:
+            print(f"警告: 文章ID {article_id} 理由为空或过短: '{reason}'，跳过")
+            continue
+        
         if article_id in id_to_article:
             article = id_to_article[article_id]
             article['llm_score'] = item.get('relevance', 70)
-            # 使用LLM返回的具体理由（自然语言描述，不体现技术字段）
-            article['llm_reason'] = item.get('reason', f'本文主要讨论"{intent.get("anchor", query)}"')
+            article['llm_reason'] = reason
             filtered_articles.append(article)
     
     # 按relevance降序排序
