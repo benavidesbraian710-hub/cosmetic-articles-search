@@ -152,3 +152,14 @@
 - **迁移脚本**：supabase_migration_service_requests.sql 已生成，待Supabase Dashboard执行
 - **与智能选文报告区分**：事实输出/综合概述归智能选文报告，定制化深度报告专注非标深度需求
 - **状态**：✅ 前端开发完成，待Supabase表结构更新后上线
+
+## 2026-08-26 | 数据库结构化内容提取 100% 完成 + Supabase 迁移收官
+- **批量提取任务**：1,262篇文章全部完成结构化内容提取（宏观叙述+微观节点+主要主题+次要主题+核心实体）
+  - 08-24 22:11 启动 PID 77025，期间经历编码错误（API key含Unicode省略号导致latin-1编码失败）
+  - 08-26 09:35 重试剩余89篇 PID 17736
+  - 08-26 10:53 最终完成：1,262/1,262篇（100%）
+- **Supabase表结构迁移**：使用Management API + PAT（sbp_40c…82fa4）执行ALTER TABLE，8个新字段全部添加成功
+  - title/source_content/report_points/use_case/focus_areas/delivery_format/page_length/must_include
+- **数据库结构文档化**：13个字段完整定义（含structured_content JSON结构）已同步至设计文档v3.2
+- **LLM精排细节文档化**：意图锚定检索三步骤（LLM意图解析→FTS5锚点检索→LLM精排评分）完整技术细节已同步至设计文档v3.2
+- **状态**：✅ 全部完成，定制化深度报告功能正式上线可用
