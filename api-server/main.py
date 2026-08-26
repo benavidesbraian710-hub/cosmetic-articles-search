@@ -500,24 +500,13 @@ def llm_rerank(query: str, articles: List[dict], intent: Dict) -> List[dict]:
 
 def generate_match_reason(article: dict, intent: Dict) -> str:
     """基于意图锚点生成匹配理由"""
-    # 优先使用LLM的语义理由
+    # 直接使用LLM的语义理由（不再过滤"相关"关键词）
     llm_reason = article.get('llm_reason', '')
-    if llm_reason and '相关' not in llm_reason:
+    if llm_reason:
         return llm_reason
     
+    # 如果LLM没有理由，生成简单模板（但这种情况应该很少）
     anchor = intent.get('anchor', '')
-    modifiers = intent.get('modifiers', [])
-    
-    text = f"{article['title']} {article.get('summary', '')} {article.get('keywords', '')}".lower()
-    
-    # 检查锚点匹配
-    anchor_matched = anchor.lower() in text if anchor else False
-    modifier_matched = [m for m in modifiers if m.lower() in text]
-    
-    if anchor_matched and modifier_matched:
-        return f"本文主要讨论「{anchor}」，同时涉及「{'」「'.join(modifier_matched[:2])}」，与您的搜索高度匹配。"
-    elif anchor_matched:
-        return f"本文主要讨论「{anchor}」相关内容，与您的搜索意图匹配。"
     return f"本文涉及「{anchor}」相关内容。"
 
 # ============ 搜索接口 ============
