@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>化妆品文章检索系统</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -136,7 +139,23 @@
         var selectedArticles = new Map();
 
         function init() {
+            // 检查版本并强制刷新
+            checkVersionAndReload();
             loadData();
+        }
+        
+        // 版本检测：如果本地版本与服务器版本不一致，强制刷新
+        function checkVersionAndReload() {
+            var currentVersion = 'v77'; // 当前页面版本
+            var storedVersion = localStorage.getItem('site_version');
+            
+            if (storedVersion && storedVersion !== currentVersion) {
+                // 版本不一致，清除缓存并强制刷新
+                localStorage.setItem('site_version', currentVersion);
+                window.location.reload(true);
+            } else if (!storedVersion) {
+                localStorage.setItem('site_version', currentVersion);
+            }
         }
 
         function loadData() {
