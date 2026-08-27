@@ -211,6 +211,21 @@
   - 测试查询"化妆品新规政策"：67篇召回，79篇精选，全部有具体理由
 - **状态**：✅ 已修复，推送GitHub（commit 6da832a），ECS服务已重启
 
+## 2026-08-27 | 管理后台双标签页 — 智能选文报告+定制化深度报告
+- **背景**：管理后台原只显示 requests 表（旧需求），智能选文报告（article_reports）和定制化深度报告（service_requests）两个新表的用户提交无法在后台查看
+- **改造**：
+  - admin.html 重构为双标签页结构
+  - 标签1「智能选文报告」：显示需求单号/报告类型/篇幅/文章数/选中文献列表/具体要求/联系人
+  - 标签2「定制化深度报告」：显示主题/需求详情/用途关注/交付要求/验收标准/联系人
+  - 标签页带计数徽章，并发查询两个表
+- **Supabase 新增 RPC 函数**：
+  - `get_article_reports(admin_pwd)` — 查询 article_reports 表
+  - `get_service_requests(admin_pwd)` — 查询 service_requests 表
+  - 两个表均启用 RLS，匿名仅可写入，管理员通过密码 RPC 读取
+- **迁移执行**：通过 Management API + PAT 执行 `supabase_migration_admin_tabs.sql`，两个 RPC 函数已创建并验证可用
+- **部署**：主仓 commit c7a8312（feature/new-arch），预览仓 commit b0c1767（main）
+- **状态**：✅ 已上线，访问 admin.html 输入密码即可看到两个标签页
+
 ## 2026-08-26 | 项目问题与改进记录机制建立
 - **背景**：Nick要求记录项目发生的问题和改进措施，形成可追溯的问题解决机制
 - **记录内容**：
