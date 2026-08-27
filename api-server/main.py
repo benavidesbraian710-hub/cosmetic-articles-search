@@ -82,8 +82,8 @@ def parse_time_filter(query: str) -> Optional[str]:
 
 # ============ 步骤1：LLM意图解析（锚点+修饰词） ============
 
-def call_kimi_api(prompt: str, model: str = 'kimi-k3', timeout: int = 60) -> Optional[str]:
-    """直接调用 Kimi API（Anthropic 格式，与 OpenClaw 一致）"""
+def call_kimi_api(prompt: str, model: str = 'kimi-k3', timeout: int = 120, max_retries: int = 2) -> Optional[str]:
+    """直接调用 Kimi API（Anthropic 格式，与 OpenClaw 一致），带重试机制"""
     if not KIMI_API_KEY:
         print("KIMI_API_KEY 未配置")
         return None
@@ -100,39 +100,49 @@ def call_kimi_api(prompt: str, model: str = 'kimi-k3', timeout: int = 60) -> Opt
         'max_tokens': 4096
     }
     
-    try:
-        response = requests.post(KIMI_API_URL, headers=headers, json=payload, timeout=timeout)
-        response.raise_for_status()
-        result = response.json()
-        print(f"Kimi API 返回结构: {list(result.keys())}")
-        # 尝试多种格式
-        if 'content' in result:
-            content = result['content']
-            if isinstance(content, list) and len(content) > 0:
-                # Kimi K3 返回 [thinking, text] 或 [thinking]
-                # 优先取 text 类型（最终输出），其次取 thinking（思考过程）
-                for item in content:
-                    if item.get('type') == 'text':
-                        return item.get('text', '')
-                # 如果没有 text，取 thinking（但 thinking 通常不是最终JSON）
-                for item in content:
-                    if item.get('type') == 'thinking':
-                        return item.get('thinking', '')
-                # 兜底：取第一个的任意文本字段
-                first = content[0]
-                return first.get('text', '') or first.get('thinking', '') or str(first)
-            elif isinstance(content, str):
-                return content
-        elif 'choices' in result:
-            return result['choices'][0]['message']['content']
-        elif 'text' in result:
-            return result['text']
-        else:
-            print(f"未知返回格式: {result}")
-            return str(result)
-    except Exception as e:
-        print(f"Kimi API 调用失败: {e}")
-        return None
+    for attempt in range(max_retries + 1):
+        try:
+            response = requests.post(KIMI_API_URL, headers=headers, json=payload, timeout=timeout)
+            response.raise_for_status()
+            result = response.json()
+            print(f"Kimi API 返回结构: {list(result.keys())}")
+            # 尝试多种格式
+            if 'content' in result:
+                content = result['content']
+                if isinstance(content, list) and len(content) > 0:
+                    # Kimi K3 返回 [thinking, text] 或 [thinking]
+                    # 优先取 text 类型（最终输出），其次取 thinking（思考过程）
+                    for item in content:
+                        if item.get('type') == 'text':
+                            return item.get('text', '')
+                    # 如果没有 text，取 thinking（但 thinking 通常不是最终JSON）
+                    for item in content:
+                        if item.get('type') == 'thinking':
+                            return item.get('thinking', '')
+                    # 兜底：取第一个的任意文本字段
+                    first = content[0]
+                    return first.get('text', '') or first.get('thinking', '') or str(first)
+                elif isinstance(content, str):
+                    return content
+            elif 'choices' in result:
+                return result['choices'][0]['message']['content']
+            elif 'text' in result:
+                return result['text']
+            else:
+                print(f"未知返回格式: {result}")
+                return str(result)
+        except requests.exceptions.Timeout as e:
+            print(f"Kimi API 超时 (尝试 {attempt + 1}/{max_retries + 1}): {e}")
+            if attempt < max_retries:
+                import time
+                time.sleep(2)  # 等待2秒后重试
+                continue
+            return None
+        except Exception as e:
+            print(f"Kimi API 调用失败: {e}")
+            return None
+    
+    return None
 
 
 def llm_parse_intent(query: str) -> Dict:
