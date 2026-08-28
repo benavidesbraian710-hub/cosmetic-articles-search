@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
+    <title>文章检索 - 化妆品行业洞察平台</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; background: #f5f5f5; height: 100vh; display: flex; }
+        .sidebar { width: 280px; background: #fff; border-right: 1px solid #e8e8e8; display: flex; flex-direction: column; }
+        .sidebar-header { padding: 20px; border-bottom: 1px solid #e8e8e8; }
+        .sidebar-header h1 { font-family: 'Noto Serif SC', Georgia, 'Songti SC', 'SimSun', serif; font-size: 16px; font-weight: 700; letter-spacing: 1px; color: #2D2D2D; margin-bottom: 8px; white-space: nowrap; }
+        .sidebar-header .version { font-size: 12px; color: #C41E3A; font-weight: 500; display: none; }
+        .sidebar-header .stats { margin-top: 12px; padding: 10px; background: #f8f9fa; border-radius: 6px; font-size: 13px; color: #666; }
+        .sidebar-header .stats div { margin: 4px 0; }
+        .sidebar-search { padding: 12px 16px; border-bottom: 1px solid #e8e8e8; }
+        .sidebar-search input { width: 100%; padding: 8px 12px; border: 1px solid #d9d9d9; border-radius: 6px; font-size: 14px; outline: none; transition: all 0.2s; }
+        .sidebar-search input:focus { border-color: #C41E3A; box-shadow: 0 0 0 2px rgba(196,30,58,0.1); }
+        .sidebar-search input::placeholder { color: #999; }
+        .source-list { flex: 1; overflow-y: auto; padding: 10px; }
+        .source-item { padding: 12px 16px; margin: 4px 0; border-radius: 8px; cursor: pointer; transition: all 0.2s; display: flex; justify-content: space-between; align-items: center; }
+        .source-item:hover { background: #FBE9EB; }
+        .source-item.active { background: #FBE9EB; border-left: 3px solid #C41E3A; }
+        .source-item.hidden { display: none; }
+        .source-name { font-size: 14px; color: #333; font-weight: 500; }
+        .source-count { font-size: 12px; color: #999; background: #f5f5f5; padding: 2px 8px; border-radius: 10px; }
+        .main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+        .main-header { background: #fff; padding: 20px 30px; border-bottom: 1px solid #e8e8e8; display: flex; justify-content: space-between; align-items: center; }
+        .main-header h2 { font-size: 20px; color: #333; }
+        .main-header .actions { display: flex; gap: 10px; align-items: center; }
+        .btn { padding: 8px 16px; border-radius: 6px; border: 1px solid #d9d9d9; background: #fff; cursor: pointer; font-size: 14px; transition: all 0.2s; }
+        .btn:hover { border-color: #C41E3A; color: #C41E3A; }
+        .btn-primary { background: #C41E3A; color: #fff; border-color: #C41E3A; }
+        .btn-primary:hover { background: #A51830; }
+        .btn-success { background: #C41E3A; color: #fff; border-color: #C41E3A; }
+        .btn-success:hover { background: #A51830; border-color: #A51830; }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .filter-bar { background: #fff; padding: 12px 30px; border-bottom: 1px solid #e8e8e8; display: flex; gap: 10px; align-items: center; }
+        .filter-bar label { font-size: 14px; color: #666; }
+        .filter-bar select { padding: 6px 12px; border: 1px solid #d9d9d9; border-radius: 6px; font-size: 14px; outline: none; cursor: pointer; }
+        .filter-bar select:focus { border-color: #C41E3A; }
+        .filter-bar input[type="date"] { padding: 6px 12px; border: 1px solid #d9d9d9; border-radius: 6px; font-size: 14px; outline: none; }
+        .filter-bar input[type="date"]:focus { border-color: #C41E3A; }
+        .filter-bar .filter-info { font-size: 13px; color: #999; margin-left: 10px; }
+        .article-list { flex: 1; overflow-y: auto; padding: 20px 30px; }
+        .article-table { width: 100%; background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); overflow: hidden; }
+        .article-table table { width: 100%; border-collapse: collapse; }
+        .article-table th { background: #fafafa; padding: 14px 16px; text-align: left; font-size: 14px; font-weight: 600; color: #333; border-bottom: 1px solid #e8e8e8; }
+        .article-table td { padding: 12px 16px; border-bottom: 1px solid #f0f0f0; font-size: 14px; color: #666; }
+        .article-table tr:hover { background: #f5f5f5; }
+        .article-table tr.selected { background: #FBE9EB; }
+        .article-table tr:last-child td { border-bottom: none; }
+        .article-checkbox { width: 18px; height: 18px; cursor: pointer; accent-color: #C41E3A; }
+        .article-title-link { color: #2D2D2D; text-decoration: none; font-weight: 500; }
+        .article-title-link:hover { color: #C41E3A; text-decoration: underline; }
+        .article-date { color: #999; font-size: 13px; white-space: nowrap; }
+        .article-url { max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .article-url a { color: #C41E3A; text-decoration: none; font-size: 13px; }
+        .article-url a:hover { color: #A51830; text-decoration: underline; }
+        .export-info { font-size: 13px; color: #666; margin-right: 10px; }
+        .empty-state { text-align: center; padding: 60px 20px; color: #999; }
+        .empty-state .icon { font-size: 48px; margin-bottom: 16px; }
+        .empty-state .icon svg { width: 44px; height: 44px; fill: none; stroke: #C41E3A; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+        .loading { text-align: center; padding: 40px; color: #999; }
+        .footer { background: #fff; padding: 12px 30px; border-top: 1px solid #e8e8e8; font-size: 12px; color: #999; display: flex; justify-content: space-between; }
+        .mode-switch { display: flex; gap: 10px; align-items: center; }
+        .mode-switch a { color: #C41E3A; text-decoration: none; font-size: 14px; }
+        .mode-switch a:hover { text-decoration: underline; }
+        .mode-switch .current { color: #666; font-weight: 500; }
+        .toast { position: fixed; top: 20px; right: 20px; background: #fff; border-radius: 8px; padding: 16px 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: none; z-index: 1000; align-items: center; gap: 10px; }
+        .toast.show { display: flex; }
+        .toast.success { border-left: 4px solid #52c41a; }
+        .toast.error { border-left: 4px solid #ff4d4f; }
+        .toast-icon { font-size: 20px; }
+        .toast-message { font-size: 14px; color: #333; }
+        .update-info { font-size: 12px; color: #999; margin-left: 10px; }
+
+        /* ── 视觉增强：红白品牌风 ── */
+        body { background: #F8F8F8; }
+        .sidebar { box-shadow: 1px 0 12px rgba(0,0,0,0.03); }
+        .sidebar-header h1, .main-header h2 { font-family: 'Noto Serif SC', 'Songti SC', serif; letter-spacing: 1px; }
+        .sidebar-header .stats { background: #F8F8F8; border-radius: 8px; }
+        .sidebar-search input { border-radius: 8px; }
+        .source-item { transition: all .25s cubic-bezier(.2,.7,.3,1); }
+        .source-item:hover { background: #FBE9EB; transform: translateX(2px); }
+        .btn { border-radius: 8px; transition: all .3s cubic-bezier(.2,.7,.3,1); }
+        .btn:hover { transform: translateY(-1px); }
+        .btn-primary:hover, .btn-success:hover { box-shadow: 0 4px 14px rgba(196,30,58,0.22); }
+        .filter-bar select, .filter-bar input[type="date"] { border-radius: 8px; transition: border-color .3s, box-shadow .3s; }
+        .filter-bar select:focus, .filter-bar input[type="date"]:focus { box-shadow: 0 0 0 2px rgba(196,30,58,0.1); }
+        .article-table { border-radius: 12px; border: 1px solid #EFEFEF; box-shadow: 0 1px 1px rgba(0,0,0,0.04), 0 4px 6px rgba(34,42,53,0.03), 0 16px 40px rgba(47,48,55,0.05); }
+        .article-table th { background: #F8F8F8; }
+        .article-table tr { transition: background .2s; }
+        .article-table tr:hover { background: #FDF6F7; }
+        .toast { border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.14); }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>化妆品行业<span style="color:#C41E3A">洞察平台</span> · 文章检索</h1>
+            <a href="index.html" style="font-size:12px;color:#C41E3A;text-decoration:none;">← 返回首页</a>
+            <div class="version">Basic版本 - 实时数据</div>
+            <div class="stats" id="stats"><div>加载中...</div></div>
+        </div>
+        <div class="sidebar-search">
+            <input type="text" id="sourceSearch" placeholder="搜索公众号..." oninput="filterSources()">
+        </div>
+        <div class="source-list" id="sourceList"></div>
+    </div>
+    <div class="main-content">
+        <div class="main-header">
+            <h2 id="pageTitle">请选择公众号</h2>
+            <div class="actions">
+                <div class="mode-switch">
+                    <span id="updateInfo">数据更新: 加载中...</span>
+                </div>
+                <span class="update-info" id="updateInfo"></span>
+                <button class="btn" onclick="refreshData()">刷新数据</button>
+                <span class="export-info" id="exportInfo"></span>
+                <button class="btn btn-success" id="exportBtn" onclick="exportSelected()" disabled>导出选中</button>
+            </div>
+        </div>
+        <div class="article-list" id="articleList">
+            <div class="empty-state"><div class="icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><div>请在左侧选择公众号查看文章</div></div>
+        </div>
+        <div class="footer">
+            <span>数据库最后更新: <span id="lastUpdate">-</span></span>
+            <span>可选择文章导出</span>
+        </div>
+    </div>
+    <div class="toast" id="toast">
+        <span class="toast-icon" id="toastIcon"></span>
+        <span class="toast-message" id="toastMessage"></span>
+    </div>
+    <script>
+        // 从JSON文件加载数据
+        var ARTICLE_DATA = null;
+        var currentSource = null, allArticles = [], filteredArticles = [];
+        var selectedArticles = new Map();
+
+        function init() {
+            loadData();
+        }
+
+        function loadData() {
+            // 显示加载状态
+            document.getElementById('stats').innerHTML = '<div>加载数据中...</div>';
+            
+            // 加载数据，使用缓存破坏参数和 no-cache 头
+            var cacheBuster = Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            
+            fetch('data.v77.json?t=' + cacheBuster, {
+                cache: 'no-store',
+                headers: {
+                    'Cache-Control': 'no-cache, no-store, must-revalidate',
+                    'Pragma': 'no-cache'
+                }
+            })
+                .then(function(response) {
+                    if (!response.ok) throw new Error('加载失败');
+                    return response.json();
+                })
+                .then(function(data) {
+                    ARTICLE_DATA = data;
+                    renderStats();
+                    renderSources();
+                    
+                    // 显示更新时间
+                    if (data.stats && data.stats.last_update) {
+                        var updateTime = new Date(data.stats.last_update);
+                        document.getElementById('updateInfo').textContent = 
+                            '数据更新: ' + updateTime.toLocaleString('zh-CN') + ' (共' + data.stats.total_articles + '篇)';
+                    }
+                })
+                .catch(function(error) {
+                    console.error('加载数据失败:', error);
+                    document.getElementById('stats').innerHTML = '<div style="color:#ff4d4f">数据加载失败</div>';
+                    showToast('数据加载失败，请刷新重试', 'error');
+                });
+        }
+
+        function showToast(message, type) {
+            var toast = document.getElementById('toast');
+            var icon = document.getElementById('toastIcon');
+            var msg = document.getElementById('toastMessage');
+            toast.className = 'toast show ' + (type || 'success');
+            icon.innerHTML = type === 'error' ? '<svg viewBox="0 0 24 24" style="width:20px;height:20px;display:block" fill="none" stroke="#ff4d4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>' : '<svg viewBox="0 0 24 24" style="width:20px;height:20px;display:block" fill="none" stroke="#52c41a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>';
+            msg.textContent = message;
+            setTimeout(function() { toast.classList.remove('show'); }, 3000);
+        }
+
+        function renderStats() {
+            if (!ARTICLE_DATA || !ARTICLE_DATA.stats) return;
+            var stats = ARTICLE_DATA.stats;
+            document.getElementById('stats').innerHTML = 
+                '<div>总文章数: ' + stats.total_articles + '</div>' +
+                '<div>公众号数: ' + stats.source_count + '</div>';
+            document.getElementById('lastUpdate').textContent = new Date().toLocaleString('zh-CN');
+        }
+
+        function renderSources() {
+            if (!ARTICLE_DATA || !ARTICLE_DATA.sources) return;
+            var sources = ARTICLE_DATA.sources;
+            document.getElementById('sourceList').innerHTML = sources.map(function(s) {
+                return '<div class="source-item" data-source="' + s.name + '" onclick="selectSource(\'' + s.name + '\')">' +
+                    '<span class="source-name">' + s.name + '</span><span class="source-count">' + s.count + '篇</span>' +
+                    '</div>';
+            }).join('');
+        }
+
+        function filterSources() {
+            var keyword = document.getElementById('sourceSearch').value.toLowerCase();
+            var items = document.querySelectorAll('.source-item');
+            items.forEach(function(item) {
+                var name = item.querySelector('.source-name').textContent.toLowerCase();
+                if (name.indexOf(keyword) >= 0) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        function selectSource(sourceName) {
+            currentSource = sourceName;
+            document.querySelectorAll('.source-item').forEach(function(item) {
+                item.classList.toggle('active', item.dataset.source === sourceName);
+            });
+            document.getElementById('pageTitle').textContent = sourceName + ' 的所有文章';
+            document.getElementById('articleList').innerHTML = '<div class="loading">加载中...</div>';
+            
+            setTimeout(function() {
+                if (ARTICLE_DATA && ARTICLE_DATA.articles) {
+                    allArticles = ARTICLE_DATA.articles[sourceName] || [];
+                } else {
+                    allArticles = [];
+                }
+                filterByTime();
+            }, 300);
+        }
+
+        function filterByTime() {
+            // 时间筛选组件已移除：直接显示全部文章，按日期倒序
+            filteredArticles = allArticles.slice();
+            filteredArticles.sort(function(a, b) {
+                var dateA = new Date(a.publish_date || '1970-01-01');
+                var dateB = new Date(b.publish_date || '1970-01-01');
+                return dateB - dateA;
+            });
+            renderArticles(filteredArticles);
+        }
+
+        function renderArticles(articles) {
+            if (!articles.length) { 
+                document.getElementById('articleList').innerHTML = '<div class="empty-state"><div class="icon"><svg viewBox="0 0 24 24"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></div><div>该时间段暂无文章</div></div>'; 
+                return; 
+            }
+            
+            var currentSelectedCount = 0;
+            for (var i = 0; i < articles.length; i++) {
+                if (isSelected(currentSource, i)) currentSelectedCount++;
+            }
+            var allSelected = currentSelectedCount === articles.length && articles.length > 0;
+            
+            document.getElementById('articleList').innerHTML = '<div class="article-table"><table>' +
+                '<thead><tr><th style="width:40px"><input type="checkbox" class="article-checkbox" id="selectAll" ' + (allSelected ? 'checked' : '') + ' onchange="toggleSelectAll()"></th><th>文章名称</th><th style="width:120px">时间</th><th style="width:280px">链接</th></tr></thead>' +
+                '<tbody>' + articles.map(function(a, i) {
+                    var selected = isSelected(currentSource, i);
+                    return '<tr id="row-' + i + '" class="' + (selected ? 'selected' : '') + '">' +
+                        '<td><input type="checkbox" class="article-checkbox" id="cb-' + i + '" ' + (selected ? 'checked' : '') + ' onchange="toggleArticle(' + i + ')"></td>' +
+                        '<td><a href="' + a.url + '" target="_blank" class="article-title-link">' + a.title + '</a></td>' +
+                        '<td class="article-date">' + a.publish_date + '</td>' +
+                        '<td class="article-url"><a href="' + a.url + '" target="_blank" title="' + a.url + '">' + a.url + '</a></td>' +
+                        '</tr>';
+                }).join('') + '</tbody></table></div>';
+            updateExportButton();
+        }
+
+        function isSelected(source, index) {
+            return selectedArticles.has(source + '_' + index);
+        }
+
+        function setSelected(source, index, selected) {
+            var key = source + '_' + index;
+            if (selected) {
+                selectedArticles.set(key, { source: source, index: index, article: filteredArticles[index] });
+            } else {
+                selectedArticles.delete(key);
+            }
+        }
+
+        function toggleSelectAll() {
+            var selectAllCheckbox = document.getElementById('selectAll');
+            var currentSelectedCount = 0;
+            for (var i = 0; i < filteredArticles.length; i++) {
+                if (isSelected(currentSource, i)) currentSelectedCount++;
+            }
+            var allSelected = currentSelectedCount === filteredArticles.length && filteredArticles.length > 0;
+            
+            if (allSelected) {
+                for (var i = 0; i < filteredArticles.length; i++) {
+                    setSelected(currentSource, i, false);
+                }
+                selectAllCheckbox.checked = false;
+            } else {
+                for (var i = 0; i < filteredArticles.length; i++) {
+                    setSelected(currentSource, i, true);
+                }
+                selectAllCheckbox.checked = true;
+            }
+            
+            renderArticles(filteredArticles);
+            updateExportButton();
+        }
+
+        function toggleArticle(index) {
+            var currentlySelected = isSelected(currentSource, index);
+            setSelected(currentSource, index, !currentlySelected);
+            
+            var row = document.getElementById('row-' + index);
+            if (row) row.classList.toggle('selected', !currentlySelected);
+            
+            var cb = document.getElementById('cb-' + index);
+            if (cb) cb.checked = !currentlySelected;
+            
+            var currentSelectedCount = 0;
+            for (var i = 0; i < filteredArticles.length; i++) {
+                if (isSelected(currentSource, i)) currentSelectedCount++;
+            }
+            var selectAllCheckbox = document.getElementById('selectAll');
+            if (selectAllCheckbox) {
+                selectAllCheckbox.checked = currentSelectedCount === filteredArticles.length && filteredArticles.length > 0;
+            }
+            updateExportButton();
+        }
+
+        function updateExportButton() {
+            var btn = document.getElementById('exportBtn');
+            var info = document.getElementById('exportInfo');
+            var totalSelected = selectedArticles.size;
+            btn.disabled = !totalSelected;
+            info.textContent = totalSelected ? '已选择 ' + totalSelected + ' 篇' : '';
+        }
+
+        function exportSelected() {
+            if (!selectedArticles.size) { showToast('请先选择要导出的文章', 'error'); return; }
+            
+            var selectedData = [];
+            selectedArticles.forEach(function(item) {
+                selectedData.push({
+                    source: item.source,
+                    title: item.article.title,
+                    publish_date: item.article.publish_date,
+                    url: item.article.url
+                });
+            });
+            
+            var csv = '\ufeff公众号名称,文章名称,时间,链接\n';
+            selectedData.forEach(function(a) {
+                csv += '"' + a.source + '","' + a.title + '","' + a.publish_date + '","' + a.url + '"\n';
+            });
+            
+            var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = 'articles_multi_' + new Date().toISOString().slice(0,10) + '.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showToast('成功导出 ' + selectedArticles.size + ' 篇文章');
+        }
+
+        function refreshData() {
+            selectedArticles.clear();
+            updateExportButton();
+            // 强制清除缓存并重新加载
+            ARTICLE_DATA = null;
+            currentSource = null;
+            allArticles = [];
+            filteredArticles = [];
+            loadData();
+            if (currentSource) {
+                selectSource(currentSource);
+            }
+            showToast('数据已刷新');
+        }
+
+        // 初始化
+        init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+// Supabase 配置
+const SUPABASE_URL = 'https://azsilhidplkhwoxbbpgp.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF6c2lsaGlkcGxraHdveGJicGdwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY5MzQ0MDIsImV4cCI6MjEwMjUxMDQwMn0.XWkivGfBEKlWYbWLdy0xCl1GEqAdk2_vOf2Hjqpde_k';

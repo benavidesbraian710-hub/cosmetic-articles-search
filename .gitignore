@@ -18,3 +18,4 @@ __pycache__/
 .omc/
 
 .omc/
+cosmetic_articles.db.backup-*

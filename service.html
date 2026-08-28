@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
+    <title>定制化深度报告 - 化妆品行业洞察平台</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; background: #F8F8F8; min-height: 100vh; }
+        .topbar { background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid #EFEFEF; padding: 0 48px; height: 68px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 10; }
+        .topbar .logo { font-family: 'Noto Serif SC', Georgia, 'Songti SC', 'SimSun', serif; font-size: 19px; font-weight: 700; letter-spacing: 1px; color: #2D2D2D; }
+        .topbar .logo span { color: #C41E3A; }
+        .topbar a.back { font-size: 14px; color: #C41E3A; text-decoration: none; }
+        .topbar a.back:hover { text-decoration: underline; }
+        .container { max-width: 720px; margin: 48px auto; padding: 0 20px 60px; }
+        .intro { text-align: center; margin-bottom: 36px; }
+        .intro h1 { font-family: 'Noto Serif SC', 'Songti SC', serif; letter-spacing: 1px; font-size: 28px; color: #2D2D2D; margin-bottom: 12px; position: relative; padding-bottom: 20px; }
+        .intro h1::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 56px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, #C41E3A, #F3A9B8); }
+        .intro p { font-size: 15px; color: #666; line-height: 1.9; max-width: 620px; margin: 0 auto; }
+        .intro p a { color: #C41E3A; text-decoration: none; }
+        .intro p a:hover { text-decoration: underline; }
+        .panel { background: #fff; border-radius: 14px; border: 1px solid #EFEFEF; box-shadow: 0 1px 1px rgba(0,0,0,0.04), 0 4px 6px rgba(34,42,53,0.03), 0 16px 40px rgba(47,48,55,0.05); padding: 40px; position: relative; overflow: hidden; }
+        .panel::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #C41E3A, #F3A9B8); }
+        .panel h2 { font-family: 'Noto Serif SC', 'Songti SC', serif; letter-spacing: 1px; font-size: 20px; color: #2D2D2D; margin-bottom: 6px; }
+        .panel .desc { font-size: 14px; color: #666; margin-bottom: 26px; line-height: 1.7; }
+        .field { margin-bottom: 20px; }
+        .field > label { display: block; font-size: 14px; color: #2D2D2D; font-weight: 500; margin-bottom: 8px; }
+        .field .req { color: #C41E3A; }
+        .field .opt { font-weight: 400; color: #999; font-size: 12px; }
+        .field input[type=text], .field input[type=email], .field textarea { width: 100%; padding: 10px 12px; border: 1px solid #d9d9d9; border-radius: 8px; font-size: 14px; outline: none; font-family: inherit; transition: border-color .3s, box-shadow .3s; background: #fff; color: #2D2D2D; }
+        .field input:focus, .field textarea:focus { border-color: #C41E3A; box-shadow: 0 0 0 2px rgba(196,30,58,0.1); }
+        .field textarea { resize: vertical; min-height: 110px; line-height: 1.7; }
+        .field .hint { font-size: 12px; color: #999; margin-top: 6px; }
+        .section-title { font-family: 'Noto Serif SC', 'Songti SC', serif; font-size: 16px; color: #C41E3A; margin: 28px 0 16px; padding-top: 20px; border-top: 1px solid #f0f0f0; }
+        .section-title:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+        .radio-group, .checkbox-group { display: flex; flex-wrap: wrap; gap: 12px 20px; }
+        .radio-item, .checkbox-item { display: flex; align-items: center; font-size: 14px; color: #2D2D2D; cursor: pointer; }
+        .radio-item input, .checkbox-item input { margin-right: 6px; accent-color: #C41E3A; }
+        /* 统一勾选样式为方块 */
+        .radio-item input[type=radio], .checkbox-item input[type=checkbox] {
+            appearance: none; -webkit-appearance: none;
+            width: 16px; height: 16px; border: 1.5px solid #d9d9d9; border-radius: 3px;
+            cursor: pointer; position: relative; transition: all .2s; flex-shrink: 0;
+        }
+        .radio-item input[type=radio]:checked, .checkbox-item input[type=checkbox]:checked {
+            background: #C41E3A; border-color: #C41E3A;
+        }
+        .radio-item input[type=radio]:checked::after, .checkbox-item input[type=checkbox]:checked::after {
+            content: ''; position: absolute; left: 4px; top: 1px;
+            width: 4px; height: 8px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg);
+        }
+        .radio-item input[type=radio]:hover, .checkbox-item input[type=checkbox]:hover { border-color: #C41E3A; }
+        .row { display: flex; gap: 14px; flex-wrap: wrap; }
+        .row .field { flex: 1; min-width: 200px; }
+        .btn-submit { width: 100%; padding: 14px; background: #C41E3A; color: #fff; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; letter-spacing: 2px; transition: all .3s cubic-bezier(.2,.7,.3,1); }
+        .btn-submit:hover:not(:disabled) { background: #A51830; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(196,30,58,0.25); }
+        .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+        .msg { margin-top: 16px; padding: 14px 18px; border-radius: 8px; font-size: 14px; display: none; line-height: 1.8; }
+        .msg.err { display: block; background: #fff2f0; border: 1px solid #ffccc7; color: #cf1322; }
+
+        .success-panel { display: none; text-align: center; padding: 60px 36px; }
+        .success-panel.show { display: block; }
+        .success-panel .icon { width: 64px; height: 64px; border-radius: 50%; background: rgba(196,30,58,0.08); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+        .success-panel h2 { font-family: 'Noto Serif SC', 'Songti SC', serif; font-size: 22px; color: #2D2D2D; margin-bottom: 12px; }
+        .success-panel .order-no { display: inline-block; font-size: 19px; font-weight: 700; color: #C41E3A; letter-spacing: 1px; background: #FDF2F4; border: 1px dashed #E8A0AC; border-radius: 8px; padding: 8px 22px; margin: 8px 0 16px; }
+        .success-panel p { font-size: 14px; color: #666; line-height: 1.9; }
+        .success-panel .btn-again { margin-top: 22px; display: inline-block; padding: 10px 28px; border: 1px solid #C41E3A; color: #C41E3A; border-radius: 8px; font-size: 14px; cursor: pointer; background: #fff; transition: all .3s; }
+        .success-panel .btn-again:hover { background: #C41E3A; color: #fff; }
+
+        @media (max-width: 640px) {
+            .topbar { padding: 0 16px; }
+            .container { margin: 28px auto; padding: 0 14px 48px; }
+            .panel { padding: 26px 20px; }
+            .intro h1 { font-size: 23px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="logo">化妆品行业<span>洞察平台</span> · 定制化深度报告</div>
+        <a class="back" href="index.html">← 返回首页</a>
+    </div>
+    <div class="container">
+        <div class="intro">
+            <h1><svg viewBox="0 0 24 24" style="width:26px;height:26px;vertical-align:-4px;margin-right:10px" fill="none" stroke="#C41E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>定制化深度报告</h1>
+            <p>描述您想要的报告与依据内容，我们为您深度定制生成。依据不限于本站收录范围，可提供链接或资料说明。<br>如需基于本站已收录文章快速生成事实汇编或综合概述，请使用 <a href="report.html">智能选文报告</a>。</p>
+        </div>
+
+        <div class="panel" id="formPanel">
+            <h2>提交定制需求</h2>
+            <div class="desc">填写您的报告需求，我们将在 24 小时内与您联系确认细节。</div>
+            <form id="svcForm" novalidate>
+                <!-- 第一层：基础信息 -->
+                <div class="section-title">基础信息</div>
+                <div class="field">
+                    <label>报告主题 <span class="req">*</span></label>
+                    <input type="text" id="title" placeholder="请输入报告主题或标题">
+                </div>
+                <div class="field">
+                    <label>依据内容来源 <span class="req">*</span></label>
+                    <textarea id="sourceContent" placeholder="请提供报告依据的内容来源（文章链接/资料描述等），不限于本站收录范围"></textarea>
+                    <div class="hint">支持多个链接，每行一个；或详细描述资料内容</div>
+                </div>
+
+                <!-- 第二层：需求描述 -->
+                <div class="section-title">需求描述</div>
+                <div class="field">
+                    <label>我希望报告包含... <span class="req">*</span></label>
+                    <textarea id="reportPoints" placeholder="请分点描述您希望报告包含的内容（3-5点）
+如：1. 竞品A与竞品B的成分对比
+2. 近3个月价格趋势分析
+3. 消费者购买决策因素"></textarea>
+                    <div class="hint">建议3-5个要点，明确具体有助于提高交付质量</div>
+                </div>
+
+
+                <!-- 第三层：验收标准 -->
+                <div class="section-title">验收标准</div>
+                <div class="field">
+                    <label>报告需要包含哪些内容元素？ <span class="opt">（可多选）</span></label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item"><input type="checkbox" name="deliveryElement" value="bullet"> 要点清单</label>
+                        <label class="checkbox-item"><input type="checkbox" name="deliveryElement" value="table"> 对比表格</label>
+                        <label class="checkbox-item"><input type="checkbox" name="deliveryElement" value="trend"> 趋势分析</label>
+                        <label class="checkbox-item"><input type="checkbox" name="deliveryElement" value="case"> 案例列举</label>
+                        <label class="checkbox-item"><input type="checkbox" name="deliveryElement" value="chart"> 数据图表</label>
+                        <label class="checkbox-item"><input type="checkbox" name="deliveryElement" value="reference"> 内容出处</label>
+                        <label class="checkbox-item"><input type="checkbox" name="deliveryElement" value="other"> 其他</label>
+                    </div>
+                    <div id="deliveryOtherWrap" style="display:none;margin-top:10px">
+                        <input type="text" id="deliveryOther" placeholder="请说明需要包含的其他内容元素">
+                    </div>
+                    <div class="hint">勾选报告必须包含的内容元素，可多选组合</div>
+                </div>
+                <div class="field">
+                    <label>篇幅期望 <span class="req">*</span></label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="pageLength" value="1-2"> 1-2页</label>
+                        <label class="radio-item"><input type="radio" name="pageLength" value="3-5"> 3-5页</label>
+                        <label class="radio-item"><input type="radio" name="pageLength" value="5-10"> 5-10页</label>
+                        <label class="radio-item"><input type="radio" name="pageLength" value="unlimited"> 不限</label>
+                        <label class="radio-item"><input type="radio" name="pageLength" value="custom"> 自定义</label>
+                    </div>
+                    <div id="pageLengthCustomWrap" style="display:none;margin-top:10px">
+                        <input type="text" id="pageLengthCustom" placeholder="请输入期望篇幅，如：8-12页">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>必须包含 <span class="req">*</span></label>
+                    <textarea id="mustInclude" placeholder="请明确列出报告中必须包含的内容或分析维度（验收时将以此为准）
+如：竞品对比表格、数据支撑来源、趋势判断依据等"></textarea>
+                    <div class="hint">此内容为验收标准，请务必明确具体</div>
+                </div>
+
+                <!-- 联系信息（最后） -->
+                <div class="section-title">联系信息</div>
+                <div class="row">
+                    <div class="field">
+                        <label>您的称呼 <span class="req">*</span></label>
+                        <input type="text" id="contactName" placeholder="怎么称呼您">
+                    </div>
+                    <div class="field">
+                        <label>联系邮箱 <span class="req">*</span></label>
+                        <input type="email" id="contactEmail" placeholder="name@example.com">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>微信 / 电话 <span class="opt">（选填）</span></label>
+                    <input type="text" id="contactOther" placeholder="便于更快联系您">
+                </div>
+                <div class="field">
+                    <label>补充说明 <span class="opt">（选填）</span></label>
+                    <textarea id="notes" style="min-height:80px" placeholder="其他任何需要补充的信息"></textarea>
+                    <div class="hint">您的联系信息仅用于本次需求沟通与报告交付，不会用于其他用途。</div>
+                </div>
+                <button type="submit" class="btn-submit" id="submitBtn">提交定制需求</button>
+                <div class="msg" id="msg"></div>
+            </form>
+        </div>
+
+        <div class="panel success-panel" id="successPanel">
+            <div class="icon"><svg viewBox="0 0 24 24" style="width:30px;height:30px" fill="none" stroke="#C41E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <h2>需求提交成功</h2>
+            <div class="order-no" id="orderNo"></div>
+            <p>我们已收到您的定制需求，将在 <strong>24 小时内</strong>通过邮箱与您联系确认细节。<br>请留意查收邮件。</p>
+            <button class="btn-again" id="btnAgain">再提交一份需求</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script>
+        // 其他选项展开/收起
+        document.querySelectorAll('input[name="deliveryElement"]').forEach(cb => {
+            cb.addEventListener('change', () => {
+                const hasOther = Array.from(document.querySelectorAll('input[name="deliveryElement"]:checked')).some(c => c.value === 'other');
+                document.getElementById('deliveryOtherWrap').style.display = hasOther ? 'block' : 'none';
+            });
+        });
+        document.querySelectorAll('input[name="pageLength"]').forEach(r => {
+            r.addEventListener('change', () => {
+                document.getElementById('pageLengthCustomWrap').style.display = 
+                    document.querySelector('input[name="pageLength"]:checked')?.value === 'custom' ? 'block' : 'none';
+            });
+        });
+
+        document.getElementById('svcForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const msg = document.getElementById('msg');
+            msg.className = 'msg'; msg.textContent = '';
+
+            // 第一层：基础信息
+            const title = document.getElementById('title').value.trim();
+            const sourceContent = document.getElementById('sourceContent').value.trim();
+            const name = document.getElementById('contactName').value.trim();
+            const email = document.getElementById('contactEmail').value.trim();
+            
+            if (!title) { msg.className = 'msg err'; msg.textContent = '请填写报告主题。'; document.getElementById('title').focus(); return; }
+            if (!sourceContent) { msg.className = 'msg err'; msg.textContent = '请填写依据内容来源。'; document.getElementById('sourceContent').focus(); return; }
+            if (!name) { msg.className = 'msg err'; msg.textContent = '请填写您的称呼。'; document.getElementById('contactName').focus(); return; }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg.className = 'msg err'; msg.textContent = '请填写有效的联系邮箱。'; document.getElementById('contactEmail').focus(); return; }
+
+            // 第二层：需求描述
+            const reportPoints = document.getElementById('reportPoints').value.trim();
+            if (!reportPoints) { msg.className = 'msg err'; msg.textContent = '请填写"我希望报告包含..."内容。'; document.getElementById('reportPoints').focus(); return; }
+
+            // 第三层：验收标准
+            const deliveryElements = Array.from(document.querySelectorAll('input[name="deliveryElement"]:checked')).map(cb => cb.value);
+            const pageLength = document.querySelector('input[name="pageLength"]:checked');
+            const mustInclude = document.getElementById('mustInclude').value.trim();
+            
+            // 交付元素为其他时，必须填写具体内容
+            let deliveryValue = deliveryElements;
+            if (deliveryElements.includes('other')) {
+                const otherText = document.getElementById('deliveryOther').value.trim();
+                if (!otherText) { msg.className = 'msg err'; msg.textContent = '请填写需要包含的其他内容元素。'; document.getElementById('deliveryOther').focus(); return; }
+                deliveryValue = deliveryElements.filter(v => v !== 'other').concat(['other: ' + otherText]);
+            }
+            
+            if (!pageLength) { msg.className = 'msg err'; msg.textContent = '请选择篇幅期望。'; return; }
+            
+            // 篇幅为自定义时，必须填写具体内容
+            let pageLengthValue = pageLength.value;
+            if (pageLengthValue === 'custom') {
+                const customText = document.getElementById('pageLengthCustom').value.trim();
+                if (!customText) { msg.className = 'msg err'; msg.textContent = '请填写期望篇幅。'; document.getElementById('pageLengthCustom').focus(); return; }
+                pageLengthValue = 'custom: ' + customText;
+            }
+            
+            if (!mustInclude) { msg.className = 'msg err'; msg.textContent = '请填写"必须包含"内容（验收标准）。'; document.getElementById('mustInclude').focus(); return; }
+
+            btn.disabled = true; btn.textContent = '提交中...';
+
+            const now = new Date();
+            const pad = n => String(n).padStart(2, '0');
+            const refCode = 'SR-' + now.getFullYear() + pad(now.getMonth()+1) + pad(now.getDate()) + '-' + pad(now.getHours()) + pad(now.getMinutes()) + pad(now.getSeconds());
+
+            const payload = {
+                ref_code: refCode,
+                title: title,
+                source_content: sourceContent,
+                report_points: reportPoints,
+                delivery_format: JSON.stringify(deliveryValue),
+                page_length: pageLengthValue,
+                must_include: mustInclude,
+                name: name,
+                email: email,
+                contact: document.getElementById('contactOther').value.trim() || null,
+                notes: document.getElementById('notes').value.trim() || null,
+            };
+
+            try {
+                const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+                const { error } = await sb.from('service_requests').insert(payload);
+                if (error) throw error;
+                document.getElementById('formPanel').style.display = 'none';
+                document.getElementById('orderNo').textContent = '需求单编号：' + refCode;
+                document.getElementById('successPanel').classList.add('show');
+                document.getElementById('successPanel').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } catch (err) {
+                msg.className = 'msg err';
+                msg.textContent = '提交失败：服务暂未上线，请稍后重试。';
+            }
+            btn.disabled = false; btn.textContent = '提交定制需求';
+        });
+
+        document.getElementById('btnAgain').addEventListener('click', () => {
+            document.getElementById('successPanel').classList.remove('show');
+            const form = document.getElementById('svcForm');
+            form.reset();
+            // 隐藏所有其他输入框
+            document.getElementById('deliveryOtherWrap').style.display = 'none';
+            document.getElementById('pageLengthCustomWrap').style.display = 'none';
+            document.getElementById('formPanel').style.display = '';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
