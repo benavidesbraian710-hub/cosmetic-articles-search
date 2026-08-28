@@ -125,8 +125,45 @@ def export_data():
         with open(versioned_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
+        # ===== 同步生成 stats.json（首页统计专用小文件） =====
+        all_articles_flat = []
+        for source_name, items in articles_by_source.items():
+            for item in items:
+                item['source'] = source_name
+                all_articles_flat.append(item)
+        all_articles_flat.sort(key=lambda x: x.get('publish_date', ''), reverse=True)
+        latest5 = all_articles_flat[:5]
+
+        stats_data = {
+            'stats': data['stats'],
+            'latest': latest5
+        }
+        stats_path = os.path.join(OUTPUT_DIR, 'stats.json')
+        with open(stats_path, 'w', encoding='utf-8') as f:
+            json.dump(stats_data, f, ensure_ascii=False, indent=2)
+
+        # ===== 自动更新前端HTML中的数据版本号 =====
+        today_str = datetime.now().strftime('%Y%m%d')
+        html_files = ['index.html', 'articles.html', 'report.html', 'service.html', 'submit.html', 'find.html', 'admin.html']
+        for html_file in html_files:
+            html_path = os.path.join(OUTPUT_DIR, html_file)
+            if not os.path.exists(html_path):
+                continue
+            with open(html_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            original = content
+            # 更新 stats.json?v=YYYYMMDD
+            content = re.sub(r"stats\.json\?v=\d{8}", f'stats.json?v={today_str}', content)
+            # 更新 data.vXX.json 引用为最新版本
+            content = re.sub(r"data\.v\d+\.json", f'data.{version}.json', content)
+            if content != original:
+                with open(html_path, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                print(f"   📄 {html_file}: 版本号已更新")
+
         print(f"✅ 数据导出成功: {OUTPUT_PATH}")
         print(f"   版本号: {version} ({versioned_path})")
+        print(f"   stats.json: {stats_path}")
         print(f"   文章总数: {total}")
         print(f"   公众号数: {source_count}")
         print(f"   更新时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
