@@ -156,6 +156,8 @@ def export_data():
             content = re.sub(r"stats\.json\?v=\d{8}", f'stats.json?v={today_str}', content)
             # 更新 data.vXX.json 引用为最新版本
             content = re.sub(r"data\.v\d+\.json", f'data.{version}.json', content)
+            # 更新 meta data-version 标签（版本检测脚本用）
+            content = re.sub(r'name="data-version" content="v\d+"', f'name="data-version" content="{version}"', content)
             if content != original:
                 with open(html_path, 'w', encoding='utf-8') as f:
                     f.write(content)
