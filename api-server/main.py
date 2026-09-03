@@ -61,13 +61,13 @@ def parse_time_filter(query: str) -> Optional[str]:
     today = datetime.now().date()
     
     time_patterns = [
-        (r'近一?周|最近一?周|本周|这周|这一周', 7),
-        (r'近两周|最近两周', 14),
-        (r'近一?个?月|最近一?个?月|本月|这个月', 30),
-        (r'近三[天日]|最近三[天日]|三[天日]内', 3),
-        (r'近五[天日]|最近五[天日]|五[天日]内', 5),
-        (r'近十[天日]|最近十[天日]|十[天日]内', 10),
-        (r'近半[个]?月|最近半[个]?月', 15),
+        (r'近一?周|最近一?周|本周|这周|这一周|一?周内|一?周以[来内]', 7),
+        (r'近两周|最近两周|两周内|两周以[来内]', 14),
+        (r'近一?个?月|最近一?个?月|本月|这个月|一?个?月内|一?个?月以[来内]', 30),
+        (r'近三[天日]|最近三[天日]|三[天日][内以]', 3),
+        (r'近五[天日]|最近五[天日]|五[天日][内以]', 5),
+        (r'近十[天日]|最近十[天日]|十[天日][内以]', 10),
+        (r'近半[个]?月|最近半[个]?月|半[个]?月内', 15),
         (r'今年|本年', 365),
         (r'近期|最近|最新|近来', 30),
     ]
@@ -82,8 +82,8 @@ def parse_time_filter(query: str) -> Optional[str]:
 
 # ============ 步骤1：LLM意图解析（锚点+修饰词） ============
 
-def call_kimi_api(prompt: str, model: str = 'kimi-k3', timeout: int = 120, max_retries: int = 2) -> Optional[str]:
-    """直接调用 Kimi API（Anthropic 格式，与 OpenClaw 一致），带重试机制"""
+def call_kimi_api(prompt: str, model: str = 'kimi-k3', timeout: int = 60) -> Optional[str]:
+    """直接调用 Kimi API（Anthropic 格式，与 OpenClaw 一致）"""
     if not KIMI_API_KEY:
         print("KIMI_API_KEY 未配置")
         return None
@@ -100,49 +100,39 @@ def call_kimi_api(prompt: str, model: str = 'kimi-k3', timeout: int = 120, max_r
         'max_tokens': 4096
     }
     
-    for attempt in range(max_retries + 1):
-        try:
-            response = requests.post(KIMI_API_URL, headers=headers, json=payload, timeout=timeout)
-            response.raise_for_status()
-            result = response.json()
-            print(f"Kimi API 返回结构: {list(result.keys())}")
-            # 尝试多种格式
-            if 'content' in result:
-                content = result['content']
-                if isinstance(content, list) and len(content) > 0:
-                    # Kimi K3 返回 [thinking, text] 或 [thinking]
-                    # 优先取 text 类型（最终输出），其次取 thinking（思考过程）
-                    for item in content:
-                        if item.get('type') == 'text':
-                            return item.get('text', '')
-                    # 如果没有 text，取 thinking（但 thinking 通常不是最终JSON）
-                    for item in content:
-                        if item.get('type') == 'thinking':
-                            return item.get('thinking', '')
-                    # 兜底：取第一个的任意文本字段
-                    first = content[0]
-                    return first.get('text', '') or first.get('thinking', '') or str(first)
-                elif isinstance(content, str):
-                    return content
-            elif 'choices' in result:
-                return result['choices'][0]['message']['content']
-            elif 'text' in result:
-                return result['text']
-            else:
-                print(f"未知返回格式: {result}")
-                return str(result)
-        except requests.exceptions.Timeout as e:
-            print(f"Kimi API 超时 (尝试 {attempt + 1}/{max_retries + 1}): {e}")
-            if attempt < max_retries:
-                import time
-                time.sleep(2)  # 等待2秒后重试
-                continue
-            return None
-        except Exception as e:
-            print(f"Kimi API 调用失败: {e}")
-            return None
-    
-    return None
+    try:
+        response = requests.post(KIMI_API_URL, headers=headers, json=payload, timeout=timeout)
+        response.raise_for_status()
+        result = response.json()
+        print(f"Kimi API 返回结构: {list(result.keys())}")
+        # 尝试多种格式
+        if 'content' in result:
+            content = result['content']
+            if isinstance(content, list) and len(content) > 0:
+                # Kimi K3 返回 [thinking, text] 或 [thinking]
+                # 优先取 text 类型（最终输出），其次取 thinking（思考过程）
+                for item in content:
+                    if item.get('type') == 'text':
+                        return item.get('text', '')
+                # 如果没有 text，取 thinking（但 thinking 通常不是最终JSON）
+                for item in content:
+                    if item.get('type') == 'thinking':
+                        return item.get('thinking', '')
+                # 兜底：取第一个的任意文本字段
+                first = content[0]
+                return first.get('text', '') or first.get('thinking', '') or str(first)
+            elif isinstance(content, str):
+                return content
+        elif 'choices' in result:
+            return result['choices'][0]['message']['content']
+        elif 'text' in result:
+            return result['text']
+        else:
+            print(f"未知返回格式: {result}")
+            return str(result)
+    except Exception as e:
+        print(f"Kimi API 调用失败: {e}")
+        return None
 
 
 def llm_parse_intent(query: str) -> Dict:
@@ -319,19 +309,17 @@ def anchor_search(intent: Dict, limit: int = 50, date_from: str = None) -> List[
 # ============ 步骤3：LLM精排（意图锚定） ============
 
 def calculate_concurrency(total_articles: int) -> int:
-    """根据召回数量计算最优并发数，目标30秒左右"""
+    """根据召回数量计算最优并发数"""
     if total_articles <= 10:
-        return 1   # 1批 × 10篇 = ~25秒
+        return 1   # 1批 × 10篇
     elif total_articles <= 20:
-        return 2   # 2批 × 10篇 = ~25秒
+        return 2   # 2批 × 10篇
     elif total_articles <= 40:
-        return 4   # 4批 × 10篇 = ~25秒
+        return 4   # 4批 × 10篇
     elif total_articles <= 80:
-        return 8   # 8批 × 10篇 = ~25秒
-    elif total_articles <= 160:
-        return 16  # 16批 × 10篇 = ~50秒（2轮）
+        return 8   # 8批 × 10篇
     else:
-        return 32  # 32批 × 10篇 = ~75秒（3轮+）
+        return 16  # 16批 × 10篇（最大并发）
 
 def build_article_text(article: dict, index: int) -> str:
     """构建单篇文章的完整输入文本（全结构，不看全文）"""
@@ -402,11 +390,7 @@ def llm_rerank_batch(query: str, articles: List[dict], intent: Dict, batch_num: 
 请严格按以下JSON格式返回（不要其他内容）：
 {{
   "selected": [
-    {{
-      "id": 文章ID, 
-      "relevance": 85, 
-      "reason": "选择这篇文章的具体原因，用自然语言描述文章中哪些内容与{anchor}相关，不要提及技术字段名（如标题/主题/叙述/节点/实体/关键词/摘要等），直接说文章内容本身"
-    }},
+    {{"id": 文章ID, "relevance": 85, "reason": "这篇文章主要讨论{anchor}的具体原因"}},
     ...
   ]
 }}
@@ -414,8 +398,6 @@ def llm_rerank_batch(query: str, articles: List[dict], intent: Dict, batch_num: 
 注意：
 - relevance范围0-100，表示文章与"{anchor}"的相关程度
 - 只保留relevance >= 60的文章
-- reason用自然语言描述文章内容与{anchor}的关系，例如"文章介绍了雅诗兰黛集团最新应用的tFNA成分，该成分通过修复DNA损伤和促进自噬实现抗衰老效果"
-- 不要提及"标题"、"主题"、"摘要"、"关键词"等技术字段名
 - 宁可少返回，也不要返回不相关的"""
 
     try:
@@ -430,21 +412,9 @@ def llm_rerank_batch(query: str, articles: List[dict], intent: Dict, batch_num: 
                 llm_result = json.loads(json_match.group(0))
                 selected_list = llm_result.get('selected', [])
                 print(f"批次{batch_num} LLM精选: {len(selected_list)}篇")
-                # 调试：打印完整的LLM返回结果
-                print(f"批次{batch_num} LLM原始返回: {json.dumps(llm_result, ensure_ascii=False)[:500]}")
-                # 调试：检查每篇文章的字段
-                for item in selected_list:
-                    article_id = item.get('id')
-                    relevance = item.get('relevance')
-                    reason = item.get('reason', '')
-                    print(f"批次{batch_num} 文章ID:{article_id} relevance:{relevance} reason长度:{len(reason)} reason预览:'{reason[:50]}'")
-                    if not reason or len(reason.strip()) < 10:
-                        print(f"批次{batch_num} 严重警告: 文章ID {article_id} 理由为空或过短!")
-                        print(f"批次{batch_num} 完整item: {json.dumps(item, ensure_ascii=False)}")
                 return selected_list
             except json.JSONDecodeError as e:
                 print(f"批次{batch_num} JSON解析失败: {e}")
-                print(f"批次{batch_num} 原始返回: {text[:500]}")
         
         return []
         
@@ -499,36 +469,40 @@ def llm_rerank(query: str, articles: List[dict], intent: Dict) -> List[dict]:
     filtered_articles = []
     for item in all_selected:
         article_id = item.get('id')
-        reason = item.get('reason', '').strip()
-        
-        # 严格验证：reason 不能为空或过短
-        if not reason or len(reason) < 10:
-            print(f"警告: 文章ID {article_id} 理由为空或过短: '{reason}'，跳过")
-            continue
-        
         if article_id in id_to_article:
             article = id_to_article[article_id]
             article['llm_score'] = item.get('relevance', 70)
-            article['llm_reason'] = reason
+            article['llm_reason'] = item.get('reason', f'本文主要讨论"{intent.get("anchor", query)}"')
             filtered_articles.append(article)
     
     # 按relevance降序排序
     filtered_articles.sort(key=lambda x: x.get('llm_score', 0), reverse=True)
     
-    # 返回所有relevance >= 60的文章（不限制数量，无fallback）
-    return filtered_articles
+    # 返回前20篇
+    return filtered_articles[:20]
 
 # ============ 匹配理由生成 ============
 
 def generate_match_reason(article: dict, intent: Dict) -> str:
     """基于意图锚点生成匹配理由"""
-    # 直接使用LLM的语义理由（不再过滤"相关"关键词）
+    # 优先使用LLM的语义理由
     llm_reason = article.get('llm_reason', '')
-    if llm_reason:
+    if llm_reason and '相关' not in llm_reason:
         return llm_reason
     
-    # 如果LLM没有理由，生成简单模板（但这种情况应该很少）
     anchor = intent.get('anchor', '')
+    modifiers = intent.get('modifiers', [])
+    
+    text = f"{article['title']} {article.get('summary', '')} {article.get('keywords', '')}".lower()
+    
+    # 检查锚点匹配
+    anchor_matched = anchor.lower() in text if anchor else False
+    modifier_matched = [m for m in modifiers if m.lower() in text]
+    
+    if anchor_matched and modifier_matched:
+        return f"本文主要讨论「{anchor}」，同时涉及「{'」「'.join(modifier_matched[:2])}」，与您的搜索高度匹配。"
+    elif anchor_matched:
+        return f"本文主要讨论「{anchor}」相关内容，与您的搜索意图匹配。"
     return f"本文涉及「{anchor}」相关内容。"
 
 # ============ 搜索接口 ============
