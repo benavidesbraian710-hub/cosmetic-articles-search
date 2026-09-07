@@ -69,7 +69,6 @@ def parse_time_filter(query: str) -> Optional[str]:
         (r'近十[天日]|最近十[天日]|十[天日][内以]', 10),
         (r'近半[个]?月|最近半[个]?月|半[个]?月内', 15),
         (r'今年|本年', 365),
-        (r'近期|最近|最新|近来', 30),
     ]
     
     for pattern, days in time_patterns:
@@ -271,9 +270,32 @@ def anchor_search(intent: Dict, limit: int = 50, date_from: str = None) -> List[
             ''', fallback_params)
             results = cursor.fetchall()
             articles = [dict(row) for row in results]
-        
+
+        # FTS5召回0且包含中文时，使用jieba分词+LIKE回退
+        import re as _re
+        if len(articles) == 0 and any(_re.search(r"[\u4e00-\u9fff]", t) for t in anchor_terms):
+            print("FTS5召回0篇且含中文，启用jieba+LIKE回退")
+            import jieba
+            segs = []
+            for t in anchor_terms:
+                segs.extend([s for s in jieba.lcut(t) if len(s) > 1])
+            segs = list(dict.fromkeys(segs))[:15]
+            print("jieba分词: " + str(segs))
+            conds = []
+            ps = []
+            for s in segs:
+                conds.append("(title LIKE ? OR summary LIKE ? OR keywords LIKE ?)")
+                ps.extend(["%" + s + "%", "%" + s + "%", "%" + s + "%"])
+            where = " AND ".join(conds) if conds else "1=1"
+            dateq = "" if not date_from else "AND publish_date >= '" + date_from + "'"
+            sql = "SELECT id, title, url, wechat_name, publish_date, summary, keywords, 1.0 as fts_score FROM articles WHERE " + where + " " + dateq + " ORDER BY publish_date DESC LIMIT ?"
+            cursor.execute(sql, ps + [limit])
+            results = cursor.fetchall()
+            articles = [dict(row) for row in results]
+            print("jieba+LIKE召回: " + str(len(articles)) + "篇")
+
         return articles
-        
+
     except sqlite3.OperationalError as e:
         print(f"FTS5查询失败: {e}, 回退到LIKE")
         anchor_conditions = []
