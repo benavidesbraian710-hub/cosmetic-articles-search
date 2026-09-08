@@ -171,14 +171,23 @@ def check_data_integrity(data):
     if invalid_sources:
         issues.append(f"发现非白名单公众号: {', '.join(invalid_sources)}")
     
-    # 检查wechat_name为空的文章
+    # ===== 针对性检查今天的问题2：空wechat_name =====
     empty_wechat_count = 0
     for src, arts in articles.items():
-        if src == '' or src == '其他':
+        if src == '' or src == '其他' or not src.strip():
             empty_wechat_count += len(arts)
     
     if empty_wechat_count > 0:
-        issues.append(f"发现 {empty_wechat_count} 篇文章wechat_name为空或为'其他'")
+        issues.append(f"🚨 严重问题：发现 {empty_wechat_count} 篇文章wechat_name为空或为'其他'，公众号分布异常")
+    
+    # ===== 检查公众号文章数分布是否合理 =====
+    source_counts = [(src, len(arts)) for src, arts in articles.items()]
+    source_counts.sort(key=lambda x: x[1], reverse=True)
+    
+    # 检查是否有公众号文章数为0（可能意味着数据丢失）
+    for src, count in source_counts:
+        if count == 0:
+            issues.append(f"公众号'{src}'文章数为0，可能数据丢失")
     
     return issues
 
@@ -203,6 +212,35 @@ def check_data_freshness(data):
         except Exception as e:
             issues.append(f"日期解析异常: {latest} - {e}")
     
+    return issues
+
+
+def check_json_validity(data):
+    """检查JSON数据有效性 - 针对问题1：文章检索界面根本没显示"""
+    issues = []
+    
+    # 检查articles是否为空列表
+    articles = data.get('articles', {})
+    if not articles:
+        issues.append("🚨 严重问题：articles为空，文章检索界面将无法显示任何内容")
+        return issues
+    
+    # 检查articles是否为dict类型（正确结构）
+    if not isinstance(articles, dict):
+        issues.append(f"🚨 严重问题：articles类型错误，应为dict实际为{type(articles).__name__}，可能导致页面无法渲染")
+        return issues
+    
+    # 检查是否所有公众号文章数都是0（数据全部丢失的极端情况）
+    total_in_articles = sum(len(arts) for arts in articles.values())
+    if total_in_articles == 0:
+        issues.append("🚨 严重问题：所有公众号文章数均为0，数据完全丢失")
+    
+    # 检查stats中的total是否与实际文章数匹配
+    stats_total = data.get('stats', {}).get('total_articles', 0)
+    if stats_total != total_in_articles:
+        issues.append(f"⚠️ 数据不一致：stats记录{total_in_articles}篇，但实际有{total_in_articles}篇")
+    
+    log(f"JSON有效性检查通过: {total_in_articles}篇文章分布正常", "INFO")
     return issues
 
 
@@ -234,6 +272,10 @@ def run_health_check():
     # 4. 检查数据新鲜度
     freshness_issues = check_data_freshness(data)
     all_issues.extend(freshness_issues)
+    
+    # 5. 检查JSON有效性（针对问题1：文章检索界面根本没显示）
+    validity_issues = check_json_validity(data)
+    all_issues.extend(validity_issues)
     
     # 5. 汇总结果
     if all_issues:
