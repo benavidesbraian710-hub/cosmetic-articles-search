@@ -225,7 +225,7 @@ def main():
 
         # 插入数据库
         cursor.execute('''
-            INSERT INTO articles (wechat_name, title, url, publish_date, content, content_html, images_json, image_count, created_at)
+            INSERT INTO articles (wechat_name, title, url, publish_date, content, summary, keywords, images_json, created_at)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         ''', (
             wechat_name,
@@ -233,9 +233,9 @@ def main():
             url,
             article['publish_date'],
             article['content'],
-            article['content_html'],
+            article['content'][:500] if article['content'] else '',  # summary用content前500字符
+            '',  # keywords留空
             json.dumps(article['images']),
-            article['image_count'],
             datetime.now().isoformat()
         ))
 
