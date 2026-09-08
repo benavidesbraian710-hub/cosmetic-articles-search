@@ -90,7 +90,7 @@ def export_data():
                     'source': row['source'],
                     'publish_date': row['publish_date'],
                     'url': row['url'],
-                    'summary': row['summary'] or '',
+                    'summary': (row['summary'] or '')[:500],  # 限制摘要长度避免文件过大
                     'keywords': keywords,
                     'cover': cover
                 })
