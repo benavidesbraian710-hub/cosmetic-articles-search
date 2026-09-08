@@ -329,7 +329,7 @@
         });
 
         function loadData() {
-            fetch('data.v86.json?t=' + Date.now(), { cache: 'no-store' })
+            fetch('data.v87.json?t=' + Date.now(), { cache: 'no-store' })
                 .then(function(r) { if (!r.ok) throw new Error(); return r.json(); })
                 .then(function(d) {
                     ARTICLE_DATA = d;

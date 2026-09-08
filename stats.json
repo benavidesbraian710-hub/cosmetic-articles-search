@@ -1,19 +1,19 @@
 {
   "stats": {
-    "total_articles": 1628,
-    "source_count": 20,
+    "total_articles": 1584,
+    "source_count": 18,
     "date_range": {
       "start": "2026-06-15",
       "end": "2026-09-07",
       "latest": "2026-09-07"
     },
-    "last_update": "2026-09-08T10:10:00"
+    "last_update": "2026-09-08T10:15:00"
   },
   "latest": [
     {
       "id": 2235,
       "title": "焦点｜从一本图鉴到一条可持续产业链，自然堂集团用十年打开喜马拉雅的价值纵深",
-      "source": "自然堂",
+      "source": "中国化妆品",
       "publish_date": "2026-09-07",
       "url": "https://mp.weixin.qq.com/s/zo53D2PUt_i6bGNAIssBkg"
     }
