@@ -309,4 +309,15 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    if '--once' in sys.argv:
+        run_health_check()
+    elif '--scheduled' in sys.argv:
+        # 定时任务模式：输出格式化报告
+        result = run_health_check()
+        # 输出便于抓取的状态标记
+        if result:
+            print("MONITOR_RESULT: OK")
+        else:
+            print("MONITOR_RESULT: ISSUE")
+    else:
+        main()
