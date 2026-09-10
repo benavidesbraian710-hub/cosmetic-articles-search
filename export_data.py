@@ -8,6 +8,7 @@ import sqlite3
 import json
 import os
 import re
+import subprocess
 from datetime import datetime
 
 DB_PATH = os.path.expanduser('~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db')
@@ -169,6 +170,36 @@ def export_data():
         print(f"   文章总数: {total}")
         print(f"   公众号数: {source_count}")
         print(f"   更新时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+        # ===== 自动同步数据库到 ECS =====
+        sync_script = os.path.join(OUTPUT_DIR, 'api-server', 'sync_db_to_ecs.sh')
+        if os.path.exists(sync_script):
+            print(f"\n🔄 同步数据库到 ECS...")
+            try:
+                result = subprocess.run(
+                    ['bash', sync_script],
+                    capture_output=True,
+                    text=True,
+                    timeout=120
+                )
+                # 打印同步脚本的输出
+                if result.stdout:
+                    for line in result.stdout.strip().split('\n'):
+                        print(f"   {line}")
+                if result.returncode == 0:
+                    print(f"\n✅ ECS 同步成功（智能找文 API 已更新到最新数据）")
+                else:
+                    print(f"\n⚠️ ECS 同步失败（本地数据已保存，智能找文可能仍是旧数据）")
+                    if result.stderr:
+                        for line in result.stderr.strip().split('\n'):
+                            print(f"   {line}")
+                    print(f"   手动重试: bash {sync_script}")
+            except subprocess.TimeoutExpired:
+                print(f"\n⚠️ ECS 同步超时（>120秒），跳过")
+            except Exception as e:
+                print(f"\n⚠️ ECS 同步异常: {e}")
+        else:
+            print(f"\n⚠️ 同步脚本不存在: {sync_script}（跳过 ECS 同步）")
 
         return True
         
