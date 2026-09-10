@@ -90,7 +90,7 @@ def export_data():
                     'source': row['source'],
                     'publish_date': row['publish_date'],
                     'url': row['url'],
-                    'summary': row['summary'] or '',
+                    'summary': (row['summary'] or '')[:500],  # 限制摘要长度避免文件过大
                     'keywords': keywords,
                     'cover': cover
                 })
@@ -118,12 +118,12 @@ def export_data():
         
         # 保存为JSON（主文件）
         with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+            json.dump(data, f, ensure_ascii=False)
 
         # 保存为版本号文件 data.vXX.json
         versioned_path = os.path.join(OUTPUT_DIR, f'data.{version}.json')
         with open(versioned_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+            json.dump(data, f, ensure_ascii=False)
 
         # ===== 同步生成 stats.json（首页统计专用小文件） =====
         all_articles_flat = []
