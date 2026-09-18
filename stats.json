@@ -1,63 +1,63 @@
 {
   "stats": {
-    "total_articles": 1878,
+    "total_articles": 1915,
     "source_count": 18,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-09-17"
+      "end": "2026-09-18"
     },
-    "last_update": "2026-09-17T11:35:34.451232"
+    "last_update": "2026-09-18T10:54:55.909609"
   },
   "latest": [
     {
-      "id": 2460,
-      "title": "【财经早餐】2026.09.17星期四",
+      "id": 2522,
+      "title": "追觅开始做减法",
       "source": "财经早餐",
-      "publish_date": "2026-09-17",
-      "url": "https://mp.weixin.qq.com/s/EfXjjQ78gYO7tQHrKW5MGg",
-      "summary": "每日金曲：邓紫棋 - 后会无期► OpenRouter：上周，用户在OpenAI模型上的支出超过Anthropic。这是自2024年2月以来第一次，Anthropic保持了两年半的领先被打破。OpenRouter分析主管将这一转变归因于OpenAI新模型Astra。► 脉脉CEO林凡：不要一提到AI人才，就只想到大模型底层研发人员。年薪千万的底座人才，大部分公司用不上。多数企业更需要能做Agent（应用）的人，以及能把Agent用进业务流程的人。AI招聘的重心，正在从训练和研发扩展到应用建设、现场交付和业务提效。在AI应用开发类热招岗位中，Agent开发工程师成为企业最热招的岗位。宏观经济1、澎湃新闻：一份由中、英两国研究机构联合发布的全球金融中心指数报告显示，纽约、伦敦、香港、新加坡、上海、东京、首尔、深圳、迪拜、苏黎世位居前10名，中国内地上榜城市整体表现亮眼。全球金融中心整体评分回升，其中亚太地区平均评分增幅最大。2、香港特区行政长官李家超：公布香港特区第一个五年规划。香港将强化四大中心、人才集聚高地建设，巩固提升国际竞争优势。金融是香港的根本和最大的优势。香港国际金融中心必须彰",
+      "publish_date": "2026-09-18",
+      "url": "https://mp.weixin.qq.com/s/ilBCM6YZpOq-kqCtwhk6wQ",
+      "summary": "9月8日，IFA 2026在柏林收官，追觅有6款产品拿到国际奖项；几乎同一时间，IDC的二季度报告确认，追觅旗下扫地机器人业务（追觅与MOVA）上半年全球销量份额26.1%、销售额份额31.2%，双榜第一。两份成绩单撞在同一周，时间点很值得细读——就在半个月前，这家公司刚发布了一份《关于公司战略聚焦及业务发展的说明》，为持续数月的扩张争议按下暂停键。一边做减法，一边拿第一，这两件事放在一起读，才能看懂追觅正在经历什么。先把争议说清楚追觅过去一年的画风，确实有点野。200多个事业部同时铺开，触角从扫地机伸到手机、汽车、大家电甚至奶茶和房产中介；创始人俞浩喊出\"人车家天地芯\"\"百万亿美元公司生态\"，造车项目对标布加迪威龙，手机要对标华为小米。市场给这种打法的评价从\"有野心\"逐渐变成\"看不懂\"，扩张的资金压力、供应链的账期问题，也随之被放大审视。8月25日的官方说明，是这场争议的正式回答：资源收拢到智能家庭、户外庭院、智能出行、具身智能四大方向，探索期业务整合合并，汽车和手机转为研究院形式保留技术储备，不再独立推进商业化量产。这份说明最值得读的不是\"砍\"，而是\"留\"——扩张期沉淀的技术、研发",
       "keywords": [],
-      "cover": "https://mmbiz.qpic.cn/sz_mmbiz_png/mGm3FEb3WI6mfia7qETMiaKzheuWWvRNHtUbxNB5xhDrNWsuVByDdE52oFcicSQJohGuTEaVU1VwQoEwtDvETG5wRaL24LbeusZsc4a4aQFSbI/640?wx_fmt=png&amp;from=appmsg#imgIndex=0"
+      "cover": "https://mmbiz.qpic.cn/sz_mmbiz_png/mGm3FEb3WI4W8uSoyMVybcad1uCQ2pW3X4oHVOibOGPVHxJmm6yY3PnA1xcmTztzqUnI59gkSHHlTGtLU2NAsRCdjPHJFf7vqiaTnXmff21gI/640?wx_fmt=png&amp;from=appmsg#imgIndex=0"
     },
     {
-      "id": 2461,
-      "title": "重奢商场开始抢国产品牌了",
+      "id": 2523,
+      "title": "i9压低了车身，却抬高了理想的天花板",
       "source": "财经早餐",
-      "publish_date": "2026-09-17",
-      "url": "https://mp.weixin.qq.com/s/y6cJ8CAFo2e39twCDDNmKA",
-      "summary": "一件过去很难想象的事正在发生：重奢商场开始主动给国产品牌递名片。据高梵方面透露，这家国产高端鹅绒服品牌在北京SKP、杭州大厦之后，三里屯太古里即将确认其势能店的落位，南京德基广场更是在高梵杭州大厦门店开业数日内主动接洽合作。做了几十年奢侈品生意的顶级商场，招商名单上第一次密集出现中国品牌的名字——过去是品牌托关系进商场，现在反过来了。重奢商场的口味，怎么变了？店王的烦恼：国际大牌带不动了答案要从商场的账本里找。2024年是中国重奢商场的水逆年：北京SKP销售额220亿元、同比下滑17%，把蝉联十余年的\"全球店王\"宝座让给了南京德基广场；太古、恒隆旗下的高端商场收入普遍下滑。背后是整个奢侈品行业的退潮——贝恩的数据显示，2024年中国内地个人奢侈品市场规模收缩了18%到20%，是2008年金融危机以来最难的一年；LVMH、开云的财报里，亚太（除日本）长期是跌幅最大的区域，Gucci一个品牌就能跌去两成多。商场的逻辑很现实：国际大牌贡献不了增量，就得找新的锚点。重奢商场过去三十年的玩法是\"顶奢品牌给商场引流\"，当LV和Gucci的门口不再排队，这套玩法就断了。商场需要的，是有真实客流、有客",
+      "publish_date": "2026-09-18",
+      "url": "https://mp.weixin.qq.com/s/S4mk_hYSxTNKpwkVwN7VBQ",
+      "summary": "理想第二代纯电平台的首发旗舰全新i9 Home，给纯电六座SUV市场带来了一股旋风。也是一台“不太一样”的纯电SUV。36.98万元起的价格，第一次把理想的自研电池、自研电机、马赫M100芯片和自研智驾VLA 2.5模型，四项核心技术同时装进了一台量产旗舰。不过这些功能并非一步到位：9月首批交付仍采用宁德时代5C，10月底起逐步切换至理想自研5C电池。VLA 2.5也将在10月推送。先看外观：5225毫米车长、3168毫米轴距，车高只有1752毫米；风阻系数0.215，全球量产SUV最低，百公里能耗15.1度；车比L9还低，长度又接近MEGA；标准高度156毫米，升高后176毫米，最高196毫米；最大涉水深度650毫米。一台SUV，硬是做出了MPV的效果。线控转向+后轮转向让5米2的车掉头、进地库的灵活度接近一辆紧凑型SUV。&nbsp;外观惊艳，内部更加硬核。i9全系只做一个Home版本，二排双零重力旋转座椅，可以45度迎宾、90度观景、180度对坐，三排更是堪比飞机头等舱，再配合双倍速长滑轨，以及一系列细节设计，把座舱切换成客厅、套房甚至影院等，基本是将MEGA的一系列优势，平移到",
       "keywords": [],
-      "cover": "https://mmbiz.qpic.cn/mmbiz_png/mGm3FEb3WI7PxPzZOReXmicOtaYxjRF7jeXPw7WDwibnibibwKtKWnObVSmS8xX0yjXoGpzice1Cl12mgqYraF67lNv8QOLF7nJ9yQkwURfx98ss/640?wx_fmt=png&amp;from=appmsg#imgIndex=0"
+      "cover": "https://mmbiz.qpic.cn/sz_mmbiz_png/mGm3FEb3WI64F1wNBOh2gloMRcQufL5qVcCxicAH0truGZry7lsd38dxpiaW01fQibncvN0ADbyttOvvt9yMlxM5vm2bCPNkhfNLkUPeq2JibDc/640?wx_fmt=png&amp;from=appmsg#imgIndex=0"
     },
     {
-      "id": 2462,
-      "title": "比亚迪的固态电池，2027车上见？",
+      "id": 2525,
+      "title": "【财经早餐】2026.09.18星期五",
       "source": "财经早餐",
-      "publish_date": "2026-09-17",
-      "url": "https://mp.weixin.qq.com/s/LKT8V1Vgeb0iBneIEZ1YnA",
-      "summary": "2027年，比亚迪要把固态电池装进汽车了。比亚迪执行副总裁李柯近日在接受采访时透露，公司计划在2027年推出一款采用固态电池技术的车型。具体车型、电池规格和产量，则暂未公布。但这个消息真正值得关注的，并不是“2027年”这个数字。因为2027年前后，本来就是全球车企集中押注固态电池产业化的重要窗口。比亚迪自己的技术负责人此前也曾透露，公司预计从2027年前后开始对全固态电池进行示范应用，并判断大规模普及要晚得多。更早之前，比亚迪首席科学家也曾表示，固态电池有望先从高端车型开始，再逐步向大众市场渗透。所以，这次最值得看的不是比亚迪“开始做固态电池”，而是它已经准备把这项下一代技术往整车上推了。实际上，比亚迪做固态电池并非临时起意。比亚迪电池业务CTO孙华军此前公开介绍，公司2013年就启动了全固态电池研发；2016年开始验证技术可行性；到2023年进入产业化可行性验证；2024年已经有20Ah、60Ah级固态电池试制产品下线。按照这一路径来看，如今再提出2027年推出搭载固态电池技术的车型，已经是从研发向整车工程验证继续迈进的一步。而李柯这次特别强调，电池部门关注的不只是电池化学，还包括",
+      "publish_date": "2026-09-18",
+      "url": "https://mp.weixin.qq.com/s/5xUighTkJniRJXnMcRXdAw",
+      "summary": "<!DOCTYPE html>\n<html class=\"\n\">\n  <head>\n    <meta name=\"wechat-enable-text-zoom-em\" content=\"true\">\n<meta name=\"wechat-enable-text-size-adjust\" content=\"true\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n<meta name=\"color-scheme\" content=\"light dark\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover\">\n<link rel=\"shortcut icon\" type=\"image/x-icon\"",
       "keywords": [],
-      "cover": "https://mmbiz.qpic.cn/mmbiz_gif/1cNN9nc3kOQbq8Zd7vibdZOvJicfKFXL10yeWibQOdPqxhPic9AaA15bA3PTxREco87NHvVKBkiciaAMR2RLKCjK28vQ/640?wx_fmt=gif&amp;from=appmsg&amp;wxfrom=5&amp;wx_lazy=1&amp;tp=wxpic#imgIndex=6"
+      "cover": ""
     },
     {
-      "id": 2466,
-      "title": "线粒体移植逆转SH‑SY5Y细胞衰老表型：帕金森病治疗迎来新方向",
-      "source": "肤见未来实验室",
-      "publish_date": "2026-09-17",
-      "url": "https://mp.weixin.qq.com/s/xwkPO3m0VOrxiXO1YdAcmA",
-      "summary": "前言核心内容：利用质膜囊泡PMVs向衰老SH‑SY5Y细胞移植功能性线粒体，可逆转细胞衰老表型、修复线粒体与糖代谢，为帕金森病提供潜在治疗思路。核心机制：PMVs直接递送功能线粒体入胞，恢复细胞能量代谢；清除受损线粒体，抑制炎症通路，下调α‑突触核蛋白，恢复多巴胺合成，逆转细胞衰老。文献解读&nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;研究目的构建稳定衰老SH‑SY5Y帕金森病体外模型，验证PMVs介导线粒体移植能否逆转细胞衰老，评估多维度干预效果并探明作用机制。研究结论PMVs介导线粒体移植可逆转SH‑SY5Y细胞衰老，为帕金森病提供潜在体外治疗策略。研究价值证实PMVs介导线粒体移植可体外逆转神经细胞衰老，为帕金森病线粒体靶向干预提供新的实验思路与体外证据。研究方法&nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp;研究对象6‑OHDA+R6G诱导的稳定衰老SH‑SY5Y细胞（帕金森病体外细胞模型）干预手段&nbsp;&nbsp; VSV‑G修饰质膜囊泡PMVs递送功能性线粒体介导线粒体移植体系&nbsp;&",
+      "id": 2517,
+      "title": "活动预告｜聚焦 AI+时尚新生态，WWD CHINA 再度进入 WDCC 官方日程",
+      "source": "WWD 国际时尚特讯",
+      "publish_date": "2026-09-18",
+      "url": "https://mp.weixin.qq.com/s/XAb-odmuhR3J3ks4Pctjyg",
+      "summary": "WWD CHINA 自 2022 年起便携手世界设计之都大会（WDCC），共同见证并推动设计产业的可持续创新发展，从最初探讨设计如何赋能时尚产业，到去年以“重构时尚价值链”为主题引发行业广泛共鸣，WWD CHINA 始终以全球视野和产业洞察，在 WDCC 这一国际舞台上推动中国时尚产业与全球的对话。今年，WWD CHINA 再度受邀进入 WDCC 官方日程，将目光投向 AI 这一最具变革性的力量，试图在产业转型的关键节点上，为行业提供前瞻思考与转型升级的解决方案。AI 对时尚产业的渗透，正从单点应用走向全链路纵深。从趋势洞察、产品研发到供应链响应与消费体验，技术迭代的速度远超产业的适应节奏。旧有的价值链条正在被打破，而新的协同共识尚待建立。正是在这一背景下，WWD 以“智能生态新未来”为主线，在 WDCC2026 期间策划两场主题圆桌论坛，试图为产业提供一个务实对话的场域——不回避技术带来的冲击，也不低估产业自身的韧性，而是直面真问题，寻找可落地的共识。本次论坛分为上下两场。上半场聚焦“AI 时代的时尚生态重构”，从趋势洞察、消费决策到技术底座，探讨算法高度渗透下，时尚的定义权与创意主",
       "keywords": [],
-      "cover": "https://mmbiz.qpic.cn/sz_mmbiz_png/Qo5BdWYc88hIqeNNFPLzK4FVia6Bxasa5yu3micRL3eGsBibYsDjGTOtxbA72UmO8s2usSiccuzYIwciaicwe4koK9gErNekiaTBdCfza1CEXfzwhg/640?wx_fmt=png&amp;from=appmsg"
+      "cover": "https://mmbiz.qpic.cn/mmbiz_jpg/SuCyJDEGpmZV42sXaAOQFbE872Rlj0AfW0iaWxfAeKHt8Ud2yTKibkOHy7Y5yrqbqX51bbaCfJnD4zviaejX1hyKlzOyic67LnXt8gfxDib6Selc/640?wx_fmt=jpeg"
     },
     {
-      "id": 2450,
-      "title": "小品类跑出大市场：石头如何用技术重塑迷你洗烘？",
-      "source": "亿邦动力",
-      "publish_date": "2026-09-16",
-      "url": "https://mp.weixin.qq.com/s/jsKG31HAccg_y4U1gTD75g",
-      "summary": "文丨韩笑曾经与冰箱、电视并称“三大件”的洗衣机，正在经历一场冰火两重天的行业分化。一方面，今年上半年国内洗衣机零售额规模达365亿元，同比下滑 4.5%，进入存量竞争阶段。另一方面，迷你洗衣机却在逆势增长。奥维云网监测数据显示，今年一季度迷你洗衣机全渠道销售额达6.3亿元，同比提升23.7%。其中，滚筒迷你洗烘机成为了核心增长引擎，一季度线上和线下同比分别大涨110%和673.2%。石头科技的迷你洗烘一体机Z1 Mini Pro的热销正是这一趋势最好的映衬。截至2026年7月，石头迷你洗衣机全网累计销量突破27万台，在洗衣机大盘承压的背景下证明了细分品类完全有能力在存量市场中开辟出真正的增量空间。当小户型成为主流居住形态，母婴人群对衣物卫生提出更高标准，以及独居人群持续增长，家庭洗护正在从“一台洗衣机洗所有”走向“专衣专护、分区分洗”的精细化时代，而这正是家庭生活方式的结构性跃迁的写照。清洁生态的降维打击：从扫地机器人到迷你洗衣机石头科技以扫地机器人起家，把“清洁”这件小事做成了高速增长的大生意。而这一次，它把目光投向了洗衣机这个早已巨头盘踞的成熟市场。一家做扫地机器人的公司，为何要闯",
+      "id": 2518,
+      "title": "人事情报｜奢侈品家族成员将触角伸进运动品牌董事会",
+      "source": "WWD 国际时尚特讯",
+      "publish_date": "2026-09-18",
+      "url": "https://mp.weixin.qq.com/s/DW8YBk6x6fZszsK_gVrK1w",
+      "summary": "一个奢侈品家族的核心成员，进入了全球最大运动品牌的董事会。9 月 15 日，LVMH 掌舵人 Bernard Arnault 的二公子、34 岁的 Alexandre Arnault 出任 Nike 董事，董事会随之扩至 12 人，具体委员会分工尚未确定。这并非一次普通的商业背书。他的履历，是两次标志性品牌的价值重塑：主导 LVMH 收购 Rimowa 后，他把一个传统工业行李箱品牌做成了具有文化热度的奢侈旅行符号；进入 Tiffany 后，又推动这家一度老化的美国珠宝品牌重回时尚与增长中心。Nike 将其概括为“重振品牌定位、转型商业模式”。而今天的传统运动巨头，同样走到增长放缓、需要重新与消费者建立联结的关口 —— 首席执行官 Elliott Hill 口中的“保持相关性”、开启“下一增长篇章”，与 Rimowa、Tiffany 当年面对的命题如出一辙。这并不是孤例。今年，Puma 请来 Hugo Boss 前 CEO Mark Langer 出任首席财务官，Canada Goose 把历任 Balmain、Diesel、Valentino 的 Massimo Piombini &",
       "keywords": [],
-      "cover": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/BvOXUE29CF1HGCiaOyyC6wia9E6Ak1UpaOLWKqcTlMEYXQCMuE4FoYBWjqMxC7xRrr7T9I3U354UMTsKgKYgMUjmYdpfIn2zhv7jpynWkKxXU/640?wx_fmt=jpeg&amp;from=appmsg"
+      "cover": "https://mmbiz.qpic.cn/sz_mmbiz_png/SuCyJDEGpmZjwqlPF3afdUuTdx5yA2IjIwzYsYWdrJQQU8ProyUoOwaibdJ7Y8ibVH7fpjNuK6TnbAPKSpfT6PXBhfS23HicZVM0zoia43Jk1lk/640?wx_fmt=png"
     }
   ]
 }
