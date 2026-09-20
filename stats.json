@@ -1,63 +1,63 @@
 {
   "stats": {
-    "total_articles": 1915,
+    "total_articles": 1941,
     "source_count": 18,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-09-18"
+      "end": "2026-09-20"
     },
-    "last_update": "2026-09-18T10:54:55.909609"
+    "last_update": "2026-09-20T10:48:22.867352"
   },
   "latest": [
     {
-      "id": 2522,
-      "title": "追觅开始做减法",
+      "id": 2543,
+      "title": "985高校研究生新生人数反超本科生，释放什么信号？",
       "source": "财经早餐",
-      "publish_date": "2026-09-18",
-      "url": "https://mp.weixin.qq.com/s/ilBCM6YZpOq-kqCtwhk6wQ",
-      "summary": "9月8日，IFA 2026在柏林收官，追觅有6款产品拿到国际奖项；几乎同一时间，IDC的二季度报告确认，追觅旗下扫地机器人业务（追觅与MOVA）上半年全球销量份额26.1%、销售额份额31.2%，双榜第一。两份成绩单撞在同一周，时间点很值得细读——就在半个月前，这家公司刚发布了一份《关于公司战略聚焦及业务发展的说明》，为持续数月的扩张争议按下暂停键。一边做减法，一边拿第一，这两件事放在一起读，才能看懂追觅正在经历什么。先把争议说清楚追觅过去一年的画风，确实有点野。200多个事业部同时铺开，触角从扫地机伸到手机、汽车、大家电甚至奶茶和房产中介；创始人俞浩喊出\"人车家天地芯\"\"百万亿美元公司生态\"，造车项目对标布加迪威龙，手机要对标华为小米。市场给这种打法的评价从\"有野心\"逐渐变成\"看不懂\"，扩张的资金压力、供应链的账期问题，也随之被放大审视。8月25日的官方说明，是这场争议的正式回答：资源收拢到智能家庭、户外庭院、智能出行、具身智能四大方向，探索期业务整合合并，汽车和手机转为研究院形式保留技术储备，不再独立推进商业化量产。这份说明最值得读的不是\"砍\"，而是\"留\"——扩张期沉淀的技术、研发",
+      "publish_date": "2026-09-20",
+      "url": "https://mp.weixin.qq.com/s/H0PHlDa70pEedGJGRkM9QQ",
+      "summary": "2026年秋季迎新季，39所985高校交出的新生数据勾勒出一条清晰的分界线，绝大多数院校研究生新生规模正式超过本科生，复旦、南大等校研究生人数已是本科的两倍有余。这一变化远不止单一扩招政策的落地结果，而是人口周期、就业市场、高校竞争三重力量共同作用下。最先按下加速键的，是人口拐点下的高校生存逻辑。随着出生人口下滑的影响传导至高考端，本科生源总量已进入收缩通道，传统靠本科扩招支撑办学规模的模式难以为继。对于坐拥顶尖科研资源的985高校而言，向上扩容研究生教育，成为对冲生源下行、维持办学体量的最优解。相比于地方院校受制于科研资质难以扩张研究生教育，985院校凭借博士点、科研经费与导师资源的优势，天然具备研究生扩招的承载力，这也使得头部高校率先完成招生结构的反转。更深层的动力，来自就业市场的“筛选机制”升级。由于中国本科毕业生规模连续多年位居世界前列，本科学历已从“稀缺资源”变为“基础门槛”。金融、互联网、高端制造等吸纳优质就业的核心行业，普遍将研究生学历作为简历筛选的默认标准——并非所有岗位都需要研究生层级的科研能力，而是在供给充足的人才市场中，学历成为最高效的能力筛选工具。需求端的门槛上",
       "keywords": [],
-      "cover": "https://mmbiz.qpic.cn/sz_mmbiz_png/mGm3FEb3WI4W8uSoyMVybcad1uCQ2pW3X4oHVOibOGPVHxJmm6yY3PnA1xcmTztzqUnI59gkSHHlTGtLU2NAsRCdjPHJFf7vqiaTnXmff21gI/640?wx_fmt=png&amp;from=appmsg#imgIndex=0"
+      "cover": "https://mmbiz.qpic.cn/mmbiz_gif/b2YlTLuGbKBlZ6d0UDyO7HLG6nI5ZpIAWNEZxR4Kv6evCwUSPHDE7MslWp0NPhKJO4BeHqmpMzrXB7GkSm3aBg/640?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1&amp;tp=wxpic#imgIndex=5"
     },
     {
-      "id": 2523,
-      "title": "i9压低了车身，却抬高了理想的天花板",
+      "id": 2544,
+      "title": "【财经早餐】2026.09.20星期日",
       "source": "财经早餐",
-      "publish_date": "2026-09-18",
-      "url": "https://mp.weixin.qq.com/s/S4mk_hYSxTNKpwkVwN7VBQ",
-      "summary": "理想第二代纯电平台的首发旗舰全新i9 Home，给纯电六座SUV市场带来了一股旋风。也是一台“不太一样”的纯电SUV。36.98万元起的价格，第一次把理想的自研电池、自研电机、马赫M100芯片和自研智驾VLA 2.5模型，四项核心技术同时装进了一台量产旗舰。不过这些功能并非一步到位：9月首批交付仍采用宁德时代5C，10月底起逐步切换至理想自研5C电池。VLA 2.5也将在10月推送。先看外观：5225毫米车长、3168毫米轴距，车高只有1752毫米；风阻系数0.215，全球量产SUV最低，百公里能耗15.1度；车比L9还低，长度又接近MEGA；标准高度156毫米，升高后176毫米，最高196毫米；最大涉水深度650毫米。一台SUV，硬是做出了MPV的效果。线控转向+后轮转向让5米2的车掉头、进地库的灵活度接近一辆紧凑型SUV。&nbsp;外观惊艳，内部更加硬核。i9全系只做一个Home版本，二排双零重力旋转座椅，可以45度迎宾、90度观景、180度对坐，三排更是堪比飞机头等舱，再配合双倍速长滑轨，以及一系列细节设计，把座舱切换成客厅、套房甚至影院等，基本是将MEGA的一系列优势，平移到",
+      "publish_date": "2026-09-20",
+      "url": "https://mp.weixin.qq.com/s/JpHDJl9ugyrEPr781acm6A",
+      "summary": "每日金曲：梁博 - 日落大道► 新华网：乌兰察布远景星河基地于8月投产，采用超高比例绿电直连，以12万平的建筑体量（约20个标准足球场）、百万卡并行能力、百万P算力规模，成为全球Token产出能力最强的单体AI数据中心，刷新了AI基础设施的密度纪录。► 央视新闻：伊朗消息人士表示，卡塔尔和巴基斯坦作为调解方已告知伊朗，美国已准备好进行谈判并达成协议。&nbsp;宏观经济&nbsp;1、英伟达创始人黄仁勋：2030年成为世界末日的概率为0%。近日已多次重申其立场——人工智能完全处于可控范围，并公开反对出台针对该领域的全新监管法规。2、央视新闻：1-8月，深圳机场口岸对其他APEC成员经济体进出口货运量达45万吨，同比增长6.3%。截至9月初，深圳机场口岸年内来自APEC成员经济体出入境外籍旅客超100万人次，同比增长31.1%，双双创历史同期新高。3、北京市经信局：加快基础模型技术迭代，提升模型智能上限水平。推动模型与芯片适配调优，支持推理专用芯片、模型轻量化、边缘端部署等技术攻关，高水平建设、调用智算资源，全面提升词元生产能力。4、上观新闻：《浦东新区培育脑机接口未来产业先导区行动方案",
       "keywords": [],
-      "cover": "https://mmbiz.qpic.cn/sz_mmbiz_png/mGm3FEb3WI64F1wNBOh2gloMRcQufL5qVcCxicAH0truGZry7lsd38dxpiaW01fQibncvN0ADbyttOvvt9yMlxM5vm2bCPNkhfNLkUPeq2JibDc/640?wx_fmt=png&amp;from=appmsg#imgIndex=0"
+      "cover": "https://mmbiz.qpic.cn/sz_mmbiz_png/mGm3FEb3WI6mfia7qETMiaKzheuWWvRNHtUbxNB5xhDrNWsuVByDdE52oFcicSQJohGuTEaVU1VwQoEwtDvETG5wRaL24LbeusZsc4a4aQFSbI/640?wx_fmt=png&amp;from=appmsg#imgIndex=0"
     },
     {
-      "id": 2525,
-      "title": "【财经早餐】2026.09.18星期五",
+      "id": 2533,
+      "title": "被起诉后，它卖得更好了",
+      "source": "化妆品观察 品观",
+      "publish_date": "2026-09-20",
+      "url": "https://mp.weixin.qq.com/s/abvoaGK78aREWVcjjKLv0g",
+      "summary": "本周美妆行业发生了这些值得关注的事情•&nbsp;93亿！Puig 拿下怡思丁•&nbsp;珀莱雅入股毕生之研•&nbsp;被起诉后，它卖得更好了•&nbsp;两次入华，两次退出，这个品牌又走了•&nbsp;又一巨头瘦身，这次要卖67亿•&nbsp;百年美妆品牌被卖资本93亿！Puig 拿下怡思丁9月14日，西班牙美妆集团Puig宣布，以12亿欧元（约合人民币93亿元）收购Esteve制药持有的怡思丁剩余50%股份，交割时支付9亿欧元现金，剩余3亿欧元作为无息递延款项于2029年第一季度支付。交易预计2027年一季度完成，尚待反垄断审批。1975年，Puig与Esteve各出资50%创立怡思丁。51年后，随着Puig买下Esteve手中的剩余50%股权，怡思丁将进入Puig全资时代。这场收购的时机颇为微妙，2024年怡思丁营收6.42亿欧元，同比增长13%，净利润增长32%；但2025年营收6.47亿欧元，增长近乎停滞，净利润下滑14%，营业利润跌幅达26.6%。2025年，Puig营收50.42亿欧元，香水与时尚业务占比高达72%，但增速已放缓至3.8%；护肤仅占10.9%，增速却达",
+      "keywords": [],
+      "cover": "https://mmbiz.qpic.cn/mmbiz_jpg/iaXEZ1ibK2uVkINZN5lUtNB3FE1I8IWdp3V8exqWSbbhXJ6via4ib8cbDJHUPYbBUT7I6RbB1ce4pnFhKicQOO6r6vgoO63CN5Sr9qSMGbbnCPp0/640?wx_fmt=jpeg"
+    },
+    {
+      "id": 2542,
+      "title": "告别活检疤痕！这款蚕丝微针，轻松“读取”皮肤的秘密",
+      "source": "肤见未来实验室",
+      "publish_date": "2026-09-20",
+      "url": "https://mp.weixin.qq.com/s/ObI_v2su2_uH9LiAjEPtmw",
+      "summary": "前言核心背景：炎症皮肤病缺乏理想取样方式，活检有创伤，抽血无法体现皮肤局部病变，传统微针采样能力有限，亟需微创可复用的采样新技术。核心机制：借鉴树木木质部输水结构，在丝素微针内部构筑垂直微通道，依靠毛细力抽取组织间液，无需溶胀；离心洗脱即可获得病灶原始分子样本供检测。文献解读1研究目的● &nbsp;针对现有皮肤病取样手段的缺陷，开发新型微创微针，高效采集皮肤组织间液，用于皮肤病标志物与蛋白组研究。2研究结论● &nbsp;这款仿生丝素微针可快速微创采集皮肤组织间液，检测效果媲美活检，皮肤损伤小，还可挖掘皮肤病潜在标志物。3研究价值● &nbsp;突破传统微针局限，为炎症皮肤病提供微创采样新方案，助力病情监测与新药研发，可规模化制备。实验方法借鉴大树输水原理蚕丝仿生微针贴片，有望替代有创皮肤活检5分钟微创采集皮肤组织间液，精准捕捉皮肤病灶信号01&nbsp; [&nbsp;微针制备&nbsp;.丝素蛋白经定向冷冻、交联、盐析，制得仿生多孔微针，同步制备对照组微针。02&nbsp; [性能表征] .观测微观结构，检测蛋白构象、力学强度，验证皮肤穿刺能力。03&nbsp; [采样评估] .",
+      "keywords": [],
+      "cover": "https://mmbiz.qpic.cn/mmbiz_png/Qo5BdWYc88iaYYX7BnyjmLuhtiaV438ViccZT9L59ThyaqlYx2gLTt8B0X88oNOlXM55jaO47INGw6KMeldl77ejH1sxibPBJ8dKjibpX3C049I0/640?wx_fmt=png&amp;from=appmsg"
+    },
+    {
+      "id": 2545,
+      "title": "“一核多极”业务矩阵成型，海澜之家全渠道价值持续释放",
       "source": "财经早餐",
-      "publish_date": "2026-09-18",
-      "url": "https://mp.weixin.qq.com/s/5xUighTkJniRJXnMcRXdAw",
-      "summary": "<!DOCTYPE html>\n<html class=\"\n\">\n  <head>\n    <meta name=\"wechat-enable-text-zoom-em\" content=\"true\">\n<meta name=\"wechat-enable-text-size-adjust\" content=\"true\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n<meta name=\"color-scheme\" content=\"light dark\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover\">\n<link rel=\"shortcut icon\" type=\"image/x-icon\"",
+      "publish_date": "2026-09-19",
+      "url": "https://mp.weixin.qq.com/s/FjzqbW6cX5Ur8KPZpjUzjw",
+      "summary": "过去，中国服装企业普遍依赖“加盟扩张+批发模式”实现规模增长，但随着消费渠道碎片化、需求个性化，传统模式的增长瓶颈日益凸显。国民男装龙头——海澜之家近期公布的财报，却传递出了一个不一样的信号。上半年，海澜之家实现营业收入124.20亿元，同比增长7.38%；净利润14.88亿元，虽然小幅下降5.86%。但主品牌基本盘稳固、线上与海外渠道高速增长、库存效率显著改善，在消费弱复苏周期中展现出不俗的经营韧性与战略定力。分业务板块看，海澜之家的业绩增长呈现出“一核多极”的格局。主品牌海澜之家系列依然是增长压舱石，上半年收入同比保持双位数增长，Q2单季度收入增速提升至13%，毛利率同比提升2个百分点，展现出国民男装品牌的韧性。支撑主品牌增长的核心动力来自两方面：一是产品端持续强化功能性面料迭代，依托海澜科技研发基地推出“极光95绒”“冰感科技系列”“免烫衬衫”等痛点型产品，上半年研发投入达1.12亿元，同比增长5.76%；二是渠道端优化门店结构，直营渠道加速布局商业综合体，上半年主品牌直营门店净增105家至1734家，加盟门店则净关5家至3991家，持续淘汰低效终端，单店产出稳步提升。其它品牌及",
       "keywords": [],
-      "cover": ""
-    },
-    {
-      "id": 2517,
-      "title": "活动预告｜聚焦 AI+时尚新生态，WWD CHINA 再度进入 WDCC 官方日程",
-      "source": "WWD 国际时尚特讯",
-      "publish_date": "2026-09-18",
-      "url": "https://mp.weixin.qq.com/s/XAb-odmuhR3J3ks4Pctjyg",
-      "summary": "WWD CHINA 自 2022 年起便携手世界设计之都大会（WDCC），共同见证并推动设计产业的可持续创新发展，从最初探讨设计如何赋能时尚产业，到去年以“重构时尚价值链”为主题引发行业广泛共鸣，WWD CHINA 始终以全球视野和产业洞察，在 WDCC 这一国际舞台上推动中国时尚产业与全球的对话。今年，WWD CHINA 再度受邀进入 WDCC 官方日程，将目光投向 AI 这一最具变革性的力量，试图在产业转型的关键节点上，为行业提供前瞻思考与转型升级的解决方案。AI 对时尚产业的渗透，正从单点应用走向全链路纵深。从趋势洞察、产品研发到供应链响应与消费体验，技术迭代的速度远超产业的适应节奏。旧有的价值链条正在被打破，而新的协同共识尚待建立。正是在这一背景下，WWD 以“智能生态新未来”为主线，在 WDCC2026 期间策划两场主题圆桌论坛，试图为产业提供一个务实对话的场域——不回避技术带来的冲击，也不低估产业自身的韧性，而是直面真问题，寻找可落地的共识。本次论坛分为上下两场。上半场聚焦“AI 时代的时尚生态重构”，从趋势洞察、消费决策到技术底座，探讨算法高度渗透下，时尚的定义权与创意主",
-      "keywords": [],
-      "cover": "https://mmbiz.qpic.cn/mmbiz_jpg/SuCyJDEGpmZV42sXaAOQFbE872Rlj0AfW0iaWxfAeKHt8Ud2yTKibkOHy7Y5yrqbqX51bbaCfJnD4zviaejX1hyKlzOyic67LnXt8gfxDib6Selc/640?wx_fmt=jpeg"
-    },
-    {
-      "id": 2518,
-      "title": "人事情报｜奢侈品家族成员将触角伸进运动品牌董事会",
-      "source": "WWD 国际时尚特讯",
-      "publish_date": "2026-09-18",
-      "url": "https://mp.weixin.qq.com/s/DW8YBk6x6fZszsK_gVrK1w",
-      "summary": "一个奢侈品家族的核心成员，进入了全球最大运动品牌的董事会。9 月 15 日，LVMH 掌舵人 Bernard Arnault 的二公子、34 岁的 Alexandre Arnault 出任 Nike 董事，董事会随之扩至 12 人，具体委员会分工尚未确定。这并非一次普通的商业背书。他的履历，是两次标志性品牌的价值重塑：主导 LVMH 收购 Rimowa 后，他把一个传统工业行李箱品牌做成了具有文化热度的奢侈旅行符号；进入 Tiffany 后，又推动这家一度老化的美国珠宝品牌重回时尚与增长中心。Nike 将其概括为“重振品牌定位、转型商业模式”。而今天的传统运动巨头，同样走到增长放缓、需要重新与消费者建立联结的关口 —— 首席执行官 Elliott Hill 口中的“保持相关性”、开启“下一增长篇章”，与 Rimowa、Tiffany 当年面对的命题如出一辙。这并不是孤例。今年，Puma 请来 Hugo Boss 前 CEO Mark Langer 出任首席财务官，Canada Goose 把历任 Balmain、Diesel、Valentino 的 Massimo Piombini &",
-      "keywords": [],
-      "cover": "https://mmbiz.qpic.cn/sz_mmbiz_png/SuCyJDEGpmZjwqlPF3afdUuTdx5yA2IjIwzYsYWdrJQQU8ProyUoOwaibdJ7Y8ibVH7fpjNuK6TnbAPKSpfT6PXBhfS23HicZVM0zoia43Jk1lk/640?wx_fmt=png"
+      "cover": "https://mmbiz.qpic.cn/mmbiz_gif/b2YlTLuGbKBlZ6d0UDyO7HLG6nI5ZpIAWNEZxR4Kv6evCwUSPHDE7MslWp0NPhKJO4BeHqmpMzrXB7GkSm3aBg/640?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1&amp;tp=wxpic#imgIndex=5"
     }
   ]
 }
