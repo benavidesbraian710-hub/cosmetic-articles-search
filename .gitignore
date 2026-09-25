@@ -19,3 +19,4 @@ __pycache__/
 
 .omc/
 cosmetic_articles.db.backup-*
+cosmetic_articles.db.bak-*
