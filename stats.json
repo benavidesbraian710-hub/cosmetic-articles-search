@@ -1,60 +1,60 @@
 {
   "stats": {
-    "total_articles": 2123,
+    "total_articles": 2248,
     "source_count": 18,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-09-28"
+      "end": "2026-10-08"
     },
-    "last_update": "2026-09-28T11:35:17.025492"
+    "last_update": "2026-10-08T11:00:00.016906"
   },
   "latest": [
     {
-      "id": 2730,
-      "title": "地产的拐点，这次真的来了吗？",
+      "id": 2838,
+      "title": "【财经早餐】2026.10.08星期四",
       "source": "财经早餐",
-      "publish_date": "2026-09-28",
-      "url": "https://mp.weixin.qq.com/s/fZ5Nw0oN7l0YZ-6KwXQ8vA",
+      "publish_date": "2026-10-08",
+      "url": "https://mp.weixin.qq.com/s/BPF0H38UyXxtDVrYrQ8ZtA",
       "summary": "",
       "keywords": [],
       "cover": ""
     },
     {
-      "id": 2731,
-      "title": "【财经早餐】2026.09.28星期一",
-      "source": "财经早餐",
-      "publish_date": "2026-09-28",
-      "url": "https://mp.weixin.qq.com/s/mxFdk2Y1ZzTMmrwrGGdzSQ",
-      "summary": "",
-      "keywords": [],
-      "cover": ""
-    },
-    {
-      "id": 2732,
-      "title": "三大运营商，集体叫停“0元购机”！",
-      "source": "财经早餐",
-      "publish_date": "2026-09-28",
-      "url": "https://mp.weixin.qq.com/s/rJew6RV4YMiVja_jaQBHTA",
-      "summary": "",
-      "keywords": [],
-      "cover": ""
-    },
-    {
-      "id": 2729,
-      "title": "S100融合蛋白Repetin：搭建皮肤屏障损伤与炎症的桥梁",
+      "id": 2837,
+      "title": "晒老克星AKG：修复线粒体，从源头减少氧化损伤",
       "source": "肤见未来实验室",
-      "publish_date": "2026-09-28",
-      "url": "https://mp.weixin.qq.com/s/0Ml2RbwibWIl6QYZbNftGw",
+      "publish_date": "2026-10-08",
+      "url": "https://mp.weixin.qq.com/s/j-3RaWC-JjpAMVGg6Yj8tg",
       "summary": "",
       "keywords": [],
       "cover": ""
     },
     {
-      "id": 2725,
-      "title": "京东工业签约一汽奔腾；震坤行联合英特尔发布工业多模态大模型；国联股份算力收入兑现；卡奥斯二次递表港交所丨产业互联网周报",
+      "id": 2834,
+      "title": "这个国庆，年轻人受够了“审美完蛋”的景区",
       "source": "亿邦动力",
-      "publish_date": "2026-09-27",
-      "url": "https://mp.weixin.qq.com/s/O0nROk8DAPxIlbux3KuNnw",
+      "publish_date": "2026-10-07",
+      "url": "https://mp.weixin.qq.com/s/0FpWOkpUIWDBTlhkiTK-pA",
+      "summary": "",
+      "keywords": [],
+      "cover": ""
+    },
+    {
+      "id": 2835,
+      "title": "【财经早餐】2026.10.07星期三",
+      "source": "财经早餐",
+      "publish_date": "2026-10-07",
+      "url": "https://mp.weixin.qq.com/s/btcv0rO-XCvdELPCqaICZQ",
+      "summary": "",
+      "keywords": [],
+      "cover": ""
+    },
+    {
+      "id": 2836,
+      "title": "假期成绩单发下来了，有人偷着乐，有人躲着走",
+      "source": "财经早餐",
+      "publish_date": "2026-10-07",
+      "url": "https://mp.weixin.qq.com/s/UgByKyeQ3W_PzjbeFxJofw",
       "summary": "",
       "keywords": [],
       "cover": ""
