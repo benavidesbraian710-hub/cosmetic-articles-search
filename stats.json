@@ -1,60 +1,60 @@
 {
   "stats": {
-    "total_articles": 2252,
+    "total_articles": 2350,
     "source_count": 18,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-10-08"
+      "end": "2026-10-12"
     },
-    "last_update": "2026-10-08T11:04:06.882702"
+    "last_update": "2026-10-12T10:16:42.391977"
   },
   "latest": [
     {
-      "id": 2838,
-      "title": "【财经早餐】2026.10.08星期四",
+      "id": 2949,
+      "title": "【财经早餐】2026.10.12星期一",
       "source": "财经早餐",
-      "publish_date": "2026-10-08",
-      "url": "https://mp.weixin.qq.com/s/BPF0H38UyXxtDVrYrQ8ZtA",
+      "publish_date": "2026-10-12",
+      "url": "https://mp.weixin.qq.com/s/RVkIEGBkGK171Ruuj1DQDA",
       "summary": "",
       "keywords": [],
       "cover": ""
     },
     {
-      "id": 2837,
-      "title": "晒老克星AKG：修复线粒体，从源头减少氧化损伤",
-      "source": "肤见未来实验室",
-      "publish_date": "2026-10-08",
-      "url": "https://mp.weixin.qq.com/s/j-3RaWC-JjpAMVGg6Yj8tg",
+      "id": 2950,
+      "title": "巨头混战的年份里，叮咚把生意做成了利润",
+      "source": "财经早餐",
+      "publish_date": "2026-10-12",
+      "url": "https://mp.weixin.qq.com/s/42HHmXvCSle3jLqNIzEJOQ",
       "summary": "",
       "keywords": [],
       "cover": ""
     },
     {
-      "id": 2834,
-      "title": "这个国庆，年轻人受够了“审美完蛋”的景区",
+      "id": 2951,
+      "title": "一只大闸蟹不到10元，为何卖出“地板价”？",
+      "source": "财经早餐",
+      "publish_date": "2026-10-12",
+      "url": "https://mp.weixin.qq.com/s/q7J_1xO4DOtKumgPVycI2g",
+      "summary": "",
+      "keywords": [],
+      "cover": ""
+    },
+    {
+      "id": 2938,
+      "title": "美国收紧低价货物清关规则；TikTok Shop上线AI购物助手；速卖通测试会员计划｜跨境电商周报",
       "source": "亿邦动力",
-      "publish_date": "2026-10-07",
-      "url": "https://mp.weixin.qq.com/s/0FpWOkpUIWDBTlhkiTK-pA",
+      "publish_date": "2026-10-11",
+      "url": "https://mp.weixin.qq.com/s/nzgJNy7W-nQVmacIkp4ckw",
       "summary": "",
       "keywords": [],
       "cover": ""
     },
     {
-      "id": 2835,
-      "title": "【财经早餐】2026.10.07星期三",
+      "id": 2945,
+      "title": "【财经早餐】2026.10.11星期日",
       "source": "财经早餐",
-      "publish_date": "2026-10-07",
-      "url": "https://mp.weixin.qq.com/s/btcv0rO-XCvdELPCqaICZQ",
-      "summary": "",
-      "keywords": [],
-      "cover": ""
-    },
-    {
-      "id": 2836,
-      "title": "假期成绩单发下来了，有人偷着乐，有人躲着走",
-      "source": "财经早餐",
-      "publish_date": "2026-10-07",
-      "url": "https://mp.weixin.qq.com/s/UgByKyeQ3W_PzjbeFxJofw",
+      "publish_date": "2026-10-11",
+      "url": "https://mp.weixin.qq.com/s/TirEuh3usqGM_LEckZMlMg",
       "summary": "",
       "keywords": [],
       "cover": ""
