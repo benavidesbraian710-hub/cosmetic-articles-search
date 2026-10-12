@@ -15,9 +15,12 @@ DB_PATH = os.path.expanduser('~/.openclaw/workspace/cosmetic-deploy/cosmetic_art
 OUTPUT_PATH = os.path.expanduser('~/.openclaw/workspace/cosmetic-deploy/data.json')
 OUTPUT_DIR = os.path.dirname(OUTPUT_PATH)
 
-def get_next_version():
-    """扫描目录下已有的 data.vXX.json，取最大编号+1作为新版本号"""
+def get_latest_version_info():
+    """返回 (max_version, latest_data_dict_or_None)
+    扫描目录下已有的 data.vXX.json，取最大编号。同时加载最新文件以便后续对比内容是否变化。
+    """
     max_version = 0
+    latest_path = None
     pattern = re.compile(r'^data\.v(\d+)\.json$')
     for fname in os.listdir(OUTPUT_DIR):
         m = pattern.match(fname)
@@ -25,16 +28,53 @@ def get_next_version():
             num = int(m.group(1))
             if num > max_version:
                 max_version = num
-    return f'v{max_version + 1}'
+                latest_path = os.path.join(OUTPUT_DIR, fname)
+    latest_data = None
+    if latest_path and os.path.exists(latest_path):
+        try:
+            with open(latest_path, 'r', encoding='utf-8') as f:
+                latest_data = json.load(f)
+        except Exception:
+            latest_data = None
+    return max_version, latest_data
+
+
+def get_next_version(db_total=None, db_source_count=None, latest_data=None):
+    """智能选择版本号：
+    - 如果最新 data.vXX.json 的 total_articles 与当前数据库一致，则沿用旧版本号（避免无意义递增）
+    - 如果不一致（数据库有变化），则最大编号+1
+    返回 (version, is_new_version)
+    """
+    max_version, latest = (0, latest_data) if latest_data is not None else get_latest_version_info()
+    if latest is None:
+        return f'v{max_version + 1}', True
+    if db_total is not None and latest.get('stats', {}).get('total_articles') == db_total:
+        # 数据库未变，沿用旧版本号
+        return f'v{max_version}', False
+    return f'v{max_version + 1}', True
 
 
 def export_data():
     """导出数据库数据为JSON"""
+    # ===== 快速短路：数据库文章数未变则不重写任何文件 =====
+    try:
+        _conn = sqlite3.connect(DB_PATH)
+        _cur = _conn.cursor()
+        _cur.execute("SELECT COUNT(*) FROM articles")
+        _cur_total = _cur.fetchone()[0]
+        _conn.close()
+        _, _latest = get_latest_version_info()
+        if _latest and _latest.get('stats', {}).get('total_articles') == _cur_total:
+            print(f"⏭️  数据库未变化（{_cur_total}篇）、最新版本 {_latest.get('version', '?')}，跳过整个导出")
+            return True
+    except Exception as _e:
+        print(f"⚠️  预检异常（继续导出）: {_e}")
+
     try:
         conn = sqlite3.connect(DB_PATH)
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
-        
+
         # 获取统计信息
         cursor.execute("SELECT COUNT(*) FROM articles")
         total = cursor.fetchone()[0]
@@ -100,8 +140,11 @@ def export_data():
         
         conn.close()
         
-        # 构建数据（版本号自动递增）
-        version = get_next_version()
+        # 构建数据（智能递增：数据库未变则沿用旧版本号）
+        _, latest_data = get_latest_version_info()
+        version, is_new = get_next_version(db_total=total, db_source_count=source_count, latest_data=latest_data)
+        if not is_new:
+            print(f"⏭️  数据库未变化（{total}篇），沿用旧版本号 {version}（避免无意义递增）")
         data = {
             'version': version,
             'stats': {
@@ -170,6 +213,35 @@ def export_data():
         print(f"   文章总数: {total}")
         print(f"   公众号数: {source_count}")
         print(f"   更新时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+        # ===== 自动同步数据到 cosmetic-preview 仓库（GitHub Pages镜像）=====
+        sync_preview_script = os.path.join(OUTPUT_DIR, 'sync_to_preview.sh')
+        if os.path.exists(sync_preview_script):
+            print(f"\n🔄 同步数据到 cosmetic-preview (GitHub Pages)...")
+            try:
+                result = subprocess.run(
+                    ['bash', sync_preview_script],
+                    capture_output=True,
+                    text=True,
+                    timeout=120
+                )
+                if result.stdout:
+                    for line in result.stdout.strip().split('\n'):
+                        print(f"   {line}")
+                if result.returncode == 0:
+                    print(f"\n✅ GitHub Pages 同步成功（1-2分钟后网站生效）")
+                else:
+                    print(f"\n⚠️ GitHub Pages 同步失败（本地数据已保存，preview可能仍是旧数据）")
+                    if result.stderr:
+                        for line in result.stderr.strip().split('\n'):
+                            print(f"   {line}")
+                    print(f"   手动重试: bash {sync_preview_script}")
+            except subprocess.TimeoutExpired:
+                print(f"\n⚠️ GitHub Pages 同步超时（>120秒），跳过")
+            except Exception as e:
+                print(f"\n⚠️ GitHub Pages 同步异常: {e}")
+        else:
+            print(f"\n⚠️ preview同步脚本不存在: {sync_preview_script}（跳过 GitHub Pages 同步）")
 
         # ===== 自动同步数据库到 ECS =====
         sync_script = os.path.join(OUTPUT_DIR, 'api-server', 'sync_db_to_ecs.sh')
