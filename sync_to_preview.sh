@@ -22,6 +22,11 @@ echo "🔄 同步核心文件到 cosmetic-preview ..."
 
 cd "$DST_DIR"
 
+# 清理旧版本的数据文件（避免累积废弃版本，如v1.json污染事件）
+echo "  🧹 清理旧的 data.v*.json 防止累积..."
+rm -f data.v*.json
+git rm --cached data.v*.json 2>/dev/null || true
+
 # 7个HTML
 for f in index.html articles.html report.html service.html submit.html find.html admin.html; do
   cp -f "$SRC_DIR/$f" .
