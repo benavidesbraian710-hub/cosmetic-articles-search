@@ -45,7 +45,11 @@ def get_next_version(db_total=None, db_source_count=None, latest_data=None):
     - 如果不一致（数据库有变化），则最大编号+1
     返回 (version, is_new_version)
     """
-    max_version, latest = (0, latest_data) if latest_data is not None else get_latest_version_info()
+    # 始终扫描目录获取真实 max_version（不要因为传入了 latest_data 而丢失）
+    max_version, latest = get_latest_version_info()
+    # 如果调用者额外传入了 latest_data，优先使用它做内容对比（但 max_version 仍取扫描结果）
+    if latest_data is not None:
+        latest = latest_data
     if latest is None:
         return f'v{max_version + 1}', True
     if db_total is not None and latest.get('stats', {}).get('total_articles') == db_total:
