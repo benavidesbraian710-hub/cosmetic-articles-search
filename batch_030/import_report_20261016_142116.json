@@ -1,0 +1,25 @@
+{
+  "batch": "30",
+  "start_time": "2026-10-16T14:21:16.770573",
+  "total_time_sec": 11.292407035827637,
+  "total_raw": 18,
+  "unique_after_dedup": 18,
+  "new_records": 11,
+  "success": 11,
+  "failed": 0,
+  "non_allowed_blocked": 0,
+  "success_ids": [
+    3067,
+    3068,
+    3069,
+    3070,
+    3071,
+    3072,
+    3073,
+    3074,
+    3075,
+    3076,
+    3077
+  ],
+  "failed_list": []
+}
