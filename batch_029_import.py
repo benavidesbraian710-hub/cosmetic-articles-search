@@ -59,12 +59,27 @@ def load_excel_files(batch_dir):
     return all_batches
 
 
+def normalize_url(url):
+    """微信长URL(mp.weixin.qq.com/s?search_click_id=...&sn=HASH) → 短URL(mp.weixin.qq.com/s/HASH)
+    避免同一文章因两种URL格式导致重复入库（10-17 bugfix：4组长URL重复）
+    """
+    if 'search_click_id=' in url or '&sn=' in url:
+        m = re.search(r'[?&]sn=([a-f0-9]+)', url)
+        if m:
+            return f'https://mp.weixin.qq.com/s/{m.group(1)}'
+    return url
+
+
 def dedup_against_db(records):
-    """跨文件去重 + 跨DB去重"""
+    """跨文件去重 + 跨DB去重
+    支持微信长URL(mp.weixin.qq.com/s?search_click_id=...)与短URL视为同文章（10-17 dedup bugfix）
+    """
     seen = set()
     unique = []
     for r in records:
-        if r[1] not in seen:
+        canonical = normalize_url(r[1])
+        if canonical not in seen and r[1] not in seen:
+            seen.add(canonical)
             seen.add(r[1])
             unique.append(r)
 
@@ -74,7 +89,10 @@ def dedup_against_db(records):
     db_urls = {row[0] for row in cursor.fetchall()}
     conn.close()
 
-    new_records = [r for r in unique if r[1] not in db_urls]
+    # 归一化所有db_urls以便匹配（短+长都视为相同）
+    db_canonical_set = {normalize_url(u) for u in db_urls} | db_urls
+
+    new_records = [r for r in unique if r[1] not in db_canonical_set and normalize_url(r[1]) not in db_canonical_set]
     return unique, new_records
 
 
