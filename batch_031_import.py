@@ -69,7 +69,6 @@ def normalize_url(url):
             return f'https://mp.weixin.qq.com/s/{m.group(1)}'
     return url
 
-
 def dedup_against_db(records):
     """跨文件去重 + 跨DB去重
     支持微信长URL(mp.weixin.qq.com/s?search_click_id=...)与短URL视为同文章（10-17 dedup bugfix）
@@ -94,7 +93,6 @@ def dedup_against_db(records):
 
     new_records = [r for r in unique if r[1] not in db_canonical_set and normalize_url(r[1]) not in db_canonical_set]
     return unique, new_records
-
 
 def fetch_detail(url, retries=2):
     headers = {
@@ -149,21 +147,26 @@ def fetch_detail(url, retries=2):
 
 
 def insert_article(wechat_name, url, title, publish_date):
+    """入库时同时写入 canonical_url，依赖UNIQUE INDEX兜底（10-17 彻底修复）
+    任何 (wechat_name, title, publish_date) 重复都会被DB拒绝
+    """
+    canonical = normalize_url(url)
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     try:
         cursor.execute("""
-            INSERT INTO articles (title, wechat_name, source, url, publish_date, content, summary, keywords, images_json)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (title, wechat_name, '', url, publish_date, '', '', '', ''))
+            INSERT OR IGNORE INTO articles 
+              (title, wechat_name, source, url, canonical_url, publish_date, content, summary, keywords, images_json)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (title, wechat_name, '', url, canonical, publish_date, '', '', '', ''))
         conn.commit()
-        new_id = cursor.lastrowid
-        return new_id
+        if cursor.rowcount > 0:
+            return cursor.lastrowid
+        return None  # UNIQUE INDEX拦截，duplicate
     except sqlite3.IntegrityError:
         return None
     finally:
         conn.close()
-
 
 def main():
     print("=" * 70)

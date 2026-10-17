@@ -283,5 +283,16 @@ def export_data():
         print(f"❌ 导出失败: {e}")
         return False
 
+# 数据质量审计入口 (10-17 彻底修复: 防重复发布)
+import subprocess as _sp
+_r = _sp.run(['python3', os.path.join(os.path.dirname(__file__), 'dedup_check.py')], 
+             capture_output=True, text=True)
+if _r.returncode != 0:
+    print('❌ 数据质量审计失败，拒绝导出！')
+    print(_r.stdout)
+    print(_r.stderr)
+    raise SystemExit(1)
+print('✅ 数据质量审计通过')
+
 if __name__ == '__main__':
     export_data()
