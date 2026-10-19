@@ -1,0 +1,46 @@
+{
+  "batch": "32",
+  "start_time": "2026-10-19T11:26:37.349865",
+  "total_time_sec": 24.11915421485901,
+  "total_raw": 89,
+  "unique_after_dedup": 89,
+  "new_records": 27,
+  "success": 26,
+  "failed": 1,
+  "non_allowed_blocked": 0,
+  "success_ids": [
+    3101,
+    3102,
+    3103,
+    3104,
+    3105,
+    3106,
+    3107,
+    3108,
+    3109,
+    3110,
+    3111,
+    3112,
+    3113,
+    3114,
+    3115,
+    3116,
+    3117,
+    3118,
+    3119,
+    3120,
+    3121,
+    3122,
+    3123,
+    3124,
+    3125,
+    3126
+  ],
+  "failed_list": [
+    [
+      "WWD 国际时尚特讯",
+      "https://mp.weixin.qq.com/s/A-_o-_PNHGuDue_OvYUyTQ",
+      "no title"
+    ]
+  ]
+}
