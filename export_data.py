@@ -11,7 +11,9 @@ import re
 import subprocess
 from datetime import datetime
 
-DB_PATH = os.path.expanduser('~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db')
+# 10-19 治理：路径混淆第四次复发，DB_PATH 统一读 COSMETIC_DB_PATH 环境变量
+# 缺省值保留 deploy 仓 db（数据真源），与 main.py / uvicorn 进程一致
+DB_PATH = os.environ.get('COSMETIC_DB_PATH', os.path.expanduser('~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db'))
 OUTPUT_PATH = os.path.expanduser('~/.openclaw/workspace/cosmetic-deploy/data.json')
 OUTPUT_DIR = os.path.dirname(OUTPUT_PATH)
 
