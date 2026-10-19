@@ -525,3 +525,36 @@
 - 任何数据导出 → export_data.py 自动跑审计 → 数据问题立即浮出
 - 任何手动 SQL 插入 → UNIQUE INDEX 拒绝重复
 - 历史脏数据: 4 条已删（v115→v116 时清理）
+
+## 2026-10-19 数据库路径混淆根治收官（Step 4 最后一环）
+
+### 问题现象
+- 10-08 记录的"数据库路径混淆第四次复发"在 export_data.py 仍存在 DB_PATH 硬编码
+- 与 main.py（Step 1-3 已完成）的环境变量化不一致，deploy 仓和 api 仓路径分裂
+- 任何路径变更需双倍修改且容易遗漏
+
+### 真正根因
+- export_data.py:14 硬编码 `~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db`
+- 与 10-08/10-17/09-10 等多次复发的同一根因：硬编码 + 没有环境变量化
+
+### 修复措施
+- export_data.py DB_PATH 改用 `os.environ.get('COSMETIC_DB_PATH', os.path.expanduser('~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db'))`
+- 与 main.py 完全统一：从 COSMETIC_DB_PATH 读，缺省 fallback 到 deploy 仓 db
+
+### 完整治理链（4 层一致）
+- main.py（cosmetic-api）: `DB_PATH = os.environ.get('COSMETIC_DB_PATH', '/opt/cosmetic-api/data/cosmetic_articles.db')`
+- export_data.py（cosmetic-deploy）: `DB_PATH = os.environ.get('COSMETIC_DB_PATH', os.path.expanduser('~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db'))`
+- uvicorn 启动: launchd plist `com.cosmetic.api.plist` 设 `COSMETIC_DB_PATH=/Users/yuming.chen/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db`
+- 数据真源: deploy 仓 cosmetic_articles.db（35MB, 2,486 articles）
+
+### 验证结果
+- export_data.py 语法检查 OK
+- env 优先级测试: `COSMETIC_DB_PATH=/tmp/fake.db` → DB_PATH 用了 env（✓）
+- fallback 测试: 无 env → DB_PATH 用 `~/.openclaw/workspace/cosmetic-deploy/cosmetic_articles.db`（✓）
+- DB 读测试: 2,486 articles 成功读取
+- 本地 commit: `a0b70fd`（1 file changed, 3 insertions, 1 deletion）
+- git push origin main: 网络故障"Failed to connect to github.com port 443"，待网络恢复重试
+
+### 关联变更
+- cosmetic-api 端已配套修复（见 cosmetic-api CHANGELOG 2026-10-19 条目）
+- 同步 commit: cosmetic-api main.py 加 Kimi K3 fallback（仓库无 remote，本地 commit）
