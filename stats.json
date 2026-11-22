@@ -1,60 +1,60 @@
 {
   "stats": {
-    "total_articles": 3316,
+    "total_articles": 3364,
     "source_count": 18,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-11-20"
+      "end": "2026-11-22"
     },
-    "last_update": "2026-11-20T13:09:59.816871"
+    "last_update": "2026-11-23T00:55:07.233218"
   },
   "latest": [
     {
-      "id": 3927,
-      "title": "快递业竞争逻辑之变：中通如何重塑网络价值？",
-      "source": "财经早餐",
-      "publish_date": "2026-11-20",
-      "url": "https://mp.weixin.qq.com/s/Y89S3-4-eEksBuc0U-wy5w",
-      "summary": "",
-      "keywords": [],
-      "cover": ""
-    },
-    {
-      "id": 3928,
-      "title": "【财经早餐】2026.11.20星期五",
-      "source": "财经早餐",
-      "publish_date": "2026-11-20",
-      "url": "https://mp.weixin.qq.com/s/XTRG9BYGVR7mlHJzm0o_sg",
-      "summary": "",
-      "keywords": [],
-      "cover": ""
-    },
-    {
-      "id": 3929,
-      "title": "铜铝一降温，家电股就成行情“黑马”？",
-      "source": "财经早餐",
-      "publish_date": "2026-11-20",
-      "url": "https://mp.weixin.qq.com/s/qJPKFgu5xu7iD5Ky4PZWrQ",
-      "summary": "",
-      "keywords": [],
-      "cover": ""
-    },
-    {
-      "id": 3926,
-      "title": "抗衰到底有没有效？先看你用的“尺子”准不准",
-      "source": "肤见未来实验室",
-      "publish_date": "2026-11-20",
-      "url": "https://mp.weixin.qq.com/s/3OFefQjDxM89zFYJvYddXQ",
-      "summary": "",
-      "keywords": [],
-      "cover": ""
-    },
-    {
-      "id": 3910,
-      "title": "欢聚集团Q3总营收6.246亿美元，SHOPLINE收入同比增长24.7%",
+      "id": 3970,
+      "title": "亚马逊拟建“世界商品图谱”；TikTok Shop东南亚跨境双11总GMV飙升；Temu欧洲开通银行账户直付｜跨境电商周报",
       "source": "亿邦动力",
-      "publish_date": "2026-11-19",
-      "url": "https://mp.weixin.qq.com/s/srZ8knkKhly7u6DbAkzyLw",
+      "publish_date": "2026-11-22",
+      "url": "https://mp.weixin.qq.com/s/GA6mt047d6sSUDkA7xMibg",
+      "summary": "",
+      "keywords": [],
+      "cover": ""
+    },
+    {
+      "id": 3974,
+      "title": "【财经早餐】2026.11.22星期日",
+      "source": "财经早餐",
+      "publish_date": "2026-11-22",
+      "url": "https://mp.weixin.qq.com/s/I1KYTgCd0e56Rc6sX4kZjA",
+      "summary": "",
+      "keywords": [],
+      "cover": ""
+    },
+    {
+      "id": 3975,
+      "title": "阿里开始给AI算账了",
+      "source": "财经早餐",
+      "publish_date": "2026-11-22",
+      "url": "https://mp.weixin.qq.com/s/Z2KkJuIX9q5ry247tw3WeA",
+      "summary": "",
+      "keywords": [],
+      "cover": ""
+    },
+    {
+      "id": 3966,
+      "title": "Z Weekly Vol.234",
+      "source": "WWD 国际时尚特讯",
+      "publish_date": "2026-11-22",
+      "url": "https://mp.weixin.qq.com/s/h0OdSBF59JLShxGwjmOJcQ",
+      "summary": "",
+      "keywords": [],
+      "cover": ""
+    },
+    {
+      "id": 3967,
+      "title": "FASHION&amp;FILM｜当服装成为电影叙事：一场复仇戏码如何穿在白裙里？",
+      "source": "WWD 国际时尚特讯",
+      "publish_date": "2026-11-22",
+      "url": "https://mp.weixin.qq.com/s/cEREV_sZolqDbUv3WoO5nw",
       "summary": "",
       "keywords": [],
       "cover": ""
