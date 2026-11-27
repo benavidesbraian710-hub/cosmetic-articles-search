@@ -1,60 +1,60 @@
 {
   "stats": {
-    "total_articles": 3397,
+    "total_articles": 3482,
     "source_count": 18,
     "date_range": {
       "start": "2026-06-15",
-      "end": "2026-11-24"
+      "end": "2026-11-27"
     },
-    "last_update": "2026-11-24T10:06:02.096032"
+    "last_update": "2026-11-27T09:36:30.100370"
   },
   "latest": [
     {
-      "id": 4009,
-      "title": "华熙生物正在把增长重新接起来",
+      "id": 4095,
+      "title": "【财经早餐】2026.11.27星期五",
       "source": "财经早餐",
-      "publish_date": "2026-11-24",
-      "url": "https://mp.weixin.qq.com/s/1QrJm8h522NPd7m4Yq4uUg",
+      "publish_date": "2026-11-27",
+      "url": "https://mp.weixin.qq.com/s/ZgSsc983vtc9GbM6SOh8uA",
       "summary": "",
       "keywords": [],
       "cover": ""
     },
     {
-      "id": 4010,
-      "title": "【财经早餐】2026.11.24星期二",
+      "id": 4096,
+      "title": "圣元环保第二增长曲线走到投产前",
       "source": "财经早餐",
-      "publish_date": "2026-11-24",
-      "url": "https://mp.weixin.qq.com/s/RV1KZNhbrZRVUY1d1qgpFw",
+      "publish_date": "2026-11-27",
+      "url": "https://mp.weixin.qq.com/s/fsRPiFnmXkrMsRJQexCSaw",
       "summary": "",
       "keywords": [],
       "cover": ""
     },
     {
-      "id": 4008,
-      "title": "防晒之外，皮肤上的“老住户”或许也在帮你抗光老化",
+      "id": 4094,
+      "title": "皮肤暗沉发黄，可能和“糖化”有关？",
       "source": "肤见未来实验室",
-      "publish_date": "2026-11-24",
-      "url": "https://mp.weixin.qq.com/s/abjikUbanwdmFqIN3H1A3g",
+      "publish_date": "2026-11-27",
+      "url": "https://mp.weixin.qq.com/s/4DgbLhMIVHobd1LS3GeTqQ",
       "summary": "",
       "keywords": [],
       "cover": ""
     },
     {
-      "id": 3990,
-      "title": "释放AI与出海强预期，近1500人参与亿邦产业互联网年会暨首届产业智能体大会",
+      "id": 4080,
+      "title": "双双跻身天猫户外前十，Salomon和Helly Hansen做对了什么？",
       "source": "亿邦动力",
-      "publish_date": "2026-11-23",
-      "url": "https://mp.weixin.qq.com/s/RiTtCNM8jFW8Bhv4NHzUhQ",
+      "publish_date": "2026-11-26",
+      "url": "https://mp.weixin.qq.com/s/jv5IYiKTV30qn1SmwkS2Og",
       "summary": "",
       "keywords": [],
       "cover": ""
     },
     {
-      "id": 3991,
-      "title": "Astra围猎具身模型，最后的防线在哪儿",
+      "id": 4081,
+      "title": "从单站起步到全球布局，跨境卖家的合规门槛正被抹平",
       "source": "亿邦动力",
-      "publish_date": "2026-11-23",
-      "url": "https://mp.weixin.qq.com/s/8DCS5aXmsJU_m-rK0juQ6w",
+      "publish_date": "2026-11-26",
+      "url": "https://mp.weixin.qq.com/s/Wz3DC31GIftnrZ5Jr_mXOg",
       "summary": "",
       "keywords": [],
       "cover": ""
